@@ -13,6 +13,8 @@
 #include "ServerInfo.h"
 #include "User.h"
 #include "Util.h"
+#include "Notice.h"
+#include "Message.h"
 
 CTrade gTrade;
 //////////////////////////////////////////////////////////////////////
@@ -164,6 +166,12 @@ void CTrade::CGTradeRequestRecv(PMSG_TRADE_REQUEST_RECV* lpMsg,int aIndex) // OK
 		return;
 	}
 
+	if (lpTarget->DieRegen != 0 || lpObj->DieRegen != 0)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, gMessage.GetMessage(43));
+		return;
+	}
+
 	lpObj->Interface.use = 1;
 	lpObj->Interface.type = INTERFACE_TRADE;
 	lpObj->Interface.state = 0;
@@ -237,6 +245,12 @@ void CTrade::CGTradeResponseRecv(PMSG_TRADE_RESPONSE_RECV* lpMsg,int aIndex) // 
 	if(gObjInventoryTransaction(aIndex) == 0 || gObjInventoryTransaction(bIndex) == 0)
 	{
 		goto CLEAR_JUMP;
+	}
+
+	if (lpTarget->DieRegen != 0 || lpObj->DieRegen != 0)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, gMessage.GetMessage(43));
+		return;
 	}
 
 	this->ClearTrade(lpObj);
