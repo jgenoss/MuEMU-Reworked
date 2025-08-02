@@ -6,7 +6,7 @@
 #include "SocketManager.h"
 #include "AllowableIpList.h"
 #include "JoinServerProtocol.h"
-#include "Protect.h"
+
 #include "ServerManager.h"
 #include "Util.h"
 
@@ -44,7 +44,7 @@ CSocketManager::~CSocketManager() // OK
 
 bool CSocketManager::Start(WORD port) // OK
 {
-	PROTECT_START
+	
 
 	this->m_port = port;
 
@@ -78,7 +78,7 @@ bool CSocketManager::Start(WORD port) // OK
 		return 0;
 	}
 
-	PROTECT_FINAL
+	
 
 	LogAdd(LOG_BLACK,"[SocketManager] Server started at port [%d]",this->m_port);
 	return 1;
@@ -617,13 +617,13 @@ DWORD WINAPI CSocketManager::ServerAcceptThread(CSocketManager* lpSocketManager)
 			continue;
 		}
 
-		PROTECT_START
+		
 
 		CServerManager* lpServerManager = &gServerManager[index];
 
 		lpServerManager->AddServer(index,inet_ntoa(SocketAddr.sin_addr),socket);
 
-		PROTECT_FINAL
+		
 
 		DWORD RecvSize=0,Flags=0;
 

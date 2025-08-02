@@ -4,7 +4,7 @@
 #include "AccountManager.h"
 #include "AllowableIpList.h"
 #include "MiniDump.h"
-#include "Protect.h"
+
 #include "QueryManager.h"
 #include "ServerDisplayer.h"
 #include "SocketManager.h"

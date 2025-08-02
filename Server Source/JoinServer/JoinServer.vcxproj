@@ -147,8 +147,8 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Util\MD5.h" />
-    <ClInclude Include="..\..\..\Util\MD5_KEYVAL.H" />
+    <ClInclude Include="..\..\Util\MD5.h" />
+    <ClInclude Include="..\..\Util\MD5_KEYVAL.H" />
     <ClInclude Include="AccountManager.h" />
     <ClInclude Include="AllowableIpList.h" />
     <ClInclude Include="CriticalSection.h" />
@@ -157,7 +157,6 @@
     <ClInclude Include="Log.h" />
     <ClInclude Include="MemScript.h" />
     <ClInclude Include="MiniDump.h" />
-    <ClInclude Include="Protect.h" />
     <ClInclude Include="QueryManager.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Resource.h" />
@@ -170,7 +169,7 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Util\MD5.cpp" />
+    <ClCompile Include="..\..\Util\MD5.cpp" />
     <ClCompile Include="AccountManager.cpp" />
     <ClCompile Include="AllowableIpList.cpp" />
     <ClCompile Include="CriticalSection.cpp" />
@@ -179,7 +178,6 @@
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="MemScript.cpp" />
     <ClCompile Include="MiniDump.cpp" />
-    <ClCompile Include="Protect.cpp" />
     <ClCompile Include="QueryManager.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="ServerDisplayer.cpp" />

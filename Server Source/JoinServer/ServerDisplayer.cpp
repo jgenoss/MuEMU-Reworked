@@ -7,7 +7,7 @@
 #include "AccountManager.h"
 #include "JoinServerProtocol.h"
 #include "Log.h"
-#include "Protect.h"
+
 #include "ServerManager.h"
 #include "SocketManager.h"
 
@@ -41,11 +41,11 @@ CServerDisplayer::~CServerDisplayer() // OK
 
 void CServerDisplayer::Init(HWND hWnd) // OK
 {
-	PROTECT_START
+	
 
 	this->m_hwnd = hWnd;
 
-	PROTECT_FINAL
+	
 
 	gLog.AddLog(1,"LOG");
 
@@ -63,7 +63,7 @@ void CServerDisplayer::SetWindowName() // OK
 {
 	char buff[256];
 
-	wsprintf(buff,"[%s] Mu EMU Rework by JGenoss JoinServer (QueueSize : %d) (AccountCount : %d/%d)",JOINSERVER_VERSION,gSocketManager.GetQueueSize(),gAccountManager.GetAccountCount(),gJoinServerMaxAccount[gProtect.m_AuthInfo.PackageType][gProtect.m_AuthInfo.PlanType]);
+	wsprintf(buff,"[%s] Mu EMU Rework by JGenoss JoinServer (QueueSize : %d) (AccountCount : %d/%d)",JOINSERVER_VERSION,gSocketManager.GetQueueSize(),gAccountManager.GetAccountCount(),MAX_ACCOUNT);
 
 	SetWindowText(this->m_hwnd,buff);
 }
@@ -167,7 +167,7 @@ void CServerDisplayer::LogTextPaint() // OK
 
 void CServerDisplayer::LogAddText(eLogColor color,char* text,int size) // OK
 {
-	PROTECT_START
+	
 
 	size = ((size>=MAX_LOG_TEXT_SIZE)?(MAX_LOG_TEXT_SIZE-1):size);
 
@@ -179,7 +179,7 @@ void CServerDisplayer::LogAddText(eLogColor color,char* text,int size) // OK
 
 	this->m_count = (((++this->m_count)>=MAX_LOG_TEXT_LINE)?0:this->m_count);
 
-	PROTECT_FINAL
+	
 
 	gLog.Output(LOG_GENERAL,"%s",&text[9]);
 }

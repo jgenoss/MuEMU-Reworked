@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "JoinServerProtocol.h"
-#include "..\Util\MD5.h"
+#include "..\..\Util\MD5.h"
 #include "AccountManager.h"
 #include "Log.h"
-#include "Protect.h"
+
 #include "QueryManager.h"
 #include "ServerManager.h"
 #include "SocketManager.h"
@@ -11,7 +11,7 @@
 
 void JoinServerProtocolCore(int index,BYTE head,BYTE* lpMsg,int size) // OK
 {
-	PROTECT_START
+	
 
 	gServerManager[index].m_PacketTime = GetTickCount();
 
@@ -49,7 +49,7 @@ void JoinServerProtocolCore(int index,BYTE head,BYTE* lpMsg,int size) // OK
 			break;
 	}
 
-	PROTECT_FINAL
+	
 }
 
 void GJServerInfoRecv(SDHP_SERVER_INFO_RECV* lpMsg,int index) // OK

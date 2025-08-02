@@ -80,7 +80,10 @@ bool CAccountManager::GetAccountInfo(ACCOUNT_INFO* lpAccountInfo,char* account) 
 
 	std::string acc(account);
 
-	std::transform(acc.begin(),acc.end(),acc.begin(),CheckAccountCaseSensitive);
+	std::transform(
+		acc.begin(), acc.end(), acc.begin(),
+		[](char c) -> char { return static_cast<char>(CheckAccountCaseSensitive(c)); }
+	);
 
 	std::map<std::string,ACCOUNT_INFO>::iterator it = this->m_AccountInfo.find(acc);
 
@@ -101,7 +104,10 @@ void CAccountManager::InsertAccountInfo(ACCOUNT_INFO AccountInfo) // OK
 
 	std::string acc(AccountInfo.Account);
 
-	std::transform(acc.begin(),acc.end(),acc.begin(),CheckAccountCaseSensitive);
+	std::transform(
+		acc.begin(), acc.end(), acc.begin(),
+		[](char c) -> char { return static_cast<char>(CheckAccountCaseSensitive(c)); }
+	);
 
 	std::map<std::string,ACCOUNT_INFO>::iterator it = this->m_AccountInfo.find(acc);
 
@@ -123,7 +129,10 @@ void CAccountManager::RemoveAccountInfo(ACCOUNT_INFO AccountInfo) // OK
 
 	std::string acc(AccountInfo.Account);
 
-	std::transform(acc.begin(),acc.end(),acc.begin(),CheckAccountCaseSensitive);
+	std::transform(
+		acc.begin(), acc.end(), acc.begin(),
+		[](char c) -> char { return static_cast<char>(CheckAccountCaseSensitive(c)); }
+	);
 
 	std::map<std::string,ACCOUNT_INFO>::iterator it = this->m_AccountInfo.find(acc);
 

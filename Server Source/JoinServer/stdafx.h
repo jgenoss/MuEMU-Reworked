@@ -11,8 +11,10 @@
 #endif
 
 #ifndef PROTECT_STATE
-#define PROTECT_STATE 1
+#define PROTECT_STATE 0
 #endif
+
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
 
 // System Include
 #include <windows.h>

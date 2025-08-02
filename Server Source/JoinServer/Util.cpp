@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Util.h"
-#include "Protect.h"
+
 #include "QueryManager.h"
 #include "SocketManager.h"
 #include "SocketManagerUdp.h"
@@ -62,7 +62,7 @@ void LogAdd(eLogColor color,char* text,...) // OK
 
 void JoinServerLiveProc() // OK
 {
-	PROTECT_START
+	
 
 	SDHP_JOIN_SERVER_LIVE_SEND pMsg;
 
@@ -72,7 +72,7 @@ void JoinServerLiveProc() // OK
 
 	gSocketManagerUdp.DataSend((BYTE*)&pMsg,pMsg.header.size);
 
-	PROTECT_FINAL
+	
 }
 
 bool CheckTextSyntax(char* text,int size) // OK
