@@ -2259,6 +2259,10 @@ bool CObjectManager::CharacterUsePortal(LPOBJ lpObj,CItem* lpItem) // OK
 	{
 		gObjMoveGate(lpObj->Index,333);
 	}
+	else if (lpObj->Map == MAP_DUEL_ARENA)
+	{
+		gObjMoveGate(lpObj->Index, 17);
+	}
 	else
 	{
 		gObjMoveGate(lpObj->Index,17);
