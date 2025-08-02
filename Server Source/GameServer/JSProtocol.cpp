@@ -230,6 +230,9 @@ void JGMapServerMoveAuthRecv(SDHP_MAP_SERVER_MOVE_AUTH_RECV* lpMsg) // OK
 
 	GDCharacterInfoSend(lpMsg->index,lpMsg->name);
 
+	GCEventStateSend(lpMsg->index, 0, 1);
+	GCEventStateSend(lpMsg->index, 0, 3);
+
 	LogAdd(LOG_BLACK,"[ObjectManager][%d] AddAccountInfo (%s)",lpMsg->index,gObj[lpMsg->index].Account);
 }
 

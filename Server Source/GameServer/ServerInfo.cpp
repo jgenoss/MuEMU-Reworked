@@ -591,10 +591,6 @@ void CServerInfo::ReadStartupInfo(char* section,char* path) // OK
 {
 	char GameServerInfo[100] = {0};
 
-	GetPrivateProfileString(section,"CustomerName","",this->m_CustomerName,sizeof(this->m_CustomerName),path);
-
-	GetPrivateProfileString(section,"CustomerHardwareId","",this->m_CustomerHardwareId,sizeof(this->m_CustomerHardwareId),path);
-
 	GetPrivateProfileString(section,"ServerName","",this->m_ServerName,sizeof(this->m_ServerName),path);
 
 	this->m_ServerCode = GetPrivateProfileInt(section,"ServerCode",0,path);
@@ -3281,6 +3277,16 @@ void CServerInfo::ReadCommonInfo(char* section,char* path) // OK
 	this->m_FruitSubPointSuccessRate[2] = GetPrivateProfileInt(section,"FruitSubPointSuccessRate_AL2",0,path);
 
 	this->m_FruitSubPointSuccessRate[3] = GetPrivateProfileInt(section,"FruitSubPointSuccessRate_AL3",0,path);
+
+	this->m_InvasionManagerSwitch = GetPrivateProfileInt(section, "InvasionManagerSwitch", 0, path);
+
+	this->m_FlyingDragonsSwitch = GetPrivateProfileInt(section, "FlyingDragonsSwitch", 0, path);
+
+	this->m_FlyingDragonsOnlyBossMapSpawn = GetPrivateProfileInt(section, "FlyingDragonsOnlyBossMapSpawn", 0, path);
+
+	this->m_FlyingDragonsKillBossDisappear = GetPrivateProfileInt(section, "FlyingDragonsKillBossDisappear", 0, path);
+
+
 }
 
 void CServerInfo::ReadCustomInfo(char* section,char* path) // OK

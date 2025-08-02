@@ -88,6 +88,7 @@
 #include "Util.h"
 #include "Viewport.h"
 #include "Warehouse.h"
+#include "FlyingDragons.h"
 
 int gObjCount;
 int gObjMonCount;
@@ -173,6 +174,8 @@ void gObjEventRunProc() // OK
 	#endif
 
 	gRaklion.MainProc();
+
+	gFlyingDragons.FlyingDragonsDelete();
 }
 
 void gObjViewportProc() // OK
@@ -2506,6 +2509,8 @@ BOOL gObjMoveGate(int aIndex,int gate) // OK
 	gObjViewportListProtocolCreate(lpObj);
 
 	gObjectManager.CharacterUpdateMapEffect(lpObj);
+
+	gFlyingDragons.FlyingDragonsCheck(lpObj->Map, lpObj->Index);
 
 	lpObj->RegenMapNumber = lpObj->Map;
 	lpObj->RegenMapX = (BYTE)lpObj->X;

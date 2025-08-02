@@ -816,6 +816,9 @@ bool CObjectManager::CharacterGameClose(int aIndex) // OK
 
 	gObjClearViewport(lpObj);
 
+	GCEventStateSend(lpObj->Index, 0, 1);
+	GCEventStateSend(lpObj->Index, 0, 3);
+
 	LogAdd(LOG_BLACK,"[ObjectManager][%d] DelCharacterInfo (%s)",lpObj->Index,lpObj->Name);
 
 	memset(lpObj->Name,0,sizeof(lpObj->Name));

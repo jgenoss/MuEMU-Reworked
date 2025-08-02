@@ -2325,6 +2325,22 @@ void GCEventStateSendToAll(BYTE state,BYTE event) // OK
 	DataSendAll((BYTE*)&pMsg,pMsg.header.size);
 }
 
+void GCEventStateSendToAll(int map, BYTE InvasionState, BYTE InvasionIndex)
+{
+	for (int n = OBJECT_START_USER; n < MAX_OBJECT; n++)
+	{
+		if (gObjIsConnectedGP(n) == 0)
+		{
+			continue;
+		}
+
+		if (map == gObj[n].Map)
+		{
+			GCEventStateSend(n, InvasionState, InvasionIndex);
+		}
+	}
+}
+
 void GCServerMsgSend(int aIndex,BYTE msg) // OK
 {
 	PMSG_SERVER_MSG_SEND pMsg;

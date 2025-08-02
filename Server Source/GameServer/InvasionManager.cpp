@@ -14,6 +14,7 @@
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
 #include "Util.h"
+#include "FlyingDragons.h"
 
 CInvasionManager gInvasionManager;
 //////////////////////////////////////////////////////////////////////
@@ -52,6 +53,17 @@ void CInvasionManager::Init() // OK
 		else
 		{
 			this->SetState(&this->m_InvasionInfo[n],INVASION_STATE_EMPTY);
+		}
+
+		for (int n = OBJECT_START_USER; n < MAX_OBJECT; n++)
+		{
+			if (gObjIsConnectedGP(n) == 0)
+			{
+				continue;
+			}
+
+			GCEventStateSend(n, 0, 1);
+			GCEventStateSend(n, 0, 3);
 		}
 	}
 }
@@ -162,6 +174,8 @@ void CInvasionManager::Load(char* path) // OK
 					this->m_InvasionInfo[index].BossMessage = lpMemScript->GetAsNumber();
 
 					this->m_InvasionInfo[index].InvasionTime = lpMemScript->GetAsNumber();
+
+					this->m_InvasionInfo[index].InvasionEffect = lpMemScript->GetAsNumber();
 				}
 				else if(section == 2)
 				{
@@ -539,6 +553,17 @@ void CInvasionManager::SetMonster(INVASION_INFO* lpInfo,INVASION_RESPWAN_INFO* l
 			gObjDel(index);
 			continue;
 		}
+		if (gServerInfo.m_FlyingDragonsOnlyBossMapSpawn != 0)
+		{
+			if (lpObj->Class == lpInfo->BossIndex)
+			{
+				gFlyingDragons.FlyingDragonsAdd(lpObj->Map, lpInfo->InvasionTime, lpInfo->InvasionEffect);
+			}
+		}
+		else
+		{
+			gFlyingDragons.FlyingDragonsAdd(lpObj->Map, lpInfo->InvasionTime, lpInfo->InvasionEffect);
+		}
 	}
 }
 
@@ -567,7 +592,13 @@ void CInvasionManager::MonsterDieProc(LPOBJ lpObj,LPOBJ lpTarget) // OK
 
 		if(lpObj->Class == lpInfo->BossIndex && lpInfo->BossMessage != -1)
 		{
+			if (gServerInfo.m_FlyingDragonsKillBossDisappear != 0)
+			{
+				gFlyingDragons.FlyingDragonsBossDieProc(lpObj->Map);
+			}
+
 			gNotice.GCNoticeSendToAll(0,0,0,0,0,0,gMessage.GetMessage(lpInfo->BossMessage),lpTarget->Name);
+
 			continue;
 		}
 	}

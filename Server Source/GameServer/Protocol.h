@@ -1140,6 +1140,7 @@ void GCChatWhisperSend(int aIndex,char* name,char* message);
 void GCMainCheckSend(int aIndex);
 void GCEventStateSend(int aIndex,BYTE state,BYTE event);
 void GCEventStateSendToAll(BYTE state,BYTE event);
+void GCEventStateSendToAll(int map, BYTE state, BYTE event);
 void GCServerMsgSend(int aIndex,BYTE msg);
 void GCWeatherSend(int aIndex,BYTE weather);
 void GCDamageSend(int aIndex,int bIndex,BYTE flag,int damage,int type,int ShieldDamage);

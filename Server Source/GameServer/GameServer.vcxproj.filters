@@ -630,6 +630,9 @@
     <ClInclude Include="CustomAttack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FlyingDragons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -1233,6 +1236,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CustomAttack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FlyingDragons.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

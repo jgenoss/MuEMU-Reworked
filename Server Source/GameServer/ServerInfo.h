@@ -855,6 +855,12 @@ public:
 	int m_BloodHowlingTimeConstA;
 	long m_AnnounceChaosMix;
 	char m_AnnounceChaosMixText[50];
+
+	int m_InvasionManagerSwitch;
+
+	int m_FlyingDragonsSwitch;
+	int m_FlyingDragonsOnlyBossMapSpawn;
+	int m_FlyingDragonsKillBossDisappear;
 };
 
 extern CServerInfo gServerInfo;

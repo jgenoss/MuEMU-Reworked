@@ -47,6 +47,7 @@
 #include "Util.h"
 #include "Viewport.h"
 #include "Warehouse.h"
+#include "FlyingDragons.h"
 
 void DataServerProtocolCore(BYTE head,BYTE* lpMsg,int size) // OK
 {
@@ -1251,6 +1252,8 @@ void DGCharacterInfoRecv(SDHP_CHARACTER_INFO_RECV* lpMsg) // OK
 	gObjViewportListProtocolCreate(lpObj);
 
 	gObjectManager.CharacterUpdateMapEffect(lpObj);
+
+	gFlyingDragons.FlyingDragonsCheck(lpObj->Map, lpObj->Index);
 
 	gNotice.GCNoticeSend(lpObj->Index,0,0,0,0,0,0,gMessage.GetMessage(256),lpObj->Name);
 

@@ -315,6 +315,7 @@
     <ClInclude Include="EventInventory.h" />
     <ClInclude Include="ExperienceTable.h" />
     <ClInclude Include="Filter.h" />
+    <ClInclude Include="FlyingDragons.h" />
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="GameMain.h" />
     <ClInclude Include="GameMaster.h" />
@@ -520,6 +521,7 @@
     <ClCompile Include="EventInventory.cpp" />
     <ClCompile Include="ExperienceTable.cpp" />
     <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="FlyingDragons.cpp" />
     <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="GameMaster.cpp" />
