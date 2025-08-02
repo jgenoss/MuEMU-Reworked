@@ -1437,7 +1437,7 @@ void CMasterSkillTree::InsertOption(LPOBJ lpObj,int index,int value,bool flag) /
 			}
 			break;
 		case MASTER_SKILL_ADD_DARK_HORSE_DEFENSE:
-			if(lpObj->Inventory[0].m_Index == GET_ITEM(13,8))
+			if(lpObj->Inventory[8].m_Index == GET_ITEM(13,8))
 			{
 				lpObj->Defense += value;
 			}
