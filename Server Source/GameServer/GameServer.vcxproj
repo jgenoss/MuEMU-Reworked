@@ -469,8 +469,8 @@
     <ClInclude Include="Warehouse.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Util\CCRC32.Cpp" />
-    <ClCompile Include="..\..\..\Util\Math.cpp" />
+    <ClCompile Include="..\..\Util\CCRC32.Cpp" />
+    <ClCompile Include="..\..\Util\Math.cpp" />
     <ClCompile Include="380ItemOption.cpp" />
     <ClCompile Include="380ItemType.cpp" />
     <ClCompile Include="ArcaBattle.cpp" />

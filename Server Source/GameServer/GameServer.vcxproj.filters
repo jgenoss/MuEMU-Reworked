@@ -1172,10 +1172,10 @@
     <ClCompile Include="ItemOptionRate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Util\CCRC32.Cpp">
+    <ClCompile Include="..\..\Util\CCRC32.Cpp">
       <Filter>Util Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Util\Math.cpp">
+    <ClCompile Include="..\..\Util\Math.cpp">
       <Filter>Util Files</Filter>
     </ClCompile>
     <ClCompile Include="SummonScroll.cpp">

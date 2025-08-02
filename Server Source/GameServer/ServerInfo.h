@@ -269,6 +269,9 @@ public:
 	int m_ImperialGuardianEvent;
 	int m_ImperialGuardianDifficultRate;
 	int m_InvasionManagerSwitch;
+	int m_FlyingDragonsSwitch;
+	int m_FlyingDragonsOnlyBossMapSpawn;
+	int m_FlyingDragonsKillBossDisappear;
 	int m_KanturuEvent;
 	int m_MossMerchantEvent;
 	int m_MossMerchantEventTime;
@@ -855,12 +858,6 @@ public:
 	int m_BloodHowlingTimeConstA;
 	long m_AnnounceChaosMix;
 	char m_AnnounceChaosMixText[50];
-
-	int m_InvasionManagerSwitch;
-
-	int m_FlyingDragonsSwitch;
-	int m_FlyingDragonsOnlyBossMapSpawn;
-	int m_FlyingDragonsKillBossDisappear;
 };
 
 extern CServerInfo gServerInfo;
