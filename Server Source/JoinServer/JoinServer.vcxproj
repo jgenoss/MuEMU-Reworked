@@ -144,9 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="JoinServer.ico" />
     <None Include="ReadMe.txt" />
-    <None Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Util\MD5.h" />
