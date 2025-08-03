@@ -4,3 +4,7 @@
 /Tools Source/GetMainInfo/GetMainInfo/Debug
 /Tools Source/GetMainInfo/.vs
 *.pdb
+/Server Source/Release
+/Server Source/Release
+/Server Source/Release
+/Server Source/Release
