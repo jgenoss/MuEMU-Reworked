@@ -1,4 +1,4 @@
-// Trade.cpp: implementation of the CTrade class.
+﻿// Trade.cpp: implementation of the CTrade class.
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -425,12 +425,26 @@ void CTrade::CGTradeOkButtonRecv(PMSG_TRADE_OK_BUTTON_RECV* lpMsg,int aIndex) //
 		return;
 	}
 
-	if(this->ExchangeTradeItem(lpObj,lpTarget) == 0 || this->ExchangeTradeItem(lpTarget,lpObj) == 0)
+	if (lpObj->CloseCount > 0 || lpTarget->CloseCount > 0)
 	{
 		this->ResetTrade(aIndex);
-		this->GCTradeResultSend(aIndex,2);
+		this->GCTradeResultSend(aIndex, 2);
+
 		this->ResetTrade(bIndex);
-		this->GCTradeResultSend(bIndex,2);
+		this->GCTradeResultSend(bIndex, 2);
+		return;
+	}
+
+	bool result1 = this->ExchangeTradeItem(lpObj, lpTarget);
+	bool result2 = this->ExchangeTradeItem(lpTarget, lpObj);
+
+	if (!result1 || !result2)
+	{
+		this->ResetTrade(aIndex);
+		this->GCTradeResultSend(aIndex, 2);
+
+		this->ResetTrade(bIndex);
+		this->GCTradeResultSend(bIndex, 2);
 		return;
 	}
 
@@ -535,6 +549,18 @@ void CTrade::CGTradeCancelButtonRecv(int aIndex) // OK
 	}
 
 	if(lpTarget->Interface.use == 0 || lpTarget->Interface.type != INTERFACE_TRADE || lpTarget->Interface.state == 0)
+	{
+		return;
+	}
+
+	// ⚠️ Prevención de cancelación post-trade
+	if (lpObj->TradeOk == 1 && lpTarget->TradeOk == 1)
+	{
+		return;
+	}
+
+	// Validación adicional para evitar interferencia con estados inestables
+	if (lpObj->CloseCount > 0 || lpTarget->CloseCount > 0)
 	{
 		return;
 	}

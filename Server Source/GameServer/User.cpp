@@ -1951,33 +1951,124 @@ void gObjTeleportMagicUse(int aIndex,int x,int y) // OK
 	lpObj->OldX = lpObj->TX;
 	lpObj->OldY = lpObj->TY;
 
+#if(GAMESERVER_TYPE==1)
+	//-> Teleport Closes CS Gate (1)
+	if (lpObj->Map == 30 && lpObj->X >= 54 && lpObj->Y >= 111 && lpObj->TX <= 127 && lpObj->TY <= 118)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, "You cannot use this skill near this location.");
+		gObjTeleport(lpObj->Index, 30, 67, 105);
+	}
+
+	//-> Teleport Closes CS Gate (2)
+	if (lpObj->Map == 30 && lpObj->X >= 67 && lpObj->Y >= 158 && lpObj->TX <= 118 && lpObj->TY <= 164)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, "You cannot use this skill near this location.");
+		gObjTeleport(lpObj->Index, 30, 93, 148);
+	}
+
+	//-> Teleport Closes CS Gate (3)
+	if (lpObj->Map == 30 && lpObj->X >= 79 && lpObj->Y >= 201 && lpObj->TX <= 105 && lpObj->TY <= 207)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, "You cannot use this skill near this location.");
+		gObjTeleport(lpObj->Index, 30, 93, 192);
+	}
+#endif
+
 	gObjViewportListProtocolDestroy(lpObj);
 }
 
+//void gObjInterfaceCheckTime(LPOBJ lpObj) // OK
+//{
+//	if(lpObj->Interface.use == 0)
+//	{
+//		return;
+//	}
+//
+//	if((GetTickCount()-lpObj->InterfaceTime) < 5000)
+//	{
+//		return;
+//	}
+//
+//	if(lpObj->Interface.type == INTERFACE_TRADE)
+//	{
+//		if(lpObj->Interface.state == 0)
+//		{
+//			if(OBJECT_RANGE(lpObj->TargetNumber) != 0)
+//			{
+//				gObj[lpObj->TargetNumber].Interface.use = 0;
+//				gObj[lpObj->TargetNumber].Interface.type = INTERFACE_NONE;
+//				gObj[lpObj->TargetNumber].Interface.state = 0;
+//				gObj[lpObj->TargetNumber].TargetNumber = -1;
+//
+//				gTrade.GCTradeResultSend(lpObj->TargetNumber,3);
+//			}
+//
+//			lpObj->Interface.use = 0;
+//			lpObj->Interface.type = INTERFACE_NONE;
+//			lpObj->Interface.state = 0;
+//			lpObj->TargetNumber = -1;
+//
+//			gTrade.GCTradeResultSend(lpObj->Index,3);
+//		}
+//	}
+//
+//	if(lpObj->Interface.type == INTERFACE_PARTY)
+//	{
+//		if(lpObj->Interface.state == 0)
+//		{
+//			if(OBJECT_RANGE(lpObj->TargetNumber) != 0)
+//			{
+//				gObj[lpObj->TargetNumber].Interface.use = 0;
+//				gObj[lpObj->TargetNumber].Interface.type = INTERFACE_NONE;
+//				gObj[lpObj->TargetNumber].Interface.state = 0;
+//				gObj[lpObj->TargetNumber].TargetNumber = -1;
+//				gObj[lpObj->TargetNumber].PartyTargetUser = -1;
+//
+//				gParty.GCPartyResultSend(lpObj->TargetNumber,0);
+//			}
+//
+//			lpObj->Interface.use = 0;
+//			lpObj->Interface.type = INTERFACE_NONE;
+//			lpObj->Interface.state = 0;
+//			lpObj->TargetNumber = -1;
+//			lpObj->PartyTargetUser = -1;
+//
+//			gParty.GCPartyResultSend(lpObj->Index,0);
+//		}
+//	}
+//
+//	lpObj->InterfaceTime = GetTickCount();
+//}
+
 void gObjInterfaceCheckTime(LPOBJ lpObj) // OK
 {
-	if(lpObj->Interface.use == 0)
+	if (lpObj->Interface.use == 0
+		|| lpObj->Interface.type == INTERFACE_CHAOS_BOX
+		)
 	{
 		return;
 	}
 
-	if((GetTickCount()-lpObj->InterfaceTime) < 5000)
+	if ((GetTickCount() - lpObj->InterfaceTime) < 5000)
 	{
 		return;
 	}
 
-	if(lpObj->Interface.type == INTERFACE_TRADE)
+	if (lpObj->Interface.type == INTERFACE_TRADE)
 	{
-		if(lpObj->Interface.state == 0)
+		if (lpObj->Interface.state == 0)
 		{
-			if(OBJECT_RANGE(lpObj->TargetNumber) != 0)
+			if (OBJECT_RANGE(lpObj->TargetNumber) != 0)
 			{
-				gObj[lpObj->TargetNumber].Interface.use = 0;
-				gObj[lpObj->TargetNumber].Interface.type = INTERFACE_NONE;
-				gObj[lpObj->TargetNumber].Interface.state = 0;
-				gObj[lpObj->TargetNumber].TargetNumber = -1;
+				if (gObj[lpObj->TargetNumber].Interface.type == INTERFACE_TRADE)
+				{
+					gObj[lpObj->TargetNumber].Interface.use = 0;
+					gObj[lpObj->TargetNumber].Interface.type = INTERFACE_NONE;
+					gObj[lpObj->TargetNumber].Interface.state = 0;
+					gObj[lpObj->TargetNumber].TargetNumber = -1;
 
-				gTrade.GCTradeResultSend(lpObj->TargetNumber,3);
+					gTrade.GCTradeResultSend(lpObj->TargetNumber, 3);
+				}
 			}
 
 			lpObj->Interface.use = 0;
@@ -1985,23 +2076,26 @@ void gObjInterfaceCheckTime(LPOBJ lpObj) // OK
 			lpObj->Interface.state = 0;
 			lpObj->TargetNumber = -1;
 
-			gTrade.GCTradeResultSend(lpObj->Index,3);
+			gTrade.GCTradeResultSend(lpObj->Index, 3);
 		}
 	}
 
-	if(lpObj->Interface.type == INTERFACE_PARTY)
+	if (lpObj->Interface.type == INTERFACE_PARTY)
 	{
-		if(lpObj->Interface.state == 0)
+		if (lpObj->Interface.state == 0)
 		{
-			if(OBJECT_RANGE(lpObj->TargetNumber) != 0)
+			if (OBJECT_RANGE(lpObj->TargetNumber) != 0)
 			{
-				gObj[lpObj->TargetNumber].Interface.use = 0;
-				gObj[lpObj->TargetNumber].Interface.type = INTERFACE_NONE;
-				gObj[lpObj->TargetNumber].Interface.state = 0;
-				gObj[lpObj->TargetNumber].TargetNumber = -1;
-				gObj[lpObj->TargetNumber].PartyTargetUser = -1;
+				if (gObj[lpObj->TargetNumber].Interface.type == INTERFACE_PARTY)
+				{
+					gObj[lpObj->TargetNumber].Interface.use = 0;
+					gObj[lpObj->TargetNumber].Interface.type = INTERFACE_NONE;
+					gObj[lpObj->TargetNumber].Interface.state = 0;
+					gObj[lpObj->TargetNumber].TargetNumber = -1;
+					gObj[lpObj->TargetNumber].PartyTargetUser = -1;
 
-				gParty.GCPartyResultSend(lpObj->TargetNumber,0);
+					gParty.GCPartyResultSend(lpObj->TargetNumber, 0);
+				}
 			}
 
 			lpObj->Interface.use = 0;
@@ -2010,7 +2104,7 @@ void gObjInterfaceCheckTime(LPOBJ lpObj) // OK
 			lpObj->TargetNumber = -1;
 			lpObj->PartyTargetUser = -1;
 
-			gParty.GCPartyResultSend(lpObj->Index,0);
+			gParty.GCPartyResultSend(lpObj->Index, 0);
 		}
 	}
 
@@ -2623,6 +2717,29 @@ void gObjSummonAlly(LPOBJ lpObj,int map,int x,int y) // OK
 		gObjTeleportMagicUse(lpObj->Index,x,y);
 		return;
 	}
+
+#if(GAMESERVER_TYPE==1)
+	//-> Teleport Closes CS Gate (1)
+	if (lpObj->Map == 30 && lpObj->X >= 54 && lpObj->Y >= 111 && lpObj->TX <= 127 && lpObj->TY <= 118)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, "You cannot use this skill near this location.");
+		gObjTeleport(lpObj->Index, 30, 67, 105);
+	}
+
+	//-> Teleport Closes CS Gate (2)
+	if (lpObj->Map == 30 && lpObj->X >= 67 && lpObj->Y >= 158 && lpObj->TX <= 118 && lpObj->TY <= 164)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, "You cannot use this skill near this location.");
+		gObjTeleport(lpObj->Index, 30, 93, 148);
+	}
+
+	//-> Teleport Closes CS Gate (3)
+	if (lpObj->Map == 30 && lpObj->X >= 79 && lpObj->Y >= 201 && lpObj->TX <= 105 && lpObj->TY <= 207)
+	{
+		gNotice.GCNoticeSend(lpObj->Index, 1, 0, 0, 0, 0, 0, "You cannot use this skill near this location.");
+		gObjTeleport(lpObj->Index, 30, 93, 192);
+	}
+#endif
 
 	lpObj->X = x;
 	lpObj->Y = y;

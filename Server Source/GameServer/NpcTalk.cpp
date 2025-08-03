@@ -1338,7 +1338,40 @@ void CNpcTalk::CGNpcTalkCloseRecv(int aIndex) // OK
 		return;
 	}
 
-	if(lpObj->Interface.use == 0 || lpObj->Interface.type == INTERFACE_NONE || lpObj->Interface.type == INTERFACE_CHAOS_BOX)
+	// Si está en estado de ejecución de trade, evitar el cierre de cualquier interfaz
+	if (
+		lpObj->TradeOk == true ||                  // Ya confirmó el trade
+		lpObj->Transaction != 0 ||                 // Cualquier tipo de transacción activa
+		lpObj->CloseCount > 0 ||                   // Cierre de cliente inminente
+		lpObj->ChaosLock == 1 ||                   // Mix activo en Chaos Machine
+		lpObj->PShopTransaction == true ||         // Offtrade o comercio activo
+		lpObj->Interface.type == INTERFACE_TRADE ||     // Interfaz de trade
+		lpObj->Interface.type == INTERFACE_WAREHOUSE || // Interfaz de warehouse
+		lpObj->Interface.type == INTERFACE_CHAOS_BOX || // Interfaz de Chaos Box
+		lpObj->Interface.type == INTERFACE_SHOP ||      // Shop NPC
+		lpObj->Interface.type == INTERFACE_PERSONAL_SHOP // Personal Store
+		)
+	{
+
+		gNotice.GCNoticeSend(aIndex, 1, 0, 0, 0, 0, 0, gMessage.GetMessage(492));
+		LogAdd(LOG_RED, "[DupeProtect] Interfaz NO cerrada por protección. [%s][%s] Type:%d", lpObj->Account, lpObj->Name, lpObj->Interface.type);
+		return;
+	}
+
+	if (
+		lpObj->Interface.use == 0
+		|| lpObj->Interface.type == INTERFACE_NONE
+		|| lpObj->Interface.type == INTERFACE_CHAOS_BOX
+		|| lpObj->Interface.type == INTERFACE_PARTY
+		|| lpObj->Interface.type == INTERFACE_GUILD
+		|| lpObj->Interface.type == INTERFACE_CASH_SHOP
+		|| lpObj->Interface.type == INTERFACE_PERSONAL_SHOP
+		|| lpObj->Interface.type == INTERFACE_WAREHOUSE
+		|| lpObj->Interface.type == INTERFACE_GUILD_CREATE
+		|| lpObj->Interface.type == INTERFACE_SHOP
+		|| lpObj->DuelUserReserved != -1
+		|| lpObj->DuelUserRequested != -1
+		)
 	{
 		return;
 	}
@@ -1349,7 +1382,9 @@ void CNpcTalk::CGNpcTalkCloseRecv(int aIndex) // OK
 			gTrade.CGTradeCancelButtonRecv(aIndex);
 			break;
 		case INTERFACE_SHOP:
-			if(((lpObj->Interface.state==1)?(lpObj->Interface.state=0):1)==0){return;}
+			if(((lpObj->Interface.state==1)?(lpObj->Interface.state=0):1)==0){
+				return;
+			}
 			lpObj->TargetShopNumber = -1;
 			break;
 		case INTERFACE_WAREHOUSE:

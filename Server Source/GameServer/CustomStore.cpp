@@ -299,11 +299,15 @@ void CCustomStore::CommandCustomStoreOffline(LPOBJ lpObj,char* arg) // OK
 
 void CCustomStore::OpenCustomStore(LPOBJ lpObj,int type) // OK
 {
+
 	if(gServerInfo.m_PersonalShopSwitch == 0)
 	{
 		return;
 	}
-
+	if (lpObj->Interface.use != 0)
+	{
+		return;
+	}
 	if(lpObj->PShopOpen != 0)
 	{
 		gPersonalShop.GCPShopOpenSend(lpObj->Index,0);

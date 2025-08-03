@@ -1,0 +1,46 @@
+﻿  stdafx.cpp
+  AllowableIpList.cpp
+  ArcaBattle.cpp
+  BadSyntax.cpp
+  CashShop.cpp
+  CastleDBSet.cpp
+  CharacterManager.cpp
+  CommandManager.cpp
+  CriticalSection.cpp
+  CSProtocol.cpp
+  DataServer.cpp
+  DataServerProtocol.cpp
+  ESProtocol.cpp
+  EventInventory.cpp
+  GensSystem.cpp
+  GuildManager.cpp
+  GuildMatching.cpp
+  Helper.cpp
+  Log.cpp
+  LuckyCoin.cpp
+  LuckyItem.cpp
+  Compilando...
+  MasterSkillTree.cpp
+  MemScript.cpp
+  MiniDump.cpp
+  MuRummy.cpp
+  MuunSystem.cpp
+  NpcTalk.cpp
+  PartyMatching.cpp
+  PcPoint.cpp
+  PentagramSystem.cpp
+  PersonalShop.cpp
+  QueryManager.cpp
+  Quest.cpp
+  QuestWorld.cpp
+  Queue.cpp
+  ServerDisplayer.cpp
+  ServerManager.cpp
+  SocketManager.cpp
+  Util.cpp
+  Warehouse.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 1095 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  DataServer.vcxproj -> D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Server Source\Release\DataServer_EX603\DataServer.exe

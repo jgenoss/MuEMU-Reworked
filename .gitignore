@@ -1,3 +1,6 @@
 /Server Source/.vs
 /Server Source/GameServer/.vs
 /Server Source/GameServer/Release
+/Tools Source/GetMainInfo/GetMainInfo/Debug
+/Tools Source/GetMainInfo/.vs
+*.pdb

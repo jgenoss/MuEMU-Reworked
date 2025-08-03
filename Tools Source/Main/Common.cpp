@@ -63,6 +63,8 @@ void InitCommon() // OK
 	SetCompleteHook(0xFF,0x007D3B0D,&CheckGensBattleMap);
 
 	SetCompleteHook(0xE9,0x008317BD,&CompareGensMoveIndex);
+
+	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3);
 }
 
 BOOL CheckGensBattleMap(int map) // OK
