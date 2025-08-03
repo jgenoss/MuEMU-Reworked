@@ -73,7 +73,6 @@ void CServerDisplayer::Run() // OK
 {
 	this->SetWindowName();
 	this->PaintAllInfo();
-	this->m_animationCounter++;
 }
 
 void CServerDisplayer::SetWindowName() // OK
@@ -216,7 +215,7 @@ void CServerDisplayer::PaintInfoBar() // OK
 	ReleaseDC(this->m_hwnd, hdc);
 }
 
-void CServerDisplayer::LogTextPaint() // OK
+void CServerDisplayer::LogTextPaint() // FIXED - Logs de abajo hacia arriba
 {
 	RECT rect;
 	GetClientRect(this->m_hwnd, &rect);
@@ -227,7 +226,13 @@ void CServerDisplayer::LogTextPaint() // OK
 	// Fondo degradado para logs
 	this->DrawGradientRect(hdc, rect, RGB(26, 26, 26), RGB(15, 15, 15), true);
 
-	int line = MAX_LOG_TEXT_LINE;
+	// Calcular líneas visibles
+	int availableHeight = rect.bottom - rect.top - 20;
+	int lineHeight = 16;
+	int maxVisibleLines = availableHeight / lineHeight;
+	int linesToShow = min(maxVisibleLines, MAX_LOG_TEXT_LINE);
+
+	// Empezar desde el log más reciente
 	int count = (((this->m_count - 1) >= 0) ? (this->m_count - 1) : (MAX_LOG_TEXT_LINE - 1));
 
 	// Fuente para logs
@@ -235,57 +240,62 @@ void CServerDisplayer::LogTextPaint() // OK
 	HFONT oldFont = (HFONT)SelectObject(hdc, logFont);
 	SetBkMode(hdc, TRANSPARENT);
 
-	for (int n = 0; n < MAX_LOG_TEXT_LINE; n++)
+	// Renderizar desde abajo hacia arriba (log más reciente abajo)
+	for (int n = 0; n < linesToShow; n++)
 	{
-		int yPos = rect.top + 10 + (line * 16);
+		// Calcular posición Y desde abajo hacia arriba
+		int yPos = rect.bottom - 10 - ((n + 1) * lineHeight);
 
-		if (yPos >= rect.top && yPos < rect.bottom - 20)
+		// Verificar que esté dentro del área visible
+		if (yPos < rect.top + 10) break;
+
+		// Color de fondo alternado
+		if (n % 2 == 0)
 		{
-			// Color de fondo alternado para mejor legibilidad
-			if (n % 2 == 0)
-			{
-				RECT lineRect = { rect.left + 5, yPos - 2, rect.right - 5, yPos + 14 };
-				FillRect(hdc, &lineRect, CreateSolidBrush(RGB(30, 30, 30)));
-			}
-
-			// Barra lateral de color según tipo
-			HBRUSH lineBrush = NULL;
-			switch (this->m_log[count].color)
-			{
-			case LOG_WHITE:
-				SetTextColor(hdc, RGB(255, 255, 255));
-				lineBrush = CreateSolidBrush(RGB(255, 255, 255));
-				break;
-			case LOG_RED:
-				SetTextColor(hdc, RGB(231, 76, 60));
-				lineBrush = CreateSolidBrush(RGB(231, 76, 60));
-				break;
-			case LOG_GREEN:
-				SetTextColor(hdc, RGB(46, 204, 113));
-				lineBrush = CreateSolidBrush(RGB(46, 204, 113));
-				break;
-			case LOG_BLUE:
-				SetTextColor(hdc, RGB(52, 152, 219));
-				lineBrush = CreateSolidBrush(RGB(52, 152, 219));
-				break;
-			}
-
-			// Dibujar barra lateral
-			if (lineBrush)
-			{
-				RECT sideBar = { rect.left + 8, yPos, rect.left + 11, yPos + 12 };
-				FillRect(hdc, &sideBar, lineBrush);
-				DeleteObject(lineBrush);
-			}
-
-			int size = strlen(this->m_log[count].text);
-			if (size > 1)
-			{
-				TextOut(hdc, rect.left + 20, yPos, this->m_log[count].text, size);
-			}
+			RECT lineRect = { rect.left + 5, yPos - 2, rect.right - 5, yPos + 14 };
+			HBRUSH altBrush = CreateSolidBrush(RGB(30, 30, 30));
+			FillRect(hdc, &lineRect, altBrush);
+			DeleteObject(altBrush);
 		}
 
-		line--;
+		// Colorear según tipo de log
+		HBRUSH lineBrush = NULL;
+		switch (this->m_log[count].color)
+		{
+		case LOG_WHITE:
+			SetTextColor(hdc, RGB(255, 255, 255));
+			lineBrush = CreateSolidBrush(RGB(255, 255, 255));
+			break;
+		case LOG_RED:
+			SetTextColor(hdc, RGB(231, 76, 60));
+			lineBrush = CreateSolidBrush(RGB(231, 76, 60));
+			break;
+		case LOG_GREEN:
+			SetTextColor(hdc, RGB(46, 204, 113));
+			lineBrush = CreateSolidBrush(RGB(46, 204, 113));
+			break;
+		case LOG_BLUE:
+			SetTextColor(hdc, RGB(52, 152, 219));
+			lineBrush = CreateSolidBrush(RGB(52, 152, 219));
+			break;
+		}
+
+		// Barra lateral de color
+		if (lineBrush)
+		{
+			RECT sideBar = { rect.left + 8, yPos, rect.left + 11, yPos + 12 };
+			FillRect(hdc, &sideBar, lineBrush);
+			DeleteObject(lineBrush);
+		}
+
+		// Renderizar texto si existe
+		int size = strlen(this->m_log[count].text);
+		if (size > 1)
+		{
+			TextOut(hdc, rect.left + 20, yPos, this->m_log[count].text, size);
+		}
+
+		// Siguiente log (hacia atrás en el buffer circular para mostrar logs más antiguos arriba)
 		count = (((--count) >= 0) ? count : (MAX_LOG_TEXT_LINE - 1));
 	}
 
@@ -296,14 +306,18 @@ void CServerDisplayer::LogTextPaint() // OK
 
 void CServerDisplayer::LogAddText(eLogColor color, char* text, int size) // OK
 {
+
 	size = ((size >= MAX_LOG_TEXT_SIZE) ? (MAX_LOG_TEXT_SIZE - 1) : size);
 
 	memset(&this->m_log[this->m_count].text, 0, sizeof(this->m_log[this->m_count].text));
+
 	memcpy(&this->m_log[this->m_count].text, text, size);
+
 	this->m_log[this->m_count].color = color;
+
 	this->m_count = (((++this->m_count) >= MAX_LOG_TEXT_LINE) ? 0 : this->m_count);
 
-	gLog.Output(LOG_GENERAL, "%s", text);
+	gLog.Output(LOG_GENERAL, "%s", &text[9]);
 }
 
 void CServerDisplayer::DrawGradientRect(HDC hdc, RECT rect, COLORREF color1, COLORREF color2, bool vertical) // OK

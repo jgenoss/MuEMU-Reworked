@@ -184,21 +184,21 @@ void CKanturuBattleStanby::SetState(int state) // OK
 
 void CKanturuBattleStanby::SetState_NONE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleStanby ] State(%d) -> NONE",this->m_BattleStanbyState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleStanby ] State(%d) -> NONE",this->m_BattleStanbyState);
 
 	this->SetBattleStanbyState(KANTURU_STANBY_NONE);
 }
 
 void CKanturuBattleStanby::SetState_START() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleStanby ] State(%d) -> START",this->m_BattleStanbyState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleStanby ] State(%d) -> START",this->m_BattleStanbyState);
 
 	this->SetBattleStanbyState(KANTURU_STANBY_START);
 }
 
 void CKanturuBattleStanby::SetState_NOTIFY() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleStanby ] State(%d) -> NOTIFY",this->m_BattleStanbyState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleStanby ] State(%d) -> NOTIFY",this->m_BattleStanbyState);
 
 	this->SetBattleStanbyState(KANTURU_STANBY_NOTIFY);
 
@@ -207,7 +207,7 @@ void CKanturuBattleStanby::SetState_NOTIFY() // OK
 
 void CKanturuBattleStanby::SetState_END() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleStanby ] State(%d) -> END",this->m_BattleStanbyState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleStanby ] State(%d) -> END",this->m_BattleStanbyState);
 
 	this->SetBattleStanbyState(KANTURU_STANBY_END);
 }

@@ -57,7 +57,7 @@ void CKanturuEntranceNPC::CGKanturuEnterRecv(int aIndex) // OK
 		gObjMoveGate(aIndex,133);
 		gKanturuBattleUserMng.AddUserData(aIndex);
 		gKanturuUtil.NotifyKanturuState(aIndex,gKanturu.GetKanturuState(),gKanturu.GetKanturuDetailState());
-		LogAdd(LOG_BLACK,"[ KANTURU ][ Battle User ] Add User [%s][%s] Current Battle User:%d State:[%d-%d] (CharInfoSave : Class=%d, Level=%d, LvPoint=%d, Exp=%u, Str=%d, Dex=%d, Vit=%d, Energy=%d, LeaderShip=%d, Map=%d, Pk=%d",lpObj->Account,lpObj->Name,gKanturuBattleUserMng.GetUserCount(),gKanturu.GetKanturuState(),gKanturu.GetKanturuDetailState(),lpObj->Class,lpObj->Level,lpObj->LevelUpPoint,lpObj->Experience,lpObj->Strength,lpObj->Dexterity,lpObj->Vitality,lpObj->Energy,lpObj->Leadership,lpObj->Map,lpObj->PKLevel);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ Battle User ] Add User [%s][%s] Current Battle User:%d State:[%d-%d] (CharInfoSave : Class=%d, Level=%d, LvPoint=%d, Exp=%u, Str=%d, Dex=%d, Vit=%d, Energy=%d, LeaderShip=%d, Map=%d, Pk=%d",lpObj->Account,lpObj->Name,gKanturuBattleUserMng.GetUserCount(),gKanturu.GetKanturuState(),gKanturu.GetKanturuDetailState(),lpObj->Class,lpObj->Level,lpObj->LevelUpPoint,lpObj->Experience,lpObj->Strength,lpObj->Dexterity,lpObj->Vitality,lpObj->Energy,lpObj->Leadership,lpObj->Map,lpObj->PKLevel);
 		return;
 	}
 
@@ -68,5 +68,5 @@ void CKanturuEntranceNPC::CGKanturuEnterRecv(int aIndex) // OK
 		return;
 	}
 
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BossMapMove ] Error - State(%d) Character[%s][%s]",gKanturu.GetKanturuState(),lpObj->Account,lpObj->Name);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BossMapMove ] Error - State(%d) Character[%s][%s]",gKanturu.GetKanturuState(),lpObj->Account,lpObj->Name);
 }

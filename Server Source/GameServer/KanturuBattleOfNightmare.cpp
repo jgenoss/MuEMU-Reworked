@@ -185,7 +185,7 @@ void CKanturuBattleOfNightmare::ProcState_START() // OK
 
 		this->SetState(KANTURU_NIGHTMARE_END);
 
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] Success!! Nightmare Die");
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] Success!! Nightmare Die");
 	}
 }
 
@@ -234,7 +234,7 @@ void CKanturuBattleOfNightmare::SetState(int state) // OK
 
 void CKanturuBattleOfNightmare::SetState_NONE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> NONE",this->m_BattleOfNightmareState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> NONE",this->m_BattleOfNightmareState);
 
 	this->SetBattleOfNightmareState(KANTURU_NIGHTMARE_NONE);
 
@@ -243,7 +243,7 @@ void CKanturuBattleOfNightmare::SetState_NONE() // OK
 
 void CKanturuBattleOfNightmare::SetState_IDLE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> IDLE",this->m_BattleOfNightmareState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> IDLE",this->m_BattleOfNightmareState);
 
 	this->SetBattleOfNightmareState(KANTURU_NIGHTMARE_IDLE);
 
@@ -256,14 +256,14 @@ void CKanturuBattleOfNightmare::SetState_IDLE() // OK
 
 void CKanturuBattleOfNightmare::SetState_NOTIFY() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> NOTIFY",this->m_BattleOfNightmareState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> NOTIFY",this->m_BattleOfNightmareState);
 
 	this->SetBattleOfNightmareState(KANTURU_NIGHTMARE_NOTIFY);
 }
 
 void CKanturuBattleOfNightmare::SetState_START() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> START",this->m_BattleOfNightmareState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> START",this->m_BattleOfNightmareState);
 
 	this->SetBattleOfNightmareState(KANTURU_NIGHTMARE_START);
 
@@ -283,7 +283,7 @@ void CKanturuBattleOfNightmare::SetState_START() // OK
 
 void CKanturuBattleOfNightmare::SetState_END() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> END",this->m_BattleOfNightmareState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> END",this->m_BattleOfNightmareState);
 
 	this->SetBattleOfNightmareState(KANTURU_NIGHTMARE_END);
 
@@ -292,13 +292,13 @@ void CKanturuBattleOfNightmare::SetState_END() // OK
 	if(this->GetSuccessValue() == 0)
 	{
 		gKanturuUtil.SendMsgKanturuBossMapUser(gMessage.GetMessage(343));
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] Fail!! TimeOut");
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] Fail!! TimeOut");
 	}
 }
 
 void CKanturuBattleOfNightmare::SetState_ENDCYCLE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> ENDCYCLE",this->m_BattleOfNightmareState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] State(%d) -> ENDCYCLE",this->m_BattleOfNightmareState);
 
 	this->SetBattleOfNightmareState(KANTURU_NIGHTMARE_ENDCYCLE);
 
@@ -333,7 +333,7 @@ void CKanturuBattleOfNightmare::CheckNightmareBattleUser() // OK
 
 			gKanturuBattleUserMng.ResetAllData();
 
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfNightmare ] Fail!! All Battle User Die");
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfNightmare ] Fail!! All Battle User Die");
 		}
 	}
 }

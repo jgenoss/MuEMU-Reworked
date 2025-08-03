@@ -103,7 +103,7 @@ void CCrywolfAltar::ResetAltarUserIndex(int AltarObjIndex,int Class) // OK
 	if(gObj[lpAltarInfo->m_UserIndex].Connected == OBJECT_ONLINE)
 	{
 		gNotice.GCNoticeSend(lpAltarInfo->m_UserIndex,1,0,0,0,0,0,gMessage.GetMessage(399),AltarNumber);
-		LogAdd(LOG_BLACK,"[ Crywolf ][Altar Op.] [%s][%s] Remove contract Altar[%d]",gObj[lpAltarInfo->m_UserIndex].Account,gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
+		LogAdd(LOG_WHITE,"[ Crywolf ][Altar Op.] [%s][%s] Remove contract Altar[%d]",gObj[lpAltarInfo->m_UserIndex].Account,gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
 	}
 
 	if(lpAltarInfo->m_ContractCount >= MAX_CRYWOLF_ALTAR_CONTRACT)
@@ -197,7 +197,7 @@ bool CCrywolfAltar::SetAltarUserIndex(int AltarObjIndex,int Class,int UserIndex)
 
 	gCrywolfUtil.SendCrywolfUserAnyMsg(0,gMessage.GetMessage(396),gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
 
-	LogAdd(LOG_BLACK,"[ Crywolf ][Altar Op.] [%s][%s] Attempt to contract Altar[%d]",gObj[lpAltarInfo->m_UserIndex].Account,gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
+	LogAdd(LOG_WHITE,"[ Crywolf ][Altar Op.] [%s][%s] Attempt to contract Altar[%d]",gObj[lpAltarInfo->m_UserIndex].Account,gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
 
 	gNotice.GCNoticeSend(UserIndex,1,0,0,0,0,0,gMessage.GetMessage(397));
 	gNotice.GCNoticeSend(UserIndex,1,0,0,0,0,0,gMessage.GetMessage(398));
@@ -235,7 +235,7 @@ void CCrywolfAltar::SetAltarValidContract(int AltarObjIndex,int Class) // OK
 
 		gCrywolfUtil.SendCrywolfUserAnyMsg(0,gMessage.GetMessage(391),gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
 
-		LogAdd(LOG_BLACK,"[ Crywolf ][Altar Op.] [%s][%s] Set Valid Contract Altar[%d]",gObj[lpAltarInfo->m_UserIndex].Account,gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
+		LogAdd(LOG_WHITE,"[ Crywolf ][Altar Op.] [%s][%s] Set Valid Contract Altar[%d]",gObj[lpAltarInfo->m_UserIndex].Account,gObj[lpAltarInfo->m_UserIndex].Name,AltarNumber);
 
 		lpAltarInfo->SetAltarState(1);
 

@@ -470,7 +470,7 @@ BOOL CGuildClass::SetGuildMemberStatus(char* szGuildName, char* szMemberName, in
 	{
 		if ( gObjIsConnectedGP(pNode->Index[iKey]) == FALSE )
 		{
-			LogAdd(LOG_BLACK,"@SetGuildMemberStatus() error-L2 : Index %d", pNode->Index[iKey]);
+			LogAdd(LOG_WHITE,"@SetGuildMemberStatus() error-L2 : Index %d", pNode->Index[iKey]);
 			return false;
 		}
 
@@ -525,7 +525,7 @@ BOOL CGuildClass::SetGuildType(char* szGuildName, int iGuildType)
 			{
 				if ( gObjIsConnectedGP(pNode->Index[n]) == FALSE )
 				{
-					LogAdd(LOG_BLACK,"SetGuildType() error-L2 : Index %d", pNode->Index[n]);
+					LogAdd(LOG_WHITE,"SetGuildType() error-L2 : Index %d", pNode->Index[n]);
 					continue;
 				}
 

@@ -302,14 +302,14 @@ void CNpcTalk::NpcCastleSiegeCrown(LPOBJ lpNpc,LPOBJ lpObj) // OK
 		if(gObjIsConnected(iSwitchIndex1) == FALSE || gObjIsConnected(iSwitchIndex2) == FALSE )
 		{
 			GCAnsCsAccessCrownState(lpObj->Index,4);
-			LogAdd(LOG_BLACK,"[CastleSiege] [%s][%s] Failed to Register Castle Crown (GUILD:%s)",lpObj->Account,lpObj->Name,lpObj->GuildName);
+			LogAdd(LOG_WHITE,"[CastleSiege] [%s][%s] Failed to Register Castle Crown (GUILD:%s)",lpObj->Account,lpObj->Name,lpObj->GuildName);
 			return;
 		}
 
 		if(lpObj->CsJoinSide != gObj[iSwitchIndex1].CsJoinSide || lpObj->CsJoinSide != gObj[iSwitchIndex2].CsJoinSide)
 		{
 			GCAnsCsAccessCrownState(lpObj->Index,4);
-			LogAdd(LOG_BLACK,"[CastleSiege] [%s][%s] Failed to Register Castle Crown (GUILD:%s) (S1:%s/%s)(S2:%s/%s)",lpObj->Account,lpObj->Name,lpObj->GuildName,gObj[iSwitchIndex1].Name,gObj[iSwitchIndex1].GuildName,gObj[iSwitchIndex2].Name,gObj[iSwitchIndex2].GuildName);
+			LogAdd(LOG_WHITE,"[CastleSiege] [%s][%s] Failed to Register Castle Crown (GUILD:%s) (S1:%s/%s)(S2:%s/%s)",lpObj->Account,lpObj->Name,lpObj->GuildName,gObj[iSwitchIndex1].Name,gObj[iSwitchIndex1].GuildName,gObj[iSwitchIndex2].Name,gObj[iSwitchIndex2].GuildName);
 			return;
 		}
 		else
@@ -320,7 +320,7 @@ void CNpcTalk::NpcCastleSiegeCrown(LPOBJ lpNpc,LPOBJ lpObj) // OK
 			gCastleSiege.SetCrownAccessUserY((BYTE)lpObj->Y);
 			gCastleSiege.SetCrownAccessTickCount();
 			gCastleSiege.NotifyAllUserCsProgState(0,lpObj->GuildName);
-			LogAdd(LOG_BLACK,"[CastleSiege] [%s][%s] Start to Register Castle Crown (GUILD:%s)",lpObj->Account,lpObj->Name,lpObj->GuildName);
+			LogAdd(LOG_WHITE,"[CastleSiege] [%s][%s] Start to Register Castle Crown (GUILD:%s)",lpObj->Account,lpObj->Name,lpObj->GuildName);
 		}
 	}
 	else if(lpObj->Index != iUserIndex)
@@ -365,7 +365,7 @@ void CNpcTalk::NpcCastleSiegeCrownSwitch(LPOBJ lpNpc,LPOBJ lpObj) // OK
 	{
 		GCAnsCsAccessSwitchState(lpObj->Index,lpNpc->Index,-1,1);
 		gCastleSiege.SetCrownSwitchUserIndex(lpNpc->Class,lpObj->Index);
-		LogAdd(LOG_BLACK,"[CastleSiege] [%s][%s] Start to Push Castle Crown Switch (GUILD:%s) - CS X:%d/Y:%d",lpObj->Account,lpObj->Name,lpObj->GuildName,lpNpc->X,lpNpc->Y);
+		LogAdd(LOG_WHITE,"[CastleSiege] [%s][%s] Start to Push Castle Crown Switch (GUILD:%s) - CS X:%d/Y:%d",lpObj->Account,lpObj->Name,lpObj->GuildName,lpNpc->X,lpNpc->Y);
 	}
 	else if(lpObj->Index != iUserIndex)
 	{

@@ -285,7 +285,7 @@ void CIllusionTemple::ProcState_STAND(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel,IT_TEAM_Y) < (gServerInfo.m_IllusionTempleMinUser/2) || this->GetUserCount(lpLevel,IT_TEAM_B) < (gServerInfo.m_IllusionTempleMinUser/2))
 	{
-		LogAdd(LOG_BLACK,"[Illusion Temple] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Illusion Temple] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,IT_STATE_EMPTY);
 		return;
 	}
@@ -317,7 +317,7 @@ void CIllusionTemple::ProcState_START(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel,IT_TEAM_Y) == 0 || this->GetUserCount(lpLevel,IT_TEAM_B) == 0)
 	{
-		LogAdd(LOG_BLACK,"[Illusion Temple] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Illusion Temple] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,IT_STATE_CLEAN);
 		return;
 	}
@@ -374,7 +374,7 @@ void CIllusionTemple::SetState(ILLUSION_TEMPLE_LEVEL* lpLevel,int state) // OK
 
 void CIllusionTemple::SetState_BLANK(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 {
-	LogAdd(LOG_BLACK,"[Illusion Temple] (%d) SetState BLANK",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Illusion Temple] (%d) SetState BLANK",(lpLevel->Level+1));
 }
 
 void CIllusionTemple::SetState_EMPTY(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
@@ -418,7 +418,7 @@ void CIllusionTemple::SetState_EMPTY(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 
 	this->CheckSync(lpLevel);
 
-	LogAdd(LOG_BLACK,"[Illusion Temple] (%d) SetState EMPTY",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Illusion Temple] (%d) SetState EMPTY",(lpLevel->Level+1));
 }
 
 void CIllusionTemple::SetState_STAND(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
@@ -463,7 +463,7 @@ void CIllusionTemple::SetState_STAND(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Illusion Temple] (%d) SetState STAND",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Illusion Temple] (%d) SetState STAND",(lpLevel->Level+1));
 }
 
 void CIllusionTemple::SetState_START(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
@@ -514,7 +514,7 @@ void CIllusionTemple::SetState_START(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Illusion Temple] (%d) SetState START",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Illusion Temple] (%d) SetState START",(lpLevel->Level+1));
 }
 
 void CIllusionTemple::SetState_CLEAN(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
@@ -605,7 +605,7 @@ void CIllusionTemple::SetState_CLEAN(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Illusion Temple] (%d) SetState CLEAN",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Illusion Temple] (%d) SetState CLEAN",(lpLevel->Level+1));
 }
 
 void CIllusionTemple::CheckSync(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
@@ -635,7 +635,7 @@ void CIllusionTemple::CheckSync(ILLUSION_TEMPLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)ScheduleTime.GetTime();
 
-	LogAdd(LOG_BLACK,"[Illusion Temple] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
+	LogAdd(LOG_WHITE,"[Illusion Temple] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
 }
 
 int CIllusionTemple::GetState(int level) // OK

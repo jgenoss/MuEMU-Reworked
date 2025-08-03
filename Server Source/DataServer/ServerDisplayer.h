@@ -1,5 +1,5 @@
 // ServerDisplayer.h: interface for the CServerDisplayer class.
-// Enhanced DataServer Version
+// Enhanced Version with Modern UI
 //////////////////////////////////////////////////////////////////////
 
 #pragma once
@@ -37,7 +37,6 @@ public:
 	void LogAddText(eLogColor color, char* text, int size);
 	void DrawGradientRect(HDC hdc, RECT rect, COLORREF color1, COLORREF color2, bool vertical = true);
 	DWORD GetUptime();
-	int GetActiveServerCount();
 private:
 	HWND m_hwnd;
 	HFONT m_font;

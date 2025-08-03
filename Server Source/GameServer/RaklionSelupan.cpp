@@ -78,7 +78,7 @@ void CRaklionSelupan::SelupanAct_FirstSkill() // OK
 		CMonsterSkillManager::UseMonsterSkill(aIndex,bIndex,31,0,&skill);
 	}
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ FirstSkill ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ FirstSkill ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_PoisonAttack() // OK
@@ -109,7 +109,7 @@ void CRaklionSelupan::SelupanAct_PoisonAttack() // OK
 		CMonsterSkillManager::UseMonsterSkill(aIndex,bIndex,1,1,&skill);
 	}
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ PoisonAttack ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ PoisonAttack ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_IceStorm() // OK
@@ -140,7 +140,7 @@ void CRaklionSelupan::SelupanAct_IceStorm() // OK
 		CMonsterSkillManager::UseMonsterSkill(aIndex,bIndex,1,2,&skill);
 	}
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ IceStorm ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ IceStorm ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_IceStrike() // OK
@@ -171,7 +171,7 @@ void CRaklionSelupan::SelupanAct_IceStrike() // OK
 		CMonsterSkillManager::UseMonsterSkill(aIndex,bIndex,1,3,&skill);
 	}
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ IceStrike ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ IceStrike ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_SummonMonster() // OK
@@ -187,7 +187,7 @@ void CRaklionSelupan::SelupanAct_SummonMonster() // OK
 
 	this->CreateSummonMonster();
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ SummonMonster ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ SummonMonster ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_Heal() // OK
@@ -201,7 +201,7 @@ void CRaklionSelupan::SelupanAct_Heal() // OK
 
 	CMonsterSkillManager::UseMonsterSkill(aIndex,aIndex,20,5,0);
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Heal ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Heal ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_Freeze() // OK
@@ -220,7 +220,7 @@ void CRaklionSelupan::SelupanAct_Freeze() // OK
 		CMonsterSkillManager::UseMonsterSkill(aIndex,bIndex,1,6,0);
 	}
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Freeze ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Freeze ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_Teleport() // OK
@@ -243,7 +243,7 @@ void CRaklionSelupan::SelupanAct_Teleport() // OK
 		CMonsterSkillManager::UseMonsterSkill(aIndex,bIndex,1,7,0);
 	}
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Teleport ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Teleport ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_Invincibility() // OK
@@ -257,7 +257,7 @@ void CRaklionSelupan::SelupanAct_Invincibility() // OK
 
 	CMonsterSkillManager::UseMonsterSkill(aIndex,aIndex,10,8,0);
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Invincibility ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Invincibility ] Skill Using : Index(%d) %s",aIndex,gObj[aIndex].Name);
 }
 
 void CRaklionSelupan::SelupanAct_BerserkCansel() // OK
@@ -273,7 +273,7 @@ void CRaklionSelupan::SelupanAct_BerserkCansel() // OK
 
 	gObj[aIndex].PhysiDamageMax = this->m_BossAttackMax;
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Berserk Cancel ] MinDamage(%d) Damage(%d~%d)",gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Berserk Cancel ] MinDamage(%d) Damage(%d~%d)",gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
 }
 
 void CRaklionSelupan::SelupanAct_Berserk1() // OK
@@ -293,7 +293,7 @@ void CRaklionSelupan::SelupanAct_Berserk1() // OK
 
 	gObj[aIndex].PhysiDamageMax = this->m_BossAttackMax+(this->m_BerserkIndex*gObj[aIndex].MonsterSkillElementOption.m_SkillElementAttack);
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Berserk1 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Berserk1 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
 }
 
 void CRaklionSelupan::SelupanAct_Berserk2() // OK
@@ -313,7 +313,7 @@ void CRaklionSelupan::SelupanAct_Berserk2() // OK
 
 	gObj[aIndex].PhysiDamageMax = this->m_BossAttackMax+(this->m_BerserkIndex*gObj[aIndex].MonsterSkillElementOption.m_SkillElementAttack);
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Berserk2 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Berserk2 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
 }
 
 void CRaklionSelupan::SelupanAct_Berserk3() // OK
@@ -333,7 +333,7 @@ void CRaklionSelupan::SelupanAct_Berserk3() // OK
 
 	gObj[aIndex].PhysiDamageMax = this->m_BossAttackMax+(this->m_BerserkIndex*gObj[aIndex].MonsterSkillElementOption.m_SkillElementAttack);
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Berserk3 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Berserk3 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
 }
 
 void CRaklionSelupan::SelupanAct_Berserk4() // OK
@@ -353,7 +353,7 @@ void CRaklionSelupan::SelupanAct_Berserk4() // OK
 
 	gObj[aIndex].PhysiDamageMax = this->m_BossAttackMax+(this->m_BerserkIndex*gObj[aIndex].MonsterSkillElementOption.m_SkillElementAttack);
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Berserk4 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Berserk4 ] Skill Using : Index(%d) Damage(%d~%d)",aIndex,gObj[aIndex].PhysiDamageMin,gObj[aIndex].PhysiDamageMax);
 }
 
 bool CRaklionSelupan::CreateSelupan() // OK
@@ -472,7 +472,7 @@ void CRaklionSelupan::DeleteSummonMonster() // OK
 		}
 	}
 
-	LogAdd(LOG_BLACK,"[ RAKLION ] [ DeleteSummonMonster ] Delete All SummonMonster");
+	LogAdd(LOG_WHITE,"[ RAKLION ] [ DeleteSummonMonster ] Delete All SummonMonster");
 }
 
 int CRaklionSelupan::GetSelupanLife() // OK

@@ -119,11 +119,11 @@ bool CMercenary::CreateMercenary(int aIndex,int MonsterClass,BYTE x,BYTE y) // O
 
 		if(lpObj->Guild != NULL)
 		{
-			LogAdd(LOG_BLACK,"[CastleSiege] Mercenary is summoned [%d] - [%d][%d] [%s][%s][%d] - (Guild : %s)",iMonsterIndex, iMercenaryTypeIndex,this->m_MercenaryCount,lpObj->Account,lpObj->Name,lpObj->GuildStatus,lpObj->Guild->Name);
+			LogAdd(LOG_WHITE,"[CastleSiege] Mercenary is summoned [%d] - [%d][%d] [%s][%s][%d] - (Guild : %s)",iMonsterIndex, iMercenaryTypeIndex,this->m_MercenaryCount,lpObj->Account,lpObj->Name,lpObj->GuildStatus,lpObj->Guild->Name);
 		}
 		else
 		{
-			LogAdd(LOG_BLACK,"[CastleSiege] Mercenary is summoned [%d] - [%d][%d] [%s][%s][%d]",iMonsterIndex, iMercenaryTypeIndex,this->m_MercenaryCount,lpObj->Account,lpObj->Name,lpObj->GuildStatus);
+			LogAdd(LOG_WHITE,"[CastleSiege] Mercenary is summoned [%d] - [%d][%d] [%s][%s][%d]",iMonsterIndex, iMercenaryTypeIndex,this->m_MercenaryCount,lpObj->Account,lpObj->Name,lpObj->GuildStatus);
 		}
 	}
 	else
@@ -154,7 +154,7 @@ bool CMercenary::DeleteMercenary(int aIndex) // OK
 
 	this->m_MercenaryCount--;
 
-	LogAdd(LOG_BLACK,"[CastleSiege] Mercenary is broken [%d] - [%d]", iIndex, this->m_MercenaryCount);
+	LogAdd(LOG_WHITE,"[CastleSiege] Mercenary is broken [%d] - [%d]", iIndex, this->m_MercenaryCount);
 
 	if ( this->m_MercenaryCount < 0 )
 	{

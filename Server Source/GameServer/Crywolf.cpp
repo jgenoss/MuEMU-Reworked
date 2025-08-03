@@ -364,7 +364,7 @@ void CCrywolf::ProcState_START()
 		this->m_TurnUpBoss = 1;
 		gCrywolfUtil.SendCrywolfUserAnyMsg(0,gMessage.GetMessage(381));
 		this->TurnUpBoss();
-		LogAdd(LOG_BLACK,"[ Crywolf ][MVP] Barlgars TurnUp !!!");
+		LogAdd(LOG_WHITE,"[ Crywolf ][MVP] Barlgars TurnUp !!!");
 	}
 
 	if((GetTickCount()-this->m_CrywolfStartProcTick) > ((DWORD)(this->m_MonsterGroupChangeAITime*1000)) && this->m_ChangeAI == 0)
@@ -372,7 +372,7 @@ void CCrywolf::ProcState_START()
 		this->m_ChangeAI = 1;
 		gCrywolfUtil.SendCrywolfUserAnyMsg(0,gMessage.GetMessage(382));
 		this->ChangeAI(2);
-		LogAdd(LOG_BLACK,"[ Crywolf ][MVP] Start Monster Rush !!!");
+		LogAdd(LOG_WHITE,"[ Crywolf ][MVP] Start Monster Rush !!!");
 	}
 
 	if(this->m_TurnUpBoss != 0 && OBJECT_RANGE(this->m_BossIndex) != 0 && gObj[this->m_BossIndex].Live == 0)
@@ -549,13 +549,13 @@ void CCrywolf::SetState_END()
 	{
 		gCrywolfUtil.SendMapServerGroupMsg(gMessage.GetMessage(374));
 		this->SetOccupationState(1);
-		LogAdd(LOG_BLACK,"[ Crywolf ][MVP] FAIL.......!!");
+		LogAdd(LOG_WHITE,"[ Crywolf ][MVP] FAIL.......!!");
 	}
 	else
 	{
 		gCrywolfUtil.SendMapServerGroupMsg(gMessage.GetMessage(375));
 		this->SetOccupationState(0);
-		LogAdd(LOG_BLACK,"[ Crywolf ][MVP] SUCCESS.......!!");
+		LogAdd(LOG_WHITE,"[ Crywolf ][MVP] SUCCESS.......!!");
 	}
 
 	this->SetCrywolfState(CRYWOLF_STATE_END);
@@ -614,7 +614,7 @@ void CCrywolf::CheckStateTimeSync() // OK
 		{
 			if(this->m_StartTimeInfo[n].CheckScheduleTime() != 0)
 			{
-				LogAdd(LOG_BLACK,"[ Crywolf ] Start Crywolf");
+				LogAdd(LOG_WHITE,"[ Crywolf ] Start Crywolf");
 				this->SetState(this->m_StartTimeInfo[n].m_StateNumber);
 			}
 		}
@@ -692,7 +692,7 @@ void CCrywolf::ApplyCrywolfDBInfo(int state) // OK
 
 	this->SetCrywolfMapAttr(state);
 
-	LogAdd(LOG_BLACK,"[ Crywolf ][ ApplyDBInfo] OccupationState : %d",state);
+	LogAdd(LOG_WHITE,"[ Crywolf ][ ApplyDBInfo] OccupationState : %d",state);
 }
 
 void CCrywolf::ResetAllUserMVPScore() // OK
@@ -812,7 +812,7 @@ void CCrywolf::NotifyCrywolfCurrentState() // OK
 
 	gCrywolfUtil.SendCrywolfUserAnyData((BYTE*)&pMsg,sizeof(pMsg));
 
-	LogAdd(LOG_BLACK,"[ Crywolf ] SetState - StateInfo : Occupation/%d, State/%d",pMsg.OccupationState,pMsg.CrywolfState);
+	LogAdd(LOG_WHITE,"[ Crywolf ] SetState - StateInfo : Occupation/%d, State/%d",pMsg.OccupationState,pMsg.CrywolfState);
 }
 
 void CCrywolf::NotifyCrywolfStateLeftTime() // OK
@@ -836,7 +836,7 @@ void CCrywolf::NotifyCrywolfStateLeftTime() // OK
 
 	gCrywolfUtil.SendCrywolfUserAnyData((BYTE*)&pMsg,sizeof(pMsg));
 
-	LogAdd(LOG_BLACK,"[ Crywolf ] War LeftTime - (%02d:%02d)",pMsg.hour,pMsg.minute);
+	LogAdd(LOG_WHITE,"[ Crywolf ] War LeftTime - (%02d:%02d)",pMsg.hour,pMsg.minute);
 }
 
 void CCrywolf::NotifyCrywolfStatueAndAltarInfo() // OK
@@ -868,13 +868,13 @@ void CCrywolf::NotifyCrywolfStatueAndAltarInfo() // OK
 
 	gCrywolfUtil.SendCrywolfUserAnyData((BYTE*)&pMsg,sizeof(pMsg));
 
-	LogAdd(LOG_BLACK,"[ Crywolf ][Statue Info] Statue HP : %d",pMsg.CrywolfStatueHP);
+	LogAdd(LOG_WHITE,"[ Crywolf ][Statue Info] Statue HP : %d",pMsg.CrywolfStatueHP);
 
 	for(int n=0;n < MAX_CRYWOLF_ALTAR;n++)
 	{
 		if(OBJECT_RANGE(gCrywolfAltar.GetAltarUserIndex((205+n))) != 0)
 		{
-			LogAdd(LOG_BLACK,"[ Crywolf ][Altar Info] Altar(%d) Contractor: [%s][%s]",n,gObj[gCrywolfAltar.GetAltarUserIndex((205+n))].Account,gObj[gCrywolfAltar.GetAltarUserIndex((205+n))].Name);
+			LogAdd(LOG_WHITE,"[ Crywolf ][Altar Info] Altar(%d) Contractor: [%s][%s]",n,gObj[gCrywolfAltar.GetAltarUserIndex((205+n))].Account,gObj[gCrywolfAltar.GetAltarUserIndex((205+n))].Name);
 		}
 	}
 }
@@ -917,7 +917,7 @@ void CCrywolf::NotifyCrywolfBossMonsterInfo() // OK
 
 	gCrywolfUtil.SendCrywolfUserAnyData((BYTE*)&pMsg,sizeof(pMsg));
 
-	LogAdd(LOG_BLACK,"[ Crywolf ][Boss Monster Info] Balgars HP:%d, DarkElf:%d",pMsg.BalgassHP,pMsg.DarkElfCount);
+	LogAdd(LOG_WHITE,"[ Crywolf ][Boss Monster Info] Balgars HP:%d, DarkElf:%d",pMsg.BalgassHP,pMsg.DarkElfCount);
 }
 
 void CCrywolf::NotifyCrywolfStageEffectOnOff(int state) // OK
@@ -957,7 +957,7 @@ void CCrywolf::NotifyCrywolfPersonalRank() // OK
 
 			gNotice.GCNoticeSend(n,1,0,0,0,0,0,gMessage.GetMessage(385),pMsg.experience);
 
-			LogAdd(LOG_BLACK,"[ Crywolf ][Personal Rank & Exp.] [%s][%s] Score(%d) Rank(%d) Exp(%d)",gObj[n].Account,gObj[n].Name,gObj[n].CrywolfMVPScore,pMsg.rank,pMsg.experience);
+			LogAdd(LOG_WHITE,"[ Crywolf ][Personal Rank & Exp.] [%s][%s] Score(%d) Rank(%d) Exp(%d)",gObj[n].Account,gObj[n].Name,gObj[n].CrywolfMVPScore,pMsg.rank,pMsg.experience);
 		}
 	}
 }
@@ -1000,7 +1000,7 @@ void CCrywolf::NotifyCrywolfHeroList() // OK
 
 		this->GiveUserRewardItem((*it)->Index);
 
-		LogAdd(LOG_BLACK,"[ Crywolf ][Hero List] [%s][%s] Score(%d) Ranking(%d)",(*it)->Account,(*it)->Name,(*it)->CrywolfMVPScore,pMsg.count);
+		LogAdd(LOG_WHITE,"[ Crywolf ][Hero List] [%s][%s] Score(%d) Ranking(%d)",(*it)->Account,(*it)->Name,(*it)->CrywolfMVPScore,pMsg.count);
 
 		memcpy(&send[size],&info,sizeof(info));
 		size += sizeof(info);
@@ -1141,19 +1141,19 @@ void CCrywolf::CrywolfMonsterDieProc(LPOBJ lpObj,LPOBJ lpTarget) // OK
 		if(lpObj->Class == 340 && gObjIsConnected(lpTarget->Index) != 0)
 		{
 			gCrywolfUtil.SendCrywolfUserAnyMsg(0,gMessage.GetMessage(388),lpObj->GroupNumber,lpTarget->Name);
-			LogAdd(LOG_BLACK,"[ Crywolf ][MVP] [DarkElf Dead] by [%s][%s]",lpTarget->Account,lpTarget->Name);
+			LogAdd(LOG_WHITE,"[ Crywolf ][MVP] [DarkElf Dead] by [%s][%s]",lpTarget->Account,lpTarget->Name);
 		}
 
 		if(lpObj->Class == 349 && gObjIsConnected(lpTarget->Index) == 0)
 		{
 			gCrywolfUtil.SendCrywolfUserAnyMsg(0,gMessage.GetMessage(387));
-			LogAdd(LOG_BLACK,"[ Crywolf ][MVP] [Balgars Dead] by Unknown User");
+			LogAdd(LOG_WHITE,"[ Crywolf ][MVP] [Balgars Dead] by Unknown User");
 		}
 
 		if(lpObj->Class == 349 && gObjIsConnected(lpTarget->Index) != 0)
 		{
 			gCrywolfUtil.SendCrywolfUserAnyMsg(0,gMessage.GetMessage(386),lpTarget->Name);
-			LogAdd(LOG_BLACK,"[ Crywolf ][MVP] [Balgars Dead] by [%s][%s]",lpTarget->Account,lpTarget->Name);
+			LogAdd(LOG_WHITE,"[ Crywolf ][MVP] [Balgars Dead] by [%s][%s]",lpTarget->Account,lpTarget->Name);
 		}
 
 		if(gObjIsConnected(lpTarget->Index) != 0)
@@ -1302,7 +1302,7 @@ int CCrywolf::GetUserScore(int aIndex,int bIndex,int type) // OK
 
 	gObj[aIndex].CrywolfMVPScore += AddMVPScore;
 
-	LogAdd(LOG_BLACK,"[ Crywolf ][MVP] Plus MVP Score : %d, Accumulated : %d [%s][%s]",AddMVPScore,gObj[aIndex].CrywolfMVPScore,gObj[aIndex].Account,gObj[aIndex].Name);
+	LogAdd(LOG_WHITE,"[ Crywolf ][MVP] Plus MVP Score : %d, Accumulated : %d [%s][%s]",AddMVPScore,gObj[aIndex].CrywolfMVPScore,gObj[aIndex].Account,gObj[aIndex].Name);
 
 	return gObj[aIndex].CrywolfMVPScore;
 }

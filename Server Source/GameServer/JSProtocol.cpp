@@ -101,7 +101,7 @@ void JGConnectAccountRecv(SDHP_CONNECT_ACCOUNT_RECV* lpMsg) // OK
 
 	GCConnectAccountSend(lpMsg->index,1);
 
-	LogAdd(LOG_BLACK,"[ObjectManager][%d] AddAccountInfo (%s)",lpMsg->index,gObj[lpMsg->index].Account);
+	LogAdd(LOG_WHITE,"[ObjectManager][%d] AddAccountInfo (%s)",lpMsg->index,gObj[lpMsg->index].Account);
 }
 
 void JGDisconnectAccountRecv(SDHP_DISCONNECT_ACCOUNT_RECV* lpMsg) // OK
@@ -233,7 +233,7 @@ void JGMapServerMoveAuthRecv(SDHP_MAP_SERVER_MOVE_AUTH_RECV* lpMsg) // OK
 	GCEventStateSend(lpMsg->index, 0, 1);
 	GCEventStateSend(lpMsg->index, 0, 3);
 
-	LogAdd(LOG_BLACK,"[ObjectManager][%d] AddAccountInfo (%s)",lpMsg->index,gObj[lpMsg->index].Account);
+	LogAdd(LOG_WHITE,"[ObjectManager][%d] AddAccountInfo (%s)",lpMsg->index,gObj[lpMsg->index].Account);
 }
 
 void JGAccountLevelRecv(SDHP_ACCOUNT_LEVEL_RECV* lpMsg) // OK

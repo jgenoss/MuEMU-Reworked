@@ -505,7 +505,7 @@ void CGuild::CGGuildDeleteRecv(PMSG_GUILD_DELETE_RECV* lpMsg,int aIndex) // OK
 
 		GDGuildDestroySend(aIndex,lpObj->Guild->Name,name);
 
-		LogAdd(LOG_BLACK,"[%s][%s] Guild Request - Dismiss All : %s",lpObj->Account,lpObj->Name,lpObj->Guild->Name);
+		LogAdd(LOG_WHITE,"[%s][%s] Guild Request - Dismiss All : %s",lpObj->Account,lpObj->Name,lpObj->Guild->Name);
 	}
 	else
 	{
@@ -523,7 +523,7 @@ void CGuild::CGGuildDeleteRecv(PMSG_GUILD_DELETE_RECV* lpMsg,int aIndex) // OK
 
 		GDGuildMemberDel(aIndex,lpObj->Guild->Name,name);
 
-		LogAdd(LOG_BLACK,"[%s][%s] Guild Request - Leave : %s",lpObj->Account,lpObj->Name,lpObj->Guild->Name);
+		LogAdd(LOG_WHITE,"[%s][%s] Guild Request - Leave : %s",lpObj->Account,lpObj->Name,lpObj->Guild->Name);
 	}
 }
 

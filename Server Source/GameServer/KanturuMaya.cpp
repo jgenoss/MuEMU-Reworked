@@ -54,7 +54,7 @@ void CKanturuMaya::KanturuMayaAct_IceStorm(int rate) // OK
 		}
 	}
 
-	LogAdd(LOG_BLACK,"[ KANTURU ][ IceStorm ] Skill Using(%d) : Index(%d) %s",this->m_IceStormCount,this->m_MayaObjIndex,gObj[this->m_MayaObjIndex].Name);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ IceStorm ] Skill Using(%d) : Index(%d) %s",this->m_IceStormCount,this->m_MayaObjIndex,gObj[this->m_MayaObjIndex].Name);
 }
 
 void CKanturuMaya::KanturuMayaAct_Hands() // OK
@@ -83,12 +83,12 @@ void CKanturuMaya::KanturuMayaAct_Hands() // OK
 			{
 				gObj[n].Life = 0;
 				gObjectManager.CharacterLifeCheck(&gObj[this->m_MayaObjIndex],&gObj[n],0,0,0,0,0,0);
-				LogAdd(LOG_BLACK,"[ KANTURU ][ BrokenShower ] [%s][%s] User Dying cause NOT wearing MoonStone Pandent",gObj[n].Account,gObj[n].Name);
+				LogAdd(LOG_WHITE,"[ KANTURU ][ BrokenShower ] [%s][%s] User Dying cause NOT wearing MoonStone Pandent",gObj[n].Account,gObj[n].Name);
 			}
 		}
 	}
 
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BrokenShower ] Skill Using : Index(%d) %s",this->m_MayaObjIndex,gObj[this->m_MayaObjIndex].Name);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BrokenShower ] Skill Using : Index(%d) %s",this->m_MayaObjIndex,gObj[this->m_MayaObjIndex].Name);
 }
 
 void CKanturuMaya::SetMayaObjIndex(int aIndex) // OK

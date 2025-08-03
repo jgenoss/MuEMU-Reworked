@@ -296,7 +296,7 @@ void CKanturuBattleOfMaya::ProcState_START1() // OK
 	{
 		this->SetSuccessValue(1);
 
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
 
 		this->SetState(KANTURU_MAYA1);
 	}
@@ -322,7 +322,7 @@ void CKanturuBattleOfMaya::ProcState_MAYA1() // OK
 
 			gKanturuUtil.NotifyKanturuObjectCount(0,gKanturuBattleUserMng.GetUserCount());
 
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
 		}
 		else
 		{
@@ -363,7 +363,7 @@ void CKanturuBattleOfMaya::ProcState_START2()
 	{
 		this->SetSuccessValue(1);
 
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
 
 		this->SetState(KANTURU_MAYA2);
 	}
@@ -389,7 +389,7 @@ void CKanturuBattleOfMaya::ProcState_MAYA2()
 
 			gKanturuUtil.NotifyKanturuObjectCount(0,gKanturuBattleUserMng.GetUserCount());
 
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
 		}
 		else
 		{
@@ -430,7 +430,7 @@ void CKanturuBattleOfMaya::ProcState_START3() // OK
 	{
 		this->SetSuccessValue(1);
 
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
 
 		this->SetState(KANTURU_MAYA3);
 	}
@@ -456,7 +456,7 @@ void CKanturuBattleOfMaya::ProcState_MAYA3() // OK
 
 			gKanturuUtil.NotifyKanturuObjectCount(0,gKanturuBattleUserMng.GetUserCount());
 
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Success!! - DetailState:%d",this->m_BattleOfMayaState);
 		}
 		else
 		{
@@ -579,7 +579,7 @@ void CKanturuBattleOfMaya::SetState(int state) // OK
 
 void CKanturuBattleOfMaya::SetState_NONE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> NONE",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> NONE",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_NONE);
 
@@ -588,7 +588,7 @@ void CKanturuBattleOfMaya::SetState_NONE() // OK
 
 void CKanturuBattleOfMaya::SetState_STANBY1() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> STANBY1",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> STANBY1",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_STANBY1);
 
@@ -599,7 +599,7 @@ void CKanturuBattleOfMaya::SetState_STANBY1() // OK
 
 void CKanturuBattleOfMaya::SetState_NOTIFY1() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> NOTIFY1",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> NOTIFY1",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_NOTIFY1);
 
@@ -608,7 +608,7 @@ void CKanturuBattleOfMaya::SetState_NOTIFY1() // OK
 
 void CKanturuBattleOfMaya::SetState_START1() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> START1",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> START1",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_START1);
 
@@ -634,7 +634,7 @@ void CKanturuBattleOfMaya::SetState_START1() // OK
 
 void CKanturuBattleOfMaya::SetState_MAYA1() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> MAYA1",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> MAYA1",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA1);
 
@@ -657,7 +657,7 @@ void CKanturuBattleOfMaya::SetState_MAYA1() // OK
 
 void CKanturuBattleOfMaya::SetState_END_MAYA1() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END_MAYA1",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END_MAYA1",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_END1);
 
@@ -672,7 +672,7 @@ void CKanturuBattleOfMaya::SetState_END_MAYA1() // OK
 
 void CKanturuBattleOfMaya::SetState_ENDCYCLE_MAYA1() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE_MAYA1",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE_MAYA1",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_ENDCYCLE1);
 
@@ -683,7 +683,7 @@ void CKanturuBattleOfMaya::SetState_ENDCYCLE_MAYA1() // OK
 
 void CKanturuBattleOfMaya::SetState_STANBY2() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> STANBY2",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> STANBY2",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_STANBY2);
 
@@ -692,7 +692,7 @@ void CKanturuBattleOfMaya::SetState_STANBY2() // OK
 
 void CKanturuBattleOfMaya::SetState_START2() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> START2",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> START2",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_START2);
 
@@ -718,7 +718,7 @@ void CKanturuBattleOfMaya::SetState_START2() // OK
 
 void CKanturuBattleOfMaya::SetState_MAYA2() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> MAYA2",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> MAYA2",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA2);
 
@@ -741,7 +741,7 @@ void CKanturuBattleOfMaya::SetState_MAYA2() // OK
 
 void CKanturuBattleOfMaya::SetState_END_MAYA2() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END_MAYA2",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END_MAYA2",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_END2);
 
@@ -756,7 +756,7 @@ void CKanturuBattleOfMaya::SetState_END_MAYA2() // OK
 
 void CKanturuBattleOfMaya::SetState_ENDCYCLE_MAYA2() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE_MAYA2",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE_MAYA2",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_ENDCYCLE2);
 
@@ -767,7 +767,7 @@ void CKanturuBattleOfMaya::SetState_ENDCYCLE_MAYA2() // OK
 
 void CKanturuBattleOfMaya::SetState_STANBY3() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> STANBY3",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> STANBY3",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_STANBY3);
 
@@ -776,7 +776,7 @@ void CKanturuBattleOfMaya::SetState_STANBY3() // OK
 
 void CKanturuBattleOfMaya::SetState_START3() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> START3",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> START3",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_START3);
 
@@ -800,7 +800,7 @@ void CKanturuBattleOfMaya::SetState_START3() // OK
 
 void CKanturuBattleOfMaya::SetState_MAYA3() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> MAYA3",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> MAYA3",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA3);
 
@@ -825,7 +825,7 @@ void CKanturuBattleOfMaya::SetState_MAYA3() // OK
 
 void CKanturuBattleOfMaya::SetState_END_MAYA3() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END_MAYA3",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END_MAYA3",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_END3);
 
@@ -840,7 +840,7 @@ void CKanturuBattleOfMaya::SetState_END_MAYA3() // OK
 
 void CKanturuBattleOfMaya::SetState_ENDCYCLE_MAYA3() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE_MAYA3",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE_MAYA3",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_ENDCYCLE3);
 
@@ -849,7 +849,7 @@ void CKanturuBattleOfMaya::SetState_ENDCYCLE_MAYA3() // OK
 
 void CKanturuBattleOfMaya::SetState_END() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> END",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_END);
 
@@ -870,12 +870,12 @@ void CKanturuBattleOfMaya::SetState_END() // OK
 
 	gKanturuUtil.NotifyKanturuResult(this->GetSuccessValue());
 
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Success Value[%d]",this->GetSuccessValue());
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Success Value[%d]",this->GetSuccessValue());
 }
 
 void CKanturuBattleOfMaya::SetState_ENDCYCLE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE",this->m_BattleOfMayaState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] State(%d) -> ENDCYCLE",this->m_BattleOfMayaState);
 
 	this->SetBattleOfMayaState(KANTURU_MAYA_ENDCYCLE);
 
@@ -904,7 +904,7 @@ void CKanturuBattleOfMaya::CheckMayaBattleTime() // OK
 
 		this->SetSceneSuccessValue(0);
 
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Fail!! TimeOut - DetailState:%d",this->m_BattleOfMayaState);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Fail!! TimeOut - DetailState:%d",this->m_BattleOfMayaState);
 
 		this->SetState(KANTURU_MAYA_END);
 	}
@@ -920,7 +920,7 @@ void CKanturuBattleOfMaya::CheckMayaBattleUser() // OK
 
 			this->SetSceneSuccessValue(0);
 
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleOfMaya ] Fail!! All Battle User Die - DetailState:%d",this->m_BattleOfMayaState);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleOfMaya ] Fail!! All Battle User Die - DetailState:%d",this->m_BattleOfMayaState);
 
 			this->SetState(KANTURU_MAYA_END);
 		}

@@ -89,11 +89,11 @@ void CCastleSiegeCrown::CastleSiegeCrownAct(int aIndex) // OK
 		gCastleSiege.SetCrownAccessUserY(0);
 		gCastleSiege.ResetCrownUserIndex();
 		gCastleSiege.ResetCrownAccessTickCount();
-		LogAdd(LOG_BLACK,"[CastleSiege] [%s][%s] Register Castle Crown Canceled (GUILD:%s)",lpTarget->Account,lpTarget->Name,lpTarget->GuildName);
+		LogAdd(LOG_WHITE,"[CastleSiege] [%s][%s] Register Castle Crown Canceled (GUILD:%s)",lpTarget->Account,lpTarget->Name,lpTarget->GuildName);
 		return;
 	}
 
-	LogAdd(LOG_BLACK,"[CastleSiege] [Reg. Accumulating] Accumulated Crown AccessTime : acc(%d) + %d [%s](%s)(%s)",lpTarget->AccumulatedCrownAccessTime,(GetTickCount()-gCastleSiege.GetCrownAccessTickCount()),lpTarget->GuildName,lpTarget->Account,lpTarget->Name);
+	LogAdd(LOG_WHITE,"[CastleSiege] [Reg. Accumulating] Accumulated Crown AccessTime : acc(%d) + %d [%s](%s)(%s)",lpTarget->AccumulatedCrownAccessTime,(GetTickCount()-gCastleSiege.GetCrownAccessTickCount()),lpTarget->GuildName,lpTarget->Account,lpTarget->Name);
 
 	#endif
 }

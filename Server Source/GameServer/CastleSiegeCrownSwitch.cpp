@@ -82,7 +82,7 @@ void CCastleSiegeCrownSwitch::CastleSiegeCrownSwitchAct(int aIndex) // OK
 		}
 
 		gCastleSiege.ResetCrownSwitchUserIndex(lpObj->Class);
-		LogAdd(LOG_BLACK,"[CastleSiege] [%s][%s] Push Castle Crown Switch Canceled (GUILD:%s) - CS X:%d/Y:%d",lpTarget->Account,lpTarget->Name,lpTarget->GuildName,lpObj->X,lpObj->Y);
+		LogAdd(LOG_WHITE,"[CastleSiege] [%s][%s] Push Castle Crown Switch Canceled (GUILD:%s) - CS X:%d/Y:%d",lpTarget->Account,lpTarget->Name,lpTarget->GuildName,lpObj->X,lpObj->Y);
 		return;
 	}
 

@@ -287,7 +287,7 @@ void CDevilSquare::ProcState_STAND(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel) == 0)
 	{
-		LogAdd(LOG_BLACK,"[Devil Square] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Devil Square] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,DS_STATE_EMPTY);
 		return;
 	}
@@ -319,7 +319,7 @@ void CDevilSquare::ProcState_START(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel) == 0)
 	{
-		LogAdd(LOG_BLACK,"[Devil Square] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Devil Square] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,DS_STATE_EMPTY);
 		return;
 	}
@@ -397,7 +397,7 @@ void CDevilSquare::SetState(DEVIL_SQUARE_LEVEL* lpLevel,int state) // OK
 
 void CDevilSquare::SetState_BLANK(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 {
-	LogAdd(LOG_BLACK,"[Devil Square] (%d) SetState BLANK",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Devil Square] (%d) SetState BLANK",(lpLevel->Level+1));
 }
 
 void CDevilSquare::SetState_EMPTY(DEVIL_SQUARE_LEVEL* lpLevel) // OK
@@ -413,7 +413,7 @@ void CDevilSquare::SetState_EMPTY(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 
 	this->CheckSync(lpLevel);
 
-	LogAdd(LOG_BLACK,"[Devil Square] (%d) SetState EMPTY",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Devil Square] (%d) SetState EMPTY",(lpLevel->Level+1));
 }
 
 void CDevilSquare::SetState_STAND(DEVIL_SQUARE_LEVEL* lpLevel) // OK
@@ -426,7 +426,7 @@ void CDevilSquare::SetState_STAND(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Devil Square] (%d) SetState STAND",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Devil Square] (%d) SetState STAND",(lpLevel->Level+1));
 }
 
 void CDevilSquare::SetState_START(DEVIL_SQUARE_LEVEL* lpLevel) // OK
@@ -471,7 +471,7 @@ void CDevilSquare::SetState_START(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Devil Square] (%d) SetState START",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Devil Square] (%d) SetState START",(lpLevel->Level+1));
 }
 
 void CDevilSquare::SetState_CLEAN(DEVIL_SQUARE_LEVEL* lpLevel) // OK
@@ -494,7 +494,7 @@ void CDevilSquare::SetState_CLEAN(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Devil Square] (%d) SetState CLEAN",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Devil Square] (%d) SetState CLEAN",(lpLevel->Level+1));
 }
 
 void CDevilSquare::SetStage0(DEVIL_SQUARE_LEVEL* lpLevel) // OK
@@ -648,7 +648,7 @@ void CDevilSquare::CheckSync(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)ScheduleTime.GetTime();
 
-	LogAdd(LOG_BLACK,"[Devil Square] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
+	LogAdd(LOG_WHITE,"[Devil Square] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
 }
 
 int CDevilSquare::GetState(int level) // OK

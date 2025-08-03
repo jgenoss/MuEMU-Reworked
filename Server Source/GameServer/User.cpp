@@ -1167,7 +1167,7 @@ short gObjAdd(SOCKET socket,char* IpAddress,int aIndex) // OK
 
 	gIpManager.InsertIpAddress(lpObj->IpAddr);
 
-	LogAdd(LOG_BLACK,"[ObjectManager][%d] AddClient (%s)",aIndex,lpObj->IpAddr);
+	LogAdd(LOG_WHITE,"[ObjectManager][%d] AddClient (%s)",aIndex,lpObj->IpAddr);
 
 	return aIndex;
 }
@@ -1201,9 +1201,9 @@ short gObjDel(int aIndex) // OK
 			GJDisconnectAccountSend(aIndex,lpObj->Account,lpObj->IpAddr);
 		}
 
-		if(lpObj->Account[0] != 0){LogAdd(LOG_BLACK,"[ObjectManager][%d] DelAccountInfo (%s)",aIndex,lpObj->Account);}
+		if(lpObj->Account[0] != 0){LogAdd(LOG_WHITE,"[ObjectManager][%d] DelAccountInfo (%s)",aIndex,lpObj->Account);}
 
-		LogAdd(LOG_BLACK,"[ObjectManager][%d] DelClient (%s)",aIndex,lpObj->IpAddr);
+		LogAdd(LOG_WHITE,"[ObjectManager][%d] DelClient (%s)",aIndex,lpObj->IpAddr);
 
 		memset(lpObj->Account,0,sizeof(lpObj->Account));
 
@@ -3149,7 +3149,7 @@ void gObjSecondProc()
 
 			if(lpObj->CheckSumTime > 0 && GetTickCount() - lpObj->CheckSumTime > 5000)
 			{
-				LogAdd(LOG_BLACK,"[%s][%s] CheckSumTime Error",lpObj->Account, lpObj->Name);
+				LogAdd(LOG_WHITE,"[%s][%s] CheckSumTime Error",lpObj->Account, lpObj->Name);
 				GCCloseClientSend(n,0);
 			}
 
@@ -3167,7 +3167,7 @@ void gObjSecondProc()
 					if(GetTickCount() - lpObj->ConnectTickCount > 60000)
 					{
 						CloseClient(n);
-						LogAdd(LOG_BLACK,"Game response error causes conclusion [%d][%s][%s][%s]",lpObj->Index,lpObj->Account,lpObj->Name,lpObj->IpAddr);
+						LogAdd(LOG_WHITE,"Game response error causes conclusion [%d][%s][%s][%s]",lpObj->Index,lpObj->Account,lpObj->Name,lpObj->IpAddr);
 					}
 				}
 				else
@@ -3175,7 +3175,7 @@ void gObjSecondProc()
 					if(GetTickCount() - lpObj->ConnectTickCount > 30000)
 					{
 						CloseClient(n);
-						LogAdd(LOG_BLACK,"Response error after connection causes conclusion [%d][%s][%s][%s]",lpObj->Index,lpObj->Account,lpObj->Name,lpObj->IpAddr);
+						LogAdd(LOG_WHITE,"Response error after connection causes conclusion [%d][%s][%s][%s]",lpObj->Index,lpObj->Account,lpObj->Name,lpObj->IpAddr);
 					}
 				}
 			}
@@ -3687,7 +3687,7 @@ void gObjCheckSelfDefense(LPOBJ lpObj, int aTargetIndex)
 
 	gNotice.GCNoticeSend(lpObj->Index,1,0,0,0,0,0,szTemp);
 
-	LogAdd(LOG_BLACK,"[%s][%s] Set SelfDefence [%s][%s]",lpObj->Account,lpObj->Name,gObj[aTargetIndex].Account,gObj[aTargetIndex].Name);
+	LogAdd(LOG_WHITE,"[%s][%s] Set SelfDefence [%s][%s]",lpObj->Account,lpObj->Name,gObj[aTargetIndex].Account,gObj[aTargetIndex].Name);
 }
 
 void gObjTimeCheckSelfDefense(LPOBJ lpObj)
@@ -3703,7 +3703,7 @@ void gObjTimeCheckSelfDefense(LPOBJ lpObj)
 				wsprintf(szTemp, gMessage.GetMessage(486), lpObj->Name);
 				gNotice.GCNoticeSend(lpObj->Index,1,0,0,0,0,0,szTemp);
 				gNotice.GCNoticeSend(lpObj->SelfDefense[n],1,0,0,0,0,0,szTemp);
-				LogAdd(LOG_BLACK,"[%s][%s] ReSet SelfDefence [%s][%s]", lpObj->Account, lpObj->Name, gObj[lpObj->SelfDefense[n]].Account, gObj[lpObj->SelfDefense[n]].Name);
+				LogAdd(LOG_WHITE,"[%s][%s] ReSet SelfDefence [%s][%s]", lpObj->Account, lpObj->Name, gObj[lpObj->SelfDefense[n]].Account, gObj[lpObj->SelfDefense[n]].Name);
 				lpObj->SelfDefense[n] = -1;
 			}
 		}
@@ -3871,7 +3871,7 @@ BOOL gObjGuildWarProc(GUILD_INFO_STRUCT * lpGuild1, GUILD_INFO_STRUCT * lpGuild2
 	lpGuild1->PlayScore += score;
 
 	wsprintf(szTemp,"%s ( %d ) VS %s ( %d )",lpGuild1->Name,lpGuild1->PlayScore,lpGuild2->Name,lpGuild2->PlayScore);
-	LogAdd(LOG_BLACK,szTemp);
+	LogAdd(LOG_WHITE,szTemp);
 
 	if(lpGuild1->WarType == 1)
 	{
@@ -4287,7 +4287,7 @@ void gObjNotifyUpdateUnionV1(LPOBJ lpObj)
 	{
 		if(iVp1Count != 0)
 		{
-			LogAdd(LOG_BLACK,"[Union ViewPort] ERROR : iVp1Count is OUT of BOUND: %d",iVp1Count);
+			LogAdd(LOG_WHITE,"[Union ViewPort] ERROR : iVp1Count is OUT of BOUND: %d",iVp1Count);
 		}
 	}
 }

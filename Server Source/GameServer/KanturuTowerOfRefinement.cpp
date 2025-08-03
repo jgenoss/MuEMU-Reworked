@@ -205,7 +205,7 @@ void CKanturuTowerOfRefinement::SetState(int state) // OK
 
 void CKanturuTowerOfRefinement::SetState_NONE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> NONE",this->m_TowerOfRefinementState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> NONE",this->m_TowerOfRefinementState);
 
 	this->SetTowerOfRefinementState(KANTURU_TOWER_OF_REFINEMENT_NONE);
 
@@ -218,7 +218,7 @@ void CKanturuTowerOfRefinement::SetState_NONE() // OK
 
 void CKanturuTowerOfRefinement::SetState_REVITALIZATION() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> REVITALIZATION",this->m_TowerOfRefinementState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> REVITALIZATION",this->m_TowerOfRefinementState);
 
 	this->SetTowerOfRefinementState(KANTURU_TOWER_OF_REFINEMENT_REVITALIZATION);
 
@@ -229,7 +229,7 @@ void CKanturuTowerOfRefinement::SetState_REVITALIZATION() // OK
 
 void CKanturuTowerOfRefinement::SetState_NOTIFY1() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> NOTIFY1",this->m_TowerOfRefinementState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> NOTIFY1",this->m_TowerOfRefinementState);
 
 	this->SetTowerOfRefinementState(KANTURU_TOWER_OF_REFINEMENT_NOTIFY1);
 
@@ -242,7 +242,7 @@ void CKanturuTowerOfRefinement::SetState_NOTIFY1() // OK
 
 void CKanturuTowerOfRefinement::SetState_CLOSE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> CLOSE",this->m_TowerOfRefinementState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> CLOSE",this->m_TowerOfRefinementState);
 
 	this->SetTowerOfRefinementState(KANTURU_TOWER_OF_REFINEMENT_CLOSE);
 
@@ -255,7 +255,7 @@ void CKanturuTowerOfRefinement::SetState_CLOSE() // OK
 
 void CKanturuTowerOfRefinement::SetState_NOTIFY2() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> NOTIFY2",this->m_TowerOfRefinementState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> NOTIFY2",this->m_TowerOfRefinementState);
 
 	this->SetTowerOfRefinementState(KANTURU_TOWER_OF_REFINEMENT_NOTIFY2);
 
@@ -266,7 +266,7 @@ void CKanturuTowerOfRefinement::SetState_NOTIFY2() // OK
 
 void CKanturuTowerOfRefinement::SetState_END() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> END",this->m_TowerOfRefinementState);
+	LogAdd(LOG_WHITE,"[ KANTURU ][ TowerOfRefinement ] State(%d) -> END",this->m_TowerOfRefinementState);
 
 	this->SetTowerOfRefinementState(KANTURU_TOWER_OF_REFINEMENT_END);
 
@@ -279,7 +279,7 @@ void CKanturuTowerOfRefinement::SetState_END() // OK
 		if(gObjIsConnectedGP(n) != 0 && gObj[n].Map == MAP_KANTURU3)
 		{
 			gObjMoveGate(n,136);
-			LogAdd(LOG_BLACK,"[ KANTURU ][ TowerOfRefinement ] State End:Kick Out [%s][%s]",gObj[n].Account,gObj[n].Name);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ TowerOfRefinement ] State End:Kick Out [%s][%s]",gObj[n].Account,gObj[n].Name);
 		}
 	}
 }

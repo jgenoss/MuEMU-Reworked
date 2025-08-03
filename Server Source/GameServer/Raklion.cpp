@@ -336,21 +336,21 @@ void CRaklion::SetState(int state) // OK
 
 void CRaklion::SetState_IDLE() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> IDLE",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> IDLE",this->m_RaklionState);
 
 	this->SetRaklionState(RAKLION_STATE_IDLE);
 }
 
 void CRaklion::SetState_NOTIFY1() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> NOTIFY1",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> NOTIFY1",this->m_RaklionState);
 
 	this->SetRaklionState(RAKLION_STATE_NOTIFY1);
 }
 
 void CRaklion::SetState_STANDBY() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> STANDBY",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> STANDBY",this->m_RaklionState);
 
 	this->m_AppearanceMSec = GetTickCount();
 
@@ -359,7 +359,7 @@ void CRaklion::SetState_STANDBY() // OK
 
 void CRaklion::SetState_NOTIFY2() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> NOTIFY2",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> NOTIFY2",this->m_RaklionState);
 
 	gNotice.GCNoticeSendToAll(0,0,0,0,0,0,gMessage.GetMessage(320),(((this->m_BossZoneCloseDelay/60)==0)?1:(this->m_BossZoneCloseDelay/60)));
 
@@ -368,7 +368,7 @@ void CRaklion::SetState_NOTIFY2() // OK
 
 void CRaklion::SetState_READY() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> READY",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> READY",this->m_RaklionState);
 
 	this->m_RaklionBattleOfSelupan.SetState(SELUPAN_STATE_STANDBY);
 
@@ -377,7 +377,7 @@ void CRaklion::SetState_READY() // OK
 
 void CRaklion::SetState_START_BATTLE() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> START_BATTLE",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> START_BATTLE",this->m_RaklionState);
 
 	this->m_BossZoneCloseMSec = GetTickCount();
 
@@ -386,7 +386,7 @@ void CRaklion::SetState_START_BATTLE() // OK
 
 void CRaklion::SetState_NOTIFY3() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> NOTIFY3",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> NOTIFY3",this->m_RaklionState);
 
 	gNotice.GCNoticeSendToAll(0,0,0,0,0,0,gMessage.GetMessage(321));
 
@@ -395,14 +395,14 @@ void CRaklion::SetState_NOTIFY3() // OK
 
 void CRaklion::SetState_CLOSE_DOOR() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> CLOSE_DOOR",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> CLOSE_DOOR",this->m_RaklionState);
 
 	this->SetRaklionState(RAKLION_STATE_CLOSE_DOOR);
 }
 
 void CRaklion::SetState_ALL_USER_DIE() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> ALL_USER_DIE",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> ALL_USER_DIE",this->m_RaklionState);
 
 	this->m_RaklionBattleOfSelupan.DeleteSelupan();
 
@@ -413,7 +413,7 @@ void CRaklion::SetState_ALL_USER_DIE() // OK
 
 void CRaklion::SetState_NOTIFY4() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> NOTIFY4",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> NOTIFY4",this->m_RaklionState);
 
 	this->m_BossZoneOpenMSec = GetTickCount();
 
@@ -426,7 +426,7 @@ void CRaklion::SetState_NOTIFY4() // OK
 
 void CRaklion::SetState_END() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ] State(%d) -> END",this->m_RaklionState);
+	LogAdd(LOG_WHITE,"[ RAKLION ] State(%d) -> END",this->m_RaklionState);
 
 	this->BossEggDeleteAll();
 
@@ -555,7 +555,7 @@ void CRaklion::BossEggRegenAll() // OK
 
 	this->m_BossEggCountTotal = this->GetBossEggCount();
 
-	LogAdd(LOG_BLACK,"[ RAKLION ] [ BossEggRegen ] : BossEgg(%d ea)",this->GetBossEggCount());
+	LogAdd(LOG_WHITE,"[ RAKLION ] [ BossEggRegen ] : BossEgg(%d ea)",this->GetBossEggCount());
 }
 
 void CRaklion::BossEggDeleteAll() // OK
@@ -571,7 +571,7 @@ void CRaklion::BossEggDeleteAll() // OK
 
 	this->m_BossEggCountTotal = this->GetBossEggCount();
 
-	LogAdd(LOG_BLACK,"[ RAKLION ] [ BossEggDelete ] : BossEgg(%d ea)",this->GetBossEggCount());
+	LogAdd(LOG_WHITE,"[ RAKLION ] [ BossEggDelete ] : BossEgg(%d ea)",this->GetBossEggCount());
 }
 
 int CRaklion::GetRaklionState() // OK

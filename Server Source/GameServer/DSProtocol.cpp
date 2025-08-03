@@ -1261,7 +1261,7 @@ void DGCharacterInfoRecv(SDHP_CHARACTER_INFO_RECV* lpMsg) // OK
 
 	lpObj->MapServerMoveRequest = 0;
 
-	LogAdd(LOG_BLACK,"[ObjectManager][%d] AddCharacterInfo (%s)",lpObj->Index,lpObj->Name);
+	LogAdd(LOG_WHITE,"[ObjectManager][%d] AddCharacterInfo (%s)",lpObj->Index,lpObj->Name);
 }
 
 void DGCreateItemRecv(SDHP_CREATE_ITEM_RECV* lpMsg) // OK
@@ -3343,16 +3343,16 @@ void GS_DGAnsCastleNpcBuy(LPBYTE lpRecv)
 				GCMoneySend(lpMsg->iIndex,gObj[lpMsg->iIndex].Money);
 			}
 
-			LogAdd(LOG_BLACK,"[CastleSiege] GS_DGAnsCastleNpcBuy() - CCastleSiege::AddDbNPC() OK - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
+			LogAdd(LOG_WHITE,"[CastleSiege] GS_DGAnsCastleNpcBuy() - CCastleSiege::AddDbNPC() OK - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
 		}
 		else
 		{
-			LogAdd(LOG_BLACK,"[CastleSiege] GS_DGAnsCastleNpcBuy() - CCastleSiege::AddDbNPC() FAILED - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
+			LogAdd(LOG_WHITE,"[CastleSiege] GS_DGAnsCastleNpcBuy() - CCastleSiege::AddDbNPC() FAILED - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
 		}
 	}
 	else
 	{
-		LogAdd(LOG_BLACK,"[CastleSiege] GS_DGAnsCastleNpcBuy() FAILED - Result:(%d), Npc:(CLS:%d, IDX:%d)",lpMsg->iResult,lpMsg->iNpcNumber,lpMsg->iNpcIndex); 
+		LogAdd(LOG_WHITE,"[CastleSiege] GS_DGAnsCastleNpcBuy() FAILED - Result:(%d), Npc:(CLS:%d, IDX:%d)",lpMsg->iResult,lpMsg->iNpcNumber,lpMsg->iNpcIndex); 
 	}
 
 	GCAnsNpcBuy(lpMsg->iIndex,lpMsg->iResult,lpMsg->iNpcNumber,lpMsg->iNpcIndex);
@@ -3392,16 +3392,16 @@ void GS_DGAnsCastleNpcRepair(LPBYTE lpRecv)
 				GCMoneySend(lpMsg->iIndex,gObj[lpMsg->iIndex].Money);
 			}
 
-			LogAdd(LOG_BLACK,"[CastleSiege] GS_DGAnsCastleNpcRepair() - CCastleSiege::RepairDbNPC() OK - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
+			LogAdd(LOG_WHITE,"[CastleSiege] GS_DGAnsCastleNpcRepair() - CCastleSiege::RepairDbNPC() OK - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
 		}
 		else
 		{
-			LogAdd(LOG_BLACK,"[CastleSiege] GS_DGAnsCastleNpcRepair() - CCastleSiege::RepairDbNPC() FAILED - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
+			LogAdd(LOG_WHITE,"[CastleSiege] GS_DGAnsCastleNpcRepair() - CCastleSiege::RepairDbNPC() FAILED - Npc:(CLS:%d, IDX:%d)",lpMsg->iNpcNumber,lpMsg->iNpcIndex);
 		}
 	}
 	else
 	{
-		LogAdd(LOG_BLACK,"[CastleSiege] GS_DGAnsCastleNpcRepair() FAILED - Result:(%d), Npc:(CLS:%d, IDX:%d)",lpMsg->iResult,lpMsg->iNpcNumber,lpMsg->iNpcIndex);
+		LogAdd(LOG_WHITE,"[CastleSiege] GS_DGAnsCastleNpcRepair() FAILED - Result:(%d), Npc:(CLS:%d, IDX:%d)",lpMsg->iResult,lpMsg->iNpcNumber,lpMsg->iNpcIndex);
 	}
 
 	GCAnsNpcRepair(lpMsg->iIndex,lpMsg->iResult,lpMsg->iNpcNumber,lpMsg->iNpcIndex,lpMsg->iNpcHp,lpMsg->iNpcMaxHp);
@@ -3431,7 +3431,7 @@ void GS_DGAnsCastleNpcUpgrade(LPBYTE lpRecv)
 	else
 	{
 		gCastleSiege.UpgradeDbNPC(lpMsg->iIndex,lpMsg->iNpcNumber,lpMsg->iNpcIndex,lpMsg->iNpcUpType,lpMsg->iNpcUpValue,lpMsg->iNpcUpIndex);
-		LogAdd(LOG_BLACK,"[CastleSiege] [0x80][0x06] GS_DGAnsTaxInfo() - Npc Upgrade OK (CLS:%d, IDX:%d, UPTYPE:%d, UPVAL:%d)",lpMsg->iNpcNumber, lpMsg->iNpcIndex,lpMsg->iNpcUpType,lpMsg->iNpcUpValue);
+		LogAdd(LOG_WHITE,"[CastleSiege] [0x80][0x06] GS_DGAnsTaxInfo() - Npc Upgrade OK (CLS:%d, IDX:%d, UPTYPE:%d, UPVAL:%d)",lpMsg->iNpcNumber, lpMsg->iNpcIndex,lpMsg->iNpcUpType,lpMsg->iNpcUpValue);
 	}
 
 	GCAnsNpcUpgrade(lpMsg->iIndex,lpMsg->iResult,lpMsg->iNpcNumber,lpMsg->iNpcIndex,lpMsg->iNpcUpType,lpMsg->iNpcUpValue);
@@ -3517,7 +3517,7 @@ void GS_DGAnsCastleMoneyChange(LPBYTE lpRecv)
 				}
 				GCMoneySend(lpMsg->iIndex,gObj[lpMsg->iIndex].Money);
 
-				LogAdd(LOG_BLACK,"[CastleSiege] [0x80][0x08] GS_DGAnsCastleMoneyChange() - Withdraw Request OK [%s][%s] (ReqMoney:%d, TotMoney:%I64d)",gObj[lpMsg->iIndex].Account,
+				LogAdd(LOG_WHITE,"[CastleSiege] [0x80][0x08] GS_DGAnsCastleMoneyChange() - Withdraw Request OK [%s][%s] (ReqMoney:%d, TotMoney:%I64d)",gObj[lpMsg->iIndex].Account,
 				gObj[lpMsg->iIndex].Name,lpMsg->iMoneyChanged,lpMsg->i64CastleMoney);
 			}
 		}
@@ -3795,7 +3795,7 @@ void GS_DGAnsCastleTributeMoney(LPBYTE lpRecv)
 		return;
 	}
 	
-	LogAdd(LOG_BLACK,"[CastleSiege] [0x80][0x18] GS_DGAnsCastleTributeMoney() - Money Tribute OK (%d)",gCastleSiegeSync.GetTributeMoney());
+	LogAdd(LOG_WHITE,"[CastleSiege] [0x80][0x18] GS_DGAnsCastleTributeMoney() - Money Tribute OK (%d)",gCastleSiegeSync.GetTributeMoney());
 	gCastleSiegeSync.ResetTributeMoney();
 	
 }
@@ -4147,7 +4147,7 @@ void GS_DGAnsCastleNpcUpdate(LPBYTE lpRecv)
 		szResult = "FAIL";
 	}
 
-	LogAdd(LOG_BLACK,"[CastleSiege] [0x89] GS_DGAnsCastleNpcUpdate() - Npc Data Update Result : '%s'",szResult);
+	LogAdd(LOG_WHITE,"[CastleSiege] [0x89] GS_DGAnsCastleNpcUpdate() - Npc Data Update Result : '%s'",szResult);
 #else
 	return;
 #endif

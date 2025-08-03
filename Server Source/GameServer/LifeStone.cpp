@@ -115,7 +115,7 @@ bool CLifeStone::CreateLifeStone(int aIndex) // OK
 		gObj[iMonsterIndex].CreatedActivationTime = 0;
 
 		gNotice.GCNoticeSend(iIndex,1,0,0,0,0,0,gMessage.GetMessage(452));
-		LogAdd(LOG_BLACK,"[CastleSiege] LifeStone is created - [%s] [%s][%s] (Map:%d)(X:%d, Y:%d)",lpObj->Guild->Name,
+		LogAdd(LOG_WHITE,"[CastleSiege] LifeStone is created - [%s] [%s][%s] (Map:%d)(X:%d, Y:%d)",lpObj->Guild->Name,
 		lpObj->Account,lpObj->Name,lpObj->Map,cX,cY);
 		lpObj->LifeStoneCount++;
 	}
@@ -147,7 +147,7 @@ bool CLifeStone::DeleteLifeStone(int aIndex) // OK
 
 	if(lpLifeStone->Guild)
 	{
-		LogAdd(LOG_BLACK,"[CastleSiege] LifeStone is broken - [%s]",lpLifeStone->Guild->Name);
+		LogAdd(LOG_WHITE,"[CastleSiege] LifeStone is broken - [%s]",lpLifeStone->Guild->Name);
 		lpLifeStone->Guild->LifeStone = 0;
 	}
 	return TRUE;

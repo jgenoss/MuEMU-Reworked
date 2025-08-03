@@ -875,7 +875,7 @@ int CCastleSiege::Init()
 		return false;
 	}
 
-	LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::Init() - START", this->m_bFileDataLoadOK, this->m_bDbDataLoadOK);
+	LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::Init() - START", this->m_bFileDataLoadOK, this->m_bDbDataLoadOK);
 
 	this->m_iCastleDataLoadState = 0;
 
@@ -1042,7 +1042,7 @@ void CCastleSiege::SetState_NONE(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_IDLE_1(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_IDLE_1()");
+	LogAdd(LOG_WHITE,"SET SetState_IDLE_1()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1068,7 +1068,7 @@ void CCastleSiege::SetState_IDLE_1(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_REGSIEGE(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_REGSIEGE()");
+	LogAdd(LOG_WHITE,"SET SetState_REGSIEGE()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1089,7 +1089,7 @@ void CCastleSiege::SetState_REGSIEGE(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_IDLE_2(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_IDLE_2()");
+	LogAdd(LOG_WHITE,"SET SetState_IDLE_2()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1108,7 +1108,7 @@ void CCastleSiege::SetState_IDLE_2(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_REGMARK(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_REGMARK()");
+	LogAdd(LOG_WHITE,"SET SetState_REGMARK()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1127,7 +1127,7 @@ void CCastleSiege::SetState_REGMARK(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_IDLE_3(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_IDLE_3()");
+	LogAdd(LOG_WHITE,"SET SetState_IDLE_3()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1146,7 +1146,7 @@ void CCastleSiege::SetState_IDLE_3(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_NOTIFY(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_NOTIFY()");
+	LogAdd(LOG_WHITE,"SET SetState_NOTIFY()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1167,7 +1167,7 @@ void CCastleSiege::SetState_NOTIFY(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_READYSIEGE(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_READYSIEGE()");
+	LogAdd(LOG_WHITE,"SET SetState_READYSIEGE()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1188,7 +1188,7 @@ void CCastleSiege::SetState_READYSIEGE(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_STARTSIEGE(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_STARTSIEGE()");
+	LogAdd(LOG_WHITE,"SET SetState_STARTSIEGE()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1255,7 +1255,7 @@ void CCastleSiege::SetState_STARTSIEGE(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_ENDSIEGE(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_ENDSIEGE()");
+	LogAdd(LOG_WHITE,"SET SetState_ENDSIEGE()");
 
 	if(bSetRemainMsec != FALSE)
 	{
@@ -1285,7 +1285,7 @@ void CCastleSiege::SetState_ENDSIEGE(BOOL bSetRemainMsec)
 
 void CCastleSiege::SetState_ENDCYCLE(BOOL bSetRemainMsec)
 {
-	LogAdd(LOG_BLACK,"SET SetState_ENDCYCLE()");
+	LogAdd(LOG_WHITE,"SET SetState_ENDCYCLE()");
 
 	SYSTEMTIME tmNowDate;
 
@@ -1306,8 +1306,8 @@ void CCastleSiege::SetState_ENDCYCLE(BOOL bSetRemainMsec)
 
 	this->m_tmEndDate = tmNowDate;
 
-	LogAdd(LOG_BLACK,"[CastleSiege] State - End Cycle Schedule : (%d-%d-%d(%d:%d:%d)) (%d-%d-%d(%d:%d:%d))", this->m_tmStartDate.wYear, this->m_tmStartDate.wMonth, this->m_tmStartDate.wDay, this->m_tmStartDate.wHour, this->m_tmStartDate.wMinute, this->m_tmStartDate.wSecond, this->m_tmEndDate.wYear, this->m_tmEndDate.wMonth, this->m_tmEndDate.wDay, this->m_tmEndDate.wHour, this->m_tmEndDate.wMinute, this->m_tmEndDate.wSecond);
-	LogAdd(LOG_BLACK,"[CastleSiege] State - End Cycle : Date-Changing Info (%d-%d-%d) (%d-%d-%d)", this->m_tmStartDate.wYear, this->m_tmStartDate.wMonth, this->m_tmStartDate.wDay, this->m_tmEndDate.wYear, this->m_tmEndDate.wMonth, this->m_tmEndDate.wDay);
+	LogAdd(LOG_WHITE,"[CastleSiege] State - End Cycle Schedule : (%d-%d-%d(%d:%d:%d)) (%d-%d-%d(%d:%d:%d))", this->m_tmStartDate.wYear, this->m_tmStartDate.wMonth, this->m_tmStartDate.wDay, this->m_tmStartDate.wHour, this->m_tmStartDate.wMinute, this->m_tmStartDate.wSecond, this->m_tmEndDate.wYear, this->m_tmEndDate.wMonth, this->m_tmEndDate.wDay, this->m_tmEndDate.wHour, this->m_tmEndDate.wMinute, this->m_tmEndDate.wSecond);
+	LogAdd(LOG_WHITE,"[CastleSiege] State - End Cycle : Date-Changing Info (%d-%d-%d) (%d-%d-%d)", this->m_tmStartDate.wYear, this->m_tmStartDate.wMonth, this->m_tmStartDate.wDay, this->m_tmEndDate.wYear, this->m_tmEndDate.wMonth, this->m_tmEndDate.wDay);
 
 	GS_GDReqSiegeDateChange(this->m_iMapSvrGroup, -1, this->m_tmStartDate.wYear, (BYTE)this->m_tmStartDate.wMonth, (BYTE)this->m_tmStartDate.wDay, this->m_tmEndDate.wYear, (BYTE)this->m_tmEndDate.wMonth, (BYTE)this->m_tmEndDate.wDay);
 	GS_GDReqResetRegSiegeInfo(this->m_iMapSvrGroup);
@@ -1699,13 +1699,13 @@ BOOL CCastleSiege::SetCastleInitData(CSP_ANS_CSINITDATA* lpMsg)
 	SYSTEMTIME EndTime;
 	GetStateDate(CASTLESIEGE_STATE_ENDCYCLE, &EndTime);
 
-	LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::LoadData() - Siege Schedule Start Date (%d-%d-%d)", m_tmStartDate.wYear, m_tmStartDate.wMonth, m_tmStartDate.wDay);
+	LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::LoadData() - Siege Schedule Start Date (%d-%d-%d)", m_tmStartDate.wYear, m_tmStartDate.wMonth, m_tmStartDate.wDay);
 	
-	LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::LoadData() - Siege Schedule Date (%d-%d-%d)", EndTime.wDay, EndTime.wHour, EndTime.wMinute);
+	LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::LoadData() - Siege Schedule Date (%d-%d-%d)", EndTime.wDay, EndTime.wHour, EndTime.wMinute);
 
 	GetNextDay(&m_tmSiegeEndSchedule, EndTime.wDay, EndTime.wHour, EndTime.wMinute, 0);
 
-	LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::LoadData() - Siege Schedule End Date (%d-%d-%d(%d:%d:%d))", this->m_tmSiegeEndSchedule.wYear, this->m_tmSiegeEndSchedule.wMonth, this->m_tmSiegeEndSchedule.wDay, this->m_tmSiegeEndSchedule.wHour, this->m_tmSiegeEndSchedule.wMinute, this->m_tmSiegeEndSchedule.wSecond);
+	LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::LoadData() - Siege Schedule End Date (%d-%d-%d(%d:%d:%d))", this->m_tmSiegeEndSchedule.wYear, this->m_tmSiegeEndSchedule.wMonth, this->m_tmSiegeEndSchedule.wDay, this->m_tmSiegeEndSchedule.wHour, this->m_tmSiegeEndSchedule.wMinute, this->m_tmSiegeEndSchedule.wSecond);
 
 	if( iSTART_DATE_NUM > iEND_DATE_NUM )
 	{
@@ -2548,7 +2548,7 @@ int CCastleSiege::AddDbNPC(int iNpcType, int iNpcIndex)
 						{
 							if( gObj[NpcData.m_iNPC_OBJINDEX].CsNpcExistVal )
 							{
-								LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::AddDbNPC() ERROR - DB NPC EXIST (CLS:%d, IDX:%d(%d), MAXHP:%d, HP:%d, DF:%d, RG:%d)",	NpcData.m_iNPC_NUM, NpcData.m_iNPC_INDEX, NpcData.m_iNPC_OBJINDEX, gObj[NpcData.m_iNPC_OBJINDEX].MaxLife, gObj[NpcData.m_iNPC_OBJINDEX].Life, gObj[NpcData.m_iNPC_OBJINDEX].CsNpcDfLevel, gObj[NpcData.m_iNPC_OBJINDEX].CsNpcRgLevel);
+								LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::AddDbNPC() ERROR - DB NPC EXIST (CLS:%d, IDX:%d(%d), MAXHP:%d, HP:%d, DF:%d, RG:%d)",	NpcData.m_iNPC_NUM, NpcData.m_iNPC_INDEX, NpcData.m_iNPC_OBJINDEX, gObj[NpcData.m_iNPC_OBJINDEX].MaxLife, gObj[NpcData.m_iNPC_OBJINDEX].Life, gObj[NpcData.m_iNPC_OBJINDEX].CsNpcDfLevel, gObj[NpcData.m_iNPC_OBJINDEX].CsNpcRgLevel);
 								break;
 							}
 						}
@@ -2691,7 +2691,7 @@ int CCastleSiege::AddDbNPC(int iNpcType, int iNpcIndex)
 
 				if( NpcData.m_iNPC_NUM == 277 || NpcData.m_iNPC_NUM == 283 )
 				{
-					LogAdd(LOG_BLACK,"[CastleSiege][CreateDBNPC] (Index:%d, Num:%d, DF:%d, RG:%d, MaxHP:%d, HP:%d )", NpcData.m_iNPC_INDEX, NpcData.m_iNPC_NUM, NpcData.m_iNPC_DF_LEVEL, NpcData.m_iNPC_RG_LEVEL, NpcData.m_iNPC_MAXHP, NpcData.m_iNPC_HP);
+					LogAdd(LOG_WHITE,"[CastleSiege][CreateDBNPC] (Index:%d, Num:%d, DF:%d, RG:%d, MaxHP:%d, HP:%d )", NpcData.m_iNPC_INDEX, NpcData.m_iNPC_NUM, NpcData.m_iNPC_DF_LEVEL, NpcData.m_iNPC_RG_LEVEL, NpcData.m_iNPC_MAXHP, NpcData.m_iNPC_HP);
 
 				}
 				break;
@@ -2753,7 +2753,7 @@ BOOL CCastleSiege::DelNPC(int iIndex, int iNpcType, int iMonsterExistVal, int bD
 					{
 						this->SetGateBlockState(pNpcData->m_iNPC_SX, pNpcData->m_iNPC_SY, 1);
 						gEffectManager.AddEffect(&gObj[pNpcData->m_iNPC_OBJINDEX],0,EFFECT_CASTLE_GATE_STATE,0,0,0,0,0);
-						LogAdd(LOG_BLACK,"[CastleSiege][ State:%d ] Delete Castle Gate ( CLS:%d, IDX:%d, X:%d. Y:%d )", this->m_iCastleSiegeState, pNpcData->m_iNPC_NUM, pNpcData->m_iNPC_INDEX, pNpcData->m_iNPC_SX, pNpcData->m_iNPC_SY);
+						LogAdd(LOG_WHITE,"[CastleSiege][ State:%d ] Delete Castle Gate ( CLS:%d, IDX:%d, X:%d. Y:%d )", this->m_iCastleSiegeState, pNpcData->m_iNPC_NUM, pNpcData->m_iNPC_INDEX, pNpcData->m_iNPC_SX, pNpcData->m_iNPC_SY);
 					}
 
 					if( pNpcData->m_iNPC_NUM == 283 )
@@ -2765,7 +2765,7 @@ BOOL CCastleSiege::DelNPC(int iIndex, int iNpcType, int iMonsterExistVal, int bD
 								this->ClearCastleTowerBarrier();
 								this->SetCastleTowerAccessable(TRUE);
 							}
-							LogAdd(LOG_BLACK,"[CastleSiege] Defend Statue is Broken (CLS:%d, IDX:%d, X:%d, Y:%d)", pNpcData->m_iNPC_NUM, pNpcData->m_iNPC_INDEX, pNpcData->m_iNPC_SX, pNpcData->m_iNPC_SY);
+							LogAdd(LOG_WHITE,"[CastleSiege] Defend Statue is Broken (CLS:%d, IDX:%d, X:%d, Y:%d)", pNpcData->m_iNPC_NUM, pNpcData->m_iNPC_INDEX, pNpcData->m_iNPC_SX, pNpcData->m_iNPC_SY);
 						}
 					}
 					break;
@@ -3171,7 +3171,7 @@ int CCastleSiege::UpgradeDbNPC_MAXHP(int iNpcType, int iNpcIndex, int iNpcMaxHP)
 
 void CCastleSiege::StoreDbNpc()
 {
-	LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::StoreDbNpc() - << START >>");
+	LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::StoreDbNpc() - << START >>");
 
 	char cBUFFER[0x1090];
 
@@ -3206,7 +3206,7 @@ void CCastleSiege::StoreDbNpc()
 			lpMsgBody[iCOUNT].btNpcY = pNpcData.m_iNPC_SY;
 			lpMsgBody[iCOUNT].btNpcDIR = pNpcData.m_iNPC_DIR;
 
-			LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::StoreDbNpc() NPC INFO (CLS:%d, IDX:%d(%d), MAXHP:%d, HP:%d, DF:%d, RG:%d)", pNpcData.m_iNPC_NUM,pNpcData.m_iNPC_INDEX,pNpcData.m_iNPC_OBJINDEX,lpMsgBody[iCOUNT].iNpcMaxHp,lpMsgBody[iCOUNT].iNpcHp,lpMsgBody[iCOUNT].iNpcDfLevel,lpMsgBody[iCOUNT].iNpcRgLevel);
+			LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::StoreDbNpc() NPC INFO (CLS:%d, IDX:%d(%d), MAXHP:%d, HP:%d, DF:%d, RG:%d)", pNpcData.m_iNPC_NUM,pNpcData.m_iNPC_INDEX,pNpcData.m_iNPC_OBJINDEX,lpMsgBody[iCOUNT].iNpcMaxHp,lpMsgBody[iCOUNT].iNpcHp,lpMsgBody[iCOUNT].iNpcDfLevel,lpMsgBody[iCOUNT].iNpcRgLevel);
 			iCOUNT++;
 		}
 		it++;
@@ -3224,7 +3224,7 @@ void CCastleSiege::StoreDbNpc()
 	lpMsg->h.set(0x89,iCOUNT * sizeof(CSP_NPCUPDATEDATA) + sizeof(CSP_REQ_NPCUPDATEDATA));
 	gDataServerConnection.DataSend((BYTE*)lpMsg,iCOUNT * sizeof(CSP_NPCUPDATEDATA) + sizeof(CSP_REQ_NPCUPDATEDATA));
 
-	LogAdd(LOG_BLACK,"[CastleSiege] CCastleSiege::StoreDbNpc() - << END >>");
+	LogAdd(LOG_WHITE,"[CastleSiege] CCastleSiege::StoreDbNpc() - << END >>");
 }
 
 void CCastleSiege::SendNpcStateList(int iIndex, int iNpcType)
@@ -3563,7 +3563,7 @@ void CCastleSiege::CheckCsDbNpcAlive()
 						case 277:
 							this->SetGateBlockState(NpcData.m_iNPC_SX, NpcData.m_iNPC_SY, 1);
 							gEffectManager.AddEffect(&gObj[NpcData.m_iNPC_OBJINDEX],0,EFFECT_CASTLE_GATE_STATE,0,0,0,0,0);
-							LogAdd(LOG_BLACK,"[CastleSiege] Castle Gate is Broken (CLS:%d, IDX:%d, X:%d, Y:%d)", NpcData.m_iNPC_NUM, NpcData.m_iNPC_INDEX, NpcData.m_iNPC_SX, NpcData.m_iNPC_SY);
+							LogAdd(LOG_WHITE,"[CastleSiege] Castle Gate is Broken (CLS:%d, IDX:%d, X:%d, Y:%d)", NpcData.m_iNPC_NUM, NpcData.m_iNPC_INDEX, NpcData.m_iNPC_SX, NpcData.m_iNPC_SY);
 							break;
 						case 283:
 							if( this->CheckGuardianStatueExist() == FALSE )
@@ -3571,7 +3571,7 @@ void CCastleSiege::CheckCsDbNpcAlive()
 								this->ClearCastleTowerBarrier();
 								this->SetCastleTowerAccessable(TRUE);
 							}
-							LogAdd(LOG_BLACK,"[CastleSiege] Defend Statue is Broken (CLS:%d, IDX:%d, X:%d, Y:%d)", NpcData.m_iNPC_NUM, NpcData.m_iNPC_INDEX, NpcData.m_iNPC_SX, NpcData.m_iNPC_SY);
+							LogAdd(LOG_WHITE,"[CastleSiege] Defend Statue is Broken (CLS:%d, IDX:%d, X:%d, Y:%d)", NpcData.m_iNPC_NUM, NpcData.m_iNPC_INDEX, NpcData.m_iNPC_SX, NpcData.m_iNPC_SY);
 							break;
 					}
 					it->m_iNPC_OBJINDEX = -1;
@@ -3630,7 +3630,7 @@ int CCastleSiege::DelGemOfDefend(int iIndex, int iNeedGemOfDefend)
 		{
 			if( gObj[iIndex].Inventory[x].m_Index == GET_ITEM(14,31) )
 			{
-				LogAdd(LOG_BLACK,"[CastleSiege] [%s][%s] Deleting Gem of Defend (GUILD:%s) - Serial:%u", gObj[iIndex].Account, gObj[iIndex].Name, gObj[iIndex].GuildName, gObj[iIndex].Inventory[x].m_Serial);
+				LogAdd(LOG_WHITE,"[CastleSiege] [%s][%s] Deleting Gem of Defend (GUILD:%s) - Serial:%u", gObj[iIndex].Account, gObj[iIndex].Name, gObj[iIndex].GuildName, gObj[iIndex].Inventory[x].m_Serial);
 
 				gItemManager.InventoryItemSet(iIndex,x,0xFF);
 				gItemManager.InventoryDelItem(iIndex,x);
@@ -3684,7 +3684,7 @@ void CCastleSiege::SetTaxRate(int iTaxType, int iTaxRate)
 		break;
 	}
 	
-	LogAdd(LOG_BLACK,"[CastleSiege] Tax Rate Setted - Type:%d, Rate:%d", iTaxType, iTaxRate);
+	LogAdd(LOG_WHITE,"[CastleSiege] Tax Rate Setted - Type:%d, Rate:%d", iTaxType, iTaxRate);
 }
 
 BOOL CCastleSiege::CheckCastleHasMoney(__int64 i64CastleMoney)
@@ -3856,7 +3856,7 @@ void CCastleSiege::SetCalcRegGuildList(CSP_CALCREGGUILDLIST* lpMsg, int iCOUNT)
 
 		vtRegGuildScore.push_back(GuildData);
 
-		LogAdd(LOG_BLACK,"[CastleSiege][REG Mark Count] - [%s][%d]", szGuildName,lpMsg[iGCNT].iRegMarkCount);
+		LogAdd(LOG_WHITE,"[CastleSiege][REG Mark Count] - [%s][%d]", szGuildName,lpMsg[iGCNT].iRegMarkCount);
 	}
  
 	if( vtRegGuildScore.empty() )
@@ -4056,7 +4056,7 @@ void CCastleSiege::SaveCsTotalGuildInfo()
 
 		_CS_TOTAL_GUILD_DATA GuildData = it2->second;
 
-		LogAdd(LOG_BLACK,"[CastleSiege] Siege Guild List Save - GNAME:%s, CSGUID:%d, INVOLVED:%d, SCORE:%d", (char*)&szGuildName[0], GuildData.m_iCsGuildID, GuildData.m_bGuildInvolved, GuildData.m_iGuildScore);
+		LogAdd(LOG_WHITE,"[CastleSiege] Siege Guild List Save - GNAME:%s, CSGUID:%d, INVOLVED:%d, SCORE:%d", (char*)&szGuildName[0], GuildData.m_iCsGuildID, GuildData.m_bGuildInvolved, GuildData.m_iGuildScore);
 	}
 
 	LeaveCriticalSection(&this->m_critCsTotalGuildInfo);
@@ -4116,7 +4116,7 @@ void CCastleSiege::SetCsTotalGuildInfo(CSP_CSLOADTOTALGUILDINFO* lpMsg, int iCOU
 
 		_CS_TOTAL_GUILD_DATA GuildData = _CS_TOTAL_GUILD_DATA(it2->second);
 
-		LogAdd(LOG_BLACK,"[CastleSiege] Siege Guild List Load - GNAME:%s, CSGUID:%d, INVOLVED:%d, SCORE:%d", &GuildName[0], GuildData.m_iCsGuildID, GuildData.m_bGuildInvolved, GuildData.m_iGuildScore);
+		LogAdd(LOG_WHITE,"[CastleSiege] Siege Guild List Load - GNAME:%s, CSGUID:%d, INVOLVED:%d, SCORE:%d", &GuildName[0], GuildData.m_iCsGuildID, GuildData.m_bGuildInvolved, GuildData.m_iGuildScore);
 	}
 
 	LeaveCriticalSection(&m_critCsTotalGuildInfo);
@@ -4556,7 +4556,7 @@ void CCastleSiege::ChangeWinnerGuild(int iCsJoinSide)
 
 	LeaveCriticalSection(&this->m_critCsTotalGuildInfo);
 
-	LogAdd(LOG_BLACK,"[CastleSiege] Castle Winner Guild Change From '%s' To '%s'", szGuildFrom, szGuildTo);
+	LogAdd(LOG_WHITE,"[CastleSiege] Castle Winner Guild Change From '%s' To '%s'", szGuildFrom, szGuildTo);
 }
 
 BOOL CCastleSiege::CheckMiddleWinnerGuild()
@@ -4584,7 +4584,7 @@ BOOL CCastleSiege::CheckMiddleWinnerGuild()
 			{
 				if( ( ( GetTickCount() - this->m_dwCrownAccessTime ) + gObj[this->m_iCastleCrownAccessUser].AccumulatedCrownAccessTime ) >= 60000 )
 				{
-					LogAdd(LOG_BLACK,"[CastleSiege] Castle Winner Has been Changed (GUILD:%s)", gObj[this->m_iCastleCrownAccessUser].GuildName);
+					LogAdd(LOG_WHITE,"[CastleSiege] Castle Winner Has been Changed (GUILD:%s)", gObj[this->m_iCastleCrownAccessUser].GuildName);
 
 					GCAnsCsAccessCrownState(this->m_iCastleCrownAccessUser, 1);
 
@@ -5549,7 +5549,7 @@ void CCastleSiege::NotifyCrownState(BYTE btState)
 		}
 	}
 
-	LogAdd(LOG_BLACK,"[CastleSiege] Crown State Changed (%d)", btState);
+	LogAdd(LOG_WHITE,"[CastleSiege] Crown State Changed (%d)", btState);
 }
 
 void CCastleSiege::NotifyCrownSwitchInfo(int iCrownSwitchIndex)

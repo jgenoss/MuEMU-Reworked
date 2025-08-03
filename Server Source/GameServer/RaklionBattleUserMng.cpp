@@ -34,7 +34,7 @@ void CRaklionBattleUserMng::AddUserData(int aIndex) // OK
 {
 	if(gObjIsConnectedGP(aIndex) == 0)
 	{
-		LogAdd(LOG_BLACK,"[ RAKLION ][ BattleUser ] Add User Fail - Disconnect User [%s][%s]",gObj[aIndex].Account,gObj[aIndex].Name);
+		LogAdd(LOG_WHITE,"[ RAKLION ][ BattleUser ] Add User Fail - Disconnect User [%s][%s]",gObj[aIndex].Account,gObj[aIndex].Name);
 		return;
 	}
 
@@ -42,14 +42,14 @@ void CRaklionBattleUserMng::AddUserData(int aIndex) // OK
 
 	gRaklionUtil.NotifyRaklionState(aIndex,gRaklion.GetRaklionState(),gRaklion.GetRaklionDetailState());
 
-	LogAdd(LOG_BLACK,"[ RAKLION ][ Battle User ] Add User [%s][%s] Current Battle User:%d",gObj[aIndex].Account,gObj[aIndex].Name,this->m_UserInfo.size());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ Battle User ] Add User [%s][%s] Current Battle User:%d",gObj[aIndex].Account,gObj[aIndex].Name,this->m_UserInfo.size());
 }
 
 void CRaklionBattleUserMng::DelUserData(int aIndex) // OK
 {
 	if(OBJECT_RANGE(aIndex) == 0)
 	{
-		LogAdd(LOG_BLACK,"[ RAKLION ][ BattleUser ] Delete User Fail - Invalid Index:%d",aIndex);
+		LogAdd(LOG_WHITE,"[ RAKLION ][ BattleUser ] Delete User Fail - Invalid Index:%d",aIndex);
 		return;
 	}
 
@@ -58,7 +58,7 @@ void CRaklionBattleUserMng::DelUserData(int aIndex) // OK
 		if(this->m_UserInfo[n] == aIndex)
 		{
 			this->m_UserInfo.erase((this->m_UserInfo.begin()+n));
-			LogAdd(LOG_BLACK,"[ RAKLION ][ BattleUser ] Delete User - [%s][%s] Current Battle User:%d",gObj[aIndex].Account,gObj[aIndex].Name,this->m_UserInfo.size());
+			LogAdd(LOG_WHITE,"[ RAKLION ][ BattleUser ] Delete User - [%s][%s] Current Battle User:%d",gObj[aIndex].Account,gObj[aIndex].Name,this->m_UserInfo.size());
 			return;
 		}
 	}

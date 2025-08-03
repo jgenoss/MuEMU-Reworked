@@ -316,7 +316,7 @@ void CBloodCastle::ProcState_STAND(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel) == 0)
 	{
-		LogAdd(LOG_BLACK,"[Blood Castle] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Blood Castle] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,BC_STATE_EMPTY);
 		return;
 	}
@@ -348,7 +348,7 @@ void CBloodCastle::ProcState_START(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel) == 0)
 	{
-		LogAdd(LOG_BLACK,"[Blood Castle] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Blood Castle] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,BC_STATE_EMPTY);
 		return;
 	}
@@ -457,7 +457,7 @@ void CBloodCastle::SetState(BLOOD_CASTLE_LEVEL* lpLevel,int state) // OK
 
 void CBloodCastle::SetState_BLANK(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 {
-	LogAdd(LOG_BLACK,"[Blood Castle] (%d) SetState BLANK",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Blood Castle] (%d) SetState BLANK",(lpLevel->Level+1));
 }
 
 void CBloodCastle::SetState_EMPTY(BLOOD_CASTLE_LEVEL* lpLevel) // OK
@@ -501,7 +501,7 @@ void CBloodCastle::SetState_EMPTY(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 
 	this->CheckSync(lpLevel);
 
-	LogAdd(LOG_BLACK,"[Blood Castle] (%d) SetState EMPTY",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Blood Castle] (%d) SetState EMPTY",(lpLevel->Level+1));
 }
 
 void CBloodCastle::SetState_STAND(BLOOD_CASTLE_LEVEL* lpLevel) // OK
@@ -514,7 +514,7 @@ void CBloodCastle::SetState_STAND(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Blood Castle] (%d) SetState STAND",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Blood Castle] (%d) SetState STAND",(lpLevel->Level+1));
 }
 
 void CBloodCastle::SetState_START(BLOOD_CASTLE_LEVEL* lpLevel) // OK
@@ -595,7 +595,7 @@ void CBloodCastle::SetState_START(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Blood Castle] (%d) SetState START",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Blood Castle] (%d) SetState START",(lpLevel->Level+1));
 }
 
 void CBloodCastle::SetState_CLEAN(BLOOD_CASTLE_LEVEL* lpLevel) // OK
@@ -658,7 +658,7 @@ void CBloodCastle::SetState_CLEAN(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Blood Castle] (%d) SetState CLEAN",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Blood Castle] (%d) SetState CLEAN",(lpLevel->Level+1));
 }
 
 void CBloodCastle::SetStage0(BLOOD_CASTLE_LEVEL* lpLevel) // OK
@@ -797,7 +797,7 @@ void CBloodCastle::CheckSync(BLOOD_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)ScheduleTime.GetTime();
 
-	LogAdd(LOG_BLACK,"[Blood Castle] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
+	LogAdd(LOG_WHITE,"[Blood Castle] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
 }
 
 int CBloodCastle::GetState(int level) // OK

@@ -282,7 +282,7 @@ void CCastleDeep::SetState(int state) // OK
 
 void CCastleDeep::SetState_BLANK() // OK
 {
-	LogAdd(LOG_BLACK,"[Castle Deep] SetState BLANK");
+	LogAdd(LOG_WHITE,"[Castle Deep] SetState BLANK");
 }
 
 void CCastleDeep::SetState_EMPTY() // OK
@@ -295,7 +295,7 @@ void CCastleDeep::SetState_EMPTY() // OK
 
 	this->CheckSync();
 
-	LogAdd(LOG_BLACK,"[Castle Deep] SetState EMPTY");
+	LogAdd(LOG_WHITE,"[Castle Deep] SetState EMPTY");
 }
 
 void CCastleDeep::SetState_START() // OK
@@ -316,7 +316,7 @@ void CCastleDeep::SetState_START() // OK
 		}
 	}
 
-	LogAdd(LOG_BLACK,"[Castle Deep] SetState START");
+	LogAdd(LOG_WHITE,"[Castle Deep] SetState START");
 }
 
 void CCastleDeep::CheckSync() // OK
@@ -346,7 +346,7 @@ void CCastleDeep::CheckSync() // OK
 
 	this->m_TargetTime = (int)ScheduleTime.GetTime();
 
-	LogAdd(LOG_BLACK,"[Castle Deep] Sync Start Time. [%d] min remain",(this->m_RemainTime/60));
+	LogAdd(LOG_WHITE,"[Castle Deep] Sync Start Time. [%d] min remain",(this->m_RemainTime/60));
 }
 
 void CCastleDeep::ClearMonster() // OK

@@ -455,7 +455,7 @@ short CMapServerManager::CheckMapServerMove(int aIndex,int map,short ServerCode)
 
 				if ( sDestServerCode != -1 )
 				{
-					//LogAdd(LOG_BLACK,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d(State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, sDestServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
+					//LogAdd(LOG_WHITE,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d(State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, sDestServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
 
 					return sDestServerCode;
 				}
@@ -508,7 +508,7 @@ short CMapServerManager::CheckMapServerMove(int aIndex,int map,short ServerCode)
 
 				if ( sDestServerCode != -1 )
 				{
-					//LogAdd(LOG_BLACK,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d(State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, sDestServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
+					//LogAdd(LOG_WHITE,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d(State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, sDestServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
 
 					return sDestServerCode;
 				}
@@ -516,7 +516,7 @@ short CMapServerManager::CheckMapServerMove(int aIndex,int map,short ServerCode)
 			break;
 
 		case -3:
-			//LogAdd(LOG_BLACK,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d (State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, gServerInfo.m_ServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
+			//LogAdd(LOG_WHITE,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d (State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, gServerInfo.m_ServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
 
 			return (short)gServerInfo.m_ServerCode;
 			break;
@@ -564,7 +564,7 @@ short CMapServerManager::CheckMapServerMove(int aIndex,int map,short ServerCode)
 
 				if ( sDestServerCode != -1 )
 				{
-					//LogAdd(LOG_BLACK,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d(State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, sDestServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
+					//LogAdd(LOG_WHITE,"[MapServerMng] CheckMoveMapSvr() - MapServer Check OK [%s][%s] : MAP-%d / SVR-%d(State Map:%d X:%d Y:%d)",gObj[aIndex].Account, gObj[aIndex].Name, map, sDestServerCode,gObj[aIndex].Map, gObj[aIndex].X, gObj[aIndex].Y);
 
 					return sDestServerCode;
 				}

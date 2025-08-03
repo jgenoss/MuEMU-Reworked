@@ -39,13 +39,13 @@ bool CKanturuBattleUserMng::AddUserData(int aIndex) // OK
 {
 	if(gObjIsConnectedGP(aIndex) == 0)
 	{
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleUser ] Add User Fail - Disconnect User [%s][%s]",gObj[aIndex].Account,gObj[aIndex].Name);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleUser ] Add User Fail - Disconnect User [%s][%s]",gObj[aIndex].Account,gObj[aIndex].Name);
 		return 0;
 	}
 
 	if(this->IsOverMaxUser() != 0)
 	{
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleUser ] Add User Fail - Over Max User [%s][%s]",gObj[aIndex].Account,gObj[aIndex].Name);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleUser ] Add User Fail - Over Max User [%s][%s]",gObj[aIndex].Account,gObj[aIndex].Name);
 		return 0;
 	}
 
@@ -66,7 +66,7 @@ bool CKanturuBattleUserMng::DelUserData(int aIndex) // OK
 {
 	if(OBJECT_RANGE(aIndex) == 0)
 	{
-		LogAdd(LOG_BLACK,"[ KANTURU ][ BattleUser ] Delete User Fail - Invalid Index:%d",aIndex);
+		LogAdd(LOG_WHITE,"[ KANTURU ][ BattleUser ] Delete User Fail - Invalid Index:%d",aIndex);
 		return 0;
 	}
 
@@ -76,7 +76,7 @@ bool CKanturuBattleUserMng::DelUserData(int aIndex) // OK
 		{
 			this->m_BattleUser[n].ResetData();
 			this->m_BattleUserCount--;
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleUser ] Delete User - [%s][%s] Current Battle User:%d",gObj[aIndex].Account,gObj[aIndex].Name,this->m_BattleUserCount);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleUser ] Delete User - [%s][%s] Current Battle User:%d",gObj[aIndex].Account,gObj[aIndex].Name,this->m_BattleUserCount);
 			return 1;
 		}
 	}
@@ -96,14 +96,14 @@ void CKanturuBattleUserMng::CheckUserState() // OK
 		if(gObjIsConnectedGP(this->m_BattleUser[n].GetIndex()) == 0)
 		{
 			this->DelUserData(this->m_BattleUser[n].GetIndex());
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleUser ] Delete User - Disconnect [%s][%s]",gObj[this->m_BattleUser[n].GetIndex()].Account,gObj[this->m_BattleUser[n].GetIndex()].Name);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleUser ] Delete User - Disconnect [%s][%s]",gObj[this->m_BattleUser[n].GetIndex()].Account,gObj[this->m_BattleUser[n].GetIndex()].Name);
 			continue;
 		}
 
 		if(gObj[this->m_BattleUser[n].GetIndex()].Map != MAP_KANTURU3)
 		{
 			this->DelUserData(this->m_BattleUser[n].GetIndex());
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleUser ] Delete User - Map Move [%s][%s]",gObj[this->m_BattleUser[n].GetIndex()].Account,gObj[this->m_BattleUser[n].GetIndex()].Name);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleUser ] Delete User - Map Move [%s][%s]",gObj[this->m_BattleUser[n].GetIndex()].Account,gObj[this->m_BattleUser[n].GetIndex()].Name);
 			continue;
 		}
 	}
@@ -116,7 +116,7 @@ void CKanturuBattleUserMng::MoveAllUser(int gate) // OK
 		if(this->m_BattleUser[n].IsUseData() != 0)
 		{
 			gObjMoveGate(this->m_BattleUser[n].GetIndex(),gate);
-			LogAdd(LOG_BLACK,"[ KANTURU ][ BattleUser ] [%s][%s] MoveGate(%d)",gObj[this->m_BattleUser[n].GetIndex()].Account,gObj[this->m_BattleUser[n].GetIndex()].Name,gate);
+			LogAdd(LOG_WHITE,"[ KANTURU ][ BattleUser ] [%s][%s] MoveGate(%d)",gObj[this->m_BattleUser[n].GetIndex()].Account,gObj[this->m_BattleUser[n].GetIndex()].Name,gate);
 		}
 	}
 }

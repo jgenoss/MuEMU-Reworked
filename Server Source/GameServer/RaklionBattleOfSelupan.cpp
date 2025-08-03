@@ -306,7 +306,7 @@ void CRaklionBattleOfSelupan::SetState(int state) // OK
 
 void CRaklionBattleOfSelupan::SetState_NONE() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> NONE",this->m_BattleOfSelupanState);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> NONE",this->m_BattleOfSelupanState);
 
 	this->m_RaklionSelupan.SelupanAct_BerserkCansel();
 
@@ -315,7 +315,7 @@ void CRaklionBattleOfSelupan::SetState_NONE() // OK
 
 void CRaklionBattleOfSelupan::SetState_STANDBY() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> STANDBY",this->m_BattleOfSelupanState);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> STANDBY",this->m_BattleOfSelupanState);
 
 	this->m_RaklionSelupan.CreateSelupan();
 
@@ -326,7 +326,7 @@ void CRaklionBattleOfSelupan::SetState_STANDBY() // OK
 
 void CRaklionBattleOfSelupan::SetState_PATTERN1() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN1 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN1 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
 
 	this->m_RaklionSelupan.SelupanAct_BerserkCansel();
 
@@ -335,7 +335,7 @@ void CRaklionBattleOfSelupan::SetState_PATTERN1() // OK
 
 void CRaklionBattleOfSelupan::SetState_PATTERN2() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN2 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN2 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
 
 	this->m_RaklionSelupan.SelupanAct_Berserk1();
 
@@ -344,7 +344,7 @@ void CRaklionBattleOfSelupan::SetState_PATTERN2() // OK
 
 void CRaklionBattleOfSelupan::SetState_PATTERN3() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN3 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN3 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
 
 	this->m_RaklionSelupan.SelupanAct_Berserk2();
 
@@ -353,7 +353,7 @@ void CRaklionBattleOfSelupan::SetState_PATTERN3() // OK
 
 void CRaklionBattleOfSelupan::SetState_PATTERN4() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN4 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN4 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
 
 	this->m_RaklionSelupan.SelupanAct_Berserk2();
 
@@ -362,7 +362,7 @@ void CRaklionBattleOfSelupan::SetState_PATTERN4() // OK
 
 void CRaklionBattleOfSelupan::SetState_PATTERN5() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN5 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN5 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
 
 	this->m_RaklionSelupan.SelupanAct_Berserk3();
 
@@ -371,7 +371,7 @@ void CRaklionBattleOfSelupan::SetState_PATTERN5() // OK
 
 void CRaklionBattleOfSelupan::SetState_PATTERN6() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN6 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN6 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
 
 	this->m_RaklionSelupan.SelupanAct_Berserk4();
 
@@ -380,7 +380,7 @@ void CRaklionBattleOfSelupan::SetState_PATTERN6() // OK
 
 void CRaklionBattleOfSelupan::SetState_PATTERN7() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN7 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> PATTERN7 // Life(%d/%d)",this->m_BattleOfSelupanState,this->m_RaklionSelupan.GetSelupanLife(),this->m_RaklionSelupan.GetSelupanMaxLife());
 
 	this->m_RaklionSelupan.SelupanAct_Berserk4();
 
@@ -389,7 +389,7 @@ void CRaklionBattleOfSelupan::SetState_PATTERN7() // OK
 
 void CRaklionBattleOfSelupan::SetState_DIE() // OK
 {
-	LogAdd(LOG_BLACK,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> DIE",this->m_BattleOfSelupanState);
+	LogAdd(LOG_WHITE,"[ RAKLION ][ BattleOfSelupan ] State(%d) -> DIE",this->m_BattleOfSelupanState);
 
 	this->DeleteSummonMonster();
 

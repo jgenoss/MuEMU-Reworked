@@ -260,14 +260,14 @@ void CKanturu::SetState(int state) // OK
 
 void CKanturu::SetState_NONE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ] State(%d) -> NONE",this->m_KanturuState);
+	LogAdd(LOG_WHITE,"[ KANTURU ] State(%d) -> NONE",this->m_KanturuState);
 
 	this->SetKanturuState(KANTURU_STATE_NONE);
 }
 
 void CKanturu::SetState_BATTLE_STANDBY() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ] State(%d) -> STANDBY",this->m_KanturuState);
+	LogAdd(LOG_WHITE,"[ KANTURU ] State(%d) -> STANDBY",this->m_KanturuState);
 
 	gKanturuBattleUserMng.ResetAllData();
 
@@ -278,7 +278,7 @@ void CKanturu::SetState_BATTLE_STANDBY() // OK
 
 void CKanturu::SetState_BATTLE_OF_MAYA() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ] State(%d) -> BATTLE_OF_MAYA",this->m_KanturuState);
+	LogAdd(LOG_WHITE,"[ KANTURU ] State(%d) -> BATTLE_OF_MAYA",this->m_KanturuState);
 
 	this->SetKanturuState(KANTURU_STATE_BATTLE_OF_MAYA);
 
@@ -287,7 +287,7 @@ void CKanturu::SetState_BATTLE_OF_MAYA() // OK
 
 void CKanturu::SetState_BATTLE_OF_NIGHTMARE() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ] State(%d) -> BATTLE_OF_NIGHTMARE",this->m_KanturuState);
+	LogAdd(LOG_WHITE,"[ KANTURU ] State(%d) -> BATTLE_OF_NIGHTMARE",this->m_KanturuState);
 
 	this->SetKanturuState(KANTURU_STATE_BATTLE_OF_NIGHTMARE);
 
@@ -296,7 +296,7 @@ void CKanturu::SetState_BATTLE_OF_NIGHTMARE() // OK
 
 void CKanturu::SetState_TOWER_OF_REFINEMENT() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ] State(%d) -> TOWER_OF_REFINEMENT",this->m_KanturuState);
+	LogAdd(LOG_WHITE,"[ KANTURU ] State(%d) -> TOWER_OF_REFINEMENT",this->m_KanturuState);
 
 	this->SetKanturuState(KANTURU_STATE_TOWER_OF_REFINEMENT);
 
@@ -307,7 +307,7 @@ void CKanturu::SetState_TOWER_OF_REFINEMENT() // OK
 
 void CKanturu::SetState_END() // OK
 {
-	LogAdd(LOG_BLACK,"[ KANTURU ] State(%d) -> END",this->m_KanturuState);
+	LogAdd(LOG_WHITE,"[ KANTURU ] State(%d) -> END",this->m_KanturuState);
 
 	this->SetKanturuState(KANTURU_STATE_END);
 
@@ -480,7 +480,7 @@ void CKanturu::SetKanturuMapAttr(int level) // OK
 
 	memcpy(gMap[MAP_KANTURU3].m_MapAttr,this->m_KanturuMap[level].m_MapAttr,(this->m_KanturuMap[level].m_width*this->m_KanturuMap[level].m_height));
 
-	LogAdd(LOG_BLACK,"[ KANTURU ][ Map Attr Change ] Map(%d) State(%d) DetailState(%d)",level,this->GetKanturuState(),this->GetKanturuDetailState());
+	LogAdd(LOG_WHITE,"[ KANTURU ][ Map Attr Change ] Map(%d) State(%d) DetailState(%d)",level,this->GetKanturuState(),this->GetKanturuDetailState());
 }
 
 void CKanturu::SetKanturuEnable(int enable) // OK

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|..\\Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|..\\Main\\Main.vcxproj|solutionrelative:Main\\Common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99FEE110-4599-4DF9-A022-7CD4A72F9649}|GetMainInfo.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\GetMainInfo\\GetMainInfo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99FEE110-4599-4DF9-A022-7CD4A72F9649}|GetMainInfo.vcxproj|solutionrelative:GetMainInfo\\GetMainInfo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Common.cpp",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp",
+              "RelativeDocumentMoniker": "Main\\Common.cpp",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp",
+              "RelativeToolTip": "Main\\Common.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-02T23:56:13.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetMainInfo.cpp",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\GetMainInfo\\GetMainInfo.cpp",
+              "RelativeDocumentMoniker": "GetMainInfo\\GetMainInfo.cpp",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\GetMainInfo\\GetMainInfo.cpp",
+              "RelativeToolTip": "GetMainInfo\\GetMainInfo.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-02T23:52:17.926Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

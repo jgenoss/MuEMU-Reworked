@@ -272,7 +272,7 @@ void CChaosCastle::ProcState_STAND(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel) < gServerInfo.m_ChaosCastleMinUser)
 	{
-		LogAdd(LOG_BLACK,"[Chaos Castle] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Chaos Castle] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,CC_STATE_EMPTY);
 		return;
 	}
@@ -304,7 +304,7 @@ void CChaosCastle::ProcState_START(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 
 	if(this->GetUserCount(lpLevel) == 0)
 	{
-		LogAdd(LOG_BLACK,"[Chaos Castle] (%d) Not enough users",(lpLevel->Level+1));
+		LogAdd(LOG_WHITE,"[Chaos Castle] (%d) Not enough users",(lpLevel->Level+1));
 		this->SetState(lpLevel,CC_STATE_EMPTY);
 		return;
 	}
@@ -407,7 +407,7 @@ void CChaosCastle::SetState(CHAOS_CASTLE_LEVEL* lpLevel,int state) // OK
 
 void CChaosCastle::SetState_BLANK(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 {
-	LogAdd(LOG_BLACK,"[Chaos Castle] (%d) SetState BLANK",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Chaos Castle] (%d) SetState BLANK",(lpLevel->Level+1));
 }
 
 void CChaosCastle::SetState_EMPTY(CHAOS_CASTLE_LEVEL* lpLevel) // OK
@@ -437,7 +437,7 @@ void CChaosCastle::SetState_EMPTY(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 
 	this->CheckSync(lpLevel);
 
-	LogAdd(LOG_BLACK,"[Chaos Castle] (%d) SetState EMPTY",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Chaos Castle] (%d) SetState EMPTY",(lpLevel->Level+1));
 }
 
 void CChaosCastle::SetState_STAND(CHAOS_CASTLE_LEVEL* lpLevel) // OK
@@ -452,7 +452,7 @@ void CChaosCastle::SetState_STAND(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Chaos Castle] (%d) SetState STAND",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Chaos Castle] (%d) SetState STAND",(lpLevel->Level+1));
 }
 
 void CChaosCastle::SetState_START(CHAOS_CASTLE_LEVEL* lpLevel) // OK
@@ -502,7 +502,7 @@ void CChaosCastle::SetState_START(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Chaos Castle] (%d) SetState START",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Chaos Castle] (%d) SetState START",(lpLevel->Level+1));
 }
 
 void CChaosCastle::SetState_CLEAN(CHAOS_CASTLE_LEVEL* lpLevel) // OK
@@ -545,7 +545,7 @@ void CChaosCastle::SetState_CLEAN(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)(time(0)+lpLevel->RemainTime);
 
-	LogAdd(LOG_BLACK,"[Chaos Castle] (%d) SetState CLEAN",(lpLevel->Level+1));
+	LogAdd(LOG_WHITE,"[Chaos Castle] (%d) SetState CLEAN",(lpLevel->Level+1));
 }
 
 void CChaosCastle::SetStage0(CHAOS_CASTLE_LEVEL* lpLevel) // OK
@@ -622,7 +622,7 @@ void CChaosCastle::CheckSync(CHAOS_CASTLE_LEVEL* lpLevel) // OK
 
 	lpLevel->TargetTime = (int)ScheduleTime.GetTime();
 
-	LogAdd(LOG_BLACK,"[Chaos Castle] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
+	LogAdd(LOG_WHITE,"[Chaos Castle] (%d) Sync Start Time. [%d] min remain",(lpLevel->Level+1),(lpLevel->RemainTime/60));
 }
 
 int CChaosCastle::GetState(int level) // OK
