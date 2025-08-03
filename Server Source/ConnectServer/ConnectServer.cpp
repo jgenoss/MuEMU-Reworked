@@ -33,24 +33,6 @@ int APIENTRY WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine
 		return 0;
 	}
 
-	GetPrivateProfileString("ConnectServerInfo","CustomerName","",CustomerName,sizeof(CustomerName),".\\ConnectServer.ini");
-
-	GetPrivateProfileString("ConnectServerInfo","CustomerHardwareId","",CustomerHardwareId,sizeof(CustomerHardwareId),".\\ConnectServer.ini");
-
-	#if(PROTECT_STATE==1)
-
-	#if(CONNECTSERVER_UPDATE>=801)
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S8_CONNECT_SERVER);
-	#elif(CONNECTSERVER_UPDATE>=601)
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S6_CONNECT_SERVER);
-	#elif(CONNECTSERVER_UPDATE>=401)
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S4_CONNECT_SERVER);
-	#else
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S2_CONNECT_SERVER);
-	#endif
-
-	#endif
-
 	char buff[256];
 
 	wsprintf(buff,"[%s] Mu EMU Rework by JGenoss ConnectServer (QueueSize : %d)",CONNECTSERVER_VERSION,0);

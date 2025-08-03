@@ -370,6 +370,15 @@ void CServerDisplayer::LogAddText(eLogColor color, char* text, int size) // OK
 	gLog.Output(LOG_GENERAL, "%s", text);
 }
 
+void CServerDisplayer::LogAddText(eLogColor color, char* text, int size)
+{
+	size = ((size >= MAX_LOG_TEXT_SIZE) ? (MAX_LOG_TEXT_SIZE - 1) : size);
+	memset(&this->m_log[this->m_count].text, 0, sizeof(this->m_log[this->m_count].text));
+	memcpy(&this->m_log[this->m_count].text, text, size);
+	this->m_log[this->m_count].color = color;
+	this->m_count = (((++this->m_count) >= MAX_LOG_TEXT_LINE) ? 0 : this->m_count);
+}
+
 void CServerDisplayer::DrawGradientRect(HDC hdc, RECT rect, COLORREF color1, COLORREF color2, bool vertical) // OK
 {
 	int steps = 64;

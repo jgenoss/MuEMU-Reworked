@@ -37,24 +37,6 @@ int APIENTRY WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance,LPSTR lpCmdLine
 		return 0;
 	}
 
-	GetPrivateProfileString("JoinServerInfo","CustomerName","",CustomerName,sizeof(CustomerName),".\\JoinServer.ini");
-
-	GetPrivateProfileString("JoinServerInfo","CustomerHardwareId","",CustomerHardwareId,sizeof(CustomerHardwareId),".\\JoinServer.ini");
-
-	#if(PROTECT_STATE==1)
-
-	#if(JOINSERVER_UPDATE>=801)
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S8_JOIN_SERVER);
-	#elif(JOINSERVER_UPDATE>=601)
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S6_JOIN_SERVER);
-	#elif(JOINSERVER_UPDATE>=401)
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S4_JOIN_SERVER);
-	#else
-	gProtect.StartAuth(AUTH_SERVER_TYPE_S2_JOIN_SERVER);
-	#endif
-
-	#endif
-
 	char buff[256];
 
 	wsprintf(buff,"[%s] Mu EMU Rework by JGenoss JoinServer (QueueSize : %d) (AccountCount : %d/%d)",JOINSERVER_VERSION,0,0,0);
