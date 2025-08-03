@@ -15,6 +15,6 @@
   Util.cpp
   Generando código
   Previous IPDB not found, fall back to full compilation.
-  All 519 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 524 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Generación de código finalizada
   ConnectServer.vcxproj -> D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Server Source\Release\ConnectServer_EX603\ConnectServer.exe

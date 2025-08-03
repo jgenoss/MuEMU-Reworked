@@ -82,7 +82,7 @@ void CQueryManager::Disconnect() // OK
 
 void CQueryManager::Diagnostic(char* query) // OK
 {
-	LogAdd(LOG_BLACK,"%s",query);
+	LogAdd(LOG_WHITE,"%s",query);
 
 	SQLINTEGER NativeError;
 	SQLSMALLINT RecNumber=1,BufferLength;

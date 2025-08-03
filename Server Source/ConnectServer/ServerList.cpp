@@ -115,7 +115,7 @@ void CServerList::MainProc() // OK
 		{
 			it->second.ServerState = 0;
 			it->second.ServerStateTime = 0;
-			LogAdd(LOG_BLACK,"[ServerList] GameServer offline (%s) (%d)",it->second.ServerName,it->second.ServerCode);
+			LogAdd(LOG_WHITE,"[ServerList] GameServer offline (%s) (%d)",it->second.ServerName,it->second.ServerCode);
 		}
 	}
 }
@@ -202,7 +202,7 @@ void CServerList::GCGameServerLiveRecv(SDHP_GAME_SERVER_LIVE_RECV* lpMsg) // OK
 
 	if(lpServerListInfo->ServerState == 0)
 	{
-		LogAdd(LOG_BLACK,"[ServerList] GameServer online (%s) (%d)",lpServerListInfo->ServerName,lpServerListInfo->ServerCode);
+		LogAdd(LOG_WHITE,"[ServerList] GameServer online (%s) (%d)",lpServerListInfo->ServerName,lpServerListInfo->ServerCode);
 	}
 
 	lpServerListInfo->ServerState = 1;

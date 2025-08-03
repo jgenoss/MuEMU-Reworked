@@ -80,7 +80,7 @@ bool CSocketManager::Start(WORD port) // OK
 
 	
 
-	LogAdd(LOG_BLACK,"[SocketManager] Server started at port [%d]",this->m_port);
+	LogAdd(LOG_WHITE,"[SocketManager] Server started at port [%d]",this->m_port);
 	return 1;
 }
 
