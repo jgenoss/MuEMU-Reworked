@@ -8,6 +8,53 @@ BYTE GensMoveIndexCount = 0;
 BYTE GensBattleMap[120];
 BYTE GensMoveIndex[120];
 
+#define pWinWidth *(GLsizei*)0x0E61E58
+
+void __declspec(naked) FixMU_TITLEPostion()
+{
+	static DWORD RETURN = 0x004830DB;
+	static DWORD CALLFC = 0x00416640;
+	static DWORD JUMPER = 0x004830DD;
+	static DWORD REJMPR = 0x004830BB;
+
+	if (pWinWidth == 1366 || pWinWidth == 1600 || pWinWidth == 1920)
+	{
+		_asm
+		{
+			PUSH 0x3
+			PUSH 0x1CF
+			PUSH 0x214
+			MOV EAX, DWORD PTR SS : [EBP - 0x48]
+			MOV ECX, DWORD PTR DS : [EAX + 0x9184]
+			ADD ECX, 0x150
+			CALL[CALLFC]
+			JMP[RETURN]
+		}
+	}
+	else if (pWinWidth == 1440 || pWinWidth == 1680)
+	{
+		_asm
+		{
+			PUSH 0x3
+			PUSH 0x212
+			PUSH 0x214
+			MOV EAX, DWORD PTR SS : [EBP - 0x48]
+			MOV ECX, DWORD PTR DS : [EAX + 0x9184]
+			ADD ECX, 0x150
+			CALL[CALLFC]
+			JMP[RETURN]
+		}
+	}
+	else if (pWinWidth == 1280)
+	{
+		_asm { JMP[REJMPR] }
+	}
+	else
+	{
+		_asm { JMP[JUMPER] }
+	}
+}
+
 void InitCommon() // OK
 {
 	SetCompleteHook(0xE9,0x0040B154,&LoginTab);
@@ -64,7 +111,29 @@ void InitCommon() // OK
 
 	SetCompleteHook(0xE9,0x008317BD,&CompareGensMoveIndex);
 
+	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3); //-- Fix Send NpcTalk
+
+	//Small correction in the text
+	SetDword(0x00796078 + 1, (DWORD)"%s - %s");
+	SetDword(0x007962E8 + 1, (DWORD)"%s - %s");
+	SetDword(0x00796558 + 1, (DWORD)"%s - %s");
+	SetDword(0x007967C8 + 1, (DWORD)"%s - %s");
+	SetDword(0x00796A38 + 1, (DWORD)"%s - %s");
+
+	SetByte(0x007D56D1 + 2, static_cast<BYTE>(0x10C));
+
+	//-> Personal Store Name (Buyer) Text Position
+	SetByte(0x0084F585 + 2, static_cast<BYTE>(0x10D));
+
+	//-> Personal Store Name (Seller) Text Position
+	SetByte(0x00841FDF + 2, static_cast<BYTE>(0x10D));
+
 	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3);
+
+	SetCompleteHook(0xE9, 0x004830AE, &FixMU_TITLEPostion);
+
+	//Fix Visual Agility MuEMU
+	SetByte(0x00649E24 + 3, static_cast<BYTE>(14));
 }
 
 BOOL CheckGensBattleMap(int map) // OK

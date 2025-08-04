@@ -4,8 +4,8 @@
 
 #pragma once
 
-#define MAX_LOG_TEXT_LINE 25
-#define MAX_LOG_TEXT_SIZE 80
+#define MAX_LOG_TEXT_LINE 100
+#define MAX_LOG_TEXT_SIZE 120
 
 enum eLogColor
 {

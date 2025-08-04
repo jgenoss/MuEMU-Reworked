@@ -198,6 +198,7 @@ public:
 	void GCChaosCastleDelayScoreSend(CHAOS_CASTLE_LEVEL* lpLevel,int aIndex,int type);
 	void GCChaosCastleStateSend(CHAOS_CASTLE_LEVEL* lpLevel,int state);
 	void GCChaosCastleSimpleStateSend(CHAOS_CASTLE_LEVEL* lpLevel,int state,int aIndex);
+	void StartChaosCastle();
 private:
 	CHAOS_CASTLE_LEVEL m_ChaosCastleLevel[MAX_CC_LEVEL];
 	int m_WarningTime;

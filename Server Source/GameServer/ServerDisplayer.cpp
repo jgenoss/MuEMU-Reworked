@@ -90,7 +90,7 @@ void CServerDisplayer::SetWindowName() // OK
 {
 	char buff[256];
 
-	wsprintf(buff,"[%s] %s (PlayerCount : %d/%d) (MonsterCount : %d/%d)",GAMESERVER_VERSION,gServerInfo.m_ServerName,gObjTotalUser,gServerInfo.m_ServerMaxUserNumber,gObjTotalMonster,MAX_OBJECT_MONSTER);
+	wsprintf(buff, "[%s] Server Type %s %s (PlayerCount : %d/%d) (MonsterCount : %d/%d)", GAMESERVER_VERSION, (GAMESERVER_TYPE == 1) ? "CS" : "GS", gServerInfo.m_ServerName, gObjTotalUser, gServerInfo.m_ServerMaxUserNumber, gObjTotalMonster, MAX_OBJECT_MONSTER);
 
 	SetWindowText(this->m_hwnd,buff);
 }
@@ -125,6 +125,7 @@ void CServerDisplayer::PaintTitleBar() // OK
 	int OldBkMode = SetBkMode(hdc, TRANSPARENT);
 	HFONT OldFont = (HFONT)SelectObject(hdc, this->m_titleFont);
 	SetTextColor(hdc, RGB(255, 255, 255));
+
 
 	char titleText[] = "GAMESERVER - PREMIUM EDITION";
 	RECT textRect = rect;
@@ -238,6 +239,7 @@ void CServerDisplayer::LogTextPaint() // FIXED - Logs de abajo hacia arriba
 
 	// Fondo degradado para logs
 	this->DrawGradientRect(hdc, rect, RGB(26, 26, 26), RGB(15, 15, 15), true);
+
 
 	// Calcular líneas visibles
 	int availableHeight = rect.bottom - rect.top - 20;

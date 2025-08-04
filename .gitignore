@@ -10,3 +10,7 @@
 /Server Source/Release
 /Server Source/ConnectServer/Release
 /Server Source/ConnectServer/Release
+/Server Source/ConnectServer/Release
+Server Source/ConnectServer/Release/ConnectServer_EX603/ConnectServer.ipdb
+*.obj
+*.iobj

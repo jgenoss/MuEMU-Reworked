@@ -15,7 +15,7 @@ typedef unsigned __int64 QWORD;
 #include <winsock2.h>
 #include <Mmsystem.h>
 #include <gl\GL.h>
-#include <detours.h>
+#include "detours.h"
 
 #pragma comment(lib,"ws2_32.lib")
 #pragma comment(lib,"Winmm.lib")

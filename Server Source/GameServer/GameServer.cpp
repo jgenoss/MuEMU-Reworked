@@ -14,6 +14,12 @@
 #include "SocketManagerUdp.h"
 #include "ThemidaSDK.h"
 #include "Util.h"
+#include "InvasionManager.h"
+#include "BloodCastle.h"
+#include "DevilSquare.h"
+#include "ChaosCastle.h"
+#include "Crywolf.h"
+#include "CastleDeep.h"
 
 HINSTANCE hInst;
 TCHAR szTitle[MAX_LOADSTRING];
@@ -159,7 +165,7 @@ BOOL InitInstance(HINSTANCE hInstance,int nCmdShow) // OK
 {
 	hInst = hInstance;
 
-	hWnd = CreateWindow(szWindowClass,szTitle,WS_OVERLAPPEDWINDOW | WS_THICKFRAME,CW_USEDEFAULT,0,600,600,0,0,hInstance,0);
+	hWnd = CreateWindow(szWindowClass,szTitle,WS_OVERLAPPEDWINDOW | WS_THICKFRAME,CW_USEDEFAULT,0,700,800,0,0,hInstance,0);
 
 	if(hWnd == 0)
 	{
@@ -265,6 +271,66 @@ LRESULT CALLBACK WndProc(HWND hWnd,UINT message,WPARAM wParam,LPARAM lParam) // 
 				case IDM_RELOAD_RELOADUTIL:
 					gServerInfo.ReadUtilInfo();
 					break;
+				case IDM_STARTBC:
+					gBloodCastle.StartBloodCastle();
+					break;
+				case IDM_STARTDS:
+					gDevilSquare.StartDevilSquare();
+					break;
+				case IDM_STARTCC:
+					gChaosCastle.StartChaosCastle();
+				case IDM_STARTCS:
+				#if(GAMESERVER_TYPE==1)
+					gCastleSiege.StartCastleSiege();
+				#endif
+					break;
+				case IDM_STARTCW:
+					gCrywolf.StartCrywolf();
+					break;
+				case IDM_STARTLD:
+					gCastleDeep.StartCastleDeep();
+					break;
+				case IDM_INVASION0:
+					gInvasionManager.StartInvasion(0);
+					break;
+				case IDM_INVASION1:
+					gInvasionManager.StartInvasion(1);
+					break;
+				case IDM_INVASION2:
+					gInvasionManager.StartInvasion(2);
+					break;
+				case IDM_INVASION3:
+					gInvasionManager.StartInvasion(3);
+					break;
+				case IDM_INVASION4:
+					gInvasionManager.StartInvasion(4);
+					break;
+				case IDM_INVASION5:
+					gInvasionManager.StartInvasion(5);
+					break;
+				case IDM_INVASION6:
+					gInvasionManager.StartInvasion(6);
+					break;
+				case IDM_INVASION7:
+					gInvasionManager.StartInvasion(7);
+					break;
+				case IDM_INVASION8:
+					gInvasionManager.StartInvasion(8);
+					break;
+				case IDM_INVASION9:
+					gInvasionManager.StartInvasion(9);
+					break;
+				case IDM_INVASION10:
+					gInvasionManager.StartInvasion(10);
+					break;
+				case IDM_INVASION11:
+					gInvasionManager.StartInvasion(11);
+					break;
+				case IDM_INVASION12:
+					gInvasionManager.StartInvasion(12);
+					break;
+				case IDM_INVASION13:
+					gInvasionManager.StartInvasion(13);
 				default:
 					return DefWindowProc(hWnd,message,wParam,lParam);
 			}
@@ -295,6 +361,8 @@ LRESULT CALLBACK WndProc(HWND hWnd,UINT message,WPARAM wParam,LPARAM lParam) // 
 		case WM_DESTROY:
 			PostQuitMessage(0);
 			break;
+		case WM_ERASEBKGND:
+			return 1;
 		default:
 			return DefWindowProc(hWnd,message,wParam,lParam);
 	}

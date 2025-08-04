@@ -1511,3 +1511,39 @@ void CDevilSquare::GCDevilSquareScoreSend(DEVIL_SQUARE_LEVEL* lpLevel) // OK
 		GDRankingDevilSquareSaveSend(lpUser->Index,lpUser->Score);
 	}
 }
+
+void CDevilSquare::StartDevilSquare()
+{
+	CTime CurrentTime = CTime::GetTickCount();
+
+	int hour = (int)CurrentTime.GetHour();
+	int minute = (int)CurrentTime.GetMinute() + 2;
+
+	if (minute >= 60)
+	{
+		hour++;
+		minute = minute - 60;
+	}
+
+	DEVIL_SQUARE_START_TIME info;
+
+	info.Year = (int)CurrentTime.GetYear();
+
+	info.Month = (int)CurrentTime.GetMonth();
+
+	info.Day = (int)CurrentTime.GetDay();
+
+	info.DayOfWeek = -1;
+
+	info.Hour = hour;
+
+	info.Minute = minute;
+
+	info.Second = 0;
+
+	this->m_DevilSquareStartTime.push_back(info);
+
+	LogAdd(LOG_BLUE, "[Set DS Start] At %02d:%02d:00", hour, minute);
+
+	this->Init();
+}

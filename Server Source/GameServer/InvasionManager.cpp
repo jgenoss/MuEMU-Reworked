@@ -603,3 +603,39 @@ void CInvasionManager::MonsterDieProc(LPOBJ lpObj,LPOBJ lpTarget) // OK
 		}
 	}
 }
+
+void CInvasionManager::StartInvasion(int index)
+{
+	CTime CurrentTime = CTime::GetTickCount();
+
+	int hour = (int)CurrentTime.GetHour();
+	int minute = (int)CurrentTime.GetMinute() + 2;
+
+	if (minute >= 60)
+	{
+		hour++;
+		minute = minute - 60;
+	}
+
+	INVASION_START_TIME info;
+
+	info.Year = (int)CurrentTime.GetYear();
+
+	info.Month = (int)CurrentTime.GetMonth();
+
+	info.Day = (int)CurrentTime.GetDay();
+
+	info.DayOfWeek = -1;
+
+	info.Hour = hour;
+
+	info.Minute = minute;
+
+	info.Second = 0;
+
+	this->m_InvasionInfo[index].StartTime.push_back(info);
+
+	LogAdd(LOG_BLUE, "[Set Invasion Start] Index %d At %2d:%2d:00", index, hour, minute);
+
+	this->SetState(&this->m_InvasionInfo[index], INVASION_STATE_EMPTY);
+}

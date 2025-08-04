@@ -201,6 +201,7 @@ public:
 	void GCBloodCastleDelayScoreSend(BLOOD_CASTLE_LEVEL* lpLevel,int aIndex,int type);
 	void GCBloodCastleStateSend(BLOOD_CASTLE_LEVEL* lpLevel,int state);
 	void GCBloodCastleSimpleStateSend(BLOOD_CASTLE_LEVEL* lpLevel,int state,int aIndex);
+	void StartBloodCastle();
 private:
 	BLOOD_CASTLE_LEVEL m_BloodCastleLevel[MAX_BC_LEVEL];
 	int m_WarningTime;

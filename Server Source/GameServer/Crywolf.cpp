@@ -1306,3 +1306,35 @@ int CCrywolf::GetUserScore(int aIndex,int bIndex,int type) // OK
 
 	return gObj[aIndex].CrywolfMVPScore;
 }
+
+void CCrywolf::StartCrywolf()
+{
+#if(GAMESERVER_TYPE==1)
+	CTime CurrentTime = CTime::GetTickCount();
+
+	int hour = (int)CurrentTime.GetHour();
+	int minute = (int)CurrentTime.GetMinute() + 2;
+
+	if (minute >= 60)
+	{
+		hour++;
+		minute = minute - 60;
+	}
+
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_StateNumber = 1;
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_Month = (int)CurrentTime.GetMonth();
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_Day = (int)CurrentTime.GetDay();
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_DayOfWeek = -1;
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_Hour = hour;
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_Minute = minute;
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_ContinuanceTime = -1;
+	this->m_StartTimeInfo[this->m_StartTimeInfoCount].m_Used = 1;
+	this->m_StartTimeInfoCount++;
+
+	this->CheckSync();
+
+	LogAdd(LOG_BLUE, "[Set CryWolf Start] At %2d:%2d:00", hour, minute);
+#else
+	LogAdd(LOG_RED, "Solo en server CS [Set CryWolf Start]");
+#endif
+}

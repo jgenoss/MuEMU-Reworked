@@ -152,6 +152,7 @@ public:
 	void DataSendToAll(DEVIL_SQUARE_LEVEL* lpLevel,BYTE* lpMsg,int size);
 	void CGDevilSquareEnterRecv(PMSG_DEVIL_SQUARE_ENTER_RECV* lpMsg,int aIndex);
 	void GCDevilSquareScoreSend(DEVIL_SQUARE_LEVEL* lpLevel);
+	void StartDevilSquare();
 private:
 	DEVIL_SQUARE_LEVEL m_DevilSquareLevel[MAX_DS_LEVEL];
 	int m_WarningTime;

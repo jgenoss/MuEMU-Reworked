@@ -68,6 +68,7 @@ public:
 	void ClearMonster();
 	void AddMonster(int stage,int group);
 	void MonsterDieProc(LPOBJ lpObj,LPOBJ lpTarget);
+	void StartCastleDeep();
 public:
 	int m_State;
 	int m_RemainTime;

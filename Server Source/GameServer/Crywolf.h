@@ -175,6 +175,7 @@ public:
 	int GetUserRank(int aIndex);
 	int GetUserExperience(int aIndex,int rank);
 	int GetUserScore(int aIndex,int bIndex,int type);
+	void StartCrywolf();
 public:
 	int m_FileDataLoad;
 	int m_DBDataLoadOK;

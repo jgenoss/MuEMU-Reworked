@@ -542,6 +542,7 @@ public:
 	static BYTE RegGuildScoreCompFunc(_CS_REG_GUILD_DATA & A, _CS_REG_GUILD_DATA & B);
 	void CreateDbNPC_INS();
 	void SavePcRoomUserList();
+	void StartCastleSiege();
 	DWORD GetCrownAccessTickCount(){return m_dwCrownAccessTime;}
 	void NotifyCrownSwitchInfo(int iIndex);
 	void GetStateDate(int iCastleSiegeState, SYSTEMTIME* st);

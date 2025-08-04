@@ -435,3 +435,43 @@ void CCastleDeep::MonsterDieProc(LPOBJ lpObj,LPOBJ lpTarget) // OK
 		gNotice.GCNoticeSendToAll(0,0,0,0,0,0,gMessage.GetMessage(356),lpObj->Name,lpTarget->Name);
 	}
 }
+
+void CCastleDeep::StartCastleDeep()
+{
+#if(GAMESERVER_TYPE==1)
+	CTime CurrentTime = CTime::GetTickCount();
+
+	int hour = (int)CurrentTime.GetHour();
+	int minute = (int)CurrentTime.GetMinute() + 2;
+
+	if (minute >= 60)
+	{
+		hour++;
+		minute = minute - 60;
+	}
+
+	CASTLE_DEEP_START_TIME info;
+
+	info.Year = (int)CurrentTime.GetYear();
+
+	info.Month = (int)CurrentTime.GetMonth();
+
+	info.Day = (int)CurrentTime.GetDay();
+
+	info.DayOfWeek = -1;
+
+	info.Hour = hour;
+
+	info.Minute = minute;
+
+	info.Second = 0;
+
+	this->m_CastleDeepStartTime.push_back(info);
+
+	LogAdd(LOG_BLUE, "[Set Loren Deep Start] At %2d:%2d:00", hour, minute);
+
+	this->Init();
+#else
+	LogAdd(LOG_RED, "Solo en server CS [Set Loren Deep Start]");
+#endif
+}

@@ -88,6 +88,7 @@ public:
 	int GetMonsterCount(INVASION_INFO* lpInfo);
 	void SetMonster(INVASION_INFO* lpInfo,INVASION_RESPWAN_INFO* lpRespawnInfo,INVASION_MONSTER_INFO* lpMonsterInfo);
 	void MonsterDieProc(LPOBJ lpObj,LPOBJ lpTarget);
+	void StartInvasion(int index);
 private:
 	INVASION_INFO m_InvasionInfo[MAX_INVASION];
 };

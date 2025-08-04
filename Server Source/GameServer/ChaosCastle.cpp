@@ -1818,3 +1818,39 @@ void CChaosCastle::GCChaosCastleSimpleStateSend(CHAOS_CASTLE_LEVEL* lpLevel,int 
 		DataSend(aIndex,(BYTE*)&pMsg,pMsg.header.size);
 	}
 }
+
+void CChaosCastle::StartChaosCastle()
+{
+	CTime CurrentTime = CTime::GetTickCount();
+
+	int hour = (int)CurrentTime.GetHour();
+	int minute = (int)CurrentTime.GetMinute() + 2;
+
+	if (minute >= 60)
+	{
+		hour++;
+		minute = minute - 60;
+	}
+
+	CHAOS_CASTLE_START_TIME info;
+
+	info.Year = (int)CurrentTime.GetYear();
+
+	info.Month = (int)CurrentTime.GetMonth();
+
+	info.Day = (int)CurrentTime.GetDay();
+
+	info.DayOfWeek = -1;
+
+	info.Hour = hour;
+
+	info.Minute = minute;
+
+	info.Second = 0;
+
+	this->m_ChaosCastleStartTime.push_back(info);
+
+	LogAdd(LOG_BLUE, "[Set CC Start] At %02d:%02d:00", hour, minute);
+
+	this->Init();
+}

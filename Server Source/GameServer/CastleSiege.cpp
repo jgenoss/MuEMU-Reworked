@@ -5731,4 +5731,204 @@ void CCastleSiege::SavePcRoomUserList()
 
 }
 
+void CCastleSiege::StartCastleSiege()
+{
+
+	CTime CurrentTime = CTime::GetTickCount();
+
+	this->m_tmStartDate.wYear = CurrentTime.GetYear();
+	this->m_tmStartDate.wMonth = CurrentTime.GetMonth();
+	this->m_tmStartDate.wDay = CurrentTime.GetDay();
+	this->m_tmEndDate.wYear = CurrentTime.GetYear();
+	this->m_tmEndDate.wMonth = CurrentTime.GetMonth();
+	this->m_tmEndDate.wDay = CurrentTime.GetDay() + 1;
+
+	//this->m_btIsSiegeGuildList = lpMsg->btIsSiegeGuildList;
+	//this->m_btIsSiegeEnded = lpMsg->btIsSiegeEnded;
+	//this->m_btIsCastleOccupied = lpMsg->btIsCastleOccupied;
+
+	//memset(&this->m_szCastleOwnerGuild, 0, sizeof(this->m_szCastleOwnerGuild));
+	//memcpy(&this->m_szCastleOwnerGuild, lpMsg->szCastleOwnGuild, sizeof(lpMsg->szCastleOwnGuild));
+	//
+	//this->m_i64CastleMoney = lpMsg->i64CastleMoney;
+	//this->m_iTaxRateChaos = lpMsg->iTaxRateChaos;
+	//this->m_iTaxRateStore = lpMsg->iTaxRateStore;
+	//this->m_iTaxHuntZone = lpMsg->iTaxHuntZone;
+
+	std::vector<_CS_SCHEDULE_DATA> vtScheduleData;
+
+	int iSTATE = -1;
+	int iSTART_DAY = -1;
+	int iSTART_HOUR = -1;
+	int iSTART_MIN = -1;
+
+	EnterCriticalSection(&this->m_critScheduleData);
+	this->m_vtScheduleData.clear();
+	LeaveCriticalSection(&this->m_critScheduleData);
+
+	int value = 0;
+
+	for (int i = 1; i < 10; i++)
+	{
+		iSTATE = i;
+		iSTART_DAY = 0;
+
+		if (i == 2)
+		{
+			value += 5;
+		}
+
+		if (i == 4)
+		{
+			value += 5;
+		}
+
+		if (i == 8)
+		{
+			value += 30;
+		}
+
+		//if (i == 9)
+		//{
+		//	iSTART_DAY=1;
+		//	iSTART_HOUR=0;
+		//	iSTART_MIN=0;
+		//}
+
+		iSTART_HOUR = CurrentTime.GetHour();
+		iSTART_MIN = CurrentTime.GetMinute() + (i + value);
+
+		if (iSTART_MIN >= 60)
+		{
+			iSTART_HOUR++;
+			iSTART_MIN = iSTART_MIN - 60;
+		}
+
+		LogAdd(LOG_RED, "[CastleSiege] Stage %d : %d : %d", iSTATE, iSTART_HOUR, iSTART_MIN);
+
+		if (!vtScheduleData.empty())
+		{
+			for (std::vector<_CS_SCHEDULE_DATA>::iterator it = vtScheduleData.begin(); it != vtScheduleData.end(); it++)
+			{
+				_CS_SCHEDULE_DATA pScheduleData = _CS_SCHEDULE_DATA(*it);
+
+				if (pScheduleData.m_bIN_USE != 0)
+				{
+					if (pScheduleData.m_iSTATE == iSTATE)
+					{
+						LogAdd(LOG_RED, "[CastleSiege] CCastleSiege::LoadData() - Same State Exist : %d", iSTATE);
+						return;
+					}
+
+					if (pScheduleData.m_iSTATE > iSTATE)
+					{
+						int iSTATE1_TIME = pScheduleData.m_iADD_DAY * 24 * 60 + pScheduleData.m_iADD_HOUR * 60 + pScheduleData.m_iADD_MIN;
+						int iSTATE2_TIME = iSTART_DAY * 24 * 60 + iSTART_HOUR * 60 + iSTART_MIN;
+
+						if (iSTATE1_TIME <= iSTATE2_TIME)
+						{
+							LogAdd(LOG_RED, "[CastleSiege] CCastleSiege::LoadData() - Date Order is wrong : %d", iSTATE2_TIME);
+							return;
+						}
+					}
+					else
+					{
+						int iSTATE1_TIME = pScheduleData.m_iADD_DAY * 24 * 60 + pScheduleData.m_iADD_HOUR * 60 + pScheduleData.m_iADD_MIN;
+						int iSTATE2_TIME = iSTART_DAY * 24 * 60 + iSTART_HOUR * 60 + iSTART_MIN;
+						if (iSTATE1_TIME >= iSTATE2_TIME)
+						{
+							LogAdd(LOG_RED, "[CastleSiege] CCastleSiege::LoadData() - Date Order is wrong : %d", iSTATE2_TIME);
+							return;
+						}
+					}
+				}
+			}
+		}
+
+		_CS_SCHEDULE_DATA pScheduleDataInsert;
+
+		pScheduleDataInsert.m_bIN_USE = TRUE;
+		pScheduleDataInsert.m_iSTATE = iSTATE;
+		pScheduleDataInsert.m_iADD_DAY = iSTART_DAY;
+		pScheduleDataInsert.m_iADD_HOUR = iSTART_HOUR;
+		pScheduleDataInsert.m_iADD_MIN = iSTART_MIN;
+
+		vtScheduleData.push_back(pScheduleDataInsert);
+	}
+
+	EnterCriticalSection(&this->m_critScheduleData);
+
+	if (!vtScheduleData.empty())
+	{
+		for (std::vector<_CS_SCHEDULE_DATA>::iterator it = vtScheduleData.begin(); it != vtScheduleData.end(); it++)
+		{
+			this->m_vtScheduleData.push_back(*it);
+		}
+	}
+
+	sort(this->m_vtScheduleData.begin(), this->m_vtScheduleData.end(), this->ScheduleStateCompFunc);
+
+	if (!m_vtScheduleData.empty())
+	{
+		for (int iIDX = 0; (DWORD)iIDX < this->m_vtScheduleData.size(); iIDX++)
+		{
+			if ((DWORD)(iIDX + 1) < this->m_vtScheduleData.size())
+			{
+				int iIDX_SEC1 = this->m_vtScheduleData[iIDX].m_iADD_DAY * 24 * 60 * 60 + this->m_vtScheduleData[iIDX].m_iADD_HOUR * 60 * 60 + this->m_vtScheduleData[iIDX].m_iADD_MIN * 60;
+				int iIDX_SEC2 = this->m_vtScheduleData[iIDX + 1].m_iADD_DAY * 24 * 60 * 60 + this->m_vtScheduleData[iIDX + 1].m_iADD_HOUR * 60 * 60 + this->m_vtScheduleData[iIDX + 1].m_iADD_MIN * 60;
+
+				int iIDX_RESULT = iIDX_SEC2 - iIDX_SEC1;
+
+				if (iIDX_RESULT < 0)
+				{
+					LogAdd(LOG_RED, "[CastleSiege] CCastleSiege::LoadData() - Date Order is wrong (sort fail) : %d-%d", this->m_vtScheduleData[iIDX].m_iSTATE, this->m_vtScheduleData[iIDX + 1].m_iSTATE);
+				}
+				else
+				{
+					this->m_vtScheduleData[iIDX].m_iGAP_SEC = iIDX_RESULT;
+				}
+			}
+			else
+			{
+				this->m_vtScheduleData[iIDX].m_iGAP_SEC = 0;
+			}
+		}
+	}
+
+	LeaveCriticalSection(&this->m_critScheduleData);
+
+	this->m_btIsSiegeGuildList = 0;
+	this->m_btIsSiegeEnded = 0;
+
+	int iSTART_DATE_NUM = MACRO2((MACRO1(this->m_tmStartDate.wDay) | MACRO1(this->m_tmStartDate.wMonth) << 8) & 0xFFFF) | MACRO2(this->m_tmStartDate.wYear) << 16;
+	int iEND_DATE_NUM = MACRO2((MACRO1(this->m_tmEndDate.wDay) | MACRO1(this->m_tmEndDate.wMonth) << 8) & 0xFFFF) | MACRO2(this->m_tmEndDate.wYear) << 16;
+
+	this->m_tmSiegeEndSchedule = this->m_tmStartDate;
+
+	SYSTEMTIME EndTime;
+	GetStateDate(CASTLESIEGE_STATE_ENDCYCLE, &EndTime);
+
+	LogAdd(LOG_WHITE, "[CastleSiege] CCastleSiege::LoadData() - Siege Start Date (%d-%d-%d)", m_tmStartDate.wYear, m_tmStartDate.wMonth, m_tmStartDate.wDay);
+
+	LogAdd(LOG_WHITE, "[CastleSiege] CCastleSiege::LoadData() - Siege Date (%d-%d-%d)", EndTime.wDay, EndTime.wHour, EndTime.wMinute);
+
+	GetNextDay(&m_tmSiegeEndSchedule, EndTime.wDay, EndTime.wHour, EndTime.wMinute, 0);
+
+	LogAdd(LOG_WHITE, "[CastleSiege] CCastleSiege::LoadData() - Siege End Date (%d-%d-%d(%d:%d:%d))", this->m_tmSiegeEndSchedule.wYear, this->m_tmSiegeEndSchedule.wMonth, this->m_tmSiegeEndSchedule.wDay, this->m_tmSiegeEndSchedule.wHour, this->m_tmSiegeEndSchedule.wMinute, this->m_tmSiegeEndSchedule.wSecond);
+
+	if (iSTART_DATE_NUM > iEND_DATE_NUM)
+	{
+		LogAdd(LOG_RED, "[CastleSiege] CCastleSiege::SetCastleInitData() - iSTART_DATE_NUM > iEND_DATE_NUM");
+		return;
+	}
+
+	gCastleSiege.SetDbDataLoadOK(TRUE);
+
+	gCastleSiege.SetDataLoadState(4);
+
+	gCastleSiege.Init();
+
+	return;
+}
+
 #endif
