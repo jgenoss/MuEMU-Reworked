@@ -14,3 +14,11 @@
 Server Source/ConnectServer/Release/ConnectServer_EX603/ConnectServer.ipdb
 *.obj
 *.iobj
+*.db
+/Tools Source/.vs
+*.log
+*.pch
+*.ipdb
+*.tlog
+*.txt
+*.log

@@ -20,6 +20,7 @@
 
 HINSTANCE hins;
 
+
 extern "C" _declspec(dllexport) void EntryProc() // OK
 {
 	if(gProtect.ReadMainFile("main.emu") == 0)
@@ -138,7 +139,7 @@ extern "C" _declspec(dllexport) void EntryProc() // OK
 
 	InitCommon();
 
-	InitHackCheck();
+	//InitHackCheck();
 
 	InitItem();
 

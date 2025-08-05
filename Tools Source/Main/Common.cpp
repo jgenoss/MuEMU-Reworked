@@ -2,11 +2,26 @@
 #include "Common.h"
 #include "Offset.h"
 #include "Util.h"
+#include "Graphics.h"
+#include "CustomPing.h"
 
 BYTE GensBattleMapCount = 0;
 BYTE GensMoveIndexCount = 0;
 BYTE GensBattleMap[120];
 BYTE GensMoveIndex[120];
+
+
+
+// Nueva variable para controlar FPS
+// NUEVAS VARIABLES PARA GRAPHICS SYSTEM
+int ShowFPS = 1;
+int ShowPing = 1;
+int FPSPositionX = 10;
+int FPSPositionY = 10;
+int GraphicsAnisotropy = 0;
+int GraphicsLinear = 0;
+int GraphicsFog = 0;
+int DisablePing = 0;
 
 #define pWinWidth *(GLsizei*)0x0E61E58
 
@@ -53,6 +68,31 @@ void __declspec(naked) FixMU_TITLEPostion()
 	{
 		_asm { JMP[JUMPER] }
 	}
+}
+
+void InitGraphicsSystem()
+{
+	printf("Initializing Graphics System...\n");
+
+	// Configurar CustomPing con valores de configuración
+	gCustomPing.SetFPSVisible(ShowFPS != 0);
+	gCustomPing.SetPingVisible(ShowPing != 0);
+	gCustomPing.SetPosition(FPSPositionX, FPSPositionY);
+
+	//// Configurar Graphics con valores de configuración
+	//gGraphics.SetAnisotropy(GraphicsAnisotropy);
+	//gGraphics.SetLinearFiltering(GraphicsLinear != 0);
+	//gGraphics.SetFogEnabled(GraphicsFog != 0);
+
+	// Inicializar y cargar sistema de gráficos
+
+	// Iniciar sistema de ping si está habilitado
+	if (ShowPing && !DisablePing)
+	{
+		gCustomPing.StartPing();
+	}
+
+	printf("Graphics System initialized successfully.\n");
 }
 
 void InitCommon() // OK
@@ -134,6 +174,8 @@ void InitCommon() // OK
 
 	//Fix Visual Agility MuEMU
 	SetByte(0x00649E24 + 3, static_cast<BYTE>(14));
+
+	InitGraphicsSystem();
 }
 
 BOOL CheckGensBattleMap(int map) // OK

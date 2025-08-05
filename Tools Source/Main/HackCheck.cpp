@@ -24,6 +24,7 @@ DWORD SpeedModifier2 = 0;
 DWORD ModelModifier1 = 0;
 DWORD ModelModifier2 = 0;
 DWORD ModelModifier3 = 0;
+static DWORD fps;
 
 void DecryptData(BYTE* lpMsg,int size) // OK
 {
@@ -105,7 +106,7 @@ _declspec(naked) void CheckTickCount1() // OK
 _declspec(naked) void CheckTickCount2() // OK
 {
 	static DWORD CheckTickCountAddress1 = 0x004DA3F0;
-
+	fps = gProtect.m_MainInfo.LimitFps;
 	_asm
 	{
 		Mov Ecx,Dword Ptr Ss:[Ebp-0x6C]
@@ -132,9 +133,10 @@ _declspec(naked) void CheckTickCount2() // OK
 		Mov Eax,MainTickCount
 		Sub Eax,Dword Ptr Ss:[Ebp-0x74]
 		Mov Dword Ptr Ss:[Ebp-0x68],Eax
-		Cmp Dword Ptr Ss:[Ebp-0x68],0x28
+		Mov Edx, fps
+		Cmp Dword Ptr Ss:[Ebp-0x68], Edx
 		Jge CONTINUE
-		Mov Ecx,0x28
+		Mov Ecx, Edx
 		Sub Ecx,Dword Ptr Ss:[Ebp-0x68]
 		Mov Dword Ptr Ss:[Ebp-0x18C],Ecx
 		Mov Edx,Dword Ptr Ss:[Ebp-0x18C]

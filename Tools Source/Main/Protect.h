@@ -26,6 +26,7 @@ struct MAIN_FILE_INFO
 	DWORD ClientCRC32;
 	DWORD PluginCRC32;
 	DWORD CameraCRC32;
+	DWORD LimitFps;
 	DWORD HelperActiveAlert;
 	DWORD HelperActiveLevel;
 	DWORD DWMaxAttackSpeed;

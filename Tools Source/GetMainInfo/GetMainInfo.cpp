@@ -23,15 +23,16 @@ struct MAIN_FILE_INFO
 	DWORD ClientCRC32;
 	DWORD PluginCRC32;
 	DWORD CameraCRC32;
+	DWORD LimitFps;
 	DWORD HelperActiveAlert;
 	DWORD HelperActiveLevel;
-	DWORD DWMaxAttackSpeed;
 	DWORD DKMaxAttackSpeed;
 	DWORD FEMaxAttackSpeed;
 	DWORD MGMaxAttackSpeed;
 	DWORD DLMaxAttackSpeed;
 	DWORD SUMaxAttackSpeed;
 	DWORD RFMaxAttackSpeed;
+	DWORD DWMaxAttackSpeed;
 	DWORD ReconnectTime;
 	CUSTOM_MESSAGE_INFO EngCustomMessageInfo[MAX_CUSTOM_MESSAGE];
 	CUSTOM_MESSAGE_INFO PorCustomMessageInfo[MAX_CUSTOM_MESSAGE];
@@ -73,6 +74,8 @@ int _tmain(int argc,_TCHAR* argv[]) // OK
 	GetPrivateProfileString("MainInfo","PluginName","",info.PluginName,sizeof(info.PluginName),".\\MainInfo.ini");
 
 	GetPrivateProfileString("MainInfo","CameraName","",info.CameraName,sizeof(info.CameraName),".\\MainInfo.ini");
+
+	info.LimitFps = GetPrivateProfileInt("Custom", "LimitFps", 0, ".\\MainInfo.ini");
 
 	info.HelperActiveAlert = GetPrivateProfileInt("HelperInfo","HelperActiveAlert",0,".\\MainInfo.ini");
 
@@ -135,10 +138,16 @@ int _tmain(int argc,_TCHAR* argv[]) // OK
 		info.CameraCRC32 = 0;
 	}
 
-	for(int n=0;n < sizeof(MAIN_FILE_INFO);n++)
+	/*for(int n=0;n < sizeof(MAIN_FILE_INFO);n++)
 	{
 		((BYTE*)&info)[n] ^= (BYTE)(0xCA^LOBYTE(n));
 		((BYTE*)&info)[n] -= (BYTE)(0x95^HIBYTE(n));
+	}*/
+
+	for (int n = 0; n < sizeof(MAIN_FILE_INFO); n++)
+	{
+		((BYTE*)&info)[n] -= (BYTE)(0x95 ^ HIBYTE(n));  // PRIMERO resta
+		((BYTE*)&info)[n] ^= (BYTE)(0xCA ^ LOBYTE(n));  // DESPUÉS XOR
 	}
 
 	HANDLE file = CreateFile("main.emu",GENERIC_WRITE,FILE_SHARE_READ,0,CREATE_ALWAYS,FILE_ATTRIBUTE_ARCHIVE,0);

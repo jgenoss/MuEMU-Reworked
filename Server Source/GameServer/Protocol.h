@@ -1704,6 +1704,21 @@ struct PMSG_UNION_VIEWPORT_NOTIFY
 	char szUnionName[8];
 };
 
+
+struct PMSG_PING_RECV
+{
+	PSBMSG_HEAD header; // C1:F3:F1
+	DWORD time;
+};
+
+// Servidor -> Cliente  
+struct PMSG_PING_SEND
+{
+	PSBMSG_HEAD header; // C1:F3:F1
+	DWORD clientTime;
+	DWORD serverTime;
+};
+
 void CGReqCastleSiegeState(PMSG_REQ_CASTLESIEGESTATE* lpMsg, int iIndex);
 void GCAnsCastleSiegeState(int iIndex, int iResult, char* lpszGuildName, char* lpszGuildMaster);
 void CGReqRegCastleSiege(PMSG_REQ_REGCASTLESIEGE* lpMsg, int iIndex);
@@ -1749,3 +1764,6 @@ void CGReqCsRegGuildList(PMSG_REQ_CSREGGUILDLIST* lpMsg, int iIndex);
 void CGReqCsAttkGuildList(PMSG_REQ_CSATTKGUILDLIST* lpMsg, int iIndex);
 void CGReqGuildMarkOfCastleOwner(PMSG_REQ_GUILDMARK_OF_CASTLEOWNER* aRecv, int iIndex);
 void CGReqCastleHuntZoneEntrance(PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE * aRecv, int iIndex);
+
+void CGPingRecv(PMSG_PING_RECV* lpMsg, int aIndex);
+void GCPingSend(int aIndex, DWORD clientTime);

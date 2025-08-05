@@ -77,8 +77,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="icon1.ico" />
-    <None Include="maininfo.ico" />
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>

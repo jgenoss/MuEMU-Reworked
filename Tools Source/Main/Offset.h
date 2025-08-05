@@ -16,3 +16,6 @@
 #define ProtocolCore ((BOOL(*)(DWORD,BYTE*,DWORD,DWORD))0x00663B20)
 #define DrawInterface ((void(*)(DWORD,float,float,float,float))0x00790B50)
 #define DrawInterfaceText ((void(*)(char*,int,int,int,int,int,int,int))0x007D04D0)
+
+
+

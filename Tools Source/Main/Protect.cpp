@@ -52,10 +52,16 @@ bool CProtect::ReadMainFile(char* name) // OK
 		return 0;
 	}
 
-	for(int n=0;n < sizeof(MAIN_FILE_INFO);n++)
+	/*for(int n=0;n < sizeof(MAIN_FILE_INFO);n++)
 	{
 		((BYTE*)&this->m_MainInfo)[n] += (BYTE)(0x95^HIBYTE(n));
 		((BYTE*)&this->m_MainInfo)[n] ^= (BYTE)(0xCA^LOBYTE(n));
+	}*/
+
+	for (int n = 0; n < sizeof(MAIN_FILE_INFO); n++)
+	{
+		((BYTE*)&this->m_MainInfo)[n] ^= (BYTE)(0xCA ^ LOBYTE(n));  // PRIMERO XOR (inverso)
+		((BYTE*)&this->m_MainInfo)[n] += (BYTE)(0x95 ^ HIBYTE(n));  // DESPUÉS suma (inverso)
 	}
 
 	CloseHandle(file);
