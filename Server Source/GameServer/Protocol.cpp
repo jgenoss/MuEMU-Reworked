@@ -935,9 +935,6 @@ void ProtocolCore(BYTE head,BYTE* lpMsg,int size,int aIndex,int encrypt,int seri
 					gMasterSkillTree.CGMasterSkillRecv((PMSG_MASTER_SKILL_RECV*)lpMsg,aIndex);
 					#endif
 					break;
-				case 0xF1: // AGREGAR ESTE CASO
-					CGPingRecv((PMSG_PING_RECV*)lpMsg, aIndex);
-					break;
 			}
 			break;
 		case 0xF6:
@@ -4994,27 +4991,4 @@ void CGReqCastleHuntZoneEntrance(PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE * aRecv, int i
 
 	DataSend(iIndex, (LPBYTE)&pMsg, sizeof(pMsg));
 #endif
-}
-
-
-void CGPingRecv(PMSG_PING_RECV* lpMsg, int aIndex)
-{
-	LPOBJ lpObj = &gObj[aIndex];
-
-	if (gObjIsConnectedGP(aIndex) == 0)
-		return;
-
-	// Responder inmediatamente con ping response
-	GCPingSend(aIndex, lpMsg->time);
-}
-
-void GCPingSend(int aIndex, DWORD clientTime)
-{
-	PMSG_PING_SEND pMsg;
-
-	pMsg.header.set(0xF3, 0xF1, sizeof(pMsg));
-	pMsg.clientTime = clientTime;
-	pMsg.serverTime = GetTickCount();
-
-	DataSend(aIndex, (BYTE*)&pMsg, pMsg.header.size);
 }
