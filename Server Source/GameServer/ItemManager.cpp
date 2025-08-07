@@ -3589,6 +3589,12 @@ void CItemManager::CGItemMoveRecv(PMSG_ITEM_MOVE_RECV* lpMsg,int aIndex) // OK
 		}
 	}
 
+	if (lpObj->Live == 0 || lpObj->RegenOk > 0 || lpObj->Teleport != 0 || lpObj->State != OBJECT_PLAYING)
+	{
+		DataSend(aIndex, (BYTE*)&pMsg, pMsg.header.size);
+		return;
+	}
+
 	DataSend(aIndex,(BYTE*)&pMsg,pMsg.header.size);
 
 	if(pMsg.result == 0xFF && lpMsg->SourceFlag == 0 && lpMsg->TargetFlag == 0)

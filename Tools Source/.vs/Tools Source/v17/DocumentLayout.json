@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\CustomPing.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\CustomPing.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\HealthBar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\HealthBar.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\HealthBar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\HealthBar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\Common.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Graphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\Graphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Protocol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\Protocol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\Graphics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Protect.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|solutionrelative:Main\\Protect.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CEE92DB-9F87-4658-9B58-215C7319C44E}|Main\\Main.vcxproj|D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -34,60 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Common.cpp",
-              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp",
-              "RelativeDocumentMoniker": "Main\\Common.cpp",
-              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp",
-              "RelativeToolTip": "Main\\Common.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAE0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-05T15:43:23.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomPing.cpp",
-              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\CustomPing.cpp",
-              "RelativeDocumentMoniker": "Main\\CustomPing.cpp",
-              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\CustomPing.cpp",
-              "RelativeToolTip": "Main\\CustomPing.cpp",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAmwF8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-05T15:43:01.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Graphics.h",
-              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Graphics.h",
-              "RelativeDocumentMoniker": "Main\\Graphics.h",
-              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Graphics.h",
-              "RelativeToolTip": "Main\\Graphics.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-05T15:41:36.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Graphics.cpp",
-              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Graphics.cpp",
-              "RelativeDocumentMoniker": "Main\\Graphics.cpp",
-              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Graphics.cpp",
-              "RelativeToolTip": "Main\\Graphics.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-05T15:27:48.902Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -95,27 +51,104 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Main.cpp",
-              "RelativeDocumentMoniker": "Main\\Main.cpp",
-              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Main.cpp",
-              "RelativeToolTip": "Main\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Title": "Protocol.cpp",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Protocol.cpp",
+              "RelativeDocumentMoniker": "Main\\Protocol.cpp",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Protocol.cpp",
+              "RelativeToolTip": "Main\\Protocol.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANEAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-08-05T15:29:30.295Z",
+              "WhenOpened": "2025-08-07T12:13:35.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HealthBar.cpp",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\HealthBar.cpp",
+              "RelativeDocumentMoniker": "Main\\HealthBar.cpp",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\HealthBar.cpp",
+              "RelativeToolTip": "Main\\HealthBar.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-07T12:12:19.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "stdafx.h",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\stdafx.h",
+              "RelativeDocumentMoniker": "Main\\stdafx.h",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\stdafx.h",
+              "RelativeToolTip": "Main\\stdafx.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-07T12:11:39.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Protect.h",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Protect.h",
+              "RelativeDocumentMoniker": "Main\\Protect.h",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Protect.h",
+              "RelativeToolTip": "Main\\Protect.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-07T12:11:31.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HealthBar.h",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\HealthBar.h",
+              "RelativeDocumentMoniker": "Main\\HealthBar.h",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\HealthBar.h",
+              "RelativeToolTip": "Main\\HealthBar.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-07T12:10:54.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Common.cpp",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp",
+              "RelativeDocumentMoniker": "Main\\Common.cpp",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.cpp",
+              "RelativeToolTip": "Main\\Common.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-07T03:43:13.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Common.h",
               "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.h",
               "RelativeDocumentMoniker": "Main\\Common.h",
               "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Common.h",
               "RelativeToolTip": "Main\\Common.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-05T15:29:23.873Z",
+              "WhenOpened": "2025-08-07T03:43:08.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Main.cpp",
+              "RelativeDocumentMoniker": "Main\\Main.cpp",
+              "ToolTip": "D:\\Usuarios\\JGENOSS\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\Main\\Main.cpp",
+              "RelativeToolTip": "Main\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-07T01:43:56.037Z",
               "EditorCaption": ""
             }
           ]

@@ -89,20 +89,14 @@
   <ItemGroup>
     <ClInclude Include="..\..\Util\CCRC32.H" />
     <ClInclude Include="Common.h" />
-    <ClInclude Include="CustomFog.h" />
-    <ClInclude Include="CustomInterface.h" />
+    <ClInclude Include="Config.h" />
     <ClInclude Include="CustomItem.h" />
     <ClInclude Include="CustomJewel.h" />
     <ClInclude Include="CustomMessage.h" />
-    <ClInclude Include="CustomPing.h" />
     <ClInclude Include="CustomWing.h" />
     <ClInclude Include="CustomWingEffect.h" />
-    <ClInclude Include="Defines.h" />
-    <ClInclude Include="Graphics.h" />
     <ClInclude Include="HackCheck.h" />
     <ClInclude Include="HealthBar.h" />
-    <ClInclude Include="Import.h" />
-    <ClInclude Include="Interface.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Offset.h" />
@@ -119,18 +113,13 @@
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp" />
     <ClCompile Include="Common.cpp" />
-    <ClCompile Include="CustomFog.cpp" />
-    <ClCompile Include="CustomInterface.cpp" />
     <ClCompile Include="CustomItem.cpp" />
     <ClCompile Include="CustomJewel.cpp" />
     <ClCompile Include="CustomMessage.cpp" />
-    <ClCompile Include="CustomPing.cpp" />
     <ClCompile Include="CustomWing.cpp" />
     <ClCompile Include="CustomWingEffect.cpp" />
-    <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="HackCheck.cpp" />
     <ClCompile Include="HealthBar.cpp" />
-    <ClCompile Include="Interface.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PacketManager.cpp" />

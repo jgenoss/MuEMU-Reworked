@@ -2,8 +2,6 @@
 #include "Common.h"
 #include "Offset.h"
 #include "Util.h"
-#include "Graphics.h"
-#include "CustomPing.h"
 
 BYTE GensBattleMapCount = 0;
 BYTE GensMoveIndexCount = 0;
@@ -14,14 +12,6 @@ BYTE GensMoveIndex[120];
 
 // Nueva variable para controlar FPS
 // NUEVAS VARIABLES PARA GRAPHICS SYSTEM
-int ShowFPS = 1;
-int ShowPing = 1;
-int FPSPositionX = 10;
-int FPSPositionY = 10;
-int GraphicsAnisotropy = 0;
-int GraphicsLinear = 0;
-int GraphicsFog = 0;
-int DisablePing = 0;
 
 #define pWinWidth *(GLsizei*)0x0E61E58
 
@@ -68,31 +58,6 @@ void __declspec(naked) FixMU_TITLEPostion()
 	{
 		_asm { JMP[JUMPER] }
 	}
-}
-
-void InitGraphicsSystem()
-{
-	printf("Initializing Graphics System...\n");
-
-	// Configurar CustomPing con valores de configuración
-	gCustomPing.SetFPSVisible(ShowFPS != 0);
-	gCustomPing.SetPingVisible(ShowPing != 0);
-	gCustomPing.SetPosition(FPSPositionX, FPSPositionY);
-
-	//// Configurar Graphics con valores de configuración
-	//gGraphics.SetAnisotropy(GraphicsAnisotropy);
-	//gGraphics.SetLinearFiltering(GraphicsLinear != 0);
-	//gGraphics.SetFogEnabled(GraphicsFog != 0);
-
-	// Inicializar y cargar sistema de gráficos
-
-	// Iniciar sistema de ping si está habilitado
-	if (ShowPing && !DisablePing)
-	{
-		gCustomPing.StartPing();
-	}
-
-	printf("Graphics System initialized successfully.\n");
 }
 
 void InitCommon() // OK
@@ -154,19 +119,19 @@ void InitCommon() // OK
 	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3); //-- Fix Send NpcTalk
 
 	//Small correction in the text
-	SetDword(0x00796078 + 1, (DWORD)"%s - %s");
-	SetDword(0x007962E8 + 1, (DWORD)"%s - %s");
-	SetDword(0x00796558 + 1, (DWORD)"%s - %s");
-	SetDword(0x007967C8 + 1, (DWORD)"%s - %s");
-	SetDword(0x00796A38 + 1, (DWORD)"%s - %s");
+	SetDword(0x00796079, (DWORD)"%s - %s");
+	SetDword(0x007962E9, (DWORD)"%s - %s");
+	SetDword(0x00796559, (DWORD)"%s - %s");
+	SetDword(0x007967C9, (DWORD)"%s - %s");
+	SetDword(0x00796A39, (DWORD)"%s - %s");
 
-	SetByte(0x007D56D1 + 2, static_cast<BYTE>(0x10C));
+	SetByte(0x007D56D3, static_cast<BYTE>(0x10C));
 
 	//-> Personal Store Name (Buyer) Text Position
-	SetByte(0x0084F585 + 2, static_cast<BYTE>(0x10D));
+	SetByte(0x0084F587, static_cast<BYTE>(0x10D));
 
 	//-> Personal Store Name (Seller) Text Position
-	SetByte(0x00841FDF + 2, static_cast<BYTE>(0x10D));
+	SetByte(0x00841FE1, static_cast<BYTE>(0x10D));
 
 	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3);
 
@@ -175,7 +140,20 @@ void InitCommon() // OK
 	//Fix Visual Agility MuEMU
 	SetByte(0x00649E24 + 3, static_cast<BYTE>(14));
 
-	InitGraphicsSystem();
+	//Remove Creation MuError
+	SetCompleteHook(0xE9, 0x004D1CF0, 0x004D1DC2); //-- Remoce MuError.DMP
+	MemorySet(0x00D20170, 0x90, 0x1B); //-- Remove Creation MuError.log
+
+	//Offset Fix RF Skill
+	SetCompleteHook(0xE9, 0x0071AE92, 0x00720894); //Fix RF Skill
+	SetCompleteHook(0xE9, 0x0071B1A3, 0x00720894); //Fix RF Skill
+	SetCompleteHook(0xE9, 0x0095DFBE, 0x0095DFD3); //-- Fix RF
+
+	//Offset fix move skill
+	MemorySet(0x005AD691, 0x90, 0x05); //fix move skill
+	//Botón de corrección de desplazamiento del guardián de Crywolf (tercera misión)
+	MemorySet(0x00792B7F, 0x90, 0x05);	// Fix Button Crywolf Gatekeeper (Third Quest)
+
 }
 
 BOOL CheckGensBattleMap(int map) // OK

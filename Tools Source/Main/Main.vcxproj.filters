@@ -93,25 +93,7 @@
     <ClInclude Include="CustomWingEffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CustomPing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Import.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Interface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomFog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Defines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics.h">
+    <ClInclude Include="Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -171,21 +153,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CustomWingEffect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomPing.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomFog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomInterface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Interface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

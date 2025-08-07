@@ -1,41 +1,25 @@
-﻿  Common.cpp
-  CustomFog.cpp
-  CustomInterface.cpp
+﻿  stdafx.cpp
+  CCRC32.Cpp
+  Common.cpp
+  CustomItem.cpp
+  CustomJewel.cpp
   CustomMessage.cpp
-D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Import.h(180,9): warning C4005: 'pGetTextLine': redefinición de macro
-  (compilando archivo de origen "/CustomFog.cpp")
-      D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Import.h(54,9):
-      vea la definición anterior de “pGetTextLine”
-  
-D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\CustomFog.cpp(7,10): error C1083: No se puede abrir el archivo incluir: 'TMemory.h': No such file or directory
-  (compilando archivo de origen "/CustomFog.cpp")
-  
-D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Import.h(180,9): warning C4005: 'pGetTextLine': redefinición de macro
-  (compilando archivo de origen "/CustomInterface.cpp")
-      D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Import.h(54,9):
-      vea la definición anterior de “pGetTextLine”
-  
-D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\CustomInterface.cpp(6,10): error C1083: No se puede abrir el archivo incluir: 'Object.h': No such file or directory
-  (compilando archivo de origen "/CustomInterface.cpp")
-  
-  CustomPing.cpp
-  Graphics.cpp
-D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Import.h(180,9): warning C4005: 'pGetTextLine': redefinición de macro
-  (compilando archivo de origen "/Graphics.cpp")
-      D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Import.h(54,9):
-      vea la definición anterior de “pGetTextLine”
-  
-D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Graphics.cpp(121,53): warning C4244: 'argumento': conversión de 'double' a 'GLint'; posible pérdida de datos
-  (compilando archivo de origen "/Graphics.cpp")
-  
+  CustomWing.cpp
+  CustomWingEffect.cpp
   HackCheck.cpp
-  Interface.cpp
-D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Main\Interface.cpp(4,10): error C1083: No se puede abrir el archivo incluir: 'CustomCommandInfo.h': No such file or directory
-  (compilando archivo de origen "/Interface.cpp")
-  
+  HealthBar.cpp
   Item.cpp
   Main.cpp
+  PacketManager.cpp
   PrintPlayer.cpp
+  Protect.cpp
   Protocol.cpp
   Reconnect.cpp
   Resolution.cpp
+  Util.cpp
+     Creando biblioteca D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Release\Main.lib y objeto D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Release\Main.exp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 278 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Main.vcxproj -> D:\Usuarios\JGENOSS\Documents\GitHub\MuEMU-Reworked\Tools Source\Release\Main.dll
