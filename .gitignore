@@ -3,19 +3,16 @@
 /Server Source/GameServer/Release
 /Tools Source/GetMainInfo/GetMainInfo/Debug
 /Tools Source/GetMainInfo/.vs
-*.pdb
-/Server Source/Release
-/Server Source/Release
-/Server Source/Release
 /Server Source/Release
 /Server Source/ConnectServer/Release
-/Server Source/ConnectServer/Release
-/Server Source/ConnectServer/Release
-Server Source/ConnectServer/Release/ConnectServer_EX603/ConnectServer.ipdb
+/Tools Source/.vs
+/.vs
+/Release
+
 *.obj
 *.iobj
 *.db
-/Tools Source/.vs
+*.pdb
 *.log
 *.pch
 *.ipdb
