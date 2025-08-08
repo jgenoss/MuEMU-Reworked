@@ -78,7 +78,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Client.ico" />
-    <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />

@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -16,9 +8,26 @@
     <Filter Include="Util Files">
       <UniqueIdentifier>{2d98712e-7860-4e76-a39c-e80cf261b364}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{7ffc271b-d8fb-4297-81d2-aef879573b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom">
+      <UniqueIdentifier>{35e20a67-cf60-4ace-97fa-1a23c7b6b244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{3fd4de31-59c5-4fcd-b007-b9280e845f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{ae1cc1fc-ab16-4206-b4c5-1b51b8921f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{c78b9ed9-08e8-49af-a5d1-688ad281db28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{481b4275-02ce-4061-a7b0-9f8b5b430447}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReadMe.txt" />
     <None Include="AddressTable1.bin">
       <Filter>Resource Files</Filter>
     </None>
@@ -30,130 +39,145 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Protocol.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Protect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Util\CCRC32.H">
       <Filter>Util Files</Filter>
     </ClInclude>
-    <ClInclude Include="HackCheck.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HealthBar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomWing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomJewel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PacketManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resolution.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Reconnect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PrintPlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomMessage.h">
-      <Filter>Header Files</Filter>
+      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Offset.h">
-      <Filter>Header Files</Filter>
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPatcher.h">
+      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="CustomItem.h">
-      <Filter>Header Files</Filter>
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomJewel.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMessage.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomWing.h">
+      <Filter>Custom</Filter>
     </ClInclude>
     <ClInclude Include="CustomWingEffect.h">
-      <Filter>Header Files</Filter>
+      <Filter>Custom</Filter>
     </ClInclude>
-    <ClInclude Include="Config.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="HealthBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintPlayer.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManager.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconnect.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="HackCheck.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Protect.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Resolution.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="UIBase.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MuClientAPI.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MuConstants.h">
+      <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HackCheck.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Protocol.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Protect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Util\CCRC32.Cpp">
       <Filter>Util Files</Filter>
     </ClCompile>
     <ClCompile Include="Util.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="HealthBar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomWing.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomJewel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PacketManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Resolution.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Reconnect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PrintPlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Common.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomMessage.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MemoryPatcher.cpp">
+      <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="CustomItem.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomJewel.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomMessage.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomWing.cpp">
+      <Filter>Custom</Filter>
     </ClCompile>
     <ClCompile Include="CustomWingEffect.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintPlayer.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthBar.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketManager.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Reconnect.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="HackCheck.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Protect.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Resolution.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="UIBase.cpp">
+      <Filter>UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
