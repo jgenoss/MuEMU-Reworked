@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "HealthBar.h"
 #include "Util.h"
+#include "MuClientAPI.h"
+#include "CustomInterface.h"
 
 NEW_HEALTH_BAR gNewHealthBar[MAX_MAIN_VIEWPORT];
 
@@ -82,28 +84,28 @@ void DrawNewHealthBar() // OK
 
 		Angle.Z = *(float*)(ViewportAddress+0x40C) + *(float*)(ViewportAddress+0x3E8) + 100.0f;
 
-		pGetPosFromAngle(&Angle, &PosX, &PosY);
+		gMuClientApi.GetPosFromAngle(&Angle, &PosX, &PosY);
 
 		PosX -= (int)floor(LifeBarWidth / (double)2.0);
 
-		if((pCursorX >= PosX) && ((float)pCursorX <= (float)PosX + LifeBarWidth) && (pCursorY >= PosY - 2) && (pCursorY < PosY + 6))
+		if((gMuClientApi.CursorX() >= PosX) && ((float)gMuClientApi.CursorX() <= (float)PosX + LifeBarWidth) && (gMuClientApi.CursorY() >= PosY - 2) && (gMuClientApi.CursorY() < PosY + 6))
 		{
 			wsprintf(LifeDisplay, "HP : %d0%%", LifePercent);
-			pSetTextColor(pTextThis(), 0xFF, 0xE6, 0xD2, 0xFF);
-			pDrawText(pTextThis(), PosX, PosY - 6, LifeDisplay, 0, 0, (LPINT)1, 0);
+			gMuClientApi.SetTextColor(gMuClientApi.TextThis(), 0xFF, 0xE6, 0xD2, 0xFF);
+			gMuClientApi.DrawText(gMuClientApi.TextThis(), PosX, PosY - 6, LifeDisplay, 0, 0, (LPINT)1, 0);
 		}
 
-		pSetBlend(true);
+		gMuClientApi.SetBlend(true);
 
 		glColor4f(0.0, 0.0, 0.0, 0.5);
-		pDrawBarForm((float)(PosX + 1), (float)(PosY + 1), LifeBarWidth + 4.0f, 5.0f, 0.0f, 0);
-		pGLSwitchBlend();
+		gMuClientApi.DrawBarForm((float)(PosX + 1), (float)(PosY + 1), LifeBarWidth + 4.0f, 5.0f, 0.0f, 0);
+		gMuClientApi.GLSwitchBlend();
 
 		glColor3f(0.2f, 0.0, 0.0);
-		pDrawBarForm((float)PosX, (float)PosY, LifeBarWidth + 4.0f, 5.0f, 0.0, 0);
+		gMuClientApi.DrawBarForm((float)PosX, (float)PosY, LifeBarWidth + 4.0f, 5.0f, 0.0, 0);
 
 		glColor3f(0.19607843f, 0.039215688f, 0.0);
-		pDrawBarForm((float)(PosX + 2), (float)(PosY + 2), LifeBarWidth, 1.0f, 0.0, 0);
+		gMuClientApi.DrawBarForm((float)(PosX + 2), (float)(PosY + 2), LifeBarWidth, 1.0f, 0.0, 0);
 
 		if(LifePercent > 10)
 		{
@@ -118,13 +120,13 @@ void DrawNewHealthBar() // OK
 
 		for(int i = 0; i < LifeProgress; i++)
 		{
-			pDrawBarForm((float)(i * 4 + PosX + 2), (float)(PosY + 2), 3.0, 2.0, 0.0, 0);
+			gMuClientApi.DrawBarForm((float)(i * 4 + PosX + 2), (float)(PosY + 2), 3.0, 2.0, 0.0, 0);
 		}
 
-		pGLSwitch();
+		gMuClientApi.GLSwitch();
 	}
 
-	pGLSwitch();
+	gMuClientApi.GLSwitch();
 
 	glColor3f(1.0, 1.0, 1.0);
 }

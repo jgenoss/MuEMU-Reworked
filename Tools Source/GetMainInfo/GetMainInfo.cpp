@@ -23,7 +23,6 @@ struct MAIN_FILE_INFO
 	DWORD ClientCRC32;
 	DWORD PluginCRC32;
 	DWORD CameraCRC32;
-	DWORD LimitFps;
 	DWORD HelperActiveAlert;
 	DWORD HelperActiveLevel;
 	DWORD DKMaxAttackSpeed;
@@ -34,6 +33,8 @@ struct MAIN_FILE_INFO
 	DWORD RFMaxAttackSpeed;
 	DWORD DWMaxAttackSpeed;
 	DWORD ReconnectTime;
+	DWORD LimitFps;
+	DWORD PingTest;
 	CUSTOM_MESSAGE_INFO EngCustomMessageInfo[MAX_CUSTOM_MESSAGE];
 	CUSTOM_MESSAGE_INFO PorCustomMessageInfo[MAX_CUSTOM_MESSAGE];
 	CUSTOM_MESSAGE_INFO SpnCustomMessageInfo[MAX_CUSTOM_MESSAGE];
@@ -75,8 +76,6 @@ int _tmain(int argc,_TCHAR* argv[]) // OK
 
 	GetPrivateProfileString("MainInfo","CameraName","",info.CameraName,sizeof(info.CameraName),".\\MainInfo.ini");
 
-	info.LimitFps = GetPrivateProfileInt("Custom", "LimitFps", 0, ".\\MainInfo.ini");
-
 	info.HelperActiveAlert = GetPrivateProfileInt("HelperInfo","HelperActiveAlert",0,".\\MainInfo.ini");
 
 	info.HelperActiveLevel = GetPrivateProfileInt("HelperInfo","HelperActiveLevel",80,".\\MainInfo.ini");
@@ -96,6 +95,10 @@ int _tmain(int argc,_TCHAR* argv[]) // OK
 	info.RFMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","RFMaxAttackSpeed",65535,".\\MainInfo.ini");
 
 	info.ReconnectTime = GetPrivateProfileInt("ReconnectInfo","ReconnectTime",0,".\\MainInfo.ini");
+
+	info.LimitFps = GetPrivateProfileInt("Custom", "LimitFps", 0, ".\\MainInfo.ini");
+
+	info.PingTest = GetPrivateProfileInt("Custom", "PingTest", 0, ".\\MainInfo.ini");
 
 	gCustomMessage.Load("CustomMessage.txt");
 

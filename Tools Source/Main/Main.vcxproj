@@ -88,9 +88,11 @@
   <ItemGroup>
     <ClInclude Include="..\..\Util\CCRC32.H" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="CustomInterface.h" />
     <ClInclude Include="CustomItem.h" />
     <ClInclude Include="CustomJewel.h" />
     <ClInclude Include="CustomMessage.h" />
+    <ClInclude Include="CustomPing.h" />
     <ClInclude Include="CustomWing.h" />
     <ClInclude Include="CustomWingEffect.h" />
     <ClInclude Include="HackCheck.h" />
@@ -115,9 +117,11 @@
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp" />
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="CustomInterface.cpp" />
     <ClCompile Include="CustomItem.cpp" />
     <ClCompile Include="CustomJewel.cpp" />
     <ClCompile Include="CustomMessage.cpp" />
+    <ClCompile Include="CustomPing.cpp" />
     <ClCompile Include="CustomWing.cpp" />
     <ClCompile Include="CustomWingEffect.cpp" />
     <ClCompile Include="HackCheck.cpp" />

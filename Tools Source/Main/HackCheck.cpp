@@ -3,6 +3,7 @@
 #include "Offset.h"
 #include "Protect.h"
 #include "Util.h"
+#include "CustomInterface.h"
 
 typedef int(WINAPI*WSRECV)(SOCKET,char*,int,int);
 typedef int(WINAPI*WSSEND)(SOCKET,char*,int,int);

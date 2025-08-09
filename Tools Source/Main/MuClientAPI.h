@@ -13,11 +13,20 @@ struct ItemBmdStruct;
 struct MU3Float;
 using lpViewObj = LPVOID;
 
+#define pDrawInterfaceS			((char(__cdecl*)()) 0x004D7970)
+#define oDrawInterfaceS_Call	0x004DA2AC
+#define pDrawInterface			((void(__cdecl*)()) 0x0080F8E0)
+#define oDrawInterface_Call		0x0080F7FE
+
 class MuClientAPIExtended {
 public:
     // --------------------------
     // Interface / Drawing
     // --------------------------
+
+    //inline static void DrawInterface() {
+    //    ((void(__cdecl*)())(0x0080F8E0))();
+    //}
 
     // Original: #define pDrawGUI ((void(__cdecl*)(DWORD, float, float, float, float)) 0x00790B50)
     inline static void DrawGUI(DWORD modelID, float x, float y, float w, float h) {
@@ -1157,3 +1166,5 @@ public:
         *reinterpret_cast<BYTE*>(addr) = val;
     }
 };
+
+extern MuClientAPIExtended gMuClientApi;

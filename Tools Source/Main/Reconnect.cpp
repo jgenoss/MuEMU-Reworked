@@ -5,6 +5,7 @@
 #include "Protect.h"
 #include "Protocol.h"
 #include "Util.h"
+#include "MuClientAPI.h"
 
 char GameServerAddress[16];
 WORD GameServerPort;
@@ -99,9 +100,9 @@ void ReconnectDrawInterface() // OK
 
 	progress = ((progress>150)?150:progress);
 
-	DrawInterface(0x7A65,StartX,StartY,160.0f,18.0f);
+	gMuClientApi.DrawGUI(0x7A65,StartX,StartY,160.0f,18.0f);
 
-	DrawInterface(0x7A66,(StartX+5.0f),(StartY+5.0f),progress,8.0f);
+	gMuClientApi.DrawGUI(0x7A66,(StartX+5.0f),(StartY+5.0f),progress,8.0f);
 
 	char buff[256];
 
@@ -109,19 +110,19 @@ void ReconnectDrawInterface() // OK
 	{
 		case RECONNECT_PROGRESS_NONE:
 			wsprintf(buff,gCustomMessage.GetMessage(1));
-			DrawInterfaceText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
+			gMuClientApi.DrawColorText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
 			break;
 		case RECONNECT_PROGRESS_CONNECTED:
 			wsprintf(buff,gCustomMessage.GetMessage(2));
-			DrawInterfaceText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
+			gMuClientApi.DrawColorText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
 			break;
 		case RECONNECT_PROGRESS_JOINED:
 			wsprintf(buff,gCustomMessage.GetMessage(3));
-			DrawInterfaceText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
+			gMuClientApi.DrawColorText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
 			break;
 		case RECONNECT_PROGRESS_CHAR_LIST:
 			wsprintf(buff,gCustomMessage.GetMessage(4));
-			DrawInterfaceText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
+			gMuClientApi.DrawColorText(buff,(int)StartX,(int)(StartY+5.0f),160,0,0xFFFFFFFF,0,3);
 			break;
 	}
 }

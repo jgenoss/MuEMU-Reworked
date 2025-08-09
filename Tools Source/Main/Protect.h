@@ -9,6 +9,7 @@
 #include "CustomMessage.h"
 #include "CustomWing.h"
 #include "CustomWingEffect.h"
+#include <wtypes.h>
 
 struct MAIN_FILE_INFO
 {
@@ -26,7 +27,6 @@ struct MAIN_FILE_INFO
 	DWORD ClientCRC32;
 	DWORD PluginCRC32;
 	DWORD CameraCRC32;
-	DWORD LimitFps;
 	DWORD HelperActiveAlert;
 	DWORD HelperActiveLevel;
 	DWORD DWMaxAttackSpeed;
@@ -37,6 +37,8 @@ struct MAIN_FILE_INFO
 	DWORD SUMaxAttackSpeed;
 	DWORD RFMaxAttackSpeed;
 	DWORD ReconnectTime;
+	DWORD LimitFps;
+	DWORD PingTest;
 	CUSTOM_MESSAGE_INFO EngCustomMessageInfo[MAX_CUSTOM_MESSAGE];
 	CUSTOM_MESSAGE_INFO PorCustomMessageInfo[MAX_CUSTOM_MESSAGE];
 	CUSTOM_MESSAGE_INFO SpnCustomMessageInfo[MAX_CUSTOM_MESSAGE];

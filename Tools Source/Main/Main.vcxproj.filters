@@ -11,9 +11,6 @@
     <Filter Include="Core">
       <UniqueIdentifier>{7ffc271b-d8fb-4297-81d2-aef879573b6f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Custom">
-      <UniqueIdentifier>{35e20a67-cf60-4ace-97fa-1a23c7b6b244}</UniqueIdentifier>
-    </Filter>
     <Filter Include="UI">
       <UniqueIdentifier>{3fd4de31-59c5-4fcd-b007-b9280e845f77}</UniqueIdentifier>
     </Filter>
@@ -25,6 +22,9 @@
     </Filter>
     <Filter Include="Shared">
       <UniqueIdentifier>{481b4275-02ce-4061-a7b0-9f8b5b430447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom">
+      <UniqueIdentifier>{35e20a67-cf60-4ace-97fa-1a23c7b6b244}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +114,12 @@
     <ClInclude Include="MuConstants.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="CustomPing.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomInterface.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp">
@@ -178,6 +184,12 @@
     </ClCompile>
     <ClCompile Include="UIBase.cpp">
       <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomPing.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomInterface.cpp">
+      <Filter>Custom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

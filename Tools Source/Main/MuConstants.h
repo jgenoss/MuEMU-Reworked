@@ -307,29 +307,57 @@ public:
     struct Colors {
 
 
-        static constexpr DWORD ShinyGreen = Color4f(172, 56, 255, 255);
-        static constexpr DWORD ShinyGreen100 = Color4f(172, 56, 255, 100);
-        static constexpr DWORD Gold = Color4f(255, 25, 189, 255);
-        static constexpr DWORD Gold150 = Color4f(255, 25, 189, 150);
-        static constexpr DWORD Gold180 = Color4f(255, 25, 189, 180);
+        static constexpr DWORD ShinyGreen = Color4f(172, 255, 56, 255);
+        static constexpr DWORD ShinyGreen100 = Color4f(172, 255, 56, 100);
+        static constexpr DWORD Gold = Color4f(255, 189, 25, 255);
+        static constexpr DWORD Gold150 = Color4f(255, 189, 25, 150);
+        static constexpr DWORD Gold180 = Color4f(255, 189, 25, 180);
         static constexpr DWORD White = Color4f(255, 255, 255, 255);
         static constexpr DWORD White150 = Color4f(255, 255, 255, 150);
         static constexpr DWORD White180 = Color4f(255, 255, 255, 180);
-        static constexpr DWORD Orange = Color4f(255, 25, 105, 255);
+        static constexpr DWORD Orange = Color4f(255, 105, 25, 255);
         static constexpr DWORD Gray100 = Color4f(211, 211, 211, 100);
         static constexpr DWORD Gray150 = Color4f(50, 50, 50, 150);
         static constexpr DWORD Gray190 = Color4f(50, 50, 50, 190);
-        static constexpr DWORD BlowPink = Color4f(220, 60, 20, 255);
+        static constexpr DWORD BlowPink = Color4f(220, 20, 60, 255);
         static constexpr DWORD Red = Color4f(225, 0, 0, 255);
-        static constexpr DWORD Red2 = Color4f(225, 45, 95, 255);
-        static constexpr DWORD Excellent = Color4f(0, 139, 225, 255);
-        static constexpr DWORD Ancient = Color4f(1, 119, 223, 255);
-        static constexpr DWORD Socket = Color4f(153, 204, 102, 255);
-        static constexpr DWORD Blue = Color4f(36, 252, 242, 255);
-        static constexpr DWORD Blue250 = Color4f(36, 252, 242, 250);
-        static constexpr DWORD Yellow = Color4f(255, 0, 255, 255);
-        static constexpr DWORD Yellow170 = Color4f(255, 0, 255, 170);
-        static constexpr DWORD Brown = Color4f(69, 18, 39, 255);
+        static constexpr DWORD Red2 = Color4f(225, 95, 45, 255);
+        static constexpr DWORD Excellent = Color4f(0, 225, 139, 255);
+        static constexpr DWORD Ancient = Color4f(1, 223, 119, 255);
+        static constexpr DWORD Socket = Color4f(153, 102, 204, 255);
+        static constexpr DWORD Blue = Color4f(36, 242, 252, 255);
+        static constexpr DWORD Blue250 = Color4f(36, 242, 252, 250);
+        static constexpr DWORD Yellow = Color4f(255, 255, 0, 255);
+        static constexpr DWORD Yellow170 = Color4f(255, 255, 0, 170);
+        static constexpr DWORD Brown = Color4f(69, 39, 18, 255);
+
+    };
+
+    enum ColorMacro
+    {
+        eShinyGreen = Color4f(172, 255, 56, 255),
+        eShinyGreen100 = Color4f(172, 255, 56, 100),
+        eGold = Color4f(255, 189, 25, 255),
+        eGold150 = Color4f(255, 189, 25, 150),
+        eGold180 = Color4f(255, 189, 25, 180),
+        eWhite = Color4f(255, 255, 255, 255),
+        eWhite150 = Color4f(255, 255, 255, 150),
+        eWhite180 = Color4f(255, 255, 255, 180),
+        eOrange = Color4f(255, 105, 25, 255),
+        eGray100 = Color4f(211, 211, 211, 100),
+        eGray150 = Color4f(50, 50, 50, 150),
+        eGray190 = Color4f(50, 50, 50, 190),
+        eBlowPink = Color4f(220, 20, 60, 255),
+        eRed = Color4f(225, 0, 0, 255),
+        eRed2 = Color4f(225, 95, 45, 255),
+        eExcellent = Color4f(0, 225, 139, 255),
+        eAncient = Color4f(1, 223, 119, 255),
+        eSocket = Color4f(153, 102, 204, 255),
+        eBlue = Color4f(36, 242, 252, 255),
+        eBlue250 = Color4f(36, 242, 252, 250),
+        eYellow = Color4f(255, 255, 0, 255),
+        eYellow170 = Color4f(255, 255, 0, 170),
+        eBrown = Color4f(69, 39, 18, 255),
     };
 
     // --------------------------
@@ -735,5 +763,10 @@ using MuConst = MuConstants;
 using MuColors = MuConstants::Colors;
 using MuItems = MuConstants::ItemCategories;
 using MuText = MuConstants::TextUtils;
+
+extern MuConst  g_muConstants;
+extern MuColors g_muColors;
+extern MuItems  g_muItems;
+extern MuText   g_muText;
 
 // End of MuConstantsAPI.h

@@ -7,6 +7,7 @@ typedef unsigned __int64 QWORD;
 #define _WIN32_WINNT _WIN32_WINNT_WINXP
 
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 // System Include
 #include <windows.h>

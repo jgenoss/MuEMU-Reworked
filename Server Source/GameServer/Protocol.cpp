@@ -935,6 +935,9 @@ void ProtocolCore(BYTE head,BYTE* lpMsg,int size,int aIndex,int encrypt,int seri
 					gMasterSkillTree.CGMasterSkillRecv((PMSG_MASTER_SKILL_RECV*)lpMsg,aIndex);
 					#endif
 					break;
+				case 0xF1:
+					GCPingRecv(aIndex);
+					break;
 			}
 			break;
 		case 0xF6:
@@ -4991,4 +4994,13 @@ void CGReqCastleHuntZoneEntrance(PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE * aRecv, int i
 
 	DataSend(iIndex, (LPBYTE)&pMsg, sizeof(pMsg));
 #endif
+}
+
+void GCPingRecv(int iIndex)
+{
+	PMSG_PING_SEND pMsg;
+
+	pMsg.header.set(0xF3, 0xF1, sizeof(pMsg));
+
+	DataSend(iIndex, (LPBYTE)&pMsg, sizeof(pMsg));
 }

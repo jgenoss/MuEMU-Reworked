@@ -8,6 +8,7 @@
 #include "Protect.h"
 #include "Reconnect.h"
 #include "Util.h"
+#include "CustomPing.h"
 
 BOOL ProtocolCoreEx(BYTE head,BYTE* lpMsg,int size,int key) // OK
 {
@@ -104,6 +105,9 @@ BOOL ProtocolCoreEx(BYTE head,BYTE* lpMsg,int size,int key) // OK
 				case 0xE4:
 					GCNewMessageRecv((PMSG_NEW_MESSAGE_RECV*)lpMsg);
 					return 1;
+				case 0xF1:
+					gCustomPing.PingRecv();
+					break;
 			}
 			break;
 	}

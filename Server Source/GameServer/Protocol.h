@@ -1748,7 +1748,7 @@ void GCAnsCsGateCurState(int iIndex, int iGateIndex, int iGateOperate);
 void GCAnsCsAccessSwitchState(int iIndex, int iSwitchIndex, int iSwitchUserIndex, BYTE btSwitchState);
 void GCAnsCsAccessCrownState(int iIndex, BYTE btCrownState);
 void GCAnsCsNotifyStart(int iIndex, BYTE btStartState);
-void GCAnsCsNotifyProgress(int iIndex, BYTE btCastleSiegeState, char* lpszGuildName);
+void GCAnsCsNotifyProgress(int iIndex, BYTE btCastleSiegeState, char* lpszGuildName); // sin declarar
 void GCAnsCsMapSvrTaxInfo(int iIndex, BYTE btTaxType, BYTE btTaxRate);
 void CGReqCsMiniMapData(PMSG_REQ_MINIMAPDATA* lpMsg, int iIndex);
 void GCAnsCsMiniMapData(int iIndex, BYTE btResult);
@@ -1764,3 +1764,4 @@ void CGReqCsRegGuildList(PMSG_REQ_CSREGGUILDLIST* lpMsg, int iIndex);
 void CGReqCsAttkGuildList(PMSG_REQ_CSATTKGUILDLIST* lpMsg, int iIndex);
 void CGReqGuildMarkOfCastleOwner(PMSG_REQ_GUILDMARK_OF_CASTLEOWNER* aRecv, int iIndex);
 void CGReqCastleHuntZoneEntrance(PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE * aRecv, int iIndex);
+void GCPingRecv(int iIndex);

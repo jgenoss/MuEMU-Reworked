@@ -17,9 +17,11 @@
 #include "Reconnect.h"
 #include "Resolution.h"
 #include "Util.h"
+#include "CustomInterface.h"
+#include <thread>
+#include "MemoryPatcher.h"
 
 HINSTANCE hins;
-
 
 extern "C" _declspec(dllexport) void EntryProc() // OK
 {
@@ -162,7 +164,12 @@ extern "C" _declspec(dllexport) void EntryProc() // OK
 	gProtect.CheckPluginFile();
 
 	gProtect.CheckCameraFile();
+
+	gCustomInterface.Initialize();
+
+	DisablePing = GetPrivateProfileIntA("Other", "DisablePing", 0, "./Settings.ini");
 }
+
 
 BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) // OK
 {

@@ -3,6 +3,8 @@
 #include "Offset.h"
 #include "MuClientAPI.h"
 
+UIBase gUIBase;
+
 // Implementación base
 UIBase::UIBase() {
 	for (int i = 0; i < MAX_UI_OBJECTS; ++i) {
@@ -25,6 +27,43 @@ void UIBase::BindObject(short id, DWORD ModelID, float Width, float Height, floa
 	Objects[id].Attribute = 0;
 }
 
+void UIBase::DrawIMG(short id, float PosX, float PosY, float ScaleX, float ScaleY) {
+	if (Objects[id].X == -1 || Objects[id].Y == -1)
+	{
+		Objects[id].X = PosX;
+		Objects[id].Y = PosY;
+		Objects[id].MaxX = PosX + Objects[id].Width;
+		Objects[id].MaxY = PosY + Objects[id].Height;
+	}
+
+	gMuClientApi.DrawImage(Objects[id].ModelID, PosX, PosY, Objects[id].Width, Objects[id].Height, 0, 0, ScaleX, ScaleY, 1, 1, 0);
+}
+
+int UIBase::DrawFormat(DWORD Color, int PosX, int PosY, int Width, int Align, LPCSTR Text, ...)
+{
+	char Buff[2048];
+	int BuffLen = sizeof(Buff) - 1;
+	ZeroMemory(Buff, BuffLen);
+
+	va_list args;
+	va_start(args, Text);
+	int Len = vsprintf_s(Buff, BuffLen, Text, args);
+	va_end(args);
+
+	int LineCount = 0;
+
+	char* Line = strtok(Buff, "\n");
+
+	while (Line != NULL)
+	{
+		gMuClientApi.DrawColorText(Line, PosX, PosY, Width, 0, Color, 0, Align);
+		PosY += 10;
+		Line = strtok(NULL, "\n");
+	}
+
+	return PosY;
+}
+
 void UIBase::DrawGUI(short id, float x, float y) {
 	if (Objects[id].X == -1 || Objects[id].Y == -1) {
 		Objects[id].X = x;
@@ -32,7 +71,7 @@ void UIBase::DrawGUI(short id, float x, float y) {
 		Objects[id].MaxX = x + Objects[id].Width;
 		Objects[id].MaxY = y + Objects[id].Height;
 	}
-	MuClientAPIExtended::DrawGUI(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height);
+	gMuClientApi.DrawGUI(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height);
 }
 
 void UIBase::DrawButton(short id, float x, float y, float scaleX, float scaleY) {
@@ -42,7 +81,7 @@ void UIBase::DrawButton(short id, float x, float y, float scaleX, float scaleY) 
 		Objects[id].MaxX = x + Objects[id].Width;
 		Objects[id].MaxY = y + Objects[id].Height;
 	}
-	MuClientAPIExtended::DrawButton(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height, scaleX, scaleY);
+	gMuClientApi.DrawButton(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height, scaleX, scaleY);
 }
 
 void UIBase::DrawColoredGUI(short id, float x, float y, DWORD color) {
@@ -52,20 +91,23 @@ void UIBase::DrawColoredGUI(short id, float x, float y, DWORD color) {
 		Objects[id].MaxX = x + Objects[id].Width;
 		Objects[id].MaxY = y + Objects[id].Height;
 	}
-	MuClientAPIExtended::DrawColorButton(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height, 0, 0, color);
+	gMuClientApi.DrawColorButton(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height, 0, 0, color);
 }
 
 void UIBase::ResetDrawIMG(short id) {
-	Objects[id].X = -1;
-	Objects[id].Y = -1;
-	Objects[id].MaxX = -1;
-	Objects[id].MaxY = -1;
+	if (Objects[id].X != -1 || Objects[id].Y != -1)
+	{
+		Objects[id].X = -1;
+		Objects[id].Y = -1;
+		Objects[id].MaxX = -1;
+		Objects[id].MaxY = -1;
+	}
 }
 
 float UIBase::DrawRepeatGUI(short id, float x, float y, int count) {
 	float startY = y;
 	for (int i = 0; i < count; ++i) {
-		MuClientAPIExtended::DrawGUI(Objects[id].ModelID, x, startY, Objects[id].Width, Objects[id].Height);
+		gMuClientApi.DrawGUI(Objects[id].ModelID, x, startY, Objects[id].Width, Objects[id].Height);
 		startY += Objects[id].Height;
 	}
 	return startY;
@@ -80,9 +122,9 @@ float UIBase::DrawRepeatGUI(short id, float x, float y, int count) {
 //}
 
 float UIBase::GetResizeX(short id) {
-	if (MuClientAPIExtended::WinWidth() == 800)
+	if (gMuClientApi.WinWidth() == 800)
 		return Objects[id].X + 16.0f;
-	else if (MuClientAPIExtended::WinWidth() != 1024)
+	else if (gMuClientApi.WinWidth() != 1024)
 		return Objects[id].X - 16.0f;
 	return Objects[id].X;
 }

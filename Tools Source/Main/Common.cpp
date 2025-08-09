@@ -2,13 +2,15 @@
 #include "Common.h"
 #include "Offset.h"
 #include "Util.h"
+#include "CustomInterface.h"
+#include <thread>
 
 BYTE GensBattleMapCount = 0;
 BYTE GensMoveIndexCount = 0;
 BYTE GensBattleMap[120];
 BYTE GensMoveIndex[120];
 
-
+int DisablePing;
 
 // Nueva variable para controlar FPS
 // NUEVAS VARIABLES PARA GRAPHICS SYSTEM
@@ -62,6 +64,8 @@ void __declspec(naked) FixMU_TITLEPostion()
 
 void InitCommon() // OK
 {
+	//CreateConsole();
+
 	SetCompleteHook(0xE9,0x0040B154,&LoginTab);
 
 	SetCompleteHook(0xFF,0x0064A79A,&CheckMasterLevel); // C1:16
@@ -116,6 +120,9 @@ void InitCommon() // OK
 
 	SetCompleteHook(0xE9,0x008317BD,&CompareGensMoveIndex);
 
+	SetCompleteHook(0xE9, 0x004D1CF0, 0x004D1DC2); //-- Remoce MuError.DMP
+	MemorySet(0x00D20170, 0x90, 0x1B); //-- Remove Creation MuError.log
+
 	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3); //-- Fix Send NpcTalk
 
 	//Small correction in the text
@@ -141,8 +148,6 @@ void InitCommon() // OK
 	SetByte(0x00649E24 + 3, static_cast<BYTE>(14));
 
 	//Remove Creation MuError
-	SetCompleteHook(0xE9, 0x004D1CF0, 0x004D1DC2); //-- Remoce MuError.DMP
-	MemorySet(0x00D20170, 0x90, 0x1B); //-- Remove Creation MuError.log
 
 	//Offset Fix RF Skill
 	SetCompleteHook(0xE9, 0x0071AE92, 0x00720894); //Fix RF Skill
@@ -153,7 +158,23 @@ void InitCommon() // OK
 	MemorySet(0x005AD691, 0x90, 0x05); //fix move skill
 	//Botón de corrección de desplazamiento del guardián de Crywolf (tercera misión)
 	MemorySet(0x00792B7F, 0x90, 0x05);	// Fix Button Crywolf Gatekeeper (Third Quest)
+}
 
+void CreateConsole()
+{
+	AllocConsole();
+	FILE* fDummy;
+	freopen_s(&fDummy, "CONIN$", "r", stdin);
+	freopen_s(&fDummy, "CONOUT$", "w", stdout);
+	freopen_s(&fDummy, "CONOUT$", "w", stderr);
+
+	SetConsoleTitleA("Consola Debug");
+	std::cout.clear();
+	std::clog.clear();
+	std::cerr.clear();
+	std::cin.clear();
+
+	std::cout << "[*] Consola inicializada.\n";
 }
 
 BOOL CheckGensBattleMap(int map) // OK
