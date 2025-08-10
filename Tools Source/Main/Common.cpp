@@ -64,7 +64,7 @@ void __declspec(naked) FixMU_TITLEPostion()
 
 void InitCommon() // OK
 {
-	//CreateConsole();
+	CreateConsole();
 
 	SetCompleteHook(0xE9,0x0040B154,&LoginTab);
 

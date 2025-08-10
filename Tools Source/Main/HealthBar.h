@@ -9,12 +9,7 @@ struct NEW_HEALTH_BAR
 	BYTE rate;
 };
 
-struct VAngle
-{
-	float X;
-	float Y;
-	float Z;
-};
+
 
 void ClearNewHealthBar();
 void InsertNewHealthBar(WORD index,BYTE type,BYTE rate);

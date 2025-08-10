@@ -20,6 +20,13 @@ struct UIObject {
 class UIBase {
 public:
 	UIBase();
+	
+
+	bool CheckWindow(int WindowID);
+
+	int CloseWindow(int WindowID);
+
+	int OpenWindow(int WindowID);
 
 	void BindObject(short ObjectID, DWORD ModelID, float Width, float Height, float X, float Y);
 	void DrawIMG(short ObjectID, float PosX, float PosY, float ScaleX, float ScaleY);
@@ -33,6 +40,12 @@ public:
 	//bool IsWorkZone(short ObjectID);
 	float GetResizeX(short ObjectID);
 
+	void CheckAndReport();
+	bool NotAllWindowsOpen();
+	std::string GetWindowName(int id);
+
+private:
+	int lastReportedWindowID;
 protected:
 	UIObject Objects[MAX_UI_OBJECTS];
 };

@@ -98,6 +98,7 @@ enum class WindowType : int {
     Options = 35,
     Help = 36,
     FastDial = 39,
+    InGame = 41,
     DuelScore = 49,
     SkillTree = 57,
     GoldenArcher1 = 58,
@@ -263,7 +264,7 @@ public:
     static constexpr uintptr_t HDK_ITEM_EFFECT_ALLOW = 0x0057AD8D;
     static constexpr uintptr_t HDK_ITEM_EFFECT_NOT_ALLOW = 0x0057B73B;
     static constexpr uintptr_t HDK_NEXT_ITEM_COLOR = 0x0057AF2E;
-    static constexpr uintptr_t MAIN_LANGUAGE = 0x00E8C5C4;
+    static constexpr uintptr_t HDK_MAIN_LANGUAGE = 0x00E8C5C4;
 
     // Virtual Key Codes
     static constexpr int VK_N = 0x4E;
@@ -738,7 +739,7 @@ public:
     // --------------------------
 
     struct MemoryAddresses {
-        static constexpr uintptr_t MAIN_LANGUAGE = 0x00E8C5C4;
+        static constexpr uintptr_t HDK_MAIN_LANGUAGE = 0x00E8C5C4;
 
         // HDK addresses
         static constexpr uintptr_t HDK_SET_ITEM_EFFECT = 0x0057AD82;
@@ -752,7 +753,7 @@ public:
     // Easy access to main language
     // --------------------------
     inline static DWORD& MainLanguage() {
-        return *reinterpret_cast<DWORD*>(MemoryAddresses::MAIN_LANGUAGE);
+        return *reinterpret_cast<DWORD*>(MemoryAddresses::HDK_MAIN_LANGUAGE);
     }
 };
 

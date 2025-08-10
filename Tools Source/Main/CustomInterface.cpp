@@ -1,10 +1,13 @@
 #include "stdafx.h"
 #include "CustomInterface.h"
 #include "MuClientAPI.h"
+#include "MuConstants.h"
+#include "UIBase.h"
 #include <iostream>
 #include "CustomPing.h"
 #include <thread>
 #include "Util.h"
+#include "Protect.h"
 
 CustomInterface gCustomInterface;
 
@@ -26,14 +29,25 @@ bool CustomInterface::Initialize()
 
 int __fastcall CustomInterface::RunHook(void* this_ptr)
 {
-    // Aquí tu lógica
-    if (gMuClientApi.PlayerState() == 5) {
-        gCustomPing.StartPing();
-        gCustomPing.ShowPing();
+    if (gMuClientApi.PlayerState() == static_cast<int>(GameState::GameProcess)) {
+        
+        gUIBase.CheckAndReport();
+        if (gUIBase.NotAllWindowsOpen() == false) {
+            gCustomPing.StartPing();
+            gCustomPing.ShowPing();
+        }
     }
 
-    // Llamada directa a la función original (sin pasar por el hook)
+
     return reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
+}
+
+void CustomInterface::setWindowText()
+{
+    /*char text[500];
+    sprintf_s(text, sizeof(text), "Server: %s, gProtect.m_MainInfo.WindowName);
+    SetWindowText(gMuClientApi.GameWindow(), text);*/
+
 }
 
 void CustomInterface::Cleanup()

@@ -6,12 +6,18 @@
 #include <gl/GL.h>
 
 // Forward declarations para tipos custom
-struct VAngle;
+struct VAngle
+{
+	float X;
+	float Y;
+	float Z;
+};
 struct PartyList;
 struct ObjectItem;
 struct ItemBmdStruct;
 struct MU3Float;
-using lpViewObj = LPVOID;
+struct ObjectCharacter;
+struct ObjectPreview;
 
 #define pDrawInterfaceS			((char(__cdecl*)()) 0x004D7970)
 #define oDrawInterfaceS_Call	0x004DA2AC
@@ -313,10 +319,10 @@ public:
     }
 
     // Original: #define pSendChatSay ((int(__cdecl*)(char * Name, char * Text, lpViewObj lpObject, int a4, int a5)) 0x5996A0)
-    inline static int SendChatSay(char* name, char* text, lpViewObj lpObject = nullptr, int a4 = 0, int a5 = 0) {
+    /*inline static int SendChatSay(char* name, char* text, lpViewObj lpObject = nullptr, int a4 = 0, int a5 = 0) {
         using Fn = int(__cdecl*)(char*, char*, lpViewObj, int, int);
         return reinterpret_cast<Fn>(0x005996A0)(name, text, lpObject, a4, a5);
-    }
+    }*/
 
     // --------------------------
     // Player / Character System
@@ -494,10 +500,10 @@ public:
     // --------------------------
 
     // Original: #define pShowMonster ((lpViewObj(__cdecl*)(int MonsterID, int a2, int a3, int a4)) 0x580FC0)
-    inline static lpViewObj ShowMonster(int monsterID, int a2, int a3, int a4) {
+    /*inline static lpViewObj ShowMonster(int monsterID, int a2, int a3, int a4) {
         using Fn = lpViewObj(__cdecl*)(int, int, int, int);
         return reinterpret_cast<Fn>(0x00580FC0)(monsterID, a2, a3, a4);
-    }
+    }*/
 
     // Original: #define pCheckEffect ((char(__thiscall*)(LPVOID This, char a2)) 0x004C8640)
     inline static char CheckEffect(LPVOID obj, char a2) {
@@ -646,10 +652,10 @@ public:
     }
 
     // Original: #define pPreviewCharSet ((void(__cdecl*)(int ObjectIndex, BYTE * CharSet, lpViewObj Object, int Mode)) 0x57FD90)
-    inline static void PreviewCharSet(int objectIndex, BYTE* charSet, lpViewObj object, int mode) {
+    /*inline static void PreviewCharSet(int objectIndex, BYTE* charSet, lpViewObj object, int mode) {
         using Fn = void(__cdecl*)(int, BYTE*, lpViewObj, int);
         reinterpret_cast<Fn>(0x57FD90)(objectIndex, charSet, object, mode);
-    }
+    }*/
 
     // --------------------------
     // Game System
