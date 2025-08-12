@@ -3,6 +3,7 @@
 #include "Offset.h"
 #include "Util.h"
 #include "CustomInterface.h"
+#include "MuConstants.h"
 #include <thread>
 
 BYTE GensBattleMapCount = 0;
@@ -66,64 +67,65 @@ void InitCommon() // OK
 {
 	CreateConsole();
 
-	SetCompleteHook(0xE9,0x0040B154,&LoginTab);
+	SetCompleteHook(ASM::JMP,0x0040B154,&LoginTab);
 
-	SetCompleteHook(0xFF,0x0064A79A,&CheckMasterLevel); // C1:16
+	SetCompleteHook(ASM::CALLI,0x0064A79A,&CheckMasterLevel); // C1:16
 
-	SetCompleteHook(0xFF,0x0064A85F,&CheckMasterLevel); // C1:16
+	SetCompleteHook(ASM::CALLI,0x0064A85F,&CheckMasterLevel); // C1:16
 
-	SetCompleteHook(0xFF,0x00656E03,&CheckMasterLevel); // C1:48
+	SetCompleteHook(ASM::CALLI,0x00656E03,&CheckMasterLevel); // C1:48
 
-	SetCompleteHook(0xFF,0x0064AB3D,&CheckMasterLevel); // C1:9C
+	SetCompleteHook(ASM::CALLI,0x0064AB3D,&CheckMasterLevel); // C1:9C
 
-	SetCompleteHook(0xFF,0x0064AC02,&CheckMasterLevel); // C1:9C
+	SetCompleteHook(ASM::CALLI,0x0064AC02,&CheckMasterLevel); // C1:9C
 
-	SetCompleteHook(0xFF,0x0063DDF2,&CheckMasterLevel); // C1:F3:03
+	SetCompleteHook(ASM::CALLI,0x0063DDF2,&CheckMasterLevel); // C1:F3:03
 
-	SetCompleteHook(0xFF,0x0063DF89,&CheckMasterLevel); // C1:F3:03
+	SetCompleteHook(ASM::CALLI,0x0063DF89,&CheckMasterLevel); // C1:F3:03
 
-	SetCompleteHook(0xFF,0x0063EA4C,&CheckMasterLevel); // C1:F3:04
+	SetCompleteHook(ASM::CALLI,0x0063EA4C,&CheckMasterLevel); // C1:F3:04
 
-	SetCompleteHook(0xFF,0x0064CA0C,&CheckMasterLevel); // LevelUp
+	SetCompleteHook(ASM::CALLI,0x0064CA0C,&CheckMasterLevel); // LevelUp
 
-	SetCompleteHook(0xFF,0x0077FAF9,&CheckMasterLevel); // Print Level
+	SetCompleteHook(ASM::CALLI,0x0077FAF9,&CheckMasterLevel); // Print Level
 
-	SetCompleteHook(0xFF,0x0081071B,&CheckMasterLevel); // Experience Bar
+	SetCompleteHook(ASM::CALLI,0x0081071B,&CheckMasterLevel); // Experience Bar
 
-	SetCompleteHook(0xFF,0x0081079B,&CheckMasterLevel); // Experience Bar
+	SetCompleteHook(ASM::CALLI,0x0081079B,&CheckMasterLevel); // Experience Bar
 
-	SetCompleteHook(0xFF,0x0047FE31,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x0047FE31,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x0059890D,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x0059890D,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x0059A399,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x0059A399,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x0059A93C,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x0059A93C,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x0059B13B,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x0059B13B,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x005A4261,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x005A4261,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x005A4D52,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x005A4D52,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x005B6117,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x005B6117,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x0065A6CE,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x0065A6CE,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x00727987,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x00727987,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x007861F1,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x007861F1,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x007D32FA,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x007D32FA,&CheckGensBattleMap);
 
-	SetCompleteHook(0xFF,0x007D3B0D,&CheckGensBattleMap);
+	SetCompleteHook(ASM::CALLI,0x007D3B0D,&CheckGensBattleMap);
 
-	SetCompleteHook(0xE9,0x008317BD,&CompareGensMoveIndex);
+	SetCompleteHook(ASM::JMP,0x008317BD,&CompareGensMoveIndex);
 
-	SetCompleteHook(0xE9, 0x004D1CF0, 0x004D1DC2); //-- Remoce MuError.DMP
+	SetCompleteHook(ASM::JMP, 0x004D1CF0, 0x004D1DC2); //-- Remoce MuError.DMP
+
 	MemorySet(0x00D20170, 0x90, 0x1B); //-- Remove Creation MuError.log
 
-	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3); //-- Fix Send NpcTalk
+	SetCompleteHook(ASM::JMP, 0x0082A983, 0x0082A9F3); //-- Fix Send NpcTalk
 
 	//Small correction in the text
 	SetDword(0x00796079, (DWORD)"%s - %s");
@@ -140,9 +142,9 @@ void InitCommon() // OK
 	//-> Personal Store Name (Seller) Text Position
 	SetByte(0x00841FE1, static_cast<BYTE>(0x10D));
 
-	SetCompleteHook(0xE9, 0x0082A983, 0x0082A9F3);
+	SetCompleteHook(ASM::JMP, 0x0082A983, 0x0082A9F3);
 
-	SetCompleteHook(0xE9, 0x004830AE, &FixMU_TITLEPostion);
+	SetCompleteHook(ASM::JMP, 0x004830AE, &FixMU_TITLEPostion);
 
 	//Fix Visual Agility MuEMU
 	SetByte(0x00649E24 + 3, static_cast<BYTE>(14));
@@ -150,9 +152,9 @@ void InitCommon() // OK
 	//Remove Creation MuError
 
 	//Offset Fix RF Skill
-	SetCompleteHook(0xE9, 0x0071AE92, 0x00720894); //Fix RF Skill
-	SetCompleteHook(0xE9, 0x0071B1A3, 0x00720894); //Fix RF Skill
-	SetCompleteHook(0xE9, 0x0095DFBE, 0x0095DFD3); //-- Fix RF
+	SetCompleteHook(ASM::JMP, 0x0071AE92, 0x00720894); //Fix RF Skill
+	SetCompleteHook(ASM::JMP, 0x0071B1A3, 0x00720894); //Fix RF Skill
+	SetCompleteHook(ASM::JMP, 0x0095DFBE, 0x0095DFD3); //-- Fix RF
 
 	//Offset fix move skill
 	MemorySet(0x005AD691, 0x90, 0x05); //fix move skill

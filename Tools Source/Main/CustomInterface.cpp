@@ -8,6 +8,7 @@
 #include <thread>
 #include "Util.h"
 #include "Protect.h"
+#include "MemoryPatcher.h"
 
 CustomInterface gCustomInterface;
 
@@ -21,32 +22,34 @@ CustomInterface::~CustomInterface()
 
 bool CustomInterface::Initialize()
 {
-    SetCompleteHook(0xE8, 0x0080F7FE, &RunHook);
+    SetCompleteHook(ASM::CALL, 0x0080F7FE, &DrawInterface);
 
     initialized = true;
     return initialized;
 }
 
-int __fastcall CustomInterface::RunHook(void* this_ptr)
+int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 {
     if (gMuClientApi.PlayerState() == static_cast<int>(GameState::GameProcess)) {
         
         gUIBase.CheckAndReport();
+
+        setWindowText();
+
         if (gUIBase.NotAllWindowsOpen() == false) {
             gCustomPing.StartPing();
             gCustomPing.ShowPing();
         }
     }
 
-
     return reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
 }
 
 void CustomInterface::setWindowText()
 {
-    /*char text[500];
-    sprintf_s(text, sizeof(text), "Server: %s, gProtect.m_MainInfo.WindowName);
-    SetWindowText(gMuClientApi.GameWindow(), text);*/
+    char text[500];
+    sprintf_s(text, sizeof(text), "|| Server: %s || Name: || Level: || Resets: ||", gProtect.m_MainInfo.WindowName);
+    SetWindowText(gMuClientApi.GameWindow(), text);
 
 }
 

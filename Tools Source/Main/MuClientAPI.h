@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 // MuClientAPIExtended.h - Wrapper completo para cliente MU
-// Convierte todos los #define en m�todos C++ organizados por categor�as.
+// Convierte todos los #define en métodos C++ organizados por categorías.
 
 #include <windows.h>
 #include <gl/GL.h>
@@ -30,9 +30,18 @@ public:
     // Interface / Drawing
     // --------------------------
 
-    //inline static void DrawInterface() {
-    //    ((void(__cdecl*)())(0x0080F8E0))();
-    //}
+    inline uintptr_t CallDrawInterface() {
+        return 0x0080F7FE; // Retorna la dirección, no llama la función
+    }
+
+    inline uintptr_t DrawInterface() {
+        return 0x0080F8E0;
+    }
+
+    inline int intDrawInterface(void* this_ptr) {
+        using Fn = int(__thiscall*)(void*);  // ✅ __thiscall correcto
+        return reinterpret_cast<Fn>(0x0080F8E0)(this_ptr);  // ✅ Con parámetro this
+    }
 
     // Original: #define pDrawGUI ((void(__cdecl*)(DWORD, float, float, float, float)) 0x00790B50)
     inline static void DrawGUI(DWORD modelID, float x, float y, float w, float h) {

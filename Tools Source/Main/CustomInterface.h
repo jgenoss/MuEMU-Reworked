@@ -11,7 +11,7 @@ public:
     // Inicializa la interfaz
     bool Initialize();
 
-    static int __fastcall RunHook(void* this_ptr);
+    static int __fastcall DrawInterface(void* this_ptr);
 
     static void setWindowText();
 

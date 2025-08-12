@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Util.h"
+#include "MuClientAPI.h"
+
 
 BYTE NewAddressData1[240];
 BYTE NewAddressData2[240];

@@ -20,7 +20,7 @@
 #include "CustomInterface.h"
 #include <thread>
 #include "MemoryPatcher.h"
-
+#include "MuConstants.h"
 HINSTANCE hins;
 
 extern "C" _declspec(dllexport) void EntryProc() // OK
@@ -93,13 +93,13 @@ extern "C" _declspec(dllexport) void EntryProc() // OK
 
 	MemoryCpy(0x00E61F70, gProtect.m_MainInfo.ClientSerial, sizeof(gProtect.m_MainInfo.ClientSerial)); // ClientSerial
 
-	SetCompleteHook(0xFF, 0x0065FD79, &ProtocolCoreEx);
+	SetCompleteHook(ASM::CALLI, 0x0065FD79, &ProtocolCoreEx);
 
-	SetCompleteHook(0xE9, 0x004DA280, &CheckTickCount1);
+	SetCompleteHook(ASM::JMP, 0x004DA280, &CheckTickCount1);
 
-	SetCompleteHook(0xE9, 0x004DA3A1, &CheckTickCount2);
+	SetCompleteHook(ASM::JMP, 0x004DA3A1, &CheckTickCount2);
 
-	SetCompleteHook(0xE8, 0x005B96E8, &DrawNewHealthBar);
+	SetCompleteHook(ASM::CALL, 0x005B96E8, &DrawNewHealthBar);
 
 	VirtualizeOffset(0x004D9D39, 12);
 
