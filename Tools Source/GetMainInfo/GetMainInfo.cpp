@@ -9,7 +9,7 @@
 
 struct MAIN_FILE_INFO
 {
-	BYTE LauncherType; 
+	BYTE LauncherType;
 	char CustomerName[32];
 	char IpAddress[32];
 	WORD IpAddressPort;
@@ -44,57 +44,61 @@ struct MAIN_FILE_INFO
 	CUSTOM_WING_EFFECT_INFO CustomWingEffectInfo[MAX_CUSTOM_WING_EFFECT];
 };
 
-int _tmain(int argc,_TCHAR* argv[]) // OK
+int _tmain(int argc, _TCHAR* argv[]) // OK
 {
 	CLEAR_START
 
-	ENCODE_START
+		ENCODE_START
+
+		printf("=================================================\n");
+	printf("===    MuEMU Emulator Powered by JGenoss      ===\n");
+	printf("=================================================\n\n");
 
 	MAIN_FILE_INFO info;
 
-	memset(&info,0,sizeof(info));
+	memset(&info, 0, sizeof(info));
 
-	info.LauncherType = GetPrivateProfileInt("MainInfo","LauncherType",0,".\\MainInfo.ini");
+	info.LauncherType = GetPrivateProfileInt("MainInfo", "LauncherType", 0, ".\\MainInfo.ini");
 
-	info.IpAddressPort = GetPrivateProfileInt("MainInfo","IpAddressPort",44405,".\\MainInfo.ini");
+	info.IpAddressPort = GetPrivateProfileInt("MainInfo", "IpAddressPort", 44405, ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","CustomerName","",info.CustomerName,sizeof(info.CustomerName),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "CustomerName", "", info.CustomerName, sizeof(info.CustomerName), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","IpAddress","",info.IpAddress,sizeof(info.IpAddress),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "IpAddress", "", info.IpAddress, sizeof(info.IpAddress), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","ClientVersion","",info.ClientVersion,sizeof(info.ClientVersion),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "ClientVersion", "", info.ClientVersion, sizeof(info.ClientVersion), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","ClientSerial","",info.ClientSerial,sizeof(info.ClientSerial),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "ClientSerial", "", info.ClientSerial, sizeof(info.ClientSerial), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","WindowName","",info.WindowName,sizeof(info.WindowName),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "WindowName", "", info.WindowName, sizeof(info.WindowName), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","ScreenShotPath","",info.ScreenShotPath,sizeof(info.ScreenShotPath),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "ScreenShotPath", "", info.ScreenShotPath, sizeof(info.ScreenShotPath), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","ClientName","",info.ClientName,sizeof(info.ClientName),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "ClientName", "", info.ClientName, sizeof(info.ClientName), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","PluginName","",info.PluginName,sizeof(info.PluginName),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "PluginName", "", info.PluginName, sizeof(info.PluginName), ".\\MainInfo.ini");
 
-	GetPrivateProfileString("MainInfo","CameraName","",info.CameraName,sizeof(info.CameraName),".\\MainInfo.ini");
+	GetPrivateProfileString("MainInfo", "CameraName", "", info.CameraName, sizeof(info.CameraName), ".\\MainInfo.ini");
 
-	info.HelperActiveAlert = GetPrivateProfileInt("HelperInfo","HelperActiveAlert",0,".\\MainInfo.ini");
+	info.HelperActiveAlert = GetPrivateProfileInt("HelperInfo", "HelperActiveAlert", 0, ".\\MainInfo.ini");
 
-	info.HelperActiveLevel = GetPrivateProfileInt("HelperInfo","HelperActiveLevel",80,".\\MainInfo.ini");
+	info.HelperActiveLevel = GetPrivateProfileInt("HelperInfo", "HelperActiveLevel", 80, ".\\MainInfo.ini");
 
-	info.DWMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","DWMaxAttackSpeed",65535,".\\MainInfo.ini");
+	info.DWMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo", "DWMaxAttackSpeed", 65535, ".\\MainInfo.ini");
 
-	info.DKMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","DKMaxAttackSpeed",65535,".\\MainInfo.ini");
+	info.DKMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo", "DKMaxAttackSpeed", 65535, ".\\MainInfo.ini");
 
-	info.FEMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","FEMaxAttackSpeed",65535,".\\MainInfo.ini");
+	info.FEMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo", "FEMaxAttackSpeed", 65535, ".\\MainInfo.ini");
 
-	info.MGMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","MGMaxAttackSpeed",65535,".\\MainInfo.ini");
+	info.MGMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo", "MGMaxAttackSpeed", 65535, ".\\MainInfo.ini");
 
-	info.DLMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","DLMaxAttackSpeed",65535,".\\MainInfo.ini");
+	info.DLMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo", "DLMaxAttackSpeed", 65535, ".\\MainInfo.ini");
 
-	info.SUMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","SUMaxAttackSpeed",65535,".\\MainInfo.ini");
+	info.SUMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo", "SUMaxAttackSpeed", 65535, ".\\MainInfo.ini");
 
-	info.RFMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo","RFMaxAttackSpeed",65535,".\\MainInfo.ini");
+	info.RFMaxAttackSpeed = GetPrivateProfileInt("CharacterInfo", "RFMaxAttackSpeed", 65535, ".\\MainInfo.ini");
 
-	info.ReconnectTime = GetPrivateProfileInt("ReconnectInfo","ReconnectTime",0,".\\MainInfo.ini");
+	info.ReconnectTime = GetPrivateProfileInt("ReconnectInfo", "ReconnectTime", 0, ".\\MainInfo.ini");
 
 	info.LimitFps = GetPrivateProfileInt("Custom", "LimitFps", 0, ".\\MainInfo.ini");
 
@@ -110,33 +114,33 @@ int _tmain(int argc,_TCHAR* argv[]) // OK
 
 	gCustomWingEffect.Load("CustomWingEffect.txt");
 
-	memcpy(info.EngCustomMessageInfo,gCustomMessage.m_EngCustomMessageInfo,sizeof(info.EngCustomMessageInfo));
+	memcpy(info.EngCustomMessageInfo, gCustomMessage.m_EngCustomMessageInfo, sizeof(info.EngCustomMessageInfo));
 
-	memcpy(info.PorCustomMessageInfo,gCustomMessage.m_PorCustomMessageInfo,sizeof(info.PorCustomMessageInfo));
+	memcpy(info.PorCustomMessageInfo, gCustomMessage.m_PorCustomMessageInfo, sizeof(info.PorCustomMessageInfo));
 
-	memcpy(info.SpnCustomMessageInfo,gCustomMessage.m_SpnCustomMessageInfo,sizeof(info.SpnCustomMessageInfo));
+	memcpy(info.SpnCustomMessageInfo, gCustomMessage.m_SpnCustomMessageInfo, sizeof(info.SpnCustomMessageInfo));
 
-	memcpy(info.CustomJewelInfo,gCustomJewel.m_CustomJewelInfo,sizeof(info.CustomJewelInfo));
+	memcpy(info.CustomJewelInfo, gCustomJewel.m_CustomJewelInfo, sizeof(info.CustomJewelInfo));
 
-	memcpy(info.CustomWingInfo,gCustomWing.m_CustomWingInfo,sizeof(info.CustomWingInfo));
+	memcpy(info.CustomWingInfo, gCustomWing.m_CustomWingInfo, sizeof(info.CustomWingInfo));
 
-	memcpy(info.CustomItemInfo,gCustomItem.m_CustomItemInfo,sizeof(info.CustomItemInfo));
+	memcpy(info.CustomItemInfo, gCustomItem.m_CustomItemInfo, sizeof(info.CustomItemInfo));
 
-	memcpy(info.CustomWingEffectInfo,gCustomWingEffect.m_CustomWingEffectInfo,sizeof(info.CustomWingEffectInfo));
+	memcpy(info.CustomWingEffectInfo, gCustomWingEffect.m_CustomWingEffectInfo, sizeof(info.CustomWingEffectInfo));
 
 	CCRC32 CRC32;
 
-	if(CRC32.FileCRC(info.ClientName,&info.ClientCRC32,1024) == 0)
+	if (CRC32.FileCRC(info.ClientName, &info.ClientCRC32, 1024) == 0)
 	{
 		info.ClientCRC32 = 0;
 	}
 
-	if(CRC32.FileCRC(info.PluginName,&info.PluginCRC32,1024) == 0)
+	if (CRC32.FileCRC(info.PluginName, &info.PluginCRC32, 1024) == 0)
 	{
 		info.PluginCRC32 = 0;
 	}
 
-	if(CRC32.FileCRC(info.CameraName,&info.CameraCRC32,1024) == 0)
+	if (CRC32.FileCRC(info.CameraName, &info.CameraCRC32, 1024) == 0)
 	{
 		info.CameraCRC32 = 0;
 	}
@@ -153,16 +157,16 @@ int _tmain(int argc,_TCHAR* argv[]) // OK
 		((BYTE*)&info)[n] ^= (BYTE)(0xCA ^ LOBYTE(n));  // DESPUÉS XOR
 	}
 
-	HANDLE file = CreateFile("main.emu",GENERIC_WRITE,FILE_SHARE_READ,0,CREATE_ALWAYS,FILE_ATTRIBUTE_ARCHIVE,0);
+	HANDLE file = CreateFile("Main.emu", GENERIC_WRITE, FILE_SHARE_READ, 0, CREATE_ALWAYS, FILE_ATTRIBUTE_ARCHIVE, 0);
 
-	if(file == INVALID_HANDLE_VALUE)
+	if (file == INVALID_HANDLE_VALUE)
 	{
 		return 0;
 	}
 
 	DWORD OutSize = 0;
 
-	if(WriteFile(file,&info,sizeof(MAIN_FILE_INFO),&OutSize,0) == 0)
+	if (WriteFile(file, &info, sizeof(MAIN_FILE_INFO), &OutSize, 0) == 0)
 	{
 		CloseHandle(file);
 		return 0;
@@ -172,7 +176,7 @@ int _tmain(int argc,_TCHAR* argv[]) // OK
 
 	ENCODE_END
 
-	CLEAR_END
+		CLEAR_END
 
 	return 0;
 }

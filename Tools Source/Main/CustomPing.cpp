@@ -30,11 +30,11 @@ void CCustomPing::ShowPing()
 	if ((int)RealPingDelayRecv >= 0)
 	{
 		gMuClientApi.SetBlend(1);
-		glColor4f(0.0, 0.0, 0.0, 0.8);
+		glColor4f(0.0f, 0.0f, 0.0f, 0.8f);
 		gMuClientApi.DrawBarForm((float)490, (float)0, 150.0f, 15.0f, 0.0f, 0);
 		gMuClientApi.GLSwitchBlend();
 		gMuClientApi.GLSwitch();
-		glColor4f(1.0, 1.0, 1.0, 1.0);
+		glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
 		gMuClientApi.SetBlend(1);
 
@@ -53,7 +53,7 @@ void CCustomPing::ShowPing()
 			TickCount = GetTickCount();
 		}
 
-		gUIBase.DrawFormat(g_muColors.Gold, 500, 4, 100, 1, "RTT: %d ms",RealPingDelayRecv);
+		gUIBase.DrawFormat(g_muColors.Gold, 500, 4, 100, 1, "RTT: %d ms", RealPingDelayRecv);
 
 		gUIBase.DrawFormat(g_muColors.Gold, 550, 4, 100, 1, "PING: %d ms", PingDelayRecv);
 
@@ -118,7 +118,7 @@ void PingTest(LPVOID lpThreadParameter)
 			Sleep(100);
 
 			closesocket(m_socket);
-			m_socket == INVALID_SOCKET;
+			m_socket = INVALID_SOCKET;
 		}
 
 		Sleep(5000);
@@ -129,7 +129,7 @@ void CCustomPing::StartPing()
 {
 	if (PingStart == 1)
 		return;
-	
+
 	if (gProtect.m_MainInfo.PingTest == 1)
 	{
 		if (DisablePing == 0)

@@ -8,7 +8,7 @@ NEW_HEALTH_BAR gNewHealthBar[MAX_MAIN_VIEWPORT];
 
 void ClearNewHealthBar() // OK
 {
-	for(int n=0;n < MAX_MAIN_VIEWPORT;n++)
+	for (int n = 0; n < MAX_MAIN_VIEWPORT; n++)
 	{
 		gNewHealthBar[n].index = 0xFFFF;
 		gNewHealthBar[n].type = 0;
@@ -16,11 +16,11 @@ void ClearNewHealthBar() // OK
 	}
 }
 
-void InsertNewHealthBar(WORD index,BYTE type,BYTE rate) // OK
+void InsertNewHealthBar(WORD index, BYTE type, BYTE rate) // OK
 {
-	for(int n=0;n < MAX_MAIN_VIEWPORT;n++)
+	for (int n = 0; n < MAX_MAIN_VIEWPORT; n++)
 	{
-		if(gNewHealthBar[n].index == 0xFFFF)
+		if (gNewHealthBar[n].index == 0xFFFF)
 		{
 			gNewHealthBar[n].index = index;
 			gNewHealthBar[n].type = type;
@@ -30,13 +30,13 @@ void InsertNewHealthBar(WORD index,BYTE type,BYTE rate) // OK
 	}
 }
 
-NEW_HEALTH_BAR* GetNewHealthBar(WORD index,BYTE type) // OK
+NEW_HEALTH_BAR* GetNewHealthBar(WORD index, BYTE type) // OK
 {
-	for(int n=0;n < MAX_MAIN_VIEWPORT;n++)
+	for (int n = 0; n < MAX_MAIN_VIEWPORT; n++)
 	{
-		if(gNewHealthBar[n].index != 0xFFFF)
+		if (gNewHealthBar[n].index != 0xFFFF)
 		{
-			if(gNewHealthBar[n].index == index && gNewHealthBar[n].type == type)
+			if (gNewHealthBar[n].index == index && gNewHealthBar[n].type == type)
 			{
 				return &gNewHealthBar[n];
 			}
@@ -55,44 +55,44 @@ void DrawNewHealthBar() // OK
 	char LifeDisplay[20];
 	VAngle Angle;
 
-	for(int n=0;n < MAX_MAIN_VIEWPORT;n++)
+	for (int n = 0; n < MAX_MAIN_VIEWPORT; n++)
 	{
-		DWORD ViewportAddress = ((DWORD(__thiscall*)(void*,DWORD))0x0096A4C0)(((void*(*)())0x00402BC0)(),n);
+		DWORD ViewportAddress = ((DWORD(__thiscall*)(void*, DWORD))0x0096A4C0)(((void* (*)())0x00402BC0)(), n);
 
-		if(!ViewportAddress)
+		if (!ViewportAddress)
 		{
 			continue;
 		}
 
-		if(*(BYTE*)(ViewportAddress+0x30C) == 0)
+		if (*(BYTE*)(ViewportAddress + 0x30C) == 0)
 		{
 			continue;
 		}
 
-		NEW_HEALTH_BAR* lpNewHealthBar = GetNewHealthBar(*(WORD*)(ViewportAddress+0x7E),*(BYTE*)(ViewportAddress+0x320));
+		NEW_HEALTH_BAR* lpNewHealthBar = GetNewHealthBar(*(WORD*)(ViewportAddress + 0x7E), *(BYTE*)(ViewportAddress + 0x320));
 
-		if(lpNewHealthBar == 0)
+		if (lpNewHealthBar == 0)
 		{
 			continue;
 		}
 
-		int LifePercent = lpNewHealthBar->rate/10;
+		int LifePercent = lpNewHealthBar->rate / 10;
 
-		Angle.X = *(float*)(ViewportAddress+0x404);
+		Angle.X = *(float*)(ViewportAddress + 0x404);
 
-		Angle.Y = *(float*)(ViewportAddress+0x408);
+		Angle.Y = *(float*)(ViewportAddress + 0x408);
 
-		Angle.Z = *(float*)(ViewportAddress+0x40C) + *(float*)(ViewportAddress+0x3E8) + 100.0f;
+		Angle.Z = *(float*)(ViewportAddress + 0x40C) + *(float*)(ViewportAddress + 0x3E8) + 100.0f;
 
 		gMuClientApi.GetPosFromAngle(&Angle, &PosX, &PosY);
 
 		PosX -= (int)floor(LifeBarWidth / (double)2.0);
 
-		if((gMuClientApi.CursorX() >= PosX) && ((float)gMuClientApi.CursorX() <= (float)PosX + LifeBarWidth) && (gMuClientApi.CursorY() >= PosY - 2) && (gMuClientApi.CursorY() < PosY + 6))
+		if ((gMuClientApi.CursorX() >= PosX) && ((float)gMuClientApi.CursorX() <= (float)PosX + LifeBarWidth) && (gMuClientApi.CursorY() >= PosY - 2) && (gMuClientApi.CursorY() < PosY + 6))
 		{
 			wsprintf(LifeDisplay, "HP : %d0%%", LifePercent);
 			gMuClientApi.SetTextColor(gMuClientApi.TextThis(), 0xFF, 0xE6, 0xD2, 0xFF);
-			gMuClientApi.DrawText(gMuClientApi.TextThis(), PosX, PosY - 6, LifeDisplay, 0, 0, (LPINT)1, 0);
+			gMuClientApi._DrawText(gMuClientApi.TextThis(), PosX, PosY - 6, LifeDisplay, 0, 0, (LPINT)1, 0);
 		}
 
 		gMuClientApi.SetBlend(true);
@@ -107,7 +107,7 @@ void DrawNewHealthBar() // OK
 		glColor3f(0.19607843f, 0.039215688f, 0.0);
 		gMuClientApi.DrawBarForm((float)(PosX + 2), (float)(PosY + 2), LifeBarWidth, 1.0f, 0.0, 0);
 
-		if(LifePercent > 10)
+		if (LifePercent > 10)
 		{
 			LifeProgress = 10;
 		}
@@ -118,7 +118,7 @@ void DrawNewHealthBar() // OK
 
 		glColor3f(0.98039216f, 0.039215688f, 0.0);
 
-		for(int i = 0; i < LifeProgress; i++)
+		for (int i = 0; i < LifeProgress; i++)
 		{
 			gMuClientApi.DrawBarForm((float)(i * 4 + PosX + 2), (float)(PosY + 2), 3.0, 2.0, 0.0, 0);
 		}

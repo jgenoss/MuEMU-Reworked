@@ -45,6 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MuEditor\frmMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmMain.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,23 +115,26 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="MuEditor\frmUserAdd.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>frmUserAdd.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\T_CashShop_Point.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>T_CashShop_Point.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\EquipCustomSet.cs">
       <AutoGen>false</AutoGen>
       <DesignTimeSharedInput>false</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MuEditor\PentagramPanel.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>PentagramPanel.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\EquipImageCache.cs">
       <AutoGen>false</AutoGen>
@@ -141,19 +149,22 @@
       <DesignTimeSharedInput>false</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MuEditor\frmGuild.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>frmGuild.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\frmUser.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>frmUser.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\frmMasterLevel.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>frmMasterLevel.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\Properties\Resources.Designer.cs">
       <AutoGen>true</AutoGen>
@@ -161,14 +172,16 @@
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MuEditor\ucBase.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>ucBase.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\EquipPanel.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>EquipPanel.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\EquipItem.cs">
       <AutoGen>false</AutoGen>
@@ -179,14 +192,16 @@
       <DesignTimeSharedInput>false</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MuEditor\frmInitEquip.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>frmInitEquip.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\frmGuildUser.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>frmGuildUser.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\Utils.cs">
       <AutoGen>false</AutoGen>
@@ -197,25 +212,22 @@
       <DesignTimeSharedInput>false</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MuEditor\EquipEditor.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>EquipEditor.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\CharPanel.Designer.cs">
-      <AutoGen>true</AutoGen>
-      <DependentUpon>CharPanel.resx</DependentUpon>
-      <DesignTimeSharedInput>true</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="MuEditor\frmMain.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DependentUpon>frmMain.resx</DependentUpon>
+      <DependentUpon>CharPanel.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\EquipProperty.Designer.cs">
-      <AutoGen>true</AutoGen>
+      <AutoGen>True</AutoGen>
       <DependentUpon>EquipProperty.resx</DependentUpon>
       <DesignTimeSharedInput>true</DesignTimeSharedInput>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MuEditor\Properties\Settings.cs">
       <AutoGen>false</AutoGen>
@@ -310,5 +322,6 @@
     <None Include="Resources\11.png" />
     <None Include="Resources\Bez tytułu.png.bmp" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

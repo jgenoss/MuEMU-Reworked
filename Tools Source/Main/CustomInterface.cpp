@@ -16,45 +16,43 @@ CustomInterface::CustomInterface() : initialized(false) {}
 
 CustomInterface::~CustomInterface()
 {
-    if (initialized)
-        Cleanup();
+	if (initialized)
+		Cleanup();
 }
 
 bool CustomInterface::Initialize()
 {
-    SetCompleteHook(ASM::CALL, 0x0080F7FE, &DrawInterface);
+	SetCompleteHook(ASM::CALL, 0x0080F7FE, &DrawInterface);
 
-    initialized = true;
-    return initialized;
+	initialized = true;
+	return initialized;
 }
 
 int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 {
-    if (gMuClientApi.PlayerState() == static_cast<int>(GameState::GameProcess)) {
-        
-        gUIBase.CheckAndReport();
+	if (gMuClientApi.PlayerState() == static_cast<int>(GameState::GameProcess)) {
+		gUIBase.CheckAndReport();
 
-        setWindowText();
+		setWindowText();
 
-        if (gUIBase.NotAllWindowsOpen() == false) {
-            gCustomPing.StartPing();
-            gCustomPing.ShowPing();
-        }
-    }
+		if (gUIBase.NotAllWindowsOpen() == false) {
+			gCustomPing.StartPing();
+			gCustomPing.ShowPing();
+		}
+	}
 
-    return reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
+	return reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
 }
 
 void CustomInterface::setWindowText()
 {
-    char text[500];
-    sprintf_s(text, sizeof(text), "|| Server: %s || Name: || Level: || Resets: ||", gProtect.m_MainInfo.WindowName);
-    SetWindowText(gMuClientApi.GameWindow(), text);
-
+	char text[500];
+	sprintf_s(text, sizeof(text), "|| Server: %s || Name: || Level: || Resets: ||", gProtect.m_MainInfo.WindowName);
+	SetWindowText(gMuClientApi.GameWindow(), text);
 }
 
 void CustomInterface::Cleanup()
 {
-    std::cout << "Limpiando CustomInterface...\n";
-    initialized = false;
+	std::cout << "Limpiando CustomInterface...\n";
+	initialized = false;
 }

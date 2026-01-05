@@ -57,6 +57,8 @@
 #pragma comment(lib,"dbghelp.lib")
 #pragma comment(lib,"Psapi.lib")
 
+//#pragma comment(lib, "../../Util/lua-5.1/lib/lua5.1.lib")
+
 #if(GAMESERVER_UPDATE>=701)
 #if(NDEBUG==0)
 #pragma comment(lib,"..\\..\\..\\Util\\cryptopp\\Debug\\cryptlib.lib")

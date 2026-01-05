@@ -72,13 +72,13 @@
     <ClInclude Include="AccountManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Util\MD5.h">
-      <Filter>Util Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Util\MD5_KEYVAL.H">
-      <Filter>Util Files</Filter>
-    </ClInclude>
     <ClInclude Include="MiniDump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Util\MD5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Util\MD5_KEYVAL.H">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -128,10 +128,10 @@
     <ClCompile Include="AccountManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Util\MD5.cpp">
-      <Filter>Util Files</Filter>
-    </ClCompile>
     <ClCompile Include="MiniDump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Util\MD5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

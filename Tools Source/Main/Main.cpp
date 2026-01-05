@@ -21,6 +21,8 @@
 #include <thread>
 #include "MemoryPatcher.h"
 #include "MuConstants.h"
+
+WNDPROC g_hWndProc = nullptr;
 HINSTANCE hins;
 
 extern "C" _declspec(dllexport) void EntryProc() // OK
@@ -169,7 +171,6 @@ extern "C" _declspec(dllexport) void EntryProc() // OK
 
 	DisablePing = GetPrivateProfileIntA("Other", "DisablePing", 0, "./Settings.ini");
 }
-
 
 BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserved) // OK
 {

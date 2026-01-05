@@ -86,7 +86,7 @@ void UIBase::DrawGUI(short id, float x, float y) {
 		Objects[id].MaxX = x + Objects[id].Width;
 		Objects[id].MaxY = y + Objects[id].Height;
 	}
-	gMuClientApi.DrawGUI(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height);
+	gMuClientApi.RenderImage(Objects[id].ModelID, x, y, Objects[id].Width, Objects[id].Height);
 }
 
 void UIBase::DrawButton(short id, float x, float y, float scaleX, float scaleY) {
@@ -122,7 +122,7 @@ void UIBase::ResetDrawIMG(short id) {
 float UIBase::DrawRepeatGUI(short id, float x, float y, int count) {
 	float startY = y;
 	for (int i = 0; i < count; ++i) {
-		gMuClientApi.DrawGUI(Objects[id].ModelID, x, startY, Objects[id].Width, Objects[id].Height);
+		gMuClientApi.RenderImage(Objects[id].ModelID, x, startY, Objects[id].Width, Objects[id].Height);
 		startY += Objects[id].Height;
 	}
 	return startY;

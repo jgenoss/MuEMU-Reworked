@@ -100,9 +100,9 @@ void ReconnectDrawInterface() // OK
 
 	progress = ((progress>150)?150:progress);
 
-	gMuClientApi.DrawGUI(0x7A65,StartX,StartY,160.0f,18.0f);
+	gMuClientApi.RenderImage(0x7A65,StartX,StartY,160.0f,18.0f);
 
-	gMuClientApi.DrawGUI(0x7A66,(StartX+5.0f),(StartY+5.0f),progress,8.0f);
+	gMuClientApi.RenderImage(0x7A66,(StartX+5.0f),(StartY+5.0f),progress,8.0f);
 
 	char buff[256];
 
@@ -241,7 +241,7 @@ void ReconnectOnConnectAccount(BYTE result) // OK
 		{
 			if(result == 1)
 			{
-				PMSG_CHARACTER_LIST_SEND pMsg;
+				PMSG_CHARACTER_LIST_SEND pMsg = {};
 
 				pMsg.header.set(0xF3,0x00,sizeof(pMsg));
 

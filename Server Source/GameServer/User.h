@@ -200,7 +200,7 @@ struct MESSAGE_STATE_MACHINE_COMMON
 	{
 		this->CommonStruct = new MESSAGE_STATE_MACHINE;
 
-		for(int n=0;n < MAX_MONSTER_SEND_MSG;n++){this->ObjectStruct[n] = this->CommonStruct;}
+		for (int n = 0; n < MAX_MONSTER_SEND_MSG; n++) { this->ObjectStruct[n] = this->CommonStruct; }
 	}
 
 	MESSAGE_STATE_MACHINE& operator[](int index) // OK
@@ -218,7 +218,7 @@ struct MESSAGE_STATE_MACHINE_HEADER
 	{
 		this->CommonStruct = new MESSAGE_STATE_MACHINE_COMMON;
 
-		for(int n=0;n < MAX_OBJECT;n++){this->ObjectStruct[n] = this->CommonStruct;}
+		for (int n = 0; n < MAX_OBJECT; n++) { this->ObjectStruct[n] = this->CommonStruct; }
 	}
 
 	MESSAGE_STATE_MACHINE_COMMON& operator[](int index) // OK
@@ -259,7 +259,7 @@ struct MESSAGE_STATE_ATTACK_MACHINE_COMMON
 	{
 		this->CommonStruct = new MESSAGE_STATE_ATTACK_MACHINE;
 
-		for(int n=0;n < MAX_MONSTER_SEND_ATTACK_MSG;n++){this->ObjectStruct[n] = this->CommonStruct;}
+		for (int n = 0; n < MAX_MONSTER_SEND_ATTACK_MSG; n++) { this->ObjectStruct[n] = this->CommonStruct; }
 	}
 
 	MESSAGE_STATE_ATTACK_MACHINE& operator[](int index) // OK
@@ -277,7 +277,7 @@ struct MESSAGE_STATE_ATTACK_MACHINE_HEADER
 	{
 		this->CommonStruct = new MESSAGE_STATE_ATTACK_MACHINE_COMMON;
 
-		for(int n=0;n < MAX_OBJECT;n++){this->ObjectStruct[n] = this->CommonStruct;}
+		for (int n = 0; n < MAX_OBJECT; n++) { this->ObjectStruct[n] = this->CommonStruct; }
 	}
 
 	MESSAGE_STATE_ATTACK_MACHINE_COMMON& operator[](int index) // OK
@@ -412,21 +412,21 @@ struct PENTAGRAM_JEWEL_OPTION
 
 struct ACTION_STATE
 {
-	DWORD Rest:1;
-	DWORD Attack:1;
-	DWORD Move:1;
-	DWORD Escape:1;
-	DWORD Emotion:4;
-	DWORD EmotionCount:8;
+	DWORD Rest : 1;
+	DWORD Attack : 1;
+	DWORD Move : 1;
+	DWORD Escape : 1;
+	DWORD Emotion : 4;
+	DWORD EmotionCount : 8;
 };
 
 struct VIEWPORT_STRUCT
 {
-	#pragma pack(1)
+#pragma pack(1)
 	BYTE state;
 	shrt index;
 	BYTE type;
-	#pragma pack()
+#pragma pack()
 };
 
 struct HIT_DAMAGE_STRUCT
@@ -438,9 +438,9 @@ struct HIT_DAMAGE_STRUCT
 
 struct INTERFACE_STATE
 {
-	DWORD use:2;
-	DWORD state:4;
-	DWORD type:10;
+	DWORD use : 2;
+	DWORD state : 4;
+	DWORD type : 10;
 };
 
 struct OBJECTSTRUCT
@@ -455,6 +455,7 @@ struct OBJECTSTRUCT
 	struct PER_SOCKET_CONTEXT* PerSocketContext;
 	SOCKET Socket;
 	char IpAddr[16];
+	char HardwareId[45];
 	BYTE ClassCode;
 	BYTE ClassFlag;
 	DWORD AutoSaveTime;
@@ -471,6 +472,7 @@ struct OBJECTSTRUCT
 	BYTE Live;
 	char Account[11];
 	char Name[11];
+	char Password[11];
 	char PersonalCode[14];
 	CComboSkill ComboSkill;
 	WORD Class;
@@ -512,6 +514,9 @@ struct OBJECTSTRUCT
 	short Y;
 	BYTE Dir;
 	BYTE Map;
+	BYTE DeathMap;
+	short DeathX;
+	short DeathY;
 	int AddLife;
 	int AddMana;
 	int Shield;
@@ -575,6 +580,8 @@ struct OBJECTSTRUCT
 	int GuildNumber;
 	struct GUILD_INFO_STRUCT* Guild;
 	char GuildName[11];
+	int GuildIndex;
+	int GuildRank;
 	int GuildStatus;
 	int GuildUnionTimeStamp;
 	int SummonIndex;
@@ -602,7 +609,7 @@ struct OBJECTSTRUCT
 	int Defense;
 	int MagicDefense;
 	int DefenseSuccessRate;
-	#if(GAMESERVER_UPDATE>=701)
+#if(GAMESERVER_UPDATE>=701)
 	int ElementalAttribute;
 	int ElementalPattern;
 	int ElementalDefense;
@@ -610,7 +617,7 @@ struct OBJECTSTRUCT
 	int ElementalDamageMax;
 	int ElementalAttackSuccessRate;
 	int ElementalDefenseSuccessRate;
-	#endif
+#endif
 	short MoveSpeed;
 	short MoveRange;
 	short AttackRange;
@@ -662,7 +669,7 @@ struct OBJECTSTRUCT
 	int ChaosMoney;
 	int ChaosSuccessRate;
 	int ChaosLock;
-	#if(GAMESERVER_UPDATE>=802)
+#if(GAMESERVER_UPDATE>=802)
 	int LoadEventInventory;
 	CItem* EventInventory;
 	CItem* EventInventory1;
@@ -670,13 +677,13 @@ struct OBJECTSTRUCT
 	BYTE* EventInventoryMap;
 	BYTE* EventInventoryMap1;
 	BYTE* EventInventoryMap2;
-	#endif
-	#if(GAMESERVER_UPDATE>=803)
+#endif
+#if(GAMESERVER_UPDATE>=803)
 	int MuunItemStatus[2];
 	int LoadMuunInventory;
 	CItem* MuunInventory;
 	BYTE* MuunInventoryMap;
-	#endif
+#endif
 	DWORD Option;
 	int ChaosCastleBlowTime;
 	int DuelUserReserved;
@@ -725,10 +732,10 @@ struct OBJECTSTRUCT
 	int LoadMasterLevel;
 	int MasterLevel;
 	int MasterPoint;
-	#pragma pack(1)
+#pragma pack(1)
 	QWORD MasterExperience;
 	QWORD MasterNextExperience;
-	#pragma pack()
+#pragma pack()
 	CSkill* MasterSkill;
 	CEffect* Effect;
 	DWORD* SkillDelay;
@@ -790,18 +797,18 @@ struct OBJECTSTRUCT
 	int GensContribution;
 	int GensNextContribution;
 	struct GENS_SYSTEM_VICTIM_LIST* GensVictimList;
-	#if(GAMESERVER_UPDATE>=701)
+#if(GAMESERVER_UPDATE>=701)
 	struct PENTAGRAM_JEWEL_INFO* PentagramJewelInfo_Inventory;
 	struct PENTAGRAM_JEWEL_INFO* PentagramJewelInfo_Warehouse;
-	#endif
-	#if(GAMESERVER_UPDATE>=802)
+#endif
+#if(GAMESERVER_UPDATE>=802)
 	class CMuRummyInfo* MuRummyInfo;
-	#endif
+#endif
 	EFFECT_OPTION EffectOption;
-	#if(GAMESERVER_UPDATE>=701)
+#if(GAMESERVER_UPDATE>=701)
 	PENTAGRAM_OPTION PentagramOption;
 	PENTAGRAM_JEWEL_OPTION PentagramJewelOption;
-	#endif
+#endif
 	int ArmorSetBonus;
 	int SkillDamageBonus;
 	int DoubleDamageRate;
@@ -883,7 +890,7 @@ struct OBJECTSTRUCT
 	short DestMap;
 	BYTE DestX;
 	BYTE DestY;
-	#if(GAMESERVER_TYPE==1)
+#if(GAMESERVER_TYPE==1)
 	union
 	{
 		struct
@@ -903,17 +910,17 @@ struct OBJECTSTRUCT
 	BYTE CsNpcRgLevel;
 	BYTE CsJoinSide;
 	bool CsGuildInvolved;
-	#endif
+#endif
 	bool IsCastleNPCUpgradeCompleted;
 	BYTE CsSiegeWeaponState;
 	int CsWeaponIndex;
 	BYTE KillCount;
 	int AccumulatedDamage;
-	#if(GAMESERVER_TYPE==1)
+#if(GAMESERVER_TYPE==1)
 	BYTE LifeStoneCount;
 	BYTE CreationState;
 	int CreatedActivationTime;
-	#endif
+#endif
 	int AccumulatedCrownAccessTime;
 	CMonsterSkillElementOption MonsterSkillElementOption;
 	int BasicAI;
@@ -937,7 +944,7 @@ struct OBJECTSTRUCT_HEADER
 	{
 		this->CommonStruct = new OBJECTSTRUCT;
 
-		for(int n=0;n < MAX_OBJECT;n++){this->ObjectStruct[n] = this->CommonStruct;}
+		for (int n = 0; n < MAX_OBJECT; n++) { this->ObjectStruct[n] = this->CommonStruct; }
 	}
 
 	OBJECTSTRUCT& operator[](int index) // OK
@@ -959,7 +966,7 @@ extern MESSAGE_STATE_ATTACK_MACHINE_HEADER gSMAttackProcMsg;
 
 extern DWORD gCheckSum[MAX_CHECKSUM_KEY];
 
-extern DWORD gLevelExperience[MAX_CHARACTER_LEVEL+1];
+extern DWORD gLevelExperience[MAX_CHARACTER_LEVEL + 1];
 
 //**************************************************************************//
 // OBJECT MAIN FUNCTIONS ***************************************************//
@@ -982,28 +989,28 @@ void gObjCharZeroSet(int aIndex);
 void gObjClearPlayerOption(LPOBJ lpObj);
 void gObjClearSpecialOption(LPOBJ lpObj);
 void gObjCalcExperience(LPOBJ lpObj);
-bool gObjGetRandomFreeLocation(int map,int* ox,int* oy,int tx,int ty,int count);
+bool gObjGetRandomFreeLocation(int map, int* ox, int* oy, int tx, int ty, int count);
 bool gObjAllocData(int aIndex);
 void gObjFreeData(int aIndex);
-short gObjAddSearch(SOCKET socket,char* IpAddress);
-short gObjAdd(SOCKET socket,char* IpAddress,int aIndex);
+short gObjAddSearch(SOCKET socket, char* IpAddress);
+short gObjAdd(SOCKET socket, char* IpAddress, int aIndex);
 short gObjDel(int aIndex);
 LPOBJ gObjFind(char* name);
-int gObjCalcDistance(LPOBJ lpObj,LPOBJ lpTarget);
+int gObjCalcDistance(LPOBJ lpObj, LPOBJ lpTarget);
 //**************************************************************************//
 // OBJECT CHECK FUNCTIONS **************************************************//
 //**************************************************************************//
 bool gObjIsConnected(int aIndex);
 bool gObjIsConnectedGP(int aIndex);
 bool gObjIsConnectedGS(int aIndex);
-bool gObjIsNameValid(int aIndex,char* name);
-bool gObjIsAccountValid(int aIndex,char* account);
+bool gObjIsNameValid(int aIndex, char* name);
+bool gObjIsAccountValid(int aIndex, char* account);
 bool gObjIsChangeSkin(int aIndex);
-bool gObjCheckMaxMoney(int aIndex,DWORD AddMoney);
-bool gObjCheckPersonalCode(int aIndex,char* PersonalCode);
-bool gObjCheckResistance(LPOBJ lpObj,int type);
-bool gObjCheckTeleportArea(int aIndex,int x,int y);
-bool gObjCheckMapTile(LPOBJ lpObj,int type);
+bool gObjCheckMaxMoney(int aIndex, DWORD AddMoney);
+bool gObjCheckPersonalCode(int aIndex, char* PersonalCode);
+bool gObjCheckResistance(LPOBJ lpObj, int type);
+bool gObjCheckTeleportArea(int aIndex, int x, int y);
+bool gObjCheckMapTile(LPOBJ lpObj, int type);
 //**************************************************************************//
 // ITEM TRANSACTION FUNCTIONS **********************************************//
 //**************************************************************************//
@@ -1019,7 +1026,7 @@ bool gObjInventoryRollback(int aIndex);
 //**************************************************************************//
 // VIEWPORT FUNCTIONS ******************************************************//
 //**************************************************************************//
-void gObjSetViewport(int aIndex,int state);
+void gObjSetViewport(int aIndex, int state);
 void gObjClearViewport(LPOBJ lpObj);
 void gObjViewportListProtocolDestroy(LPOBJ lpObj);
 void gObjViewportListProtocolCreate(LPOBJ lpObj);
@@ -1029,23 +1036,23 @@ void gObjViewportListCreate(int aIndex);
 //**************************************************************************//
 // USER FUNCTIONS **********************************************************//
 //**************************************************************************//
-void gObjSetKillCount(int aIndex,int type);
-void gObjTeleportMagicUse(int aIndex,int x,int y);
+void gObjSetKillCount(int aIndex, int type);
+void gObjTeleportMagicUse(int aIndex, int x, int y);
 void gObjInterfaceCheckTime(LPOBJ lpObj);
 void gObjSkillNovaCheckTime(LPOBJ lpObj);
-void gObjPKDownCheckTime(LPOBJ lpObj,int TargetLevel);
-void gObjUserDie(LPOBJ lpObj,LPOBJ lpTarget);
-void gObjPlayerKiller(LPOBJ lpObj,LPOBJ lpTarget);
-BOOL gObjMoveGate(int aIndex,int gate);
-void gObjTeleport(int aIndex,int map,int x,int y);
-void gObjSummonAlly(LPOBJ lpObj,int map,int x,int y);
+void gObjPKDownCheckTime(LPOBJ lpObj, int TargetLevel);
+void gObjUserDie(LPOBJ lpObj, LPOBJ lpTarget);
+void gObjPlayerKiller(LPOBJ lpObj, LPOBJ lpTarget);
+BOOL gObjMoveGate(int aIndex, int gate);
+void gObjTeleport(int aIndex, int map, int x, int y);
+void gObjSummonAlly(LPOBJ lpObj, int map, int x, int y);
 void gObjSkillUseProc(LPOBJ lpObj);
 void gObjUserKill(int aIndex);
-bool gObjInventorySearchSerialNumber(LPOBJ lpObj,DWORD serial);
-bool gObjWarehouseSearchSerialNumber(LPOBJ lpObj,DWORD serial);
-void gObjAddMsgSend(LPOBJ lpObj,int MsgCode,int SendUser,int SubCode);
-void gObjAddMsgSendDelay(LPOBJ lpObj,int MsgCode,int SendUser,int MsgTimeDelay,int SubCode);
-void gObjAddAttackProcMsgSendDelay(LPOBJ lpObj,int MsgCode,int SendUser,int MsgTimeDelay,int SubCode,int SubCode2);
+bool gObjInventorySearchSerialNumber(LPOBJ lpObj, DWORD serial);
+bool gObjWarehouseSearchSerialNumber(LPOBJ lpObj, DWORD serial);
+void gObjAddMsgSend(LPOBJ lpObj, int MsgCode, int SendUser, int SubCode);
+void gObjAddMsgSendDelay(LPOBJ lpObj, int MsgCode, int SendUser, int MsgTimeDelay, int SubCode);
+void gObjAddAttackProcMsgSendDelay(LPOBJ lpObj, int MsgCode, int SendUser, int MsgTimeDelay, int SubCode, int SubCode2);
 
 //**************************************************************************//
 // RAW FUNCTIONS ***********************************************************//
@@ -1053,19 +1060,19 @@ void gObjAddAttackProcMsgSendDelay(LPOBJ lpObj,int MsgCode,int SendUser,int MsgT
 
 void gObjSecondProc();
 void gObjDelayLifeCheck(int aIndex);
-BOOL gObjBackSpring(LPOBJ lpObj,LPOBJ lpTarget);
-BOOL gObjBackSpring2(LPOBJ lpObj,LPOBJ lpTarget,int count);
+BOOL gObjBackSpring(LPOBJ lpObj, LPOBJ lpTarget);
+BOOL gObjBackSpring2(LPOBJ lpObj, LPOBJ lpTarget, int count);
 bool gObjIsSelfDefense(LPOBJ lpObj, int aTargetIndex);
 void gObjCheckSelfDefense(LPOBJ lpObj, int aTargetIndex);
 void gObjTimeCheckSelfDefense(LPOBJ lpObj);
 BOOL gObjTargetGuildWarCheck(LPOBJ lpObj, LPOBJ lpTargetObj);
 void gObjGuildWarEndSend(LPOBJ lpObj, BYTE Result1, BYTE Result2);
-void gObjGuildWarEndSend(GUILD_INFO_STRUCT * lpGuild1, GUILD_INFO_STRUCT * lpGuild2, BYTE Result1, BYTE Result2);
-void gObjGuildWarEnd(GUILD_INFO_STRUCT * lpGuild, GUILD_INFO_STRUCT * lpTargetGuild);
-BOOL gObjGuildWarProc(GUILD_INFO_STRUCT * lpGuild1, GUILD_INFO_STRUCT * lpGuild2, int score);
+void gObjGuildWarEndSend(GUILD_INFO_STRUCT* lpGuild1, GUILD_INFO_STRUCT* lpGuild2, BYTE Result1, BYTE Result2);
+void gObjGuildWarEnd(GUILD_INFO_STRUCT* lpGuild, GUILD_INFO_STRUCT* lpTargetGuild);
+BOOL gObjGuildWarProc(GUILD_INFO_STRUCT* lpGuild1, GUILD_INFO_STRUCT* lpGuild2, int score);
 BOOL gObjGuildWarCheck(LPOBJ lpObj, LPOBJ lpTargetObj);
 BOOL gObjGuildWarMasterClose(LPOBJ lpObj);
-int gObjGuildWarItemGive(GUILD_INFO_STRUCT * lpWinGuild, GUILD_INFO_STRUCT * lpLoseGuild);
+int gObjGuildWarItemGive(GUILD_INFO_STRUCT* lpWinGuild, GUILD_INFO_STRUCT* lpLoseGuild);
 void gObjSetPosition(int aIndex, int x, int y);
 void gObjAuthorityCodeSet(LPOBJ lpObj);
 int gObjGetGuildUnionNumber(LPOBJ lpObj);
@@ -1076,9 +1083,9 @@ void gObjNotifyUpdateUnionV1(LPOBJ lpObj);
 void gObjNotifyUpdateUnionV2(LPOBJ lpObj);
 void gObjUnionUpdateProc(int iIndex);
 bool gObjRebuildMasterSkillTree(LPOBJ lpObj);
-void gObjUseDrink(LPOBJ lpObj,int level);
-void gObjCustomLogPlusChaosMix(LPOBJ lpObj,int type,int index);
-bool gObjCheckAutoParty(LPOBJ lpObj,LPOBJ lpTarget);
+void gObjUseDrink(LPOBJ lpObj, int level);
+void gObjCustomLogPlusChaosMix(LPOBJ lpObj, int type, int index);
+bool gObjCheckAutoParty(LPOBJ lpObj, LPOBJ lpTarget);
 
 extern int gObjCount;
 extern int gObjMonCount;
