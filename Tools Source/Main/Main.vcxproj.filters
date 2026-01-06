@@ -26,6 +26,9 @@
     <Filter Include="Custom">
       <UniqueIdentifier>{35e20a67-cf60-4ace-97fa-1a23c7b6b244}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Custom\EventMenu">
+      <UniqueIdentifier>{a16ddb71-c51f-4ed1-9f6e-724dc163551e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="AddressTable1.bin">
@@ -120,6 +123,9 @@
     <ClInclude Include="CustomInterface.h">
       <Filter>Custom</Filter>
     </ClInclude>
+    <ClInclude Include="EventMenu.h">
+      <Filter>Custom\EventMenu</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp">
@@ -190,6 +196,9 @@
     </ClCompile>
     <ClCompile Include="CustomInterface.cpp">
       <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="EventMenu.cpp">
+      <Filter>Custom\EventMenu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

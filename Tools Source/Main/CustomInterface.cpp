@@ -9,6 +9,7 @@
 #include "Util.h"
 #include "Protect.h"
 #include "MemoryPatcher.h"
+#include "EventMenu.h"
 
 CustomInterface gCustomInterface;
 
@@ -23,7 +24,7 @@ CustomInterface::~CustomInterface()
 bool CustomInterface::Initialize()
 {
 	SetCompleteHook(ASM::CALL, 0x0080F7FE, &DrawInterface);
-
+	gEventMenu.Initialize();
 	initialized = true;
 	return initialized;
 }
@@ -39,6 +40,9 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 			gCustomPing.StartPing();
 			gCustomPing.ShowPing();
 		}
+		// Renderizar menu de eventos custom
+
+		gEventMenu.Render();
 	}
 
 	return reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
