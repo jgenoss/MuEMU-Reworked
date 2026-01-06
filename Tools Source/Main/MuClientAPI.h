@@ -367,6 +367,11 @@ public:
 		reinterpret_cast<Fn>(0x593B20)();
 	}
 
+	// Color helper (agregar antes del cierre de clase)
+	inline static DWORD RenderColor(BYTE r, BYTE g, BYTE b, BYTE a) {
+		return MakeColor(r, g, b, a);
+	}
+
 	// --------------------------
 	// Items System
 	// --------------------------
