@@ -18,6 +18,7 @@
 #include "ObjectManager.h"
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "Util.h"
 
 CDevilSquare gDevilSquare;
@@ -193,6 +194,9 @@ void CDevilSquare::Load(char* path) // OK
 
 void CDevilSquare::MainProc() // OK
 {
+	int minRemainTime = -1;
+	bool eventActive = false;
+
 	for(int n=0;n < MAX_DS_LEVEL;n++)
 	{
 		DEVIL_SQUARE_LEVEL* lpLevel = &this->m_DevilSquareLevel[n];
@@ -221,11 +225,31 @@ void CDevilSquare::MainProc() // OK
 				break;
 			case DS_STATE_START:
 				this->ProcState_START(lpLevel);
+				eventActive = true;
 				break;
 			case DS_STATE_CLEAN:
 				this->ProcState_CLEAN(lpLevel);
 				break;
 		}
+
+		// Track minimum remaining time for CustomEventTime
+		if (lpLevel->State == DS_STATE_EMPTY && lpLevel->RemainTime > 0)
+		{
+			if (minRemainTime == -1 || lpLevel->RemainTime < minRemainTime)
+			{
+				minRemainTime = lpLevel->RemainTime;
+			}
+		}
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	if (eventActive)
+	{
+		gServerDisplayer.EventDs = 0; // Event is active
+	}
+	else
+	{
+		gServerDisplayer.EventDs = minRemainTime;
 	}
 }
 

@@ -15,6 +15,7 @@
 #include "RandomManager.h"
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "Util.h"
 
 CMossMerchant gMossMerchant;
@@ -195,6 +196,20 @@ void CMossMerchant::MainProc() // OK
 		case MOSS_STATE_START:
 			this->ProcState_START();
 			break;
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	if (this->m_State == MOSS_STATE_START)
+	{
+		gServerDisplayer.EventMoss = 0; // Event is active
+	}
+	else if (this->m_State == MOSS_STATE_EMPTY && this->m_RemainTime > 0)
+	{
+		gServerDisplayer.EventMoss = this->m_RemainTime;
+	}
+	else
+	{
+		gServerDisplayer.EventMoss = -1;
 	}
 
 	#endif

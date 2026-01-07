@@ -15,6 +15,7 @@
 #include "ObjectManager.h"
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "Util.h"
 
 CBonusManager gBonusManager;
@@ -193,6 +194,9 @@ void CBonusManager::Load(char* path) // OK
 
 void CBonusManager::MainProc() // OK
 {
+	int minRemainTime = -1;
+	bool eventActive = false;
+
 	for(int n=0;n < MAX_BONUS;n++)
 	{
 		BONUS_INFO* lpInfo = &this->m_BonusInfo[n];
@@ -215,9 +219,29 @@ void CBonusManager::MainProc() // OK
 					break;
 				case BONUS_STATE_START:
 					this->ProcState_START(lpInfo);
+					eventActive = true;
 					break;
 			}
+
+			// Track minimum remaining time for CustomEventTime
+			if (lpInfo->State == BONUS_STATE_EMPTY && lpInfo->RemainTime > 0)
+			{
+				if (minRemainTime == -1 || lpInfo->RemainTime < minRemainTime)
+				{
+					minRemainTime = lpInfo->RemainTime;
+				}
+			}
 		}
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	if (eventActive)
+	{
+		gServerDisplayer.EventCustomBonus = 0; // Event is active
+	}
+	else
+	{
+		gServerDisplayer.EventCustomBonus = minRemainTime;
 	}
 }
 

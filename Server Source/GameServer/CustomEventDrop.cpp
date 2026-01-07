@@ -10,6 +10,7 @@
 #include "MemScript.h"
 #include "Notice.h"
 #include "ScheduleManager.h"
+#include "ServerDisplayer.h"
 #include "User.h"
 #include "Util.h"
 #include "Viewport.h"
@@ -192,6 +193,9 @@ void CCustomEventDrop::Load(char* path) // OK
 
 void CCustomEventDrop::MainProc() // OK
 {
+	int minRemainTime = -1;
+	bool eventActive = false;
+
 	for(int n=0;n < MAX_CUSTOM_EVENT_DROP;n++)
 	{
 		CUSTOM_EVENT_DROP_INFO* lpInfo = &this->m_CustomEventDropInfo[n];
@@ -212,9 +216,29 @@ void CCustomEventDrop::MainProc() // OK
 					break;
 				case CUSTOM_EVENT_DROP_STATE_START:
 					this->ProcState_START(lpInfo);
+					eventActive = true;
 					break;
 			}
+
+			// Track minimum remaining time for CustomEventTime
+			if (lpInfo->State == CUSTOM_EVENT_DROP_STATE_EMPTY && lpInfo->RemainTime > 0)
+			{
+				if (minRemainTime == -1 || lpInfo->RemainTime < minRemainTime)
+				{
+					minRemainTime = lpInfo->RemainTime;
+				}
+			}
 		}
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	if (eventActive)
+	{
+		gServerDisplayer.EventDrop = 0; // Event is active
+	}
+	else
+	{
+		gServerDisplayer.EventDrop = minRemainTime;
 	}
 }
 

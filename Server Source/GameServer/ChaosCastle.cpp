@@ -18,6 +18,7 @@
 #include "ObjectManager.h"
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "Util.h"
 
 CChaosCastle gChaosCastle;
@@ -176,6 +177,9 @@ void CChaosCastle::Load(char* path) // OK
 
 void CChaosCastle::MainProc() // OK
 {
+	int minRemainTime = -1;
+	bool eventActive = false;
+
 	for(int n=0;n < MAX_CC_LEVEL;n++)
 	{
 		CHAOS_CASTLE_LEVEL* lpLevel = &this->m_ChaosCastleLevel[n];
@@ -204,6 +208,7 @@ void CChaosCastle::MainProc() // OK
 				break;
 			case CC_STATE_START:
 				this->ProcState_START(lpLevel);
+				eventActive = true;
 				break;
 			case CC_STATE_CLEAN:
 				this->ProcState_CLEAN(lpLevel);
@@ -211,6 +216,25 @@ void CChaosCastle::MainProc() // OK
 		}
 
 		this->CheckDelayScore(lpLevel);
+
+		// Track minimum remaining time for CustomEventTime
+		if (lpLevel->State == CC_STATE_EMPTY && lpLevel->RemainTime > 0)
+		{
+			if (minRemainTime == -1 || lpLevel->RemainTime < minRemainTime)
+			{
+				minRemainTime = lpLevel->RemainTime;
+			}
+		}
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	if (eventActive)
+	{
+		gServerDisplayer.EventCc = 0; // Event is active
+	}
+	else
+	{
+		gServerDisplayer.EventCc = minRemainTime;
 	}
 }
 

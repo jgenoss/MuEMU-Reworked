@@ -13,6 +13,7 @@
 #include "ObjectManager.h"
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "Util.h"
 #include "FlyingDragons.h"
 
@@ -260,6 +261,20 @@ void CInvasionManager::MainProc() // OK
 			case INVASION_STATE_START:
 				this->ProcState_START(lpInfo);
 				break;
+		}
+
+		// Update gServerDisplayer for CustomEventTime
+		if (lpInfo->State == INVASION_STATE_START)
+		{
+			gServerDisplayer.EventInvasion[n] = 0; // Event is active
+		}
+		else if (lpInfo->State == INVASION_STATE_EMPTY && lpInfo->RemainTime > 0)
+		{
+			gServerDisplayer.EventInvasion[n] = lpInfo->RemainTime;
+		}
+		else
+		{
+			gServerDisplayer.EventInvasion[n] = -1;
 		}
 	}
 }
