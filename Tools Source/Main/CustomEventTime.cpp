@@ -266,13 +266,12 @@ void CCustomEventTime::DrawEventTimePanelWindow()
 
 		for (int i = startIdx; i < endIdx && i < this->m_count; i++)
 		{
+			// Formatear tiempo
 			if (this->m_gCustomEventTime[i].time <= -1)
 			{
-				continue;
+				sprintf_s(text2, "N/A");
 			}
-
-			// Formatear tiempo
-			if (this->m_gCustomEventTime[i].time == 0)
+			else if (this->m_gCustomEventTime[i].time == 0)
 			{
 				sprintf_s(text2, "Online");
 			}
@@ -295,7 +294,11 @@ void CCustomEventTime::DrawEventTimePanelWindow()
 
 			// Color segun estado
 			DWORD Color;
-			if (this->m_gCustomEventTime[i].time == 0 || this->m_gCustomEventTime[i].time < 300)
+			if (this->m_gCustomEventTime[i].time <= -1)
+			{
+				Color = g_muColors.Gray;  // Gris para no disponible
+			}
+			else if (this->m_gCustomEventTime[i].time == 0 || this->m_gCustomEventTime[i].time < 300)
 			{
 				Color = g_muColors.Green;  // Verde para activo o proximo
 			}

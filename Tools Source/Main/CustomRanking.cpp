@@ -132,6 +132,11 @@ void CCustomRanking::Render()
 	}
 
 	ProcessInput();
+
+	// Verificar si el panel fue cerrado durante ProcessInput
+	if (!m_isOpen)
+		return;
+
 	DrawPanel();
 }
 
