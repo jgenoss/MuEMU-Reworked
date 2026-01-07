@@ -115,9 +115,6 @@ BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 		case 0xE8:
 			GCCustomEventTimeRecv(lpMsg);
 			return 1;
-		case 0xE9:
-			gCustomMenuPanel.GCReqFinances((PMSG_CUSTOM_FINANCES_RECV*)lpMsg);
-			return 1;
 		case 0xEB:
 			gCustomRanking.GCReqRanking((PMSG_CUSTOM_RANKING_RECV*)lpMsg);
 			return 1;
