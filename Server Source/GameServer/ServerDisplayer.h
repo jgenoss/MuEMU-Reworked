@@ -37,12 +37,28 @@ public:
 	void LogAddText(eLogColor color, char* text, int size);
 	void DrawGradientRect(HDC hdc, RECT rect, COLORREF color1, COLORREF color2, bool vertical = true);
 	DWORD GetUptime();
+
+	// Variables de tiempo de eventos (en segundos) para CustomEventTime
+	int EventBc;              // Blood Castle
+	int EventDs;              // Devil Square
+	int EventCc;              // Chaos Castle
+	int EventIt;              // Illusion Temple
+	int EventCustomLottery;   // LoterÃ­a
+	int EventCustomBonus;     // Bonus
+	int EventCustomQuiz;      // Quiz
+	int EventMoss;            // Moss Merchant
+	int EventKing;            // King of MU
+	int EventDrop;            // Event Drop
+	int EventTvT;             // Team vs Team
+	int EventInvasion[30];    // Invasiones
+	int EventCustomArena[30]; // Arena Custom
+
 private:
 	HWND m_hwnd;
 	HFONT m_font;
 	HFONT m_titleFont;
 	HFONT m_infoFont;
-	HBRUSH m_brush[6];  // Más brushes para diferentes colores
+	HBRUSH m_brush[6];  // Mï¿½s brushes para diferentes colores
 	HPEN m_pen[4];      // Pens para bordes
 	LOG_DISPLAY_INFO m_log[MAX_LOG_TEXT_LINE];
 	int m_count;

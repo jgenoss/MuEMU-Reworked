@@ -11,9 +11,17 @@
 #include "CustomWingEffect.h"
 #include <wtypes.h>
 
+#define MAX_EVENTTIME 42
+
+struct CUSTOM_EVENT_INFO
+{
+	int Index;
+	char Name[40];
+};
+
 struct MAIN_FILE_INFO
 {
-	BYTE LauncherType; 
+	BYTE LauncherType;
 	char CustomerName[32];
 	char IpAddress[32];
 	WORD IpAddressPort;
@@ -46,6 +54,8 @@ struct MAIN_FILE_INFO
 	CUSTOM_WING_INFO CustomWingInfo[MAX_CUSTOM_WING];
 	CUSTOM_ITEM_INFO CustomItemInfo[MAX_CUSTOM_ITEM];
 	CUSTOM_WING_EFFECT_INFO CustomWingEffectInfo[MAX_CUSTOM_WING_EFFECT];
+	DWORD EnableEventTimeButton;
+	CUSTOM_EVENT_INFO CustomEventInfo[MAX_EVENTTIME];
 };
 
 class CProtect

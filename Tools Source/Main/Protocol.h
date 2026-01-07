@@ -656,3 +656,7 @@ void GCNewMessageRecv(PMSG_NEW_MESSAGE_RECV* lpMsg);
 void DataSend(BYTE* lpMsg, DWORD size);
 void GCEventScheduleInfoRecv(PMSG_EVENT_SCHEDULE_INFO_RECV* lpMsg);
 void CGEventScheduleRequestSend();
+
+// CustomEventTime Protocol (0xF3:0xE8)
+void GCCustomEventTimeRecv(BYTE* lpMsg);
+void CGCustomEventTimeSend();
