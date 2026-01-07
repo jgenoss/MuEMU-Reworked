@@ -8,6 +8,7 @@
 #include <windows.h>
 #include <vector>
 #include <string>
+#include "Protocol.h"
 
 // -------------------------------------------------------------------------------
 // Constantes
