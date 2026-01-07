@@ -20,3 +20,4 @@
 *.txt
 *.log
 /Tools Source/Release
+*.res
