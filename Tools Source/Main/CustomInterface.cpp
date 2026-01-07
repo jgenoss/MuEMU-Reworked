@@ -17,6 +17,15 @@
 #include "CustomRanking.h"
 #include "Offset.h"
 #include "PrintPlayer.h"
+#include "Reconnect.h"
+
+// Variables externas de Reconnect
+extern DWORD ReconnectStatus;
+extern DWORD ReconnectProgress;
+extern DWORD ReconnectCurTime;
+extern DWORD ReconnectMaxTime;
+extern DWORD ReconnectCurWait;
+extern DWORD ReconnectMaxWait;
 
 CustomInterface gCustomInterface;
 
@@ -56,6 +65,38 @@ static bool s_menuKeyPressed = false;
 
 int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 {
+	// Llamar funcion original primero (como hace ReconnectMainProc)
+	int result = reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
+
+	// Procesar logica de Reconnect (integrada desde ReconnectMainProc)
+	if (*(DWORD*)(MAIN_SCREEN_STATE) == 5)
+	{
+		if (ReconnectStatus == RECONNECT_STATUS_RECONNECT)
+		{
+			ReconnectDrawInterface();
+
+			if ((GetTickCount() - ReconnectMaxTime) > ReconnectMaxWait)
+			{
+				ReconnectSetInfo(RECONNECT_STATUS_DISCONNECT, RECONNECT_PROGRESS_NONE, 0, 0);
+				((void(__thiscall*)(void*))0x0063A180)((void*)0x08793750);
+			}
+			else if ((GetTickCount() - ReconnectCurTime) >= ReconnectCurWait)
+			{
+				switch (ReconnectProgress)
+				{
+				case RECONNECT_PROGRESS_NONE:
+					ReconnecGameServerLoad();
+					break;
+				case RECONNECT_PROGRESS_CONNECTED:
+					ReconnecGameServerAuth();
+					break;
+				}
+				ReconnectCurTime = GetTickCount();
+			}
+		}
+	}
+
+	// Procesar interfaz custom
 	if (gMuClientApi.PlayerState() == static_cast<int>(GameState::GameProcess)) {
 		gUIBase.CheckAndReport();
 
@@ -98,7 +139,7 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 		}
 	}
 
-	return reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
+	return result;
 }
 
 void CustomInterface::setWindowText()
