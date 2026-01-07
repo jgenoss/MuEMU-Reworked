@@ -21,6 +21,7 @@
 #include "Party.h"
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "SkillManager.h"
 #include "Util.h"
 #include "Viewport.h"
@@ -191,6 +192,9 @@ void CIllusionTemple::Load(char* path) // OK
 
 void CIllusionTemple::MainProc() // OK
 {
+	int minRemainTime = -1;
+	bool eventActive = false;
+
 	for(int n=0;n < MAX_IT_LEVEL;n++)
 	{
 		ILLUSION_TEMPLE_LEVEL* lpLevel = &this->m_IllusionTempleLevel[n];
@@ -219,11 +223,31 @@ void CIllusionTemple::MainProc() // OK
 				break;
 			case IT_STATE_START:
 				this->ProcState_START(lpLevel);
+				eventActive = true;
 				break;
 			case IT_STATE_CLEAN:
 				this->ProcState_CLEAN(lpLevel);
 				break;
 		}
+
+		// Track minimum remaining time for CustomEventTime
+		if (lpLevel->State == IT_STATE_EMPTY && lpLevel->RemainTime > 0)
+		{
+			if (minRemainTime == -1 || lpLevel->RemainTime < minRemainTime)
+			{
+				minRemainTime = lpLevel->RemainTime;
+			}
+		}
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	if (eventActive)
+	{
+		gServerDisplayer.EventIt = 0; // Event is active
+	}
+	else
+	{
+		gServerDisplayer.EventIt = minRemainTime;
 	}
 }
 

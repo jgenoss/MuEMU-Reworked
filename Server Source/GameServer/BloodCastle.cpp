@@ -19,6 +19,7 @@
 #include "Party.h"
 #include "ScheduleManager.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "Util.h"
 
 CBloodCastle gBloodCastle;
@@ -220,6 +221,9 @@ void CBloodCastle::Load(char* path) // OK
 
 void CBloodCastle::MainProc() // OK
 {
+	int minRemainTime = -1;
+	bool eventActive = false;
+
 	for(int n=0;n < MAX_BC_LEVEL;n++)
 	{
 		BLOOD_CASTLE_LEVEL* lpLevel = &this->m_BloodCastleLevel[n];
@@ -248,6 +252,7 @@ void CBloodCastle::MainProc() // OK
 				break;
 			case BC_STATE_START:
 				this->ProcState_START(lpLevel);
+				eventActive = true;
 				break;
 			case BC_STATE_CLEAN:
 				this->ProcState_CLEAN(lpLevel);
@@ -255,6 +260,25 @@ void CBloodCastle::MainProc() // OK
 		}
 
 		this->CheckDelayScore(lpLevel);
+
+		// Track minimum remaining time for CustomEventTime
+		if (lpLevel->State == BC_STATE_EMPTY && lpLevel->RemainTime > 0)
+		{
+			if (minRemainTime == -1 || lpLevel->RemainTime < minRemainTime)
+			{
+				minRemainTime = lpLevel->RemainTime;
+			}
+		}
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	if (eventActive)
+	{
+		gServerDisplayer.EventBc = 0; // Event is active
+	}
+	else
+	{
+		gServerDisplayer.EventBc = minRemainTime;
 	}
 }
 

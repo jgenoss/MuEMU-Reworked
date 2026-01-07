@@ -576,50 +576,6 @@ struct PMSG_CHARACTER_INFO_SEND
 
 //**********************************************//
 //**********************************************//
-//**********************************************//
-//********** Event Schedule Protocol ***********//
-//**********************************************//
-
-#define MAX_EVENT_SCHEDULE_INFO 20
-
-// Tipos de evento para el menu de eventos
-enum eEventScheduleType
-{
-	EVENT_TYPE_BLOOD_CASTLE = 0,
-	EVENT_TYPE_DEVIL_SQUARE = 1,
-	EVENT_TYPE_CHAOS_CASTLE = 2,
-	EVENT_TYPE_ILLUSION_TEMPLE = 3,
-	EVENT_TYPE_CRYWOLF = 4,
-	EVENT_TYPE_KANTURU = 5,
-	EVENT_TYPE_IMPERIAL_GUARDIAN = 6,
-	EVENT_TYPE_DOUBLE_GOER = 7,
-	EVENT_TYPE_RAKLION = 8,
-	EVENT_TYPE_INVASION = 9,
-};
-
-// Informacion de un evento individual (recibida del servidor)
-struct EVENT_SCHEDULE_DATA
-{
-	BYTE EventType;        // Tipo de evento (eEventScheduleType)
-	BYTE EventIndex;       // Indice del evento
-	BYTE State;            // Estado actual del evento
-	WORD RemainTime;       // Tiempo restante en segundos
-	BYTE EnteredUsers;     // Usuarios que han entrado
-	char EventName[32];    // Nombre del evento
-};
-
-// Servidor -> Cliente: Respuesta con informacion de eventos
-struct PMSG_EVENT_SCHEDULE_INFO_RECV
-{
-	PSWMSG_HEAD header;    // C2:F3:E5
-	BYTE EventCount;       // Cantidad de eventos en la lista
-	// Seguido de EVENT_SCHEDULE_DATA[EventCount]
-};
-
-//**********************************************//
-//************ Client -> GameServer ************//
-//**********************************************//
-// Cliente -> Servidor: Solicitud de informacion de eventos
 
 struct PMSG_EVENT_SCHEDULE_REQUEST_SEND
 {
@@ -654,8 +610,6 @@ void GCNewHealthBarRecv(PMSG_NEW_HEALTH_BAR_RECV* lpMsg);
 void GCNewGensBattleInfoRecv(PMSG_NEW_GENS_BATTLE_INFO_RECV* lpMsg);
 void GCNewMessageRecv(PMSG_NEW_MESSAGE_RECV* lpMsg);
 void DataSend(BYTE* lpMsg, DWORD size);
-void GCEventScheduleInfoRecv(PMSG_EVENT_SCHEDULE_INFO_RECV* lpMsg);
-void CGEventScheduleRequestSend();
 
 // CustomEventTime Protocol (0xF3:0xE8)
 void GCCustomEventTimeRecv(BYTE* lpMsg);

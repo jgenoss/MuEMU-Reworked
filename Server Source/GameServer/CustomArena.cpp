@@ -14,6 +14,7 @@
 #include "Message.h"
 #include "Notice.h"
 #include "ScheduleManager.h"
+#include "ServerDisplayer.h"
 #include "Util.h"
 
 CCustomArena gCustomArena;
@@ -260,6 +261,20 @@ void CCustomArena::MainProc() // OK
 				case CUSTOM_ARENA_STATE_CLEAN:
 					this->ProcState_CLEAN(lpInfo);
 					break;
+			}
+
+			// Update gServerDisplayer for CustomEventTime
+			if (lpInfo->State == CUSTOM_ARENA_STATE_START)
+			{
+				gServerDisplayer.EventCustomArena[n] = 0; // Event is active
+			}
+			else if (lpInfo->State == CUSTOM_ARENA_STATE_EMPTY && lpInfo->RemainTime > 0)
+			{
+				gServerDisplayer.EventCustomArena[n] = lpInfo->RemainTime;
+			}
+			else
+			{
+				gServerDisplayer.EventCustomArena[n] = -1;
 			}
 		}
 	}

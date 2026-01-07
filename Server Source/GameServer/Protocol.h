@@ -1719,52 +1719,6 @@ struct PMSG_PING_SEND
 };
 
 //**********************************************//
-//********** Event Schedule Protocol ***********//
-//**********************************************//
-
-#define MAX_EVENT_SCHEDULE_INFO 20
-
-// Tipos de evento para el menu de eventos
-enum eEventScheduleType
-{
-	EVENT_TYPE_BLOOD_CASTLE = 0,
-	EVENT_TYPE_DEVIL_SQUARE = 1,
-	EVENT_TYPE_CHAOS_CASTLE = 2,
-	EVENT_TYPE_ILLUSION_TEMPLE = 3,
-	EVENT_TYPE_CRYWOLF = 4,
-	EVENT_TYPE_KANTURU = 5,
-	EVENT_TYPE_IMPERIAL_GUARDIAN = 6,
-	EVENT_TYPE_DOUBLE_GOER = 7,
-	EVENT_TYPE_RAKLION = 8,
-	EVENT_TYPE_INVASION = 9,
-};
-
-// Informacion de un evento individual
-struct EVENT_SCHEDULE_DATA
-{
-	BYTE EventType;        // Tipo de evento (eEventScheduleType)
-	BYTE EventIndex;       // Indice del evento (nivel para BC/DS/CC, indice de invasion)
-	BYTE State;            // Estado actual del evento
-	WORD RemainTime;       // Tiempo restante en segundos
-	BYTE EnteredUsers;     // Usuarios que han entrado
-	char EventName[32];    // Nombre del evento
-};
-
-// Cliente -> Servidor: Solicitud de informacion de eventos
-struct PMSG_EVENT_SCHEDULE_REQUEST_RECV
-{
-	PSBMSG_HEAD header;    // C1:F3:E5
-};
-
-// Servidor -> Cliente: Respuesta con informacion de eventos
-struct PMSG_EVENT_SCHEDULE_INFO_SEND
-{
-	PSWMSG_HEAD header;    // C2:F3:E5
-	BYTE EventCount;       // Cantidad de eventos en la lista
-	// Seguido de EVENT_SCHEDULE_DATA[EventCount]
-};
-
-//**********************************************//
 
 void CGReqCastleSiegeState(PMSG_REQ_CASTLESIEGESTATE* lpMsg, int iIndex);
 void GCAnsCastleSiegeState(int iIndex, int iResult, char* lpszGuildName, char* lpszGuildMaster);
@@ -1812,5 +1766,3 @@ void CGReqCsAttkGuildList(PMSG_REQ_CSATTKGUILDLIST* lpMsg, int iIndex);
 void CGReqGuildMarkOfCastleOwner(PMSG_REQ_GUILDMARK_OF_CASTLEOWNER* aRecv, int iIndex);
 void CGReqCastleHuntZoneEntrance(PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE* aRecv, int iIndex);
 void GCPingRecv(int iIndex);
-void CGEventScheduleRequestRecv(int aIndex);
-void GCEventScheduleInfoSend(int aIndex);

@@ -299,6 +299,7 @@
     <ClInclude Include="CustomArena.h" />
     <ClInclude Include="CustomAttack.h" />
     <ClInclude Include="CustomEventDrop.h" />
+    <ClInclude Include="CustomEventTime.h" />
     <ClInclude Include="CustomJewel.h" />
     <ClInclude Include="CustomMonster.h" />
     <ClInclude Include="CustomStore.h" />
@@ -505,6 +506,7 @@
     <ClCompile Include="CustomArena.cpp" />
     <ClCompile Include="CustomAttack.cpp" />
     <ClCompile Include="CustomEventDrop.cpp" />
+    <ClCompile Include="CustomEventTime.cpp" />
     <ClCompile Include="CustomJewel.cpp" />
     <ClCompile Include="CustomMonster.cpp" />
     <ClCompile Include="CustomStore.cpp" />

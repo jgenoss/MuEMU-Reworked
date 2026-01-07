@@ -5,6 +5,7 @@
 #pragma once
 
 #include "Protocol.h"
+#include "Connection.h"
 
 #define MAX_EVENTTIME 42
 

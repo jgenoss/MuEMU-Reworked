@@ -4,10 +4,11 @@
 
 #include "stdafx.h"
 #include "CustomEventTime.h"
-#include "DSProtocol.h"
+#include "Connection.h"
 #include "GameMain.h"
 #include "ServerDisplayer.h"
 #include "ServerInfo.h"
+#include "Util.h"
 #include "User.h"
 
 CCustomEventTime gCustomEventTime;
