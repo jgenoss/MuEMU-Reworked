@@ -41,68 +41,75 @@ void CCustomCommands::Load()
 
 	m_commands.clear();
 
-	// Comandos normales
+	// Comandos reales del servidor (solo jugadores, sin GM)
 	COMMAND_INFO cmd;
 
-	// Comandos basicos
+	// Comandos basicos de movimiento y comunicacion
 	strcpy_s(cmd.Command, "/move <Map>");
-	strcpy_s(cmd.Description, "Move to a map");
+	strcpy_s(cmd.Description, "Teletransportarse a un mapa");
 	cmd.Type = CMD_TYPE_NORMAL;
 	cmd.Available = true;
 	m_commands.push_back(cmd);
 
 	strcpy_s(cmd.Command, "/post <Msg>");
-	strcpy_s(cmd.Description, "Post a message in global chat");
+	strcpy_s(cmd.Description, "Enviar mensaje global");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/s <points>");
-	strcpy_s(cmd.Description, "Add points in Str");
+	// Comandos de stats
+	strcpy_s(cmd.Command, "/addstr <points>");
+	strcpy_s(cmd.Description, "Agregar puntos a Fuerza");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/a <points>");
-	strcpy_s(cmd.Description, "Add points in Agi");
+	strcpy_s(cmd.Command, "/addagi <points>");
+	strcpy_s(cmd.Description, "Agregar puntos a Agilidad");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/v <points>");
-	strcpy_s(cmd.Description, "Add points in Vit");
+	strcpy_s(cmd.Command, "/addvit <points>");
+	strcpy_s(cmd.Description, "Agregar puntos a Vitalidad");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/e <points>");
-	strcpy_s(cmd.Description, "Add points in Ene");
+	strcpy_s(cmd.Command, "/addene <points>");
+	strcpy_s(cmd.Description, "Agregar puntos a Energia");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/c <points>");
-	strcpy_s(cmd.Description, "Add points in Com");
+	strcpy_s(cmd.Command, "/addcmd <points>");
+	strcpy_s(cmd.Description, "Agregar puntos a Comando (DL)");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/pk");
-	strcpy_s(cmd.Description, "Clear PK");
+	// Comandos de personaje
+	strcpy_s(cmd.Command, "/pkclear");
+	strcpy_s(cmd.Description, "Limpiar estado PK");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/zen <value>");
-	strcpy_s(cmd.Description, "Add zen");
+	strcpy_s(cmd.Command, "/zen <amount>");
+	strcpy_s(cmd.Description, "Agregar zen");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/evo");
-	strcpy_s(cmd.Description, "Evolve char class");
+	strcpy_s(cmd.Command, "/change");
+	strcpy_s(cmd.Description, "Evolucion de clase");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/bau <num>");
-	strcpy_s(cmd.Description, "Change warehouse");
+	strcpy_s(cmd.Command, "/ware <num>");
+	strcpy_s(cmd.Description, "Cambiar baul");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/reset [auto]");
-	strcpy_s(cmd.Description, "Reset character");
+	strcpy_s(cmd.Command, "/reset");
+	strcpy_s(cmd.Description, "Resetear personaje");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	strcpy_s(cmd.Command, "/reset auto <stats>");
+	strcpy_s(cmd.Description, "Auto reset con stats");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
@@ -111,46 +118,52 @@ void CCustomCommands::Load()
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	// Comandos VIP1
-	strcpy_s(cmd.Command, "/clearinv");
-	strcpy_s(cmd.Description, "(VIP1)Clear inventory");
-	cmd.Type = CMD_TYPE_VIP1;
-	m_commands.push_back(cmd);
-
-	strcpy_s(cmd.Command, "/marry to <player>");
-	strcpy_s(cmd.Description, "(VIP1)Marry to a player");
-	cmd.Type = CMD_TYPE_VIP1;
-	m_commands.push_back(cmd);
-
-	strcpy_s(cmd.Command, "/openware");
-	strcpy_s(cmd.Description, "(VIP1)Open warehouse");
-	cmd.Type = CMD_TYPE_VIP1;
-	m_commands.push_back(cmd);
-
-	strcpy_s(cmd.Command, "/readd");
-	strcpy_s(cmd.Description, "(VIP1)ReAdd stats");
-	cmd.Type = CMD_TYPE_VIP1;
-	m_commands.push_back(cmd);
-
-	// Comandos VIP2
-	strcpy_s(cmd.Command, "/classe <type>");
-	strcpy_s(cmd.Description, "(VIP2)Change character class");
-	cmd.Type = CMD_TYPE_VIP2;
-	m_commands.push_back(cmd);
-
-	strcpy_s(cmd.Command, "/changename <NewName>");
-	strcpy_s(cmd.Description, "(VIP2)Change character name");
-	cmd.Type = CMD_TYPE_VIP2;
-	m_commands.push_back(cmd);
-
-	// Mas comandos normales
-	strcpy_s(cmd.Command, "/pick <type>");
-	strcpy_s(cmd.Description, "Auto get items");
+	// Comandos de guild
+	strcpy_s(cmd.Command, "/guildwar <Guild>");
+	strcpy_s(cmd.Description, "Solicitar guerra de guild");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
-	strcpy_s(cmd.Command, "/help");
-	strcpy_s(cmd.Description, "Summon help");
+	strcpy_s(cmd.Command, "/battlesoccer <Guild>");
+	strcpy_s(cmd.Description, "Solicitar batalla soccer");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	// Comandos de configuracion
+	strcpy_s(cmd.Command, "/request on");
+	strcpy_s(cmd.Description, "Activar solicitudes");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	strcpy_s(cmd.Command, "/request off");
+	strcpy_s(cmd.Description, "Desactivar solicitudes");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	strcpy_s(cmd.Command, "/request auto");
+	strcpy_s(cmd.Description, "Auto aceptar party");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	// Comandos de tienda
+	strcpy_s(cmd.Command, "/store");
+	strcpy_s(cmd.Description, "Abrir tienda personal");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	strcpy_s(cmd.Command, "/offstore");
+	strcpy_s(cmd.Description, "Tienda offline");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	// Comandos de ataque
+	strcpy_s(cmd.Command, "/attack");
+	strcpy_s(cmd.Description, "Ataque automatico");
+	cmd.Type = CMD_TYPE_NORMAL;
+	m_commands.push_back(cmd);
+
+	strcpy_s(cmd.Command, "/offattack");
+	strcpy_s(cmd.Description, "Ataque offline");
 	cmd.Type = CMD_TYPE_NORMAL;
 	m_commands.push_back(cmd);
 
