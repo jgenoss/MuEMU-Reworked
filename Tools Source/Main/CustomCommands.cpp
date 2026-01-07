@@ -170,6 +170,8 @@ void CCustomCommands::OpenPanel()
 void CCustomCommands::ClosePanel()
 {
 	m_isOpen = false;
+	// Resetear cursor focus al cerrar el panel
+	gMuClientApi.SetCursorFocus() = 0;
 }
 
 void CCustomCommands::TogglePanel()
@@ -247,12 +249,16 @@ void CCustomCommands::DrawPanel()
 	float w = m_panelWidth;
 	float h = m_panelHeight;
 
-	// Bloquear clicks hacia el fondo
+	// Bloquear clicks hacia el fondo cuando el mouse esta sobre el panel
 	int mouseX = gMuClientApi.CursorX();
 	int mouseY = gMuClientApi.CursorY();
 	if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h)
 	{
 		gMuClientApi.SetCursorFocus() = 1;
+	}
+	else
+	{
+		gMuClientApi.SetCursorFocus() = 0;
 	}
 
 	gMuClientApi.SetBlend(1);
