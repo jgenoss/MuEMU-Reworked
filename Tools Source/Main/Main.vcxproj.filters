@@ -130,6 +130,10 @@
       <Filter>Custom</Filter>
     </ClInclude>
     <ClInclude Include="CustomMenu.h">
+    <ClInclude Include="CustomMenu.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomCommands.h">
       <Filter>Custom</Filter>
     </ClInclude>
     <ClInclude Include="CustomMenuPanel.h">
