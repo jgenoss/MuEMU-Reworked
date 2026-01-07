@@ -12,6 +12,9 @@
 #include "EventMenu.h"
 #include "CustomEventTime.h"
 #include "CustomMenu.h"
+#include "CustomMenuPanel.h"
+#include "CustomCommands.h"
+#include "CustomRanking.h"
 #include "Offset.h"
 #include "PrintPlayer.h"
 
@@ -32,12 +35,24 @@ bool CustomInterface::Initialize()
 	// Cargar nombres de eventos desde MainInfo
 	gCustomEventTime.Load(gProtect.m_MainInfo.CustomEventInfo);
 
-	// Inicializar menu custom
+	// Inicializar menu custom (barra de botones)
 	gCustomMenu.Load();
+
+	// Inicializar panel de menu principal
+	gCustomMenuPanel.Load();
+
+	// Inicializar panel de comandos
+	gCustomCommands.Load();
+
+	// Inicializar panel de ranking
+	gCustomRanking.Load();
 
 	initialized = true;
 	return initialized;
 }
+
+// Variable estatica para control de tecla
+static bool s_menuKeyPressed = false;
 
 int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 {
@@ -51,8 +66,25 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 			gCustomPing.ShowPing();
 		}
 
+		// Procesar hotkey para abrir Menu (tecla H)
+		bool menuKeyDown = (GetAsyncKeyState('H') & 0x8000) != 0;
+		if (menuKeyDown && !s_menuKeyPressed)
+		{
+			gCustomMenuPanel.TogglePanel();
+		}
+		s_menuKeyPressed = menuKeyDown;
+
 		// Renderizar menu custom con botones
 		gCustomMenu.Render();
+
+		// Renderizar panel de menu principal
+		gCustomMenuPanel.Render();
+
+		// Renderizar panel de comandos
+		gCustomCommands.Render();
+
+		// Renderizar panel de ranking
+		gCustomRanking.Render();
 
 		// Renderizar panel de tiempos de eventos (CustomEventTime)
 		gCustomEventTime.DrawEventTimePanelWindow();

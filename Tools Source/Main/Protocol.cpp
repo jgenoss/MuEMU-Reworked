@@ -10,6 +10,9 @@
 #include "Util.h"
 #include "CustomPing.h"
 #include "CustomEventTime.h"
+#include "CustomMenuPanel.h"
+#include "CustomCommands.h"
+#include "CustomRanking.h"
 
 BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 {
@@ -111,6 +114,12 @@ BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 			break;
 		case 0xE8:
 			GCCustomEventTimeRecv(lpMsg);
+			return 1;
+		case 0xE9:
+			gCustomMenuPanel.GCReqFinances((PMSG_CUSTOM_FINANCES_RECV*)lpMsg);
+			return 1;
+		case 0xEB:
+			gCustomRanking.GCReqRanking((PMSG_CUSTOM_RANKING_RECV*)lpMsg);
 			return 1;
 		}
 		break;
