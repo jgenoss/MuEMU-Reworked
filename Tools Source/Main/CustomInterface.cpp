@@ -11,6 +11,7 @@
 #include "MemoryPatcher.h"
 #include "EventMenu.h"
 #include "CustomEventTime.h"
+#include "CustomMenu.h"
 
 CustomInterface gCustomInterface;
 
@@ -29,6 +30,9 @@ bool CustomInterface::Initialize()
 	// Cargar nombres de eventos desde MainInfo
 	gCustomEventTime.Load(gProtect.m_MainInfo.CustomEventInfo);
 
+	// Inicializar menu custom
+	gCustomMenu.Load();
+
 	initialized = true;
 	return initialized;
 }
@@ -45,18 +49,11 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 			gCustomPing.ShowPing();
 		}
 
+		// Renderizar menu custom con botones
+		gCustomMenu.Render();
+
 		// Renderizar panel de tiempos de eventos (CustomEventTime)
 		gCustomEventTime.DrawEventTimePanelWindow();
-
-		// Tecla 'H' para abrir/cerrar panel de eventos (solo si EnableEventTimeButton está activo)
-		static bool keyWasPressed = false;
-		bool keyIsPressed = (GetAsyncKeyState('H') & 0x8000) != 0;
-
-		if (keyIsPressed && !keyWasPressed && gProtect.m_MainInfo.EnableEventTimeButton)
-		{
-			gCustomEventTime.OpenWindow();
-		}
-		keyWasPressed = keyIsPressed;
 
 		// Procesar clicks del mouse para el panel de eventos
 		if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
