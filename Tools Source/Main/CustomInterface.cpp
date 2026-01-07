@@ -12,6 +12,8 @@
 #include "EventMenu.h"
 #include "CustomEventTime.h"
 #include "CustomMenu.h"
+#include "Offset.h"
+#include "PrintPlayer.h"
 
 CustomInterface gCustomInterface;
 
@@ -69,8 +71,29 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 
 void CustomInterface::setWindowText()
 {
+	// Obtener puntero a la estructura del personaje
+	DWORD charStruct = *(DWORD*)(MAIN_CHARACTER_STRUCT);
+	if (charStruct == 0)
+	{
+		return;
+	}
+
+	// Obtener nombre del personaje (offset 0x00, max 10 chars)
+	char playerName[11] = { 0 };
+	memcpy(playerName, (void*)(charStruct + 0x00), 10);
+
+	// Obtener nivel del personaje (offset 0x0E, WORD)
+	WORD playerLevel = *(WORD*)(charStruct + 0x0E);
+
+	// Obtener resets (variable global de PrintPlayer)
+	DWORD playerResets = ViewReset;
+
 	char text[500];
-	sprintf_s(text, sizeof(text), "|| Server: %s || Name: || Level: || Resets: ||", gProtect.m_MainInfo.WindowName);
+	sprintf_s(text, sizeof(text), "|| Server: %s || Name: %s || Level: %d || Resets: %d ||",
+		gProtect.m_MainInfo.WindowName,
+		playerName,
+		playerLevel,
+		playerResets);
 	SetWindowText(gMuClientApi.GameWindow(), text);
 }
 
