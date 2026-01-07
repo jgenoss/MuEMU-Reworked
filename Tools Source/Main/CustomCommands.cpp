@@ -261,10 +261,6 @@ void CCustomCommands::DrawPanel()
 	{
 		gMuClientApi.SetCursorFocus() = 1;
 	}
-	else
-	{
-		gMuClientApi.SetCursorFocus() = 0;
-	}
 
 	gMuClientApi.SetBlend(1);
 

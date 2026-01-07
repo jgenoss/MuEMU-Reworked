@@ -118,6 +118,10 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 		// Renderizar menu custom con botones
 		gCustomMenu.Render();
 
+		// Resetear cursor focus antes de renderizar paneles custom
+		// Cada panel lo establecera a 1 si el mouse esta sobre el
+		gMuClientApi.SetCursorFocus() = 0;
+
 		// Renderizar panel de menu principal
 		gCustomMenuPanel.Render();
 
