@@ -25,7 +25,6 @@ CustomInterface::~CustomInterface()
 bool CustomInterface::Initialize()
 {
 	SetCompleteHook(ASM::CALL, 0x0080F7FE, &DrawInterface);
-	gEventMenu.Initialize();
 
 	// Cargar nombres de eventos desde MainInfo
 	gCustomEventTime.Load(gProtect.m_MainInfo.CustomEventInfo);
@@ -45,8 +44,6 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 			gCustomPing.StartPing();
 			gCustomPing.ShowPing();
 		}
-		// Renderizar menu de eventos custom
-		gEventMenu.Render();
 
 		// Renderizar panel de tiempos de eventos (CustomEventTime)
 		gCustomEventTime.DrawEventTimePanelWindow();
