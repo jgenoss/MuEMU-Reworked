@@ -39,7 +39,7 @@ struct RANKING_ENTRY
 
 struct PMSG_CUSTOM_RANKING_SEND
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:EB
 	BYTE page;
 };
 
@@ -64,7 +64,7 @@ struct CUSTOM_RANKING_DATA
 
 struct PMSG_CUSTOM_RANKING_RECV
 {
-	PWMSG_HEAD header;
+	PSWMSG_HEAD header;  // C2:F3:EB
 	BYTE page;
 	BYTE totalPages;
 	BYTE count;

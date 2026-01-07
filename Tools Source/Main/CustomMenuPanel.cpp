@@ -108,7 +108,7 @@ void CCustomMenuPanel::RequestFinances()
 {
 	PMSG_CUSTOM_FINANCES_SEND pMsg;
 	pMsg.header.set(0xF3, 0xE9, sizeof(pMsg));
-	gMuClientApi.DataSend((BYTE*)&pMsg, sizeof(pMsg));
+	DataSend((BYTE*)&pMsg, pMsg.header.size);
 }
 
 // -------------------------------------------------------------------------------

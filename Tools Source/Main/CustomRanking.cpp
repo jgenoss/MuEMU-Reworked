@@ -78,7 +78,7 @@ void CCustomRanking::RequestRanking(int page)
 	PMSG_CUSTOM_RANKING_SEND pMsg;
 	pMsg.header.set(0xF3, 0xEB, sizeof(pMsg));
 	pMsg.page = (BYTE)page;
-	gMuClientApi.DataSend((BYTE*)&pMsg, sizeof(pMsg));
+	DataSend((BYTE*)&pMsg, pMsg.header.size);
 }
 
 // -------------------------------------------------------------------------------

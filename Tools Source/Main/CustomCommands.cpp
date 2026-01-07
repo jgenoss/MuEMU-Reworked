@@ -188,7 +188,7 @@ void CCustomCommands::RequestCommands()
 {
 	PMSG_CUSTOM_COMMANDS_SEND pMsg;
 	pMsg.header.set(0xF3, 0xEA, sizeof(pMsg));
-	gMuClientApi.DataSend((BYTE*)&pMsg, sizeof(pMsg));
+	DataSend((BYTE*)&pMsg, pMsg.header.size);
 }
 
 // -------------------------------------------------------------------------------

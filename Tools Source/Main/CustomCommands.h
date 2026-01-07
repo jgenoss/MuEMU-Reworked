@@ -47,7 +47,7 @@ struct COMMAND_INFO
 
 struct PMSG_CUSTOM_COMMANDS_SEND
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:EA
 };
 
 // -------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ struct CUSTOM_COMMAND_DATA
 
 struct PMSG_CUSTOM_COMMANDS_RECV
 {
-	PWMSG_HEAD header;
+	PSWMSG_HEAD header;  // C2:F3:EA
 	BYTE count;
 	// CUSTOM_COMMAND_DATA data[count]
 };

@@ -63,7 +63,7 @@ struct MENU_PANEL_BUTTON
 
 struct PMSG_CUSTOM_FINANCES_SEND
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:E9
 };
 
 // -------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ struct PMSG_CUSTOM_FINANCES_SEND
 
 struct PMSG_CUSTOM_FINANCES_RECV
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:E9
 	int Cash;
 	int Gold;
 	int PcPoint;
