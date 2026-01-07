@@ -1,28 +1,11 @@
 // CustomMenuSystem.h: Custom Menu System Protocol Headers
-// Handles Finances, Commands, and Ranking requests
+// Handles Commands and Ranking requests
 //
 //////////////////////////////////////////////////////////////////////
 
 #pragma once
 
 #include "Protocol.h"
-
-// -------------------------------------------------------------------------------
-// Protocolo de Finanzas (0xF3, 0xE9)
-// -------------------------------------------------------------------------------
-
-struct PMSG_CUSTOM_FINANCES_RECV
-{
-	PSBMSG_HEAD header;  // C1:F3:E9
-};
-
-struct PMSG_CUSTOM_FINANCES_SEND
-{
-	PSBMSG_HEAD header;  // C1:F3:E9
-	int Cash;
-	int Gold;
-	int PcPoint;
-};
 
 // -------------------------------------------------------------------------------
 // Protocolo de Comandos (0xF3, 0xEA) - Opcional
@@ -87,9 +70,6 @@ class CCustomMenuSystem
 public:
 	CCustomMenuSystem();
 	~CCustomMenuSystem();
-
-	// Procesar solicitud de finanzas
-	void GCReqFinances(int aIndex, PMSG_CUSTOM_FINANCES_RECV* lpMsg);
 
 	// Procesar solicitud de ranking
 	void GCReqRanking(int aIndex, PMSG_CUSTOM_RANKING_RECV* lpMsg);

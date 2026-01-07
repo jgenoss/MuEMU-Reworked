@@ -21,14 +21,11 @@ CCustomMenuPanel::CCustomMenuPanel()
 	m_wasMousePressed = false;
 	m_lastClickTime = 0;
 
-	// Posicion centrada del panel
+	// Posicion centrada del panel (mas compacto sin finanzas)
 	m_panelWidth = 200.0f;
-	m_panelHeight = 310.0f;
+	m_panelHeight = 140.0f;
 	m_panelX = 30.0f;
 	m_panelY = 100.0f;
-
-	// Inicializar finanzas
-	memset(&m_finances, 0, sizeof(m_finances));
 
 	// Inicializar botones
 	memset(m_buttons, 0, sizeof(m_buttons));
@@ -47,17 +44,14 @@ void CCustomMenuPanel::Load()
 	if (m_initialized)
 		return;
 
-	// Configurar botones
+	// Configurar botones (solo Events, Ranking, Commands)
 	const char* buttonNames[MAX_MENU_BUTTONS] = {
 		"Events",
-		"Buy VIP",
 		"Ranking",
-		"Commands",
-		"Jewel Bank",
-		"Options"
+		"Commands"
 	};
 
-	float btnY = m_panelY + 85.0f;
+	float btnY = m_panelY + 35.0f;
 	float btnHeight = 30.0f;
 	float btnSpacing = 5.0f;
 	float btnMargin = 15.0f;
@@ -84,7 +78,6 @@ void CCustomMenuPanel::Load()
 void CCustomMenuPanel::OpenPanel()
 {
 	m_isOpen = true;
-	RequestFinances();
 }
 
 void CCustomMenuPanel::ClosePanel()
@@ -100,28 +93,6 @@ void CCustomMenuPanel::TogglePanel()
 		ClosePanel();
 	else
 		OpenPanel();
-}
-
-// -------------------------------------------------------------------------------
-// Solicitar finanzas al servidor
-// -------------------------------------------------------------------------------
-
-void CCustomMenuPanel::RequestFinances()
-{
-	PMSG_CUSTOM_FINANCES_SEND pMsg;
-	pMsg.header.set(0xF3, 0xE9, sizeof(pMsg));
-	DataSend((BYTE*)&pMsg, pMsg.header.size);
-}
-
-// -------------------------------------------------------------------------------
-// Recibir finanzas del servidor
-// -------------------------------------------------------------------------------
-
-void CCustomMenuPanel::GCReqFinances(PMSG_CUSTOM_FINANCES_RECV* lpMsg)
-{
-	m_finances.Cash = lpMsg->Cash;
-	m_finances.Gold = lpMsg->Gold;
-	m_finances.PcPoint = lpMsg->PcPoint;
 }
 
 // -------------------------------------------------------------------------------
@@ -197,7 +168,6 @@ void CCustomMenuPanel::DrawPanel()
 
 	// Dibujar secciones
 	DrawTitleBar();
-	DrawFinancesSection();
 	DrawButtons();
 
 	glPopAttrib();
@@ -245,57 +215,6 @@ void CCustomMenuPanel::DrawTitleBar()
 
 	DWORD closeColor = hoverClose ? g_muColors.Red : g_muColors.White;
 	gUIBase.DrawFormat(closeColor, (int)closeX, (int)closeY + 3, (int)closeSize, 3, "X");
-}
-
-// -------------------------------------------------------------------------------
-// Dibujar Seccion de Finanzas
-// -------------------------------------------------------------------------------
-
-void CCustomMenuPanel::DrawFinancesSection()
-{
-	float x = m_panelX;
-	float y = m_panelY + 32;
-	float w = m_panelWidth;
-
-	// Fondo de la seccion
-	gMuClientApi.SetBlend(1);
-	glColor4f(0.1f, 0.08f, 0.05f, 0.9f);
-	gMuClientApi.DrawBarForm(x + 5, y, w - 10, 45, 0.0f, 0);
-
-	// Linea decorativa
-	glColor4f(0.6f, 0.5f, 0.2f, 0.5f);
-	gMuClientApi.DrawBarForm(x + 10, y + 18, w - 20, 1, 0.0f, 0);
-	gMuClientApi.GLSwitchBlend();
-	gMuClientApi.GLSwitch();
-
-	// Titulo "My Finances:"
-	gUIBase.DrawFormat(g_muColors.Gold, (int)x, (int)y + 3, (int)w, 3, "My Finances:");
-
-	// Valores de finanzas
-	char financeText[128];
-	sprintf_s(financeText, "Cash:  %d    Gold:  %d    PcPoint:  %d",
-		m_finances.Cash, m_finances.Gold, m_finances.PcPoint);
-
-	// Dibujar cada valor con color diferente
-	float valY = y + 25;
-
-	// Cash
-	gUIBase.DrawFormat(g_muColors.White, (int)x + 15, (int)valY, 40, 1, "Cash:");
-	char cashStr[16];
-	sprintf_s(cashStr, "%d", m_finances.Cash);
-	gUIBase.DrawFormat(g_muColors.Gold, (int)x + 50, (int)valY, 35, 1, cashStr);
-
-	// Gold
-	gUIBase.DrawFormat(g_muColors.White, (int)x + 85, (int)valY, 35, 1, "Gold:");
-	char goldStr[16];
-	sprintf_s(goldStr, "%d", m_finances.Gold);
-	gUIBase.DrawFormat(g_muColors.Gold, (int)x + 115, (int)valY, 30, 1, goldStr);
-
-	// PcPoint
-	gUIBase.DrawFormat(g_muColors.White, (int)x + 140, (int)valY, 50, 1, "PcPoint:");
-	char pcpStr[16];
-	sprintf_s(pcpStr, "%d", m_finances.PcPoint);
-	gUIBase.DrawFormat(g_muColors.Gold, (int)x + 185, (int)valY, 30, 1, pcpStr);
 }
 
 // -------------------------------------------------------------------------------
@@ -420,14 +339,13 @@ bool CCustomMenuPanel::IsMouseClicked()
 
 void CCustomMenuPanel::ExecuteButtonAction(int btnType)
 {
+	// Ocultar este panel al abrir otra UI
+	ClosePanel();
+
 	switch (btnType)
 	{
 		case MENU_BTN_EVENTS:
 			gCustomEventTime.OpenWindow();
-			break;
-
-		case MENU_BTN_BUYVIP:
-			// TODO: Abrir ventana de compra VIP o ejecutar comando
 			break;
 
 		case MENU_BTN_RANKING:
@@ -436,14 +354,6 @@ void CCustomMenuPanel::ExecuteButtonAction(int btnType)
 
 		case MENU_BTN_COMMANDS:
 			gCustomCommands.OpenPanel();
-			break;
-
-		case MENU_BTN_JEWELBANK:
-			// TODO: Abrir Jewel Bank
-			break;
-
-		case MENU_BTN_OPTIONS:
-			// TODO: Abrir opciones
 			break;
 
 		default:

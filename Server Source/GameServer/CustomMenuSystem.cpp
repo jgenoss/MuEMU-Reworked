@@ -1,5 +1,5 @@
 // CustomMenuSystem.cpp: Custom Menu System Implementation
-// Handles Finances, Commands, and Ranking requests
+// Handles Commands and Ranking requests
 //
 //////////////////////////////////////////////////////////////////////
 
@@ -26,32 +26,6 @@ CCustomMenuSystem::CCustomMenuSystem()
 
 CCustomMenuSystem::~CCustomMenuSystem()
 {
-}
-
-//////////////////////////////////////////////////////////////////////
-// Solicitud de Finanzas
-//////////////////////////////////////////////////////////////////////
-
-void CCustomMenuSystem::GCReqFinances(int aIndex, PMSG_CUSTOM_FINANCES_RECV* lpMsg)
-{
-	if (gObjIsConnected(aIndex) == false)
-	{
-		return;
-	}
-
-	LPOBJ lpObj = &gObj[aIndex];
-
-	PMSG_CUSTOM_FINANCES_SEND pMsg;
-	pMsg.header.set(0xF3, 0xE9, sizeof(pMsg));
-
-	// Los coins se obtienen del DataServer via CashShop
-	// Por ahora enviamos valores de prueba
-	// TODO: Integrar con el sistema de CashShop para obtener valores reales
-	pMsg.Cash = 0;       // WCoinC - requiere consulta al DataServer
-	pMsg.Gold = 0;       // WCoinP - requiere consulta al DataServer
-	pMsg.PcPoint = 0;    // GoblinPoint - requiere consulta al DataServer
-
-	DataSend(aIndex, (BYTE*)&pMsg, sizeof(pMsg));
 }
 
 //////////////////////////////////////////////////////////////////////

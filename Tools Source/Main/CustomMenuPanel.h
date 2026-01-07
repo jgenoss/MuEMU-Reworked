@@ -1,20 +1,19 @@
 #pragma once
 
 // -------------------------------------------------------------------------------
-// CustomMenuPanel.h - Panel de Menu Principal con Finanzas y Botones
+// CustomMenuPanel.h - Panel de Menu Principal con Botones
 // Basado en el diseño del menu del juego original
 // -------------------------------------------------------------------------------
 
 #include <windows.h>
 #include <vector>
 #include <string>
-#include "Protocol.h"
 
 // -------------------------------------------------------------------------------
 // Constantes
 // -------------------------------------------------------------------------------
 
-#define MAX_MENU_BUTTONS 6
+#define MAX_MENU_BUTTONS 3
 
 // -------------------------------------------------------------------------------
 // Tipos de botones del menu
@@ -23,22 +22,8 @@
 enum eMenuPanelButton
 {
 	MENU_BTN_EVENTS = 0,
-	MENU_BTN_BUYVIP = 1,
-	MENU_BTN_RANKING = 2,
-	MENU_BTN_COMMANDS = 3,
-	MENU_BTN_JEWELBANK = 4,
-	MENU_BTN_OPTIONS = 5,
-};
-
-// -------------------------------------------------------------------------------
-// Estructura para datos de finanzas
-// -------------------------------------------------------------------------------
-
-struct CUSTOM_FINANCES_INFO
-{
-	int Cash;
-	int Gold;
-	int PcPoint;
+	MENU_BTN_RANKING = 1,
+	MENU_BTN_COMMANDS = 2,
 };
 
 // -------------------------------------------------------------------------------
@@ -55,27 +40,6 @@ struct MENU_PANEL_BUTTON
 	float Height;
 	bool Enabled;
 	bool Hover;
-};
-
-// -------------------------------------------------------------------------------
-// Protocolo - Solicitud de finanzas
-// -------------------------------------------------------------------------------
-
-struct PMSG_CUSTOM_FINANCES_SEND
-{
-	PSBMSG_HEAD header;  // C1:F3:E9
-};
-
-// -------------------------------------------------------------------------------
-// Protocolo - Respuesta de finanzas
-// -------------------------------------------------------------------------------
-
-struct PMSG_CUSTOM_FINANCES_RECV
-{
-	PSBMSG_HEAD header;  // C1:F3:E9
-	int Cash;
-	int Gold;
-	int PcPoint;
 };
 
 // -------------------------------------------------------------------------------
@@ -102,17 +66,10 @@ public:
 	// Estado
 	bool IsOpen() const { return m_isOpen; }
 
-	// Recibir datos del servidor
-	void GCReqFinances(PMSG_CUSTOM_FINANCES_RECV* lpMsg);
-
-	// Solicitar finanzas al servidor
-	void RequestFinances();
-
 private:
 	// Renderizado
 	void DrawPanel();
 	void DrawTitleBar();
-	void DrawFinancesSection();
 	void DrawButtons();
 	void DrawButton(MENU_PANEL_BUTTON* pBtn);
 
@@ -134,9 +91,6 @@ private:
 	float m_panelY;
 	float m_panelWidth;
 	float m_panelHeight;
-
-	// Finanzas
-	CUSTOM_FINANCES_INFO m_finances;
 
 	// Botones
 	MENU_PANEL_BUTTON m_buttons[MAX_MENU_BUTTONS];

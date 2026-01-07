@@ -946,9 +946,6 @@ void ProtocolCore(BYTE head, BYTE* lpMsg, int size, int aIndex, int encrypt, int
 		case 0xE8:
 			gCustomEventTime.GCReqEventTime(aIndex, (PMSG_CUSTOM_EVENTTIME_RECV*)lpMsg);
 			break;
-		case 0xE9:
-			gCustomMenuSystem.GCReqFinances(aIndex, (PMSG_CUSTOM_FINANCES_RECV*)lpMsg);
-			break;
 		case 0xEB:
 			gCustomMenuSystem.GCReqRanking(aIndex, (PMSG_CUSTOM_RANKING_RECV*)lpMsg);
 			break;
