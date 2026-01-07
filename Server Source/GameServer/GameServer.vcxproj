@@ -301,6 +301,7 @@
     <ClInclude Include="CustomEventDrop.h" />
     <ClInclude Include="CustomEventTime.h" />
     <ClInclude Include="CustomJewel.h" />
+    <ClInclude Include="CustomMenuSystem.h" />
     <ClInclude Include="CustomMonster.h" />
     <ClInclude Include="CustomStore.h" />
     <ClInclude Include="CustomWing.h" />
@@ -508,6 +509,7 @@
     <ClCompile Include="CustomEventDrop.cpp" />
     <ClCompile Include="CustomEventTime.cpp" />
     <ClCompile Include="CustomJewel.cpp" />
+    <ClCompile Include="CustomMenuSystem.cpp" />
     <ClCompile Include="CustomMonster.cpp" />
     <ClCompile Include="CustomStore.cpp" />
     <ClCompile Include="CustomWing.cpp" />

@@ -123,6 +123,18 @@
     <ClInclude Include="CustomEventTime.h">
       <Filter>Custom</Filter>
     </ClInclude>
+    <ClInclude Include="CustomRanking.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomCommands.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMenu.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMenuPanel.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp">
@@ -195,6 +207,18 @@
       <Filter>Custom</Filter>
     </ClCompile>
     <ClCompile Include="CustomEventTime.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomRanking.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomMenu.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomCommands.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomMenuPanel.cpp">
       <Filter>Custom</Filter>
     </ClCompile>
   </ItemGroup>
