@@ -109,9 +109,6 @@ BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 		case 0xF1:
 			gCustomPing.PingRecv();
 			break;
-		case 0xE5:
-			GCEventScheduleInfoRecv((PMSG_EVENT_SCHEDULE_INFO_RECV*)lpMsg);
-			return 1;
 		case 0xE8:
 			GCCustomEventTimeRecv(lpMsg);
 			return 1;
@@ -548,21 +545,6 @@ void DataSend(BYTE* lpMsg, DWORD size) // OK
 
 		((void(__thiscall*)(void*, BYTE*, DWORD))0x00405110)((void*)0x08793750, send, size);
 	}
-}
-
-void GCEventScheduleInfoRecv(PMSG_EVENT_SCHEDULE_INFO_RECV* lpMsg)
-{
-	// Procesar la informacion de eventos recibida del servidor
-	// Esta funcion sera llamada por EventMenu para obtener los datos
-	extern void ProcessEventScheduleData(PMSG_EVENT_SCHEDULE_INFO_RECV * lpMsg);
-	ProcessEventScheduleData(lpMsg);
-}
-
-void CGEventScheduleRequestSend()
-{
-	PMSG_EVENT_SCHEDULE_REQUEST_SEND pMsg;
-	pMsg.header.set(0xF3, 0xE5, sizeof(pMsg));
-	DataSend((BYTE*)&pMsg, sizeof(pMsg));
 }
 
 void GCCustomEventTimeRecv(BYTE* lpMsg)

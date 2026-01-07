@@ -90,6 +90,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Util\CCRC32.H" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="CustomEventTime.h" />
     <ClInclude Include="CustomInterface.h" />
     <ClInclude Include="CustomItem.h" />
     <ClInclude Include="CustomJewel.h" />
@@ -97,7 +98,6 @@
     <ClInclude Include="CustomPing.h" />
     <ClInclude Include="CustomWing.h" />
     <ClInclude Include="CustomWingEffect.h" />
-    <ClInclude Include="EventMenu.h" />
     <ClInclude Include="HackCheck.h" />
     <ClInclude Include="HealthBar.h" />
     <ClInclude Include="Item.h" />
@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp" />
     <ClCompile Include="Common.cpp" />
+    <ClCompile Include="CustomEventTime.cpp" />
     <ClCompile Include="CustomInterface.cpp" />
     <ClCompile Include="CustomItem.cpp" />
     <ClCompile Include="CustomJewel.cpp" />
@@ -127,7 +128,6 @@
     <ClCompile Include="CustomPing.cpp" />
     <ClCompile Include="CustomWing.cpp" />
     <ClCompile Include="CustomWingEffect.cpp" />
-    <ClCompile Include="EventMenu.cpp" />
     <ClCompile Include="HackCheck.cpp" />
     <ClCompile Include="HealthBar.cpp" />
     <ClCompile Include="Item.cpp" />

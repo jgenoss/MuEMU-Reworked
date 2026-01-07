@@ -52,6 +52,9 @@
     <ClInclude Include="MemScript.h">
       <Filter>Util</Filter>
     </ClInclude>
+    <ClInclude Include="CustomEventTimeText.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp">
@@ -80,6 +83,9 @@
     </ClCompile>
     <ClCompile Include="GetMainInfo.cpp">
       <Filter>GetMainInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomEventTimeText.cpp">
+      <Filter>Custom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
