@@ -858,6 +858,7 @@ public:
 	int m_BloodHowlingTimeConstA;
 	long m_AnnounceChaosMix;
 	char m_AnnounceChaosMixText[50];
+	int m_CustomEventTimeSwitch;  // 0=Deshabilitado, 1=Habilitado
 };
 
 extern CServerInfo gServerInfo;

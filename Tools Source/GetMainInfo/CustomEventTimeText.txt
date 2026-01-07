@@ -1,0 +1,54 @@
+//===================================================
+// CustomEventTimeText.txt - Event Names for CustomEventTime
+// Format: Index	"Name"
+//===================================================
+
+// MAIN EVENTS (0-13)
+0	"Blood Castle"
+1	"Devil Square"
+2	"Chaos Castle"
+3	"Illusion Temple"
+4	"Lottery"
+5	"Quiz"
+6	"Bonus Event"
+7	"Moss Merchant"
+8	"Event Drop"
+9	"King of MU"
+10	"Team vs Team"
+11	"Reserved"
+12	"Reserved"
+13	"Reserved"
+
+// INVASIONS (14-27)
+14	"Golden Invasion"
+15	"Red Dragon"
+16	"Kundun"
+17	"White Wizard"
+18	"Medusa"
+19	"Skeleton King"
+20	"Invasion 7"
+21	"Invasion 8"
+22	"Invasion 9"
+23	"Invasion 10"
+24	"Invasion 11"
+25	"Invasion 12"
+26	"Invasion 13"
+27	"Invasion 14"
+
+// CUSTOM ARENA (28-41)
+28	"Arena PvP 1"
+29	"Arena PvP 2"
+30	"Arena PvP 3"
+31	"Arena 4"
+32	"Arena 5"
+33	"Arena 6"
+34	"Arena 7"
+35	"Arena 8"
+36	"Arena 9"
+37	"Arena 10"
+38	"Arena 11"
+39	"Arena 12"
+40	"Arena 13"
+41	"Arena 14"
+
+end

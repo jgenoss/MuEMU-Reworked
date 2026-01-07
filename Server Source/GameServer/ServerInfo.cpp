@@ -3399,6 +3399,8 @@ void CServerInfo::ReadEventInfo(char* section,char* path) // OK
 	this->m_RaklionEvent = GetPrivateProfileInt(section,"RaklionEvent",0,path);
 
 	#endif
+
+	this->m_CustomEventTimeSwitch = GetPrivateProfileInt(section,"CustomEventTimeSwitch",0,path);
 }
 
 void CServerInfo::ReadHackInfo(char* section,char* path) // OK

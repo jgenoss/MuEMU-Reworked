@@ -9,6 +9,7 @@
 #include "Reconnect.h"
 #include "Util.h"
 #include "CustomPing.h"
+#include "CustomEventTime.h"
 
 BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 {
@@ -110,6 +111,9 @@ BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 			break;
 		case 0xE5:
 			GCEventScheduleInfoRecv((PMSG_EVENT_SCHEDULE_INFO_RECV*)lpMsg);
+			return 1;
+		case 0xE8:
+			GCCustomEventTimeRecv(lpMsg);
 			return 1;
 		}
 		break;
@@ -558,5 +562,17 @@ void CGEventScheduleRequestSend()
 {
 	PMSG_EVENT_SCHEDULE_REQUEST_SEND pMsg;
 	pMsg.header.set(0xF3, 0xE5, sizeof(pMsg));
+	DataSend((BYTE*)&pMsg, sizeof(pMsg));
+}
+
+void GCCustomEventTimeRecv(BYTE* lpMsg)
+{
+	gCustomEventTime.GCReqEventTime((PMSG_CUSTOM_EVENTTIME_RECV*)lpMsg);
+}
+
+void CGCustomEventTimeSend()
+{
+	PMSG_CUSTOM_EVENTTIME_SEND pMsg;
+	pMsg.header.set(0xF3, 0xE8, sizeof(pMsg));
 	DataSend((BYTE*)&pMsg, sizeof(pMsg));
 }
