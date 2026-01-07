@@ -19,6 +19,8 @@ struct EVENT_SCHEDULE_INFO
 	std::string NextTime;       // Proxima hora del evento
 	DWORD Color;                // Color del texto
 	bool IsActive;              // Si el evento esta activo ahora
+	BYTE EventType;             // Tipo de evento (del servidor)
+	BYTE State;                 // Estado del evento (del servidor)
 };
 
 // -------------------------------------------------------------------------------
@@ -40,6 +42,10 @@ public:
 	void Toggle();
 	// Verificar si el menu esta abierto
 	bool IsOpen() const { return m_isOpen; }
+	// Recibir datos de eventos del servidor
+	void OnEventScheduleReceived(BYTE eventCount, void* pEventData);
+	// Solicitar actualizacion de eventos al servidor
+	void RequestServerUpdate();
 private:
 	// Renderizado del boton principal
 	void DrawButton();
@@ -53,6 +59,10 @@ private:
 	void UpdateEventSchedules();
 	// Formatear tiempo restante
 	std::string FormatTimeRemaining(int minutes);
+	// Formatear tiempo restante (segundos)
+	std::string FormatTimeRemainingSeconds(int seconds);
+	// Obtener color segun tipo de evento
+	DWORD GetEventColor(BYTE eventType);
 
 private:
 	// Estado del menu
@@ -75,6 +85,12 @@ private:
 	std::vector<EVENT_SCHEDULE_INFO> m_events;
 	// Tick para actualizar eventos
 	DWORD m_lastUpdateTick;
+	// Solicitud al servidor pendiente
+	bool m_requestPending;
+	// Ultima vez que recibimos datos del servidor
+	DWORD m_lastServerUpdate;
+	// Si tenemos datos del servidor
+	bool m_hasServerData;
 };
 
 // -------------------------------------------------------------------------------

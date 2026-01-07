@@ -64,14 +64,14 @@
 
 struct PBMSG_HEAD
 {
-	void set(BYTE head,BYTE size) // OK
+	void set(BYTE head, BYTE size) // OK
 	{
 		this->type = 0xC1;
 		this->size = size;
 		this->head = head;
 	}
 
-	void setE(BYTE head,BYTE size) // OK
+	void setE(BYTE head, BYTE size) // OK
 	{
 		this->type = 0xC3;
 		this->size = size;
@@ -85,7 +85,7 @@ struct PBMSG_HEAD
 
 struct PSBMSG_HEAD
 {
-	void set(BYTE head,BYTE subh,BYTE size) // OK
+	void set(BYTE head, BYTE subh, BYTE size) // OK
 	{
 		this->type = 0xC1;
 		this->size = size;
@@ -93,7 +93,7 @@ struct PSBMSG_HEAD
 		this->subh = subh;
 	}
 
-	void setE(BYTE head,BYTE subh,BYTE size) // OK
+	void setE(BYTE head, BYTE subh, BYTE size) // OK
 	{
 		this->type = 0xC3;
 		this->size = size;
@@ -109,7 +109,7 @@ struct PSBMSG_HEAD
 
 struct PWMSG_HEAD
 {
-	void set(BYTE head,WORD size) // OK
+	void set(BYTE head, WORD size) // OK
 	{
 		this->type = 0xC2;
 		this->size[0] = SET_NUMBERHB(size);
@@ -117,7 +117,7 @@ struct PWMSG_HEAD
 		this->head = head;
 	}
 
-	void setE(BYTE head,WORD size) // OK
+	void setE(BYTE head, WORD size) // OK
 	{
 		this->type = 0xC4;
 		this->size[0] = SET_NUMBERHB(size);
@@ -132,7 +132,7 @@ struct PWMSG_HEAD
 
 struct PSWMSG_HEAD
 {
-	void set(BYTE head,BYTE subh,WORD size) // OK
+	void set(BYTE head, BYTE subh, WORD size) // OK
 	{
 		this->type = 0xC2;
 		this->size[0] = SET_NUMBERHB(size);
@@ -141,7 +141,7 @@ struct PSWMSG_HEAD
 		this->subh = subh;
 	}
 
-	void setE(BYTE head,BYTE subh,WORD size) // OK
+	void setE(BYTE head, BYTE subh, WORD size) // OK
 	{
 		this->type = 0xC4;
 		this->size[0] = SET_NUMBERHB(size);
@@ -262,28 +262,28 @@ struct PMSG_MOVE_RECV
 
 struct PMSG_CONNECT_ACCOUNT_RECV
 {
-	#if(GAMESERVER_LANGUAGE==1)
-	#pragma pack(1)
+#if(GAMESERVER_LANGUAGE==1)
+#pragma pack(1)
 	PSBMSG_HEAD header; // C3:F1:01
 	char account[10];
 	char password[20];
 	DWORD TickCount;
 	BYTE ClientVersion[5];
 	BYTE ClientSerial[16];
-	#if(GAMESERVER_UPDATE>=803)
+#if(GAMESERVER_UPDATE>=803)
 	BYTE LanguageCode;
-	#endif
-	#pragma pack()
-	#else
-	#pragma pack(1)
+#endif
+#pragma pack()
+#else
+#pragma pack(1)
 	PSBMSG_HEAD header; // C3:F1:01
 	char account[10];
 	char password[12];
 	DWORD TickCount;
 	BYTE ClientVersion[5];
 	BYTE ClientSerial[16];
-	#pragma pack()
-	#endif
+#pragma pack()
+#endif
 };
 
 struct PMSG_CLOSE_CLIENT_RECV
@@ -339,7 +339,7 @@ struct PMSG_OPTION_CHANGE_SKIN_RECV
 
 struct PMSG_OPTION_DATA_RECV
 {
-	#pragma pack(1)
+#pragma pack(1)
 	PSBMSG_HEAD header; // C1:F3:30
 	BYTE SkillKey[20];
 	BYTE GameOption;
@@ -349,7 +349,7 @@ struct PMSG_OPTION_DATA_RECV
 	BYTE ChatWindow;
 	BYTE RKey;
 	DWORD QWERLevel;
-	#pragma pack()
+#pragma pack()
 };
 
 struct PMSG_CLIENT_SECURITY_BREACH_RECV
@@ -426,21 +426,21 @@ struct PMSG_DAMAGE_SEND
 	PBMSG_HEAD header; // C1:[PROTOCOL_CODE2]
 	BYTE index[2];
 	BYTE damage[2];
-	#if(GAMESERVER_UPDATE>=701)
+#if(GAMESERVER_UPDATE>=701)
 	BYTE type[2];
-	#else
+#else
 	BYTE type;
-	#endif
+#endif
 	BYTE ShieldDamage[2];
-	#if(GAMESERVER_UPDATE>=701)
+#if(GAMESERVER_UPDATE>=701)
 	BYTE attribute;
-	#endif
-	#if(GAMESERVER_EXTRA==1)
+#endif
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewCurHP;
 	DWORD ViewCurSD;
 	DWORD ViewDamageHP;
 	DWORD ViewDamageSD;
-	#endif
+#endif
 };
 
 struct PMSG_POSITION_SEND
@@ -457,9 +457,9 @@ struct PMSG_MONSTER_DIE_SEND
 	BYTE index[2];
 	BYTE experience[2];
 	BYTE damage[2];
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewDamageHP;
-	#endif
+#endif
 };
 
 struct PMSG_USER_DIE_SEND
@@ -486,10 +486,10 @@ struct PMSG_LIFE_SEND
 	BYTE life[2];
 	BYTE flag;
 	BYTE shield[2];
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewHP;
 	DWORD ViewSD;
-	#endif
+#endif
 };
 
 struct PMSG_MANA_SEND
@@ -498,10 +498,10 @@ struct PMSG_MANA_SEND
 	BYTE type;
 	BYTE mana[2];
 	BYTE bp[2];
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewMP;
 	DWORD ViewBP;
-	#endif
+#endif
 };
 
 struct PMSG_ITEM_SPECIAL_TIME_SEND
@@ -572,9 +572,9 @@ struct PMSG_REWARD_EXPERIENCE_SEND
 	BYTE index[2];
 	WORD experience[2];
 	BYTE damage[2];
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewDamageHP;
-	#endif
+#endif
 };
 
 struct PMSG_EVENT_ENTER_COUNT_SEND
@@ -592,9 +592,9 @@ struct PMSG_PET_ITEM_INFO_SEND
 	BYTE slot;
 	BYTE level;
 	UINT experience;
-	#if(GAMESERVER_UPDATE>=401)
+#if(GAMESERVER_UPDATE>=401)
 	BYTE durability;
-	#endif
+#endif
 };
 
 struct PMSG_MAP_SERVER_MOVE_SEND
@@ -677,10 +677,10 @@ struct PMSG_ELEMENTAL_DAMAGE_SEND
 	BYTE index[2];
 	BYTE attribute;
 	DWORD damage;
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewCurHP;
 	DWORD ViewCurSD;
-	#endif
+#endif
 };
 
 struct PMSG_CHARACTER_CREATION_ENABLE_SEND
@@ -737,9 +737,9 @@ struct PMSG_CHARACTER_LIST_SEND
 	BYTE ClassCode;
 	BYTE MoveCnt;
 	BYTE count;
-	#if(GAMESERVER_UPDATE>=602)
+#if(GAMESERVER_UPDATE>=602)
 	BYTE ExtWarehouse;
-	#endif
+#endif
 };
 
 struct PMSG_CHARACTER_LIST
@@ -799,10 +799,10 @@ struct PMSG_CHARACTER_INFO_SEND
 	WORD Leadership;
 	WORD FruitSubPoint;
 	WORD MaxFruitSubPoint;
-	#if(GAMESERVER_UPDATE>=602)
+#if(GAMESERVER_UPDATE>=602)
 	BYTE ExtInventory;
-	#endif
-	#if(GAMESERVER_EXTRA==1)
+#endif
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewReset;
 	DWORD ViewPoint;
 	DWORD ViewCurHP;
@@ -818,7 +818,7 @@ struct PMSG_CHARACTER_INFO_SEND
 	DWORD ViewVitality;
 	DWORD ViewEnergy;
 	DWORD ViewLeadership;
-	#endif
+#endif
 };
 
 struct PMSG_CHARACTER_REGEN_SEND
@@ -834,12 +834,12 @@ struct PMSG_CHARACTER_REGEN_SEND
 	WORD BP;
 	BYTE Experience[8];
 	DWORD Money;
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewCurHP;
 	DWORD ViewCurMP;
 	DWORD ViewCurBP;
 	DWORD ViewCurSD;
-	#endif
+#endif
 };
 
 struct PMSG_LEVEL_UP_SEND
@@ -855,7 +855,7 @@ struct PMSG_LEVEL_UP_SEND
 	WORD MaxFruitAddPoint;
 	WORD FruitSubPoint;
 	WORD MaxFruitSubPoint;
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewPoint;
 	DWORD ViewMaxHP;
 	DWORD ViewMaxMP;
@@ -863,7 +863,7 @@ struct PMSG_LEVEL_UP_SEND
 	DWORD ViewMaxSD;
 	DWORD ViewExperience;
 	DWORD ViewNextExperience;
-	#endif
+#endif
 };
 
 struct PMSG_LEVEL_UP_POINT_SEND
@@ -873,7 +873,7 @@ struct PMSG_LEVEL_UP_POINT_SEND
 	WORD MaxLifeAndMana;
 	WORD MaxShield;
 	WORD MaxBP;
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewPoint;
 	DWORD ViewMaxHP;
 	DWORD ViewMaxMP;
@@ -884,7 +884,7 @@ struct PMSG_LEVEL_UP_POINT_SEND
 	DWORD ViewVitality;
 	DWORD ViewEnergy;
 	DWORD ViewLeadership;
-	#endif
+#endif
 };
 
 struct PMSG_MONSTER_DAMAGE_SEND
@@ -892,12 +892,12 @@ struct PMSG_MONSTER_DAMAGE_SEND
 	PSBMSG_HEAD header; // C1:F3:07
 	BYTE damage[2];
 	BYTE ShieldDamage[2];
-	#if(GAMESERVER_EXTRA==1)
+#if(GAMESERVER_EXTRA==1)
 	DWORD ViewCurHP;
 	DWORD ViewCurSD;
 	DWORD ViewDamageHP;
 	DWORD ViewDamageSD;
-	#endif
+#endif
 };
 
 struct PMSG_PK_LEVEL_SEND
@@ -936,7 +936,7 @@ struct PMSG_TIME_VIEW_SEND
 
 struct PMSG_OPTION_DATA_SEND
 {
-	#pragma pack(1)
+#pragma pack(1)
 	PSBMSG_HEAD header; // C1:F3:30
 	BYTE SkillKey[20];
 	BYTE GameOption;
@@ -946,7 +946,7 @@ struct PMSG_OPTION_DATA_SEND
 	BYTE ChatWindow;
 	BYTE RKey;
 	DWORD QWERLevel;
-	#pragma pack()
+#pragma pack()
 };
 
 struct PMSG_MATH_AUTHENTICATOR_SEND
@@ -1107,84 +1107,84 @@ struct PMSG_NEW_MESSAGE_SEND
 //**********************************************//
 //**********************************************//
 
-void ProtocolCore(BYTE head,BYTE* lpMsg,int size,int aIndex,int encrypt,int serial);
-void CGChatRecv(PMSG_CHAT_RECV* lpMsg,int aIndex);
-void CGChatWhisperRecv(PMSG_CHAT_WHISPER_RECV* lpMsg,int aIndex);
-void CGMainCheckRecv(PMSG_MAIN_CHECK_RECV* lpMsg,int aIndex);
-void CGLiveClientRecv(PMSG_LIVE_CLIENT_RECV* lpMsg,int aIndex);
-void CGPositionRecv(PMSG_POSITION_RECV* lpMsg,int aIndex);
-void CGActionRecv(PMSG_ACTION_RECV* lpMsg,int aIndex);
-void CGEventRemainTimeRecv(PMSG_EVENT_REMAIN_TIME_RECV* lpMsg,int aIndex);
-void CGPetItemCommandRecv(PMSG_PET_ITEM_COMMAND_RECV* lpMsg,int aIndex);
-void CGPetItemInfoRecv(PMSG_PET_ITEM_INFO_RECV* lpMsg,int aIndex);
-void CGMapServerMoveAuthRecv(PMSG_MAP_SERVER_MOVE_AUTH_RECV* lpMsg,int aIndex);
-void CGMoveRecv(PMSG_MOVE_RECV* lpMsg,int aIndex);
-void CGConnectAccountRecv(PMSG_CONNECT_ACCOUNT_RECV* lpMsg,int aIndex);
-void CGCloseClientRecv(PMSG_CLOSE_CLIENT_RECV* lpMsg,int aIndex);
+void ProtocolCore(BYTE head, BYTE* lpMsg, int size, int aIndex, int encrypt, int serial);
+void CGChatRecv(PMSG_CHAT_RECV* lpMsg, int aIndex);
+void CGChatWhisperRecv(PMSG_CHAT_WHISPER_RECV* lpMsg, int aIndex);
+void CGMainCheckRecv(PMSG_MAIN_CHECK_RECV* lpMsg, int aIndex);
+void CGLiveClientRecv(PMSG_LIVE_CLIENT_RECV* lpMsg, int aIndex);
+void CGPositionRecv(PMSG_POSITION_RECV* lpMsg, int aIndex);
+void CGActionRecv(PMSG_ACTION_RECV* lpMsg, int aIndex);
+void CGEventRemainTimeRecv(PMSG_EVENT_REMAIN_TIME_RECV* lpMsg, int aIndex);
+void CGPetItemCommandRecv(PMSG_PET_ITEM_COMMAND_RECV* lpMsg, int aIndex);
+void CGPetItemInfoRecv(PMSG_PET_ITEM_INFO_RECV* lpMsg, int aIndex);
+void CGMapServerMoveAuthRecv(PMSG_MAP_SERVER_MOVE_AUTH_RECV* lpMsg, int aIndex);
+void CGMoveRecv(PMSG_MOVE_RECV* lpMsg, int aIndex);
+void CGConnectAccountRecv(PMSG_CONNECT_ACCOUNT_RECV* lpMsg, int aIndex);
+void CGCloseClientRecv(PMSG_CLOSE_CLIENT_RECV* lpMsg, int aIndex);
 void CGCharacterListRecv(int aIndex);
-void CGCharacterCreateRecv(PMSG_CHARACTER_CREATE_RECV* lpMsg,int aIndex);
-void CGCharacterDeleteRecv(PMSG_CHARACTER_DELETE_RECV* lpMsg,int aIndex);
-void CGCharacterInfoRecv(PMSG_CHARACTER_INFO_RECV* lpMsg,int aIndex);
-void CGLevelUpPointRecv(PMSG_LEVEL_UP_POINT_RECV* lpMsg,int aIndex);
+void CGCharacterCreateRecv(PMSG_CHARACTER_CREATE_RECV* lpMsg, int aIndex);
+void CGCharacterDeleteRecv(PMSG_CHARACTER_DELETE_RECV* lpMsg, int aIndex);
+void CGCharacterInfoRecv(PMSG_CHARACTER_INFO_RECV* lpMsg, int aIndex);
+void CGLevelUpPointRecv(PMSG_LEVEL_UP_POINT_RECV* lpMsg, int aIndex);
 void CGCharacterMoveViewportEnableRecv(int aIndex);
-void CGCharacterNameCheckRecv(PMSG_CHARACTER_NAME_CHECK_RECV* lpMsg,int aIndex);
-void CGCharacterNameChangeRecv(PMSG_CHARACTER_NAME_CHANGE_RECV* lpMsg,int aIndex);
-void CGOptionChangeSkinRecv(PMSG_OPTION_CHANGE_SKIN_RECV* lpMsg,int aIndex);
-void CGOptionDataRecv(PMSG_OPTION_DATA_RECV* lpMsg,int aIndex);
-void CGClientSecurityBreachRecv(PMSG_CLIENT_SECURITY_BREACH_RECV* lpMsg,int aIndex);
+void CGCharacterNameCheckRecv(PMSG_CHARACTER_NAME_CHECK_RECV* lpMsg, int aIndex);
+void CGCharacterNameChangeRecv(PMSG_CHARACTER_NAME_CHANGE_RECV* lpMsg, int aIndex);
+void CGOptionChangeSkinRecv(PMSG_OPTION_CHANGE_SKIN_RECV* lpMsg, int aIndex);
+void CGOptionDataRecv(PMSG_OPTION_DATA_RECV* lpMsg, int aIndex);
+void CGClientSecurityBreachRecv(PMSG_CLIENT_SECURITY_BREACH_RECV* lpMsg, int aIndex);
 void CGAcheronEnterRecv(int aIndex);
-void CGSNSDataRecv(PMSG_SNS_DATA_RECV* lpMsg,int aIndex);
-void CGSNSDataLogRecv(PMSG_SNS_DATA_LOG_RECV* lpMsg,int aIndex);
-void GCChatTargetSend(LPOBJ lpObj,int aIndex,char* message);
-void GCChatWhisperSend(int aIndex,char* name,char* message);
+void CGSNSDataRecv(PMSG_SNS_DATA_RECV* lpMsg, int aIndex);
+void CGSNSDataLogRecv(PMSG_SNS_DATA_LOG_RECV* lpMsg, int aIndex);
+void GCChatTargetSend(LPOBJ lpObj, int aIndex, char* message);
+void GCChatWhisperSend(int aIndex, char* name, char* message);
 void GCMainCheckSend(int aIndex);
-void GCEventStateSend(int aIndex,BYTE state,BYTE event);
-void GCEventStateSendToAll(BYTE state,BYTE event);
+void GCEventStateSend(int aIndex, BYTE state, BYTE event);
+void GCEventStateSendToAll(BYTE state, BYTE event);
 void GCEventStateSendToAll(int map, BYTE state, BYTE event);
-void GCServerMsgSend(int aIndex,BYTE msg);
-void GCWeatherSend(int aIndex,BYTE weather);
-void GCDamageSend(int aIndex,int bIndex,BYTE flag,int damage,int type,int ShieldDamage);
-void GCUserDieSend(LPOBJ lpObj,int aIndex,int skill,int bIndex);
-void GCActionSend(LPOBJ lpObj,BYTE action,int aIndex,int bIndex);
-void GCMoneySend(int aIndex,DWORD money);
-void GCLifeSend(int aIndex,BYTE type,int life,int shield);
-void GCManaSend(int aIndex,BYTE type,int mana,int bp);
-void GCItemUseSpecialTimeSend(int aIndex,BYTE number,int time);
-void GCMapAttrSend(int aIndex,BYTE type,BYTE attr,BYTE flag,BYTE count,PMSG_MAP_ATTR* lpInfo);
-void GCPartyItemInfoSend(int aIndex,CItem* lpItem);
-void GCEffectInfoSend(int aIndex,BYTE effect);
+void GCServerMsgSend(int aIndex, BYTE msg);
+void GCWeatherSend(int aIndex, BYTE weather);
+void GCDamageSend(int aIndex, int bIndex, BYTE flag, int damage, int type, int ShieldDamage);
+void GCUserDieSend(LPOBJ lpObj, int aIndex, int skill, int bIndex);
+void GCActionSend(LPOBJ lpObj, BYTE action, int aIndex, int bIndex);
+void GCMoneySend(int aIndex, DWORD money);
+void GCLifeSend(int aIndex, BYTE type, int life, int shield);
+void GCManaSend(int aIndex, BYTE type, int mana, int bp);
+void GCItemUseSpecialTimeSend(int aIndex, BYTE number, int time);
+void GCMapAttrSend(int aIndex, BYTE type, BYTE attr, BYTE flag, BYTE count, PMSG_MAP_ATTR* lpInfo);
+void GCPartyItemInfoSend(int aIndex, CItem* lpItem);
+void GCEffectInfoSend(int aIndex, BYTE effect);
 void GCGuildMasterQuestionSend(int aIndex);
-void GCMonsterSkillSend(LPOBJ lpObj,LPOBJ lpTarget,int skill);
-void GCMonsterDieSend(int aIndex,int bIndex,int experience,int damage,BYTE flag);
-void GCRewardExperienceSend(int aIndex,int experience);
-void GCEventEnterCountSend(int aIndex,BYTE EventType,BYTE EnterCount);
-void GCPetItemInfoSend(int aIndex,BYTE type,BYTE flag,BYTE slot,BYTE level,DWORD experience,BYTE durability);
-void GCMapServerMoveAuthSend(int aIndex,BYTE result);
-void GCTaxInfoSend(int aIndex,BYTE type,BYTE rate);
-void GCCreationStateSend(int aIndex,BYTE state);
-void GCMonsterAreaSkillSend(int aIndex,int MonsterClass,int sx,int sy,int tx,int ty);
-void GCElementalDamageSend(int aIndex,int bIndex,BYTE attribute,int damage);
-void GCCharacterCreationEnableSend(int aIndex,BYTE flag,BYTE result);
+void GCMonsterSkillSend(LPOBJ lpObj, LPOBJ lpTarget, int skill);
+void GCMonsterDieSend(int aIndex, int bIndex, int experience, int damage, BYTE flag);
+void GCRewardExperienceSend(int aIndex, int experience);
+void GCEventEnterCountSend(int aIndex, BYTE EventType, BYTE EnterCount);
+void GCPetItemInfoSend(int aIndex, BYTE type, BYTE flag, BYTE slot, BYTE level, DWORD experience, BYTE durability);
+void GCMapServerMoveAuthSend(int aIndex, BYTE result);
+void GCTaxInfoSend(int aIndex, BYTE type, BYTE rate);
+void GCCreationStateSend(int aIndex, BYTE state);
+void GCMonsterAreaSkillSend(int aIndex, int MonsterClass, int sx, int sy, int tx, int ty);
+void GCElementalDamageSend(int aIndex, int bIndex, BYTE attribute, int damage);
+void GCCharacterCreationEnableSend(int aIndex, BYTE flag, BYTE result);
 void GCLifeUpdateSend(LPOBJ lpObj);
 void GCCharacterAttackSpeedSend(LPOBJ lpObj);
-void GCConnectClientSend(int aIndex,BYTE result);
-void GCConnectAccountSend(int aIndex,BYTE result);
-void GCConnectAccountSend(int aIndex,BYTE result,SOCKET socket);
-void GCCloseClientSend(int aIndex,BYTE result);
+void GCConnectClientSend(int aIndex, BYTE result);
+void GCConnectAccountSend(int aIndex, BYTE result);
+void GCConnectAccountSend(int aIndex, BYTE result, SOCKET socket);
+void GCCloseClientSend(int aIndex, BYTE result);
 void GCCharacterRegenSend(LPOBJ lpObj);
 void GCLevelUpSend(LPOBJ lpObj);
-void GCMonsterDamageSend(int aIndex,int damage,int ShieldDamage);
-void GCPKLevelSend(int aIndex,int PKLevel);
-void GCSummonLifeSend(int aIndex,int life,int MaxLife);
-void GCTimeViewSend(int aIndex,int time);
+void GCMonsterDamageSend(int aIndex, int damage, int ShieldDamage);
+void GCPKLevelSend(int aIndex, int PKLevel);
+void GCSummonLifeSend(int aIndex, int life, int MaxLife);
+void GCTimeViewSend(int aIndex, int time);
 void GCMathAuthenticatorSend(int aIndex);
-void GCFireworksSend(LPOBJ lpObj,int x,int y);
-void GCServerCommandSend(int aIndex,BYTE type,BYTE cmd1,BYTE cmd2);
+void GCFireworksSend(LPOBJ lpObj, int x, int y);
+void GCServerCommandSend(int aIndex, BYTE type, BYTE cmd1, BYTE cmd2);
 void GCNewCharacterInfoSend(LPOBJ lpObj);
 void GCNewCharacterCalcSend(LPOBJ lpObj);
 void GCNewHealthBarSend(LPOBJ lpObj);
 void GCNewGensBattleInfoSend(LPOBJ lpObj);
-void GCNewMessageSend(LPOBJ lpObj,char* message);
+void GCNewMessageSend(LPOBJ lpObj, char* message);
 
 //**************************************************************************//
 // RAW FUNCTIONS ***********************************************************//
@@ -1197,7 +1197,7 @@ struct PMSG_REQ_CASTLESIEGESTATE
 
 struct PMSG_REQ_REGCASTLESIEGE
 {
-	PSBMSG_HEAD h;  
+	PSBMSG_HEAD h;
 };
 
 struct PMSG_REQ_GIVEUPCASTLESIEGE
@@ -1547,8 +1547,8 @@ struct PMSG_ANS_CSATTKGUILDLIST
 
 struct PMSG_ANS_MOVE_TO_CASTLE_HUNTZONE
 {
-    PSBMSG_HEAD h; // +0x0(0x4)
-    BYTE btResult; // +0x4(0x1)
+	PSBMSG_HEAD h; // +0x0(0x4)
+	BYTE btResult; // +0x4(0x1)
 };
 
 struct PMSG_ANS_GUILDMARK_OF_CASTLEOWNER
@@ -1675,11 +1675,11 @@ struct PMSG_ANS_NOTIFYCSSTART
 
 struct PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE
 {
-    PSBMSG_HEAD h;
-    int iPrice;
+	PSBMSG_HEAD h;
+	int iPrice;
 };
 
-struct PMSG_ANS_GUARD_IN_CASTLE_HUNTZONE 
+struct PMSG_ANS_GUARD_IN_CASTLE_HUNTZONE
 {
 	PSBMSG_HEAD h;
 	BYTE btResult;
@@ -1704,20 +1704,67 @@ struct PMSG_UNION_VIEWPORT_NOTIFY
 	char szUnionName[8];
 };
 
-
 struct PMSG_PING_RECV
 {
 	PSBMSG_HEAD header; // C1:F3:F1
 	DWORD time;
 };
 
-// Servidor -> Cliente  
+// Servidor -> Cliente
 struct PMSG_PING_SEND
 {
 	PSBMSG_HEAD header; // C1:F3:F1
 	DWORD clientTime;
 	DWORD serverTime;
 };
+
+//**********************************************//
+//********** Event Schedule Protocol ***********//
+//**********************************************//
+
+#define MAX_EVENT_SCHEDULE_INFO 20
+
+// Tipos de evento para el menu de eventos
+enum eEventScheduleType
+{
+	EVENT_TYPE_BLOOD_CASTLE = 0,
+	EVENT_TYPE_DEVIL_SQUARE = 1,
+	EVENT_TYPE_CHAOS_CASTLE = 2,
+	EVENT_TYPE_ILLUSION_TEMPLE = 3,
+	EVENT_TYPE_CRYWOLF = 4,
+	EVENT_TYPE_KANTURU = 5,
+	EVENT_TYPE_IMPERIAL_GUARDIAN = 6,
+	EVENT_TYPE_DOUBLE_GOER = 7,
+	EVENT_TYPE_RAKLION = 8,
+	EVENT_TYPE_INVASION = 9,
+};
+
+// Informacion de un evento individual
+struct EVENT_SCHEDULE_DATA
+{
+	BYTE EventType;        // Tipo de evento (eEventScheduleType)
+	BYTE EventIndex;       // Indice del evento (nivel para BC/DS/CC, indice de invasion)
+	BYTE State;            // Estado actual del evento
+	WORD RemainTime;       // Tiempo restante en segundos
+	BYTE EnteredUsers;     // Usuarios que han entrado
+	char EventName[32];    // Nombre del evento
+};
+
+// Cliente -> Servidor: Solicitud de informacion de eventos
+struct PMSG_EVENT_SCHEDULE_REQUEST_RECV
+{
+	PSBMSG_HEAD header;    // C1:F3:E5
+};
+
+// Servidor -> Cliente: Respuesta con informacion de eventos
+struct PMSG_EVENT_SCHEDULE_INFO_SEND
+{
+	PSWMSG_HEAD header;    // C2:F3:E5
+	BYTE EventCount;       // Cantidad de eventos en la lista
+	// Seguido de EVENT_SCHEDULE_DATA[EventCount]
+};
+
+//**********************************************//
 
 void CGReqCastleSiegeState(PMSG_REQ_CASTLESIEGESTATE* lpMsg, int iIndex);
 void GCAnsCastleSiegeState(int iIndex, int iResult, char* lpszGuildName, char* lpszGuildMaster);
@@ -1726,9 +1773,9 @@ void GCAnsRegCastleSiege(int iIndex, int iResult, char* lpszGuildName);
 void CGReqGiveUpCastleSiege(PMSG_REQ_GIVEUPCASTLESIEGE* lpMsg, int iIndex);
 void GCAnsGiveUpCastleSiege(int iIndex, int iResult, int bGiveUp, int iMarkCount, char* lpszGuildName);
 void CGReqGuildRegInfo(PMSG_REQ_GUILDREGINFO* lpMsg, int iIndex);
-void GCAnsGuildRegInfo(int iIndex, int iResult,CSP_ANS_GUILDREGINFO* lpMsgResult);
+void GCAnsGuildRegInfo(int iIndex, int iResult, CSP_ANS_GUILDREGINFO* lpMsgResult);
 void CGReqRegGuildMark(PMSG_REQ_REGGUILDMARK* lpMsg, int iIndex);
-void GCAnsRegGuildMark(int iIndex, int iResult,CSP_ANS_GUILDREGMARK* lpMsgResult);
+void GCAnsRegGuildMark(int iIndex, int iResult, CSP_ANS_GUILDREGMARK* lpMsgResult);
 void CGReqNpcBuy(PMSG_REQ_NPCBUY* lpMsg, int iIndex);
 void GCAnsNpcBuy(int iIndex, int iResult, int iNpcNumber, int iNpcIndex);
 void CGReqNpcRepair(PMSG_REQ_NPCREPAIR* lpMsg, int iIndex);
@@ -1763,5 +1810,7 @@ void CGReqNpcDbList(PMSG_REQ_NPCDBLIST* lpMsg, int iIndex);
 void CGReqCsRegGuildList(PMSG_REQ_CSREGGUILDLIST* lpMsg, int iIndex);
 void CGReqCsAttkGuildList(PMSG_REQ_CSATTKGUILDLIST* lpMsg, int iIndex);
 void CGReqGuildMarkOfCastleOwner(PMSG_REQ_GUILDMARK_OF_CASTLEOWNER* aRecv, int iIndex);
-void CGReqCastleHuntZoneEntrance(PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE * aRecv, int iIndex);
+void CGReqCastleHuntZoneEntrance(PMSG_REQ_MOVE_TO_CASTLE_HUNTZONE* aRecv, int iIndex);
 void GCPingRecv(int iIndex);
+void CGEventScheduleRequestRecv(int aIndex);
+void GCEventScheduleInfoSend(int aIndex);

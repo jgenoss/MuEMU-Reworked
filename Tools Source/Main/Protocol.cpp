@@ -10,116 +10,119 @@
 #include "Util.h"
 #include "CustomPing.h"
 
-BOOL ProtocolCoreEx(BYTE head,BYTE* lpMsg,int size,int key) // OK
+BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 {
-	switch(head)
+	switch (head)
 	{
-		case 0x11:
-			GCDamageRecv((PMSG_DAMAGE_RECV*)lpMsg);
+	case 0x11:
+		GCDamageRecv((PMSG_DAMAGE_RECV*)lpMsg);
+		break;
+	case 0x16:
+		GCMonsterDieRecv((PMSG_MONSTER_DIE_RECV*)lpMsg);
+		break;
+	case 0x17:
+		GCUserDieRecv((PMSG_USER_DIE_RECV*)lpMsg);
+		break;
+	case 0x26:
+		GCLifeRecv((PMSG_LIFE_RECV*)lpMsg);
+		break;
+	case 0x27:
+		GCManaRecv((PMSG_MANA_RECV*)lpMsg);
+		break;
+	case 0x2C:
+		GCFruitResultRecv((PMSG_FRUIT_RESULT_RECV*)lpMsg);
+		break;
+	case 0x9C:
+		GCRewardExperienceRecv((PMSG_REWARD_EXPERIENCE_RECV*)lpMsg);
+		break;
+	case 0xA3:
+		GCQuestRewardRecv((PMSG_QUEST_REWARD_RECV*)lpMsg);
+		break;
+	case 0xB1:
+		switch (((lpMsg[0] == 0xC1) ? lpMsg[3] : lpMsg[4]))
+		{
+		case 0x00:
+			GCMapServerMoveRecv((PMSG_MAP_SERVER_MOVE_RECV*)lpMsg);
 			break;
-		case 0x16:
-			GCMonsterDieRecv((PMSG_MONSTER_DIE_RECV*)lpMsg);
+		case 0x01:
+			GCMapServerMoveAuthRecv((PMSG_MAP_SERVER_MOVE_AUTH_RECV*)lpMsg);
 			break;
-		case 0x17:
-			GCUserDieRecv((PMSG_USER_DIE_RECV*)lpMsg);
+		}
+		break;
+	case 0xF1:
+		switch (((lpMsg[0] == 0xC1) ? lpMsg[3] : lpMsg[4]))
+		{
+		case 0x00:
+			GCConnectClientRecv((PMSG_CONNECT_CLIENT_RECV*)lpMsg);
 			break;
-		case 0x26:
-			GCLifeRecv((PMSG_LIFE_RECV*)lpMsg);
+		case 0x01:
+			GCConnectAccountRecv((PMSG_CONNECT_ACCOUNT_RECV*)lpMsg);
 			break;
-		case 0x27:
-			GCManaRecv((PMSG_MANA_RECV*)lpMsg);
+		case 0x02:
+			GCCloseClientRecv((PMSG_CLOSE_CLIENT_RECV*)lpMsg);
 			break;
-		case 0x2C:
-			GCFruitResultRecv((PMSG_FRUIT_RESULT_RECV*)lpMsg);
+		}
+		break;
+	case 0xF3:
+		switch (((lpMsg[0] == 0xC1) ? lpMsg[3] : lpMsg[4]))
+		{
+		case 0x00:
+			GCCharacterListRecv((PMSG_CHARACTER_LIST_RECV*)lpMsg);
 			break;
-		case 0x9C:
-			GCRewardExperienceRecv((PMSG_REWARD_EXPERIENCE_RECV*)lpMsg);
+		case 0x03:
+			GCCharacterInfoRecv((PMSG_CHARACTER_INFO_RECV*)lpMsg);
 			break;
-		case 0xA3:
-			GCQuestRewardRecv((PMSG_QUEST_REWARD_RECV*)lpMsg);
+		case 0x04:
+			GCCharacterRegenRecv((PMSG_CHARACTER_REGEN_RECV*)lpMsg);
 			break;
-		case 0xB1:
-			switch(((lpMsg[0]==0xC1)?lpMsg[3]:lpMsg[4]))
-			{
-				case 0x00:
-					GCMapServerMoveRecv((PMSG_MAP_SERVER_MOVE_RECV*)lpMsg);
-					break;
-				case 0x01:
-					GCMapServerMoveAuthRecv((PMSG_MAP_SERVER_MOVE_AUTH_RECV*)lpMsg);
-					break;
-			}
+		case 0x05:
+			GCLevelUpRecv((PMSG_LEVEL_UP_RECV*)lpMsg);
 			break;
+		case 0x06:
+			GCLevelUpPointRecv((PMSG_LEVEL_UP_POINT_RECV*)lpMsg);
+			break;
+		case 0x07:
+			GCMonsterDamageRecv((PMSG_MONSTER_DAMAGE_RECV*)lpMsg);
+			break;
+		case 0x50:
+			GCMasterInfoRecv((PMSG_MASTER_INFO_RECV*)lpMsg);
+			break;
+		case 0x51:
+			GCMasterLevelUpRecv((PMSG_MASTER_LEVEL_UP_RECV*)lpMsg);
+			break;
+		case 0xE0:
+			GCNewCharacterInfoRecv((PMSG_NEW_CHARACTER_INFO_RECV*)lpMsg);
+			return 1;
+		case 0xE1:
+			GCNewCharacterCalcRecv((PMSG_NEW_CHARACTER_CALC_RECV*)lpMsg);
+			return 1;
+		case 0xE2:
+			GCNewHealthBarRecv((PMSG_NEW_HEALTH_BAR_RECV*)lpMsg);
+			return 1;
+		case 0xE3:
+			GCNewGensBattleInfoRecv((PMSG_NEW_GENS_BATTLE_INFO_RECV*)lpMsg);
+			return 1;
+		case 0xE4:
+			GCNewMessageRecv((PMSG_NEW_MESSAGE_RECV*)lpMsg);
+			return 1;
 		case 0xF1:
-			switch(((lpMsg[0]==0xC1)?lpMsg[3]:lpMsg[4]))
-			{
-				case 0x00:
-					GCConnectClientRecv((PMSG_CONNECT_CLIENT_RECV*)lpMsg);
-					break;
-				case 0x01:
-					GCConnectAccountRecv((PMSG_CONNECT_ACCOUNT_RECV*)lpMsg);
-					break;
-				case 0x02:
-					GCCloseClientRecv((PMSG_CLOSE_CLIENT_RECV*)lpMsg);
-					break;
-			}
+			gCustomPing.PingRecv();
 			break;
-		case 0xF3:
-			switch(((lpMsg[0]==0xC1)?lpMsg[3]:lpMsg[4]))
-			{
-				case 0x00:
-					GCCharacterListRecv((PMSG_CHARACTER_LIST_RECV*)lpMsg);
-					break;
-				case 0x03:
-					GCCharacterInfoRecv((PMSG_CHARACTER_INFO_RECV*)lpMsg);
-					break;
-				case 0x04:
-					GCCharacterRegenRecv((PMSG_CHARACTER_REGEN_RECV*)lpMsg);
-					break;
-				case 0x05:
-					GCLevelUpRecv((PMSG_LEVEL_UP_RECV*)lpMsg);
-					break;
-				case 0x06:
-					GCLevelUpPointRecv((PMSG_LEVEL_UP_POINT_RECV*)lpMsg);
-					break;
-				case 0x07:
-					GCMonsterDamageRecv((PMSG_MONSTER_DAMAGE_RECV*)lpMsg);
-					break;
-				case 0x50:
-					GCMasterInfoRecv((PMSG_MASTER_INFO_RECV*)lpMsg);
-					break;
-				case 0x51:
-					GCMasterLevelUpRecv((PMSG_MASTER_LEVEL_UP_RECV*)lpMsg);
-					break;
-				case 0xE0:
-					GCNewCharacterInfoRecv((PMSG_NEW_CHARACTER_INFO_RECV*)lpMsg);
-					return 1;
-				case 0xE1:
-					GCNewCharacterCalcRecv((PMSG_NEW_CHARACTER_CALC_RECV*)lpMsg);
-					return 1;
-				case 0xE2:
-					GCNewHealthBarRecv((PMSG_NEW_HEALTH_BAR_RECV*)lpMsg);
-					return 1;
-				case 0xE3:
-					GCNewGensBattleInfoRecv((PMSG_NEW_GENS_BATTLE_INFO_RECV*)lpMsg);
-					return 1;
-				case 0xE4:
-					GCNewMessageRecv((PMSG_NEW_MESSAGE_RECV*)lpMsg);
-					return 1;
-				case 0xF1:
-					gCustomPing.PingRecv();
-					break;
-			}
-			break;
+		case 0xE5:
+			GCEventScheduleInfoRecv((PMSG_EVENT_SCHEDULE_INFO_RECV*)lpMsg);
+			return 1;
+		}
+		break;
 	}
 
-	return ProtocolCore(head,lpMsg,size,key);
+	return ProtocolCore(head, lpMsg, size, key);
 }
 
 void GCDamageRecv(PMSG_DAMAGE_RECV* lpMsg) // OK
 {
-	int aIndex = MAKE_NUMBERW(lpMsg->index[0],lpMsg->index[1]) & 0x7FFF;
+	int aIndex = MAKE_NUMBERW(lpMsg->index[0], lpMsg->index[1]) & 0x7FFF;
 
-	if(ViewIndex == aIndex)
+	if (ViewIndex == aIndex)
 	{
 		ViewCurHP = lpMsg->ViewCurHP;
 		ViewCurSD = lpMsg->ViewCurSD;
@@ -128,18 +131,18 @@ void GCDamageRecv(PMSG_DAMAGE_RECV* lpMsg) // OK
 	ViewDamageHP = lpMsg->ViewDamageHP;
 	ViewDamageSD = lpMsg->ViewDamageSD;
 
-	if((lpMsg->type & 0x10) != 0)
+	if ((lpMsg->type & 0x10) != 0)
 	{
-		if(ViewDamageCount < 3)
+		if (ViewDamageCount < 3)
 		{
 			ViewDamageTable[ViewDamageCount++] = lpMsg->ViewDamageHP;
 			ViewDamageValue = ViewDamageCount;
 		}
 	}
 
-	if((lpMsg->type & 0x20) != 0)
+	if ((lpMsg->type & 0x20) != 0)
 	{
-		if(ViewDamageCount < 4)
+		if (ViewDamageCount < 4)
 		{
 			ViewDamageTable[ViewDamageCount++] = lpMsg->ViewDamageHP;
 			ViewDamageValue = ViewDamageCount;
@@ -154,9 +157,9 @@ void GCMonsterDieRecv(PMSG_MONSTER_DIE_RECV* lpMsg) // OK
 
 void GCUserDieRecv(PMSG_USER_DIE_RECV* lpMsg) // OK
 {
-	int aIndex = MAKE_NUMBERW(lpMsg->index[0],lpMsg->index[1]) & 0x7FFF;
+	int aIndex = MAKE_NUMBERW(lpMsg->index[0], lpMsg->index[1]) & 0x7FFF;
 
-	if(ViewIndex == aIndex)
+	if (ViewIndex == aIndex)
 	{
 		ViewCurHP = 0;
 	}
@@ -164,28 +167,28 @@ void GCUserDieRecv(PMSG_USER_DIE_RECV* lpMsg) // OK
 
 void GCLifeRecv(PMSG_LIFE_RECV* lpMsg) // OK
 {
-	if(lpMsg->type == 0xFE)
+	if (lpMsg->type == 0xFE)
 	{
 		ViewMaxHP = lpMsg->ViewHP;
 		ViewMaxSD = lpMsg->ViewSD;
 	}
 
-	if(lpMsg->type == 0xFF)
+	if (lpMsg->type == 0xFF)
 	{
-		ViewCurHP = ((ViewCurHP==0)?ViewCurHP:lpMsg->ViewHP);
+		ViewCurHP = ((ViewCurHP == 0) ? ViewCurHP : lpMsg->ViewHP);
 		ViewCurSD = lpMsg->ViewSD;
 	}
 }
 
 void GCManaRecv(PMSG_MANA_RECV* lpMsg) // OK
 {
-	if(lpMsg->type == 0xFE)
+	if (lpMsg->type == 0xFE)
 	{
 		ViewMaxMP = lpMsg->ViewMP;
 		ViewMaxBP = lpMsg->ViewBP;
 	}
 
-	if(lpMsg->type == 0xFF)
+	if (lpMsg->type == 0xFF)
 	{
 		ViewCurMP = lpMsg->ViewMP;
 		ViewCurBP = lpMsg->ViewBP;
@@ -194,7 +197,7 @@ void GCManaRecv(PMSG_MANA_RECV* lpMsg) // OK
 
 void GCFruitResultRecv(PMSG_FRUIT_RESULT_RECV* lpMsg) // OK
 {
-	if(lpMsg->result == 0 || lpMsg->result == 3 || lpMsg->result == 6 || lpMsg->result == 17)
+	if (lpMsg->result == 0 || lpMsg->result == 3 || lpMsg->result == 6 || lpMsg->result == 17)
 	{
 		ViewValue = lpMsg->ViewValue;
 		ViewPoint = lpMsg->ViewPoint;
@@ -213,9 +216,9 @@ void GCRewardExperienceRecv(PMSG_REWARD_EXPERIENCE_RECV* lpMsg) // OK
 
 void GCQuestRewardRecv(PMSG_QUEST_REWARD_RECV* lpMsg) // OK
 {
-	int aIndex = MAKE_NUMBERW(lpMsg->index[0],lpMsg->index[1]) & 0x7FFF;
+	int aIndex = MAKE_NUMBERW(lpMsg->index[0], lpMsg->index[1]) & 0x7FFF;
 
-	if(ViewIndex == aIndex)
+	if (ViewIndex == aIndex)
 	{
 		ViewPoint = lpMsg->ViewPoint;
 	}
@@ -223,7 +226,7 @@ void GCQuestRewardRecv(PMSG_QUEST_REWARD_RECV* lpMsg) // OK
 
 void GCMapServerMoveRecv(PMSG_MAP_SERVER_MOVE_RECV* lpMsg) // OK
 {
-	ReconnectOnMapServerMove(lpMsg->IpAddress,lpMsg->ServerPort);
+	ReconnectOnMapServerMove(lpMsg->IpAddress, lpMsg->ServerPort);
 }
 
 void GCMapServerMoveAuthRecv(PMSG_MAP_SERVER_MOVE_AUTH_RECV* lpMsg) // OK
@@ -233,7 +236,7 @@ void GCMapServerMoveAuthRecv(PMSG_MAP_SERVER_MOVE_AUTH_RECV* lpMsg) // OK
 
 void GCConnectClientRecv(PMSG_CONNECT_CLIENT_RECV* lpMsg) // OK
 {
-	ViewIndex = MAKE_NUMBERW(lpMsg->index[0],lpMsg->index[1]);
+	ViewIndex = MAKE_NUMBERW(lpMsg->index[0], lpMsg->index[1]);
 }
 
 void GCConnectAccountRecv(PMSG_CONNECT_ACCOUNT_RECV* lpMsg) // OK
@@ -275,29 +278,29 @@ void GCCharacterInfoRecv(PMSG_CHARACTER_INFO_RECV* lpMsg) // OK
 
 	*(BYTE*)(*(DWORD*)(MAIN_VIEWPORT_STRUCT)+0x30C) = 0;
 
-	switch(((*(BYTE*)(*(DWORD*)(MAIN_CHARACTER_STRUCT)+0x0B)) & 7))
+	switch (((*(BYTE*)(*(DWORD*)(MAIN_CHARACTER_STRUCT)+0x0B)) & 7))
 	{
-		case 0:
-			SetByte(0x00556C38,((gProtect.m_MainInfo.DWMaxAttackSpeed>=0xFFFF)?0x02:0x0F));
-			break;
-		case 1:
-			SetByte(0x00556C38,((gProtect.m_MainInfo.DKMaxAttackSpeed>=0xFFFF)?0x02:0x0F));
-			break;
-		case 2:
-			SetByte(0x00556C38,((gProtect.m_MainInfo.FEMaxAttackSpeed>=0xFFFF)?0x02:0x0F));
-			break;
-		case 3:
-			SetByte(0x00556C38,((gProtect.m_MainInfo.MGMaxAttackSpeed>=0xFFFF)?0x02:0x0F));
-			break;
-		case 4:
-			SetByte(0x00556C38,((gProtect.m_MainInfo.DLMaxAttackSpeed>=0xFFFF)?0x02:0x0F));
-			break;
-		case 5:
-			SetByte(0x00556C38,((gProtect.m_MainInfo.SUMaxAttackSpeed>=0xFFFF)?0x02:0x0F));
-			break;
-		case 6:
-			SetByte(0x00556C38,((gProtect.m_MainInfo.RFMaxAttackSpeed>=0xFFFF)?0x0F:0x0F));
-			break;
+	case 0:
+		SetByte(0x00556C38, ((gProtect.m_MainInfo.DWMaxAttackSpeed >= 0xFFFF) ? 0x02 : 0x0F));
+		break;
+	case 1:
+		SetByte(0x00556C38, ((gProtect.m_MainInfo.DKMaxAttackSpeed >= 0xFFFF) ? 0x02 : 0x0F));
+		break;
+	case 2:
+		SetByte(0x00556C38, ((gProtect.m_MainInfo.FEMaxAttackSpeed >= 0xFFFF) ? 0x02 : 0x0F));
+		break;
+	case 3:
+		SetByte(0x00556C38, ((gProtect.m_MainInfo.MGMaxAttackSpeed >= 0xFFFF) ? 0x02 : 0x0F));
+		break;
+	case 4:
+		SetByte(0x00556C38, ((gProtect.m_MainInfo.DLMaxAttackSpeed >= 0xFFFF) ? 0x02 : 0x0F));
+		break;
+	case 5:
+		SetByte(0x00556C38, ((gProtect.m_MainInfo.SUMaxAttackSpeed >= 0xFFFF) ? 0x02 : 0x0F));
+		break;
+	case 6:
+		SetByte(0x00556C38, ((gProtect.m_MainInfo.RFMaxAttackSpeed >= 0xFFFF) ? 0x0F : 0x0F));
+		break;
 	}
 }
 
@@ -322,7 +325,7 @@ void GCLevelUpRecv(PMSG_LEVEL_UP_RECV* lpMsg) // OK
 
 void GCLevelUpPointRecv(PMSG_LEVEL_UP_POINT_RECV* lpMsg) // OK
 {
-	if(lpMsg->result >= 16 && lpMsg->result <= 20)
+	if (lpMsg->result >= 16 && lpMsg->result <= 20)
 	{
 		ViewPoint = lpMsg->ViewPoint;
 		ViewMaxHP = lpMsg->ViewMaxHP;
@@ -475,11 +478,11 @@ void GCNewHealthBarRecv(PMSG_NEW_HEALTH_BAR_RECV* lpMsg) // OK
 {
 	ClearNewHealthBar();
 
-	for(int n=0;n < lpMsg->count;n++)
+	for (int n = 0; n < lpMsg->count; n++)
 	{
-		PMSG_NEW_HEALTH_RECV* lpInfo = (PMSG_NEW_HEALTH_RECV*)(((BYTE*)lpMsg)+sizeof(PMSG_NEW_HEALTH_BAR_RECV)+(sizeof(PMSG_NEW_HEALTH_RECV)*n));
+		PMSG_NEW_HEALTH_RECV* lpInfo = (PMSG_NEW_HEALTH_RECV*)(((BYTE*)lpMsg) + sizeof(PMSG_NEW_HEALTH_BAR_RECV) + (sizeof(PMSG_NEW_HEALTH_RECV) * n));
 
-		InsertNewHealthBar(lpInfo->index,lpInfo->type,lpInfo->rate);
+		InsertNewHealthBar(lpInfo->index, lpInfo->type, lpInfo->rate);
 	}
 }
 
@@ -489,35 +492,34 @@ void GCNewGensBattleInfoRecv(PMSG_NEW_GENS_BATTLE_INFO_RECV* lpMsg) // OK
 
 	GensMoveIndexCount = lpMsg->GensMoveIndexCount;
 
-	memcpy(GensBattleMap,lpMsg->GensBattleMap,sizeof(GensBattleMap));
+	memcpy(GensBattleMap, lpMsg->GensBattleMap, sizeof(GensBattleMap));
 
-	memcpy(GensMoveIndex,lpMsg->GensMoveIndex,sizeof(GensMoveIndex));
+	memcpy(GensMoveIndex, lpMsg->GensMoveIndex, sizeof(GensMoveIndex));
 }
 
 void GCNewMessageRecv(PMSG_NEW_MESSAGE_RECV* lpMsg) // OK
 {
-
 }
 
-void DataSend(BYTE* lpMsg,DWORD size) // OK
+void DataSend(BYTE* lpMsg, DWORD size) // OK
 {
 	BYTE EncBuff[2048];
 
-	if(gPacketManager.AddData(lpMsg,size) != 0 && gPacketManager.ExtractPacket(EncBuff) != 0)
+	if (gPacketManager.AddData(lpMsg, size) != 0 && gPacketManager.ExtractPacket(EncBuff) != 0)
 	{
 		BYTE send[2048];
 
-		memcpy(send,EncBuff,size);
+		memcpy(send, EncBuff, size);
 
-		if(EncBuff[0] == 0xC3 || EncBuff[0] == 0xC4)
+		if (EncBuff[0] == 0xC3 || EncBuff[0] == 0xC4)
 		{
-			if(EncBuff[0] == 0xC3)
+			if (EncBuff[0] == 0xC3)
 			{
 				BYTE save = EncBuff[1];
 
 				EncBuff[1] = (*(BYTE*)(MAIN_PACKET_SERIAL))++;
 
-				size = gPacketManager.Encrypt(&send[2],&EncBuff[1],(size-1))+2;
+				size = gPacketManager.Encrypt(&send[2], &EncBuff[1], (size - 1)) + 2;
 
 				EncBuff[1] = save;
 
@@ -530,7 +532,7 @@ void DataSend(BYTE* lpMsg,DWORD size) // OK
 
 				EncBuff[2] = (*(BYTE*)(MAIN_PACKET_SERIAL))++;
 
-				size = gPacketManager.Encrypt(&send[3],&EncBuff[2],(size-2))+3;
+				size = gPacketManager.Encrypt(&send[3], &EncBuff[2], (size - 2)) + 3;
 
 				EncBuff[2] = save;
 
@@ -540,6 +542,21 @@ void DataSend(BYTE* lpMsg,DWORD size) // OK
 			}
 		}
 
-		((void(__thiscall*)(void*,BYTE*,DWORD))0x00405110)((void*)0x08793750,send,size);
+		((void(__thiscall*)(void*, BYTE*, DWORD))0x00405110)((void*)0x08793750, send, size);
 	}
+}
+
+void GCEventScheduleInfoRecv(PMSG_EVENT_SCHEDULE_INFO_RECV* lpMsg)
+{
+	// Procesar la informacion de eventos recibida del servidor
+	// Esta funcion sera llamada por EventMenu para obtener los datos
+	extern void ProcessEventScheduleData(PMSG_EVENT_SCHEDULE_INFO_RECV * lpMsg);
+	ProcessEventScheduleData(lpMsg);
+}
+
+void CGEventScheduleRequestSend()
+{
+	PMSG_EVENT_SCHEDULE_REQUEST_SEND pMsg;
+	pMsg.header.set(0xF3, 0xE5, sizeof(pMsg));
+	DataSend((BYTE*)&pMsg, sizeof(pMsg));
 }

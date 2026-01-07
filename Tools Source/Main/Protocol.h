@@ -17,14 +17,14 @@
 
 struct PBMSG_HEAD
 {
-	void set(BYTE head,BYTE size) // OK
+	void set(BYTE head, BYTE size) // OK
 	{
 		this->type = 0xC1;
 		this->size = size;
 		this->head = head;
 	}
 
-	void setE(BYTE head,BYTE size) // OK
+	void setE(BYTE head, BYTE size) // OK
 	{
 		this->type = 0xC3;
 		this->size = size;
@@ -38,7 +38,7 @@ struct PBMSG_HEAD
 
 struct PSBMSG_HEAD
 {
-	void set(BYTE head,BYTE subh,BYTE size) // OK
+	void set(BYTE head, BYTE subh, BYTE size) // OK
 	{
 		this->type = 0xC1;
 		this->size = size;
@@ -46,7 +46,7 @@ struct PSBMSG_HEAD
 		this->subh = subh;
 	}
 
-	void setE(BYTE head,BYTE subh,BYTE size) // OK
+	void setE(BYTE head, BYTE subh, BYTE size) // OK
 	{
 		this->type = 0xC3;
 		this->size = size;
@@ -62,7 +62,7 @@ struct PSBMSG_HEAD
 
 struct PWMSG_HEAD
 {
-	void set(BYTE head,WORD size) // OK
+	void set(BYTE head, WORD size) // OK
 	{
 		this->type = 0xC2;
 		this->size[0] = HIBYTE(size);
@@ -70,7 +70,7 @@ struct PWMSG_HEAD
 		this->head = head;
 	}
 
-	void setE(BYTE head,WORD size) // OK
+	void setE(BYTE head, WORD size) // OK
 	{
 		this->type = 0xC4;
 		this->size[0] = HIBYTE(size);
@@ -85,7 +85,7 @@ struct PWMSG_HEAD
 
 struct PSWMSG_HEAD
 {
-	void set(BYTE head,BYTE subh,WORD size) // OK
+	void set(BYTE head, BYTE subh, WORD size) // OK
 	{
 		this->type = 0xC2;
 		this->size[0] = HIBYTE(size);
@@ -94,7 +94,7 @@ struct PSWMSG_HEAD
 		this->subh = subh;
 	}
 
-	void setE(BYTE head,BYTE subh,WORD size) // OK
+	void setE(BYTE head, BYTE subh, WORD size) // OK
 	{
 		this->type = 0xC4;
 		this->size[0] = HIBYTE(size);
@@ -553,14 +553,14 @@ struct PMSG_HELPER_START_SEND
 
 struct PMSG_CONNECT_ACCOUNT_SEND
 {
-	#pragma pack(1)
+#pragma pack(1)
 	PSBMSG_HEAD header; // C3:F1:01
 	char account[10];
 	char password[20];
 	DWORD TickCount;
 	BYTE ClientVersion[5];
 	BYTE ClientSerial[16];
-	#pragma pack()
+#pragma pack()
 };
 
 struct PMSG_CHARACTER_LIST_SEND
@@ -577,8 +577,56 @@ struct PMSG_CHARACTER_INFO_SEND
 //**********************************************//
 //**********************************************//
 //**********************************************//
+//********** Event Schedule Protocol ***********//
+//**********************************************//
 
-BOOL ProtocolCoreEx(BYTE head,BYTE* lpMsg,int size,int key);
+#define MAX_EVENT_SCHEDULE_INFO 20
+
+// Tipos de evento para el menu de eventos
+enum eEventScheduleType
+{
+	EVENT_TYPE_BLOOD_CASTLE = 0,
+	EVENT_TYPE_DEVIL_SQUARE = 1,
+	EVENT_TYPE_CHAOS_CASTLE = 2,
+	EVENT_TYPE_ILLUSION_TEMPLE = 3,
+	EVENT_TYPE_CRYWOLF = 4,
+	EVENT_TYPE_KANTURU = 5,
+	EVENT_TYPE_IMPERIAL_GUARDIAN = 6,
+	EVENT_TYPE_DOUBLE_GOER = 7,
+	EVENT_TYPE_RAKLION = 8,
+	EVENT_TYPE_INVASION = 9,
+};
+
+// Informacion de un evento individual (recibida del servidor)
+struct EVENT_SCHEDULE_DATA
+{
+	BYTE EventType;        // Tipo de evento (eEventScheduleType)
+	BYTE EventIndex;       // Indice del evento
+	BYTE State;            // Estado actual del evento
+	WORD RemainTime;       // Tiempo restante en segundos
+	BYTE EnteredUsers;     // Usuarios que han entrado
+	char EventName[32];    // Nombre del evento
+};
+
+// Servidor -> Cliente: Respuesta con informacion de eventos
+struct PMSG_EVENT_SCHEDULE_INFO_RECV
+{
+	PSWMSG_HEAD header;    // C2:F3:E5
+	BYTE EventCount;       // Cantidad de eventos en la lista
+	// Seguido de EVENT_SCHEDULE_DATA[EventCount]
+};
+
+//**********************************************//
+//************ Client -> GameServer ************//
+//**********************************************//
+// Cliente -> Servidor: Solicitud de informacion de eventos
+
+struct PMSG_EVENT_SCHEDULE_REQUEST_SEND
+{
+	PSBMSG_HEAD header;    // C1:F3:E5
+};
+
+BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key);
 void GCDamageRecv(PMSG_DAMAGE_RECV* lpMsg);
 void GCMonsterDieRecv(PMSG_MONSTER_DIE_RECV* lpMsg);
 void GCUserDieRecv(PMSG_USER_DIE_RECV* lpMsg);
@@ -605,4 +653,6 @@ void GCNewCharacterCalcRecv(PMSG_NEW_CHARACTER_CALC_RECV* lpMsg);
 void GCNewHealthBarRecv(PMSG_NEW_HEALTH_BAR_RECV* lpMsg);
 void GCNewGensBattleInfoRecv(PMSG_NEW_GENS_BATTLE_INFO_RECV* lpMsg);
 void GCNewMessageRecv(PMSG_NEW_MESSAGE_RECV* lpMsg);
-void DataSend(BYTE* lpMsg,DWORD size);
+void DataSend(BYTE* lpMsg, DWORD size);
+void GCEventScheduleInfoRecv(PMSG_EVENT_SCHEDULE_INFO_RECV* lpMsg);
+void CGEventScheduleRequestSend();
