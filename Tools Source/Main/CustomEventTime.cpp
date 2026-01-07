@@ -266,6 +266,20 @@ void CCustomEventTime::DrawEventTimePanelWindow()
 
 		for (int i = startIdx; i < endIdx && i < this->m_count; i++)
 		{
+			int eventIndex = this->m_gCustomEventTime[i].index;
+
+			// Saltar eventos reservados/no implementados (indices 8-13)
+			if (eventIndex >= 8 && eventIndex <= 13)
+			{
+				continue;
+			}
+
+			// Para invasiones y arena (14+), solo mostrar si tienen tiempo valido
+			if (eventIndex >= 14 && this->m_gCustomEventTime[i].time <= -1)
+			{
+				continue;
+			}
+
 			// Formatear tiempo
 			if (this->m_gCustomEventTime[i].time <= -1)
 			{
@@ -308,7 +322,6 @@ void CCustomEventTime::DrawEventTimePanelWindow()
 			}
 
 			// Nombre del evento
-			int eventIndex = this->m_gCustomEventTime[i].index;
 			if (eventIndex >= 0 && eventIndex < MAX_EVENTTIME)
 			{
 				gUIBase.DrawFormat(g_muColors.White, (int)StartX + 20, (int)currentY, 130, 1,
