@@ -43,13 +43,10 @@ public:
 	int EventDs;              // Devil Square
 	int EventCc;              // Chaos Castle
 	int EventIt;              // Illusion Temple
-	int EventCustomLottery;   // Lotería
+	int EventKanturu;         // Kanturu
 	int EventCustomBonus;     // Bonus
-	int EventCustomQuiz;      // Quiz
 	int EventMoss;            // Moss Merchant
-	int EventKing;            // King of MU
 	int EventDrop;            // Event Drop
-	int EventTvT;             // Team vs Team
 	int EventInvasion[30];    // Invasiones
 	int EventCustomArena[30]; // Arena Custom
 

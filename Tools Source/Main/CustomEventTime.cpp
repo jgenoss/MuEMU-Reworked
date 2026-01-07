@@ -179,6 +179,15 @@ void CCustomEventTime::DrawEventTimePanelWindow()
 	float StartY = 80.0f;
 	float StartX = (640.0f / 2.0f) - (MainWidth / 2.0f);
 
+	// BLOQUEAR CLICKS HACIA EL FONDO SI EL MOUSE ESTA SOBRE EL PANEL
+	int mouseX = gMuClientApi.CursorX();
+	int mouseY = gMuClientApi.CursorY();
+	if (mouseX >= StartX && mouseX <= StartX + MainWidth &&
+		mouseY >= StartY && mouseY <= StartY + MainHeight)
+	{
+		gMuClientApi.SetCursorFocus() = 1;
+	}
+
 	// Dibujar fondo del panel
 	glPushAttrib(GL_ALL_ATTRIB_BITS);
 	gMuClientApi.SetBlend(1);
@@ -200,7 +209,13 @@ void CCustomEventTime::DrawEventTimePanelWindow()
 	float cX = StartX + MainWidth - closeSize - 5;
 	float cY = StartY + 5;
 
-	glColor4f(0.7f, 0.1f, 0.1f, 1.0f);
+	// Cambiar color si mouse esta sobre el boton X
+	bool isOverClose = (mouseX >= cX && mouseX <= cX + closeSize &&
+		mouseY >= cY && mouseY <= cY + closeSize);
+	if (isOverClose)
+		glColor4f(1.0f, 0.2f, 0.2f, 1.0f);
+	else
+		glColor4f(0.7f, 0.1f, 0.1f, 1.0f);
 	gMuClientApi.DrawBarForm(cX, cY, closeSize, closeSize, 0, 0);
 
 	gMuClientApi.GLSwitch();
