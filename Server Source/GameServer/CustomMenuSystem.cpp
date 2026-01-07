@@ -11,6 +11,7 @@
 #include "Util.h"
 #include "DSProtocol.h"
 #include "Map.h"
+#include "Guild.h"
 
 CCustomMenuSystem gCustomMenuSystem;
 
@@ -43,11 +44,12 @@ void CCustomMenuSystem::GCReqFinances(int aIndex, PMSG_CUSTOM_FINANCES_RECV* lpM
 	PMSG_CUSTOM_FINANCES_SEND pMsg;
 	pMsg.header.set(0xF3, 0xE9, sizeof(pMsg));
 
-	// Obtener valores de monedas del jugador
-	// Nota: Ajustar segun la estructura del servidor
-	pMsg.Cash = lpObj->AccountExtraInfo.WCoinC;      // WCoin/Cash
-	pMsg.Gold = lpObj->AccountExtraInfo.WCoinP;      // WCoinP/Gold
-	pMsg.PcPoint = lpObj->AccountExtraInfo.GoblinPoint; // PcPoint/GoblinPoint
+	// Los coins se obtienen del DataServer via CashShop
+	// Por ahora enviamos valores de prueba
+	// TODO: Integrar con el sistema de CashShop para obtener valores reales
+	pMsg.Cash = 0;       // WCoinC - requiere consulta al DataServer
+	pMsg.Gold = 0;       // WCoinP - requiere consulta al DataServer
+	pMsg.PcPoint = 0;    // GoblinPoint - requiere consulta al DataServer
 
 	DataSend(aIndex, (BYTE*)&pMsg, sizeof(pMsg));
 }
@@ -91,9 +93,7 @@ void CCustomMenuSystem::GCReqRanking(int aIndex, PMSG_CUSTOM_RANKING_RECV* lpMsg
 	if (totalPages < 1) totalPages = 1;
 	if (page > totalPages) page = totalPages;
 
-	// Recopilar datos de ranking (ordenados por resets y nivel)
-	// Nota: En una implementacion real, esto deberia venir de la base de datos
-
+	// Recopilar datos de ranking de jugadores conectados
 	int currentIndex = 0;
 	for (int n = OBJECT_START_USER; n < MAX_OBJECT && count < entriesPerPage; n++)
 	{
@@ -112,10 +112,9 @@ void CCustomMenuSystem::GCReqRanking(int aIndex, PMSG_CUSTOM_RANKING_RECV* lpMsg
 				pData[count].Map = (BYTE)lpPlayer->Map;
 
 				// Obtener nombre del guild
-				if (lpPlayer->GuildNumber > 0)
+				if (lpPlayer->GuildNumber > 0 && lpPlayer->Guild != 0)
 				{
-					// Aqui deberia obtener el nombre del guild
-					strncpy(pData[count].Guild, "", 8);
+					strncpy(pData[count].Guild, lpPlayer->Guild->Name, 8);
 				}
 				else
 				{

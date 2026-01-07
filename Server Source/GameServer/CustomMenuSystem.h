@@ -13,12 +13,12 @@
 
 struct PMSG_CUSTOM_FINANCES_RECV
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:E9
 };
 
 struct PMSG_CUSTOM_FINANCES_SEND
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:E9
 	int Cash;
 	int Gold;
 	int PcPoint;
@@ -30,7 +30,7 @@ struct PMSG_CUSTOM_FINANCES_SEND
 
 struct PMSG_CUSTOM_COMMANDS_RECV
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:EA
 };
 
 struct CUSTOM_COMMAND_DATA
@@ -42,7 +42,7 @@ struct CUSTOM_COMMAND_DATA
 
 struct PMSG_CUSTOM_COMMANDS_SEND
 {
-	PWMSG_HEAD header;
+	PSWMSG_HEAD header;  // C2:F3:EA
 	BYTE count;
 	// CUSTOM_COMMAND_DATA data[count]
 };
@@ -53,7 +53,7 @@ struct PMSG_CUSTOM_COMMANDS_SEND
 
 struct PMSG_CUSTOM_RANKING_RECV
 {
-	PBMSG_HEAD header;
+	PSBMSG_HEAD header;  // C1:F3:EB
 	BYTE page;
 };
 
@@ -70,7 +70,7 @@ struct CUSTOM_RANKING_DATA
 
 struct PMSG_CUSTOM_RANKING_SEND
 {
-	PWMSG_HEAD header;
+	PSWMSG_HEAD header;  // C2:F3:EB
 	BYTE page;
 	BYTE totalPages;
 	BYTE count;
