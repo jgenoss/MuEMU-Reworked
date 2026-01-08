@@ -61,6 +61,7 @@ void CCustomEventTime::GCReqEventTime(int aIndex, PMSG_CUSTOM_EVENTTIME_RECV* lp
 	CUSTOM_EVENTTIME_DATA info;
 
 	// EVENTOS PRINCIPALES (índices 0-13)
+	// Solo eventos implementados: BC, DS, CC, IT, Kanturu, Bonus, Moss, Drop
 	for (int n = 0; n < 14; n++)
 	{
 		info.index = n;
@@ -71,14 +72,11 @@ void CCustomEventTime::GCReqEventTime(int aIndex, PMSG_CUSTOM_EVENTTIME_RECV* lp
 		case 1:  info.time = gServerDisplayer.EventDs; break;           // Devil Square
 		case 2:  info.time = gServerDisplayer.EventCc; break;           // Chaos Castle
 		case 3:  info.time = gServerDisplayer.EventIt; break;           // Illusion Temple
-		case 4:  info.time = gServerDisplayer.EventCustomLottery; break;
-		case 5:  info.time = gServerDisplayer.EventCustomQuiz; break;
-		case 6:  info.time = gServerDisplayer.EventCustomBonus; break;
-		case 7:  info.time = gServerDisplayer.EventMoss; break;
-		case 8:  info.time = gServerDisplayer.EventDrop; break;
-		case 9:  info.time = gServerDisplayer.EventKing; break;
-		case 10: info.time = gServerDisplayer.EventTvT; break;
-		default: info.time = -1; break;  // Reservados
+		case 4:  info.time = gServerDisplayer.EventKanturu; break;      // Kanturu
+		case 5:  info.time = gServerDisplayer.EventCustomBonus; break;  // Bonus
+		case 6:  info.time = gServerDisplayer.EventMoss; break;         // Moss Merchant
+		case 7:  info.time = gServerDisplayer.EventDrop; break;         // Event Drop
+		default: info.time = -1; break;  // Reservados (8-13)
 		}
 
 		pMsg.count++;

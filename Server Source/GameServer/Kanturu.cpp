@@ -11,6 +11,7 @@
 #include "Monster.h"
 #include "Path.h"
 #include "ServerInfo.h"
+#include "ServerDisplayer.h"
 #include "User.h"
 #include "Util.h"
 
@@ -141,6 +142,7 @@ void CKanturu::MainProc() // OK
 {
 	if(gServerInfo.m_KanturuEvent == 0)
 	{
+		gServerDisplayer.EventKanturu = -1;
 		return;
 	}
 
@@ -166,6 +168,23 @@ void CKanturu::MainProc() // OK
 		case KANTURU_STATE_END:
 			this->ProcState_END();
 			break;
+	}
+
+	// Update gServerDisplayer for CustomEventTime
+	int remainTime = this->GetRemainTime();
+	if (this->m_KanturuState == KANTURU_STATE_BATTLE_OF_MAYA ||
+		this->m_KanturuState == KANTURU_STATE_BATTLE_OF_NIGHTMARE ||
+		this->m_KanturuState == KANTURU_STATE_TOWER_OF_REFINEMENT)
+	{
+		gServerDisplayer.EventKanturu = 0; // Event is active
+	}
+	else if (remainTime > 0)
+	{
+		gServerDisplayer.EventKanturu = remainTime;
+	}
+	else
+	{
+		gServerDisplayer.EventKanturu = -1;
 	}
 }
 

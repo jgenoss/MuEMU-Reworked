@@ -126,6 +126,10 @@
     <ClInclude Include="CustomRanking.h">
       <Filter>Custom</Filter>
     </ClInclude>
+    <ClInclude Include="CustomCommands.h">
+      <Filter>Custom</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMenu.h">
     <ClInclude Include="CustomMenu.h">
       <Filter>Custom</Filter>
     </ClInclude>
@@ -209,6 +213,9 @@
     <ClCompile Include="CustomEventTime.cpp">
       <Filter>Custom</Filter>
     </ClCompile>
+    <ClCompile Include="CustomRanking.cpp">
+      <Filter>Custom</Filter>
+    </ClCompile>
     <ClCompile Include="CustomMenu.cpp">
       <Filter>Custom</Filter>
     </ClCompile>
@@ -216,9 +223,6 @@
       <Filter>Custom</Filter>
     </ClCompile>
     <ClCompile Include="CustomMenuPanel.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomRanking.cpp">
       <Filter>Custom</Filter>
     </ClCompile>
   </ItemGroup>
