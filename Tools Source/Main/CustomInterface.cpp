@@ -10,11 +10,6 @@
 #include "Protect.h"
 #include "MemoryPatcher.h"
 #include "EventMenu.h"
-#include "CustomEventTime.h"
-#include "CustomMenu.h"
-#include "CustomMenuPanel.h"
-#include "CustomCommands.h"
-#include "CustomRanking.h"
 #include "Offset.h"
 #include "PrintPlayer.h"
 #include "Reconnect.h"
@@ -40,21 +35,6 @@ CustomInterface::~CustomInterface()
 bool CustomInterface::Initialize()
 {
 	SetCompleteHook(ASM::CALL, 0x0080F7FE, &DrawInterface);
-
-	// Cargar nombres de eventos desde MainInfo
-	gCustomEventTime.Load(gProtect.m_MainInfo.CustomEventInfo);
-
-	// Inicializar menu custom (barra de botones)
-	gCustomMenu.Load();
-
-	// Inicializar panel de menu principal
-	gCustomMenuPanel.Load();
-
-	// Inicializar panel de comandos
-	gCustomCommands.Load();
-
-	// Inicializar panel de ranking
-	gCustomRanking.Load();
 
 	initialized = true;
 	return initialized;
@@ -105,41 +85,6 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 		if (gUIBase.NotAllWindowsOpen() == false) {
 			gCustomPing.StartPing();
 			gCustomPing.ShowPing();
-		}
-
-		// Procesar hotkey para abrir Menu (tecla H)
-		bool menuKeyDown = (GetAsyncKeyState('H') & 0x8000) != 0;
-		if (menuKeyDown && !s_menuKeyPressed)
-		{
-			gCustomMenuPanel.TogglePanel();
-		}
-		s_menuKeyPressed = menuKeyDown;
-
-		// Renderizar menu custom con botones
-		gCustomMenu.Render();
-
-		// Resetear cursor focus antes de renderizar paneles custom
-		// Cada panel lo establecera a 1 si el mouse esta sobre el
-		gMuClientApi.SetCursorFocus() = 0;
-
-		// Renderizar panel de menu principal
-		gCustomMenuPanel.Render();
-
-		// Renderizar panel de comandos
-		gCustomCommands.Render();
-
-		// Renderizar panel de ranking
-		gCustomRanking.Render();
-
-		// Renderizar panel de tiempos de eventos (CustomEventTime)
-		gCustomEventTime.DrawEventTimePanelWindow();
-
-		// Procesar clicks del mouse para el panel de eventos
-		if (GetAsyncKeyState(VK_LBUTTON) & 0x8000)
-		{
-			gCustomEventTime.EventEventTimeWindow_Close(WM_LBUTTONDOWN);
-			gCustomEventTime.EventNext(WM_LBUTTONDOWN);
-			gCustomEventTime.EventPrev(WM_LBUTTONDOWN);
 		}
 	}
 

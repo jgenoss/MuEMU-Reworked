@@ -9,10 +9,6 @@
 #include "Reconnect.h"
 #include "Util.h"
 #include "CustomPing.h"
-#include "CustomEventTime.h"
-#include "CustomMenuPanel.h"
-#include "CustomCommands.h"
-#include "CustomRanking.h"
 
 BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 {
@@ -112,12 +108,6 @@ BOOL ProtocolCoreEx(BYTE head, BYTE* lpMsg, int size, int key) // OK
 		case 0xF1:
 			gCustomPing.PingRecv();
 			break;
-		case 0xE8:
-			GCCustomEventTimeRecv(lpMsg);
-			return 1;
-		case 0xEB:
-			gCustomRanking.GCReqRanking((PMSG_CUSTOM_RANKING_RECV*)lpMsg);
-			return 1;
 		}
 		break;
 	}
@@ -551,16 +541,4 @@ void DataSend(BYTE* lpMsg, DWORD size) // OK
 
 		((void(__thiscall*)(void*, BYTE*, DWORD))0x00405110)((void*)0x08793750, send, size);
 	}
-}
-
-void GCCustomEventTimeRecv(BYTE* lpMsg)
-{
-	gCustomEventTime.GCReqEventTime((PMSG_CUSTOM_EVENTTIME_RECV*)lpMsg);
-}
-
-void CGCustomEventTimeSend()
-{
-	PMSG_CUSTOM_EVENTTIME_SEND pMsg;
-	pMsg.header.set(0xF3, 0xE8, sizeof(pMsg));
-	DataSend((BYTE*)&pMsg, sizeof(pMsg));
 }

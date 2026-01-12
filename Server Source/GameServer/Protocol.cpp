@@ -10,8 +10,6 @@
 #include "ChaosBox.h"
 #include "ChaosCastle.h"
 #include "CommandManager.h"
-#include "CustomEventTime.h"
-#include "CustomMenuSystem.h"
 #include "Crywolf.h"
 #include "CSProtocol.h"
 #include "DarkSpirit.h"
@@ -942,12 +940,6 @@ void ProtocolCore(BYTE head, BYTE* lpMsg, int size, int aIndex, int encrypt, int
 			break;
 		case 0xF1:
 			GCPingRecv(aIndex);
-			break;
-		case 0xE8:
-			gCustomEventTime.GCReqEventTime(aIndex, (PMSG_CUSTOM_EVENTTIME_RECV*)lpMsg);
-			break;
-		case 0xEB:
-			gCustomMenuSystem.GCReqRanking(aIndex, (PMSG_CUSTOM_RANKING_RECV*)lpMsg);
 			break;
 		}
 		break;

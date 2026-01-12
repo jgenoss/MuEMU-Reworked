@@ -1,234 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Util Files">
-      <UniqueIdentifier>{2d98712e-7860-4e76-a39c-e80cf261b364}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Core">
-      <UniqueIdentifier>{7ffc271b-d8fb-4297-81d2-aef879573b6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="UI">
-      <UniqueIdentifier>{3fd4de31-59c5-4fcd-b007-b9280e845f77}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Network">
-      <UniqueIdentifier>{ae1cc1fc-ab16-4206-b4c5-1b51b8921f96}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Game">
-      <UniqueIdentifier>{c78b9ed9-08e8-49af-a5d1-688ad281db28}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Shared">
-      <UniqueIdentifier>{481b4275-02ce-4061-a7b0-9f8b5b430447}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Custom">
-      <UniqueIdentifier>{35e20a67-cf60-4ace-97fa-1a23c7b6b244}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="..\..\Util\CCRC32.Cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="CustomInterface.cpp" />
+    <ClCompile Include="CustomItem.cpp" />
+    <ClCompile Include="CustomJewel.cpp" />
+    <ClCompile Include="CustomMessage.cpp" />
+    <ClCompile Include="CustomPing.cpp" />
+    <ClCompile Include="CustomWing.cpp" />
+    <ClCompile Include="CustomWingEffect.cpp" />
+    <ClCompile Include="HackCheck.cpp" />
+    <ClCompile Include="HealthBar.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MemoryPatcher.cpp" />
+    <ClCompile Include="PacketManager.cpp" />
+    <ClCompile Include="PrintPlayer.cpp" />
+    <ClCompile Include="Protect.cpp" />
+    <ClCompile Include="Protocol.cpp" />
+    <ClCompile Include="Reconnect.cpp" />
+    <ClCompile Include="Resolution.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="UIBase.cpp" />
+    <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AddressTable1.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="AddressTable2.bin">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="AddressTable3.bin">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClInclude Include="..\..\Util\CCRC32.H" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="CustomInterface.h" />
+    <ClInclude Include="CustomItem.h" />
+    <ClInclude Include="CustomJewel.h" />
+    <ClInclude Include="CustomMessage.h" />
+    <ClInclude Include="CustomPing.h" />
+    <ClInclude Include="CustomWing.h" />
+    <ClInclude Include="CustomWingEffect.h" />
+    <ClInclude Include="HackCheck.h" />
+    <ClInclude Include="HealthBar.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="MemoryPatcher.h" />
+    <ClInclude Include="MuClientAPI.h" />
+    <ClInclude Include="MuConstants.h" />
+    <ClInclude Include="Offset.h" />
+    <ClInclude Include="PacketManager.h" />
+    <ClInclude Include="PrintPlayer.h" />
+    <ClInclude Include="Protect.h" />
+    <ClInclude Include="Protocol.h" />
+    <ClInclude Include="Reconnect.h" />
+    <ClInclude Include="Resolution.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UIBase.h" />
+    <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Util\CCRC32.H">
-      <Filter>Util Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Util.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Offset.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="MemoryPatcher.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomItem.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomJewel.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomMessage.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomWing.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomWingEffect.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="HealthBar.h">
-      <Filter>UI</Filter>
-    </ClInclude>
-    <ClInclude Include="PrintPlayer.h">
-      <Filter>UI</Filter>
-    </ClInclude>
-    <ClInclude Include="Protocol.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="PacketManager.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="Reconnect.h">
-      <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="HackCheck.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Protect.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>Shared</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Shared</Filter>
-    </ClInclude>
-    <ClInclude Include="Resolution.h">
-      <Filter>Shared</Filter>
-    </ClInclude>
-    <ClInclude Include="Common.h">
-      <Filter>Shared</Filter>
-    </ClInclude>
-    <ClInclude Include="UIBase.h">
-      <Filter>UI</Filter>
-    </ClInclude>
-    <ClInclude Include="MuClientAPI.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="MuConstants.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomPing.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomInterface.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomEventTime.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomRanking.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomCommands.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomMenu.h">
-    <ClInclude Include="CustomMenu.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomCommands.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
-    <ClInclude Include="CustomMenuPanel.h">
-      <Filter>Custom</Filter>
-    </ClInclude>
+    <ResourceCompile Include="Main.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Util\CCRC32.Cpp">
-      <Filter>Util Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Util.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="MemoryPatcher.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomItem.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomJewel.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomMessage.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomWing.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomWingEffect.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="PrintPlayer.cpp">
-      <Filter>UI</Filter>
-    </ClCompile>
-    <ClCompile Include="HealthBar.cpp">
-      <Filter>UI</Filter>
-    </ClCompile>
-    <ClCompile Include="PacketManager.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="Protocol.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="Reconnect.cpp">
-      <Filter>Network</Filter>
-    </ClCompile>
-    <ClCompile Include="HackCheck.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Item.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="Protect.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Shared</Filter>
-    </ClCompile>
-    <ClCompile Include="Resolution.cpp">
-      <Filter>Shared</Filter>
-    </ClCompile>
-    <ClCompile Include="Common.cpp">
-      <Filter>Shared</Filter>
-    </ClCompile>
-    <ClCompile Include="UIBase.cpp">
-      <Filter>UI</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomPing.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomInterface.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomEventTime.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomRanking.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomMenu.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomCommands.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-    <ClCompile Include="CustomMenuPanel.cpp">
-      <Filter>Custom</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Main.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <None Include="AddressTable1.bin" />
+    <None Include="AddressTable2.bin" />
+    <None Include="AddressTable3.bin" />
   </ItemGroup>
 </Project>
