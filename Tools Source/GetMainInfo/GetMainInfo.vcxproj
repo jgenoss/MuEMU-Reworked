@@ -78,7 +78,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Util\CCRC32.H" />
-    <ClInclude Include="CustomEventTimeText.h" />
     <ClInclude Include="CustomItem.h" />
     <ClInclude Include="CustomJewel.h" />
     <ClInclude Include="CustomMessage.h" />
@@ -91,7 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Util\CCRC32.Cpp" />
-    <ClCompile Include="CustomEventTimeText.cpp" />
     <ClCompile Include="CustomItem.cpp" />
     <ClCompile Include="CustomJewel.cpp" />
     <ClCompile Include="CustomMessage.cpp" />

@@ -9,7 +9,6 @@
 #include "Util.h"
 #include "Protect.h"
 #include "MemoryPatcher.h"
-#include "EventMenu.h"
 #include "Offset.h"
 #include "PrintPlayer.h"
 #include "Reconnect.h"
