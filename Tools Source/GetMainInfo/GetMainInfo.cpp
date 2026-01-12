@@ -5,7 +5,6 @@
 #include "CustomMessage.h"
 #include "CustomWing.h"
 #include "CustomWIngEffect.h"
-#include "CustomEventTimeText.h"
 #include "ThemidaSDK.h"
 
 struct MAIN_FILE_INFO
@@ -43,8 +42,6 @@ struct MAIN_FILE_INFO
 	CUSTOM_WING_INFO CustomWingInfo[MAX_CUSTOM_WING];
 	CUSTOM_ITEM_INFO CustomItemInfo[MAX_CUSTOM_ITEM];
 	CUSTOM_WING_EFFECT_INFO CustomWingEffectInfo[MAX_CUSTOM_WING_EFFECT];
-	DWORD EnableEventTimeButton;
-	CUSTOM_EVENT_INFO CustomEventInfo[MAX_EVENTTIME];
 };
 
 int _tmain(int argc, _TCHAR* argv[]) // OK
@@ -117,10 +114,6 @@ int _tmain(int argc, _TCHAR* argv[]) // OK
 
 	gCustomWingEffect.Load("CustomWingEffect.txt");
 
-	gCustomEventTimeText.Load("CustomEventTimeText.txt");
-
-	info.EnableEventTimeButton = GetPrivateProfileInt("Custom", "EnableEventTimeButton", 0, ".\\MainInfo.ini");
-
 	memcpy(info.EngCustomMessageInfo, gCustomMessage.m_EngCustomMessageInfo, sizeof(info.EngCustomMessageInfo));
 
 	memcpy(info.PorCustomMessageInfo, gCustomMessage.m_PorCustomMessageInfo, sizeof(info.PorCustomMessageInfo));
@@ -134,8 +127,6 @@ int _tmain(int argc, _TCHAR* argv[]) // OK
 	memcpy(info.CustomItemInfo, gCustomItem.m_CustomItemInfo, sizeof(info.CustomItemInfo));
 
 	memcpy(info.CustomWingEffectInfo, gCustomWingEffect.m_CustomWingEffectInfo, sizeof(info.CustomWingEffectInfo));
-
-	memcpy(info.CustomEventInfo, gCustomEventTimeText.m_CustomEventInfo, sizeof(info.CustomEventInfo));
 
 	CCRC32 CRC32;
 
@@ -187,5 +178,5 @@ int _tmain(int argc, _TCHAR* argv[]) // OK
 
 		CLEAR_END
 
-	return 0;
+		return 0;
 }
