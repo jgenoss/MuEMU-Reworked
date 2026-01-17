@@ -21,8 +21,8 @@
 #include <thread>
 #include "MemoryPatcher.h"
 #include "MuConstants.h"
+#include "User.h"
 
-WNDPROC g_hWndProc = nullptr;
 HINSTANCE hins;
 
 extern "C" _declspec(dllexport) void EntryProc() // OK
@@ -156,6 +156,8 @@ extern "C" _declspec(dllexport) void EntryProc() // OK
 	InitResolution();
 
 	InitWing();
+
+	gObjUser.Load();
 
 	gProtect.CheckLauncher();
 

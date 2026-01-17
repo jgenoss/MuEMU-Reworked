@@ -610,7 +610,3 @@ void GCNewHealthBarRecv(PMSG_NEW_HEALTH_BAR_RECV* lpMsg);
 void GCNewGensBattleInfoRecv(PMSG_NEW_GENS_BATTLE_INFO_RECV* lpMsg);
 void GCNewMessageRecv(PMSG_NEW_MESSAGE_RECV* lpMsg);
 void DataSend(BYTE* lpMsg, DWORD size);
-
-// CustomEventTime Protocol (0xF3:0xE8)
-void GCCustomEventTimeRecv(BYTE* lpMsg);
-void CGCustomEventTimeSend();

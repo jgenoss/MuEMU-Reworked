@@ -2,148 +2,180 @@
 #include "Util.h"
 #include "MuClientAPI.h"
 
-
 BYTE NewAddressData1[240];
 BYTE NewAddressData2[240];
 BYTE NewAddressData3[6000];
 
-void SetByte(DWORD offset,BYTE value) // OK
+void SetByte(DWORD offset, BYTE value) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,1,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, 1, PAGE_EXECUTE_READWRITE, &OldProtect);
 
 	*(BYTE*)(offset) = value;
 
-	VirtualProtect((void*)offset,1,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, 1, OldProtect, &OldProtect);
 }
 
-void SetWord(DWORD offset,WORD value) // OK
+void SetWord(DWORD offset, WORD value) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,2,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, 2, PAGE_EXECUTE_READWRITE, &OldProtect);
 
 	*(WORD*)(offset) = value;
 
-	VirtualProtect((void*)offset,2,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, 2, OldProtect, &OldProtect);
 }
 
-void SetDword(DWORD offset,DWORD value) // OK
+void SetDword(DWORD offset, DWORD value) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,4,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, 4, PAGE_EXECUTE_READWRITE, &OldProtect);
 
 	*(DWORD*)(offset) = value;
 
-	VirtualProtect((void*)offset,4,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, 4, OldProtect, &OldProtect);
 }
 
-void SetFloat(DWORD offset,float value) // OK
+void SetFloat(DWORD offset, float value) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,4,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, 4, PAGE_EXECUTE_READWRITE, &OldProtect);
 
 	*(float*)(offset) = value;
 
-	VirtualProtect((void*)offset,4,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, 4, OldProtect, &OldProtect);
 }
 
-void SetDouble(DWORD offset,double value) // OK
+DWORD WriteMemory(const LPVOID lpAddress, const LPVOID lpBuf, const UINT uSize)
+{
+	DWORD dwErrorCode = 0;
+	DWORD dwOldProtect = 0;
+	// ----
+	int iRes = VirtualProtect(lpAddress, uSize, PAGE_EXECUTE_READWRITE, &dwOldProtect);
+	// ----
+	if (iRes == 0)
+	{
+		dwErrorCode = GetLastError();
+		return dwErrorCode;
+	}
+	// ----
+	memcpy(lpAddress, lpBuf, uSize);
+	// ----
+	DWORD dwBytes = 0;
+	// ----
+	iRes = VirtualProtect(lpAddress, uSize, dwOldProtect, &dwBytes);
+	// ----
+	if (iRes == 0)
+	{
+		dwErrorCode = GetLastError();
+		return dwErrorCode;
+	}
+	// ----
+	return 0x00;
+}
+
+DWORD _SetDouble(const LPVOID dwOffset, double dValue)
+{
+	return WriteMemory(dwOffset, &dValue, sizeof(double));
+}
+
+void SetDouble(DWORD offset, double value) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,8,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, 8, PAGE_EXECUTE_READWRITE, &OldProtect);
 
 	*(double*)(offset) = value;
 
-	VirtualProtect((void*)offset,8,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, 8, OldProtect, &OldProtect);
 }
 
-void SetCompleteHook(BYTE head,DWORD offset,...) // OK
+void SetCompleteHook(BYTE head, DWORD offset, ...) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,5,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, 5, PAGE_EXECUTE_READWRITE, &OldProtect);
 
-	if(head != 0xFF)
+	if (head != 0xFF)
 	{
 		*(BYTE*)(offset) = head;
 	}
 
-	DWORD* function = &offset+1;
+	DWORD* function = &offset + 1;
 
-	*(DWORD*)(offset+1) = (*function)-(offset+5);
+	*(DWORD*)(offset + 1) = (*function) - (offset + 5);
 
-	VirtualProtect((void*)offset,5,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, 5, OldProtect, &OldProtect);
 }
 
-void MemoryCpy(DWORD offset,void* value,DWORD size) // OK
+void MemoryCpy(DWORD offset, void* value, DWORD size) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,size,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, size, PAGE_EXECUTE_READWRITE, &OldProtect);
 
-	memcpy((void*)offset,value,size);
+	memcpy((void*)offset, value, size);
 
-	VirtualProtect((void*)offset,size,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, size, OldProtect, &OldProtect);
 }
 
-void MemorySet(DWORD offset,DWORD value,DWORD size) // OK
+void MemorySet(DWORD offset, DWORD value, DWORD size) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,size,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, size, PAGE_EXECUTE_READWRITE, &OldProtect);
 
-	memset((void*)offset,value,size);
+	memset((void*)offset, value, size);
 
-	VirtualProtect((void*)offset,size,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, size, OldProtect, &OldProtect);
 }
 
-void VirtualizeOffset(DWORD offset,DWORD size) // OK
+void VirtualizeOffset(DWORD offset, DWORD size) // OK
 {
 	DWORD OldProtect;
 
-	VirtualProtect((void*)offset,size,PAGE_EXECUTE_READWRITE,&OldProtect);
+	VirtualProtect((void*)offset, size, PAGE_EXECUTE_READWRITE, &OldProtect);
 
-	DWORD HookAddr = (DWORD)malloc(size+5);
+	DWORD HookAddr = (DWORD)malloc(size + 5);
 
-	memcpy((void*)HookAddr,(void*)offset,size);
+	memcpy((void*)HookAddr, (void*)offset, size);
 
-	*(BYTE*)(HookAddr+size) = 0xE9;
+	*(BYTE*)(HookAddr + size) = 0xE9;
 
-	*(DWORD*)(HookAddr+size+1) = (offset+size)-((HookAddr+size)+5);
+	*(DWORD*)(HookAddr + size + 1) = (offset + size) - ((HookAddr + size) + 5);
 
 	*(BYTE*)(offset) = 0xE9;
 
-	*(DWORD*)(offset+1) = HookAddr-(offset+5);
+	*(DWORD*)(offset + 1) = HookAddr - (offset + 5);
 
-	memset((void*)(offset+5),0x90,(size-5));
+	memset((void*)(offset + 5), 0x90, (size - 5));
 
-	VirtualProtect((void*)offset,size,OldProtect,&OldProtect);
+	VirtualProtect((void*)offset, size, OldProtect, &OldProtect);
 }
 
-void PacketArgumentEncrypt(char* out_buff,char* in_buff,int size) // OK
+void PacketArgumentEncrypt(char* out_buff, char* in_buff, int size) // OK
 {
-	BYTE XorTable[3] = {0xFC,0xCF,0xAB};
+	BYTE XorTable[3] = { 0xFC,0xCF,0xAB };
 
-	for(int n=0;n < size;n++)
+	for (int n = 0; n < size; n++)
 	{
-		out_buff[n] = in_buff[n]^XorTable[n%3];
+		out_buff[n] = in_buff[n] ^ XorTable[n % 3];
 	}
 }
 
 char* ConvertModuleFileName(char* name) // OK
 {
-	static char buff[MAX_PATH] = {0};
+	static char buff[MAX_PATH] = { 0 };
 
-	for(int n=strlen(name);n > 0;n--)
+	for (int n = strlen(name); n > 0; n--)
 	{
-		if(name[n] == '\\')
+		if (name[n] == '\\')
 		{
-			strcpy_s(buff,sizeof(buff),&name[(n+1)]);
+			strcpy_s(buff, sizeof(buff), &name[(n + 1)]);
 			break;
 		}
 	}
@@ -151,66 +183,66 @@ char* ConvertModuleFileName(char* name) // OK
 	return buff;
 }
 
-void LoadReferenceAddressTable(HMODULE mod,char* name,DWORD address) // OK
+void LoadReferenceAddressTable(HMODULE mod, char* name, DWORD address) // OK
 {
-	if(IS_INTRESOURCE(name) == 0)
+	if (IS_INTRESOURCE(name) == 0)
 	{
 		return;
 	}
 
-	HRSRC resource = FindResource(mod,name,"BIN");
+	HRSRC resource = FindResource(mod, name, "BIN");
 
-	if(resource == 0)
+	if (resource == 0)
 	{
 		return;
 	}
 
-	if(SizeofResource(mod,resource) < sizeof(REFERENCE_INFO))
+	if (SizeofResource(mod, resource) < sizeof(REFERENCE_INFO))
 	{
 		return;
 	}
 
-	HGLOBAL data = LoadResource(mod,resource);
+	HGLOBAL data = LoadResource(mod, resource);
 
-	if(data == 0)
+	if (data == 0)
 	{
 		return;
 	}
 
 	REFERENCE_INFO* ReferenceInfo = (REFERENCE_INFO*)LockResource(data);
 
-	if(ReferenceInfo == 0)
+	if (ReferenceInfo == 0)
 	{
 		FreeResource(data);
 		return;
 	}
 
-	if(ReferenceInfo->start == ReferenceInfo->end)
+	if (ReferenceInfo->start == ReferenceInfo->end)
 	{
-		if(SizeofResource(mod,resource) < (sizeof(REFERENCE_INFO)+(ReferenceInfo->count*sizeof(REFERENCE_BASE))))
+		if (SizeofResource(mod, resource) < (sizeof(REFERENCE_INFO) + (ReferenceInfo->count * sizeof(REFERENCE_BASE))))
 		{
 			return;
 		}
 
-		REFERENCE_BASE* ReferenceBase = (REFERENCE_BASE*)((DWORD)ReferenceInfo+sizeof(REFERENCE_INFO));
+		REFERENCE_BASE* ReferenceBase = (REFERENCE_BASE*)((DWORD)ReferenceInfo + sizeof(REFERENCE_INFO));
 
-		for(DWORD n=0;n < ReferenceInfo->count;n++)
+		for (DWORD n = 0; n < ReferenceInfo->count; n++)
 		{
-			SetDword(ReferenceBase[n].address,address);
+			SetDword(ReferenceBase[n].address, address);
 		}
 	}
 	else
 	{
-		if(SizeofResource(mod,resource) < (sizeof(REFERENCE_INFO)+(ReferenceInfo->count*sizeof(REFERENCE_DATA))))
+		if (SizeofResource(mod, resource) < (sizeof(REFERENCE_INFO) + (ReferenceInfo->count * sizeof(REFERENCE_DATA))))
 		{
 			return;
 		}
 
-		REFERENCE_DATA* ReferenceData = (REFERENCE_DATA*)((DWORD)ReferenceInfo+sizeof(REFERENCE_INFO));
+		REFERENCE_DATA* ReferenceData = (REFERENCE_DATA*)((DWORD)ReferenceInfo + sizeof(REFERENCE_INFO));
 
-		for(DWORD n=0;n < ReferenceInfo->count;n++)
+		for (DWORD n = 0; n < ReferenceInfo->count; n++)
 		{
-			SetDword(ReferenceData[n].address,(address+ReferenceData[n].value));
+			SetDword(ReferenceData[n].address, (address + ReferenceData[n].value));
 		}
 	}
 

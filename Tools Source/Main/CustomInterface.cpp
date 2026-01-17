@@ -12,6 +12,7 @@
 #include "Offset.h"
 #include "PrintPlayer.h"
 #include "Reconnect.h"
+#include "User.h"
 
 // Variables externas de Reconnect
 extern DWORD ReconnectStatus;
@@ -39,17 +40,15 @@ bool CustomInterface::Initialize()
 	return initialized;
 }
 
-// Variable estatica para control de tecla
-static bool s_menuKeyPressed = false;
-
 int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 {
 	// Llamar funcion original primero (como hace ReconnectMainProc)
 	int result = reinterpret_cast<int(__thiscall*)(void*)>(0x0080F8E0)(this_ptr);
 
-	// Procesar logica de Reconnect (integrada desde ReconnectMainProc)
-	if (*(DWORD*)(MAIN_SCREEN_STATE) == 5)
-	{
+	gObjUser.Refresh();
+
+	// Procesar interfaz custom
+	if (gMuClientApi.PlayerState() == static_cast<int>(GameState::GameProcess)) {
 		if (ReconnectStatus == RECONNECT_STATUS_RECONNECT)
 		{
 			ReconnectDrawInterface();
@@ -73,10 +72,7 @@ int __fastcall CustomInterface::DrawInterface(void* this_ptr)
 				ReconnectCurTime = GetTickCount();
 			}
 		}
-	}
 
-	// Procesar interfaz custom
-	if (gMuClientApi.PlayerState() == static_cast<int>(GameState::GameProcess)) {
 		gUIBase.CheckAndReport();
 
 		setWindowText();

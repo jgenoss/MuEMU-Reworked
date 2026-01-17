@@ -4,25 +4,18 @@
 
 #include <windows.h>
 #include <gl/GL.h>
+#include "Object.h"
 
 // Forward declarations para tipos custom
-struct VAngle
-{
-	float X;
-	float Y;
-	float Z;
-};
-struct PartyList;
-struct ObjectItem;
-struct ItemBmdStruct;
 struct MU3Float;
-struct ObjectCharacter;
-struct ObjectPreview;
 
 #define pDrawInterfaceS			((char(__cdecl*)()) 0x004D7970)
 #define oDrawInterfaceS_Call	0x004DA2AC
 #define pDrawInterface			((void(__cdecl*)()) 0x0080F8E0)
 #define oDrawInterface_Call		0x0080F7FE
+
+#define pFrameSpeed1			*(double*)0x0D27C88
+#define	pFrameSpeed2			*(double*)0x0D281C0
 
 class MuClientAPIExtended {
 public:

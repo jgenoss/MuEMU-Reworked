@@ -94,6 +94,7 @@
     <ClCompile Include="CustomWingEffect.cpp">
       <Filter>Custom Systems</Filter>
     </ClCompile>
+    <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
@@ -177,6 +178,8 @@
     <ClInclude Include="resource.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="User.h" />
+    <ClInclude Include="Object.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Main.rc">

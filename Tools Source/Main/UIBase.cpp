@@ -3,6 +3,7 @@
 #include "Offset.h"
 #include "MuClientAPI.h"
 #include "MuConstants.h"
+#include "User.h"
 
 UIBase gUIBase;
 
@@ -128,13 +129,13 @@ float UIBase::DrawRepeatGUI(short id, float x, float y, int count) {
 	return startY;
 }
 
-//bool UIBase::IsWorkZone(short id) {
-//	if ((gObjUser.m_CursorX < Objects[id].X || gObjUser.m_CursorX > Objects[id].MaxX) ||
-//		(gObjUser.m_CursorY < Objects[id].Y || gObjUser.m_CursorY > Objects[id].MaxY)) {
-//		return false;
-//	}
-//	return true;
-//}
+bool UIBase::IsWorkZone(short id) {
+	if ((gObjUser.m_CursorX < Objects[id].X || gObjUser.m_CursorX > Objects[id].MaxX) ||
+		(gObjUser.m_CursorY < Objects[id].Y || gObjUser.m_CursorY > Objects[id].MaxY)) {
+		return false;
+	}
+	return true;
+}
 
 float UIBase::GetResizeX(short id) {
 	if (gMuClientApi.WinWidth() == 800)
@@ -230,4 +231,3 @@ std::string UIBase::GetWindowName(int id) {
 	default: return "UnknownWindow";
 	}
 }
-

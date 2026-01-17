@@ -25,13 +25,13 @@ struct MAIN_FILE_INFO
 	DWORD CameraCRC32;
 	DWORD HelperActiveAlert;
 	DWORD HelperActiveLevel;
+	DWORD DWMaxAttackSpeed;
 	DWORD DKMaxAttackSpeed;
 	DWORD FEMaxAttackSpeed;
 	DWORD MGMaxAttackSpeed;
 	DWORD DLMaxAttackSpeed;
 	DWORD SUMaxAttackSpeed;
 	DWORD RFMaxAttackSpeed;
-	DWORD DWMaxAttackSpeed;
 	DWORD ReconnectTime;
 	DWORD LimitFps;
 	DWORD PingTest;
@@ -50,11 +50,7 @@ int _tmain(int argc, _TCHAR* argv[]) // OK
 
 		ENCODE_START
 
-		printf("=================================================\n");
-	printf("===    MuEMU Emulator Powered by JGenoss      ===\n");
-	printf("=================================================\n\n");
-
-	MAIN_FILE_INFO info;
+		MAIN_FILE_INFO info;
 
 	memset(&info, 0, sizeof(info));
 
@@ -144,12 +140,6 @@ int _tmain(int argc, _TCHAR* argv[]) // OK
 	{
 		info.CameraCRC32 = 0;
 	}
-
-	/*for(int n=0;n < sizeof(MAIN_FILE_INFO);n++)
-	{
-		((BYTE*)&info)[n] ^= (BYTE)(0xCA^LOBYTE(n));
-		((BYTE*)&info)[n] -= (BYTE)(0x95^HIBYTE(n));
-	}*/
 
 	for (int n = 0; n < sizeof(MAIN_FILE_INFO); n++)
 	{

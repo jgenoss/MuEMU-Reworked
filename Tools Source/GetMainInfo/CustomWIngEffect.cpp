@@ -18,12 +18,11 @@ CCustomWingEffect::CCustomWingEffect() // OK
 
 CCustomWingEffect::~CCustomWingEffect() // OK
 {
-
 }
 
 void CCustomWingEffect::Init() // OK
 {
-	for(int n=0;n < MAX_CUSTOM_WING_EFFECT;n++)
+	for (int n = 0; n < MAX_CUSTOM_WING_EFFECT; n++)
 	{
 		this->m_CustomWingEffectInfo[n].Index = -1;
 	}
@@ -33,13 +32,13 @@ void CCustomWingEffect::Load(char* path) // OK
 {
 	CMemScript* lpMemScript = new CMemScript;
 
-	if(lpMemScript == 0)
+	if (lpMemScript == 0)
 	{
-		printf(MEM_SCRIPT_ALLOC_ERROR,path);
+		printf(MEM_SCRIPT_ALLOC_ERROR, path);
 		return;
 	}
 
-	if(lpMemScript->SetBuffer(path) == 0)
+	if (lpMemScript->SetBuffer(path) == 0)
 	{
 		printf(lpMemScript->GetLastError());
 		delete lpMemScript;
@@ -50,21 +49,21 @@ void CCustomWingEffect::Load(char* path) // OK
 
 	try
 	{
-		while(true)
+		while (true)
 		{
-			if(lpMemScript->GetToken() == TOKEN_END)
+			if (lpMemScript->GetToken() == TOKEN_END)
 			{
 				break;
 			}
 
-			if(strcmp("end",lpMemScript->GetString()) == 0)
+			if (strcmp("end", lpMemScript->GetString()) == 0)
 			{
 				break;
 			}
 
 			CUSTOM_WING_EFFECT_INFO info;
 
-			memset(&info,0,sizeof(info));
+			memset(&info, 0, sizeof(info));
 
 			static int CustomWingEffectIndexCount = 0;
 
@@ -93,7 +92,7 @@ void CCustomWingEffect::Load(char* path) // OK
 			this->SetInfo(info);
 		}
 	}
-	catch(...)
+	catch (...)
 	{
 		printf(lpMemScript->GetLastError());
 	}
@@ -103,7 +102,7 @@ void CCustomWingEffect::Load(char* path) // OK
 
 void CCustomWingEffect::SetInfo(CUSTOM_WING_EFFECT_INFO info) // OK
 {
-	if(info.Index < 0 || info.Index >= MAX_CUSTOM_WING_EFFECT)
+	if (info.Index < 0 || info.Index >= MAX_CUSTOM_WING_EFFECT)
 	{
 		return;
 	}

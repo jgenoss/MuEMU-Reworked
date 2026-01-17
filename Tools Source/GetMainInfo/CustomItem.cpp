@@ -18,12 +18,11 @@ CCustomItem::CCustomItem() // OK
 
 CCustomItem::~CCustomItem() // OK
 {
-
 }
 
 void CCustomItem::Init() // OK
 {
-	for(int n=0;n < MAX_CUSTOM_ITEM;n++)
+	for (int n = 0; n < MAX_CUSTOM_ITEM; n++)
 	{
 		this->m_CustomItemInfo[n].Index = -1;
 	}
@@ -33,13 +32,13 @@ void CCustomItem::Load(char* path) // OK
 {
 	CMemScript* lpMemScript = new CMemScript;
 
-	if(lpMemScript == 0)
+	if (lpMemScript == 0)
 	{
-		printf(MEM_SCRIPT_ALLOC_ERROR,path);
+		printf(MEM_SCRIPT_ALLOC_ERROR, path);
 		return;
 	}
 
-	if(lpMemScript->SetBuffer(path) == 0)
+	if (lpMemScript->SetBuffer(path) == 0)
 	{
 		printf(lpMemScript->GetLastError());
 		delete lpMemScript;
@@ -50,21 +49,21 @@ void CCustomItem::Load(char* path) // OK
 
 	try
 	{
-		while(true)
+		while (true)
 		{
-			if(lpMemScript->GetToken() == TOKEN_END)
+			if (lpMemScript->GetToken() == TOKEN_END)
 			{
 				break;
 			}
 
-			if(strcmp("end",lpMemScript->GetString()) == 0)
+			if (strcmp("end", lpMemScript->GetString()) == 0)
 			{
 				break;
 			}
 
 			CUSTOM_ITEM_INFO info;
 
-			memset(&info,0,sizeof(info));
+			memset(&info, 0, sizeof(info));
 
 			static int CustomItemIndexCount = 0;
 
@@ -78,12 +77,12 @@ void CCustomItem::Load(char* path) // OK
 
 			info.ColorB = lpMemScript->GetAsNumber();
 
-			strcpy_s(info.ModelName,lpMemScript->GetAsString());
+			strcpy_s(info.ModelName, lpMemScript->GetAsString());
 
 			this->SetInfo(info);
 		}
 	}
-	catch(...)
+	catch (...)
 	{
 		printf(lpMemScript->GetLastError());
 	}
@@ -93,7 +92,7 @@ void CCustomItem::Load(char* path) // OK
 
 void CCustomItem::SetInfo(CUSTOM_ITEM_INFO info) // OK
 {
-	if(info.Index < 0 || info.Index >= MAX_CUSTOM_ITEM)
+	if (info.Index < 0 || info.Index >= MAX_CUSTOM_ITEM)
 	{
 		return;
 	}

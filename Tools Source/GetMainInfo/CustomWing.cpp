@@ -18,12 +18,11 @@ CCustomWing::CCustomWing() // OK
 
 CCustomWing::~CCustomWing() // OK
 {
-
 }
 
 void CCustomWing::Init() // OK
 {
-	for(int n=0;n < MAX_CUSTOM_WING;n++)
+	for (int n = 0; n < MAX_CUSTOM_WING; n++)
 	{
 		this->m_CustomWingInfo[n].Index = -1;
 	}
@@ -33,13 +32,13 @@ void CCustomWing::Load(char* path) // OK
 {
 	CMemScript* lpMemScript = new CMemScript;
 
-	if(lpMemScript == 0)
+	if (lpMemScript == 0)
 	{
-		printf(MEM_SCRIPT_ALLOC_ERROR,path);
+		printf(MEM_SCRIPT_ALLOC_ERROR, path);
 		return;
 	}
 
-	if(lpMemScript->SetBuffer(path) == 0)
+	if (lpMemScript->SetBuffer(path) == 0)
 	{
 		printf(lpMemScript->GetLastError());
 		delete lpMemScript;
@@ -50,21 +49,21 @@ void CCustomWing::Load(char* path) // OK
 
 	try
 	{
-		while(true)
+		while (true)
 		{
-			if(lpMemScript->GetToken() == TOKEN_END)
+			if (lpMemScript->GetToken() == TOKEN_END)
 			{
 				break;
 			}
 
-			if(strcmp("end",lpMemScript->GetString()) == 0)
+			if (strcmp("end", lpMemScript->GetString()) == 0)
 			{
 				break;
 			}
 
 			CUSTOM_WING_INFO info;
 
-			memset(&info,0,sizeof(info));
+			memset(&info, 0, sizeof(info));
 
 			info.Index = lpMemScript->GetNumber();
 
@@ -110,12 +109,12 @@ void CCustomWing::Load(char* path) // OK
 
 			info.ModelType = lpMemScript->GetAsNumber();
 
-			strcpy_s(info.ModelName,lpMemScript->GetAsString());
+			strcpy_s(info.ModelName, lpMemScript->GetAsString());
 
 			this->SetInfo(info);
 		}
 	}
-	catch(...)
+	catch (...)
 	{
 		printf(lpMemScript->GetLastError());
 	}
@@ -125,7 +124,7 @@ void CCustomWing::Load(char* path) // OK
 
 void CCustomWing::SetInfo(CUSTOM_WING_INFO info) // OK
 {
-	if(info.Index < 0 || info.Index >= MAX_CUSTOM_WING)
+	if (info.Index < 0 || info.Index >= MAX_CUSTOM_WING)
 	{
 		return;
 	}
@@ -149,40 +148,40 @@ void CCustomWing::SetInfo(CUSTOM_WING_INFO info) // OK
 
 void CCustomWing::ConvertOptionIndex(int* OptionIndex) // OK
 {
-	switch((*OptionIndex))
+	switch ((*OptionIndex))
 	{
-		case 80:
-			(*OptionIndex) = 80;
-			break;
-		case 81:
-			(*OptionIndex) = 81;
-			break;
-		case 82:
-			(*OptionIndex) = 83;
-			break;
-		case 83:
-			(*OptionIndex) = 84;
-			break;
-		case 84:
-			(*OptionIndex) = 85;
-			break;
-		case 85:
-			(*OptionIndex) = 86;
-			break;
-		case 108:
-			(*OptionIndex) = 103;
-			break;
-		case 109:
-			(*OptionIndex) = 106;
-			break;
-		case 110:
-			(*OptionIndex) = 107;
-			break;
-		case 111:
-			(*OptionIndex) = 108;
-			break;
-		case 113:
-			(*OptionIndex) = 82;
-			break;
+	case 80:
+		(*OptionIndex) = 80;
+		break;
+	case 81:
+		(*OptionIndex) = 81;
+		break;
+	case 82:
+		(*OptionIndex) = 83;
+		break;
+	case 83:
+		(*OptionIndex) = 84;
+		break;
+	case 84:
+		(*OptionIndex) = 85;
+		break;
+	case 85:
+		(*OptionIndex) = 86;
+		break;
+	case 108:
+		(*OptionIndex) = 103;
+		break;
+	case 109:
+		(*OptionIndex) = 106;
+		break;
+	case 110:
+		(*OptionIndex) = 107;
+		break;
+	case 111:
+		(*OptionIndex) = 108;
+		break;
+	case 113:
+		(*OptionIndex) = 82;
+		break;
 	}
 }

@@ -20,7 +20,6 @@ struct UIObject {
 class UIBase {
 public:
 	UIBase();
-	
 
 	bool CheckWindow(int WindowID);
 
@@ -37,7 +36,7 @@ public:
 	void ResetDrawIMG(short ObjectID);
 	float DrawRepeatGUI(short ObjectID, float X, float Y, int Count);
 
-	//bool IsWorkZone(short ObjectID);
+	bool IsWorkZone(short ObjectID);
 	float GetResizeX(short ObjectID);
 
 	void CheckAndReport();
