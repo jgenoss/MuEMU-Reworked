@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\MuServer\Tools\MuMaker 1.13\MuMaker-cleaned.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>MuMaker</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.3.0</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MuMaker.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="Interop.JRO">
+      <HintPath>lib\Interop.JRO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class0.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class6.cs" />
+    <Compile Include="Class7.cs" />
+    <Compile Include="Class8.cs" />
+    <Compile Include="Class9.cs" />
+    <Compile Include="Class10.cs" />
+    <Compile Include="Class11.cs" />
+    <Compile Include="Class12.cs" />
+    <Compile Include="Class13.cs" />
+    <Compile Include="Class14.cs" />
+    <Compile Include="Class15.cs" />
+    <Compile Include="Class16.cs" />
+    <Compile Include="Class17.cs" />
+    <Compile Include="Class18.cs" />
+    <Compile Include="Class19.cs" />
+    <Compile Include="Class20.cs" />
+    <Compile Include="Class21.cs" />
+    <Compile Include="Class22.cs" />
+    <Compile Include="Class23.cs" />
+    <Compile Include="Class24.cs" />
+    <Compile Include="Class25.cs" />
+    <Compile Include="Class26.cs" />
+    <Compile Include="Class27.cs" />
+    <Compile Include="Class28.cs" />
+    <Compile Include="Class29.cs" />
+    <Compile Include="Class30.cs" />
+    <Compile Include="Class31.cs" />
+    <Compile Include="Class32.cs" />
+    <Compile Include="Class33.cs" />
+    <Compile Include="Class34.cs" />
+    <Compile Include="Class35.cs" />
+    <Compile Include="Class36.cs" />
+    <Compile Include="MuMaker\AccountMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\ConfigMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\Creditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\FinderMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\GuildMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\HelpMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\ItemMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\MoveMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\MuMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\PJMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\SkillMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\SQLMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\StatsMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\UpDateMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MuMaker\VentanaBarraLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MuMaker\AccountMaker.resx" />
+    <EmbeddedResource Include="MuMaker\ConfigMaker.resx" />
+    <EmbeddedResource Include="MuMaker\Creditos.resx" />
+    <EmbeddedResource Include="MuMaker\FinderMaker.resx" />
+    <EmbeddedResource Include="MuMaker\GuildMaker.resx" />
+    <EmbeddedResource Include="MuMaker\HelpMaker.resx" />
+    <EmbeddedResource Include="MuMaker\ItemMaker.resx" />
+    <EmbeddedResource Include="MuMaker\MoveMaker.resx" />
+    <EmbeddedResource Include="MuMaker\MuMaker.resx" />
+    <EmbeddedResource Include="MuMaker\PJMaker.resx" />
+    <EmbeddedResource Include="MuMaker\Resources.resx" />
+    <EmbeddedResource Include="MuMaker\SkillMaker.resx" />
+    <EmbeddedResource Include="MuMaker\SQLMaker.resx" />
+    <EmbeddedResource Include="MuMaker\StatsMaker.resx" />
+    <EmbeddedResource Include="MuMaker\UpDateMaker.resx" />
+    <EmbeddedResource Include="MuMaker\VentanaBarraLoad.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MuMaker.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

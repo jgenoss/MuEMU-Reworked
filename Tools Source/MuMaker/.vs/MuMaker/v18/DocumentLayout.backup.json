@@ -1,0 +1,59 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Mu Online\\MuMaker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|E:\\Mu Online\\MuMaker\\mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountMaker.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs",
+              "RelativeDocumentMoniker": "MuMaker\\AccountMaker.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs",
+              "RelativeToolTip": "MuMaker\\AccountMaker.cs",
+              "ViewState": "AgIAAG0GAAAAAAAAAAAAwGoGAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:07:18.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountMaker.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs",
+              "RelativeDocumentMoniker": "MuMaker\\AccountMaker.cs",
+              "ToolTip": "F:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2026-01-03T19:07:18.987Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
