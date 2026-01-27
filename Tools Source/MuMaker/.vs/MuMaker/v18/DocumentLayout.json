@@ -1,66 +1,59 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Mu Online\\MuMaker\\",
+  "WorkspaceRootPath": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class27.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class27.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|d:\\usuarios\\jose\\documents\\github\\muemu-reworked\\tools source\\mumaker\\core\\applicationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:core\\applicationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class29.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class29.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class27.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class31.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class31.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class34.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class34.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class36.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class36.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\class0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:class0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\mumaker\\itemmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\mumaker\\itemmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:mumaker\\itemmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\mumaker\\itemmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\mumaker\\itemmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:mumaker\\itemmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|e:\\mu online\\mumaker\\mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|E:\\Mu Online\\MuMaker\\mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CEF1CBA2-BDEA-4023-95D2-81FAC1F5CA11}|MuMaker.csproj|solutionrelative:mumaker\\accountmaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class29.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class31.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class34.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class36.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class11.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Mu Online\\MuMaker\\Class0.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,11 +63,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Bookmark",
@@ -83,189 +92,163 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class27.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class27.cs",
-              "RelativeDocumentMoniker": "Class27.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class27.cs",
-              "RelativeToolTip": "Class27.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ApplicationServices.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\Core\\ApplicationServices.cs",
+              "RelativeDocumentMoniker": "Core\\ApplicationServices.cs",
+              "ToolTip": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\Core\\ApplicationServices.cs",
+              "RelativeToolTip": "Core\\ApplicationServices.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:26.071Z",
+              "WhenOpened": "2026-01-27T21:41:55.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Class29.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class29.cs",
-              "RelativeDocumentMoniker": "Class29.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class29.cs",
-              "RelativeToolTip": "Class29.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Class27.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class27.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class27.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:25.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Class31.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class31.cs",
-              "RelativeDocumentMoniker": "Class31.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class31.cs",
-              "RelativeToolTip": "Class31.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:24.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Class34.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class34.cs",
-              "RelativeDocumentMoniker": "Class34.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class34.cs",
-              "RelativeToolTip": "Class34.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:23.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Class36.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class36.cs",
-              "RelativeDocumentMoniker": "Class36.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class36.cs",
-              "RelativeToolTip": "Class36.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:23.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Class7.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class7.cs",
-              "RelativeDocumentMoniker": "Class7.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class7.cs",
-              "RelativeToolTip": "Class7.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:22.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:26.071Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Class8.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class8.cs",
-              "RelativeDocumentMoniker": "Class8.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class8.cs",
-              "RelativeToolTip": "Class8.cs",
+              "Title": "Class29.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class29.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class29.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:21.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:25.239Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Class9.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class9.cs",
-              "RelativeDocumentMoniker": "Class9.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class9.cs",
-              "RelativeToolTip": "Class9.cs",
+              "Title": "Class31.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class31.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class31.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:21.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:24.599Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Class11.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class11.cs",
-              "RelativeDocumentMoniker": "Class11.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class11.cs",
-              "RelativeToolTip": "Class11.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Title": "Class34.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class34.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class34.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:13.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:23.966Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class1.cs",
-              "RelativeDocumentMoniker": "Class1.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class1.cs",
-              "RelativeToolTip": "Class1.cs",
+              "Title": "Class36.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class36.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class36.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:11.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:23.279Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Class0.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class0.cs",
-              "RelativeDocumentMoniker": "Class0.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\Class0.cs",
-              "RelativeToolTip": "Class0.cs",
+              "Title": "Class7.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class7.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class7.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:14:10.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:22.583Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "ItemMaker.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\MuMaker\\ItemMaker.cs",
-              "RelativeDocumentMoniker": "MuMaker\\ItemMaker.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\MuMaker\\ItemMaker.cs*",
-              "RelativeToolTip": "MuMaker\\ItemMaker.cs*",
-              "ViewState": "AgIAALEbAAAAAAAAAAAUwL0bAAAAAAAAAAAAAA==",
+              "Title": "Class8.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class8.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:11:25.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:21.935Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ItemMaker.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\MuMaker\\ItemMaker.cs",
-              "RelativeDocumentMoniker": "MuMaker\\ItemMaker.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\MuMaker\\ItemMaker.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "MuMaker\\ItemMaker.cs [Dise\u00F1o]*",
+              "Title": "Class9.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class9.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class9.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:10:21.33Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-01-03T19:14:21.087Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "AccountMaker.cs",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs",
-              "RelativeDocumentMoniker": "MuMaker\\AccountMaker.cs",
-              "ToolTip": "E:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs",
-              "RelativeToolTip": "MuMaker\\AccountMaker.cs",
-              "ViewState": "AgIAAG0GAAAAAAAAAAAAwGoGAAAZAAAAAAAAAA==",
+              "Title": "Class11.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class11.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class11.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T19:07:18.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-03T19:14:13.335Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class1.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:14:11.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Class0.cs",
+              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\Class0.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\Class0.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:14:10.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemMaker.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\MuMaker\\ItemMaker.cs",
+              "RelativeDocumentMoniker": "MuMaker\\ItemMaker.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\MuMaker\\ItemMaker.cs*",
+              "ViewState": "AgIAALEbAAAAAAAAAAAUwL0bAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:11:25.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ItemMaker.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\MuMaker\\ItemMaker.cs",
+              "RelativeDocumentMoniker": "MuMaker\\ItemMaker.cs",
+              "ToolTip": "E:\\Mu Online\\MuMaker\\MuMaker\\ItemMaker.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:10:21.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountMaker.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\MuMaker\\AccountMaker.cs",
+              "RelativeDocumentMoniker": "MuMaker\\AccountMaker.cs",
+              "ToolTip": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\MuMaker\\AccountMaker.cs",
+              "RelativeToolTip": "MuMaker\\AccountMaker.cs",
+              "ViewState": "AgIAAG0GAAAAAAAAAAAAwGoGAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T19:07:18.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AccountMaker.cs [Dise\u00F1o]",
-              "DocumentMoniker": "E:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs",
+              "DocumentMoniker": "D:\\Usuarios\\Jose\\Documents\\GitHub\\MuEMU-Reworked\\Tools Source\\MuMaker\\MuMaker\\AccountMaker.cs",
               "RelativeDocumentMoniker": "MuMaker\\AccountMaker.cs",
               "ToolTip": "F:\\Mu Online\\MuMaker\\MuMaker\\AccountMaker.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
