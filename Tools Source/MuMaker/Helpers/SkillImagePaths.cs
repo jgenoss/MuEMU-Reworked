@@ -7,14 +7,13 @@ namespace MuMaker.Helpers
 {
     /// <summary>
     /// Image paths for skills
+    /// Maintains backward compatibility with original field names
     /// </summary>
     [StandardModule]
     internal sealed class SkillImagePaths
     {
-        /// <summary>Default/unknown skill image</summary>
-        public static string DefaultSkillImage = "Img\\Skills\\999999.mmk";
-
-        /// <summary>Current skill image path (dynamic)</summary>
-        public static string CurrentSkillImagePath;
+        // Original field names for backward compatibility
+        public static string string_1 = "Img\\Skills\\999999.mmk";  // Default/unknown skill
+        public static string string_0;  // Current skill image path
     }
 }

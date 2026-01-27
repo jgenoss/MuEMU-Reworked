@@ -20,29 +20,29 @@ namespace MuMaker.Data
         /// </summary>
         /// <param name="skillName">Name of the skill to load</param>
         /// <returns>True on success</returns>
-        public static object LoadSkillByName(object skillName)
+        public static object smethod_0(object skillName)
         {
-            ConnectionManager.OpenLocalDatabase();
+            ConnectionManager.smethod_10();
             try
             {
-                SqlConnectionPool.LocalDbConnection.Open();
-                SqlConnectionPool.LocalDbCommand.Connection = SqlConnectionPool.LocalDbConnection;
-                SqlConnectionPool.LocalDbCommand.CommandText = Conversions.ToString(
+                SqlConnectionPool.oleDbConnection_0.Open();
+                SqlConnectionPool.oleDbCommand_0.Connection = SqlConnectionPool.oleDbConnection_0;
+                SqlConnectionPool.oleDbCommand_0.CommandText = Conversions.ToString(
                     Operators.ConcatenateObject(
                         Operators.ConcatenateObject(
                             (object)"SELECT * FROM Skills WHERE NAME='", skillName),
                         (object)"';"));
-                SqlConnectionPool.LocalDbCommand.ExecuteNonQuery();
-                SqlConnectionPool.LocalDbReader = SqlConnectionPool.LocalDbCommand.ExecuteReader();
-                SqlConnectionPool.LocalDbReader.Read();
+                SqlConnectionPool.oleDbCommand_0.ExecuteNonQuery();
+                SqlConnectionPool.oleDbDataReader_0 = SqlConnectionPool.oleDbCommand_0.ExecuteReader();
+                SqlConnectionPool.oleDbDataReader_0.Read();
 
-                SkillData.SelectedSkill.SkillNumber = Conversions.ToString(SqlConnectionPool.LocalDbReader["Nº"]);
-                SkillData.SelectedSkill.SkillId = Conversions.ToString(SqlConnectionPool.LocalDbReader["ID"]);
-                SkillData.SelectedSkill.Name = Conversions.ToString(SqlConnectionPool.LocalDbReader["NAME"]);
-                SkillData.SelectedSkill.Type = Conversions.ToString(SqlConnectionPool.LocalDbReader["TIPO"]);
-                SkillData.SelectedSkill.Range = Conversions.ToString(SqlConnectionPool.LocalDbReader["Rango"]);
-                SkillData.SelectedSkill.ManaCost = Conversions.ToString(SqlConnectionPool.LocalDbReader["Mana"]);
-                SkillData.SelectedSkill.StaminaCost = Conversions.ToString(SqlConnectionPool.LocalDbReader["Estamina"]);
+                SkillData.struct5_2.string_0 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Nº"]);
+                SkillData.struct5_2.string_1 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["ID"]);
+                SkillData.struct5_2.string_3 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["NAME"]);
+                SkillData.struct5_2.string_4 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["TIPO"]);
+                SkillData.struct5_2.string_5 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Rango"]);
+                SkillData.struct5_2.string_6 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Mana"]);
+                SkillData.struct5_2.string_7 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Estamina"]);
             }
             catch (Exception ex)
             {
@@ -50,8 +50,8 @@ namespace MuMaker.Data
                 int num = (int)Interaction.MsgBox((object)ex.Message, MsgBoxStyle.OkOnly, (object)null);
                 ProjectData.ClearProjectError();
             }
-            SqlConnectionPool.LocalDbReader.Close();
-            ConnectionManager.CloseLocalDatabase();
+            SqlConnectionPool.oleDbDataReader_0.Close();
+            ConnectionManager.smethod_11();
             return (object)true;
         }
 
@@ -59,44 +59,45 @@ namespace MuMaker.Data
         /// Load skill data by skill ID and build tooltip text
         /// </summary>
         /// <returns>True on success</returns>
-        public static object LoadSkillById()
+        public static object smethod_1()
         {
-            ConnectionManager.OpenLocalDatabase();
-            SkillData.CurrentSkill.TooltipText = "";
+            ConnectionManager.smethod_10();
+            SkillData.struct5_0.string_8 = "";
             try
             {
-                SqlConnectionPool.LocalDbConnection.Open();
-                SqlConnectionPool.LocalDbCommand.Connection = SqlConnectionPool.LocalDbConnection;
-                SqlConnectionPool.LocalDbCommand.CommandText = "SELECT * FROM Skills WHERE ID=" +
-                    Conversions.ToString(Conversion.Val("&H" + SkillData.CurrentSkill.SkillId)) + ";";
-                SqlConnectionPool.LocalDbCommand.ExecuteNonQuery();
-                SqlConnectionPool.LocalDbReader = SqlConnectionPool.LocalDbCommand.ExecuteReader();
+                SqlConnectionPool.oleDbConnection_0.Open();
+                SqlConnectionPool.oleDbCommand_0.Connection = SqlConnectionPool.oleDbConnection_0;
+                SqlConnectionPool.oleDbCommand_0.CommandText = "SELECT * FROM Skills WHERE ID=" +
+                    Conversions.ToString(Conversion.Val("&H" + SkillData.struct5_0.string_1)) + ";";
+                SqlConnectionPool.oleDbCommand_0.ExecuteNonQuery();
+                SqlConnectionPool.oleDbDataReader_0 = SqlConnectionPool.oleDbCommand_0.ExecuteReader();
 
-                if (SqlConnectionPool.LocalDbReader.Read())
+                if (SqlConnectionPool.oleDbDataReader_0.Read())
                 {
-                    string skillSource;
-                    if (Operators.CompareString(SkillData.CurrentSkill.SkillTypeCode, "68", false) == 0)
+                    if (Operators.CompareString(SkillData.struct5_0.string_2, "68", false) == 0)
                     {
-                        skillSource = "(Pet/Item)";
+                        SkillData.struct5_0.string_8 = " " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["NAME"]) + " (Pet/Item)\n " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Tipo"]) + "\n Range : " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Rango"]) + "\n Mana : " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Mana"]) + "\n Stamina : " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Estamina"]);
                     }
                     else
                     {
-                        skillSource = "(Aprendida/Learned)";
+                        SkillData.struct5_0.string_8 = " " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["NAME"]) + " (Aprendida/Learned)\n " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Tipo"]) + "\n Range : " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Rango"]) + "\n Mana : " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Mana"]) + "\n Stamina : " +
+                            Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Estamina"]);
                     }
-
-                    SkillData.CurrentSkill.TooltipText = " " +
-                        Conversions.ToString(SqlConnectionPool.LocalDbReader["NAME"]) + " " + skillSource + "\n " +
-                        Conversions.ToString(SqlConnectionPool.LocalDbReader["Tipo"]) + "\n Range : " +
-                        Conversions.ToString(SqlConnectionPool.LocalDbReader["Rango"]) + "\n Mana : " +
-                        Conversions.ToString(SqlConnectionPool.LocalDbReader["Mana"]) + "\n Stamina : " +
-                        Conversions.ToString(SqlConnectionPool.LocalDbReader["Estamina"]);
-
-                    SkillData.CurrentSkill.SkillNumber = Conversions.ToString(SqlConnectionPool.LocalDbReader["Nº"]);
+                    SkillData.struct5_0.string_0 = Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["Nº"]);
                 }
                 else
                 {
-                    SkillData.CurrentSkill.TooltipText = "Unknown Skill\n UPDATE Items.mdb";
-                    SkillData.CurrentSkill.SkillNumber = "000000";
+                    SkillData.struct5_0.string_8 = "Unknown Skill\n UPDATE Items.mdb";
+                    SkillData.struct5_0.string_0 = "000000";
                 }
             }
             catch (Exception ex)
@@ -105,8 +106,8 @@ namespace MuMaker.Data
                 int num = (int)Interaction.MsgBox((object)ex.Message, MsgBoxStyle.OkOnly, (object)null);
                 ProjectData.ClearProjectError();
             }
-            SqlConnectionPool.LocalDbReader.Close();
-            ConnectionManager.CloseLocalDatabase();
+            SqlConnectionPool.oleDbDataReader_0.Close();
+            ConnectionManager.smethod_11();
             return (object)true;
         }
     }

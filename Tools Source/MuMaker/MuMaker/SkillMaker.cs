@@ -2408,7 +2408,7 @@ namespace MuMaker
       this.OnlineON.Visible = false;
       this.ClearSkills.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.ClearSkills.BackgroundImage = (Image) Class34.smethod_53();
+      this.ClearSkills.BackgroundImage = (Image) EmbeddedResources.smethod_53();
       this.ClearSkills.BackgroundImageLayout = ImageLayout.Center;
       this.ClearSkills.Cursor = Cursors.Hand;
       this.ClearSkills.DialogResult = DialogResult.Cancel;
@@ -2433,7 +2433,7 @@ namespace MuMaker
       this.ClearSkills.UseVisualStyleBackColor = false;
       this.ONLineInfo.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.ONLineInfo.BackgroundImage = (Image) Class34.smethod_70();
+      this.ONLineInfo.BackgroundImage = (Image) EmbeddedResources.smethod_70();
       this.ONLineInfo.BackgroundImageLayout = ImageLayout.Center;
       this.ONLineInfo.Cursor = Cursors.Hand;
       this.ONLineInfo.FlatAppearance.BorderSize = 0;
@@ -3137,7 +3137,7 @@ namespace MuMaker
       this.Reloj.Interval = 10000;
       this.Buscar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.Buscar.BackgroundImageLayout = ImageLayout.Center;
       this.Buscar.Cursor = Cursors.Hand;
       this.Buscar.FlatAppearance.BorderSize = 0;
@@ -3161,7 +3161,7 @@ namespace MuMaker
       this.Buscar.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -3185,7 +3185,7 @@ namespace MuMaker
       this.Cerrar.UseVisualStyleBackColor = false;
       this.Minimizar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.Minimizar.BackgroundImageLayout = ImageLayout.Center;
       this.Minimizar.Cursor = Cursors.Hand;
       this.Minimizar.DialogResult = DialogResult.Cancel;
@@ -3640,66 +3640,66 @@ namespace MuMaker
 
     public object ResetearSkills()
     {
-      this.Skill1.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill2.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill3.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill4.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill5.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill6.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill7.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill8.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill9.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill10.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill11.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill12.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill13.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill14.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill15.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill16.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill17.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill18.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill19.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill20.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill21.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill22.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill23.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill24.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill25.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill26.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill27.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill28.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill29.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill30.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill31.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill32.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill33.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill34.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill35.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill36.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill37.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill38.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill39.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill40.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill41.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill42.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill43.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill44.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill45.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill46.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill47.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill48.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill49.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill50.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill51.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill52.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill53.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill54.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill55.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill56.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill57.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill58.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill59.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
-      this.Skill60.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_1)));
+      this.Skill1.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill2.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill3.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill4.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill5.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill6.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill7.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill8.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill9.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill10.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill11.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill12.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill13.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill14.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill15.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill16.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill17.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill18.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill19.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill20.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill21.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill22.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill23.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill24.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill25.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill26.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill27.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill28.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill29.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill30.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill31.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill32.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill33.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill34.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill35.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill36.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill37.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill38.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill39.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill40.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill41.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill42.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill43.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill44.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill45.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill46.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill47.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill48.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill49.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill50.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill51.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill52.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill53.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill54.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill55.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill56.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill57.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill58.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill59.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
+      this.Skill60.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_1)));
       this.Emergente.SetToolTip((Control) this.Skill1, "");
       this.Emergente.SetToolTip((Control) this.Skill2, "");
       this.Emergente.SetToolTip((Control) this.Skill3, "");
@@ -3764,18 +3764,18 @@ namespace MuMaker
 
     public object CargarCuentas()
     {
-      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
       {
         try
         {
-          this.Cuentas.Text = Conversions.ToString(Class30.object_7);
+          this.Cuentas.Text = Conversions.ToString(LocalizedStrings.object_7);
           this.Cuentas.Items.Clear();
           int num1 = 0;
-          int num2 = checked (Class2.smethod_3().method_8().Cuentas.Items.Count - 1);
+          int num2 = checked (ApplicationServices.MuMakerApplication.smethod_3().method_8().Cuentas.Items.Count - 1);
           int index = num1;
           while (index <= num2)
           {
-            this.Cuentas.Items.Add(RuntimeHelpers.GetObjectValue(Class2.smethod_3().method_8().Cuentas.Items[index]));
+            this.Cuentas.Items.Add(RuntimeHelpers.GetObjectValue(ApplicationServices.MuMakerApplication.smethod_3().method_8().Cuentas.Items[index]));
             checked { ++index; }
           }
         }
@@ -3787,18 +3787,18 @@ namespace MuMaker
       }
       else
       {
-        Class7.smethod_0();
+        ConnectionManager.smethod_0();
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-          Class28.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          this.Cuentas.Text = Conversions.ToString(Class30.object_7);
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+          SqlConnectionPool.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          this.Cuentas.Text = Conversions.ToString(LocalizedStrings.object_7);
           this.Cuentas.Items.Clear();
-          while (Class28.sqlDataReader_1.Read())
-            this.Cuentas.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-          Class28.sqlDataReader_1.Close();
+          while (SqlConnectionPool.sqlDataReader_1.Read())
+            this.Cuentas.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+          SqlConnectionPool.sqlDataReader_1.Close();
         }
         catch (Exception ex)
         {
@@ -3806,25 +3806,25 @@ namespace MuMaker
           int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
       }
       return (object) true;
     }
 
     public object CargarPersonajes()
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + Class22.struct0_0.string_1 + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        this.Personajes.Text = Conversions.ToString(Class30.object_8);
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + AccountData.CurrentAccount.string_1 + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        this.Personajes.Text = Conversions.ToString(LocalizedStrings.object_8);
         this.Personajes.Items.Clear();
-        while (Class28.sqlDataReader_1.Read())
-          this.Personajes.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-        Class28.sqlDataReader_1.Close();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
+          this.Personajes.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -3832,33 +3832,33 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object ClasePersonaje()
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT Class FROM Character WHERE AccountID='" + Class22.struct0_0.string_1 + "' AND Name='" + Class22.struct1_0.string_1 + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Class FROM Character WHERE AccountID='" + AccountData.CurrentAccount.string_1 + "' AND Name='" + AccountData.CurrentCharacter.string_1 + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
         this.NombreClase.Text = " [ UNKNOWN ] ";
-        while (Class28.sqlDataReader_1.Read())
+        while (SqlConnectionPool.sqlDataReader_1.Read())
         {
           int num1 = 1;
-          int num2 = Conversions.ToInteger(Class6.string_9);
+          int num2 = Conversions.ToInteger(GameDataArrays.string_9);
           int num3 = num1;
           while (num3 <= num2)
           {
-            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class28.sqlDataReader_1[0].ToString(), Class6.string_6[checked (num3 - 1)], false) == 0)
-              this.NombreClase.Text = Class6.string_8[checked (num3 - 1)];
+            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SqlConnectionPool.sqlDataReader_1[0].ToString(), GameDataArrays.string_6[checked (num3 - 1)], false) == 0)
+              this.NombreClase.Text = GameDataArrays.string_8[checked (num3 - 1)];
             checked { ++num3; }
           }
         }
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -3866,14 +3866,14 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object CheckOnLine()
     {
-      Class12.smethod_0();
-      if (Class22.struct0_0.bool_0)
+      AccountStatusManager.smethod_0();
+      if (AccountData.CurrentAccount.bool_0)
       {
         this.OnlineOFF.Hide();
         this.OnlineON.Show();
@@ -3889,263 +3889,263 @@ namespace MuMaker
     public object Skills()
     {
       this.ResetearSkills();
-      Class8.smethod_9();
+      DatabaseOperations.smethod_9();
       this.CuentaSkill.Text = this.Cuentas.Text;
       this.ChartSkill.Text = this.Personajes.Text;
       int num1 = 0;
       int num2 = 1;
-      int num3 = Class32.int_9;
+      int num3 = Constants.int_9;
       int num4 = num2;
       while (num4 <= num3)
       {
-        Class25.struct5_0.string_1 = Strings.Mid(Class22.struct1_0.string_18, checked (num4 + num1), 2);
-        Class25.struct5_0.string_2 = Strings.Mid(Class22.struct1_0.string_18, checked (num4 + num1 + 2), 2);
+        SkillData.CurrentSkill.string_1 = Strings.Mid(AccountData.CurrentCharacter.string_18, checked (num4 + num1), 2);
+        SkillData.CurrentSkill.string_2 = Strings.Mid(AccountData.CurrentCharacter.string_18, checked (num4 + num1 + 2), 2);
         checked { num1 += 5; }
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class25.struct5_0.string_1, "FF", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class25.struct5_0.string_1, "", false) != 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SkillData.CurrentSkill.string_1, "FF", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SkillData.CurrentSkill.string_1, "", false) != 0)
         {
-          Class11.smethod_1();
-          Class19.smethod_0((object) Class25.struct5_0.string_0);
+          SkillDatabaseLoader.smethod_1();
+          SkillImageHelper.smethod_0((object) SkillData.CurrentSkill.string_0);
           switch (num4)
           {
             case 1:
-              this.Skill1.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill1, Class25.struct5_0.string_8);
+              this.Skill1.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill1, SkillData.CurrentSkill.string_8);
               break;
             case 2:
-              this.Skill2.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill2, Class25.struct5_0.string_8);
+              this.Skill2.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill2, SkillData.CurrentSkill.string_8);
               break;
             case 3:
-              this.Skill3.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill3, Class25.struct5_0.string_8);
+              this.Skill3.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill3, SkillData.CurrentSkill.string_8);
               break;
             case 4:
-              this.Skill4.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill4, Class25.struct5_0.string_8);
+              this.Skill4.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill4, SkillData.CurrentSkill.string_8);
               break;
             case 5:
-              this.Skill5.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill5, Class25.struct5_0.string_8);
+              this.Skill5.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill5, SkillData.CurrentSkill.string_8);
               break;
             case 6:
-              this.Skill6.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill6, Class25.struct5_0.string_8);
+              this.Skill6.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill6, SkillData.CurrentSkill.string_8);
               break;
             case 7:
-              this.Skill7.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill7, Class25.struct5_0.string_8);
+              this.Skill7.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill7, SkillData.CurrentSkill.string_8);
               break;
             case 8:
-              this.Skill8.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill8, Class25.struct5_0.string_8);
+              this.Skill8.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill8, SkillData.CurrentSkill.string_8);
               break;
             case 9:
-              this.Skill9.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill9, Class25.struct5_0.string_8);
+              this.Skill9.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill9, SkillData.CurrentSkill.string_8);
               break;
             case 10:
-              this.Skill10.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill10, Class25.struct5_0.string_8);
+              this.Skill10.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill10, SkillData.CurrentSkill.string_8);
               break;
             case 11:
-              this.Skill11.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill11, Class25.struct5_0.string_8);
+              this.Skill11.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill11, SkillData.CurrentSkill.string_8);
               break;
             case 12:
-              this.Skill12.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill12, Class25.struct5_0.string_8);
+              this.Skill12.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill12, SkillData.CurrentSkill.string_8);
               break;
             case 13:
-              this.Skill13.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill13, Class25.struct5_0.string_8);
+              this.Skill13.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill13, SkillData.CurrentSkill.string_8);
               break;
             case 14:
-              this.Skill14.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill14, Class25.struct5_0.string_8);
+              this.Skill14.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill14, SkillData.CurrentSkill.string_8);
               break;
             case 15:
-              this.Skill15.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill15, Class25.struct5_0.string_8);
+              this.Skill15.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill15, SkillData.CurrentSkill.string_8);
               break;
             case 16:
-              this.Skill16.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill16, Class25.struct5_0.string_8);
+              this.Skill16.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill16, SkillData.CurrentSkill.string_8);
               break;
             case 17:
-              this.Skill17.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill17, Class25.struct5_0.string_8);
+              this.Skill17.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill17, SkillData.CurrentSkill.string_8);
               break;
             case 18:
-              this.Skill18.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill18, Class25.struct5_0.string_8);
+              this.Skill18.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill18, SkillData.CurrentSkill.string_8);
               break;
             case 19:
-              this.Skill19.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill19, Class25.struct5_0.string_8);
+              this.Skill19.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill19, SkillData.CurrentSkill.string_8);
               break;
             case 20:
-              this.Skill20.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill20, Class25.struct5_0.string_8);
+              this.Skill20.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill20, SkillData.CurrentSkill.string_8);
               break;
             case 21:
-              this.Skill21.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill21, Class25.struct5_0.string_8);
+              this.Skill21.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill21, SkillData.CurrentSkill.string_8);
               break;
             case 22:
-              this.Skill22.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill22, Class25.struct5_0.string_8);
+              this.Skill22.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill22, SkillData.CurrentSkill.string_8);
               break;
             case 23:
-              this.Skill23.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill23, Class25.struct5_0.string_8);
+              this.Skill23.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill23, SkillData.CurrentSkill.string_8);
               break;
             case 24:
-              this.Skill24.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill24, Class25.struct5_0.string_8);
+              this.Skill24.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill24, SkillData.CurrentSkill.string_8);
               break;
             case 25:
-              this.Skill25.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill25, Class25.struct5_0.string_8);
+              this.Skill25.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill25, SkillData.CurrentSkill.string_8);
               break;
             case 26:
-              this.Skill26.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill26, Class25.struct5_0.string_8);
+              this.Skill26.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill26, SkillData.CurrentSkill.string_8);
               break;
             case 27:
-              this.Skill27.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill27, Class25.struct5_0.string_8);
+              this.Skill27.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill27, SkillData.CurrentSkill.string_8);
               break;
             case 28:
-              this.Skill28.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill28, Class25.struct5_0.string_8);
+              this.Skill28.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill28, SkillData.CurrentSkill.string_8);
               break;
             case 29:
-              this.Skill29.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill29, Class25.struct5_0.string_8);
+              this.Skill29.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill29, SkillData.CurrentSkill.string_8);
               break;
             case 30:
-              this.Skill30.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill30, Class25.struct5_0.string_8);
+              this.Skill30.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill30, SkillData.CurrentSkill.string_8);
               break;
             case 31:
-              this.Skill31.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill31, Class25.struct5_0.string_8);
+              this.Skill31.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill31, SkillData.CurrentSkill.string_8);
               break;
             case 32:
-              this.Skill32.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill32, Class25.struct5_0.string_8);
+              this.Skill32.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill32, SkillData.CurrentSkill.string_8);
               break;
             case 33:
-              this.Skill33.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill33, Class25.struct5_0.string_8);
+              this.Skill33.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill33, SkillData.CurrentSkill.string_8);
               break;
             case 34:
-              this.Skill34.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill34, Class25.struct5_0.string_8);
+              this.Skill34.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill34, SkillData.CurrentSkill.string_8);
               break;
             case 35:
-              this.Skill35.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill35, Class25.struct5_0.string_8);
+              this.Skill35.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill35, SkillData.CurrentSkill.string_8);
               break;
             case 36:
-              this.Skill36.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill36, Class25.struct5_0.string_8);
+              this.Skill36.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill36, SkillData.CurrentSkill.string_8);
               break;
             case 37:
-              this.Skill37.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill37, Class25.struct5_0.string_8);
+              this.Skill37.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill37, SkillData.CurrentSkill.string_8);
               break;
             case 38:
-              this.Skill38.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill38, Class25.struct5_0.string_8);
+              this.Skill38.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill38, SkillData.CurrentSkill.string_8);
               break;
             case 39:
-              this.Skill39.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill39, Class25.struct5_0.string_8);
+              this.Skill39.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill39, SkillData.CurrentSkill.string_8);
               break;
             case 40:
-              this.Skill40.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill40, Class25.struct5_0.string_8);
+              this.Skill40.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill40, SkillData.CurrentSkill.string_8);
               break;
             case 41:
-              this.Skill41.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill41, Class25.struct5_0.string_8);
+              this.Skill41.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill41, SkillData.CurrentSkill.string_8);
               break;
             case 42:
-              this.Skill42.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill42, Class25.struct5_0.string_8);
+              this.Skill42.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill42, SkillData.CurrentSkill.string_8);
               break;
             case 43:
-              this.Skill43.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill43, Class25.struct5_0.string_8);
+              this.Skill43.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill43, SkillData.CurrentSkill.string_8);
               break;
             case 44:
-              this.Skill44.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill44, Class25.struct5_0.string_8);
+              this.Skill44.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill44, SkillData.CurrentSkill.string_8);
               break;
             case 45:
-              this.Skill45.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill45, Class25.struct5_0.string_8);
+              this.Skill45.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill45, SkillData.CurrentSkill.string_8);
               break;
             case 46:
-              this.Skill46.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill46, Class25.struct5_0.string_8);
+              this.Skill46.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill46, SkillData.CurrentSkill.string_8);
               break;
             case 47:
-              this.Skill47.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill47, Class25.struct5_0.string_8);
+              this.Skill47.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill47, SkillData.CurrentSkill.string_8);
               break;
             case 48:
-              this.Skill48.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill48, Class25.struct5_0.string_8);
+              this.Skill48.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill48, SkillData.CurrentSkill.string_8);
               break;
             case 49:
-              this.Skill49.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill49, Class25.struct5_0.string_8);
+              this.Skill49.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill49, SkillData.CurrentSkill.string_8);
               break;
             case 50:
-              this.Skill50.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill50, Class25.struct5_0.string_8);
+              this.Skill50.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill50, SkillData.CurrentSkill.string_8);
               break;
             case 51:
-              this.Skill51.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill51, Class25.struct5_0.string_8);
+              this.Skill51.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill51, SkillData.CurrentSkill.string_8);
               break;
             case 52:
-              this.Skill52.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill52, Class25.struct5_0.string_8);
+              this.Skill52.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill52, SkillData.CurrentSkill.string_8);
               break;
             case 53:
-              this.Skill53.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill53, Class25.struct5_0.string_8);
+              this.Skill53.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill53, SkillData.CurrentSkill.string_8);
               break;
             case 54:
-              this.Skill54.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill54, Class25.struct5_0.string_8);
+              this.Skill54.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill54, SkillData.CurrentSkill.string_8);
               break;
             case 55:
-              this.Skill55.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill55, Class25.struct5_0.string_8);
+              this.Skill55.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill55, SkillData.CurrentSkill.string_8);
               break;
             case 56:
-              this.Skill56.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill56, Class25.struct5_0.string_8);
+              this.Skill56.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill56, SkillData.CurrentSkill.string_8);
               break;
             case 57:
-              this.Skill57.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill57, Class25.struct5_0.string_8);
+              this.Skill57.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill57, SkillData.CurrentSkill.string_8);
               break;
             case 58:
-              this.Skill58.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill58, Class25.struct5_0.string_8);
+              this.Skill58.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill58, SkillData.CurrentSkill.string_8);
               break;
             case 59:
-              this.Skill59.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill59, Class25.struct5_0.string_8);
+              this.Skill59.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill59, SkillData.CurrentSkill.string_8);
               break;
             case 60:
-              this.Skill60.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-              this.Emergente.SetToolTip((Control) this.Skill60, Class25.struct5_0.string_8);
+              this.Skill60.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+              this.Emergente.SetToolTip((Control) this.Skill60, SkillData.CurrentSkill.string_8);
               break;
           }
         }
@@ -4156,12 +4156,12 @@ namespace MuMaker
 
     public object EditSkills(object CS)
     {
-      string str1 = (Class25.struct5_2.string_1.Length != 1 ? Conversion.Hex((object) Class25.struct5_2.string_1) : "0" + Conversion.Hex((object) Class25.struct5_2.string_1)) + "0000";
+      string str1 = (SkillData.SelectedSkill.string_1.Length != 1 ? Conversion.Hex((object) SkillData.SelectedSkill.string_1) : "0" + Conversion.Hex((object) SkillData.SelectedSkill.string_1)) + "0000";
       int Start1 = !Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.AddObject(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(CS, (object) 1), (object) 6), (object) 1)) : Conversions.ToInteger(CS);
       int num1;
-      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Strings.Mid(Class22.struct1_0.string_18, Start1, 6), "FF0000", false) != 0)
+      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Strings.Mid(AccountData.CurrentCharacter.string_18, Start1, 6), "FF0000", false) != 0)
       {
-        if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual((object) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_93), MsgBoxStyle.YesNo, RuntimeHelpers.GetObjectValue(Class30.object_76)), (object) MsgBoxResult.Yes, false))
+        if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual((object) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_93), MsgBoxStyle.YesNo, RuntimeHelpers.GetObjectValue(LocalizedStrings.object_76)), (object) MsgBoxResult.Yes, false))
         {
           this.BorrarSkill(RuntimeHelpers.GetObjectValue(CS));
           this.Skills();
@@ -4174,14 +4174,14 @@ namespace MuMaker
       {
         int num2 = Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 6));
         int Start2 = checked (num2 + 1);
-        string str2 = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(Class22.struct1_0.string_18, 1, checked (num2 - 6)) + str1 + Strings.Mid(Class22.struct1_0.string_18, Start2) : str1 + Strings.Mid(Class22.struct1_0.string_18, 7));
-        Class7.smethod_0();
-        Class28.sqlConnection_1.Open();
-        Class20.smethod_12((object) str2);
+        string str2 = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(AccountData.CurrentCharacter.string_18, 1, checked (num2 - 6)) + str1 + Strings.Mid(AccountData.CurrentCharacter.string_18, Start2) : str1 + Strings.Mid(AccountData.CurrentCharacter.string_18, 7));
+        ConnectionManager.smethod_0();
+        SqlConnectionPool.sqlConnection_1.Open();
+        StoredProceduresManager.smethod_12((object) str2);
         try
         {
           SqlCommand sqlCommand1 = new SqlCommand();
-          SqlCommand sqlCommand2 = new SqlCommand("MMK_SkillMaker", Class28.sqlConnection_1);
+          SqlCommand sqlCommand2 = new SqlCommand("MMK_SkillMaker", SqlConnectionPool.sqlConnection_1);
           sqlCommand2.CommandType = CommandType.StoredProcedure;
           sqlCommand2.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.VarChar, 10)
           {
@@ -4191,8 +4191,8 @@ namespace MuMaker
           {
             Direction = ParameterDirection.Input
           });
-          sqlCommand2.Parameters["@AccountID"].Value = (object) Class22.struct0_0.string_1;
-          sqlCommand2.Parameters["@Name"].Value = (object) Class22.struct1_0.string_1;
+          sqlCommand2.Parameters["@AccountID"].Value = (object) AccountData.CurrentAccount.string_1;
+          sqlCommand2.Parameters["@Name"].Value = (object) AccountData.CurrentCharacter.string_1;
           sqlCommand2.ExecuteNonQuery();
           sqlCommand2.Dispose();
           sqlCommand1.Dispose();
@@ -4203,7 +4203,7 @@ namespace MuMaker
           int num3 = (int) Interaction.MsgBox((object) "ERROR al Insertat el Skill!!", MsgBoxStyle.OkOnly, (object) null);
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
         this.Skills();
       }
       return (object) true;
@@ -4213,14 +4213,14 @@ namespace MuMaker
     {
       int num1 = Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 6));
       int Start = checked (num1 + 1);
-      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(Class22.struct1_0.string_18, 1, checked (num1 - 6)) + "FF0000" + Strings.Mid(Class22.struct1_0.string_18, Start) : "FF0000" + Strings.Mid(Class22.struct1_0.string_18, 7));
-      Class7.smethod_0();
-      Class28.sqlConnection_1.Open();
-      Class20.smethod_12((object) str);
+      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(AccountData.CurrentCharacter.string_18, 1, checked (num1 - 6)) + "FF0000" + Strings.Mid(AccountData.CurrentCharacter.string_18, Start) : "FF0000" + Strings.Mid(AccountData.CurrentCharacter.string_18, 7));
+      ConnectionManager.smethod_0();
+      SqlConnectionPool.sqlConnection_1.Open();
+      StoredProceduresManager.smethod_12((object) str);
       try
       {
         SqlCommand sqlCommand1 = new SqlCommand();
-        SqlCommand sqlCommand2 = new SqlCommand("MMK_SkillMaker", Class28.sqlConnection_1);
+        SqlCommand sqlCommand2 = new SqlCommand("MMK_SkillMaker", SqlConnectionPool.sqlConnection_1);
         sqlCommand2.CommandType = CommandType.StoredProcedure;
         sqlCommand2.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.VarChar, 10)
         {
@@ -4230,8 +4230,8 @@ namespace MuMaker
         {
           Direction = ParameterDirection.Input
         });
-        sqlCommand2.Parameters["@AccountID"].Value = (object) Class22.struct0_0.string_1;
-        sqlCommand2.Parameters["@Name"].Value = (object) Class22.struct1_0.string_1;
+        sqlCommand2.Parameters["@AccountID"].Value = (object) AccountData.CurrentAccount.string_1;
+        sqlCommand2.Parameters["@Name"].Value = (object) AccountData.CurrentCharacter.string_1;
         sqlCommand2.ExecuteNonQuery();
         sqlCommand2.Dispose();
         sqlCommand1.Dispose();
@@ -4239,22 +4239,22 @@ namespace MuMaker
       catch (Exception ex)
       {
         ProjectData.SetProjectError(ex);
-        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_94), MsgBoxStyle.OkOnly, (object) null);
+        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_94), MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object ResetSkills()
     {
-      Class20.smethod_8();
-      Class7.smethod_0();
-      Class28.sqlConnection_1.Open();
+      StoredProceduresManager.smethod_8();
+      ConnectionManager.smethod_0();
+      SqlConnectionPool.sqlConnection_1.Open();
       try
       {
         SqlCommand sqlCommand1 = new SqlCommand();
-        SqlCommand sqlCommand2 = new SqlCommand("MMK_SkillMaker", Class28.sqlConnection_1);
+        SqlCommand sqlCommand2 = new SqlCommand("MMK_SkillMaker", SqlConnectionPool.sqlConnection_1);
         sqlCommand2.CommandType = CommandType.StoredProcedure;
         sqlCommand2.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.VarChar, 10)
         {
@@ -4264,8 +4264,8 @@ namespace MuMaker
         {
           Direction = ParameterDirection.Input
         });
-        sqlCommand2.Parameters["@AccountID"].Value = (object) Class22.struct0_0.string_1;
-        sqlCommand2.Parameters["@Name"].Value = (object) Class22.struct1_0.string_1;
+        sqlCommand2.Parameters["@AccountID"].Value = (object) AccountData.CurrentAccount.string_1;
+        sqlCommand2.Parameters["@Name"].Value = (object) AccountData.CurrentCharacter.string_1;
         sqlCommand2.ExecuteNonQuery();
         sqlCommand2.Dispose();
         sqlCommand1.Dispose();
@@ -4273,19 +4273,19 @@ namespace MuMaker
       catch (Exception ex)
       {
         ProjectData.SetProjectError(ex);
-        int num = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_98), MsgBoxStyle.OkOnly, (object) null);
+        int num = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_98), MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object Traducir()
     {
-      this.Foto.Text = Conversions.ToString(Class30.object_9);
-      this.Account.Text = Conversions.ToString(Class30.object_5);
-      this.Chart.Text = Conversions.ToString(Class30.object_6);
-      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Foto.Text = Conversions.ToString(LocalizedStrings.object_9);
+      this.Account.Text = Conversions.ToString(LocalizedStrings.object_5);
+      this.Chart.Text = Conversions.ToString(LocalizedStrings.object_6);
+      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       return (object) true;
     }
@@ -4293,7 +4293,7 @@ namespace MuMaker
     private void SkillMaker_Load(object sender, EventArgs e)
     {
       VentanaBarraLoad.DefInstance.Show();
-      Class18.smethod_46();
+      IniHelper.smethod_46();
       VentanaBarraLoad.DefInstance.Carga.Value = 10;
       VentanaBarraLoad.DefInstance.Carga.Value = 20;
       this.CargarCuentas();
@@ -4301,7 +4301,7 @@ namespace MuMaker
       VentanaBarraLoad.DefInstance.Carga.Value = 70;
       this.Tipo.SelectedIndex = 0;
       VentanaBarraLoad.DefInstance.Carga.Value = 80;
-      Class20.smethod_1();
+      StoredProceduresManager.smethod_1();
       VentanaBarraLoad.DefInstance.Carga.Value = 90;
       this.ExcepcionesOFF();
       this.Traducir();
@@ -4311,7 +4311,7 @@ namespace MuMaker
 
     private void Cuentas_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class22.struct0_0.string_1 = Conversions.ToString(this.Cuentas.SelectedItem);
+      AccountData.CurrentAccount.string_1 = Conversions.ToString(this.Cuentas.SelectedItem);
       this.CargarPersonajes();
       this.ExcepcionesOFF();
       this.ResetearSkills();
@@ -4322,34 +4322,34 @@ namespace MuMaker
 
     private void Personajes_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class22.struct1_0.string_1 = Conversions.ToString(this.Personajes.SelectedItem);
-      this.CuentaSkill.Text = Class22.struct0_0.string_1;
-      this.ChartSkill.Text = Class22.struct1_0.string_1;
+      AccountData.CurrentCharacter.string_1 = Conversions.ToString(this.Personajes.SelectedItem);
+      this.CuentaSkill.Text = AccountData.CurrentAccount.string_1;
+      this.ChartSkill.Text = AccountData.CurrentCharacter.string_1;
       this.ClasePersonaje();
       this.Skills();
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
       this.ExcepcionesON();
     }
 
     private void Tipo_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class7.smethod_10();
+      ConnectionManager.smethod_10();
       int num1 = 0;
       try
       {
-        Class28.oleDbConnection_0.Open();
-        Class28.oleDbCommand_0.Connection = Class28.oleDbConnection_0;
-        Class28.oleDbCommand_0.CommandText = "SELECT NAME FROM Skills WHERE CLASE='" + this.Tipo.Text + "' ORDER BY Nº ASC;";
-        Class28.oleDbCommand_0.ExecuteNonQuery();
-        Class28.oleDbDataReader_0 = Class28.oleDbCommand_0.ExecuteReader();
+        SqlConnectionPool.oleDbConnection_0.Open();
+        SqlConnectionPool.oleDbCommand_0.Connection = SqlConnectionPool.oleDbConnection_0;
+        SqlConnectionPool.oleDbCommand_0.CommandText = "SELECT NAME FROM Skills WHERE CLASE='" + this.Tipo.Text + "' ORDER BY Nº ASC;";
+        SqlConnectionPool.oleDbCommand_0.ExecuteNonQuery();
+        SqlConnectionPool.oleDbDataReader_0 = SqlConnectionPool.oleDbCommand_0.ExecuteReader();
         this.Items.Items.Clear();
         num1 = 0;
-        while (Class28.oleDbDataReader_0.Read())
+        while (SqlConnectionPool.oleDbDataReader_0.Read())
         {
-          this.Items.Items.Add((object) Conversions.ToString(Class28.oleDbDataReader_0["NAME"]));
+          this.Items.Items.Add((object) Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["NAME"]));
           checked { ++num1; }
         }
-        Class28.oleDbDataReader_0.Close();
+        SqlConnectionPool.oleDbDataReader_0.Close();
       }
       catch (Exception ex)
       {
@@ -4357,7 +4357,7 @@ namespace MuMaker
         int num2 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_11();
+      ConnectionManager.smethod_11();
       if (num1 <= 0)
         return;
       this.Items.SelectedIndex = 0;
@@ -4366,374 +4366,374 @@ namespace MuMaker
 
     private void Items_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class11.smethod_0((object) this.Items.Text);
-      Class19.smethod_0((object) Class25.struct5_2.string_0);
-      this.Imagen.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class33.string_0)));
-      this.SkillTipo.Text = Class25.struct5_2.string_4;
-      this.SkillRango.Text = "Range : " + Class25.struct5_2.string_5;
-      this.Mana.Text = "Mana : " + Class25.struct5_2.string_6;
-      this.Estamina.Text = "Stamina : " + Class25.struct5_2.string_7;
+      SkillDatabaseLoader.smethod_0((object) this.Items.Text);
+      SkillImageHelper.smethod_0((object) SkillData.SelectedSkill.string_0);
+      this.Imagen.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) SkillImagePaths.string_0)));
+      this.SkillTipo.Text = SkillData.SelectedSkill.string_4;
+      this.SkillRango.Text = "Range : " + SkillData.SelectedSkill.string_5;
+      this.Mana.Text = "Mana : " + SkillData.SelectedSkill.string_6;
+      this.Estamina.Text = "Stamina : " + SkillData.SelectedSkill.string_7;
       this.Items.Focus();
     }
 
     private void Skill1_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 1);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill2_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 2);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill3_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 3);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill4_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 4);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill5_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 5);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill6_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 6);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill7_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 7);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill8_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 8);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill9_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 9);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill10_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 10);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill11_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 11);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill12_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 12);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill13_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 13);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill14_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 14);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill15_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 15);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill16_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 16);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill17_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 17);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill18_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 18);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill19_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 19);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill20_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 20);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill21_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 21);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill22_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 22);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill23_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 23);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill24_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 24);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill25_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 25);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill26_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 26);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill27_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 27);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill28_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 28);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill29_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 29);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill30_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 30);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill31_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 31);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill32_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 32);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill33_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 33);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill34_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 34);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill35_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 35);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill36_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 36);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill37_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 37);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill38_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 38);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill39_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 39);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill40_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 40);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill41_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 41);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill42_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 42);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill43_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 43);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill44_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 44);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill45_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 45);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill46_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 46);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill47_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 47);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill48_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 48);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill49_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 49);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill50_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 50);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill51_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 51);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill52_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 52);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill53_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 53);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill54_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 54);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill55_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 55);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill56_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 56);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill57_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 57);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill58_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 58);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill59_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 59);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void Skill60_Click(object sender, EventArgs e)
     {
       this.EditSkills((object) 60);
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
     }
 
     private void method_0(object sender, EventArgs e)
@@ -4742,16 +4742,16 @@ namespace MuMaker
         this.Cuentas.SelectedItem = (object) this.CuentaSearch.Text;
       if (this.PersonajeSearch.Text.Length > 0)
       {
-        Class7.smethod_0();
+        ConnectionManager.smethod_0();
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-          Class28.sqlCommand_1.CommandText = "SELECT AccountID FROM Character WHere Name='" + this.PersonajeSearch.Text + "'";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          while (Class28.sqlDataReader_1.Read())
-            this.CuentaSearch.Text = Class28.sqlDataReader_1[0].ToString();
-          Class28.sqlDataReader_1.Close();
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+          SqlConnectionPool.sqlCommand_1.CommandText = "SELECT AccountID FROM Character WHere Name='" + this.PersonajeSearch.Text + "'";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          while (SqlConnectionPool.sqlDataReader_1.Read())
+            this.CuentaSearch.Text = SqlConnectionPool.sqlDataReader_1[0].ToString();
+          SqlConnectionPool.sqlDataReader_1.Close();
         }
         catch (Exception ex)
         {
@@ -4759,7 +4759,7 @@ namespace MuMaker
           int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
         this.Cuentas.SelectedItem = (object) this.CuentaSearch.Text;
         this.Personajes.SelectedItem = (object) this.PersonajeSearch.Text;
       }
@@ -4775,7 +4775,7 @@ namespace MuMaker
     private void method_1(object sender, EventArgs e)
     {
       this.Items.Focus();
-      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual((object) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_97), MsgBoxStyle.YesNo, RuntimeHelpers.GetObjectValue(Class30.object_76)), (object) MsgBoxResult.Yes, false))
+      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual((object) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_97), MsgBoxStyle.YesNo, RuntimeHelpers.GetObjectValue(LocalizedStrings.object_76)), (object) MsgBoxResult.Yes, false))
         this.ResetSkills();
       this.Skills();
     }
@@ -4792,11 +4792,11 @@ namespace MuMaker
 
     private void Reloj_Tick(object sender, EventArgs e)
     {
-      new Thread(new ThreadStart(Class12.smethod_0))
+      new Thread(new ThreadStart(AccountStatusManager.smethod_0))
       {
         IsBackground = true
       }.Start();
-      if (Class22.struct0_0.bool_0)
+      if (AccountData.CurrentAccount.bool_0)
       {
         this.OnlineOFF.Hide();
         this.OnlineON.Show();
@@ -4810,56 +4810,56 @@ namespace MuMaker
 
     private void SkillMaker_Closing(object sender, CancelEventArgs e)
     {
-      Class18.smethod_47();
-      Class18.smethod_3();
+      IniHelper.smethod_47();
+      IniHelper.smethod_3();
     }
 
     private void method_4(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.ClearSkills.BackgroundImage = (Image) Class34.smethod_53();
+      this.ClearSkills.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_5(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.ClearSkills.BackgroundImage = (Image) Class34.smethod_54();
+      this.ClearSkills.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_6(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
     }
 
     private void method_7(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_87();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_87();
     }
 
     private void method_8(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_9(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void method_10(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_11(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_13();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void PersonajeSearch_KeyPress(object sender, KeyPressEventArgs e)

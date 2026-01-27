@@ -1334,7 +1334,7 @@ namespace MuMaker
     [STAThread]
     public static void Main()
     {
-      Application.Run((Form) Class2.smethod_3().method_8());
+      Application.Run((Form) ApplicationServices.MuMakerApplication.smethod_3().method_8());
     }
 
     [DebuggerNonUserCode]
@@ -1488,7 +1488,7 @@ namespace MuMaker
       this.Label1.Text = "v";
       this.Boton2.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Boton2.BackgroundImage = (Image) Class34.smethod_26();
+      this.Boton2.BackgroundImage = (Image) EmbeddedResources.smethod_26();
       this.Boton2.BackgroundImageLayout = ImageLayout.Center;
       this.Boton2.Cursor = Cursors.Hand;
       this.Boton2.Enabled = false;
@@ -1513,7 +1513,7 @@ namespace MuMaker
       this.Boton2.UseVisualStyleBackColor = false;
       this.Boton6.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Boton6.BackgroundImage = (Image) Class34.smethod_26();
+      this.Boton6.BackgroundImage = (Image) EmbeddedResources.smethod_26();
       this.Boton6.BackgroundImageLayout = ImageLayout.Center;
       this.Boton6.Cursor = Cursors.Hand;
       this.Boton6.Enabled = false;
@@ -1538,7 +1538,7 @@ namespace MuMaker
       this.Boton6.UseVisualStyleBackColor = false;
       this.Boton5.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Boton5.BackgroundImage = (Image) Class34.smethod_26();
+      this.Boton5.BackgroundImage = (Image) EmbeddedResources.smethod_26();
       this.Boton5.BackgroundImageLayout = ImageLayout.Center;
       this.Boton5.Cursor = Cursors.Hand;
       this.Boton5.Enabled = false;
@@ -1563,7 +1563,7 @@ namespace MuMaker
       this.Boton5.UseVisualStyleBackColor = false;
       this.Boton4.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Boton4.BackgroundImage = (Image) Class34.smethod_26();
+      this.Boton4.BackgroundImage = (Image) EmbeddedResources.smethod_26();
       this.Boton4.BackgroundImageLayout = ImageLayout.Center;
       this.Boton4.Cursor = Cursors.Hand;
       this.Boton4.Enabled = false;
@@ -1588,7 +1588,7 @@ namespace MuMaker
       this.Boton4.UseVisualStyleBackColor = false;
       this.BotonFinderMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonFinderMaker.BackgroundImage = (Image) Class34.smethod_16();
+      this.BotonFinderMaker.BackgroundImage = (Image) EmbeddedResources.smethod_16();
       this.BotonFinderMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonFinderMaker.Cursor = Cursors.Hand;
       this.BotonFinderMaker.Enabled = false;
@@ -1724,7 +1724,7 @@ namespace MuMaker
       this.MenuCerrar.Text = "Close";
       this.BotonSQLMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonSQLMaker.BackgroundImage = (Image) Class34.smethod_31();
+      this.BotonSQLMaker.BackgroundImage = (Image) EmbeddedResources.smethod_31();
       this.BotonSQLMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonSQLMaker.Cursor = Cursors.Hand;
       this.BotonSQLMaker.FlatAppearance.BorderSize = 0;
@@ -1748,7 +1748,7 @@ namespace MuMaker
       this.BotonSQLMaker.UseVisualStyleBackColor = false;
       this.Boton7.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Boton7.BackgroundImage = (Image) Class34.smethod_26();
+      this.Boton7.BackgroundImage = (Image) EmbeddedResources.smethod_26();
       this.Boton7.BackgroundImageLayout = ImageLayout.Center;
       this.Boton7.Cursor = Cursors.Hand;
       this.Boton7.Enabled = false;
@@ -1773,7 +1773,7 @@ namespace MuMaker
       this.Boton7.UseVisualStyleBackColor = false;
       this.BUpDate.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BUpDate.BackgroundImage = (Image) Class34.smethod_109();
+      this.BUpDate.BackgroundImage = (Image) EmbeddedResources.smethod_109();
       this.BUpDate.BackgroundImageLayout = ImageLayout.Center;
       this.BUpDate.Cursor = Cursors.Hand;
       this.BUpDate.FlatAppearance.BorderSize = 0;
@@ -1819,7 +1819,7 @@ namespace MuMaker
       this.BotonCreditos.VisitedLinkColor = Color.Goldenrod;
       this.Minimizar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.Minimizar.BackgroundImageLayout = ImageLayout.Center;
       this.Minimizar.Cursor = Cursors.Hand;
       this.Minimizar.DialogResult = DialogResult.Cancel;
@@ -1844,7 +1844,7 @@ namespace MuMaker
       this.Minimizar.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_44();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_44();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -1869,7 +1869,7 @@ namespace MuMaker
       this.Cerrar.UseVisualStyleBackColor = false;
       this.BotonConfig.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonConfig.BackgroundImage = (Image) Class34.smethod_14();
+      this.BotonConfig.BackgroundImage = (Image) EmbeddedResources.smethod_14();
       this.BotonConfig.BackgroundImageLayout = ImageLayout.Center;
       this.BotonConfig.Cursor = Cursors.Hand;
       this.BotonConfig.FlatAppearance.BorderSize = 0;
@@ -1895,7 +1895,7 @@ namespace MuMaker
       this.PictureBox2.BackColor = Color.Transparent;
       this.PictureBox2.Enabled = false;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox2.Image = (Image) Class34.smethod_110();
+      this.PictureBox2.Image = (Image) EmbeddedResources.smethod_110();
       PictureBox pictureBox2_1 = this.PictureBox2;
       point1 = new Point(342, 94);
       Point point21 = point1;
@@ -1909,7 +1909,7 @@ namespace MuMaker
       this.PictureBox2.TabStop = false;
       this.BotonSkillMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonSkillMaker.BackgroundImage = (Image) Class34.smethod_29();
+      this.BotonSkillMaker.BackgroundImage = (Image) EmbeddedResources.smethod_29();
       this.BotonSkillMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonSkillMaker.Cursor = Cursors.Hand;
       this.BotonSkillMaker.FlatAppearance.BorderSize = 0;
@@ -1933,7 +1933,7 @@ namespace MuMaker
       this.BotonSkillMaker.UseVisualStyleBackColor = false;
       this.BotonItemMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonItemMaker.BackgroundImage = (Image) Class34.smethod_20();
+      this.BotonItemMaker.BackgroundImage = (Image) EmbeddedResources.smethod_20();
       this.BotonItemMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonItemMaker.Cursor = Cursors.Hand;
       this.BotonItemMaker.FlatAppearance.BorderSize = 0;
@@ -1957,7 +1957,7 @@ namespace MuMaker
       this.BotonItemMaker.UseVisualStyleBackColor = false;
       this.BotonGuildMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonGuildMaker.BackgroundImage = (Image) Class34.smethod_18();
+      this.BotonGuildMaker.BackgroundImage = (Image) EmbeddedResources.smethod_18();
       this.BotonGuildMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonGuildMaker.Cursor = Cursors.Hand;
       this.BotonGuildMaker.FlatAppearance.BorderSize = 0;
@@ -1981,7 +1981,7 @@ namespace MuMaker
       this.BotonGuildMaker.UseVisualStyleBackColor = false;
       this.BotonMoveMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonMoveMaker.BackgroundImage = (Image) Class34.smethod_24();
+      this.BotonMoveMaker.BackgroundImage = (Image) EmbeddedResources.smethod_24();
       this.BotonMoveMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonMoveMaker.Cursor = Cursors.Hand;
       this.BotonMoveMaker.FlatAppearance.BorderSize = 0;
@@ -2009,7 +2009,7 @@ namespace MuMaker
       this.SysTrayIcon.Visible = true;
       this.BotonAccountMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonAccountMaker.BackgroundImage = (Image) Class34.smethod_10();
+      this.BotonAccountMaker.BackgroundImage = (Image) EmbeddedResources.smethod_10();
       this.BotonAccountMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonAccountMaker.Cursor = Cursors.Hand;
       this.BotonAccountMaker.FlatAppearance.BorderSize = 0;
@@ -2034,7 +2034,7 @@ namespace MuMaker
       this.PayPal1.BackgroundImageLayout = ImageLayout.Center;
       this.PayPal1.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PayPal1.Image = (Image) Class34.smethod_94();
+      this.PayPal1.Image = (Image) EmbeddedResources.smethod_94();
       PictureBox payPal1_1 = this.PayPal1;
       point1 = new Point(117, 26);
       Point point27 = point1;
@@ -2050,7 +2050,7 @@ namespace MuMaker
       this.PayPal2.BackgroundImageLayout = ImageLayout.Center;
       this.PayPal2.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PayPal2.Image = (Image) Class34.smethod_94();
+      this.PayPal2.Image = (Image) EmbeddedResources.smethod_94();
       PictureBox payPal2_1 = this.PayPal2;
       point1 = new Point(300, 26);
       Point point28 = point1;
@@ -2065,7 +2065,7 @@ namespace MuMaker
       this.ToolTips.SetToolTip((Control) this.PayPal2, "Donate To Project");
       this.BotonReload.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonReload.BackgroundImage = (Image) Class34.smethod_100();
+      this.BotonReload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
       this.BotonReload.BackgroundImageLayout = ImageLayout.Center;
       this.BotonReload.Cursor = Cursors.Hand;
       this.BotonReload.FlatAppearance.BorderSize = 0;
@@ -2189,7 +2189,7 @@ namespace MuMaker
       this.UPDTimer.Interval = 1000;
       this.BotonConectarSQL.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonConectarSQL.BackgroundImage = (Image) Class34.smethod_48();
+      this.BotonConectarSQL.BackgroundImage = (Image) EmbeddedResources.smethod_48();
       this.BotonConectarSQL.BackgroundImageLayout = ImageLayout.Center;
       this.BotonConectarSQL.Cursor = Cursors.Hand;
       this.BotonConectarSQL.FlatAppearance.BorderSize = 0;
@@ -2214,7 +2214,7 @@ namespace MuMaker
       this.BotonConectarSQL.Visible = false;
       this.BotonCerrarLoging.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonCerrarLoging.BackgroundImage = (Image) Class34.smethod_39();
+      this.BotonCerrarLoging.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.BotonCerrarLoging.BackgroundImageLayout = ImageLayout.Center;
       this.BotonCerrarLoging.Cursor = Cursors.Hand;
       this.BotonCerrarLoging.DialogResult = DialogResult.Cancel;
@@ -2239,7 +2239,7 @@ namespace MuMaker
       this.BotonCerrarLoging.UseVisualStyleBackColor = false;
       this.BotonCerrarLoging.Visible = false;
       // ISSUE: reference to a compiler-generated method
-      this.LogingSQL.BackgroundImage = (Image) Class34.smethod_81();
+      this.LogingSQL.BackgroundImage = (Image) EmbeddedResources.smethod_81();
       PictureBox logingSql1 = this.LogingSQL;
       point1 = new Point(120, 71);
       Point point37 = point1;
@@ -2254,7 +2254,7 @@ namespace MuMaker
       this.LogingSQL.Visible = false;
       this.BotonLogingSQL.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonLogingSQL.BackgroundImage = (Image) Class34.smethod_48();
+      this.BotonLogingSQL.BackgroundImage = (Image) EmbeddedResources.smethod_48();
       this.BotonLogingSQL.BackgroundImageLayout = ImageLayout.Center;
       this.BotonLogingSQL.Cursor = Cursors.Hand;
       this.BotonLogingSQL.FlatAppearance.BorderSize = 0;
@@ -2381,7 +2381,7 @@ namespace MuMaker
       this.DeLoadAcc.Interval = 1;
       this.BotonHelp.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonHelp.BackgroundImage = (Image) Class34.smethod_83();
+      this.BotonHelp.BackgroundImage = (Image) EmbeddedResources.smethod_83();
       this.BotonHelp.BackgroundImageLayout = ImageLayout.Center;
       this.BotonHelp.Cursor = Cursors.Hand;
       this.BotonHelp.FlatAppearance.BorderSize = 0;
@@ -2407,7 +2407,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Font;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_82();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_82();
       this.BackgroundImageLayout = ImageLayout.Center;
       this.CancelButton = (IButtonControl) this.Minimizar;
       size1 = new Size(478, 240);
@@ -2495,16 +2495,16 @@ namespace MuMaker
 
     public object RevisarNombre()
     {
-      this.MMKNM.Text = !Operators.ConditionalCompareObjectEqual(Class26.object_18, (object) "", false) ? Conversions.ToString(Class26.object_18) : "N00B";
+      this.MMKNM.Text = !Operators.ConditionalCompareObjectEqual(Configuration.object_18, (object) "", false) ? Conversions.ToString(Configuration.object_18) : "N00B";
       return (object) true;
     }
 
     public object RevisarVersion()
     {
       this.UpDater.Hide();
-      if (Operators.ConditionalCompareObjectNotEqual(Class26.object_0, (object) "0", false))
+      if (Operators.ConditionalCompareObjectNotEqual(Configuration.object_0, (object) "0", false))
       {
-        if (Operators.CompareString(Strings.Replace(this.RealVersion.Text, ".", "", 1, -1, CompareMethod.Binary), Strings.Replace(Conversions.ToString(Class26.object_0), ".", "", 1, -1, CompareMethod.Binary), false) < 0)
+        if (Operators.CompareString(Strings.Replace(this.RealVersion.Text, ".", "", 1, -1, CompareMethod.Binary), Strings.Replace(Conversions.ToString(Configuration.object_0), ".", "", 1, -1, CompareMethod.Binary), false) < 0)
         {
           this.UPDTimer.Enabled = true;
           this.UpDater.Show();
@@ -2520,7 +2520,7 @@ namespace MuMaker
 
     public object Excepciones()
     {
-      if (Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
       {
         this.BotonReload.Enabled = true;
         this.MenuReload.Enabled = true;
@@ -2541,14 +2541,14 @@ namespace MuMaker
 
     public void ClientCnMMK()
     {
-      string str1 = Class18.smethod_5("CN");
-      string str2 = Class18.smethod_5(Class26.string_5);
-      string str3 = Class18.smethod_5(Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "Name", "N00B"));
-      string str4 = Class18.smethod_5(Class26.string_0);
-      string str5 = Class18.smethod_5(Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", "127.0.0.1"));
-      string str6 = Class18.smethod_5(Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Local"));
-      string str7 = Class18.smethod_5(Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol"));
-      string str8 = Class18.smethod_5("ON");
+      string str1 = IniHelper.smethod_5("CN");
+      string str2 = IniHelper.smethod_5(Configuration.string_5);
+      string str3 = IniHelper.smethod_5(IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "Name", "N00B"));
+      string str4 = IniHelper.smethod_5(Configuration.string_0);
+      string str5 = IniHelper.smethod_5(IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", "127.0.0.1"));
+      string str6 = IniHelper.smethod_5(IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Local"));
+      string str7 = IniHelper.smethod_5(IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol"));
+      string str8 = IniHelper.smethod_5("ON");
       try
       {
         this.Navegador.Navigate(new Uri("http://mumaker.sytes.net/mumaker/clientes/mumaker.php?V0=" + str1 + "&V1=" + str2 + "&V2=" + str3 + "&V3=" + str4 + "&V4=" + str5 + "&V5=" + str6 + "&V6=" + str7 + "&V7=" + str8));
@@ -2563,9 +2563,9 @@ namespace MuMaker
 
     public void ClientOnMMK()
     {
-      string str1 = Class18.smethod_5("ON");
-      string str2 = Class18.smethod_5(Class26.string_5);
-      string str3 = Class18.smethod_5(Class26.string_0);
+      string str1 = IniHelper.smethod_5("ON");
+      string str2 = IniHelper.smethod_5(Configuration.string_5);
+      string str3 = IniHelper.smethod_5(Configuration.string_0);
       try
       {
         this.Navegador.Navigate(new Uri("http://mumaker.sytes.net/mumaker/clientes/mumaker.php?V0=" + str1 + "&V1=" + str2 + "&V3=" + str3));
@@ -2580,20 +2580,20 @@ namespace MuMaker
 
     public object CargarCuentas()
     {
-      if (Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
       {
-        Class7.smethod_0();
+        ConnectionManager.smethod_0();
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-          Class28.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          this.Cuentas.Text = Conversions.ToString(Class30.object_7);
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+          SqlConnectionPool.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          this.Cuentas.Text = Conversions.ToString(LocalizedStrings.object_7);
           this.Cuentas.Items.Clear();
-          while (Class28.sqlDataReader_1.Read())
-            this.Cuentas.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-          Class28.sqlDataReader_1.Close();
+          while (SqlConnectionPool.sqlDataReader_1.Read())
+            this.Cuentas.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+          SqlConnectionPool.sqlDataReader_1.Close();
         }
         catch (Exception ex)
         {
@@ -2601,7 +2601,7 @@ namespace MuMaker
           int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
       }
       return (object) true;
     }
@@ -2613,20 +2613,20 @@ namespace MuMaker
       this.OcultarLoginSQL();
       this.DeLoadAcc.Start();
       this.CargaCuentasProgres.Visible = true;
-      if (Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
       {
-        Class7.smethod_0();
+        ConnectionManager.smethod_0();
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-          Class28.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          this.Cuentas.Text = Conversions.ToString(Class30.object_7);
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+          SqlConnectionPool.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          this.Cuentas.Text = Conversions.ToString(LocalizedStrings.object_7);
           this.Cuentas.Items.Clear();
-          while (Class28.sqlDataReader_1.Read())
-            this.Cuentas.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-          Class28.sqlDataReader_1.Close();
+          while (SqlConnectionPool.sqlDataReader_1.Read())
+            this.Cuentas.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+          SqlConnectionPool.sqlDataReader_1.Close();
         }
         catch (Exception ex)
         {
@@ -2634,7 +2634,7 @@ namespace MuMaker
           int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
       }
       this.CargaCuentasProgres.Visible = false;
       this.DeLoadAcc.Stop();
@@ -2692,7 +2692,7 @@ namespace MuMaker
 
     public object MostrarBotones()
     {
-      if (Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
         this.BotonReload.Visible = true;
       this.BotonAccountMaker.Visible = true;
       this.BotonItemMaker.Visible = true;
@@ -2711,7 +2711,7 @@ namespace MuMaker
 
     public object MostrarMenus()
     {
-      if (Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
       {
         this.MenuSeparador1.Visible = true;
         this.MenuReload.Visible = true;
@@ -2786,7 +2786,7 @@ namespace MuMaker
 
     public object EnableBotones()
     {
-      if (Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
         this.BotonReload.Enabled = true;
       this.BotonAccountMaker.Enabled = true;
       this.BotonItemMaker.Enabled = true;
@@ -2805,7 +2805,7 @@ namespace MuMaker
 
     public object EnableMenus()
     {
-      if (Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
         this.MenuReload.Enabled = true;
       this.MenuAccountMaker.Enabled = true;
       this.MenuItemMaker.Enabled = true;
@@ -2835,17 +2835,17 @@ namespace MuMaker
 
     public object Traducir()
     {
-      this.ToolTips.SetToolTip((Control) this.Cerrar, Conversions.ToString(Class30.object_0));
-      this.ToolTips.SetToolTip((Control) this.Minimizar, Conversions.ToString(Class30.object_1));
-      this.ToolTips.SetToolTip((Control) this.BanderaID, Conversions.ToString(Class30.object_3));
-      this.ToolTips.SetToolTip((Control) this.InicialesIdioma, Conversions.ToString(Class30.object_2));
-      this.BanderaID.BackgroundImage = (Image) new Bitmap(Class30.string_1);
-      this.ClientKOR.Text = Class26.string_1;
-      this.ClientCHN.Text = Class26.string_2;
-      this.ClientJPN.Text = Class26.string_3;
-      this.InicialesIdioma.Text = Class30.string_2;
-      this.TopOnOff.Checked = Operators.ConditionalCompareObjectEqual(Class26.object_21, (object) 1, false);
-      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.ToolTips.SetToolTip((Control) this.Cerrar, Conversions.ToString(LocalizedStrings.object_0));
+      this.ToolTips.SetToolTip((Control) this.Minimizar, Conversions.ToString(LocalizedStrings.object_1));
+      this.ToolTips.SetToolTip((Control) this.BanderaID, Conversions.ToString(LocalizedStrings.object_3));
+      this.ToolTips.SetToolTip((Control) this.InicialesIdioma, Conversions.ToString(LocalizedStrings.object_2));
+      this.BanderaID.BackgroundImage = (Image) new Bitmap(LocalizedStrings.string_1);
+      this.ClientKOR.Text = Configuration.string_1;
+      this.ClientCHN.Text = Configuration.string_2;
+      this.ClientJPN.Text = Configuration.string_3;
+      this.InicialesIdioma.Text = LocalizedStrings.string_2;
+      this.TopOnOff.Checked = Operators.ConditionalCompareObjectEqual(Configuration.object_21, (object) 1, false);
+      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       return (object) true;
     }
 
@@ -2859,15 +2859,15 @@ namespace MuMaker
 
     private void method_1(object sender, EventArgs e)
     {
-      Class26.object_2 = (object) this.UserSQL.Text;
-      Class26.object_3 = (object) this.PswSQL.Text;
-      Class7.smethod_0();
+      Configuration.object_2 = (object) this.UserSQL.Text;
+      Configuration.object_3 = (object) this.PswSQL.Text;
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
+        SqlConnectionPool.sqlConnection_1.Open();
         this.EnableBotones();
         this.EnableMenus();
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
         this.OcultarLoginSQL();
         this.MostrarBotones();
         this.MostrarMenus();
@@ -2879,7 +2879,7 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         this.DisableBotones();
         this.DisableMenus();
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
         this.MostrarLoginSQL();
         this.UserSQL.Text = "";
         this.PswSQL.Text = "";
@@ -2891,24 +2891,24 @@ namespace MuMaker
 
     private void MuMaker_Load(object sender, EventArgs e)
     {
-      if (Operators.ConditionalCompareObjectEqual(Class18.smethod_29(), (object) 1, false))
+      if (Operators.ConditionalCompareObjectEqual(IniHelper.smethod_29(), (object) 1, false))
         this.Close();
-      this.RealVersion.Text = Class26.string_0;
+      this.RealVersion.Text = Configuration.string_0;
       if (new FileInfo("MuMaker.exe").Exists)
       {
         VentanaBarraLoad.DefInstance.Show();
         this.Excepciones();
         VentanaBarraLoad.DefInstance.Carga.Value = 5;
-        Class18.smethod_32();
-        Class18.smethod_33();
+        IniHelper.smethod_32();
+        IniHelper.smethod_33();
         VentanaBarraLoad.DefInstance.Carga.Value = 10;
-        Class10.smethod_0();
+        GameDataLoader.smethod_0();
         VentanaBarraLoad.DefInstance.Carga.Value = 15;
-        Class10.smethod_1();
+        GameDataLoader.smethod_1();
         VentanaBarraLoad.DefInstance.Carga.Value = 20;
-        Class10.smethod_2();
+        GameDataLoader.smethod_2();
         VentanaBarraLoad.DefInstance.Carga.Value = 25;
-        Class10.smethod_3();
+        GameDataLoader.smethod_3();
         VentanaBarraLoad.DefInstance.Carga.Value = 30;
         FileInfo fileInfo = new FileInfo("Config.ini");
         VentanaBarraLoad.DefInstance.Carga.Value = 40;
@@ -2922,9 +2922,9 @@ namespace MuMaker
         else
         {
           this.Reloj.Enabled = true;
-          if (Operators.ConditionalCompareObjectEqual(Class26.object_1, (object) 1, false))
+          if (Operators.ConditionalCompareObjectEqual(Configuration.object_1, (object) 1, false))
           {
-            Class7.smethod_0();
+            ConnectionManager.smethod_0();
             try
             {
               this.EnableBotones();
@@ -2938,7 +2938,7 @@ namespace MuMaker
               int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
               this.DisableBotones();
               this.DisableMenus();
-              Class7.smethod_5();
+              ConnectionManager.smethod_5();
               this.BotonConfig.Enabled = true;
               ProjectData.ClearProjectError();
             }
@@ -2951,7 +2951,7 @@ namespace MuMaker
           }
         }
         VentanaBarraLoad.DefInstance.Carga.Value = 50;
-        if (Operators.ConditionalCompareObjectGreater(Class18.smethod_22(), (object) 0, false))
+        if (Operators.ConditionalCompareObjectGreater(IniHelper.smethod_22(), (object) 0, false))
         {
           this.DisableBotones();
           this.DisableMenus();
@@ -2960,7 +2960,7 @@ namespace MuMaker
         else
           this.Traducir();
         VentanaBarraLoad.DefInstance.Carga.Value = 70;
-        Class26.smethod_0();
+        Configuration.smethod_0();
         VentanaBarraLoad.DefInstance.Carga.Value = 80;
         this.RevisarNombre();
         VentanaBarraLoad.DefInstance.Carga.Value = 90;
@@ -2970,7 +2970,7 @@ namespace MuMaker
           {
             IsBackground = true
           }.Start();
-          new Thread(new ThreadStart(Class18.smethod_21))
+          new Thread(new ThreadStart(IniHelper.smethod_21))
           {
             IsBackground = true
           }.Start();
@@ -3026,7 +3026,7 @@ namespace MuMaker
 
     private void method_2(object sender, EventArgs e)
     {
-      Class18.smethod_36();
+      IniHelper.smethod_36();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       AccountMaker.DefInstance.Show();
@@ -3036,7 +3036,7 @@ namespace MuMaker
 
     private void method_3(object sender, EventArgs e)
     {
-      Class18.smethod_37();
+      IniHelper.smethod_37();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       ItemMaker.DefInstance.Show();
@@ -3046,7 +3046,7 @@ namespace MuMaker
 
     private void method_4(object sender, EventArgs e)
     {
-      Class18.smethod_38();
+      IniHelper.smethod_38();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       SkillMaker.DefInstance.Show();
@@ -3056,7 +3056,7 @@ namespace MuMaker
 
     private void method_5(object sender, EventArgs e)
     {
-      Class18.smethod_39();
+      IniHelper.smethod_39();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       GuildMaker.DefInstance.Show();
@@ -3066,7 +3066,7 @@ namespace MuMaker
 
     private void method_6(object sender, EventArgs e)
     {
-      Class18.smethod_40();
+      IniHelper.smethod_40();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       MoveMaker.DefInstance.Show();
@@ -3076,7 +3076,7 @@ namespace MuMaker
 
     private void method_7(object sender, EventArgs e)
     {
-      Class18.smethod_41();
+      IniHelper.smethod_41();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       FinderMaker.DefInstance.Show();
@@ -3086,7 +3086,7 @@ namespace MuMaker
 
     private void method_8(object sender, EventArgs e)
     {
-      Class18.smethod_42();
+      IniHelper.smethod_42();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       SQLMaker.DefInstance.Show();
@@ -3096,7 +3096,7 @@ namespace MuMaker
 
     private void method_9(object sender, EventArgs e)
     {
-      Class18.smethod_35();
+      IniHelper.smethod_35();
       ConfigMaker.DefInstance.Show();
       ConfigMaker.DefInstance.Select();
       ConfigMaker.DefInstance.TopLevel = true;
@@ -3148,7 +3148,7 @@ namespace MuMaker
 
     private void MenuAccountMaker_Click(object sender, EventArgs e)
     {
-      Class18.smethod_36();
+      IniHelper.smethod_36();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       VentanaBarraLoad.DefInstance.Show();
@@ -3159,7 +3159,7 @@ namespace MuMaker
 
     private void MenuItemMaker_Click(object sender, EventArgs e)
     {
-      Class18.smethod_37();
+      IniHelper.smethod_37();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       VentanaBarraLoad.DefInstance.Show();
@@ -3170,7 +3170,7 @@ namespace MuMaker
 
     private void MenuSkillMaker_Click(object sender, EventArgs e)
     {
-      Class18.smethod_38();
+      IniHelper.smethod_38();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       VentanaBarraLoad.DefInstance.Show();
@@ -3181,7 +3181,7 @@ namespace MuMaker
 
     private void MenuGuildMaker_Click(object sender, EventArgs e)
     {
-      Class18.smethod_39();
+      IniHelper.smethod_39();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       VentanaBarraLoad.DefInstance.Show();
@@ -3192,7 +3192,7 @@ namespace MuMaker
 
     private void MenuMoveMaker_Click(object sender, EventArgs e)
     {
-      Class18.smethod_40();
+      IniHelper.smethod_40();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       VentanaBarraLoad.DefInstance.Show();
@@ -3203,7 +3203,7 @@ namespace MuMaker
 
     private void MenuFinderMaker_Click(object sender, EventArgs e)
     {
-      Class18.smethod_41();
+      IniHelper.smethod_41();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       VentanaBarraLoad.DefInstance.Show();
@@ -3214,7 +3214,7 @@ namespace MuMaker
 
     private void MenuSQLMaker_Click(object sender, EventArgs e)
     {
-      Class18.smethod_42();
+      IniHelper.smethod_42();
       if (!this.TopOnOff.Checked)
         this.WindowState = FormWindowState.Minimized;
       VentanaBarraLoad.DefInstance.Show();
@@ -3243,7 +3243,7 @@ namespace MuMaker
 
     private void MenuCerrar_Click(object sender, EventArgs e)
     {
-      Class18.smethod_43();
+      IniHelper.smethod_43();
       this.Visible = false;
       this.SysTrayIcon.Dispose();
       this.Close();
@@ -3281,14 +3281,14 @@ namespace MuMaker
     {
       this.BotonCreditos.Focus();
       if (this.TopOnOff.Checked)
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "FX", "Top", "1");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "FX", "Top", "1");
       else
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "FX", "Top", "0");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "FX", "Top", "0");
     }
 
     private void method_13(object sender, EventArgs e)
     {
-      Class18.smethod_43();
+      IniHelper.smethod_43();
       this.BotonCreditos.Focus();
       this.Visible = false;
       this.SysTrayIcon.Dispose();
@@ -3308,12 +3308,12 @@ namespace MuMaker
       }.Start();
       this.UpDater.Hide();
       if (!new FileInfo("UPDT.INI").Exists)
-        new Thread(new ThreadStart(Class18.smethod_21))
+        new Thread(new ThreadStart(IniHelper.smethod_21))
         {
           IsBackground = true
         }.Start();
       this.RevisarVersion();
-      if (Operators.ConditionalCompareObjectNotEqual(Class26.object_0, (object) "0", false) && Operators.CompareString(Strings.Replace(Class26.string_0, ".", "", 1, -1, CompareMethod.Binary), Strings.Replace(Conversions.ToString(Class26.object_0), ".", "", 1, -1, CompareMethod.Binary), false) < 0)
+      if (Operators.ConditionalCompareObjectNotEqual(Configuration.object_0, (object) "0", false) && Operators.CompareString(Strings.Replace(Configuration.string_0, ".", "", 1, -1, CompareMethod.Binary), Strings.Replace(Conversions.ToString(Configuration.object_0), ".", "", 1, -1, CompareMethod.Binary), false) < 0)
       {
         this.UpDater.Show();
         this.UPDTimer.Enabled = true;
@@ -3346,7 +3346,7 @@ namespace MuMaker
 
     private void CHVersion_Tick(object sender, EventArgs e)
     {
-      new Thread(new ThreadStart(Class18.smethod_21))
+      new Thread(new ThreadStart(IniHelper.smethod_21))
       {
         IsBackground = true
       }.Start();
@@ -3381,194 +3381,194 @@ namespace MuMaker
     private void method_15(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonConfig.BackgroundImage = (Image) Class34.smethod_14();
+      this.BotonConfig.BackgroundImage = (Image) EmbeddedResources.smethod_14();
       this.BotonCreditos.Focus();
     }
 
     private void method_16(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonConfig.BackgroundImage = (Image) Class34.smethod_15();
+      this.BotonConfig.BackgroundImage = (Image) EmbeddedResources.smethod_15();
     }
 
     private void method_17(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.BotonCreditos.Focus();
     }
 
     private void method_18(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_87();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_87();
     }
 
     private void method_19(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_44();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_44();
       this.BotonCreditos.Focus();
     }
 
     private void method_20(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_45();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_45();
     }
 
     private void method_21(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonAccountMaker.BackgroundImage = (Image) Class34.smethod_10();
+      this.BotonAccountMaker.BackgroundImage = (Image) EmbeddedResources.smethod_10();
       this.BotonCreditos.Focus();
     }
 
     private void method_22(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonAccountMaker.BackgroundImage = (Image) Class34.smethod_11();
+      this.BotonAccountMaker.BackgroundImage = (Image) EmbeddedResources.smethod_11();
     }
 
     private void method_23(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonItemMaker.BackgroundImage = (Image) Class34.smethod_20();
+      this.BotonItemMaker.BackgroundImage = (Image) EmbeddedResources.smethod_20();
       this.BotonCreditos.Focus();
     }
 
     private void method_24(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonItemMaker.BackgroundImage = (Image) Class34.smethod_21();
+      this.BotonItemMaker.BackgroundImage = (Image) EmbeddedResources.smethod_21();
     }
 
     private void method_25(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonSkillMaker.BackgroundImage = (Image) Class34.smethod_29();
+      this.BotonSkillMaker.BackgroundImage = (Image) EmbeddedResources.smethod_29();
       this.BotonCreditos.Focus();
     }
 
     private void method_26(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonSkillMaker.BackgroundImage = (Image) Class34.smethod_30();
+      this.BotonSkillMaker.BackgroundImage = (Image) EmbeddedResources.smethod_30();
     }
 
     private void method_27(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonGuildMaker.BackgroundImage = (Image) Class34.smethod_18();
+      this.BotonGuildMaker.BackgroundImage = (Image) EmbeddedResources.smethod_18();
       this.BotonCreditos.Focus();
     }
 
     private void method_28(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonGuildMaker.BackgroundImage = (Image) Class34.smethod_19();
+      this.BotonGuildMaker.BackgroundImage = (Image) EmbeddedResources.smethod_19();
     }
 
     private void method_29(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonMoveMaker.BackgroundImage = (Image) Class34.smethod_24();
+      this.BotonMoveMaker.BackgroundImage = (Image) EmbeddedResources.smethod_24();
       this.BotonCreditos.Focus();
     }
 
     private void method_30(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonMoveMaker.BackgroundImage = (Image) Class34.smethod_25();
+      this.BotonMoveMaker.BackgroundImage = (Image) EmbeddedResources.smethod_25();
     }
 
     private void method_31(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFinderMaker.BackgroundImage = (Image) Class34.smethod_16();
+      this.BotonFinderMaker.BackgroundImage = (Image) EmbeddedResources.smethod_16();
       this.BotonCreditos.Focus();
     }
 
     private void method_32(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFinderMaker.BackgroundImage = (Image) Class34.smethod_17();
+      this.BotonFinderMaker.BackgroundImage = (Image) EmbeddedResources.smethod_17();
     }
 
     private void method_33(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonSQLMaker.BackgroundImage = (Image) Class34.smethod_31();
+      this.BotonSQLMaker.BackgroundImage = (Image) EmbeddedResources.smethod_31();
       this.BotonCreditos.Focus();
     }
 
     private void method_34(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonSQLMaker.BackgroundImage = (Image) Class34.smethod_32();
+      this.BotonSQLMaker.BackgroundImage = (Image) EmbeddedResources.smethod_32();
     }
 
     private void method_35(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonConectarSQL.BackgroundImage = (Image) Class34.smethod_48();
+      this.BotonConectarSQL.BackgroundImage = (Image) EmbeddedResources.smethod_48();
       this.BotonCreditos.Focus();
     }
 
     private void method_36(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonConectarSQL.BackgroundImage = (Image) Class34.smethod_49();
+      this.BotonConectarSQL.BackgroundImage = (Image) EmbeddedResources.smethod_49();
     }
 
     private void method_37(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonCerrarLoging.BackgroundImage = (Image) Class34.smethod_39();
+      this.BotonCerrarLoging.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.BotonCreditos.Focus();
     }
 
     private void method_38(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonCerrarLoging.BackgroundImage = (Image) Class34.smethod_40();
+      this.BotonCerrarLoging.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void method_39(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonLogingSQL.BackgroundImage = (Image) Class34.smethod_48();
+      this.BotonLogingSQL.BackgroundImage = (Image) EmbeddedResources.smethod_48();
       this.BotonCreditos.Focus();
     }
 
     private void method_40(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonLogingSQL.BackgroundImage = (Image) Class34.smethod_49();
+      this.BotonLogingSQL.BackgroundImage = (Image) EmbeddedResources.smethod_49();
     }
 
     private void method_41(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonReload.BackgroundImage = (Image) Class34.smethod_100();
+      this.BotonReload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
     }
 
     private void method_42(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonReload.BackgroundImage = (Image) Class34.smethod_101();
+      this.BotonReload.BackgroundImage = (Image) EmbeddedResources.smethod_101();
     }
 
     private void method_43(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonHelp.BackgroundImage = (Image) Class34.smethod_83();
+      this.BotonHelp.BackgroundImage = (Image) EmbeddedResources.smethod_83();
     }
 
     private void method_44(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonHelp.BackgroundImage = (Image) Class34.smethod_84();
+      this.BotonHelp.BackgroundImage = (Image) EmbeddedResources.smethod_84();
     }
   }
 }

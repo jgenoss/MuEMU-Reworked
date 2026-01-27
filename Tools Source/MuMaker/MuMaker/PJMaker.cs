@@ -1003,7 +1003,7 @@ namespace MuMaker
       this.PJ3lvl.TextAlign = ContentAlignment.MiddleCenter;
       this.CreatePJ.BackColor = Color.DimGray;
       // ISSUE: reference to a compiler-generated method
-      this.CreatePJ.BackgroundImage = (Image) Class34.smethod_96();
+      this.CreatePJ.BackgroundImage = (Image) EmbeddedResources.smethod_96();
       this.CreatePJ.Controls.Add((Control) this.SM);
       this.CreatePJ.Controls.Add((Control) this.DL);
       this.CreatePJ.Controls.Add((Control) this.MG);
@@ -1155,7 +1155,7 @@ namespace MuMaker
       this.Cerrar.UseVisualStyleBackColor = false;
       this.Aplicar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
       this.Aplicar.BackgroundImageLayout = ImageLayout.Center;
       this.Aplicar.Cursor = Cursors.Hand;
       this.Aplicar.Enabled = false;
@@ -1408,7 +1408,7 @@ namespace MuMaker
       this.PJ4Name.TextAlign = ContentAlignment.MiddleCenter;
       this.CrearAccount.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.CrearAccount.BackgroundImage = (Image) Class34.smethod_50();
+      this.CrearAccount.BackgroundImage = (Image) EmbeddedResources.smethod_50();
       this.CrearAccount.BackgroundImageLayout = ImageLayout.Center;
       this.CrearAccount.Cursor = Cursors.Hand;
       this.CrearAccount.FlatAppearance.BorderSize = 0;
@@ -1658,7 +1658,7 @@ namespace MuMaker
       this.PJE1.Visible = false;
       this.PictureBox1.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox1.Image = (Image) Class34.smethod_64();
+      this.PictureBox1.Image = (Image) EmbeddedResources.smethod_64();
       PictureBox pictureBox1_1 = this.PictureBox1;
       point1 = new Point(451, 54);
       Point point43 = point1;
@@ -1730,7 +1730,7 @@ namespace MuMaker
       this.Titulo.TabIndex = 490;
       this.Salir.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Salir.BackgroundImage = (Image) Class34.smethod_39();
+      this.Salir.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Salir.BackgroundImageLayout = ImageLayout.Center;
       this.Salir.Cursor = Cursors.Hand;
       this.Salir.DialogResult = DialogResult.Cancel;
@@ -1755,7 +1755,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_97();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_97();
       this.CancelButton = (IButtonControl) this.Cerrar;
       size1 = new Size(534, 442);
       this.ClientSize = size1;
@@ -1812,31 +1812,31 @@ namespace MuMaker
     public object CheckPJ()
     {
       if (this.DW.Checked)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_1)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_1)));
       if (this.DK.Checked)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_6)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_6)));
       if (this.FE.Checked)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_11)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_11)));
       if (this.MG.Checked)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_16)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_16)));
       if (this.DL.Checked)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_20)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_20)));
       if (this.SM.Checked)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_24)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_24)));
       return (object) true;
     }
 
     public object Personajes()
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT GameID1,GameID2,GameID3,GameID4,GameID5,GameIDC FROM AccountCharacter WHERE Id='" + AccountMaker.DefInstance.Cuentas.Text + "';";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT GameID1,GameID2,GameID3,GameID4,GameID5,GameIDC FROM AccountCharacter WHERE Id='" + AccountMaker.DefInstance.Cuentas.Text + "';";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
 label_2:
-        if (Class28.sqlDataReader_1.Read())
+        if (SqlConnectionPool.sqlDataReader_1.Read())
         {
           this.PJE1.Visible = false;
           this.PJE2.Visible = false;
@@ -1851,357 +1851,357 @@ label_2:
           int num1 = 1;
           do
           {
-            Class7.smethod_1();
+            ConnectionManager.smethod_1();
             try
             {
-              Class28.sqlConnection_2.Open();
-              Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-              Class28.sqlCommand_2.CommandText = "SELECT Class, cLevel FROM Character WHERE AccountId='" + AccountMaker.DefInstance.Cuentas.Text + "' AND Name='" + Class28.sqlDataReader_1[checked (num1 - 1)].ToString() + "';";
-              Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
+              SqlConnectionPool.sqlConnection_2.Open();
+              SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+              SqlConnectionPool.sqlCommand_2.CommandText = "SELECT Class, cLevel FROM Character WHERE AccountId='" + AccountMaker.DefInstance.Cuentas.Text + "' AND Name='" + SqlConnectionPool.sqlDataReader_1[checked (num1 - 1)].ToString() + "';";
+              SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
               switch (num1)
               {
                 case 1:
-                  if (Class28.sqlDataReader_2.Read())
+                  if (SqlConnectionPool.sqlDataReader_2.Read())
                   {
                     this.PJE1.Visible = true;
                     this.BorrarPJ1.Visible = true;
-                    this.PJ1Name.Text = Class28.sqlDataReader_1[checked (num1 - 1)].ToString();
-                    this.PJ1lvl.Text = Class28.sqlDataReader_2[1].ToString();
-                    string str1 = Class28.sqlDataReader_2[0].ToString();
-                    string str2 = Class27.string_0;
+                    this.PJ1Name.Text = SqlConnectionPool.sqlDataReader_1[checked (num1 - 1)].ToString();
+                    this.PJ1lvl.Text = SqlConnectionPool.sqlDataReader_2[1].ToString();
+                    string str1 = SqlConnectionPool.sqlDataReader_2[0].ToString();
+                    string str2 = CharacterImagePaths.string_0;
                     try
                     {
-                      this.Classe1.Text = Class6.string_8[Conversions.ToInteger(Array.IndexOf<string>(Class6.string_6, str1).ToString())];
+                      this.Classe1.Text = GameDataArrays.string_8[Conversions.ToInteger(Array.IndexOf<string>(GameDataArrays.string_6, str1).ToString())];
                     }
                     catch (Exception ex)
                     {
                       ProjectData.SetProjectError(ex);
-                      this.Classe1.Text = Class6.string_8[Conversions.ToInteger(Class6.string_9)];
+                      this.Classe1.Text = GameDataArrays.string_8[Conversions.ToInteger(GameDataArrays.string_9)];
                       ProjectData.ClearProjectError();
                     }
                     string Left = str1;
                     if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(0), false) == 0)
-                      str2 = Class27.string_2;
+                      str2 = CharacterImagePaths.string_2;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(1), false) == 0)
-                      str2 = Class27.string_3;
+                      str2 = CharacterImagePaths.string_3;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(2), false) == 0)
-                      str2 = Class27.string_4;
+                      str2 = CharacterImagePaths.string_4;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(3), false) == 0)
-                      str2 = Class27.string_5;
+                      str2 = CharacterImagePaths.string_5;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(16), false) == 0)
-                      str2 = Class27.string_7;
+                      str2 = CharacterImagePaths.string_7;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(17), false) == 0)
-                      str2 = Class27.string_8;
+                      str2 = CharacterImagePaths.string_8;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(18), false) == 0)
-                      str2 = Class27.string_9;
+                      str2 = CharacterImagePaths.string_9;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(19), false) == 0)
-                      str2 = Class27.string_10;
+                      str2 = CharacterImagePaths.string_10;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(32), false) == 0)
-                      str2 = Class27.string_12;
+                      str2 = CharacterImagePaths.string_12;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(33), false) == 0)
-                      str2 = Class27.string_13;
+                      str2 = CharacterImagePaths.string_13;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(34), false) == 0)
-                      str2 = Class27.string_14;
+                      str2 = CharacterImagePaths.string_14;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(35), false) == 0)
-                      str2 = Class27.string_15;
+                      str2 = CharacterImagePaths.string_15;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(48), false) == 0)
-                      str2 = Class27.string_17;
+                      str2 = CharacterImagePaths.string_17;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(49), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(50), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(64), false) == 0)
-                      str2 = Class27.string_21;
+                      str2 = CharacterImagePaths.string_21;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(65), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(66), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(80), false) == 0)
-                      str2 = Class27.string_25;
+                      str2 = CharacterImagePaths.string_25;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(81), false) == 0)
-                      str2 = Class27.string_26;
+                      str2 = CharacterImagePaths.string_26;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(82), false) == 0)
-                      str2 = Class27.string_27;
+                      str2 = CharacterImagePaths.string_27;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(83), false) == 0)
-                      str2 = Class27.string_28;
-                    this.PJ1.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) str2)));
+                      str2 = CharacterImagePaths.string_28;
+                    this.PJ1.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) str2)));
                     break;
                   }
                   break;
                 case 2:
-                  if (Class28.sqlDataReader_2.Read())
+                  if (SqlConnectionPool.sqlDataReader_2.Read())
                   {
                     this.PJE2.Visible = true;
                     this.BorrarPJ2.Visible = true;
-                    this.PJ2Name.Text = Class28.sqlDataReader_1[checked (num1 - 1)].ToString();
-                    this.PJ2lvl.Text = Class28.sqlDataReader_2[1].ToString();
-                    string str1 = Class28.sqlDataReader_2[0].ToString();
-                    string str2 = Class27.string_0;
+                    this.PJ2Name.Text = SqlConnectionPool.sqlDataReader_1[checked (num1 - 1)].ToString();
+                    this.PJ2lvl.Text = SqlConnectionPool.sqlDataReader_2[1].ToString();
+                    string str1 = SqlConnectionPool.sqlDataReader_2[0].ToString();
+                    string str2 = CharacterImagePaths.string_0;
                     try
                     {
-                      this.Classe2.Text = Class6.string_8[Conversions.ToInteger(Array.IndexOf<string>(Class6.string_6, str1).ToString())];
+                      this.Classe2.Text = GameDataArrays.string_8[Conversions.ToInteger(Array.IndexOf<string>(GameDataArrays.string_6, str1).ToString())];
                     }
                     catch (Exception ex)
                     {
                       ProjectData.SetProjectError(ex);
-                      this.Classe2.Text = Class6.string_8[Conversions.ToInteger(Class6.string_9)];
+                      this.Classe2.Text = GameDataArrays.string_8[Conversions.ToInteger(GameDataArrays.string_9)];
                       ProjectData.ClearProjectError();
                     }
                     string Left = str1;
                     if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(0), false) == 0)
-                      str2 = Class27.string_2;
+                      str2 = CharacterImagePaths.string_2;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(1), false) == 0)
-                      str2 = Class27.string_3;
+                      str2 = CharacterImagePaths.string_3;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(2), false) == 0)
-                      str2 = Class27.string_4;
+                      str2 = CharacterImagePaths.string_4;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(3), false) == 0)
-                      str2 = Class27.string_5;
+                      str2 = CharacterImagePaths.string_5;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(16), false) == 0)
-                      str2 = Class27.string_7;
+                      str2 = CharacterImagePaths.string_7;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(17), false) == 0)
-                      str2 = Class27.string_8;
+                      str2 = CharacterImagePaths.string_8;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(18), false) == 0)
-                      str2 = Class27.string_9;
+                      str2 = CharacterImagePaths.string_9;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(19), false) == 0)
-                      str2 = Class27.string_10;
+                      str2 = CharacterImagePaths.string_10;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(32), false) == 0)
-                      str2 = Class27.string_12;
+                      str2 = CharacterImagePaths.string_12;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(33), false) == 0)
-                      str2 = Class27.string_13;
+                      str2 = CharacterImagePaths.string_13;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(34), false) == 0)
-                      str2 = Class27.string_14;
+                      str2 = CharacterImagePaths.string_14;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(35), false) == 0)
-                      str2 = Class27.string_15;
+                      str2 = CharacterImagePaths.string_15;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(48), false) == 0)
-                      str2 = Class27.string_17;
+                      str2 = CharacterImagePaths.string_17;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(49), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(50), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(64), false) == 0)
-                      str2 = Class27.string_21;
+                      str2 = CharacterImagePaths.string_21;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(65), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(66), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(80), false) == 0)
-                      str2 = Class27.string_25;
+                      str2 = CharacterImagePaths.string_25;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(81), false) == 0)
-                      str2 = Class27.string_26;
+                      str2 = CharacterImagePaths.string_26;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(82), false) == 0)
-                      str2 = Class27.string_27;
+                      str2 = CharacterImagePaths.string_27;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(83), false) == 0)
-                      str2 = Class27.string_28;
-                    this.PJ2.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) str2)));
+                      str2 = CharacterImagePaths.string_28;
+                    this.PJ2.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) str2)));
                     break;
                   }
                   break;
                 case 3:
-                  if (Class28.sqlDataReader_2.Read())
+                  if (SqlConnectionPool.sqlDataReader_2.Read())
                   {
                     this.PJE3.Visible = true;
                     this.BorrarPJ3.Visible = true;
-                    this.PJ3Name.Text = Class28.sqlDataReader_1[checked (num1 - 1)].ToString();
-                    this.PJ3lvl.Text = Class28.sqlDataReader_2[1].ToString();
-                    string str1 = Class28.sqlDataReader_2[0].ToString();
-                    string str2 = Class27.string_0;
+                    this.PJ3Name.Text = SqlConnectionPool.sqlDataReader_1[checked (num1 - 1)].ToString();
+                    this.PJ3lvl.Text = SqlConnectionPool.sqlDataReader_2[1].ToString();
+                    string str1 = SqlConnectionPool.sqlDataReader_2[0].ToString();
+                    string str2 = CharacterImagePaths.string_0;
                     try
                     {
-                      this.Classe3.Text = Class6.string_8[Conversions.ToInteger(Array.IndexOf<string>(Class6.string_6, str1).ToString())];
+                      this.Classe3.Text = GameDataArrays.string_8[Conversions.ToInteger(Array.IndexOf<string>(GameDataArrays.string_6, str1).ToString())];
                     }
                     catch (Exception ex)
                     {
                       ProjectData.SetProjectError(ex);
-                      this.Classe3.Text = Class6.string_8[Conversions.ToInteger(Class6.string_9)];
+                      this.Classe3.Text = GameDataArrays.string_8[Conversions.ToInteger(GameDataArrays.string_9)];
                       ProjectData.ClearProjectError();
                     }
                     string Left = str1;
                     if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(0), false) == 0)
-                      str2 = Class27.string_2;
+                      str2 = CharacterImagePaths.string_2;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(1), false) == 0)
-                      str2 = Class27.string_3;
+                      str2 = CharacterImagePaths.string_3;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(2), false) == 0)
-                      str2 = Class27.string_4;
+                      str2 = CharacterImagePaths.string_4;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(3), false) == 0)
-                      str2 = Class27.string_5;
+                      str2 = CharacterImagePaths.string_5;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(16), false) == 0)
-                      str2 = Class27.string_7;
+                      str2 = CharacterImagePaths.string_7;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(17), false) == 0)
-                      str2 = Class27.string_8;
+                      str2 = CharacterImagePaths.string_8;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(18), false) == 0)
-                      str2 = Class27.string_9;
+                      str2 = CharacterImagePaths.string_9;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(19), false) == 0)
-                      str2 = Class27.string_10;
+                      str2 = CharacterImagePaths.string_10;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(32), false) == 0)
-                      str2 = Class27.string_12;
+                      str2 = CharacterImagePaths.string_12;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(33), false) == 0)
-                      str2 = Class27.string_13;
+                      str2 = CharacterImagePaths.string_13;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(34), false) == 0)
-                      str2 = Class27.string_14;
+                      str2 = CharacterImagePaths.string_14;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(35), false) == 0)
-                      str2 = Class27.string_15;
+                      str2 = CharacterImagePaths.string_15;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(48), false) == 0)
-                      str2 = Class27.string_17;
+                      str2 = CharacterImagePaths.string_17;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(49), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(50), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(64), false) == 0)
-                      str2 = Class27.string_21;
+                      str2 = CharacterImagePaths.string_21;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(65), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(66), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(80), false) == 0)
-                      str2 = Class27.string_25;
+                      str2 = CharacterImagePaths.string_25;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(81), false) == 0)
-                      str2 = Class27.string_26;
+                      str2 = CharacterImagePaths.string_26;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(82), false) == 0)
-                      str2 = Class27.string_27;
+                      str2 = CharacterImagePaths.string_27;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(83), false) == 0)
-                      str2 = Class27.string_28;
-                    this.PJ3.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) str2)));
+                      str2 = CharacterImagePaths.string_28;
+                    this.PJ3.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) str2)));
                     break;
                   }
                   break;
                 case 4:
-                  if (Class28.sqlDataReader_2.Read())
+                  if (SqlConnectionPool.sqlDataReader_2.Read())
                   {
                     this.PJE4.Visible = true;
                     this.BorrarPJ4.Visible = true;
-                    this.PJ4Name.Text = Class28.sqlDataReader_1[checked (num1 - 1)].ToString();
-                    this.PJ4lvl.Text = Class28.sqlDataReader_2[1].ToString();
-                    string str1 = Class28.sqlDataReader_2[0].ToString();
-                    string str2 = Class27.string_0;
+                    this.PJ4Name.Text = SqlConnectionPool.sqlDataReader_1[checked (num1 - 1)].ToString();
+                    this.PJ4lvl.Text = SqlConnectionPool.sqlDataReader_2[1].ToString();
+                    string str1 = SqlConnectionPool.sqlDataReader_2[0].ToString();
+                    string str2 = CharacterImagePaths.string_0;
                     try
                     {
-                      this.Classe4.Text = Class6.string_8[Conversions.ToInteger(Array.IndexOf<string>(Class6.string_6, str1).ToString())];
+                      this.Classe4.Text = GameDataArrays.string_8[Conversions.ToInteger(Array.IndexOf<string>(GameDataArrays.string_6, str1).ToString())];
                     }
                     catch (Exception ex)
                     {
                       ProjectData.SetProjectError(ex);
-                      this.Classe4.Text = Class6.string_8[Conversions.ToInteger(Class6.string_9)];
+                      this.Classe4.Text = GameDataArrays.string_8[Conversions.ToInteger(GameDataArrays.string_9)];
                       ProjectData.ClearProjectError();
                     }
                     string Left = str1;
                     if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(0), false) == 0)
-                      str2 = Class27.string_2;
+                      str2 = CharacterImagePaths.string_2;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(1), false) == 0)
-                      str2 = Class27.string_3;
+                      str2 = CharacterImagePaths.string_3;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(2), false) == 0)
-                      str2 = Class27.string_4;
+                      str2 = CharacterImagePaths.string_4;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(3), false) == 0)
-                      str2 = Class27.string_5;
+                      str2 = CharacterImagePaths.string_5;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(16), false) == 0)
-                      str2 = Class27.string_7;
+                      str2 = CharacterImagePaths.string_7;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(17), false) == 0)
-                      str2 = Class27.string_8;
+                      str2 = CharacterImagePaths.string_8;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(18), false) == 0)
-                      str2 = Class27.string_9;
+                      str2 = CharacterImagePaths.string_9;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(19), false) == 0)
-                      str2 = Class27.string_10;
+                      str2 = CharacterImagePaths.string_10;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(32), false) == 0)
-                      str2 = Class27.string_12;
+                      str2 = CharacterImagePaths.string_12;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(33), false) == 0)
-                      str2 = Class27.string_13;
+                      str2 = CharacterImagePaths.string_13;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(34), false) == 0)
-                      str2 = Class27.string_14;
+                      str2 = CharacterImagePaths.string_14;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(35), false) == 0)
-                      str2 = Class27.string_15;
+                      str2 = CharacterImagePaths.string_15;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(48), false) == 0)
-                      str2 = Class27.string_17;
+                      str2 = CharacterImagePaths.string_17;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(49), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(50), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(64), false) == 0)
-                      str2 = Class27.string_21;
+                      str2 = CharacterImagePaths.string_21;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(65), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(66), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(80), false) == 0)
-                      str2 = Class27.string_25;
+                      str2 = CharacterImagePaths.string_25;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(81), false) == 0)
-                      str2 = Class27.string_26;
+                      str2 = CharacterImagePaths.string_26;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(82), false) == 0)
-                      str2 = Class27.string_27;
+                      str2 = CharacterImagePaths.string_27;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(83), false) == 0)
-                      str2 = Class27.string_28;
-                    this.PJ4.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) str2)));
+                      str2 = CharacterImagePaths.string_28;
+                    this.PJ4.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) str2)));
                     break;
                   }
                   break;
                 case 5:
-                  if (Class28.sqlDataReader_2.Read())
+                  if (SqlConnectionPool.sqlDataReader_2.Read())
                   {
                     this.PJE5.Visible = true;
                     this.BorrarPJ5.Visible = true;
-                    this.PJ5Name.Text = Class28.sqlDataReader_1[checked (num1 - 1)].ToString();
-                    this.PJ5lvl.Text = Class28.sqlDataReader_2[1].ToString();
-                    string str1 = Class28.sqlDataReader_2[0].ToString();
-                    string str2 = Class27.string_0;
+                    this.PJ5Name.Text = SqlConnectionPool.sqlDataReader_1[checked (num1 - 1)].ToString();
+                    this.PJ5lvl.Text = SqlConnectionPool.sqlDataReader_2[1].ToString();
+                    string str1 = SqlConnectionPool.sqlDataReader_2[0].ToString();
+                    string str2 = CharacterImagePaths.string_0;
                     try
                     {
-                      this.Classe5.Text = Class6.string_8[Conversions.ToInteger(Array.IndexOf<string>(Class6.string_6, str1).ToString())];
+                      this.Classe5.Text = GameDataArrays.string_8[Conversions.ToInteger(Array.IndexOf<string>(GameDataArrays.string_6, str1).ToString())];
                     }
                     catch (Exception ex)
                     {
                       ProjectData.SetProjectError(ex);
-                      this.Classe5.Text = Class6.string_8[Conversions.ToInteger(Class6.string_9)];
+                      this.Classe5.Text = GameDataArrays.string_8[Conversions.ToInteger(GameDataArrays.string_9)];
                       ProjectData.ClearProjectError();
                     }
                     string Left = str1;
                     if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(0), false) == 0)
-                      str2 = Class27.string_2;
+                      str2 = CharacterImagePaths.string_2;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(1), false) == 0)
-                      str2 = Class27.string_3;
+                      str2 = CharacterImagePaths.string_3;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(2), false) == 0)
-                      str2 = Class27.string_4;
+                      str2 = CharacterImagePaths.string_4;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(3), false) == 0)
-                      str2 = Class27.string_5;
+                      str2 = CharacterImagePaths.string_5;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(16), false) == 0)
-                      str2 = Class27.string_7;
+                      str2 = CharacterImagePaths.string_7;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(17), false) == 0)
-                      str2 = Class27.string_8;
+                      str2 = CharacterImagePaths.string_8;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(18), false) == 0)
-                      str2 = Class27.string_9;
+                      str2 = CharacterImagePaths.string_9;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(19), false) == 0)
-                      str2 = Class27.string_10;
+                      str2 = CharacterImagePaths.string_10;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(32), false) == 0)
-                      str2 = Class27.string_12;
+                      str2 = CharacterImagePaths.string_12;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(33), false) == 0)
-                      str2 = Class27.string_13;
+                      str2 = CharacterImagePaths.string_13;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(34), false) == 0)
-                      str2 = Class27.string_14;
+                      str2 = CharacterImagePaths.string_14;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(35), false) == 0)
-                      str2 = Class27.string_15;
+                      str2 = CharacterImagePaths.string_15;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(48), false) == 0)
-                      str2 = Class27.string_17;
+                      str2 = CharacterImagePaths.string_17;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(49), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(50), false) == 0)
-                      str2 = Class27.string_18;
+                      str2 = CharacterImagePaths.string_18;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(64), false) == 0)
-                      str2 = Class27.string_21;
+                      str2 = CharacterImagePaths.string_21;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(65), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(66), false) == 0)
-                      str2 = Class27.string_22;
+                      str2 = CharacterImagePaths.string_22;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(80), false) == 0)
-                      str2 = Class27.string_25;
+                      str2 = CharacterImagePaths.string_25;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(81), false) == 0)
-                      str2 = Class27.string_26;
+                      str2 = CharacterImagePaths.string_26;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(82), false) == 0)
-                      str2 = Class27.string_27;
+                      str2 = CharacterImagePaths.string_27;
                     else if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, Conversions.ToString(83), false) == 0)
-                      str2 = Class27.string_28;
-                    this.PJ5.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) str2)));
+                      str2 = CharacterImagePaths.string_28;
+                    this.PJ5.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) str2)));
                     break;
                   }
                   break;
               }
-              Class28.sqlDataReader_2.Close();
+              SqlConnectionPool.sqlDataReader_2.Close();
             }
             catch (Exception ex)
             {
@@ -2209,14 +2209,14 @@ label_2:
               int num2 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
               ProjectData.ClearProjectError();
             }
-            Class7.smethod_6();
+            ConnectionManager.smethod_6();
             checked { ++num1; }
           }
           while (num1 <= 5);
           goto label_2;
         }
         else
-          Class28.sqlDataReader_1.Close();
+          SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -2224,35 +2224,35 @@ label_2:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object ComprovarName()
     {
       object obj = (object) 0;
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT Name FROM Character;";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        while (Class28.sqlDataReader_1.Read())
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Name FROM Character;";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
         {
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(this.NamePJ.Text.ToUpper(), Class28.sqlDataReader_1[0].ToString().ToUpper(), false) != 0)
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(this.NamePJ.Text.ToUpper(), SqlConnectionPool.sqlDataReader_1[0].ToString().ToUpper(), false) != 0)
           {
             obj = (object) 0;
           }
           else
           {
             obj = (object) 1;
-            Class28.sqlDataReader_1.Close();
-            Class7.smethod_5();
+            SqlConnectionPool.sqlDataReader_1.Close();
+            ConnectionManager.smethod_5();
             goto label_9;
           }
         }
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -2261,7 +2261,7 @@ label_2:
         obj = (object) 1;
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
 label_9:
       return obj;
     }
@@ -2270,8 +2270,8 @@ label_9:
         //{
         //  if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(this.ComprovarName(), (object) 0, false))
         //  {
-        //    Class7.smethod_0();
-        //    Class28.sqlConnection_1.Open();
+        //    ConnectionManager.smethod_0();
+        //    SqlConnectionPool.sqlConnection_1.Open();
         //    int num1;
         //    if (this.DW.Checked)
         //      num1 = 0;
@@ -2288,23 +2288,23 @@ label_9:
         //    try
         //    {
         //      SqlCommand sqlCommand1 = new SqlCommand();
-        //      SqlCommand sqlCommand2 = new SqlCommand("WZ_CreateCharacter", Class28.sqlConnection_1);
+        //      SqlCommand sqlCommand2 = new SqlCommand("WZ_CreateCharacter", SqlConnectionPool.sqlConnection_1);
         //      sqlCommand2.CommandType = CommandType.StoredProcedure;
-        //      Class28.sqlParameter_0 = new SqlParameter("@AccountID", SqlDbType.VarChar, 10);
-        //      Class28.sqlParameter_0.Direction = ParameterDirection.Input;
-        //      sqlCommand2.Parameters.Add(Class28.sqlParameter_0);
-        //      Class28.sqlParameter_0 = new SqlParameter("@Name", SqlDbType.VarChar, 10);
-        //      Class28.sqlParameter_0.Direction = ParameterDirection.Input;
-        //      sqlCommand2.Parameters.Add(Class28.sqlParameter_0);
-        //      Class28.sqlParameter_0 = new SqlParameter("@Class", SqlDbType.TinyInt);
-        //      Class28.sqlParameter_0.Direction = ParameterDirection.Input;
-        //      sqlCommand2.Parameters.Add(Class28.sqlParameter_0);
+        //      SqlConnectionPool.sqlParameter_0 = new SqlParameter("@AccountID", SqlDbType.VarChar, 10);
+        //      SqlConnectionPool.sqlParameter_0.Direction = ParameterDirection.Input;
+        //      sqlCommand2.Parameters.Add(SqlConnectionPool.sqlParameter_0);
+        //      SqlConnectionPool.sqlParameter_0 = new SqlParameter("@Name", SqlDbType.VarChar, 10);
+        //      SqlConnectionPool.sqlParameter_0.Direction = ParameterDirection.Input;
+        //      sqlCommand2.Parameters.Add(SqlConnectionPool.sqlParameter_0);
+        //      SqlConnectionPool.sqlParameter_0 = new SqlParameter("@Class", SqlDbType.TinyInt);
+        //      SqlConnectionPool.sqlParameter_0.Direction = ParameterDirection.Input;
+        //      sqlCommand2.Parameters.Add(SqlConnectionPool.sqlParameter_0);
         //      sqlCommand2.Parameters["@AccountID"].Value = (object) AccountMaker.DefInstance.Cuentas.Text;
         //      sqlCommand2.Parameters["@Name"].Value = (object) this.NamePJ.Text;
         //      sqlCommand2.Parameters["@Class"].Value = (object) num1;
         //      sqlCommand2.ExecuteNonQuery();
         //      sqlCommand2.Dispose();
-        //      Class28.int_0 = 0;
+        //      SqlConnectionPool.int_0 = 0;
         //      sqlCommand1.Dispose();
         //    }
         //    catch (Exception ex)
@@ -2313,7 +2313,7 @@ label_9:
         //      int num2 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         //      ProjectData.ClearProjectError();
         //    }
-        //    Class7.smethod_5();
+        //    ConnectionManager.smethod_5();
         //  }
         //  else
         //  {
@@ -2326,8 +2326,8 @@ label_9:
             if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(this.ComprovarName(), 0, false))
             {
                 int num2 = 0;
-                Class7.smethod_0();
-                Class28.sqlConnection_1.Open();
+                ConnectionManager.smethod_0();
+                SqlConnectionPool.sqlConnection_1.Open();
                 if (this.DW.Checked)
                 {
                     num2 = 0;
@@ -2355,25 +2355,25 @@ label_9:
                 try
                 {
                     SqlCommand command = new SqlCommand();
-                    SqlCommand command2 = new SqlCommand("WZ_CreateCharacter", Class28.sqlConnection_1)
+                    SqlCommand command2 = new SqlCommand("WZ_CreateCharacter", SqlConnectionPool.sqlConnection_1)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
-                    Class28.sqlParameter_0 = new SqlParameter("@AccountID", SqlDbType.VarChar, 10);
-                    Class28.sqlParameter_0.Direction = ParameterDirection.Input;
-                    command2.Parameters.Add(Class28.sqlParameter_0);
-                    Class28.sqlParameter_0 = new SqlParameter("@Name", SqlDbType.VarChar, 10);
-                    Class28.sqlParameter_0.Direction = ParameterDirection.Input;
-                    command2.Parameters.Add(Class28.sqlParameter_0);
-                    Class28.sqlParameter_0 = new SqlParameter("@Class", SqlDbType.TinyInt);
-                    Class28.sqlParameter_0.Direction = ParameterDirection.Input;
-                    command2.Parameters.Add(Class28.sqlParameter_0);
+                    SqlConnectionPool.sqlParameter_0 = new SqlParameter("@AccountID", SqlDbType.VarChar, 10);
+                    SqlConnectionPool.sqlParameter_0.Direction = ParameterDirection.Input;
+                    command2.Parameters.Add(SqlConnectionPool.sqlParameter_0);
+                    SqlConnectionPool.sqlParameter_0 = new SqlParameter("@Name", SqlDbType.VarChar, 10);
+                    SqlConnectionPool.sqlParameter_0.Direction = ParameterDirection.Input;
+                    command2.Parameters.Add(SqlConnectionPool.sqlParameter_0);
+                    SqlConnectionPool.sqlParameter_0 = new SqlParameter("@Class", SqlDbType.TinyInt);
+                    SqlConnectionPool.sqlParameter_0.Direction = ParameterDirection.Input;
+                    command2.Parameters.Add(SqlConnectionPool.sqlParameter_0);
                     command2.Parameters["@AccountID"].Value = AccountMaker.DefInstance.Cuentas.Text;
                     command2.Parameters["@Name"].Value = this.NamePJ.Text;
                     command2.Parameters["@Class"].Value = num2;
                     command2.ExecuteNonQuery();
                     command2.Dispose();
-                    Class28.int_0 = 0;
+                    SqlConnectionPool.int_0 = 0;
                     command.Dispose();
                     command = null;
                 }
@@ -2384,7 +2384,7 @@ label_9:
                     Interaction.MsgBox(exception.Message, MsgBoxStyle.ApplicationModal, null);
                     ProjectData.ClearProjectError();
                 }
-                Class7.smethod_5();
+                ConnectionManager.smethod_5();
             }
             else
             {
@@ -2395,13 +2395,13 @@ label_9:
 
         public object DeletePJ(object Name, object NPJ)
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) ("DELETE FROM Character WHERE AccountID='" + AccountMaker.DefInstance.Cuentas.Text + "' AND Name='"), Name), (object) "';"));
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) ("DELETE FROM Character WHERE AccountID='" + AccountMaker.DefInstance.Cuentas.Text + "' AND Name='"), Name), (object) "';"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -2409,13 +2409,13 @@ label_9:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE AccountCharacter SET GameID", NPJ), (object) " = NULL WHERE ID = '"), (object) AccountMaker.DefInstance.Cuentas.Text), (object) "';"));
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE AccountCharacter SET GameID", NPJ), (object) " = NULL WHERE ID = '"), (object) AccountMaker.DefInstance.Cuentas.Text), (object) "';"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -2423,23 +2423,23 @@ label_9:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       StatsMaker.DefInstance.Close();
       PJMaker.DefInstance.Close();
       PJMaker.DefInstance.Show();
       PJMaker.DefInstance.Location = new Point(checked (AccountMaker.DefInstance.Location.X + 376), AccountMaker.DefInstance.Location.Y);
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + AccountMaker.DefInstance.Cuentas.Text + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        AccountMaker.DefInstance.Personajes.Text = " " + Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Lang/" + Class30.string_0 + ".ini", "Lang", "SelecPerson", ">> Seleccionar Personaje <<") + " ";
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + AccountMaker.DefInstance.Cuentas.Text + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        AccountMaker.DefInstance.Personajes.Text = " " + IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Lang/" + LocalizedStrings.string_0 + ".ini", "Lang", "SelecPerson", ">> Seleccionar Personaje <<") + " ";
         AccountMaker.DefInstance.Personajes.Items.Clear();
-        while (Class28.sqlDataReader_1.Read())
-          AccountMaker.DefInstance.Personajes.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-        Class28.sqlDataReader_1.Close();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
+          AccountMaker.DefInstance.Personajes.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -2447,8 +2447,8 @@ label_9:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      Class8.smethod_1();
+      ConnectionManager.smethod_5();
+      DatabaseOperations.smethod_1();
       AccountMaker.DefInstance.ResetDatosPJ();
       AccountMaker.DefInstance.RestriccionesOFF();
       AccountMaker.DefInstance.CreatePj.Enabled = true;
@@ -2465,7 +2465,7 @@ label_9:
 
     private void PJMaker_Load(object sender, EventArgs e)
     {
-      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       this.Personajes();
     }
@@ -2522,18 +2522,18 @@ label_9:
       PJMaker.DefInstance.Close();
       PJMaker.DefInstance.Show();
       PJMaker.DefInstance.Location = new Point(checked (AccountMaker.DefInstance.Location.X + 376), AccountMaker.DefInstance.Location.Y);
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + AccountMaker.DefInstance.Cuentas.Text + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        AccountMaker.DefInstance.Personajes.Text = " " + Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Lang/" + Class30.string_0 + ".ini", "Lang", "SelecPerson", ">> Seleccionar Personaje <<") + " ";
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + AccountMaker.DefInstance.Cuentas.Text + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        AccountMaker.DefInstance.Personajes.Text = " " + IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Lang/" + LocalizedStrings.string_0 + ".ini", "Lang", "SelecPerson", ">> Seleccionar Personaje <<") + " ";
         AccountMaker.DefInstance.Personajes.Items.Clear();
-        while (Class28.sqlDataReader_1.Read())
-          AccountMaker.DefInstance.Personajes.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-        Class28.sqlDataReader_1.Close();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
+          AccountMaker.DefInstance.Personajes.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -2541,8 +2541,8 @@ label_9:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      Class8.smethod_1();
+      ConnectionManager.smethod_5();
+      DatabaseOperations.smethod_1();
       AccountMaker.DefInstance.ResetDatosPJ();
       AccountMaker.DefInstance.RestriccionesOFF();
       AccountMaker.DefInstance.CreatePj.Enabled = true;
@@ -2609,121 +2609,121 @@ label_9:
     private void method_10(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ1.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarPJ1.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_11(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ1.BackgroundImage = (Image) Class34.smethod_54();
+      this.BorrarPJ1.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_12(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ2.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarPJ2.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_13(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ2.BackgroundImage = (Image) Class34.smethod_54();
+      this.BorrarPJ2.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_14(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ3.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarPJ3.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_15(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ3.BackgroundImage = (Image) Class34.smethod_54();
+      this.BorrarPJ3.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_16(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ4.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarPJ4.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_17(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ4.BackgroundImage = (Image) Class34.smethod_54();
+      this.BorrarPJ4.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_18(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ5.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarPJ5.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_19(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarPJ5.BackgroundImage = (Image) Class34.smethod_54();
+      this.BorrarPJ5.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_20(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CrearAccount.BackgroundImage = (Image) Class34.smethod_50();
+      this.CrearAccount.BackgroundImage = (Image) EmbeddedResources.smethod_50();
     }
 
     private void method_21(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CrearAccount.BackgroundImage = (Image) Class34.smethod_51();
+      this.CrearAccount.BackgroundImage = (Image) EmbeddedResources.smethod_51();
     }
 
     private void method_22(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
     }
 
     private void method_23(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_91();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_91();
     }
 
     private void method_24(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BClosed.BackgroundImage = (Image) Class34.smethod_43();
+      this.BClosed.BackgroundImage = (Image) EmbeddedResources.smethod_43();
     }
 
     private void method_25(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BClosed.BackgroundImage = (Image) Class34.smethod_46();
+      this.BClosed.BackgroundImage = (Image) EmbeddedResources.smethod_46();
     }
 
     private void method_26(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_43();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_43();
     }
 
     private void method_27(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_46();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_46();
     }
 
     private void method_28(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Salir.BackgroundImage = (Image) Class34.smethod_39();
+      this.Salir.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_29(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Salir.BackgroundImage = (Image) Class34.smethod_40();
+      this.Salir.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
   }
 }

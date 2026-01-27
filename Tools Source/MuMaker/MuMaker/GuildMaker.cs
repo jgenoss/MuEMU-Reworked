@@ -3928,7 +3928,7 @@ namespace MuMaker
       this.Chart.TextAlign = ContentAlignment.MiddleCenter;
       this.CreateGuild.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.CreateGuild.BackgroundImage = (Image) Class34.smethod_50();
+      this.CreateGuild.BackgroundImage = (Image) EmbeddedResources.smethod_50();
       this.CreateGuild.BackgroundImageLayout = ImageLayout.Center;
       this.CreateGuild.Cursor = Cursors.Hand;
       this.CreateGuild.Enabled = false;
@@ -3953,7 +3953,7 @@ namespace MuMaker
       this.CreateGuild.UseVisualStyleBackColor = false;
       this.BorrarGuild.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BorrarGuild.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarGuild.BackgroundImage = (Image) EmbeddedResources.smethod_53();
       this.BorrarGuild.BackgroundImageLayout = ImageLayout.Center;
       this.BorrarGuild.Cursor = Cursors.Hand;
       this.BorrarGuild.Enabled = false;
@@ -6820,7 +6820,7 @@ namespace MuMaker
       this.GuildMaster.TextAlign = ContentAlignment.MiddleCenter;
       this.Aplicar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
       this.Aplicar.BackgroundImageLayout = ImageLayout.Center;
       this.Aplicar.Cursor = Cursors.Hand;
       this.Aplicar.Enabled = false;
@@ -6845,7 +6845,7 @@ namespace MuMaker
       this.Aplicar.UseVisualStyleBackColor = false;
       this.Reload.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
       this.Reload.BackgroundImageLayout = ImageLayout.Center;
       this.Reload.Cursor = Cursors.Hand;
       this.Reload.Enabled = false;
@@ -6870,7 +6870,7 @@ namespace MuMaker
       this.Reload.UseVisualStyleBackColor = false;
       this.Buscar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.Buscar.BackgroundImageLayout = ImageLayout.Center;
       this.Buscar.Cursor = Cursors.Hand;
       this.Buscar.FlatAppearance.BorderSize = 0;
@@ -6894,7 +6894,7 @@ namespace MuMaker
       this.Buscar.UseVisualStyleBackColor = false;
       this.BorrarDatos.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BorrarDatos.BackgroundImage = (Image) Class34.smethod_36();
+      this.BorrarDatos.BackgroundImage = (Image) EmbeddedResources.smethod_36();
       this.BorrarDatos.BackgroundImageLayout = ImageLayout.Center;
       this.BorrarDatos.Cursor = Cursors.Hand;
       this.BorrarDatos.FlatAppearance.BorderSize = 0;
@@ -6918,7 +6918,7 @@ namespace MuMaker
       this.BorrarDatos.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -6942,7 +6942,7 @@ namespace MuMaker
       this.Cerrar.UseVisualStyleBackColor = false;
       this.Minimizar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.Minimizar.BackgroundImageLayout = ImageLayout.Center;
       this.Minimizar.Cursor = Cursors.Hand;
       this.Minimizar.DialogResult = DialogResult.Cancel;
@@ -6983,7 +6983,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_67();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_67();
       size1 = new Size(376, 405);
       this.ClientSize = size1;
       this.Controls.Add((Control) this.Titulo);
@@ -7561,15 +7561,15 @@ label_97:
     public object CargarGuilds()
     {
       this.ExcepcionesOFF();
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT G_Name, G_Master, G_Score, G_Notice FROM Guild ORDER BY Number ASC";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        this.Guilds.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", Class30.object_72), (object) " "));
-        this.Personajes.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", Class30.object_8), (object) " "));
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT G_Name, G_Master, G_Score, G_Notice FROM Guild ORDER BY Number ASC";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        this.Guilds.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", LocalizedStrings.object_72), (object) " "));
+        this.Personajes.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", LocalizedStrings.object_8), (object) " "));
         this.Noticia.Text = "";
         this.Puntos.Text = "";
         this.Tipo.Text = "";
@@ -7586,14 +7586,14 @@ label_97:
         this.Guilds.Items.Clear();
         this.GuildsFriend.Items.Add((object) "[ NONE ]");
         this.GuildsEnemy.Items.Add((object) "[ NONE ]");
-        while (Class28.sqlDataReader_1.Read())
+        while (SqlConnectionPool.sqlDataReader_1.Read())
         {
-          this.Guilds.Items.Add((object) Class28.sqlDataReader_1["G_Name"].ToString());
-          this.Personajes.Items.Add((object) Class28.sqlDataReader_1["G_Master"].ToString());
-          this.GuildsFriend.Items.Add((object) Class28.sqlDataReader_1["G_Name"].ToString());
-          this.GuildsEnemy.Items.Add((object) Class28.sqlDataReader_1["G_Name"].ToString());
+          this.Guilds.Items.Add((object) SqlConnectionPool.sqlDataReader_1["G_Name"].ToString());
+          this.Personajes.Items.Add((object) SqlConnectionPool.sqlDataReader_1["G_Master"].ToString());
+          this.GuildsFriend.Items.Add((object) SqlConnectionPool.sqlDataReader_1["G_Name"].ToString());
+          this.GuildsEnemy.Items.Add((object) SqlConnectionPool.sqlDataReader_1["G_Name"].ToString());
         }
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
         this.GuildsFriend.SelectedIndex = 0;
         this.GuildsEnemy.SelectedIndex = 0;
       }
@@ -7603,21 +7603,21 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT Name FROM Character ORDER BY Name ASC";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Name FROM Character ORDER BY Name ASC";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
         this.MasterGuild.Items.Clear();
         this.MasterGuild.Items.Add((object) " >> Guild Master << ");
-        while (Class28.sqlDataReader_1.Read())
-          this.MasterGuild.Items.Add((object) Class28.sqlDataReader_1["Name"].ToString());
+        while (SqlConnectionPool.sqlDataReader_1.Read())
+          this.MasterGuild.Items.Add((object) SqlConnectionPool.sqlDataReader_1["Name"].ToString());
         this.MasterGuild.SelectedIndex = 0;
         this.GuildName.Text = "";
         this.CreateGuild.Enabled = false;
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -7625,22 +7625,22 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object CargarDatosGuild()
     {
-      Class7.smethod_0();
-      Class28.sqlConnection_1.Open();
-      Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-      Class28.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild WHERE Number=" + Class23.struct3_0.string_3 + ";";
-      Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+      ConnectionManager.smethod_0();
+      SqlConnectionPool.sqlConnection_1.Open();
+      SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+      SqlConnectionPool.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild WHERE Number=" + GuildData.CurrentGuild.string_3 + ";";
+      SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
       try
       {
-        Class28.sqlDataReader_1.Read();
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class28.sqlDataReader_1["G_Name"].ToString(), "", false) != 0)
-          this.GuildsFriend.SelectedItem = (object) Class28.sqlDataReader_1["G_Name"].ToString();
+        SqlConnectionPool.sqlDataReader_1.Read();
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SqlConnectionPool.sqlDataReader_1["G_Name"].ToString(), "", false) != 0)
+          this.GuildsFriend.SelectedItem = (object) SqlConnectionPool.sqlDataReader_1["G_Name"].ToString();
         else
           this.GuildsFriend.SelectedIndex = 0;
       }
@@ -7650,17 +7650,17 @@ label_97:
         this.GuildsFriend.SelectedIndex = 0;
         ProjectData.ClearProjectError();
       }
-      Class28.sqlDataReader_1.Close();
-      Class7.smethod_5();
-      Class28.sqlConnection_1.Open();
-      Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-      Class28.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild WHERE Number=" + Class23.struct3_0.string_4 + ";";
-      Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+      SqlConnectionPool.sqlDataReader_1.Close();
+      ConnectionManager.smethod_5();
+      SqlConnectionPool.sqlConnection_1.Open();
+      SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+      SqlConnectionPool.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild WHERE Number=" + GuildData.CurrentGuild.string_4 + ";";
+      SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
       try
       {
-        Class28.sqlDataReader_1.Read();
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class28.sqlDataReader_1["G_Name"].ToString(), "", false) != 0)
-          this.GuildsEnemy.SelectedItem = (object) Class28.sqlDataReader_1["G_Name"].ToString();
+        SqlConnectionPool.sqlDataReader_1.Read();
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SqlConnectionPool.sqlDataReader_1["G_Name"].ToString(), "", false) != 0)
+          this.GuildsEnemy.SelectedItem = (object) SqlConnectionPool.sqlDataReader_1["G_Name"].ToString();
         else
           this.GuildsEnemy.SelectedIndex = 0;
       }
@@ -7670,17 +7670,17 @@ label_97:
         this.GuildsEnemy.SelectedIndex = 0;
         ProjectData.ClearProjectError();
       }
-      Class28.sqlDataReader_1.Close();
-      Class7.smethod_5();
-      Class28.sqlConnection_1.Open();
-      Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-      Class28.sqlCommand_1.CommandText = "SELECT Name, G_Status FROM GuildMember WHERE G_Name='" + Class23.struct3_0.string_1 + "' ORDER BY G_Status DESC";
-      Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+      SqlConnectionPool.sqlDataReader_1.Close();
+      ConnectionManager.smethod_5();
+      SqlConnectionPool.sqlConnection_1.Open();
+      SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+      SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Name, G_Status FROM GuildMember WHERE G_Name='" + GuildData.CurrentGuild.string_1 + "' ORDER BY G_Status DESC";
+      SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
       this.Integrantes.Items.Clear();
-      while (Class28.sqlDataReader_1.Read())
-        this.Integrantes.Items.Add((object) Class28.sqlDataReader_1["Name"].ToString());
-      Class28.sqlDataReader_1.Close();
-      Class7.smethod_5();
+      while (SqlConnectionPool.sqlDataReader_1.Read())
+        this.Integrantes.Items.Add((object) SqlConnectionPool.sqlDataReader_1["Name"].ToString());
+      SqlConnectionPool.sqlDataReader_1.Close();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
@@ -7947,9 +7947,9 @@ label_97:
 
     public object Traducir()
     {
-      this.Guilds.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", Class30.object_72), (object) " "));
-      this.Personajes.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", Class30.object_8), (object) " "));
-      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Guilds.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", LocalizedStrings.object_72), (object) " "));
+      this.Personajes.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", LocalizedStrings.object_8), (object) " "));
+      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       return (object) true;
     }
@@ -7957,14 +7957,14 @@ label_97:
     private void GuildMaker_Load(object sender, EventArgs e)
     {
       VentanaBarraLoad.DefInstance.Show();
-      Class18.smethod_47();
+      IniHelper.smethod_47();
       VentanaBarraLoad.DefInstance.Carga.Value = 10;
       VentanaBarraLoad.DefInstance.Carga.Value = 40;
       this.CargarGuilds();
       VentanaBarraLoad.DefInstance.Carga.Value = 60;
       this.Traducir();
       VentanaBarraLoad.DefInstance.Carga.Value = 80;
-      Class20.smethod_3();
+      StoredProceduresManager.smethod_3();
       VentanaBarraLoad.DefInstance.Carga.Value = 100;
       VentanaBarraLoad.DefInstance.Hide();
       this.Buscar.Focus();
@@ -7982,15 +7982,15 @@ label_97:
       this.Guilds.SelectedIndex = this.Personajes.SelectedIndex;
       this.NameGuild.Text = Conversions.ToString(this.Guilds.SelectedItem);
       this.GuildMaster.Text = Conversions.ToString(this.Personajes.SelectedItem);
-      Class23.struct3_0.string_1 = Conversions.ToString(this.Guilds.SelectedItem);
-      Class23.struct3_0.string_0 = Conversions.ToString(this.Personajes.SelectedItem);
-      Class8.smethod_10();
-      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class23.struct3_0.string_1, "No Guild", false) == 0)
+      GuildData.CurrentGuild.string_1 = Conversions.ToString(this.Guilds.SelectedItem);
+      GuildData.CurrentGuild.string_0 = Conversions.ToString(this.Personajes.SelectedItem);
+      DatabaseOperations.smethod_10();
+      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(GuildData.CurrentGuild.string_1, "No Guild", false) == 0)
         this.ExcepcionesOFF();
-      this.NameGuild.Text = Class23.struct3_0.string_1;
-      this.MARCKA((object) Class23.struct3_0.string_2);
-      this.Noticia.Text = Class23.struct3_0.string_5;
-      this.Puntos.Text = Class23.struct3_0.string_6;
+      this.NameGuild.Text = GuildData.CurrentGuild.string_1;
+      this.MARCKA((object) GuildData.CurrentGuild.string_2);
+      this.Noticia.Text = GuildData.CurrentGuild.string_5;
+      this.Puntos.Text = GuildData.CurrentGuild.string_6;
       this.CargarDatosGuild();
       this.Buscar.Focus();
       this.Buscar.Select();
@@ -7998,25 +7998,25 @@ label_97:
 
     private void Integrantes_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "SELECT G_Status FROM GuildMember WHERE Name='", this.Integrantes.SelectedItem), (object) "'"));
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        while (Class28.sqlDataReader_1.Read())
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "SELECT G_Status FROM GuildMember WHERE Name='", this.Integrantes.SelectedItem), (object) "'"));
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
         {
-          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class28.sqlDataReader_1["G_Status"], (object) 128, false))
+          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(SqlConnectionPool.sqlDataReader_1["G_Status"], (object) 128, false))
             this.GL1.Select();
-          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class28.sqlDataReader_1["G_Status"], (object) 64, false))
+          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(SqlConnectionPool.sqlDataReader_1["G_Status"], (object) 64, false))
             this.GL2.Select();
-          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class28.sqlDataReader_1["G_Status"], (object) 32, false))
+          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(SqlConnectionPool.sqlDataReader_1["G_Status"], (object) 32, false))
             this.GL3.Select();
-          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class28.sqlDataReader_1["G_Status"], (object) 0, false))
+          if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(SqlConnectionPool.sqlDataReader_1["G_Status"], (object) 0, false))
             this.GL4.Select();
         }
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -8024,7 +8024,7 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
     }
 
     private void MasterGuild_SelectedIndexChanged(object sender, EventArgs e)
@@ -8047,15 +8047,15 @@ label_97:
       this.Guilds.SelectedIndex = this.Personajes.SelectedIndex;
       this.NameGuild.Text = Conversions.ToString(this.Guilds.SelectedItem);
       this.GuildMaster.Text = Conversions.ToString(this.Personajes.SelectedItem);
-      Class23.struct3_0.string_1 = Conversions.ToString(this.Guilds.SelectedItem);
-      Class23.struct3_0.string_0 = Conversions.ToString(this.Personajes.SelectedItem);
-      Class8.smethod_10();
-      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class23.struct3_0.string_1, "No Guild", false) == 0)
+      GuildData.CurrentGuild.string_1 = Conversions.ToString(this.Guilds.SelectedItem);
+      GuildData.CurrentGuild.string_0 = Conversions.ToString(this.Personajes.SelectedItem);
+      DatabaseOperations.smethod_10();
+      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(GuildData.CurrentGuild.string_1, "No Guild", false) == 0)
         this.ExcepcionesOFF();
-      this.NameGuild.Text = Class23.struct3_0.string_1;
-      this.MARCKA((object) Class23.struct3_0.string_2);
-      this.Noticia.Text = Class23.struct3_0.string_5;
-      this.Puntos.Text = Class23.struct3_0.string_6;
+      this.NameGuild.Text = GuildData.CurrentGuild.string_1;
+      this.MARCKA((object) GuildData.CurrentGuild.string_2);
+      this.Noticia.Text = GuildData.CurrentGuild.string_5;
+      this.Puntos.Text = GuildData.CurrentGuild.string_6;
       this.CargarDatosGuild();
       this.Buscar.Focus();
       this.Buscar.Select();
@@ -8064,14 +8064,14 @@ label_97:
     private void method_3(object sender, EventArgs e)
     {
       int num1 = 0;
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       int num2;
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "UPDATE Guild SET G_Notice='" + this.Noticia.Text + "', G_Score='" + this.Puntos.Text + "' WHERE G_Name = '" + this.NameGuild.Text + "'";
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Guild SET G_Notice='" + this.Noticia.Text + "', G_Score='" + this.Puntos.Text + "' WHERE G_Name = '" + this.NameGuild.Text + "'";
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
         num2 = checked (num1 + 1);
       }
       catch (Exception ex)
@@ -8086,8 +8086,8 @@ label_97:
       int num5;
       try
       {
-        Class14.smethod_0();
-        Class14.smethod_1();
+        GuildAllianceManager.smethod_0();
+        GuildAllianceManager.smethod_1();
         num5 = checked (num2 + 1);
       }
       catch (Exception ex)
@@ -8099,14 +8099,14 @@ label_97:
         ProjectData.ClearProjectError();
       }
       string str = Conversions.ToString(this.MARCK((object) 0));
-      Class7.smethod_5();
-      Class28.sqlConnection_1.Open();
-      Class20.smethod_13((object) str);
+      ConnectionManager.smethod_5();
+      SqlConnectionPool.sqlConnection_1.Open();
+      StoredProceduresManager.smethod_13((object) str);
       int num6;
       try
       {
         SqlCommand sqlCommand1 = new SqlCommand();
-        SqlCommand sqlCommand2 = new SqlCommand("MMK_GuildMaker", Class28.sqlConnection_1);
+        SqlCommand sqlCommand2 = new SqlCommand("MMK_GuildMaker", SqlConnectionPool.sqlConnection_1);
         sqlCommand2.CommandType = CommandType.StoredProcedure;
         sqlCommand2.Parameters.Add(new SqlParameter("@Name", SqlDbType.VarChar, 10)
         {
@@ -8126,7 +8126,7 @@ label_97:
         int num3 = (int) Interaction.MsgBox((object) exception.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       if (num6 == 1)
       {
         int num7 = (int) Interaction.MsgBox((object) "!! MARK ERROR !!", MsgBoxStyle.OkOnly, (object) null);
@@ -8149,19 +8149,19 @@ label_97:
       else
       {
         this.MARCK((object) 1);
-        Class7.smethod_0();
+        ConnectionManager.smethod_0();
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-          Class28.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild;";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          while (Class28.sqlDataReader_1.Read())
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+          SqlConnectionPool.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild;";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          while (SqlConnectionPool.sqlDataReader_1.Read())
           {
-            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class28.sqlDataReader_1["G_Name"].ToString().ToUpper(), this.GuildName.Text.ToUpper(), false) == 0)
+            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SqlConnectionPool.sqlDataReader_1["G_Name"].ToString().ToUpper(), this.GuildName.Text.ToUpper(), false) == 0)
               num1 = 1;
           }
-          Class28.sqlDataReader_1.Close();
+          SqlConnectionPool.sqlDataReader_1.Close();
         }
         catch (Exception ex)
         {
@@ -8170,16 +8170,16 @@ label_97:
           num1 = 1;
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
         if (num1 != 1)
         {
-          Class7.smethod_0();
-          Class28.sqlConnection_1.Open();
+          ConnectionManager.smethod_0();
+          SqlConnectionPool.sqlConnection_1.Open();
           int num4;
           try
           {
             SqlCommand sqlCommand1 = new SqlCommand();
-            SqlCommand sqlCommand2 = new SqlCommand("WZ_GuildCreate", Class28.sqlConnection_1);
+            SqlCommand sqlCommand2 = new SqlCommand("WZ_GuildCreate", SqlConnectionPool.sqlConnection_1);
             sqlCommand2.CommandType = CommandType.StoredProcedure;
             sqlCommand2.Parameters.Add(new SqlParameter("@GuildName", SqlDbType.VarChar, 8)
             {
@@ -8194,9 +8194,9 @@ label_97:
             sqlCommand2.ExecuteNonQuery();
             sqlCommand2.Dispose();
             sqlCommand1.Dispose();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "UPDATE GuildMember SET G_Status=128 WHERE Name = '" + this.MasterGuild.Text + "'";
-            Class28.sqlCommand_1.ExecuteReader();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE GuildMember SET G_Status=128 WHERE Name = '" + this.MasterGuild.Text + "'";
+            SqlConnectionPool.sqlCommand_1.ExecuteReader();
             num4 = checked (num2 + 1);
           }
           catch (Exception ex)
@@ -8206,16 +8206,16 @@ label_97:
             ProjectData.ClearProjectError();
             return;
           }
-          Class7.smethod_5();
+          ConnectionManager.smethod_5();
           if (num1 != 1)
           {
-            Class7.smethod_0();
-            Class28.sqlConnection_1.Open();
-            Class20.smethod_13((object) Conversions.ToString(this.MARCK((object) 1)));
+            ConnectionManager.smethod_0();
+            SqlConnectionPool.sqlConnection_1.Open();
+            StoredProceduresManager.smethod_13((object) Conversions.ToString(this.MARCK((object) 1)));
             try
             {
               SqlCommand sqlCommand1 = new SqlCommand();
-              SqlCommand sqlCommand2 = new SqlCommand("MMK_GuildMaker", Class28.sqlConnection_1);
+              SqlCommand sqlCommand2 = new SqlCommand("MMK_GuildMaker", SqlConnectionPool.sqlConnection_1);
               sqlCommand2.CommandType = CommandType.StoredProcedure;
               sqlCommand2.Parameters.Add(new SqlParameter("@Name", SqlDbType.VarChar, 10)
               {
@@ -8235,7 +8235,7 @@ label_97:
               int num5 = (int) Interaction.MsgBox((object) exception.Message, MsgBoxStyle.OkOnly, (object) null);
               ProjectData.ClearProjectError();
             }
-            Class7.smethod_5();
+            ConnectionManager.smethod_5();
           }
           if (num4 == 1)
           {
@@ -8258,18 +8258,18 @@ label_97:
     {
       if (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual((object) Interaction.MsgBox((object) "!!!!! Delete This Guild !!!!!", MsgBoxStyle.YesNo, (object) "!!DELETE GUILD!!"), (object) MsgBoxResult.Yes, false))
         return;
-      Class7.smethod_0();
-      Class28.sqlConnection_1.Open();
+      ConnectionManager.smethod_0();
+      SqlConnectionPool.sqlConnection_1.Open();
       try
       {
         SqlCommand sqlCommand1 = new SqlCommand();
-        SqlCommand sqlCommand2 = new SqlCommand("WZ_SetGuildDelete", Class28.sqlConnection_1);
+        SqlCommand sqlCommand2 = new SqlCommand("WZ_SetGuildDelete", SqlConnectionPool.sqlConnection_1);
         sqlCommand2.CommandType = CommandType.StoredProcedure;
         sqlCommand2.Parameters.Add(new SqlParameter("@GuildName", SqlDbType.VarChar, 10)
         {
           Direction = ParameterDirection.Input
         });
-        sqlCommand2.Parameters["@GuildName"].Value = (object) Class23.struct3_0.string_1;
+        sqlCommand2.Parameters["@GuildName"].Value = (object) GuildData.CurrentGuild.string_1;
         sqlCommand2.ExecuteNonQuery();
         sqlCommand2.Dispose();
         sqlCommand1.Dispose();
@@ -8281,7 +8281,7 @@ label_97:
         ProjectData.ClearProjectError();
         return;
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       this.ResetMK();
       this.CargarGuilds();
     }
@@ -8292,7 +8292,7 @@ label_97:
 
     private void method_7(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
@@ -8315,11 +8315,11 @@ label_97:
     {
       try
       {
-        Class7.smethod_0();
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=128 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
-        Class28.sqlCommand_1.ExecuteReader();
+        ConnectionManager.smethod_0();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=128 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -8327,18 +8327,18 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
     }
 
     private void GL2_CheckedChanged(object sender, EventArgs e)
     {
       try
       {
-        Class7.smethod_0();
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=64 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
-        Class28.sqlCommand_1.ExecuteReader();
+        ConnectionManager.smethod_0();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=64 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -8346,18 +8346,18 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
     }
 
     private void GL3_CheckedChanged(object sender, EventArgs e)
     {
       try
       {
-        Class7.smethod_0();
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=32 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
-        Class28.sqlCommand_1.ExecuteReader();
+        ConnectionManager.smethod_0();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=32 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -8365,18 +8365,18 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
     }
 
     private void GL4_CheckedChanged(object sender, EventArgs e)
     {
       try
       {
-        Class7.smethod_0();
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=0 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
-        Class28.sqlCommand_1.ExecuteReader();
+        ConnectionManager.smethod_0();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE GuildMember SET G_Status=0 WHERE Name = '", this.Integrantes.SelectedItem), (object) "'"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -8384,17 +8384,17 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
     }
 
     private void GuildsEnemy_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class23.struct3_0.string_8 = Conversions.ToString(this.GuildsEnemy.SelectedItem);
+      GuildData.CurrentGuild.string_8 = Conversions.ToString(this.GuildsEnemy.SelectedItem);
     }
 
     private void GuildsFriend_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class23.struct3_0.string_7 = Conversions.ToString(this.GuildsFriend.SelectedItem);
+      GuildData.CurrentGuild.string_7 = Conversions.ToString(this.GuildsFriend.SelectedItem);
     }
 
     private void method_9(object sender, EventArgs e)
@@ -8403,16 +8403,16 @@ label_97:
         this.Guilds.SelectedItem = (object) this.GuildSearch.Text;
       if (this.PersonajeSearch.Text.Length <= 0)
         return;
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild WHERE G_Master='" + this.PersonajeSearch.Text + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        while (Class28.sqlDataReader_1.Read())
-          this.GuildSearch.Text = Class28.sqlDataReader_1[0].ToString();
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT G_Name FROM Guild WHERE G_Master='" + this.PersonajeSearch.Text + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
+          this.GuildSearch.Text = SqlConnectionPool.sqlDataReader_1[0].ToString();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -8420,7 +8420,7 @@ label_97:
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       this.Guilds.SelectedItem = (object) this.GuildSearch.Text;
       this.Personajes.SelectedItem = (object) this.PersonajeSearch.Text;
     }
@@ -9292,97 +9292,97 @@ label_97:
     private void method_10(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_11(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_13();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_12(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
     }
 
     private void method_13(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_101();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_101();
     }
 
     private void method_14(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarDatos.BackgroundImage = (Image) Class34.smethod_36();
+      this.BorrarDatos.BackgroundImage = (Image) EmbeddedResources.smethod_36();
     }
 
     private void method_15(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarDatos.BackgroundImage = (Image) Class34.smethod_37();
+      this.BorrarDatos.BackgroundImage = (Image) EmbeddedResources.smethod_37();
     }
 
     private void method_16(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CreateGuild.BackgroundImage = (Image) Class34.smethod_50();
+      this.CreateGuild.BackgroundImage = (Image) EmbeddedResources.smethod_50();
     }
 
     private void method_17(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CreateGuild.BackgroundImage = (Image) Class34.smethod_51();
+      this.CreateGuild.BackgroundImage = (Image) EmbeddedResources.smethod_51();
     }
 
     private void method_18(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
     }
 
     private void method_19(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_91();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_91();
     }
 
     private void method_20(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarGuild.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarGuild.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_21(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarGuild.BackgroundImage = (Image) Class34.smethod_54();
+      this.BorrarGuild.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_22(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
     }
 
     private void method_23(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_87();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_87();
     }
 
     private void method_24(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_25(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void PersonajeSearch_KeyPress(object sender, KeyPressEventArgs e)

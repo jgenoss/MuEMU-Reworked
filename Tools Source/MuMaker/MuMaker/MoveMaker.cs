@@ -9356,7 +9356,7 @@ namespace MuMaker
       this.Emergente.ShowAlways = true;
       this.Reload.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
       this.Reload.BackgroundImageLayout = ImageLayout.Center;
       this.Reload.Cursor = Cursors.Hand;
       this.Reload.FlatAppearance.BorderSize = 0;
@@ -9706,7 +9706,7 @@ namespace MuMaker
       this.GroupBox2.TabIndex = 1373;
       this.GroupBox2.TabStop = false;
       // ISSUE: reference to a compiler-generated method
-      this.OnlineOFF.Image = (Image) Class34.smethod_89();
+      this.OnlineOFF.Image = (Image) EmbeddedResources.smethod_89();
       PictureBox onlineOff1 = this.OnlineOFF;
       point1 = new Point(18, 67);
       Point point41 = point1;
@@ -9719,7 +9719,7 @@ namespace MuMaker
       this.OnlineOFF.TabIndex = 253;
       this.OnlineOFF.TabStop = false;
       // ISSUE: reference to a compiler-generated method
-      this.OnlineON.Image = (Image) Class34.smethod_92();
+      this.OnlineON.Image = (Image) EmbeddedResources.smethod_92();
       PictureBox onlineOn1 = this.OnlineON;
       point1 = new Point(18, 67);
       Point point42 = point1;
@@ -16394,7 +16394,7 @@ namespace MuMaker
       this.VerTodosPJ.TabStop = false;
       this.Minimizar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.Minimizar.BackgroundImageLayout = ImageLayout.Center;
       this.Minimizar.Cursor = Cursors.Hand;
       this.Minimizar.DialogResult = DialogResult.Cancel;
@@ -16419,7 +16419,7 @@ namespace MuMaker
       this.Minimizar.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -16458,7 +16458,7 @@ namespace MuMaker
       this.Titulo.TextAlign = ContentAlignment.MiddleLeft;
       this.Buscar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.Buscar.BackgroundImageLayout = ImageLayout.Center;
       this.Buscar.Cursor = Cursors.Hand;
       this.Buscar.FlatAppearance.BorderSize = 0;
@@ -16509,7 +16509,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_88();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_88();
       this.CancelButton = (IButtonControl) this.Minimizar;
       size1 = new Size(790, 560);
       this.ClientSize = size1;
@@ -17579,11 +17579,11 @@ namespace MuMaker
     {
       this.ListaMapas.Items.Clear();
       int num1 = 1;
-      int num2 = Conversions.ToInteger(Class6.string_2);
+      int num2 = Conversions.ToInteger(GameDataArrays.string_2);
       int num3 = num1;
       while (num3 <= num2)
       {
-        this.ListaMapas.Items.Add((object) (Class6.string_0[checked (num3 - 1)] + " " + Class6.string_1[checked (num3 - 1)]));
+        this.ListaMapas.Items.Add((object) (GameDataArrays.string_0[checked (num3 - 1)] + " " + GameDataArrays.string_1[checked (num3 - 1)]));
         checked { ++num3; }
       }
       return (object) true;
@@ -20157,28 +20157,28 @@ namespace MuMaker
 
     public object DatosPJSelect()
     {
-      if (Operators.CompareString(Class22.struct1_0.string_1, "ALL", false) != 0)
+      if (Operators.CompareString(AccountData.CurrentCharacter.string_1, "ALL", false) != 0)
       {
         this.ResetXY();
         Color color = Color.Transparent;
-        this.Acount.Text = Class22.struct1_0.string_0;
-        this.Personajes.Text = Class22.struct1_0.string_1;
-        this.level.Text = Class22.struct1_0.string_2;
-        this.X.Text = Conversions.ToString(Class22.struct1_0.int_1);
-        this.Y.Text = Conversions.ToString(Class22.struct1_0.int_2);
-        this.Baneado.Text = Conversions.ToDouble(Class22.struct1_0.string_15) != 1.0 ? "No Baned" : "Baned";
-        string str1 = Conversions.ToString(checked (Class22.struct1_0.int_1 * 2 + Class17.int_0));
-        string str2 = Conversions.ToString(checked (512 - Class22.struct1_0.int_2 * 2 + Class17.int_1));
+        this.Acount.Text = AccountData.CurrentCharacter.string_0;
+        this.Personajes.Text = AccountData.CurrentCharacter.string_1;
+        this.level.Text = AccountData.CurrentCharacter.string_2;
+        this.X.Text = Conversions.ToString(AccountData.CurrentCharacter.int_1);
+        this.Y.Text = Conversions.ToString(AccountData.CurrentCharacter.int_2);
+        this.Baneado.Text = Conversions.ToDouble(AccountData.CurrentCharacter.string_15) != 1.0 ? "No Baned" : "Baned";
+        string str1 = Conversions.ToString(checked (AccountData.CurrentCharacter.int_1 * 2 + MapImageHelper.int_0));
+        string str2 = Conversions.ToString(checked (512 - AccountData.CurrentCharacter.int_2 * 2 + MapImageHelper.int_1));
         this.PictureBox1.Visible = true;
         this.PictureBox1.Location = new Point(Conversions.ToInteger(str1), Conversions.ToInteger(str2));
-        if (Conversions.ToDouble(Class22.struct1_0.string_15) <= 2.0)
+        if (Conversions.ToDouble(AccountData.CurrentCharacter.string_15) <= 2.0)
           color = Color.DeepSkyBlue;
-        if (Conversions.ToDouble(Class22.struct1_0.string_15) >= 3.0 & Conversions.ToDouble(Class22.struct1_0.string_15) <= 4.0)
+        if (Conversions.ToDouble(AccountData.CurrentCharacter.string_15) >= 3.0 & Conversions.ToDouble(AccountData.CurrentCharacter.string_15) <= 4.0)
           color = Color.Silver;
-        if (Conversions.ToDouble(Class22.struct1_0.string_15) >= 5.0)
+        if (Conversions.ToDouble(AccountData.CurrentCharacter.string_15) >= 5.0)
           color = Color.Red;
         this.PictureBox1.BackColor = color;
-        this.Emergente.SetToolTip((Control) this.PictureBox1, Class22.struct1_0.string_1);
+        this.Emergente.SetToolTip((Control) this.PictureBox1, AccountData.CurrentCharacter.string_1);
       }
       else
       {
@@ -20194,8 +20194,8 @@ namespace MuMaker
 
     public object CheckOnLine()
     {
-      Class12.smethod_0();
-      if (Class22.struct0_0.bool_0)
+      AccountStatusManager.smethod_0();
+      if (AccountData.CurrentAccount.bool_0)
       {
         this.OnlineOFF.Hide();
         this.OnlineON.Show();
@@ -20210,11 +20210,11 @@ namespace MuMaker
 
     private void method_4()
     {
-      Class7.smethod_1();
+      ConnectionManager.smethod_1();
       try
       {
-        Class28.sqlConnection_2.Open();
-        Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
+        SqlConnectionPool.sqlConnection_2.Open();
+        SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
         int num1 = 0;
         string str = "";
         if (this.Baneados.Checked)
@@ -20230,48 +20230,48 @@ namespace MuMaker
         if (num1 == 1)
         {
           if (this.PH.Checked)
-            Class28.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel<='2' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
+            SqlConnectionPool.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel<='2' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
           if (this.PN.Checked)
-            Class28.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " (PkLevel>='3' AND PkLevel<='4') AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
+            SqlConnectionPool.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " (PkLevel>='3' AND PkLevel<='4') AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
           if (this.PK.Checked)
-            Class28.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel>='5' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
+            SqlConnectionPool.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel>='5' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
         }
         if (num1 == 2)
         {
           if (this.PH.Checked & this.PN.Checked)
-            Class28.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel<='4' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
+            SqlConnectionPool.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel<='4' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
           if (this.PN.Checked & this.PK.Checked)
-            Class28.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel>='3' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
+            SqlConnectionPool.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " PkLevel>='3' AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
           if (this.PK.Checked & this.PH.Checked)
-            Class28.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " (PkLevel<='2' OR PkLevel>='5') AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
+            SqlConnectionPool.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " (PkLevel<='2' OR PkLevel>='5') AND MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
         }
         if (num1 == 3)
-          Class28.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
+          SqlConnectionPool.sqlCommand_2.CommandText = "SELECT * FROM Character WHERE " + str + " MapNumber='" + Conversions.ToString(this.ListaMapas.SelectedIndex) + "'";
         this.PJOnline.Items.Clear();
-        Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
-        while (Class28.sqlDataReader_2.Read())
-          this.PJOnline.Items.Add((object) Class28.sqlDataReader_2[1].ToString());
-        Class28.sqlDataReader_2.Close();
+        SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
+        while (SqlConnectionPool.sqlDataReader_2.Read())
+          this.PJOnline.Items.Add((object) SqlConnectionPool.sqlDataReader_2[1].ToString());
+        SqlConnectionPool.sqlDataReader_2.Close();
         int num2 = 1;
         this.ResetXY();
         this.OcultarXY();
         Color color = Color.Transparent;
-        Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
-        while (Class28.sqlDataReader_2.Read())
+        SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
+        while (SqlConnectionPool.sqlDataReader_2.Read())
         {
-          this.Acount.Text = Class28.sqlDataReader_2[0].ToString();
-          this.Personajes.Text = Class28.sqlDataReader_2[1].ToString();
-          this.level.Text = Class28.sqlDataReader_2[2].ToString();
-          this.X.Text = Class28.sqlDataReader_2[18].ToString();
-          this.Y.Text = Class28.sqlDataReader_2[19].ToString();
-          this.Baneado.Text = Conversions.ToDouble(Class28.sqlDataReader_2[26].ToString()) != 1.0 ? "No Baned" : "Baned";
-          int x = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class28.sqlDataReader_2[18].ToString()) * 2.0 + (double) Class17.int_0)));
-          int y = checked ((int) Math.Round(unchecked (512.0 - Conversions.ToDouble(Class28.sqlDataReader_2[19].ToString()) * 2.0 + (double) Class17.int_1)));
-          if (Conversions.ToDouble(Class28.sqlDataReader_2[22].ToString()) <= 2.0)
+          this.Acount.Text = SqlConnectionPool.sqlDataReader_2[0].ToString();
+          this.Personajes.Text = SqlConnectionPool.sqlDataReader_2[1].ToString();
+          this.level.Text = SqlConnectionPool.sqlDataReader_2[2].ToString();
+          this.X.Text = SqlConnectionPool.sqlDataReader_2[18].ToString();
+          this.Y.Text = SqlConnectionPool.sqlDataReader_2[19].ToString();
+          this.Baneado.Text = Conversions.ToDouble(SqlConnectionPool.sqlDataReader_2[26].ToString()) != 1.0 ? "No Baned" : "Baned";
+          int x = checked ((int) Math.Round(unchecked (Conversions.ToDouble(SqlConnectionPool.sqlDataReader_2[18].ToString()) * 2.0 + (double) MapImageHelper.int_0)));
+          int y = checked ((int) Math.Round(unchecked (512.0 - Conversions.ToDouble(SqlConnectionPool.sqlDataReader_2[19].ToString()) * 2.0 + (double) MapImageHelper.int_1)));
+          if (Conversions.ToDouble(SqlConnectionPool.sqlDataReader_2[22].ToString()) <= 2.0)
             color = Color.DeepSkyBlue;
-          if (Conversions.ToDouble(Class28.sqlDataReader_2[22].ToString()) >= 3.0 & Conversions.ToDouble(Class28.sqlDataReader_2[22].ToString()) <= 4.0)
+          if (Conversions.ToDouble(SqlConnectionPool.sqlDataReader_2[22].ToString()) >= 3.0 & Conversions.ToDouble(SqlConnectionPool.sqlDataReader_2[22].ToString()) <= 4.0)
             color = Color.Silver;
-          if (Conversions.ToDouble(Class28.sqlDataReader_2[22].ToString()) >= 5.0)
+          if (Conversions.ToDouble(SqlConnectionPool.sqlDataReader_2[22].ToString()) >= 5.0)
             color = Color.Red;
           Point point1;
           switch (num2)
@@ -20283,7 +20283,7 @@ namespace MuMaker
               Point point2 = point1;
               pictureBox1.Location = point2;
               this.PictureBox1.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox1, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox1, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 2:
               this.PictureBox2.Visible = true;
@@ -20292,7 +20292,7 @@ namespace MuMaker
               Point point3 = point1;
               pictureBox2.Location = point3;
               this.PictureBox2.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox2, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox2, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 3:
               this.PictureBox3.Visible = true;
@@ -20301,7 +20301,7 @@ namespace MuMaker
               Point point4 = point1;
               pictureBox3.Location = point4;
               this.PictureBox3.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox3, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox3, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 4:
               this.PictureBox4.Visible = true;
@@ -20310,7 +20310,7 @@ namespace MuMaker
               Point point5 = point1;
               pictureBox4.Location = point5;
               this.PictureBox4.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox4, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox4, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 5:
               this.PictureBox5.Visible = true;
@@ -20319,7 +20319,7 @@ namespace MuMaker
               Point point6 = point1;
               pictureBox5.Location = point6;
               this.PictureBox5.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox5, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox5, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 6:
               this.PictureBox6.Visible = true;
@@ -20328,7 +20328,7 @@ namespace MuMaker
               Point point7 = point1;
               pictureBox6.Location = point7;
               this.PictureBox6.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox6, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox6, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 7:
               this.PictureBox7.Visible = true;
@@ -20337,7 +20337,7 @@ namespace MuMaker
               Point point8 = point1;
               pictureBox7.Location = point8;
               this.PictureBox7.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox7, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox7, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 8:
               this.PictureBox8.Visible = true;
@@ -20346,7 +20346,7 @@ namespace MuMaker
               Point point9 = point1;
               pictureBox8.Location = point9;
               this.PictureBox8.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox8, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox8, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 9:
               this.PictureBox9.Visible = true;
@@ -20355,7 +20355,7 @@ namespace MuMaker
               Point point10 = point1;
               pictureBox9.Location = point10;
               this.PictureBox9.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox9, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox9, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 10:
               this.PictureBox10.Visible = true;
@@ -20364,7 +20364,7 @@ namespace MuMaker
               Point point11 = point1;
               pictureBox10.Location = point11;
               this.PictureBox10.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox10, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox10, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 11:
               this.PictureBox11.Visible = true;
@@ -20373,7 +20373,7 @@ namespace MuMaker
               Point point12 = point1;
               pictureBox11.Location = point12;
               this.PictureBox11.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox11, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox11, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 12:
               this.PictureBox12.Visible = true;
@@ -20382,7 +20382,7 @@ namespace MuMaker
               Point point13 = point1;
               pictureBox12.Location = point13;
               this.PictureBox12.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox12, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox12, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 13:
               this.PictureBox13.Visible = true;
@@ -20391,7 +20391,7 @@ namespace MuMaker
               Point point14 = point1;
               pictureBox13.Location = point14;
               this.PictureBox13.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox13, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox13, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 14:
               this.PictureBox14.Visible = true;
@@ -20400,7 +20400,7 @@ namespace MuMaker
               Point point15 = point1;
               pictureBox14.Location = point15;
               this.PictureBox14.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox14, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox14, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 15:
               this.PictureBox15.Visible = true;
@@ -20409,7 +20409,7 @@ namespace MuMaker
               Point point16 = point1;
               pictureBox15.Location = point16;
               this.PictureBox15.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox15, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox15, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 16:
               this.PictureBox16.Visible = true;
@@ -20418,7 +20418,7 @@ namespace MuMaker
               Point point17 = point1;
               pictureBox16.Location = point17;
               this.PictureBox16.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox16, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox16, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 17:
               this.PictureBox17.Visible = true;
@@ -20427,7 +20427,7 @@ namespace MuMaker
               Point point18 = point1;
               pictureBox17.Location = point18;
               this.PictureBox17.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox17, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox17, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 18:
               this.PictureBox18.Visible = true;
@@ -20436,7 +20436,7 @@ namespace MuMaker
               Point point19 = point1;
               pictureBox18.Location = point19;
               this.PictureBox18.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox18, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox18, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 19:
               this.PictureBox19.Visible = true;
@@ -20445,7 +20445,7 @@ namespace MuMaker
               Point point20 = point1;
               pictureBox19.Location = point20;
               this.PictureBox19.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox19, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox19, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 20:
               this.PictureBox20.Visible = true;
@@ -20454,7 +20454,7 @@ namespace MuMaker
               Point point21 = point1;
               pictureBox20.Location = point21;
               this.PictureBox20.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox20, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox20, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 21:
               this.PictureBox21.Visible = true;
@@ -20463,7 +20463,7 @@ namespace MuMaker
               Point point22 = point1;
               pictureBox21.Location = point22;
               this.PictureBox21.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox21, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox21, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 22:
               this.PictureBox22.Visible = true;
@@ -20472,7 +20472,7 @@ namespace MuMaker
               Point point23 = point1;
               pictureBox22.Location = point23;
               this.PictureBox22.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox22, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox22, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 23:
               this.PictureBox23.Visible = true;
@@ -20481,7 +20481,7 @@ namespace MuMaker
               Point point24 = point1;
               pictureBox23.Location = point24;
               this.PictureBox23.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox23, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox23, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 24:
               this.PictureBox24.Visible = true;
@@ -20490,7 +20490,7 @@ namespace MuMaker
               Point point25 = point1;
               pictureBox24.Location = point25;
               this.PictureBox24.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox24, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox24, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 25:
               this.PictureBox25.Visible = true;
@@ -20499,7 +20499,7 @@ namespace MuMaker
               Point point26 = point1;
               pictureBox25.Location = point26;
               this.PictureBox25.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox25, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox25, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 26:
               this.PictureBox26.Visible = true;
@@ -20508,7 +20508,7 @@ namespace MuMaker
               Point point27 = point1;
               pictureBox26.Location = point27;
               this.PictureBox26.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox26, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox26, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 27:
               this.PictureBox27.Visible = true;
@@ -20517,7 +20517,7 @@ namespace MuMaker
               Point point28 = point1;
               pictureBox27.Location = point28;
               this.PictureBox27.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox27, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox27, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 28:
               this.PictureBox28.Visible = true;
@@ -20526,7 +20526,7 @@ namespace MuMaker
               Point point29 = point1;
               pictureBox28.Location = point29;
               this.PictureBox28.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox28, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox28, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 29:
               this.PictureBox29.Visible = true;
@@ -20535,7 +20535,7 @@ namespace MuMaker
               Point point30 = point1;
               pictureBox29.Location = point30;
               this.PictureBox29.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox29, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox29, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 30:
               this.PictureBox30.Visible = true;
@@ -20544,7 +20544,7 @@ namespace MuMaker
               Point point31 = point1;
               pictureBox30.Location = point31;
               this.PictureBox30.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox30, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox30, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 31:
               this.PictureBox31.Visible = true;
@@ -20553,7 +20553,7 @@ namespace MuMaker
               Point point32 = point1;
               pictureBox31.Location = point32;
               this.PictureBox31.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox31, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox31, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 32:
               this.PictureBox32.Visible = true;
@@ -20562,7 +20562,7 @@ namespace MuMaker
               Point point33 = point1;
               pictureBox32.Location = point33;
               this.PictureBox32.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox32, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox32, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 33:
               this.PictureBox33.Visible = true;
@@ -20571,7 +20571,7 @@ namespace MuMaker
               Point point34 = point1;
               pictureBox33.Location = point34;
               this.PictureBox33.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox33, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox33, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 34:
               this.PictureBox34.Visible = true;
@@ -20580,7 +20580,7 @@ namespace MuMaker
               Point point35 = point1;
               pictureBox34.Location = point35;
               this.PictureBox34.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox34, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox34, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 35:
               this.PictureBox35.Visible = true;
@@ -20589,7 +20589,7 @@ namespace MuMaker
               Point point36 = point1;
               pictureBox35.Location = point36;
               this.PictureBox35.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox35, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox35, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 36:
               this.PictureBox36.Visible = true;
@@ -20598,7 +20598,7 @@ namespace MuMaker
               Point point37 = point1;
               pictureBox36.Location = point37;
               this.PictureBox36.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox36, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox36, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 37:
               this.PictureBox37.Visible = true;
@@ -20607,7 +20607,7 @@ namespace MuMaker
               Point point38 = point1;
               pictureBox37.Location = point38;
               this.PictureBox37.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox37, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox37, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 38:
               this.PictureBox38.Visible = true;
@@ -20616,7 +20616,7 @@ namespace MuMaker
               Point point39 = point1;
               pictureBox38.Location = point39;
               this.PictureBox38.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox38, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox38, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 39:
               this.PictureBox39.Visible = true;
@@ -20625,7 +20625,7 @@ namespace MuMaker
               Point point40 = point1;
               pictureBox39.Location = point40;
               this.PictureBox39.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox39, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox39, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 40:
               this.PictureBox40.Visible = true;
@@ -20634,7 +20634,7 @@ namespace MuMaker
               Point point41 = point1;
               pictureBox40.Location = point41;
               this.PictureBox40.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox40, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox40, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 41:
               this.PictureBox41.Visible = true;
@@ -20643,7 +20643,7 @@ namespace MuMaker
               Point point42 = point1;
               pictureBox41.Location = point42;
               this.PictureBox41.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox41, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox41, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 42:
               this.PictureBox42.Visible = true;
@@ -20652,7 +20652,7 @@ namespace MuMaker
               Point point43 = point1;
               pictureBox42.Location = point43;
               this.PictureBox42.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox42, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox42, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 43:
               this.PictureBox43.Visible = true;
@@ -20661,7 +20661,7 @@ namespace MuMaker
               Point point44 = point1;
               pictureBox43.Location = point44;
               this.PictureBox43.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox43, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox43, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 44:
               this.PictureBox44.Visible = true;
@@ -20670,7 +20670,7 @@ namespace MuMaker
               Point point45 = point1;
               pictureBox44.Location = point45;
               this.PictureBox44.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox44, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox44, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 45:
               this.PictureBox45.Visible = true;
@@ -20679,7 +20679,7 @@ namespace MuMaker
               Point point46 = point1;
               pictureBox45.Location = point46;
               this.PictureBox45.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox45, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox45, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 46:
               this.PictureBox46.Visible = true;
@@ -20688,7 +20688,7 @@ namespace MuMaker
               Point point47 = point1;
               pictureBox46.Location = point47;
               this.PictureBox46.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox46, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox46, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 47:
               this.PictureBox47.Visible = true;
@@ -20697,7 +20697,7 @@ namespace MuMaker
               Point point48 = point1;
               pictureBox47.Location = point48;
               this.PictureBox47.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox47, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox47, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 48:
               this.PictureBox48.Visible = true;
@@ -20706,7 +20706,7 @@ namespace MuMaker
               Point point49 = point1;
               pictureBox48.Location = point49;
               this.PictureBox48.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox48, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox48, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 49:
               this.PictureBox49.Visible = true;
@@ -20715,7 +20715,7 @@ namespace MuMaker
               Point point50 = point1;
               pictureBox49.Location = point50;
               this.PictureBox49.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox49, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox49, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 50:
               this.PictureBox50.Visible = true;
@@ -20724,7 +20724,7 @@ namespace MuMaker
               Point point51 = point1;
               pictureBox50.Location = point51;
               this.PictureBox50.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox50, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox50, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 51:
               this.PictureBox51.Visible = true;
@@ -20733,7 +20733,7 @@ namespace MuMaker
               Point point52 = point1;
               pictureBox51.Location = point52;
               this.PictureBox51.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox51, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox51, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 52:
               this.PictureBox52.Visible = true;
@@ -20742,7 +20742,7 @@ namespace MuMaker
               Point point53 = point1;
               pictureBox52.Location = point53;
               this.PictureBox52.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox52, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox52, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 53:
               this.PictureBox53.Visible = true;
@@ -20751,7 +20751,7 @@ namespace MuMaker
               Point point54 = point1;
               pictureBox53.Location = point54;
               this.PictureBox53.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox53, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox53, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 54:
               this.PictureBox54.Visible = true;
@@ -20760,7 +20760,7 @@ namespace MuMaker
               Point point55 = point1;
               pictureBox54.Location = point55;
               this.PictureBox54.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox54, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox54, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 55:
               this.PictureBox55.Visible = true;
@@ -20769,7 +20769,7 @@ namespace MuMaker
               Point point56 = point1;
               pictureBox55.Location = point56;
               this.PictureBox55.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox55, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox55, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 56:
               this.PictureBox56.Visible = true;
@@ -20778,7 +20778,7 @@ namespace MuMaker
               Point point57 = point1;
               pictureBox56.Location = point57;
               this.PictureBox56.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox56, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox56, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 57:
               this.PictureBox57.Visible = true;
@@ -20787,7 +20787,7 @@ namespace MuMaker
               Point point58 = point1;
               pictureBox57.Location = point58;
               this.PictureBox57.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox57, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox57, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 58:
               this.PictureBox58.Visible = true;
@@ -20796,7 +20796,7 @@ namespace MuMaker
               Point point59 = point1;
               pictureBox58.Location = point59;
               this.PictureBox58.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox58, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox58, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 59:
               this.PictureBox59.Visible = true;
@@ -20805,7 +20805,7 @@ namespace MuMaker
               Point point60 = point1;
               pictureBox59.Location = point60;
               this.PictureBox59.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox59, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox59, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 60:
               this.PictureBox60.Visible = true;
@@ -20814,7 +20814,7 @@ namespace MuMaker
               Point point61 = point1;
               pictureBox60.Location = point61;
               this.PictureBox60.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox60, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox60, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 61:
               this.PictureBox61.Visible = true;
@@ -20823,7 +20823,7 @@ namespace MuMaker
               Point point62 = point1;
               pictureBox61.Location = point62;
               this.PictureBox61.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox61, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox61, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 62:
               this.PictureBox62.Visible = true;
@@ -20832,7 +20832,7 @@ namespace MuMaker
               Point point63 = point1;
               pictureBox62.Location = point63;
               this.PictureBox62.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox62, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox62, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 63:
               this.PictureBox63.Visible = true;
@@ -20841,7 +20841,7 @@ namespace MuMaker
               Point point64 = point1;
               pictureBox63.Location = point64;
               this.PictureBox63.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox63, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox63, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 64:
               this.PictureBox64.Visible = true;
@@ -20850,7 +20850,7 @@ namespace MuMaker
               Point point65 = point1;
               pictureBox64.Location = point65;
               this.PictureBox64.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox64, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox64, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 65:
               this.PictureBox65.Visible = true;
@@ -20859,7 +20859,7 @@ namespace MuMaker
               Point point66 = point1;
               pictureBox65.Location = point66;
               this.PictureBox65.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox65, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox65, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 66:
               this.PictureBox66.Visible = true;
@@ -20868,7 +20868,7 @@ namespace MuMaker
               Point point67 = point1;
               pictureBox66.Location = point67;
               this.PictureBox66.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox66, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox66, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 67:
               this.PictureBox67.Visible = true;
@@ -20877,7 +20877,7 @@ namespace MuMaker
               Point point68 = point1;
               pictureBox67.Location = point68;
               this.PictureBox67.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox67, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox67, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 68:
               this.PictureBox68.Visible = true;
@@ -20886,7 +20886,7 @@ namespace MuMaker
               Point point69 = point1;
               pictureBox68.Location = point69;
               this.PictureBox68.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox68, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox68, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 69:
               this.PictureBox69.Visible = true;
@@ -20895,7 +20895,7 @@ namespace MuMaker
               Point point70 = point1;
               pictureBox69.Location = point70;
               this.PictureBox69.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox69, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox69, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 70:
               this.PictureBox70.Visible = true;
@@ -20904,7 +20904,7 @@ namespace MuMaker
               Point point71 = point1;
               pictureBox70.Location = point71;
               this.PictureBox70.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox70, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox70, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 71:
               this.PictureBox71.Visible = true;
@@ -20913,7 +20913,7 @@ namespace MuMaker
               Point point72 = point1;
               pictureBox71.Location = point72;
               this.PictureBox71.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox71, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox71, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 72:
               this.PictureBox72.Visible = true;
@@ -20922,7 +20922,7 @@ namespace MuMaker
               Point point73 = point1;
               pictureBox72.Location = point73;
               this.PictureBox72.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox72, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox72, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 73:
               this.PictureBox73.Visible = true;
@@ -20931,7 +20931,7 @@ namespace MuMaker
               Point point74 = point1;
               pictureBox73.Location = point74;
               this.PictureBox73.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox73, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox73, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 74:
               this.PictureBox74.Visible = true;
@@ -20940,7 +20940,7 @@ namespace MuMaker
               Point point75 = point1;
               pictureBox74.Location = point75;
               this.PictureBox74.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox74, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox74, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 75:
               this.PictureBox75.Visible = true;
@@ -20949,7 +20949,7 @@ namespace MuMaker
               Point point76 = point1;
               pictureBox75.Location = point76;
               this.PictureBox75.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox75, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox75, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 76:
               this.PictureBox76.Visible = true;
@@ -20958,7 +20958,7 @@ namespace MuMaker
               Point point77 = point1;
               pictureBox76.Location = point77;
               this.PictureBox76.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox76, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox76, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 77:
               this.PictureBox77.Visible = true;
@@ -20967,7 +20967,7 @@ namespace MuMaker
               Point point78 = point1;
               pictureBox77.Location = point78;
               this.PictureBox77.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox77, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox77, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 78:
               this.PictureBox78.Visible = true;
@@ -20976,7 +20976,7 @@ namespace MuMaker
               Point point79 = point1;
               pictureBox78.Location = point79;
               this.PictureBox78.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox78, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox78, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 79:
               this.PictureBox79.Visible = true;
@@ -20985,7 +20985,7 @@ namespace MuMaker
               Point point80 = point1;
               pictureBox79.Location = point80;
               this.PictureBox79.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox79, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox79, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 80:
               this.PictureBox80.Visible = true;
@@ -20994,7 +20994,7 @@ namespace MuMaker
               Point point81 = point1;
               pictureBox80.Location = point81;
               this.PictureBox80.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox80, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox80, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 81:
               this.PictureBox81.Visible = true;
@@ -21003,7 +21003,7 @@ namespace MuMaker
               Point point82 = point1;
               pictureBox81.Location = point82;
               this.PictureBox81.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox81, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox81, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 82:
               this.PictureBox82.Visible = true;
@@ -21012,7 +21012,7 @@ namespace MuMaker
               Point point83 = point1;
               pictureBox82.Location = point83;
               this.PictureBox82.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox82, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox82, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 83:
               this.PictureBox83.Visible = true;
@@ -21021,7 +21021,7 @@ namespace MuMaker
               Point point84 = point1;
               pictureBox83.Location = point84;
               this.PictureBox83.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox83, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox83, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 84:
               this.PictureBox84.Visible = true;
@@ -21030,7 +21030,7 @@ namespace MuMaker
               Point point85 = point1;
               pictureBox84.Location = point85;
               this.PictureBox84.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox84, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox84, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 85:
               this.PictureBox85.Visible = true;
@@ -21039,7 +21039,7 @@ namespace MuMaker
               Point point86 = point1;
               pictureBox85.Location = point86;
               this.PictureBox85.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox85, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox85, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 86:
               this.PictureBox86.Visible = true;
@@ -21048,7 +21048,7 @@ namespace MuMaker
               Point point87 = point1;
               pictureBox86.Location = point87;
               this.PictureBox86.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox86, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox86, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 87:
               this.PictureBox87.Visible = true;
@@ -21057,7 +21057,7 @@ namespace MuMaker
               Point point88 = point1;
               pictureBox87.Location = point88;
               this.PictureBox87.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox87, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox87, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 88:
               this.PictureBox88.Visible = true;
@@ -21066,7 +21066,7 @@ namespace MuMaker
               Point point89 = point1;
               pictureBox88.Location = point89;
               this.PictureBox88.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox88, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox88, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 89:
               this.PictureBox89.Visible = true;
@@ -21075,7 +21075,7 @@ namespace MuMaker
               Point point90 = point1;
               pictureBox89.Location = point90;
               this.PictureBox89.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox89, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox89, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 90:
               this.PictureBox90.Visible = true;
@@ -21084,7 +21084,7 @@ namespace MuMaker
               Point point91 = point1;
               pictureBox90.Location = point91;
               this.PictureBox90.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox90, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox90, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 91:
               this.PictureBox91.Visible = true;
@@ -21093,7 +21093,7 @@ namespace MuMaker
               Point point92 = point1;
               pictureBox91.Location = point92;
               this.PictureBox91.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox91, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox91, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 92:
               this.PictureBox92.Visible = true;
@@ -21102,7 +21102,7 @@ namespace MuMaker
               Point point93 = point1;
               pictureBox92.Location = point93;
               this.PictureBox92.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox92, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox92, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 93:
               this.PictureBox93.Visible = true;
@@ -21111,7 +21111,7 @@ namespace MuMaker
               Point point94 = point1;
               pictureBox93.Location = point94;
               this.PictureBox93.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox93, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox93, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 94:
               this.PictureBox94.Visible = true;
@@ -21120,7 +21120,7 @@ namespace MuMaker
               Point point95 = point1;
               pictureBox94.Location = point95;
               this.PictureBox94.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox94, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox94, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 95:
               this.PictureBox95.Visible = true;
@@ -21129,7 +21129,7 @@ namespace MuMaker
               Point point96 = point1;
               pictureBox95.Location = point96;
               this.PictureBox95.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox95, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox95, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 96:
               this.PictureBox96.Visible = true;
@@ -21138,7 +21138,7 @@ namespace MuMaker
               Point point97 = point1;
               pictureBox96.Location = point97;
               this.PictureBox96.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox96, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox96, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 97:
               this.PictureBox97.Visible = true;
@@ -21147,7 +21147,7 @@ namespace MuMaker
               Point point98 = point1;
               pictureBox97.Location = point98;
               this.PictureBox97.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox97, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox97, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 98:
               this.PictureBox98.Visible = true;
@@ -21156,7 +21156,7 @@ namespace MuMaker
               Point point99 = point1;
               pictureBox98.Location = point99;
               this.PictureBox98.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox98, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox98, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 99:
               this.PictureBox99.Visible = true;
@@ -21165,7 +21165,7 @@ namespace MuMaker
               Point point100 = point1;
               pictureBox99.Location = point100;
               this.PictureBox99.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox99, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox99, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 100:
               this.PictureBox100.Visible = true;
@@ -21174,7 +21174,7 @@ namespace MuMaker
               Point point101 = point1;
               pictureBox100.Location = point101;
               this.PictureBox100.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox100, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox100, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 101:
               this.PictureBox101.Visible = true;
@@ -21183,7 +21183,7 @@ namespace MuMaker
               Point point102 = point1;
               pictureBox101.Location = point102;
               this.PictureBox101.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox101, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox101, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 102:
               this.PictureBox102.Visible = true;
@@ -21192,7 +21192,7 @@ namespace MuMaker
               Point point103 = point1;
               pictureBox102.Location = point103;
               this.PictureBox102.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox102, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox102, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 103:
               this.PictureBox103.Visible = true;
@@ -21201,7 +21201,7 @@ namespace MuMaker
               Point point104 = point1;
               pictureBox103.Location = point104;
               this.PictureBox103.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox103, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox103, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 104:
               this.PictureBox104.Visible = true;
@@ -21210,7 +21210,7 @@ namespace MuMaker
               Point point105 = point1;
               pictureBox104.Location = point105;
               this.PictureBox104.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox104, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox104, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 105:
               this.PictureBox105.Visible = true;
@@ -21219,7 +21219,7 @@ namespace MuMaker
               Point point106 = point1;
               pictureBox105.Location = point106;
               this.PictureBox105.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox105, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox105, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 106:
               this.PictureBox106.Visible = true;
@@ -21228,7 +21228,7 @@ namespace MuMaker
               Point point107 = point1;
               pictureBox106.Location = point107;
               this.PictureBox106.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox106, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox106, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 107:
               this.PictureBox107.Visible = true;
@@ -21237,7 +21237,7 @@ namespace MuMaker
               Point point108 = point1;
               pictureBox107.Location = point108;
               this.PictureBox107.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox107, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox107, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 108:
               this.PictureBox108.Visible = true;
@@ -21246,7 +21246,7 @@ namespace MuMaker
               Point point109 = point1;
               pictureBox108.Location = point109;
               this.PictureBox108.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox108, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox108, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 109:
               this.PictureBox109.Visible = true;
@@ -21255,7 +21255,7 @@ namespace MuMaker
               Point point110 = point1;
               pictureBox109.Location = point110;
               this.PictureBox109.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox109, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox109, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 110:
               this.PictureBox110.Visible = true;
@@ -21264,7 +21264,7 @@ namespace MuMaker
               Point point111 = point1;
               pictureBox110.Location = point111;
               this.PictureBox110.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox110, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox110, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 111:
               this.PictureBox111.Visible = true;
@@ -21273,7 +21273,7 @@ namespace MuMaker
               Point point112 = point1;
               pictureBox111.Location = point112;
               this.PictureBox111.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox111, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox111, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 112:
               this.PictureBox112.Visible = true;
@@ -21282,7 +21282,7 @@ namespace MuMaker
               Point point113 = point1;
               pictureBox112.Location = point113;
               this.PictureBox112.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox112, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox112, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 113:
               this.PictureBox113.Visible = true;
@@ -21291,7 +21291,7 @@ namespace MuMaker
               Point point114 = point1;
               pictureBox113.Location = point114;
               this.PictureBox113.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox113, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox113, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 114:
               this.PictureBox114.Visible = true;
@@ -21300,7 +21300,7 @@ namespace MuMaker
               Point point115 = point1;
               pictureBox114.Location = point115;
               this.PictureBox114.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox114, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox114, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 115:
               this.PictureBox115.Visible = true;
@@ -21309,7 +21309,7 @@ namespace MuMaker
               Point point116 = point1;
               pictureBox115.Location = point116;
               this.PictureBox115.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox115, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox115, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 116:
               this.PictureBox116.Visible = true;
@@ -21318,7 +21318,7 @@ namespace MuMaker
               Point point117 = point1;
               pictureBox116.Location = point117;
               this.PictureBox116.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox116, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox116, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 117:
               this.PictureBox117.Visible = true;
@@ -21327,7 +21327,7 @@ namespace MuMaker
               Point point118 = point1;
               pictureBox117.Location = point118;
               this.PictureBox117.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox117, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox117, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 118:
               this.PictureBox118.Visible = true;
@@ -21336,7 +21336,7 @@ namespace MuMaker
               Point point119 = point1;
               pictureBox118.Location = point119;
               this.PictureBox118.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox118, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox118, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 119:
               this.PictureBox119.Visible = true;
@@ -21345,7 +21345,7 @@ namespace MuMaker
               Point point120 = point1;
               pictureBox119.Location = point120;
               this.PictureBox119.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox119, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox119, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 120:
               this.PictureBox120.Visible = true;
@@ -21354,7 +21354,7 @@ namespace MuMaker
               Point point121 = point1;
               pictureBox120.Location = point121;
               this.PictureBox120.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox120, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox120, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 121:
               this.PictureBox121.Visible = true;
@@ -21363,7 +21363,7 @@ namespace MuMaker
               Point point122 = point1;
               pictureBox121.Location = point122;
               this.PictureBox121.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox121, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox121, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 122:
               this.PictureBox122.Visible = true;
@@ -21372,7 +21372,7 @@ namespace MuMaker
               Point point123 = point1;
               pictureBox122.Location = point123;
               this.PictureBox122.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox122, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox122, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 123:
               this.PictureBox123.Visible = true;
@@ -21381,7 +21381,7 @@ namespace MuMaker
               Point point124 = point1;
               pictureBox123.Location = point124;
               this.PictureBox123.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox123, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox123, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 124:
               this.PictureBox124.Visible = true;
@@ -21390,7 +21390,7 @@ namespace MuMaker
               Point point125 = point1;
               pictureBox124.Location = point125;
               this.PictureBox124.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox124, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox124, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 125:
               this.PictureBox125.Visible = true;
@@ -21399,7 +21399,7 @@ namespace MuMaker
               Point point126 = point1;
               pictureBox125.Location = point126;
               this.PictureBox125.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox125, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox125, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 126:
               this.PictureBox126.Visible = true;
@@ -21408,7 +21408,7 @@ namespace MuMaker
               Point point127 = point1;
               pictureBox126.Location = point127;
               this.PictureBox126.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox126, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox126, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case (int) sbyte.MaxValue:
               this.PictureBox127.Visible = true;
@@ -21417,7 +21417,7 @@ namespace MuMaker
               Point point128 = point1;
               pictureBox127.Location = point128;
               this.PictureBox127.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox127, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox127, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 128:
               this.PictureBox128.Visible = true;
@@ -21426,7 +21426,7 @@ namespace MuMaker
               Point point129 = point1;
               pictureBox128.Location = point129;
               this.PictureBox128.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox128, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox128, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 129:
               this.PictureBox129.Visible = true;
@@ -21435,7 +21435,7 @@ namespace MuMaker
               Point point130 = point1;
               pictureBox129.Location = point130;
               this.PictureBox129.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox129, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox129, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 130:
               this.PictureBox130.Visible = true;
@@ -21444,7 +21444,7 @@ namespace MuMaker
               Point point131 = point1;
               pictureBox130.Location = point131;
               this.PictureBox130.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox130, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox130, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 131:
               this.PictureBox131.Visible = true;
@@ -21453,7 +21453,7 @@ namespace MuMaker
               Point point132 = point1;
               pictureBox131.Location = point132;
               this.PictureBox131.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox131, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox131, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 132:
               this.PictureBox132.Visible = true;
@@ -21462,7 +21462,7 @@ namespace MuMaker
               Point point133 = point1;
               pictureBox132.Location = point133;
               this.PictureBox132.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox132, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox132, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 133:
               this.PictureBox133.Visible = true;
@@ -21471,7 +21471,7 @@ namespace MuMaker
               Point point134 = point1;
               pictureBox133.Location = point134;
               this.PictureBox133.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox133, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox133, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 134:
               this.PictureBox134.Visible = true;
@@ -21480,7 +21480,7 @@ namespace MuMaker
               Point point135 = point1;
               pictureBox134.Location = point135;
               this.PictureBox134.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox134, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox134, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 135:
               this.PictureBox135.Visible = true;
@@ -21489,7 +21489,7 @@ namespace MuMaker
               Point point136 = point1;
               pictureBox135.Location = point136;
               this.PictureBox135.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox135, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox135, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 136:
               this.PictureBox136.Visible = true;
@@ -21498,7 +21498,7 @@ namespace MuMaker
               Point point137 = point1;
               pictureBox136.Location = point137;
               this.PictureBox136.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox136, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox136, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 137:
               this.PictureBox137.Visible = true;
@@ -21507,7 +21507,7 @@ namespace MuMaker
               Point point138 = point1;
               pictureBox137.Location = point138;
               this.PictureBox137.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox137, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox137, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 138:
               this.PictureBox138.Visible = true;
@@ -21516,7 +21516,7 @@ namespace MuMaker
               Point point139 = point1;
               pictureBox138.Location = point139;
               this.PictureBox138.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox138, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox138, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 139:
               this.PictureBox139.Visible = true;
@@ -21525,7 +21525,7 @@ namespace MuMaker
               Point point140 = point1;
               pictureBox139.Location = point140;
               this.PictureBox139.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox139, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox139, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 140:
               this.PictureBox140.Visible = true;
@@ -21534,7 +21534,7 @@ namespace MuMaker
               Point point141 = point1;
               pictureBox140.Location = point141;
               this.PictureBox140.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox140, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox140, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 141:
               this.PictureBox141.Visible = true;
@@ -21543,7 +21543,7 @@ namespace MuMaker
               Point point142 = point1;
               pictureBox141.Location = point142;
               this.PictureBox141.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox141, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox141, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 142:
               this.PictureBox142.Visible = true;
@@ -21552,7 +21552,7 @@ namespace MuMaker
               Point point143 = point1;
               pictureBox142.Location = point143;
               this.PictureBox142.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox142, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox142, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 143:
               this.PictureBox143.Visible = true;
@@ -21561,7 +21561,7 @@ namespace MuMaker
               Point point144 = point1;
               pictureBox143.Location = point144;
               this.PictureBox143.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox143, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox143, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 144:
               this.PictureBox144.Visible = true;
@@ -21570,7 +21570,7 @@ namespace MuMaker
               Point point145 = point1;
               pictureBox144.Location = point145;
               this.PictureBox144.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox144, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox144, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 145:
               this.PictureBox145.Visible = true;
@@ -21579,7 +21579,7 @@ namespace MuMaker
               Point point146 = point1;
               pictureBox145.Location = point146;
               this.PictureBox145.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox145, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox145, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 146:
               this.PictureBox146.Visible = true;
@@ -21588,7 +21588,7 @@ namespace MuMaker
               Point point147 = point1;
               pictureBox146.Location = point147;
               this.PictureBox146.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox146, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox146, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 147:
               this.PictureBox147.Visible = true;
@@ -21597,7 +21597,7 @@ namespace MuMaker
               Point point148 = point1;
               pictureBox147.Location = point148;
               this.PictureBox147.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox147, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox147, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 148:
               this.PictureBox148.Visible = true;
@@ -21606,7 +21606,7 @@ namespace MuMaker
               Point point149 = point1;
               pictureBox148.Location = point149;
               this.PictureBox148.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox148, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox148, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 149:
               this.PictureBox149.Visible = true;
@@ -21615,7 +21615,7 @@ namespace MuMaker
               Point point150 = point1;
               pictureBox149.Location = point150;
               this.PictureBox149.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox149, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox149, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 150:
               this.PictureBox150.Visible = true;
@@ -21624,7 +21624,7 @@ namespace MuMaker
               Point point151 = point1;
               pictureBox150.Location = point151;
               this.PictureBox150.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox150, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox150, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 151:
               this.PictureBox151.Visible = true;
@@ -21633,7 +21633,7 @@ namespace MuMaker
               Point point152 = point1;
               pictureBox151.Location = point152;
               this.PictureBox151.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox151, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox151, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 152:
               this.PictureBox152.Visible = true;
@@ -21642,7 +21642,7 @@ namespace MuMaker
               Point point153 = point1;
               pictureBox152.Location = point153;
               this.PictureBox152.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox152, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox152, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 153:
               this.PictureBox153.Visible = true;
@@ -21651,7 +21651,7 @@ namespace MuMaker
               Point point154 = point1;
               pictureBox153.Location = point154;
               this.PictureBox153.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox153, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox153, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 154:
               this.PictureBox154.Visible = true;
@@ -21660,7 +21660,7 @@ namespace MuMaker
               Point point155 = point1;
               pictureBox154.Location = point155;
               this.PictureBox154.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox154, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox154, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 155:
               this.PictureBox155.Visible = true;
@@ -21669,7 +21669,7 @@ namespace MuMaker
               Point point156 = point1;
               pictureBox155.Location = point156;
               this.PictureBox155.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox155, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox155, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 156:
               this.PictureBox156.Visible = true;
@@ -21678,7 +21678,7 @@ namespace MuMaker
               Point point157 = point1;
               pictureBox156.Location = point157;
               this.PictureBox156.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox156, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox156, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 157:
               this.PictureBox157.Visible = true;
@@ -21687,7 +21687,7 @@ namespace MuMaker
               Point point158 = point1;
               pictureBox157.Location = point158;
               this.PictureBox157.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox157, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox157, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 158:
               this.PictureBox158.Visible = true;
@@ -21696,7 +21696,7 @@ namespace MuMaker
               Point point159 = point1;
               pictureBox158.Location = point159;
               this.PictureBox158.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox158, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox158, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 159:
               this.PictureBox159.Visible = true;
@@ -21705,7 +21705,7 @@ namespace MuMaker
               Point point160 = point1;
               pictureBox159.Location = point160;
               this.PictureBox159.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox159, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox159, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 160:
               this.PictureBox160.Visible = true;
@@ -21714,7 +21714,7 @@ namespace MuMaker
               Point point161 = point1;
               pictureBox160.Location = point161;
               this.PictureBox160.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox160, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox160, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 161:
               this.PictureBox161.Visible = true;
@@ -21723,7 +21723,7 @@ namespace MuMaker
               Point point162 = point1;
               pictureBox161.Location = point162;
               this.PictureBox161.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox161, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox161, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 162:
               this.PictureBox162.Visible = true;
@@ -21732,7 +21732,7 @@ namespace MuMaker
               Point point163 = point1;
               pictureBox162.Location = point163;
               this.PictureBox162.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox162, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox162, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 163:
               this.PictureBox163.Visible = true;
@@ -21741,7 +21741,7 @@ namespace MuMaker
               Point point164 = point1;
               pictureBox163.Location = point164;
               this.PictureBox163.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox163, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox163, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 164:
               this.PictureBox164.Visible = true;
@@ -21750,7 +21750,7 @@ namespace MuMaker
               Point point165 = point1;
               pictureBox164.Location = point165;
               this.PictureBox164.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox164, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox164, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 165:
               this.PictureBox165.Visible = true;
@@ -21759,7 +21759,7 @@ namespace MuMaker
               Point point166 = point1;
               pictureBox165.Location = point166;
               this.PictureBox165.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox165, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox165, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 166:
               this.PictureBox166.Visible = true;
@@ -21768,7 +21768,7 @@ namespace MuMaker
               Point point167 = point1;
               pictureBox166.Location = point167;
               this.PictureBox166.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox166, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox166, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 167:
               this.PictureBox167.Visible = true;
@@ -21777,7 +21777,7 @@ namespace MuMaker
               Point point168 = point1;
               pictureBox167.Location = point168;
               this.PictureBox167.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox167, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox167, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 168:
               this.PictureBox168.Visible = true;
@@ -21786,7 +21786,7 @@ namespace MuMaker
               Point point169 = point1;
               pictureBox168.Location = point169;
               this.PictureBox168.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox168, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox168, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 169:
               this.PictureBox169.Visible = true;
@@ -21795,7 +21795,7 @@ namespace MuMaker
               Point point170 = point1;
               pictureBox169.Location = point170;
               this.PictureBox169.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox169, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox169, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 170:
               this.PictureBox170.Visible = true;
@@ -21804,7 +21804,7 @@ namespace MuMaker
               Point point171 = point1;
               pictureBox170.Location = point171;
               this.PictureBox170.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox170, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox170, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 171:
               this.PictureBox171.Visible = true;
@@ -21813,7 +21813,7 @@ namespace MuMaker
               Point point172 = point1;
               pictureBox171.Location = point172;
               this.PictureBox171.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox171, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox171, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 172:
               this.PictureBox172.Visible = true;
@@ -21822,7 +21822,7 @@ namespace MuMaker
               Point point173 = point1;
               pictureBox172.Location = point173;
               this.PictureBox172.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox172, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox172, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 173:
               this.PictureBox173.Visible = true;
@@ -21831,7 +21831,7 @@ namespace MuMaker
               Point point174 = point1;
               pictureBox173.Location = point174;
               this.PictureBox173.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox173, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox173, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 174:
               this.PictureBox174.Visible = true;
@@ -21840,7 +21840,7 @@ namespace MuMaker
               Point point175 = point1;
               pictureBox174.Location = point175;
               this.PictureBox174.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox174, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox174, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 175:
               this.PictureBox175.Visible = true;
@@ -21849,7 +21849,7 @@ namespace MuMaker
               Point point176 = point1;
               pictureBox175.Location = point176;
               this.PictureBox175.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox175, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox175, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 176:
               this.PictureBox176.Visible = true;
@@ -21858,7 +21858,7 @@ namespace MuMaker
               Point point177 = point1;
               pictureBox176.Location = point177;
               this.PictureBox176.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox176, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox176, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 177:
               this.PictureBox177.Visible = true;
@@ -21867,7 +21867,7 @@ namespace MuMaker
               Point point178 = point1;
               pictureBox177.Location = point178;
               this.PictureBox177.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox177, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox177, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 178:
               this.PictureBox178.Visible = true;
@@ -21876,7 +21876,7 @@ namespace MuMaker
               Point point179 = point1;
               pictureBox178.Location = point179;
               this.PictureBox178.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox178, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox178, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 179:
               this.PictureBox179.Visible = true;
@@ -21885,7 +21885,7 @@ namespace MuMaker
               Point point180 = point1;
               pictureBox179.Location = point180;
               this.PictureBox179.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox179, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox179, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 180:
               this.PictureBox180.Visible = true;
@@ -21894,7 +21894,7 @@ namespace MuMaker
               Point point181 = point1;
               pictureBox180.Location = point181;
               this.PictureBox180.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox180, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox180, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 181:
               this.PictureBox181.Visible = true;
@@ -21903,7 +21903,7 @@ namespace MuMaker
               Point point182 = point1;
               pictureBox181.Location = point182;
               this.PictureBox181.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox181, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox181, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 182:
               this.PictureBox182.Visible = true;
@@ -21912,7 +21912,7 @@ namespace MuMaker
               Point point183 = point1;
               pictureBox182.Location = point183;
               this.PictureBox182.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox182, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox182, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 183:
               this.PictureBox183.Visible = true;
@@ -21921,7 +21921,7 @@ namespace MuMaker
               Point point184 = point1;
               pictureBox183.Location = point184;
               this.PictureBox183.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox183, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox183, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 184:
               this.PictureBox184.Visible = true;
@@ -21930,7 +21930,7 @@ namespace MuMaker
               Point point185 = point1;
               pictureBox184.Location = point185;
               this.PictureBox184.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox184, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox184, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 185:
               this.PictureBox185.Visible = true;
@@ -21939,7 +21939,7 @@ namespace MuMaker
               Point point186 = point1;
               pictureBox185.Location = point186;
               this.PictureBox185.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox185, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox185, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 186:
               this.PictureBox186.Visible = true;
@@ -21948,7 +21948,7 @@ namespace MuMaker
               Point point187 = point1;
               pictureBox186.Location = point187;
               this.PictureBox186.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox186, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox186, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 187:
               this.PictureBox187.Visible = true;
@@ -21957,7 +21957,7 @@ namespace MuMaker
               Point point188 = point1;
               pictureBox187.Location = point188;
               this.PictureBox187.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox187, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox187, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 188:
               this.PictureBox188.Visible = true;
@@ -21966,7 +21966,7 @@ namespace MuMaker
               Point point189 = point1;
               pictureBox188.Location = point189;
               this.PictureBox188.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox188, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox188, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 189:
               this.PictureBox189.Visible = true;
@@ -21975,7 +21975,7 @@ namespace MuMaker
               Point point190 = point1;
               pictureBox189.Location = point190;
               this.PictureBox189.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox189, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox189, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 190:
               this.PictureBox190.Visible = true;
@@ -21984,7 +21984,7 @@ namespace MuMaker
               Point point191 = point1;
               pictureBox190.Location = point191;
               this.PictureBox190.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox190, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox190, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 191:
               this.PictureBox191.Visible = true;
@@ -21993,7 +21993,7 @@ namespace MuMaker
               Point point192 = point1;
               pictureBox191.Location = point192;
               this.PictureBox191.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox191, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox191, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 192:
               this.PictureBox192.Visible = true;
@@ -22002,7 +22002,7 @@ namespace MuMaker
               Point point193 = point1;
               pictureBox192.Location = point193;
               this.PictureBox192.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox192, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox192, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 193:
               this.PictureBox193.Visible = true;
@@ -22011,7 +22011,7 @@ namespace MuMaker
               Point point194 = point1;
               pictureBox193.Location = point194;
               this.PictureBox193.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox193, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox193, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 194:
               this.PictureBox194.Visible = true;
@@ -22020,7 +22020,7 @@ namespace MuMaker
               Point point195 = point1;
               pictureBox194.Location = point195;
               this.PictureBox194.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox194, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox194, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 195:
               this.PictureBox195.Visible = true;
@@ -22029,7 +22029,7 @@ namespace MuMaker
               Point point196 = point1;
               pictureBox195.Location = point196;
               this.PictureBox195.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox195, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox195, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 196:
               this.PictureBox196.Visible = true;
@@ -22038,7 +22038,7 @@ namespace MuMaker
               Point point197 = point1;
               pictureBox196.Location = point197;
               this.PictureBox196.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox196, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox196, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 197:
               this.PictureBox197.Visible = true;
@@ -22047,7 +22047,7 @@ namespace MuMaker
               Point point198 = point1;
               pictureBox197.Location = point198;
               this.PictureBox197.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox197, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox197, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 198:
               this.PictureBox198.Visible = true;
@@ -22056,7 +22056,7 @@ namespace MuMaker
               Point point199 = point1;
               pictureBox198.Location = point199;
               this.PictureBox198.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox198, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox198, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 199:
               this.PictureBox199.Visible = true;
@@ -22065,7 +22065,7 @@ namespace MuMaker
               Point point200 = point1;
               pictureBox199.Location = point200;
               this.PictureBox199.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox199, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox199, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 200:
               this.PictureBox200.Visible = true;
@@ -22074,7 +22074,7 @@ namespace MuMaker
               Point point201 = point1;
               pictureBox200.Location = point201;
               this.PictureBox200.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox200, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox200, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 201:
               this.PictureBox201.Visible = true;
@@ -22083,7 +22083,7 @@ namespace MuMaker
               Point point202 = point1;
               pictureBox201.Location = point202;
               this.PictureBox201.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox201, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox201, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 202:
               this.PictureBox202.Visible = true;
@@ -22092,7 +22092,7 @@ namespace MuMaker
               Point point203 = point1;
               pictureBox202.Location = point203;
               this.PictureBox202.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox202, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox202, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 203:
               this.PictureBox203.Visible = true;
@@ -22101,7 +22101,7 @@ namespace MuMaker
               Point point204 = point1;
               pictureBox203.Location = point204;
               this.PictureBox203.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox203, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox203, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 204:
               this.PictureBox204.Visible = true;
@@ -22110,7 +22110,7 @@ namespace MuMaker
               Point point205 = point1;
               pictureBox204.Location = point205;
               this.PictureBox204.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox204, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox204, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 205:
               this.PictureBox205.Visible = true;
@@ -22119,7 +22119,7 @@ namespace MuMaker
               Point point206 = point1;
               pictureBox205.Location = point206;
               this.PictureBox205.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox205, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox205, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 206:
               this.PictureBox206.Visible = true;
@@ -22128,7 +22128,7 @@ namespace MuMaker
               Point point207 = point1;
               pictureBox206.Location = point207;
               this.PictureBox206.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox206, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox206, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 207:
               this.PictureBox207.Visible = true;
@@ -22137,7 +22137,7 @@ namespace MuMaker
               Point point208 = point1;
               pictureBox207.Location = point208;
               this.PictureBox207.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox207, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox207, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 208:
               this.PictureBox208.Visible = true;
@@ -22146,7 +22146,7 @@ namespace MuMaker
               Point point209 = point1;
               pictureBox208.Location = point209;
               this.PictureBox208.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox208, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox208, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 209:
               this.PictureBox209.Visible = true;
@@ -22155,7 +22155,7 @@ namespace MuMaker
               Point point210 = point1;
               pictureBox209.Location = point210;
               this.PictureBox209.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox209, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox209, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 210:
               this.PictureBox210.Visible = true;
@@ -22164,7 +22164,7 @@ namespace MuMaker
               Point point211 = point1;
               pictureBox210.Location = point211;
               this.PictureBox210.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox210, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox210, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 211:
               this.PictureBox211.Visible = true;
@@ -22173,7 +22173,7 @@ namespace MuMaker
               Point point212 = point1;
               pictureBox211.Location = point212;
               this.PictureBox211.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox211, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox211, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 212:
               this.PictureBox212.Visible = true;
@@ -22182,7 +22182,7 @@ namespace MuMaker
               Point point213 = point1;
               pictureBox212.Location = point213;
               this.PictureBox212.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox212, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox212, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 213:
               this.PictureBox213.Visible = true;
@@ -22191,7 +22191,7 @@ namespace MuMaker
               Point point214 = point1;
               pictureBox213.Location = point214;
               this.PictureBox213.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox213, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox213, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 214:
               this.PictureBox214.Visible = true;
@@ -22200,7 +22200,7 @@ namespace MuMaker
               Point point215 = point1;
               pictureBox214.Location = point215;
               this.PictureBox214.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox214, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox214, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 215:
               this.PictureBox215.Visible = true;
@@ -22209,7 +22209,7 @@ namespace MuMaker
               Point point216 = point1;
               pictureBox215.Location = point216;
               this.PictureBox215.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox215, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox215, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 216:
               this.PictureBox216.Visible = true;
@@ -22218,7 +22218,7 @@ namespace MuMaker
               Point point217 = point1;
               pictureBox216.Location = point217;
               this.PictureBox216.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox216, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox216, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 217:
               this.PictureBox217.Visible = true;
@@ -22227,7 +22227,7 @@ namespace MuMaker
               Point point218 = point1;
               pictureBox217.Location = point218;
               this.PictureBox217.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox217, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox217, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 218:
               this.PictureBox218.Visible = true;
@@ -22236,7 +22236,7 @@ namespace MuMaker
               Point point219 = point1;
               pictureBox218.Location = point219;
               this.PictureBox218.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox218, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox218, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 219:
               this.PictureBox219.Visible = true;
@@ -22245,7 +22245,7 @@ namespace MuMaker
               Point point220 = point1;
               pictureBox219.Location = point220;
               this.PictureBox219.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox219, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox219, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 220:
               this.PictureBox220.Visible = true;
@@ -22254,7 +22254,7 @@ namespace MuMaker
               Point point221 = point1;
               pictureBox220.Location = point221;
               this.PictureBox220.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox220, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox220, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 221:
               this.PictureBox221.Visible = true;
@@ -22263,7 +22263,7 @@ namespace MuMaker
               Point point222 = point1;
               pictureBox221.Location = point222;
               this.PictureBox221.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox221, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox221, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 222:
               this.PictureBox222.Visible = true;
@@ -22272,7 +22272,7 @@ namespace MuMaker
               Point point223 = point1;
               pictureBox222.Location = point223;
               this.PictureBox222.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox222, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox222, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 223:
               this.PictureBox223.Visible = true;
@@ -22281,7 +22281,7 @@ namespace MuMaker
               Point point224 = point1;
               pictureBox223.Location = point224;
               this.PictureBox223.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox223, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox223, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 224:
               this.PictureBox224.Visible = true;
@@ -22290,7 +22290,7 @@ namespace MuMaker
               Point point225 = point1;
               pictureBox224.Location = point225;
               this.PictureBox224.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox224, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox224, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 225:
               this.PictureBox225.Visible = true;
@@ -22299,7 +22299,7 @@ namespace MuMaker
               Point point226 = point1;
               pictureBox225.Location = point226;
               this.PictureBox225.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox225, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox225, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 226:
               this.PictureBox226.Visible = true;
@@ -22308,7 +22308,7 @@ namespace MuMaker
               Point point227 = point1;
               pictureBox226.Location = point227;
               this.PictureBox226.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox226, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox226, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 227:
               this.PictureBox227.Visible = true;
@@ -22317,7 +22317,7 @@ namespace MuMaker
               Point point228 = point1;
               pictureBox227.Location = point228;
               this.PictureBox227.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox227, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox227, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 228:
               this.PictureBox228.Visible = true;
@@ -22326,7 +22326,7 @@ namespace MuMaker
               Point point229 = point1;
               pictureBox228.Location = point229;
               this.PictureBox228.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox228, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox228, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 229:
               this.PictureBox229.Visible = true;
@@ -22335,7 +22335,7 @@ namespace MuMaker
               Point point230 = point1;
               pictureBox229.Location = point230;
               this.PictureBox229.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox229, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox229, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 230:
               this.PictureBox230.Visible = true;
@@ -22344,7 +22344,7 @@ namespace MuMaker
               Point point231 = point1;
               pictureBox230.Location = point231;
               this.PictureBox230.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox230, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox230, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 231:
               this.PictureBox231.Visible = true;
@@ -22353,7 +22353,7 @@ namespace MuMaker
               Point point232 = point1;
               pictureBox231.Location = point232;
               this.PictureBox231.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox231, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox231, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 232:
               this.PictureBox232.Visible = true;
@@ -22362,7 +22362,7 @@ namespace MuMaker
               Point point233 = point1;
               pictureBox232.Location = point233;
               this.PictureBox232.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox232, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox232, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 233:
               this.PictureBox233.Visible = true;
@@ -22371,7 +22371,7 @@ namespace MuMaker
               Point point234 = point1;
               pictureBox233.Location = point234;
               this.PictureBox233.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox233, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox233, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 234:
               this.PictureBox234.Visible = true;
@@ -22380,7 +22380,7 @@ namespace MuMaker
               Point point235 = point1;
               pictureBox234.Location = point235;
               this.PictureBox234.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox234, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox234, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 235:
               this.PictureBox235.Visible = true;
@@ -22389,7 +22389,7 @@ namespace MuMaker
               Point point236 = point1;
               pictureBox235.Location = point236;
               this.PictureBox235.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox235, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox235, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 236:
               this.PictureBox236.Visible = true;
@@ -22398,7 +22398,7 @@ namespace MuMaker
               Point point237 = point1;
               pictureBox236.Location = point237;
               this.PictureBox236.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox236, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox236, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 237:
               this.PictureBox237.Visible = true;
@@ -22407,7 +22407,7 @@ namespace MuMaker
               Point point238 = point1;
               pictureBox237.Location = point238;
               this.PictureBox237.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox237, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox237, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 238:
               this.PictureBox238.Visible = true;
@@ -22416,7 +22416,7 @@ namespace MuMaker
               Point point239 = point1;
               pictureBox238.Location = point239;
               this.PictureBox238.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox238, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox238, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 239:
               this.PictureBox239.Visible = true;
@@ -22425,7 +22425,7 @@ namespace MuMaker
               Point point240 = point1;
               pictureBox239.Location = point240;
               this.PictureBox239.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox239, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox239, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 240:
               this.PictureBox240.Visible = true;
@@ -22434,7 +22434,7 @@ namespace MuMaker
               Point point241 = point1;
               pictureBox240.Location = point241;
               this.PictureBox240.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox240, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox240, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 241:
               this.PictureBox241.Visible = true;
@@ -22443,7 +22443,7 @@ namespace MuMaker
               Point point242 = point1;
               pictureBox241.Location = point242;
               this.PictureBox241.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox241, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox241, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 242:
               this.PictureBox242.Visible = true;
@@ -22452,7 +22452,7 @@ namespace MuMaker
               Point point243 = point1;
               pictureBox242.Location = point243;
               this.PictureBox242.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox242, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox242, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 243:
               this.PictureBox243.Visible = true;
@@ -22461,7 +22461,7 @@ namespace MuMaker
               Point point244 = point1;
               pictureBox243.Location = point244;
               this.PictureBox243.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox243, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox243, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 244:
               this.PictureBox244.Visible = true;
@@ -22470,7 +22470,7 @@ namespace MuMaker
               Point point245 = point1;
               pictureBox244.Location = point245;
               this.PictureBox244.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox244, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox244, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 245:
               this.PictureBox245.Visible = true;
@@ -22479,7 +22479,7 @@ namespace MuMaker
               Point point246 = point1;
               pictureBox245.Location = point246;
               this.PictureBox245.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox245, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox245, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 246:
               this.PictureBox246.Visible = true;
@@ -22488,7 +22488,7 @@ namespace MuMaker
               Point point247 = point1;
               pictureBox246.Location = point247;
               this.PictureBox246.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox246, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox246, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 247:
               this.PictureBox247.Visible = true;
@@ -22497,7 +22497,7 @@ namespace MuMaker
               Point point248 = point1;
               pictureBox247.Location = point248;
               this.PictureBox247.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox247, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox247, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 248:
               this.PictureBox248.Visible = true;
@@ -22506,7 +22506,7 @@ namespace MuMaker
               Point point249 = point1;
               pictureBox248.Location = point249;
               this.PictureBox248.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox248, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox248, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 249:
               this.PictureBox249.Visible = true;
@@ -22515,7 +22515,7 @@ namespace MuMaker
               Point point250 = point1;
               pictureBox249.Location = point250;
               this.PictureBox249.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox249, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox249, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 250:
               this.PictureBox250.Visible = true;
@@ -22524,7 +22524,7 @@ namespace MuMaker
               Point point251 = point1;
               pictureBox250.Location = point251;
               this.PictureBox250.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox250, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox250, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 251:
               this.PictureBox251.Visible = true;
@@ -22533,7 +22533,7 @@ namespace MuMaker
               Point point252 = point1;
               pictureBox251.Location = point252;
               this.PictureBox251.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox251, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox251, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 252:
               this.PictureBox252.Visible = true;
@@ -22542,7 +22542,7 @@ namespace MuMaker
               Point point253 = point1;
               pictureBox252.Location = point253;
               this.PictureBox252.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox252, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox252, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 253:
               this.PictureBox253.Visible = true;
@@ -22551,7 +22551,7 @@ namespace MuMaker
               Point point254 = point1;
               pictureBox253.Location = point254;
               this.PictureBox253.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox253, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox253, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 254:
               this.PictureBox254.Visible = true;
@@ -22560,7 +22560,7 @@ namespace MuMaker
               Point point255 = point1;
               pictureBox254.Location = point255;
               this.PictureBox254.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox254, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox254, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case (int) byte.MaxValue:
               this.PictureBox255.Visible = true;
@@ -22569,7 +22569,7 @@ namespace MuMaker
               Point point256 = point1;
               pictureBox255.Location = point256;
               this.PictureBox255.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox255, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox255, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 256:
               this.PictureBox256.Visible = true;
@@ -22578,7 +22578,7 @@ namespace MuMaker
               Point point257 = point1;
               pictureBox256.Location = point257;
               this.PictureBox256.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox256, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox256, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 257:
               this.PictureBox257.Visible = true;
@@ -22587,7 +22587,7 @@ namespace MuMaker
               Point point258 = point1;
               pictureBox257.Location = point258;
               this.PictureBox257.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox257, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox257, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 258:
               this.PictureBox258.Visible = true;
@@ -22596,7 +22596,7 @@ namespace MuMaker
               Point point259 = point1;
               pictureBox258.Location = point259;
               this.PictureBox258.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox258, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox258, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 259:
               this.PictureBox259.Visible = true;
@@ -22605,7 +22605,7 @@ namespace MuMaker
               Point point260 = point1;
               pictureBox259.Location = point260;
               this.PictureBox259.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox259, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox259, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 260:
               this.PictureBox260.Visible = true;
@@ -22614,7 +22614,7 @@ namespace MuMaker
               Point point261 = point1;
               pictureBox260.Location = point261;
               this.PictureBox260.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox260, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox260, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 261:
               this.PictureBox261.Visible = true;
@@ -22623,7 +22623,7 @@ namespace MuMaker
               Point point262 = point1;
               pictureBox261.Location = point262;
               this.PictureBox261.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox261, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox261, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 262:
               this.PictureBox262.Visible = true;
@@ -22632,7 +22632,7 @@ namespace MuMaker
               Point point263 = point1;
               pictureBox262.Location = point263;
               this.PictureBox262.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox262, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox262, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 263:
               this.PictureBox263.Visible = true;
@@ -22641,7 +22641,7 @@ namespace MuMaker
               Point point264 = point1;
               pictureBox263.Location = point264;
               this.PictureBox263.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox263, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox263, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 264:
               this.PictureBox264.Visible = true;
@@ -22650,7 +22650,7 @@ namespace MuMaker
               Point point265 = point1;
               pictureBox264.Location = point265;
               this.PictureBox264.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox264, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox264, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 265:
               this.PictureBox265.Visible = true;
@@ -22659,7 +22659,7 @@ namespace MuMaker
               Point point266 = point1;
               pictureBox265.Location = point266;
               this.PictureBox265.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox265, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox265, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 266:
               this.PictureBox266.Visible = true;
@@ -22668,7 +22668,7 @@ namespace MuMaker
               Point point267 = point1;
               pictureBox266.Location = point267;
               this.PictureBox266.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox266, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox266, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 267:
               this.PictureBox267.Visible = true;
@@ -22677,7 +22677,7 @@ namespace MuMaker
               Point point268 = point1;
               pictureBox267.Location = point268;
               this.PictureBox267.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox267, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox267, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 268:
               this.PictureBox268.Visible = true;
@@ -22686,7 +22686,7 @@ namespace MuMaker
               Point point269 = point1;
               pictureBox268.Location = point269;
               this.PictureBox268.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox268, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox268, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 269:
               this.PictureBox269.Visible = true;
@@ -22695,7 +22695,7 @@ namespace MuMaker
               Point point270 = point1;
               pictureBox269.Location = point270;
               this.PictureBox269.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox269, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox269, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 270:
               this.PictureBox270.Visible = true;
@@ -22704,7 +22704,7 @@ namespace MuMaker
               Point point271 = point1;
               pictureBox270.Location = point271;
               this.PictureBox270.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox270, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox270, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 271:
               this.PictureBox271.Visible = true;
@@ -22713,7 +22713,7 @@ namespace MuMaker
               Point point272 = point1;
               pictureBox271.Location = point272;
               this.PictureBox271.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox271, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox271, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 272:
               this.PictureBox272.Visible = true;
@@ -22722,7 +22722,7 @@ namespace MuMaker
               Point point273 = point1;
               pictureBox272.Location = point273;
               this.PictureBox272.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox272, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox272, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 273:
               this.PictureBox273.Visible = true;
@@ -22731,7 +22731,7 @@ namespace MuMaker
               Point point274 = point1;
               pictureBox273.Location = point274;
               this.PictureBox273.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox273, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox273, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 274:
               this.PictureBox274.Visible = true;
@@ -22740,7 +22740,7 @@ namespace MuMaker
               Point point275 = point1;
               pictureBox274.Location = point275;
               this.PictureBox274.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox274, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox274, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 275:
               this.PictureBox275.Visible = true;
@@ -22749,7 +22749,7 @@ namespace MuMaker
               Point point276 = point1;
               pictureBox275.Location = point276;
               this.PictureBox275.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox275, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox275, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 276:
               this.PictureBox276.Visible = true;
@@ -22758,7 +22758,7 @@ namespace MuMaker
               Point point277 = point1;
               pictureBox276.Location = point277;
               this.PictureBox276.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox276, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox276, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 277:
               this.PictureBox277.Visible = true;
@@ -22767,7 +22767,7 @@ namespace MuMaker
               Point point278 = point1;
               pictureBox277.Location = point278;
               this.PictureBox277.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox277, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox277, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 278:
               this.PictureBox278.Visible = true;
@@ -22776,7 +22776,7 @@ namespace MuMaker
               Point point279 = point1;
               pictureBox278.Location = point279;
               this.PictureBox278.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox278, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox278, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 279:
               this.PictureBox279.Visible = true;
@@ -22785,7 +22785,7 @@ namespace MuMaker
               Point point280 = point1;
               pictureBox279.Location = point280;
               this.PictureBox279.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox279, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox279, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 280:
               this.PictureBox280.Visible = true;
@@ -22794,7 +22794,7 @@ namespace MuMaker
               Point point281 = point1;
               pictureBox280.Location = point281;
               this.PictureBox280.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox280, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox280, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 281:
               this.PictureBox281.Visible = true;
@@ -22803,7 +22803,7 @@ namespace MuMaker
               Point point282 = point1;
               pictureBox281.Location = point282;
               this.PictureBox281.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox281, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox281, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 282:
               this.PictureBox282.Visible = true;
@@ -22812,7 +22812,7 @@ namespace MuMaker
               Point point283 = point1;
               pictureBox282.Location = point283;
               this.PictureBox282.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox282, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox282, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 283:
               this.PictureBox283.Visible = true;
@@ -22821,7 +22821,7 @@ namespace MuMaker
               Point point284 = point1;
               pictureBox283.Location = point284;
               this.PictureBox283.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox283, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox283, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 284:
               this.PictureBox284.Visible = true;
@@ -22830,7 +22830,7 @@ namespace MuMaker
               Point point285 = point1;
               pictureBox284.Location = point285;
               this.PictureBox284.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox284, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox284, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 285:
               this.PictureBox285.Visible = true;
@@ -22839,7 +22839,7 @@ namespace MuMaker
               Point point286 = point1;
               pictureBox285.Location = point286;
               this.PictureBox285.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox285, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox285, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 286:
               this.PictureBox286.Visible = true;
@@ -22848,7 +22848,7 @@ namespace MuMaker
               Point point287 = point1;
               pictureBox286.Location = point287;
               this.PictureBox286.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox286, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox286, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 287:
               this.PictureBox287.Visible = true;
@@ -22857,7 +22857,7 @@ namespace MuMaker
               Point point288 = point1;
               pictureBox287.Location = point288;
               this.PictureBox287.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox287, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox287, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 288:
               this.PictureBox288.Visible = true;
@@ -22866,7 +22866,7 @@ namespace MuMaker
               Point point289 = point1;
               pictureBox288.Location = point289;
               this.PictureBox288.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox288, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox288, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 289:
               this.PictureBox289.Visible = true;
@@ -22875,7 +22875,7 @@ namespace MuMaker
               Point point290 = point1;
               pictureBox289.Location = point290;
               this.PictureBox289.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox289, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox289, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 290:
               this.PictureBox290.Visible = true;
@@ -22884,7 +22884,7 @@ namespace MuMaker
               Point point291 = point1;
               pictureBox290.Location = point291;
               this.PictureBox290.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox290, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox290, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 291:
               this.PictureBox291.Visible = true;
@@ -22893,7 +22893,7 @@ namespace MuMaker
               Point point292 = point1;
               pictureBox291.Location = point292;
               this.PictureBox291.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox291, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox291, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 292:
               this.PictureBox292.Visible = true;
@@ -22902,7 +22902,7 @@ namespace MuMaker
               Point point293 = point1;
               pictureBox292.Location = point293;
               this.PictureBox292.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox292, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox292, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 293:
               this.PictureBox293.Visible = true;
@@ -22911,7 +22911,7 @@ namespace MuMaker
               Point point294 = point1;
               pictureBox293.Location = point294;
               this.PictureBox293.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox293, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox293, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 294:
               this.PictureBox294.Visible = true;
@@ -22920,7 +22920,7 @@ namespace MuMaker
               Point point295 = point1;
               pictureBox294.Location = point295;
               this.PictureBox294.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox294, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox294, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 295:
               this.PictureBox295.Visible = true;
@@ -22929,7 +22929,7 @@ namespace MuMaker
               Point point296 = point1;
               pictureBox295.Location = point296;
               this.PictureBox295.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox295, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox295, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 296:
               this.PictureBox296.Visible = true;
@@ -22938,7 +22938,7 @@ namespace MuMaker
               Point point297 = point1;
               pictureBox296.Location = point297;
               this.PictureBox296.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox296, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox296, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 297:
               this.PictureBox297.Visible = true;
@@ -22947,7 +22947,7 @@ namespace MuMaker
               Point point298 = point1;
               pictureBox297.Location = point298;
               this.PictureBox297.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox297, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox297, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 298:
               this.PictureBox298.Visible = true;
@@ -22956,7 +22956,7 @@ namespace MuMaker
               Point point299 = point1;
               pictureBox298.Location = point299;
               this.PictureBox298.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox298, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox298, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 299:
               this.PictureBox299.Visible = true;
@@ -22965,7 +22965,7 @@ namespace MuMaker
               Point point300 = point1;
               pictureBox299.Location = point300;
               this.PictureBox299.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox299, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox299, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 300:
               this.PictureBox300.Visible = true;
@@ -22974,7 +22974,7 @@ namespace MuMaker
               Point point301 = point1;
               pictureBox300.Location = point301;
               this.PictureBox300.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox300, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox300, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 301:
               this.PictureBox301.Visible = true;
@@ -22983,7 +22983,7 @@ namespace MuMaker
               Point point302 = point1;
               pictureBox301.Location = point302;
               this.PictureBox301.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox301, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox301, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 302:
               this.PictureBox302.Visible = true;
@@ -22992,7 +22992,7 @@ namespace MuMaker
               Point point303 = point1;
               pictureBox302.Location = point303;
               this.PictureBox302.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox302, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox302, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 303:
               this.PictureBox303.Visible = true;
@@ -23001,7 +23001,7 @@ namespace MuMaker
               Point point304 = point1;
               pictureBox303.Location = point304;
               this.PictureBox303.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox303, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox303, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 304:
               this.PictureBox304.Visible = true;
@@ -23010,7 +23010,7 @@ namespace MuMaker
               Point point305 = point1;
               pictureBox304.Location = point305;
               this.PictureBox304.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox304, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox304, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 305:
               this.PictureBox305.Visible = true;
@@ -23019,7 +23019,7 @@ namespace MuMaker
               Point point306 = point1;
               pictureBox305.Location = point306;
               this.PictureBox305.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox305, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox305, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 306:
               this.PictureBox306.Visible = true;
@@ -23028,7 +23028,7 @@ namespace MuMaker
               Point point307 = point1;
               pictureBox306.Location = point307;
               this.PictureBox306.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox306, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox306, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 307:
               this.PictureBox307.Visible = true;
@@ -23037,7 +23037,7 @@ namespace MuMaker
               Point point308 = point1;
               pictureBox307.Location = point308;
               this.PictureBox307.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox307, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox307, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 308:
               this.PictureBox308.Visible = true;
@@ -23046,7 +23046,7 @@ namespace MuMaker
               Point point309 = point1;
               pictureBox308.Location = point309;
               this.PictureBox308.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox308, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox308, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 309:
               this.PictureBox309.Visible = true;
@@ -23055,7 +23055,7 @@ namespace MuMaker
               Point point310 = point1;
               pictureBox309.Location = point310;
               this.PictureBox309.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox309, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox309, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 310:
               this.PictureBox310.Visible = true;
@@ -23064,7 +23064,7 @@ namespace MuMaker
               Point point311 = point1;
               pictureBox310.Location = point311;
               this.PictureBox310.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox310, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox310, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 311:
               this.PictureBox311.Visible = true;
@@ -23073,7 +23073,7 @@ namespace MuMaker
               Point point312 = point1;
               pictureBox311.Location = point312;
               this.PictureBox311.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox311, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox311, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 312:
               this.PictureBox312.Visible = true;
@@ -23082,7 +23082,7 @@ namespace MuMaker
               Point point313 = point1;
               pictureBox312.Location = point313;
               this.PictureBox312.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox312, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox312, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 313:
               this.PictureBox313.Visible = true;
@@ -23091,7 +23091,7 @@ namespace MuMaker
               Point point314 = point1;
               pictureBox313.Location = point314;
               this.PictureBox313.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox313, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox313, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 314:
               this.PictureBox314.Visible = true;
@@ -23100,7 +23100,7 @@ namespace MuMaker
               Point point315 = point1;
               pictureBox314.Location = point315;
               this.PictureBox314.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox314, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox314, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 315:
               this.PictureBox315.Visible = true;
@@ -23109,7 +23109,7 @@ namespace MuMaker
               Point point316 = point1;
               pictureBox315.Location = point316;
               this.PictureBox315.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox315, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox315, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 316:
               this.PictureBox316.Visible = true;
@@ -23118,7 +23118,7 @@ namespace MuMaker
               Point point317 = point1;
               pictureBox316.Location = point317;
               this.PictureBox316.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox316, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox316, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 317:
               this.PictureBox317.Visible = true;
@@ -23127,7 +23127,7 @@ namespace MuMaker
               Point point318 = point1;
               pictureBox317.Location = point318;
               this.PictureBox317.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox317, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox317, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 318:
               this.PictureBox318.Visible = true;
@@ -23136,7 +23136,7 @@ namespace MuMaker
               Point point319 = point1;
               pictureBox318.Location = point319;
               this.PictureBox318.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox318, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox318, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 319:
               this.PictureBox319.Visible = true;
@@ -23145,7 +23145,7 @@ namespace MuMaker
               Point point320 = point1;
               pictureBox319.Location = point320;
               this.PictureBox319.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox319, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox319, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 320:
               this.PictureBox320.Visible = true;
@@ -23154,7 +23154,7 @@ namespace MuMaker
               Point point321 = point1;
               pictureBox320.Location = point321;
               this.PictureBox320.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox320, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox320, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 321:
               this.PictureBox321.Visible = true;
@@ -23163,7 +23163,7 @@ namespace MuMaker
               Point point322 = point1;
               pictureBox321.Location = point322;
               this.PictureBox321.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox321, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox321, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 322:
               this.PictureBox322.Visible = true;
@@ -23172,7 +23172,7 @@ namespace MuMaker
               Point point323 = point1;
               pictureBox322.Location = point323;
               this.PictureBox322.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox322, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox322, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 323:
               this.PictureBox323.Visible = true;
@@ -23181,7 +23181,7 @@ namespace MuMaker
               Point point324 = point1;
               pictureBox323.Location = point324;
               this.PictureBox323.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox323, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox323, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 324:
               this.PictureBox324.Visible = true;
@@ -23190,7 +23190,7 @@ namespace MuMaker
               Point point325 = point1;
               pictureBox324.Location = point325;
               this.PictureBox324.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox324, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox324, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 325:
               this.PictureBox325.Visible = true;
@@ -23199,7 +23199,7 @@ namespace MuMaker
               Point point326 = point1;
               pictureBox325.Location = point326;
               this.PictureBox325.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox325, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox325, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 326:
               this.PictureBox326.Visible = true;
@@ -23208,7 +23208,7 @@ namespace MuMaker
               Point point327 = point1;
               pictureBox326.Location = point327;
               this.PictureBox326.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox326, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox326, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 327:
               this.PictureBox327.Visible = true;
@@ -23217,7 +23217,7 @@ namespace MuMaker
               Point point328 = point1;
               pictureBox327.Location = point328;
               this.PictureBox327.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox327, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox327, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 328:
               this.PictureBox328.Visible = true;
@@ -23226,7 +23226,7 @@ namespace MuMaker
               Point point329 = point1;
               pictureBox328.Location = point329;
               this.PictureBox328.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox328, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox328, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 329:
               this.PictureBox329.Visible = true;
@@ -23235,7 +23235,7 @@ namespace MuMaker
               Point point330 = point1;
               pictureBox329.Location = point330;
               this.PictureBox329.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox329, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox329, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 330:
               this.PictureBox330.Visible = true;
@@ -23244,7 +23244,7 @@ namespace MuMaker
               Point point331 = point1;
               pictureBox330.Location = point331;
               this.PictureBox330.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox330, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox330, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 331:
               this.PictureBox331.Visible = true;
@@ -23253,7 +23253,7 @@ namespace MuMaker
               Point point332 = point1;
               pictureBox331.Location = point332;
               this.PictureBox331.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox331, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox331, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 332:
               this.PictureBox332.Visible = true;
@@ -23262,7 +23262,7 @@ namespace MuMaker
               Point point333 = point1;
               pictureBox332.Location = point333;
               this.PictureBox332.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox332, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox332, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 333:
               this.PictureBox333.Visible = true;
@@ -23271,7 +23271,7 @@ namespace MuMaker
               Point point334 = point1;
               pictureBox333.Location = point334;
               this.PictureBox333.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox333, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox333, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 334:
               this.PictureBox334.Visible = true;
@@ -23280,7 +23280,7 @@ namespace MuMaker
               Point point335 = point1;
               pictureBox334.Location = point335;
               this.PictureBox334.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox334, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox334, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 335:
               this.PictureBox335.Visible = true;
@@ -23289,7 +23289,7 @@ namespace MuMaker
               Point point336 = point1;
               pictureBox335.Location = point336;
               this.PictureBox335.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox335, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox335, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 336:
               this.PictureBox336.Visible = true;
@@ -23298,7 +23298,7 @@ namespace MuMaker
               Point point337 = point1;
               pictureBox336.Location = point337;
               this.PictureBox336.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox336, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox336, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 337:
               this.PictureBox337.Visible = true;
@@ -23307,7 +23307,7 @@ namespace MuMaker
               Point point338 = point1;
               pictureBox337.Location = point338;
               this.PictureBox337.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox337, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox337, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 338:
               this.PictureBox338.Visible = true;
@@ -23316,7 +23316,7 @@ namespace MuMaker
               Point point339 = point1;
               pictureBox338.Location = point339;
               this.PictureBox338.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox338, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox338, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 339:
               this.PictureBox339.Visible = true;
@@ -23325,7 +23325,7 @@ namespace MuMaker
               Point point340 = point1;
               pictureBox339.Location = point340;
               this.PictureBox339.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox339, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox339, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 340:
               this.PictureBox340.Visible = true;
@@ -23334,7 +23334,7 @@ namespace MuMaker
               Point point341 = point1;
               pictureBox340.Location = point341;
               this.PictureBox340.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox340, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox340, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 341:
               this.PictureBox341.Visible = true;
@@ -23343,7 +23343,7 @@ namespace MuMaker
               Point point342 = point1;
               pictureBox341.Location = point342;
               this.PictureBox341.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox341, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox341, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 342:
               this.PictureBox342.Visible = true;
@@ -23352,7 +23352,7 @@ namespace MuMaker
               Point point343 = point1;
               pictureBox342.Location = point343;
               this.PictureBox342.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox342, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox342, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 343:
               this.PictureBox343.Visible = true;
@@ -23361,7 +23361,7 @@ namespace MuMaker
               Point point344 = point1;
               pictureBox343.Location = point344;
               this.PictureBox343.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox343, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox343, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 344:
               this.PictureBox344.Visible = true;
@@ -23370,7 +23370,7 @@ namespace MuMaker
               Point point345 = point1;
               pictureBox344.Location = point345;
               this.PictureBox344.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox344, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox344, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 345:
               this.PictureBox345.Visible = true;
@@ -23379,7 +23379,7 @@ namespace MuMaker
               Point point346 = point1;
               pictureBox345.Location = point346;
               this.PictureBox345.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox345, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox345, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 346:
               this.PictureBox346.Visible = true;
@@ -23388,7 +23388,7 @@ namespace MuMaker
               Point point347 = point1;
               pictureBox346.Location = point347;
               this.PictureBox346.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox346, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox346, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 347:
               this.PictureBox347.Visible = true;
@@ -23397,7 +23397,7 @@ namespace MuMaker
               Point point348 = point1;
               pictureBox347.Location = point348;
               this.PictureBox347.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox347, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox347, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 348:
               this.PictureBox348.Visible = true;
@@ -23406,7 +23406,7 @@ namespace MuMaker
               Point point349 = point1;
               pictureBox348.Location = point349;
               this.PictureBox348.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox348, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox348, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 349:
               this.PictureBox349.Visible = true;
@@ -23415,7 +23415,7 @@ namespace MuMaker
               Point point350 = point1;
               pictureBox349.Location = point350;
               this.PictureBox349.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox349, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox349, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 350:
               this.PictureBox350.Visible = true;
@@ -23424,7 +23424,7 @@ namespace MuMaker
               Point point351 = point1;
               pictureBox350.Location = point351;
               this.PictureBox350.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox350, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox350, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 351:
               this.PictureBox351.Visible = true;
@@ -23433,7 +23433,7 @@ namespace MuMaker
               Point point352 = point1;
               pictureBox351.Location = point352;
               this.PictureBox351.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox351, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox351, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 352:
               this.PictureBox352.Visible = true;
@@ -23442,7 +23442,7 @@ namespace MuMaker
               Point point353 = point1;
               pictureBox352.Location = point353;
               this.PictureBox352.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox352, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox352, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 353:
               this.PictureBox353.Visible = true;
@@ -23451,7 +23451,7 @@ namespace MuMaker
               Point point354 = point1;
               pictureBox353.Location = point354;
               this.PictureBox353.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox353, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox353, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 354:
               this.PictureBox354.Visible = true;
@@ -23460,7 +23460,7 @@ namespace MuMaker
               Point point355 = point1;
               pictureBox354.Location = point355;
               this.PictureBox354.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox354, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox354, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 355:
               this.PictureBox355.Visible = true;
@@ -23469,7 +23469,7 @@ namespace MuMaker
               Point point356 = point1;
               pictureBox355.Location = point356;
               this.PictureBox355.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox355, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox355, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 356:
               this.PictureBox356.Visible = true;
@@ -23478,7 +23478,7 @@ namespace MuMaker
               Point point357 = point1;
               pictureBox356.Location = point357;
               this.PictureBox356.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox356, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox356, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 357:
               this.PictureBox357.Visible = true;
@@ -23487,7 +23487,7 @@ namespace MuMaker
               Point point358 = point1;
               pictureBox357.Location = point358;
               this.PictureBox357.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox357, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox357, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 358:
               this.PictureBox358.Visible = true;
@@ -23496,7 +23496,7 @@ namespace MuMaker
               Point point359 = point1;
               pictureBox358.Location = point359;
               this.PictureBox358.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox358, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox358, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 359:
               this.PictureBox359.Visible = true;
@@ -23505,7 +23505,7 @@ namespace MuMaker
               Point point360 = point1;
               pictureBox359.Location = point360;
               this.PictureBox359.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox359, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox359, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 360:
               this.PictureBox360.Visible = true;
@@ -23514,7 +23514,7 @@ namespace MuMaker
               Point point361 = point1;
               pictureBox360.Location = point361;
               this.PictureBox360.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox360, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox360, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 361:
               this.PictureBox361.Visible = true;
@@ -23523,7 +23523,7 @@ namespace MuMaker
               Point point362 = point1;
               pictureBox361.Location = point362;
               this.PictureBox361.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox361, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox361, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 362:
               this.PictureBox362.Visible = true;
@@ -23532,7 +23532,7 @@ namespace MuMaker
               Point point363 = point1;
               pictureBox362.Location = point363;
               this.PictureBox362.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox362, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox362, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 363:
               this.PictureBox363.Visible = true;
@@ -23541,7 +23541,7 @@ namespace MuMaker
               Point point364 = point1;
               pictureBox363.Location = point364;
               this.PictureBox363.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox363, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox363, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 364:
               this.PictureBox364.Visible = true;
@@ -23550,7 +23550,7 @@ namespace MuMaker
               Point point365 = point1;
               pictureBox364.Location = point365;
               this.PictureBox364.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox364, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox364, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 365:
               this.PictureBox365.Visible = true;
@@ -23559,7 +23559,7 @@ namespace MuMaker
               Point point366 = point1;
               pictureBox365.Location = point366;
               this.PictureBox365.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox365, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox365, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 366:
               this.PictureBox366.Visible = true;
@@ -23568,7 +23568,7 @@ namespace MuMaker
               Point point367 = point1;
               pictureBox366.Location = point367;
               this.PictureBox366.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox366, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox366, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 367:
               this.PictureBox367.Visible = true;
@@ -23577,7 +23577,7 @@ namespace MuMaker
               Point point368 = point1;
               pictureBox367.Location = point368;
               this.PictureBox367.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox367, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox367, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 368:
               this.PictureBox368.Visible = true;
@@ -23586,7 +23586,7 @@ namespace MuMaker
               Point point369 = point1;
               pictureBox368.Location = point369;
               this.PictureBox368.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox368, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox368, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 369:
               this.PictureBox369.Visible = true;
@@ -23595,7 +23595,7 @@ namespace MuMaker
               Point point370 = point1;
               pictureBox369.Location = point370;
               this.PictureBox369.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox369, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox369, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 370:
               this.PictureBox370.Visible = true;
@@ -23604,7 +23604,7 @@ namespace MuMaker
               Point point371 = point1;
               pictureBox370.Location = point371;
               this.PictureBox370.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox370, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox370, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 371:
               this.PictureBox371.Visible = true;
@@ -23613,7 +23613,7 @@ namespace MuMaker
               Point point372 = point1;
               pictureBox371.Location = point372;
               this.PictureBox371.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox371, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox371, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 372:
               this.PictureBox372.Visible = true;
@@ -23622,7 +23622,7 @@ namespace MuMaker
               Point point373 = point1;
               pictureBox372.Location = point373;
               this.PictureBox372.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox372, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox372, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 373:
               this.PictureBox373.Visible = true;
@@ -23631,7 +23631,7 @@ namespace MuMaker
               Point point374 = point1;
               pictureBox373.Location = point374;
               this.PictureBox373.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox373, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox373, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 374:
               this.PictureBox374.Visible = true;
@@ -23640,7 +23640,7 @@ namespace MuMaker
               Point point375 = point1;
               pictureBox374.Location = point375;
               this.PictureBox374.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox374, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox374, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 375:
               this.PictureBox375.Visible = true;
@@ -23649,7 +23649,7 @@ namespace MuMaker
               Point point376 = point1;
               pictureBox375.Location = point376;
               this.PictureBox375.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox375, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox375, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 376:
               this.PictureBox376.Visible = true;
@@ -23658,7 +23658,7 @@ namespace MuMaker
               Point point377 = point1;
               pictureBox376.Location = point377;
               this.PictureBox376.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox376, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox376, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 377:
               this.PictureBox377.Visible = true;
@@ -23667,7 +23667,7 @@ namespace MuMaker
               Point point378 = point1;
               pictureBox377.Location = point378;
               this.PictureBox377.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox377, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox377, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 378:
               this.PictureBox378.Visible = true;
@@ -23676,7 +23676,7 @@ namespace MuMaker
               Point point379 = point1;
               pictureBox378.Location = point379;
               this.PictureBox378.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox378, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox378, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 379:
               this.PictureBox379.Visible = true;
@@ -23685,7 +23685,7 @@ namespace MuMaker
               Point point380 = point1;
               pictureBox379.Location = point380;
               this.PictureBox379.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox379, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox379, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 380:
               this.PictureBox380.Visible = true;
@@ -23694,7 +23694,7 @@ namespace MuMaker
               Point point381 = point1;
               pictureBox380.Location = point381;
               this.PictureBox380.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox380, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox380, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 381:
               this.PictureBox381.Visible = true;
@@ -23703,7 +23703,7 @@ namespace MuMaker
               Point point382 = point1;
               pictureBox381.Location = point382;
               this.PictureBox381.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox381, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox381, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 382:
               this.PictureBox382.Visible = true;
@@ -23712,7 +23712,7 @@ namespace MuMaker
               Point point383 = point1;
               pictureBox382.Location = point383;
               this.PictureBox382.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox382, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox382, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 383:
               this.PictureBox383.Visible = true;
@@ -23721,7 +23721,7 @@ namespace MuMaker
               Point point384 = point1;
               pictureBox383.Location = point384;
               this.PictureBox383.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox383, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox383, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 384:
               this.PictureBox384.Visible = true;
@@ -23730,7 +23730,7 @@ namespace MuMaker
               Point point385 = point1;
               pictureBox384.Location = point385;
               this.PictureBox384.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox384, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox384, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 385:
               this.PictureBox385.Visible = true;
@@ -23739,7 +23739,7 @@ namespace MuMaker
               Point point386 = point1;
               pictureBox385.Location = point386;
               this.PictureBox385.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox385, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox385, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 386:
               this.PictureBox386.Visible = true;
@@ -23748,7 +23748,7 @@ namespace MuMaker
               Point point387 = point1;
               pictureBox386.Location = point387;
               this.PictureBox386.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox386, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox386, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 387:
               this.PictureBox387.Visible = true;
@@ -23757,7 +23757,7 @@ namespace MuMaker
               Point point388 = point1;
               pictureBox387.Location = point388;
               this.PictureBox387.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox387, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox387, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 388:
               this.PictureBox388.Visible = true;
@@ -23766,7 +23766,7 @@ namespace MuMaker
               Point point389 = point1;
               pictureBox388.Location = point389;
               this.PictureBox388.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox388, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox388, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 389:
               this.PictureBox389.Visible = true;
@@ -23775,7 +23775,7 @@ namespace MuMaker
               Point point390 = point1;
               pictureBox389.Location = point390;
               this.PictureBox389.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox389, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox389, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 390:
               this.PictureBox390.Visible = true;
@@ -23784,7 +23784,7 @@ namespace MuMaker
               Point point391 = point1;
               pictureBox390.Location = point391;
               this.PictureBox390.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox390, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox390, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 391:
               this.PictureBox391.Visible = true;
@@ -23793,7 +23793,7 @@ namespace MuMaker
               Point point392 = point1;
               pictureBox391.Location = point392;
               this.PictureBox391.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox391, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox391, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 392:
               this.PictureBox392.Visible = true;
@@ -23802,7 +23802,7 @@ namespace MuMaker
               Point point393 = point1;
               pictureBox392.Location = point393;
               this.PictureBox392.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox392, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox392, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 393:
               this.PictureBox393.Visible = true;
@@ -23811,7 +23811,7 @@ namespace MuMaker
               Point point394 = point1;
               pictureBox393.Location = point394;
               this.PictureBox393.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox393, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox393, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 394:
               this.PictureBox394.Visible = true;
@@ -23820,7 +23820,7 @@ namespace MuMaker
               Point point395 = point1;
               pictureBox394.Location = point395;
               this.PictureBox394.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox394, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox394, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 395:
               this.PictureBox395.Visible = true;
@@ -23829,7 +23829,7 @@ namespace MuMaker
               Point point396 = point1;
               pictureBox395.Location = point396;
               this.PictureBox395.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox395, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox395, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 396:
               this.PictureBox396.Visible = true;
@@ -23838,7 +23838,7 @@ namespace MuMaker
               Point point397 = point1;
               pictureBox396.Location = point397;
               this.PictureBox396.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox396, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox396, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 397:
               this.PictureBox397.Visible = true;
@@ -23847,7 +23847,7 @@ namespace MuMaker
               Point point398 = point1;
               pictureBox397.Location = point398;
               this.PictureBox397.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox397, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox397, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 398:
               this.PictureBox398.Visible = true;
@@ -23856,7 +23856,7 @@ namespace MuMaker
               Point point399 = point1;
               pictureBox398.Location = point399;
               this.PictureBox398.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox398, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox398, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 399:
               this.PictureBox399.Visible = true;
@@ -23865,7 +23865,7 @@ namespace MuMaker
               Point point400 = point1;
               pictureBox399.Location = point400;
               this.PictureBox399.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox399, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox399, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 400:
               this.PictureBox400.Visible = true;
@@ -23874,7 +23874,7 @@ namespace MuMaker
               Point point401 = point1;
               pictureBox400.Location = point401;
               this.PictureBox400.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox400, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox400, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 401:
               this.PictureBox401.Visible = true;
@@ -23883,7 +23883,7 @@ namespace MuMaker
               Point point402 = point1;
               pictureBox401.Location = point402;
               this.PictureBox401.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox401, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox401, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 402:
               this.PictureBox402.Visible = true;
@@ -23892,7 +23892,7 @@ namespace MuMaker
               Point point403 = point1;
               pictureBox402.Location = point403;
               this.PictureBox402.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox402, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox402, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 403:
               this.PictureBox403.Visible = true;
@@ -23901,7 +23901,7 @@ namespace MuMaker
               Point point404 = point1;
               pictureBox403.Location = point404;
               this.PictureBox403.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox403, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox403, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 404:
               this.PictureBox404.Visible = true;
@@ -23910,7 +23910,7 @@ namespace MuMaker
               Point point405 = point1;
               pictureBox404.Location = point405;
               this.PictureBox404.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox404, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox404, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 405:
               this.PictureBox405.Visible = true;
@@ -23919,7 +23919,7 @@ namespace MuMaker
               Point point406 = point1;
               pictureBox405.Location = point406;
               this.PictureBox405.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox405, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox405, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 406:
               this.PictureBox406.Visible = true;
@@ -23928,7 +23928,7 @@ namespace MuMaker
               Point point407 = point1;
               pictureBox406.Location = point407;
               this.PictureBox406.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox406, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox406, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 407:
               this.PictureBox407.Visible = true;
@@ -23937,7 +23937,7 @@ namespace MuMaker
               Point point408 = point1;
               pictureBox407.Location = point408;
               this.PictureBox407.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox407, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox407, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 408:
               this.PictureBox408.Visible = true;
@@ -23946,7 +23946,7 @@ namespace MuMaker
               Point point409 = point1;
               pictureBox408.Location = point409;
               this.PictureBox408.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox408, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox408, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 409:
               this.PictureBox409.Visible = true;
@@ -23955,7 +23955,7 @@ namespace MuMaker
               Point point410 = point1;
               pictureBox409.Location = point410;
               this.PictureBox409.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox409, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox409, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 410:
               this.PictureBox410.Visible = true;
@@ -23964,7 +23964,7 @@ namespace MuMaker
               Point point411 = point1;
               pictureBox410.Location = point411;
               this.PictureBox410.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox410, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox410, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 411:
               this.PictureBox411.Visible = true;
@@ -23973,7 +23973,7 @@ namespace MuMaker
               Point point412 = point1;
               pictureBox411.Location = point412;
               this.PictureBox411.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox411, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox411, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 412:
               this.PictureBox412.Visible = true;
@@ -23982,7 +23982,7 @@ namespace MuMaker
               Point point413 = point1;
               pictureBox412.Location = point413;
               this.PictureBox412.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox412, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox412, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 413:
               this.PictureBox413.Visible = true;
@@ -23991,7 +23991,7 @@ namespace MuMaker
               Point point414 = point1;
               pictureBox413.Location = point414;
               this.PictureBox413.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox413, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox413, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 414:
               this.PictureBox414.Visible = true;
@@ -24000,7 +24000,7 @@ namespace MuMaker
               Point point415 = point1;
               pictureBox414.Location = point415;
               this.PictureBox414.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox414, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox414, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 415:
               this.PictureBox415.Visible = true;
@@ -24009,7 +24009,7 @@ namespace MuMaker
               Point point416 = point1;
               pictureBox415.Location = point416;
               this.PictureBox415.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox415, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox415, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 416:
               this.PictureBox416.Visible = true;
@@ -24018,7 +24018,7 @@ namespace MuMaker
               Point point417 = point1;
               pictureBox416.Location = point417;
               this.PictureBox416.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox416, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox416, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 417:
               this.PictureBox417.Visible = true;
@@ -24027,7 +24027,7 @@ namespace MuMaker
               Point point418 = point1;
               pictureBox417.Location = point418;
               this.PictureBox417.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox417, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox417, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 418:
               this.PictureBox418.Visible = true;
@@ -24036,7 +24036,7 @@ namespace MuMaker
               Point point419 = point1;
               pictureBox418.Location = point419;
               this.PictureBox418.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox418, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox418, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 419:
               this.PictureBox419.Visible = true;
@@ -24045,7 +24045,7 @@ namespace MuMaker
               Point point420 = point1;
               pictureBox419.Location = point420;
               this.PictureBox419.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox419, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox419, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 420:
               this.PictureBox420.Visible = true;
@@ -24054,7 +24054,7 @@ namespace MuMaker
               Point point421 = point1;
               pictureBox420.Location = point421;
               this.PictureBox420.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox420, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox420, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 421:
               this.PictureBox421.Visible = true;
@@ -24063,7 +24063,7 @@ namespace MuMaker
               Point point422 = point1;
               pictureBox421.Location = point422;
               this.PictureBox421.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox421, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox421, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 422:
               this.PictureBox422.Visible = true;
@@ -24072,7 +24072,7 @@ namespace MuMaker
               Point point423 = point1;
               pictureBox422.Location = point423;
               this.PictureBox422.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox422, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox422, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 423:
               this.PictureBox423.Visible = true;
@@ -24081,7 +24081,7 @@ namespace MuMaker
               Point point424 = point1;
               pictureBox423.Location = point424;
               this.PictureBox423.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox423, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox423, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 424:
               this.PictureBox424.Visible = true;
@@ -24090,7 +24090,7 @@ namespace MuMaker
               Point point425 = point1;
               pictureBox424.Location = point425;
               this.PictureBox424.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox424, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox424, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 425:
               this.PictureBox425.Visible = true;
@@ -24099,7 +24099,7 @@ namespace MuMaker
               Point point426 = point1;
               pictureBox425.Location = point426;
               this.PictureBox425.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox425, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox425, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 426:
               this.PictureBox426.Visible = true;
@@ -24108,7 +24108,7 @@ namespace MuMaker
               Point point427 = point1;
               pictureBox426.Location = point427;
               this.PictureBox426.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox426, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox426, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 427:
               this.PictureBox427.Visible = true;
@@ -24117,7 +24117,7 @@ namespace MuMaker
               Point point428 = point1;
               pictureBox427.Location = point428;
               this.PictureBox427.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox427, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox427, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 428:
               this.PictureBox428.Visible = true;
@@ -24126,7 +24126,7 @@ namespace MuMaker
               Point point429 = point1;
               pictureBox428.Location = point429;
               this.PictureBox428.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox428, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox428, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 429:
               this.PictureBox429.Visible = true;
@@ -24135,7 +24135,7 @@ namespace MuMaker
               Point point430 = point1;
               pictureBox429.Location = point430;
               this.PictureBox429.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox429, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox429, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 430:
               this.PictureBox430.Visible = true;
@@ -24144,7 +24144,7 @@ namespace MuMaker
               Point point431 = point1;
               pictureBox430.Location = point431;
               this.PictureBox430.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox430, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox430, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 431:
               this.PictureBox431.Visible = true;
@@ -24153,7 +24153,7 @@ namespace MuMaker
               Point point432 = point1;
               pictureBox431.Location = point432;
               this.PictureBox431.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox431, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox431, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 432:
               this.PictureBox432.Visible = true;
@@ -24162,7 +24162,7 @@ namespace MuMaker
               Point point433 = point1;
               pictureBox432.Location = point433;
               this.PictureBox432.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox432, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox432, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 433:
               this.PictureBox433.Visible = true;
@@ -24171,7 +24171,7 @@ namespace MuMaker
               Point point434 = point1;
               pictureBox433.Location = point434;
               this.PictureBox433.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox433, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox433, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 434:
               this.PictureBox434.Visible = true;
@@ -24180,7 +24180,7 @@ namespace MuMaker
               Point point435 = point1;
               pictureBox434.Location = point435;
               this.PictureBox434.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox434, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox434, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 435:
               this.PictureBox435.Visible = true;
@@ -24189,7 +24189,7 @@ namespace MuMaker
               Point point436 = point1;
               pictureBox435.Location = point436;
               this.PictureBox435.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox435, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox435, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 436:
               this.PictureBox436.Visible = true;
@@ -24198,7 +24198,7 @@ namespace MuMaker
               Point point437 = point1;
               pictureBox436.Location = point437;
               this.PictureBox436.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox436, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox436, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 437:
               this.PictureBox437.Visible = true;
@@ -24207,7 +24207,7 @@ namespace MuMaker
               Point point438 = point1;
               pictureBox437.Location = point438;
               this.PictureBox437.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox437, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox437, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 438:
               this.PictureBox438.Visible = true;
@@ -24216,7 +24216,7 @@ namespace MuMaker
               Point point439 = point1;
               pictureBox438.Location = point439;
               this.PictureBox438.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox438, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox438, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 439:
               this.PictureBox439.Visible = true;
@@ -24225,7 +24225,7 @@ namespace MuMaker
               Point point440 = point1;
               pictureBox439.Location = point440;
               this.PictureBox439.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox439, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox439, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 440:
               this.PictureBox440.Visible = true;
@@ -24234,7 +24234,7 @@ namespace MuMaker
               Point point441 = point1;
               pictureBox440.Location = point441;
               this.PictureBox440.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox440, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox440, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 441:
               this.PictureBox441.Visible = true;
@@ -24243,7 +24243,7 @@ namespace MuMaker
               Point point442 = point1;
               pictureBox441.Location = point442;
               this.PictureBox441.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox441, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox441, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 442:
               this.PictureBox442.Visible = true;
@@ -24252,7 +24252,7 @@ namespace MuMaker
               Point point443 = point1;
               pictureBox442.Location = point443;
               this.PictureBox442.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox442, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox442, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 443:
               this.PictureBox443.Visible = true;
@@ -24261,7 +24261,7 @@ namespace MuMaker
               Point point444 = point1;
               pictureBox443.Location = point444;
               this.PictureBox443.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox443, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox443, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 444:
               this.PictureBox444.Visible = true;
@@ -24270,7 +24270,7 @@ namespace MuMaker
               Point point445 = point1;
               pictureBox444.Location = point445;
               this.PictureBox444.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox444, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox444, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 445:
               this.PictureBox445.Visible = true;
@@ -24279,7 +24279,7 @@ namespace MuMaker
               Point point446 = point1;
               pictureBox445.Location = point446;
               this.PictureBox445.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox445, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox445, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 446:
               this.PictureBox446.Visible = true;
@@ -24288,7 +24288,7 @@ namespace MuMaker
               Point point447 = point1;
               pictureBox446.Location = point447;
               this.PictureBox446.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox446, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox446, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 447:
               this.PictureBox447.Visible = true;
@@ -24297,7 +24297,7 @@ namespace MuMaker
               Point point448 = point1;
               pictureBox447.Location = point448;
               this.PictureBox447.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox447, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox447, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 448:
               this.PictureBox448.Visible = true;
@@ -24306,7 +24306,7 @@ namespace MuMaker
               Point point449 = point1;
               pictureBox448.Location = point449;
               this.PictureBox448.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox448, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox448, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 449:
               this.PictureBox449.Visible = true;
@@ -24315,7 +24315,7 @@ namespace MuMaker
               Point point450 = point1;
               pictureBox449.Location = point450;
               this.PictureBox449.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox449, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox449, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 450:
               this.PictureBox450.Visible = true;
@@ -24324,7 +24324,7 @@ namespace MuMaker
               Point point451 = point1;
               pictureBox450.Location = point451;
               this.PictureBox450.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox450, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox450, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 451:
               this.PictureBox451.Visible = true;
@@ -24333,7 +24333,7 @@ namespace MuMaker
               Point point452 = point1;
               pictureBox451.Location = point452;
               this.PictureBox451.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox451, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox451, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 452:
               this.PictureBox452.Visible = true;
@@ -24342,7 +24342,7 @@ namespace MuMaker
               Point point453 = point1;
               pictureBox452.Location = point453;
               this.PictureBox452.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox452, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox452, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 453:
               this.PictureBox453.Visible = true;
@@ -24351,7 +24351,7 @@ namespace MuMaker
               Point point454 = point1;
               pictureBox453.Location = point454;
               this.PictureBox453.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox453, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox453, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 454:
               this.PictureBox454.Visible = true;
@@ -24360,7 +24360,7 @@ namespace MuMaker
               Point point455 = point1;
               pictureBox454.Location = point455;
               this.PictureBox454.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox454, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox454, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 455:
               this.PictureBox455.Visible = true;
@@ -24369,7 +24369,7 @@ namespace MuMaker
               Point point456 = point1;
               pictureBox455.Location = point456;
               this.PictureBox455.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox455, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox455, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 456:
               this.PictureBox456.Visible = true;
@@ -24378,7 +24378,7 @@ namespace MuMaker
               Point point457 = point1;
               pictureBox456.Location = point457;
               this.PictureBox456.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox456, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox456, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 457:
               this.PictureBox457.Visible = true;
@@ -24387,7 +24387,7 @@ namespace MuMaker
               Point point458 = point1;
               pictureBox457.Location = point458;
               this.PictureBox457.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox457, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox457, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 458:
               this.PictureBox458.Visible = true;
@@ -24396,7 +24396,7 @@ namespace MuMaker
               Point point459 = point1;
               pictureBox458.Location = point459;
               this.PictureBox458.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox458, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox458, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 459:
               this.PictureBox459.Visible = true;
@@ -24405,7 +24405,7 @@ namespace MuMaker
               Point point460 = point1;
               pictureBox459.Location = point460;
               this.PictureBox459.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox459, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox459, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 460:
               this.PictureBox460.Visible = true;
@@ -24414,7 +24414,7 @@ namespace MuMaker
               Point point461 = point1;
               pictureBox460.Location = point461;
               this.PictureBox460.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox460, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox460, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 461:
               this.PictureBox461.Visible = true;
@@ -24423,7 +24423,7 @@ namespace MuMaker
               Point point462 = point1;
               pictureBox461.Location = point462;
               this.PictureBox461.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox461, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox461, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 462:
               this.PictureBox462.Visible = true;
@@ -24432,7 +24432,7 @@ namespace MuMaker
               Point point463 = point1;
               pictureBox462.Location = point463;
               this.PictureBox462.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox462, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox462, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 463:
               this.PictureBox463.Visible = true;
@@ -24441,7 +24441,7 @@ namespace MuMaker
               Point point464 = point1;
               pictureBox463.Location = point464;
               this.PictureBox463.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox463, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox463, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 464:
               this.PictureBox464.Visible = true;
@@ -24450,7 +24450,7 @@ namespace MuMaker
               Point point465 = point1;
               pictureBox464.Location = point465;
               this.PictureBox464.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox464, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox464, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 465:
               this.PictureBox465.Visible = true;
@@ -24459,7 +24459,7 @@ namespace MuMaker
               Point point466 = point1;
               pictureBox465.Location = point466;
               this.PictureBox465.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox465, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox465, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 466:
               this.PictureBox466.Visible = true;
@@ -24468,7 +24468,7 @@ namespace MuMaker
               Point point467 = point1;
               pictureBox466.Location = point467;
               this.PictureBox466.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox466, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox466, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 467:
               this.PictureBox467.Visible = true;
@@ -24477,7 +24477,7 @@ namespace MuMaker
               Point point468 = point1;
               pictureBox467.Location = point468;
               this.PictureBox467.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox467, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox467, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 468:
               this.PictureBox468.Visible = true;
@@ -24486,7 +24486,7 @@ namespace MuMaker
               Point point469 = point1;
               pictureBox468.Location = point469;
               this.PictureBox468.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox468, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox468, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 469:
               this.PictureBox469.Visible = true;
@@ -24495,7 +24495,7 @@ namespace MuMaker
               Point point470 = point1;
               pictureBox469.Location = point470;
               this.PictureBox469.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox469, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox469, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 470:
               this.PictureBox470.Visible = true;
@@ -24504,7 +24504,7 @@ namespace MuMaker
               Point point471 = point1;
               pictureBox470.Location = point471;
               this.PictureBox470.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox470, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox470, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 471:
               this.PictureBox471.Visible = true;
@@ -24513,7 +24513,7 @@ namespace MuMaker
               Point point472 = point1;
               pictureBox471.Location = point472;
               this.PictureBox471.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox471, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox471, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 472:
               this.PictureBox472.Visible = true;
@@ -24522,7 +24522,7 @@ namespace MuMaker
               Point point473 = point1;
               pictureBox472.Location = point473;
               this.PictureBox472.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox472, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox472, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 473:
               this.PictureBox473.Visible = true;
@@ -24531,7 +24531,7 @@ namespace MuMaker
               Point point474 = point1;
               pictureBox473.Location = point474;
               this.PictureBox473.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox473, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox473, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 474:
               this.PictureBox474.Visible = true;
@@ -24540,7 +24540,7 @@ namespace MuMaker
               Point point475 = point1;
               pictureBox474.Location = point475;
               this.PictureBox474.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox474, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox474, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 475:
               this.PictureBox475.Visible = true;
@@ -24549,7 +24549,7 @@ namespace MuMaker
               Point point476 = point1;
               pictureBox475.Location = point476;
               this.PictureBox475.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox475, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox475, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 476:
               this.PictureBox476.Visible = true;
@@ -24558,7 +24558,7 @@ namespace MuMaker
               Point point477 = point1;
               pictureBox476.Location = point477;
               this.PictureBox476.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox476, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox476, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 477:
               this.PictureBox477.Visible = true;
@@ -24567,7 +24567,7 @@ namespace MuMaker
               Point point478 = point1;
               pictureBox477.Location = point478;
               this.PictureBox477.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox477, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox477, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 478:
               this.PictureBox478.Visible = true;
@@ -24576,7 +24576,7 @@ namespace MuMaker
               Point point479 = point1;
               pictureBox478.Location = point479;
               this.PictureBox478.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox478, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox478, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 479:
               this.PictureBox479.Visible = true;
@@ -24585,7 +24585,7 @@ namespace MuMaker
               Point point480 = point1;
               pictureBox479.Location = point480;
               this.PictureBox479.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox479, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox479, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 480:
               this.PictureBox480.Visible = true;
@@ -24594,7 +24594,7 @@ namespace MuMaker
               Point point481 = point1;
               pictureBox480.Location = point481;
               this.PictureBox480.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox480, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox480, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 481:
               this.PictureBox481.Visible = true;
@@ -24603,7 +24603,7 @@ namespace MuMaker
               Point point482 = point1;
               pictureBox481.Location = point482;
               this.PictureBox481.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox481, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox481, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 482:
               this.PictureBox482.Visible = true;
@@ -24612,7 +24612,7 @@ namespace MuMaker
               Point point483 = point1;
               pictureBox482.Location = point483;
               this.PictureBox482.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox482, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox482, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 483:
               this.PictureBox483.Visible = true;
@@ -24621,7 +24621,7 @@ namespace MuMaker
               Point point484 = point1;
               pictureBox483.Location = point484;
               this.PictureBox483.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox483, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox483, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 484:
               this.PictureBox484.Visible = true;
@@ -24630,7 +24630,7 @@ namespace MuMaker
               Point point485 = point1;
               pictureBox484.Location = point485;
               this.PictureBox484.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox484, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox484, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 485:
               this.PictureBox485.Visible = true;
@@ -24639,7 +24639,7 @@ namespace MuMaker
               Point point486 = point1;
               pictureBox485.Location = point486;
               this.PictureBox485.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox485, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox485, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 486:
               this.PictureBox486.Visible = true;
@@ -24648,7 +24648,7 @@ namespace MuMaker
               Point point487 = point1;
               pictureBox486.Location = point487;
               this.PictureBox486.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox486, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox486, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 487:
               this.PictureBox487.Visible = true;
@@ -24657,7 +24657,7 @@ namespace MuMaker
               Point point488 = point1;
               pictureBox487.Location = point488;
               this.PictureBox487.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox487, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox487, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 488:
               this.PictureBox488.Visible = true;
@@ -24666,7 +24666,7 @@ namespace MuMaker
               Point point489 = point1;
               pictureBox488.Location = point489;
               this.PictureBox488.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox488, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox488, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 489:
               this.PictureBox489.Visible = true;
@@ -24675,7 +24675,7 @@ namespace MuMaker
               Point point490 = point1;
               pictureBox489.Location = point490;
               this.PictureBox489.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox489, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox489, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 490:
               this.PictureBox490.Visible = true;
@@ -24684,7 +24684,7 @@ namespace MuMaker
               Point point491 = point1;
               pictureBox490.Location = point491;
               this.PictureBox490.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox490, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox490, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 491:
               this.PictureBox491.Visible = true;
@@ -24693,7 +24693,7 @@ namespace MuMaker
               Point point492 = point1;
               pictureBox491.Location = point492;
               this.PictureBox491.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox491, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox491, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 492:
               this.PictureBox492.Visible = true;
@@ -24702,7 +24702,7 @@ namespace MuMaker
               Point point493 = point1;
               pictureBox492.Location = point493;
               this.PictureBox492.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox492, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox492, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 493:
               this.PictureBox493.Visible = true;
@@ -24711,7 +24711,7 @@ namespace MuMaker
               Point point494 = point1;
               pictureBox493.Location = point494;
               this.PictureBox493.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox493, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox493, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 494:
               this.PictureBox494.Visible = true;
@@ -24720,7 +24720,7 @@ namespace MuMaker
               Point point495 = point1;
               pictureBox494.Location = point495;
               this.PictureBox494.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox494, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox494, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 495:
               this.PictureBox495.Visible = true;
@@ -24729,7 +24729,7 @@ namespace MuMaker
               Point point496 = point1;
               pictureBox495.Location = point496;
               this.PictureBox495.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox495, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox495, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 496:
               this.PictureBox496.Visible = true;
@@ -24738,7 +24738,7 @@ namespace MuMaker
               Point point497 = point1;
               pictureBox496.Location = point497;
               this.PictureBox496.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox496, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox496, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 497:
               this.PictureBox497.Visible = true;
@@ -24747,7 +24747,7 @@ namespace MuMaker
               Point point498 = point1;
               pictureBox497.Location = point498;
               this.PictureBox497.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox497, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox497, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 498:
               this.PictureBox498.Visible = true;
@@ -24756,7 +24756,7 @@ namespace MuMaker
               Point point499 = point1;
               pictureBox498.Location = point499;
               this.PictureBox498.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox498, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox498, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 499:
               this.PictureBox499.Visible = true;
@@ -24765,7 +24765,7 @@ namespace MuMaker
               Point point500 = point1;
               pictureBox499.Location = point500;
               this.PictureBox499.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox499, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox499, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
             case 500:
               this.PictureBox500.Visible = true;
@@ -24774,7 +24774,7 @@ namespace MuMaker
               Point point501 = point1;
               pictureBox500.Location = point501;
               this.PictureBox500.BackColor = color;
-              this.Emergente.SetToolTip((Control) this.PictureBox500, Class28.sqlDataReader_2[1].ToString());
+              this.Emergente.SetToolTip((Control) this.PictureBox500, SqlConnectionPool.sqlDataReader_2[1].ToString());
               break;
           }
           if (num2 < 500)
@@ -24782,7 +24782,7 @@ namespace MuMaker
           else
             break;
         }
-        Class28.sqlDataReader_2.Close();
+        SqlConnectionPool.sqlDataReader_2.Close();
       }
       catch (Exception ex)
       {
@@ -24790,18 +24790,18 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_6();
+      ConnectionManager.smethod_6();
     }
 
     public object Traducir()
     {
-      this.Maps.Text = Conversions.ToString(Class30.object_74);
-      this.Search.Text = Conversions.ToString(Class30.object_4);
-      this.Account.Text = Conversions.ToString(Class30.object_5);
-      this.Chart.Text = Conversions.ToString(Class30.object_6);
-      this.Charts.Text = Conversions.ToString(Class30.object_6);
-      this.Aplicar.Text = Conversions.ToString(Class30.object_75);
-      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Maps.Text = Conversions.ToString(LocalizedStrings.object_74);
+      this.Search.Text = Conversions.ToString(LocalizedStrings.object_4);
+      this.Account.Text = Conversions.ToString(LocalizedStrings.object_5);
+      this.Chart.Text = Conversions.ToString(LocalizedStrings.object_6);
+      this.Charts.Text = Conversions.ToString(LocalizedStrings.object_6);
+      this.Aplicar.Text = Conversions.ToString(LocalizedStrings.object_75);
+      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       return (object) true;
     }
@@ -24809,8 +24809,8 @@ namespace MuMaker
     private void MoveMaker_Load(object sender, EventArgs e)
     {
       VentanaBarraLoad.DefInstance.Carga.Value = 10;
-      Class18.smethod_47();
-      Class10.smethod_4();
+      IniHelper.smethod_47();
+      GameDataLoader.smethod_4();
       VentanaBarraLoad.DefInstance.Carga.Value = 20;
       this.CargarMapas();
       VentanaBarraLoad.DefInstance.Carga.Value = 40;
@@ -24818,10 +24818,10 @@ namespace MuMaker
       VentanaBarraLoad.DefInstance.Carga.Value = 60;
       this.Traducir();
       VentanaBarraLoad.DefInstance.Carga.Value = 80;
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.RestriccionesOFF();
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
       VentanaBarraLoad.DefInstance.Carga.Value = 100;
       VentanaBarraLoad.DefInstance.Hide();
@@ -24830,19 +24830,19 @@ namespace MuMaker
 
     private void ListaMapas_SelectedIndexChanged(object sender, EventArgs e)
     {
-      this.FotoMapa.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Conversions.ToString(Class17.smethod_0(RuntimeHelpers.GetObjectValue(this.ListaMapas.SelectedItem))))));
+      this.FotoMapa.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) Conversions.ToString(MapImageHelper.smethod_0(RuntimeHelpers.GetObjectValue(this.ListaMapas.SelectedItem))))));
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
     private void Reloj_Tick(object sender, EventArgs e)
     {
-      new Thread(new ThreadStart(Class12.smethod_0))
+      new Thread(new ThreadStart(AccountStatusManager.smethod_0))
       {
         IsBackground = true
       }.Start();
-      if (Class22.struct0_0.bool_0)
+      if (AccountData.CurrentAccount.bool_0)
       {
         this.OnlineOFF.Hide();
         this.OnlineON.Show();
@@ -24856,54 +24856,54 @@ namespace MuMaker
 
     private void method_5(object sender, EventArgs e)
     {
-      if (Operators.CompareString(Class22.struct1_0.string_1, "ALL", false) == 0)
+      if (Operators.CompareString(AccountData.CurrentCharacter.string_1, "ALL", false) == 0)
       {
         this.method_4();
-        Class8.smethod_11();
+        DatabaseOperations.smethod_11();
         this.DatosPJSelect();
       }
       else
       {
-        Class8.smethod_11();
+        DatabaseOperations.smethod_11();
         this.DatosPJSelect();
-        Class12.smethod_0();
+        AccountStatusManager.smethod_0();
       }
     }
 
     private void Desconectador_Click(object sender, EventArgs e)
     {
       this.PJOnline.Focus();
-      Class12.smethod_1();
-      Class12.smethod_0();
+      AccountStatusManager.smethod_1();
+      AccountStatusManager.smethod_0();
     }
 
     private void BanUnBan_Click(object sender, EventArgs e)
     {
       this.PJOnline.Focus();
-      Class12.smethod_2((object) this.Baneado.Text, (object) this.Acount.Text);
-      Class22.struct1_0.string_1 = "ALL";
+      AccountStatusManager.smethod_2((object) this.Baneado.Text, (object) this.Acount.Text);
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.RestriccionesOFF();
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
     private void Aplicar_Click(object sender, EventArgs e)
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
         if (Operators.ConditionalCompareObjectNotEqual(this.ListaMapas.SelectedItem, (object) "999 [ UNKNOWN ]", false))
         {
-          Class28.sqlCommand_1.CommandText = "UPDATE Character SET MapNumber=" + Conversions.ToString(this.ListaMapas.SelectedIndex) + ", MapPosX=" + this.XX.Text + ", MapPosY=" + this.YY.Text + "  WHERE AccountID='" + Class22.struct1_0.string_0 + "' AND Name='" + Class22.struct1_0.string_1 + "'";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          Class28.sqlDataReader_1.Close();
+          SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET MapNumber=" + Conversions.ToString(this.ListaMapas.SelectedIndex) + ", MapPosX=" + this.XX.Text + ", MapPosY=" + this.YY.Text + "  WHERE AccountID='" + AccountData.CurrentCharacter.string_0 + "' AND Name='" + AccountData.CurrentCharacter.string_1 + "'";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          SqlConnectionPool.sqlDataReader_1.Close();
         }
         else
         {
-          int num = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_99), MsgBoxStyle.OkOnly, (object) null);
+          int num = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_99), MsgBoxStyle.OkOnly, (object) null);
         }
       }
       catch (Exception ex)
@@ -24912,11 +24912,11 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      Class22.struct1_0.string_1 = "ALL";
+      ConnectionManager.smethod_5();
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.RestriccionesOFF();
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
@@ -24925,16 +24925,16 @@ namespace MuMaker
       this.PJOnline.Focus();
       if (this.PersonajeSearch.Text.Length <= 0)
         return;
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT MapNumber FROM Character WHERE Name='" + this.PersonajeSearch.Text + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        Class28.sqlDataReader_1.Read();
-        this.ListaMapas.SelectedIndex = Conversions.ToInteger(Class28.sqlDataReader_1[0].ToString());
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT MapNumber FROM Character WHERE Name='" + this.PersonajeSearch.Text + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlDataReader_1.Read();
+        this.ListaMapas.SelectedIndex = Conversions.ToInteger(SqlConnectionPool.sqlDataReader_1[0].ToString());
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -24942,8 +24942,8 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      Class22.struct1_0.string_1 = this.PersonajeSearch.Text;
+      ConnectionManager.smethod_5();
+      AccountData.CurrentCharacter.string_1 = this.PersonajeSearch.Text;
       this.PJOnline.SelectedItem = (object) this.PersonajeSearch.Text;
     }
 
@@ -24979,9 +24979,9 @@ namespace MuMaker
     {
       if (!this.PH.Checked & !this.PK.Checked)
         this.PN.Checked = true;
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
@@ -24989,9 +24989,9 @@ namespace MuMaker
     {
       if (!this.PN.Checked & !this.PK.Checked)
         this.PH.Checked = true;
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
@@ -24999,108 +24999,108 @@ namespace MuMaker
     {
       if (!this.PH.Checked & !this.PN.Checked)
         this.PK.Checked = true;
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
     private void Todos_CheckedChanged(object sender, EventArgs e)
     {
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
     private void Baneados_CheckedChanged(object sender, EventArgs e)
     {
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
     private void GameMaster_CheckedChanged(object sender, EventArgs e)
     {
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.RestriccionesOFF();
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
     private void VerTodosPJ_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class22.struct1_0.string_1 = "ALL";
+      AccountData.CurrentCharacter.string_1 = "ALL";
       this.RestriccionesOFF();
       this.method_4();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
     }
 
     private void PJOnline_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class22.struct1_0.string_1 = Conversions.ToString(this.PJOnline.SelectedItem);
-      Class22.struct1_0.int_0 = this.ListaMapas.SelectedIndex;
+      AccountData.CurrentCharacter.string_1 = Conversions.ToString(this.PJOnline.SelectedItem);
+      AccountData.CurrentCharacter.int_0 = this.ListaMapas.SelectedIndex;
       this.RestriccionesON();
-      Class8.smethod_11();
+      DatabaseOperations.smethod_11();
       this.DatosPJSelect();
-      Class12.smethod_0();
+      AccountStatusManager.smethod_0();
       this.CheckOnLine();
     }
 
     private void method_12(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_13(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_13();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_14(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
     }
 
     private void method_15(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_101();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_101();
     }
 
     private void method_16(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
     }
 
     private void method_17(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_87();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_87();
     }
 
     private void method_18(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_19(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void MoveMaker_Closing(object sender, CancelEventArgs e)
     {
-      Class18.smethod_34();
+      IniHelper.smethod_34();
     }
 
     private void PersonajeSearch_KeyPress(object sender, KeyPressEventArgs e)

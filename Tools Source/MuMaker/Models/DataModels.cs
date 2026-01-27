@@ -1,382 +1,201 @@
 // MuMaker - Data Models
-// Contains all data structures for accounts, characters, guilds, and items
+// Contains all data structures for accounts, characters, guilds, items, and warehouses
+// Maintains backward compatibility with original field names (string_0, string_1, etc.)
+
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace MuMaker.Models
 {
-    #region Account Data
+    #region Account Data (Class22)
+
     /// <summary>
-    /// Account information structure
+    /// Account information structure (Struct0)
     /// </summary>
-    public struct AccountData
+    public struct Struct0
     {
-        /// <summary>Account ID (username)</summary>
-        public string AccountId;
-
-        /// <summary>Account ID for display</summary>
-        public string DisplayAccountId;
-
-        /// <summary>Account password</summary>
-        public string Password;
-
-        /// <summary>Serial number</summary>
-        public string SerialNumber;
-
-        /// <summary>Email address</summary>
-        public string Email;
-
-        /// <summary>Block code (ban status)</summary>
-        public string BlockCode;
-
-        /// <summary>Account is loaded flag</summary>
-        public bool IsLoaded;
+        public string string_0;  // Account number/index
+        public string string_1;  // Account ID (username)
+        public string string_2;  // Password
+        public string string_3;  // Personal ID / Serial
+        public string string_4;  // Email
+        public string string_5;  // Block code (ban status)
+        public bool bool_0;      // Is online/loaded
     }
 
     /// <summary>
-    /// Manages current account data
+    /// Character information structure (Struct1)
     /// </summary>
-    public static class AccountManager
+    public struct Struct1
     {
-        public static AccountData CurrentAccount;
+        public string string_0;  // Account ID
+        public string string_1;  // Character name
+        public string string_2;  // Level
+        public string string_3;  // Level up points
+        public string string_4;  // Experience
+        public string string_5;  // Strength
+        public string string_6;  // Dexterity (Agility)
+        public string string_7;  // Vitality
+        public string string_8;  // Energy
+        public string string_9;  // Leadership (Command)
+        public string string_10; // Fruit points
+        public string string_11; // PK level
+        public string string_12; // PK count
+        public string string_13; // PK time
+        public string string_14; // Character class
+        public string string_15; // Control code (GM)
+        public string string_16; // Reset count
+        public string string_17; // Quest data
+        public string string_18; // Magic/Skill list
+        public int int_0;        // Map number
+        public int int_1;        // Map X position
+        public int int_2;        // Map Y position
     }
+
+    /// <summary>
+    /// Warehouse information structure (Struct2)
+    /// </summary>
+    public struct Struct2
+    {
+        public string string_0;  // Warehouse items (hex)
+        public string string_1;  // Warehouse money
+        public string string_2;  // Inventory items (hex)
+        public string string_3;  // Inventory money
+        public int int_0;        // Extended warehouse number
+    }
+
+    /// <summary>
+    /// Account data manager - replaces Class22
+    /// </summary>
+    [StandardModule]
+    internal sealed class AccountData
+    {
+        public static Struct0 struct0_0;  // Current account
+        public static Struct1 struct1_0;  // Current character
+        public static Struct1 struct1_1;  // Secondary character (for stats comparison)
+        public static Struct2 struct2_0;  // Current warehouse
+
+        // Descriptive aliases
+        public static Struct0 CurrentAccount { get => struct0_0; set => struct0_0 = value; }
+        public static Struct1 CurrentCharacter { get => struct1_0; set => struct1_0 = value; }
+        public static Struct1 SecondaryCharacter { get => struct1_1; set => struct1_1 = value; }
+        public static Struct2 CurrentWarehouse { get => struct2_0; set => struct2_0 = value; }
+    }
+
     #endregion
 
-    #region Character Data
+    #region Guild Data (Class23)
+
     /// <summary>
-    /// Character information structure
+    /// Guild information structure (Struct3)
     /// </summary>
-    public struct CharacterData
+    public struct Struct3
     {
-        /// <summary>Associated account ID</summary>
-        public string AccountId;
-
-        /// <summary>Character name</summary>
-        public string Name;
-
-        /// <summary>Character level</summary>
-        public string Level;
-
-        /// <summary>Level up points available</summary>
-        public string LevelUpPoints;
-
-        /// <summary>Experience points</summary>
-        public string Experience;
-
-        /// <summary>Strength stat</summary>
-        public string Strength;
-
-        /// <summary>Dexterity stat</summary>
-        public string Dexterity;
-
-        /// <summary>Vitality stat</summary>
-        public string Vitality;
-
-        /// <summary>Energy stat</summary>
-        public string Energy;
-
-        /// <summary>Leadership stat (for Dark Lord)</summary>
-        public string Leadership;
-
-        /// <summary>Fruit points</summary>
-        public string FruitPoints;
-
-        /// <summary>PK level</summary>
-        public string PkLevel;
-
-        /// <summary>PK count</summary>
-        public string PkCount;
-
-        /// <summary>PK time</summary>
-        public string PkTime;
-
-        /// <summary>Character class</summary>
-        public string CharacterClass;
-
-        /// <summary>Control code (GM level)</summary>
-        public string ControlCode;
-
-        /// <summary>Reset count</summary>
-        public string ResetCount;
-
-        /// <summary>Quest data (hex string)</summary>
-        public string QuestData;
-
-        /// <summary>Magic/Skill list (hex string)</summary>
-        public string MagicList;
-
-        /// <summary>Map number</summary>
-        public int MapNumber;
-
-        /// <summary>Map X position</summary>
-        public int MapPosX;
-
-        /// <summary>Map Y position</summary>
-        public int MapPosY;
+        public string string_0;  // Guild master name
+        public string string_1;  // Guild name
+        public string string_2;  // Guild mark/emblem (hex)
+        public string string_3;  // Union number
+        public string string_4;  // Rival number
+        public string string_5;  // Notice/message
+        public string string_6;  // Score
+        public string string_7;  // Union guild name
+        public string string_8;  // Rival guild name
+        public string string_9;  // Guild type
+        public string string_10; // Member count
     }
 
     /// <summary>
-    /// Default character class stats
+    /// Guild data manager - replaces Class23
     /// </summary>
-    public struct DefaultClassStats
+    [StandardModule]
+    internal sealed class GuildData
     {
-        public string Strength;
-        public string Dexterity;
-        public string Vitality;
-        public string Energy;
-        public string Leadership;
-        public string Level;
-        public string LevelUpPoints;
+        public static Struct3 struct3_0;  // Current guild
+
+        // Descriptive alias
+        public static Struct3 CurrentGuild { get => struct3_0; set => struct3_0 = value; }
     }
 
-    /// <summary>
-    /// Manages current character data
-    /// </summary>
-    public static class CharacterManager
-    {
-        public static CharacterData CurrentCharacter;
-        public static CharacterData DefaultStats;
-    }
     #endregion
 
-    #region Warehouse Data
+    #region Item Data (Class24)
+
     /// <summary>
-    /// Warehouse/Inventory data structure
+    /// Item information structure (Struct4)
+    /// Contains parsed item data from hex string
     /// </summary>
-    public struct WarehouseData
+    public struct Struct4
     {
-        /// <summary>Warehouse items (hex string)</summary>
-        public string WarehouseItems;
+        // Basic item info
+        public string string_0;  // Item number/index
+        public string string_1;  // Item type
+        public string string_2;  // Item ID
+        public string string_3;  // Item name
+        public string string_4;  // Width
+        public string string_5;  // Height
+        public string string_6;  // Depth
+        public string string_7;  // Durability
+        public string string_8;  // Reserved
 
-        /// <summary>Warehouse money</summary>
-        public string WarehouseMoney;
+        // Enhancement info
+        public string string_9;  // Item level (+0 to +15)
+        public string string_10; // Level display
+        public string string_11; // Base level requirement
+        public string string_12; // Additional option level
+        public string string_13; // Luck option display
+        public string string_14; // Skill option display
+        public string string_15; // Ancient type indicator
+        public string string_16; // Excellent options
+        public string string_17; // Harmony option
+        public string string_18; // Socket options
+        public string string_19; // Excellent prefix
 
-        /// <summary>Inventory items (hex string)</summary>
-        public string InventoryItems;
+        // Serial and display
+        public string string_20; // Serial number
+        public string string_21; // Set item options
+        public string string_22; // Additional display 1
+        public string string_23; // Additional display 2
+        public string string_24; // Additional display 3
+        public string string_25; // Additional display 4
+        public string string_26; // Additional display 5
+        public string string_27; // Additional display 6
+        public string string_28; // Additional display 7
+        public string string_29; // Additional display 8
+        public string string_30; // Additional display 9
+        public string string_31; // Additional display 10
+        public string string_32; // Set item name 1 (Ancient set)
+        public string string_33; // Set item name 2 (Ancient set)
 
-        /// <summary>Inventory money</summary>
-        public string InventoryMoney;
+        // Flags
+        public bool bool_0;  // Has option
+        public bool bool_1;  // Has luck
+        public bool bool_2;  // Has skill
+        public bool bool_3;  // Is ancient
+        public bool bool_4;  // Has socket
 
-        /// <summary>Extended warehouse number</summary>
-        public int ExtendedWarehouseNumber;
+        // Numeric values
+        public int int_0;   // Excellent value count
+        public int int_1;   // Slot position
+        public int int_2;   // Refinery value
+        public int int_3;   // Item database index
+        public int int_4;   // Jewel of Harmony value
+        public int int_5;   // Set item value
     }
 
     /// <summary>
-    /// Manages warehouse data
+    /// Item data manager - replaces Class24
     /// </summary>
-    public static class WarehouseManager
+    [StandardModule]
+    internal sealed class ItemData
     {
-        public static WarehouseData CurrentWarehouse;
-    }
-    #endregion
+        public static Struct4 struct4_0;  // Current item (being edited)
+        public static Struct4 struct4_1;  // Temp item (for display/parsing)
+        public static Struct4 struct4_2;  // Item database info (loaded from DB)
 
-    #region Guild Data
-    /// <summary>
-    /// Guild information structure
-    /// </summary>
-    public struct GuildData
-    {
-        /// <summary>Guild master name</summary>
-        public string MasterName;
-
-        /// <summary>Guild name</summary>
-        public string GuildName;
-
-        /// <summary>Guild mark/emblem (hex string)</summary>
-        public string GuildMark;
-
-        /// <summary>Guild union number</summary>
-        public string UnionNumber;
-
-        /// <summary>Rival guild number</summary>
-        public string RivalNumber;
-
-        /// <summary>Guild notice/message</summary>
-        public string Notice;
-
-        /// <summary>Guild score</summary>
-        public string Score;
-
-        /// <summary>Reserved field 1</summary>
-        public string Reserved1;
-
-        /// <summary>Reserved field 2</summary>
-        public string Reserved2;
-
-        /// <summary>Guild type</summary>
-        public string GuildType;
-
-        /// <summary>Member count</summary>
-        public string MemberCount;
+        // Descriptive aliases
+        public static Struct4 CurrentItem { get => struct4_0; set => struct4_0 = value; }
+        public static Struct4 TempItem { get => struct4_1; set => struct4_1 = value; }
+        public static Struct4 ItemDatabaseInfo { get => struct4_2; set => struct4_2 = value; }
     }
 
-    /// <summary>
-    /// Manages guild data
-    /// </summary>
-    public static class GuildManager
-    {
-        public static GuildData CurrentGuild;
-    }
-    #endregion
-
-    #region Item Data
-    /// <summary>
-    /// Item information structure
-    /// </summary>
-    public struct ItemData
-    {
-        #region Basic Info
-        /// <summary>Item number/index</summary>
-        public string ItemNumber;
-
-        /// <summary>Item type</summary>
-        public string ItemType;
-
-        /// <summary>Item ID</summary>
-        public string ItemId;
-
-        /// <summary>Item name</summary>
-        public string Name;
-
-        /// <summary>Width in inventory slots</summary>
-        public string Width;
-
-        /// <summary>Height in inventory slots</summary>
-        public string Height;
-
-        /// <summary>Z dimension</summary>
-        public string Depth;
-
-        /// <summary>Durability</summary>
-        public string Durability;
-        #endregion
-
-        #region Enhancement
-        /// <summary>Reserved field</summary>
-        public string Reserved;
-
-        /// <summary>Item level (+0 to +15)</summary>
-        public string ItemLevel;
-
-        /// <summary>Level display string</summary>
-        public string LevelDisplay;
-
-        /// <summary>Base level requirement</summary>
-        public string BaseLevelRequirement;
-
-        /// <summary>Item additional level</summary>
-        public string AdditionalLevel;
-
-        /// <summary>Luck option</summary>
-        public string LuckOption;
-
-        /// <summary>Skill option</summary>
-        public string SkillOption;
-
-        /// <summary>Option level (additional damage/defense)</summary>
-        public string OptionLevel;
-        #endregion
-
-        #region Options Flags
-        /// <summary>Has option flag</summary>
-        public bool HasOption;
-
-        /// <summary>Has luck flag</summary>
-        public bool HasLuck;
-
-        /// <summary>Has skill flag</summary>
-        public bool HasSkill;
-
-        /// <summary>Is ancient item flag</summary>
-        public bool IsAncient;
-
-        /// <summary>Has socket flag</summary>
-        public bool HasSocket;
-        #endregion
-
-        #region Excellent Options
-        /// <summary>Set item option description</summary>
-        public string SetItemOption;
-
-        /// <summary>Reserved option field</summary>
-        public string ReservedOption;
-
-        /// <summary>Reserved option field 2</summary>
-        public string ReservedOption2;
-
-        /// <summary>Excellent options bitfield</summary>
-        public string ExcellentOptions;
-
-        /// <summary>Excellent option display</summary>
-        public string ExcellentDisplay;
-
-        /// <summary>Ancient option</summary>
-        public string AncientOption;
-
-        /// <summary>Harmony/Refinery option</summary>
-        public string HarmonyOption;
-
-        /// <summary>Socket options</summary>
-        public string SocketOptions;
-
-        /// <summary>Set item options display</summary>
-        public string SetOptionsDisplay;
-
-        /// <summary>Additional options display</summary>
-        public string AdditionalOptions;
-
-        /// <summary>Serial number (hex)</summary>
-        public string SerialNumber;
-        #endregion
-
-        #region Numeric Values
-        /// <summary>Excellent option value</summary>
-        public int ExcellentValue;
-
-        /// <summary>Slot position</summary>
-        public int SlotPosition;
-
-        /// <summary>Refinery option value</summary>
-        public int RefineryValue;
-
-        /// <summary>Jewel of Harmony option</summary>
-        public int JewelOfHarmonyValue;
-
-        /// <summary>Reserved int field</summary>
-        public int ReservedInt;
-
-        /// <summary>Set item value</summary>
-        public int SetItemValue;
-        #endregion
-
-        #region Set Item Info
-        /// <summary>Set item name 1</summary>
-        public string SetItemName1;
-
-        /// <summary>Set item name 2</summary>
-        public string SetItemName2;
-
-        /// <summary>Additional display fields</summary>
-        public string Display1;
-        public string Display2;
-        public string Display3;
-        public string Display4;
-        public string Display5;
-        public string Display6;
-        #endregion
-    }
-
-    /// <summary>
-    /// Manages item data for different contexts
-    /// </summary>
-    public static class ItemManager
-    {
-        /// <summary>Currently selected item</summary>
-        public static ItemData SelectedItem;
-
-        /// <summary>Item being viewed/edited</summary>
-        public static ItemData ViewedItem;
-
-        /// <summary>Template item for creation</summary>
-        public static ItemData TemplateItem;
-    }
     #endregion
 }

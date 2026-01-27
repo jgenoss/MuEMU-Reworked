@@ -7,41 +7,22 @@ namespace MuMaker.Helpers
 {
     /// <summary>
     /// Image paths for item backgrounds and grid cells
+    /// Maintains backward compatibility with original field names
     /// </summary>
     [StandardModule]
     internal sealed class ItemImagePaths
     {
-        /// <summary>Grid cell background image</summary>
-        public static string GridCellBackground = "Img\\Items\\fondo\\casilla.mmk";
-
-        /// <summary>32x32 pixel item background</summary>
-        public static string ItemBackground32x32 = "Img\\Items\\fondo\\32x32.mmk";
-
-        /// <summary>Clean/empty background image</summary>
-        public static string CleanBackground = "Img\\Items\\fondo\\clean.mmk";
-
-        /// <summary>Current item image path (dynamic)</summary>
-        public static string CurrentItemImagePath;
-
-        /// <summary>Secondary item image path</summary>
-        public static string SecondaryItemImagePath;
-
-        /// <summary>Tertiary item image path</summary>
-        public static string TertiaryItemImagePath;
-
-        /// <summary>Item display text 1</summary>
-        public static string ItemDisplayText1;
-
-        /// <summary>Item display text 2</summary>
-        public static string ItemDisplayText2;
-
-        /// <summary>Item display text 3</summary>
-        public static string ItemDisplayText3;
-
-        /// <summary>Current X position</summary>
-        public static int CurrentX;
-
-        /// <summary>Current Y position</summary>
-        public static int CurrentY;
+        // Original field names for backward compatibility
+        public static string string_6 = "Img\\Items\\fondo\\casilla.mmk";  // Grid cell
+        public static string string_7 = "Img\\Items\\fondo\\32x32.mmk";    // 32x32 background
+        public static string string_8 = "Img\\Items\\fondo\\clean.mmk";    // Clean background
+        public static string string_0;  // Current item image path
+        public static string string_1;  // Secondary item image path
+        public static string string_2;  // Tertiary item image path
+        public static string string_3;  // Item display text 1
+        public static string string_4;  // Item display text 2
+        public static string string_5;  // Item display text 3
+        public static int int_0;        // Current X position
+        public static int int_1;        // Current Y position
     }
 }

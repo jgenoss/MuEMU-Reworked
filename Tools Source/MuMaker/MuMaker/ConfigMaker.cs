@@ -1483,7 +1483,7 @@ namespace MuMaker
       this.Idiomas.TabIndex = 15;
       this.CreateReset.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.CreateReset.BackgroundImage = (Image) Class34.smethod_50();
+      this.CreateReset.BackgroundImage = (Image) EmbeddedResources.smethod_50();
       this.CreateReset.BackgroundImageLayout = ImageLayout.Center;
       this.CreateReset.Cursor = Cursors.Hand;
       this.CreateReset.FlatAppearance.BorderSize = 0;
@@ -1508,7 +1508,7 @@ namespace MuMaker
       this.CreateReset.UseVisualStyleBackColor = false;
       this.Aceptar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Aceptar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aceptar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
       this.Aceptar.BackgroundImageLayout = ImageLayout.Center;
       this.Aceptar.Cursor = Cursors.Hand;
       this.Aceptar.DialogResult = DialogResult.OK;
@@ -1585,7 +1585,7 @@ namespace MuMaker
       this.PictureBox12.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox12.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox12.Image = (Image) Class34.smethod_42();
+      this.PictureBox12.Image = (Image) EmbeddedResources.smethod_42();
       PictureBox pictureBox12_1 = this.PictureBox12;
       point1 = new Point(448, 90);
       Point point32 = point1;
@@ -1601,7 +1601,7 @@ namespace MuMaker
       this.PictureBox11.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox11.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox11.Image = (Image) Class34.smethod_78();
+      this.PictureBox11.Image = (Image) EmbeddedResources.smethod_78();
       PictureBox pictureBox11_1 = this.PictureBox11;
       point1 = new Point(412, 90);
       Point point33 = point1;
@@ -1617,7 +1617,7 @@ namespace MuMaker
       this.PictureBox8.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox8.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox8.Image = (Image) Class34.smethod_79();
+      this.PictureBox8.Image = (Image) EmbeddedResources.smethod_79();
       PictureBox pictureBox8_1 = this.PictureBox8;
       point1 = new Point(412, 65);
       Point point34 = point1;
@@ -1633,7 +1633,7 @@ namespace MuMaker
       this.PictureBox7.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox7.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox7.Image = (Image) Class34.smethod_98();
+      this.PictureBox7.Image = (Image) EmbeddedResources.smethod_98();
       PictureBox pictureBox7_1 = this.PictureBox7;
       point1 = new Point(376, 65);
       Point point35 = point1;
@@ -1649,7 +1649,7 @@ namespace MuMaker
       this.PictureBox10.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox10.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox10.Image = (Image) Class34.smethod_6();
+      this.PictureBox10.Image = (Image) EmbeddedResources.smethod_6();
       PictureBox pictureBox10_1 = this.PictureBox10;
       point1 = new Point(376, 90);
       Point point36 = point1;
@@ -1665,7 +1665,7 @@ namespace MuMaker
       this.PictureBox9.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox9.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox9.Image = (Image) Class34.smethod_103();
+      this.PictureBox9.Image = (Image) EmbeddedResources.smethod_103();
       PictureBox pictureBox9_1 = this.PictureBox9;
       point1 = new Point(448, 65);
       Point point37 = point1;
@@ -1681,7 +1681,7 @@ namespace MuMaker
       this.PictureBox6.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox6.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox6.Image = (Image) Class34.smethod_76();
+      this.PictureBox6.Image = (Image) EmbeddedResources.smethod_76();
       PictureBox pictureBox6_1 = this.PictureBox6;
       point1 = new Point(340, 65);
       Point point38 = point1;
@@ -1697,7 +1697,7 @@ namespace MuMaker
       this.PictureBox4.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox4.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox4.Image = (Image) Class34.smethod_63();
+      this.PictureBox4.Image = (Image) EmbeddedResources.smethod_63();
       PictureBox pictureBox4_1 = this.PictureBox4;
       point1 = new Point(268, 65);
       Point point39 = point1;
@@ -1713,7 +1713,7 @@ namespace MuMaker
       this.PictureBox3.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox3.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox3.Image = (Image) Class34.smethod_55();
+      this.PictureBox3.Image = (Image) EmbeddedResources.smethod_55();
       PictureBox pictureBox3_1 = this.PictureBox3;
       point1 = new Point(448, 39);
       Point point40 = point1;
@@ -1729,7 +1729,7 @@ namespace MuMaker
       this.PictureBox2.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox2.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox2.Image = (Image) Class34.smethod_59();
+      this.PictureBox2.Image = (Image) EmbeddedResources.smethod_59();
       PictureBox pictureBox2_1 = this.PictureBox2;
       point1 = new Point(412, 39);
       Point point41 = point1;
@@ -1745,7 +1745,7 @@ namespace MuMaker
       this.PictureBox1.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox1.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox1.Image = (Image) Class34.smethod_60();
+      this.PictureBox1.Image = (Image) EmbeddedResources.smethod_60();
       PictureBox pictureBox1_1 = this.PictureBox1;
       point1 = new Point(376, 39);
       Point point42 = point1;
@@ -1761,7 +1761,7 @@ namespace MuMaker
       this.PictureBox5.BorderStyle = BorderStyle.Fixed3D;
       this.PictureBox5.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox5.Image = (Image) Class34.smethod_99();
+      this.PictureBox5.Image = (Image) EmbeddedResources.smethod_99();
       PictureBox pictureBox5_1 = this.PictureBox5;
       point1 = new Point(304, 65);
       Point point43 = point1;
@@ -1775,7 +1775,7 @@ namespace MuMaker
       this.PictureBox5.TabStop = false;
       this.Cancelar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cancelar.BackgroundImage = (Image) Class34.smethod_36();
+      this.Cancelar.BackgroundImage = (Image) EmbeddedResources.smethod_36();
       this.Cancelar.BackgroundImageLayout = ImageLayout.Center;
       this.Cancelar.Cursor = Cursors.Hand;
       this.Cancelar.DialogResult = DialogResult.Cancel;
@@ -1846,7 +1846,7 @@ namespace MuMaker
       this.ReUsPw.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -1898,7 +1898,7 @@ namespace MuMaker
       this.Label8.TextAlign = ContentAlignment.MiddleLeft;
       this.CleanProcedures.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.CleanProcedures.BackgroundImage = (Image) Class34.smethod_4();
+      this.CleanProcedures.BackgroundImage = (Image) EmbeddedResources.smethod_4();
       this.CleanProcedures.BackgroundImageLayout = ImageLayout.Center;
       this.CleanProcedures.Cursor = Cursors.Hand;
       this.CleanProcedures.FlatAppearance.BorderSize = 0;
@@ -1938,7 +1938,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_47();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_47();
       this.CancelButton = (IButtonControl) this.Cerrar;
       size1 = new Size(492, 368);
       this.ClientSize = size1;
@@ -2036,7 +2036,7 @@ namespace MuMaker
 
     public object ReiniciarMuMaker()
     {
-      Class18.smethod_43();
+      IniHelper.smethod_43();
       try
       {
         object Left = (object) FileSystem.CurDir();
@@ -2060,8 +2060,8 @@ namespace MuMaker
     {
       if (this.ExtraWareHouse.Checked)
       {
-        object obj1 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
-        object obj2 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouse", "0");
+        object obj1 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+        object obj2 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouse", "0");
         this.ExtWareHouse.Enabled = true;
         this.NuExtraWareHouses.Enabled = true;
         this.ExtWareHouse.Text = Conversions.ToString(obj1);
@@ -2069,8 +2069,8 @@ namespace MuMaker
       }
       else
       {
-        object obj1 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
-        object obj2 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouse", "0");
+        object obj1 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+        object obj2 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouse", "0");
         this.ExtWareHouse.Enabled = false;
         this.NuExtraWareHouses.Enabled = false;
         this.ExtWareHouse.Text = Conversions.ToString(obj1);
@@ -2083,13 +2083,13 @@ namespace MuMaker
     {
       if (this.ResetSystem.Checked)
       {
-        object obj = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
+        object obj = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
         this.ColumReset.Enabled = true;
         this.ColumReset.Text = Conversions.ToString(obj);
       }
       else
       {
-        object obj = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
+        object obj = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
         this.ColumReset.Enabled = false;
         this.ColumReset.Text = Conversions.ToString(obj);
       }
@@ -2098,27 +2098,27 @@ namespace MuMaker
 
     private void ConfigMaker_Load(object sender, EventArgs e)
     {
-      Class2.smethod_3().method_8().WindowState = FormWindowState.Minimized;
-      object Left1 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "RPW", "0");
-      object Left2 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Local");
-      object obj1 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Usuario", "sa");
-      object obj2 = (object) Class18.smethod_8(Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PassWord", ""));
-      object obj3 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", "127.0.0.1");
-      object obj4 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PORTServer", "1433");
-      object obj5 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuOnline", "MuOnline");
-      object obj6 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuEvent", "MuEvent");
-      object obj7 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuRanking", "Ranking");
-      object obj8 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
-      object obj9 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
-      int num = Conversions.ToInteger(Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "TimeLimit", Conversions.ToString(360)));
-      object Left3 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "ExtraWareHouse", "0");
-      object obj10 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouses", "0");
-      object Left4 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "0");
-      object Left5 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "MD5", "0");
-      object Left6 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "FirstLoad", "1");
-      object Left7 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "0");
-      object obj11 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol");
-      this.MMKNM.Text = Conversions.ToString((object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "Name", "N00B"));
+      ApplicationServices.MuMakerApplication.smethod_3().method_8().WindowState = FormWindowState.Minimized;
+      object Left1 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "RPW", "0");
+      object Left2 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Local");
+      object obj1 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Usuario", "sa");
+      object obj2 = (object) IniHelper.smethod_8(IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PassWord", ""));
+      object obj3 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", "127.0.0.1");
+      object obj4 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PORTServer", "1433");
+      object obj5 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuOnline", "MuOnline");
+      object obj6 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuEvent", "MuEvent");
+      object obj7 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuRanking", "Ranking");
+      object obj8 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
+      object obj9 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+      int num = Conversions.ToInteger(IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "TimeLimit", Conversions.ToString(360)));
+      object Left3 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "ExtraWareHouse", "0");
+      object obj10 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouses", "0");
+      object Left4 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "0");
+      object Left5 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "MD5", "0");
+      object Left6 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "FirstLoad", "1");
+      object Left7 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "0");
+      object obj11 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol");
+      this.MMKNM.Text = Conversions.ToString((object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "Name", "N00B"));
       this.Usuario.Text = Conversions.ToString(obj1);
       this.PassWord.Text = Conversions.ToString(obj2);
       if (Operators.ConditionalCompareObjectEqual(Left2, (object) "Local", false))
@@ -2200,82 +2200,82 @@ namespace MuMaker
     private void method_0(object sender, EventArgs e)
     {
       if (this.ReUsPw.Checked)
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "RPW", "1");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "RPW", "1");
       else
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "RPW", "0");
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Usuario", this.Usuario.Text);
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PassWord", Class18.smethod_7(this.PassWord.Text));
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "RPW", "0");
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Usuario", this.Usuario.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PassWord", IniHelper.smethod_7(this.PassWord.Text));
       if (this.LocalHost.Checked)
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Local");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Local");
       if (this.LocalRemote.Checked)
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Remote");
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", this.IPServer.Text);
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PORTServer", this.Puerto.Text);
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuOnline", this.MuOnline.Text);
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuEvent", this.MuEvent.Text);
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuRanking", this.MuRanking.Text);
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "TimeLimit", this.TimeLimit.Text);
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Connection", "Remote");
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", this.IPServer.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PORTServer", this.Puerto.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuOnline", this.MuOnline.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuEvent", this.MuEvent.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "MuRanking", this.MuRanking.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "TimeLimit", this.TimeLimit.Text);
       if (Operators.CompareString(this.Idiomas.Text, "Español", false) == 0)
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol");
       else
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", this.Idiomas.Text);
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", this.Idiomas.Text);
       if (this.ExtraWareHouse.Checked)
       {
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", this.ExtWareHouse.Text);
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouses", this.NuExtraWareHouses.Text);
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "ExtraWareHouse", "1");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", this.ExtWareHouse.Text);
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouses", this.NuExtraWareHouses.Text);
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "ExtraWareHouse", "1");
       }
       else
       {
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", this.ExtWareHouse.Text);
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouses", "0");
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "ExtraWareHouse", "0");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", this.ExtWareHouse.Text);
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "NuExtraWareHouses", "0");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "ExtraWareHouse", "0");
       }
       if (this.ResetSystem.Checked)
       {
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", this.ColumReset.Text);
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "1");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", this.ColumReset.Text);
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "1");
       }
       else
       {
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", this.ColumReset.Text);
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "0");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", this.ColumReset.Text);
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "0");
       }
       if (this.CHMD5.Checked)
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "MD5", "1");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "MD5", "1");
       else
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "MD5", "0");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "MD5", "0");
       if (this.AutoLoad.Checked)
       {
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "FirstLoad", "1");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "FirstLoad", "1");
         if (-(this.AutoReLoad.Checked ? 1 : 0) == 1)
-          Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "1");
+          IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "1");
         else
-          Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "0");
+          IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "0");
       }
       else
       {
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "FirstLoad", "0");
-        Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "0");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "FirstLoad", "0");
+        IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "AutoReLoad", "0");
       }
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "Name", this.MMKNM.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "Name", this.MMKNM.Text);
       Form.ActiveForm.Hide();
-      Class2.smethod_3().method_8().WindowState = FormWindowState.Normal;
+      ApplicationServices.MuMakerApplication.smethod_3().method_8().WindowState = FormWindowState.Normal;
       this.ReiniciarMuMaker();
     }
 
     private void method_1(object sender, EventArgs e)
     {
       Form.ActiveForm.Close();
-      Class2.smethod_3().method_8().WindowState = FormWindowState.Normal;
-      Class2.smethod_3().method_8().BotonCreditos.Focus();
+      ApplicationServices.MuMakerApplication.smethod_3().method_8().WindowState = FormWindowState.Normal;
+      ApplicationServices.MuMakerApplication.smethod_3().method_8().BotonCreditos.Focus();
     }
 
     private void method_2(object sender, EventArgs e)
     {
       Form.ActiveForm.Close();
-      Class2.smethod_3().method_8().WindowState = FormWindowState.Normal;
-      Class2.smethod_3().method_8().BotonCreditos.Focus();
+      ApplicationServices.MuMakerApplication.smethod_3().method_8().WindowState = FormWindowState.Normal;
+      ApplicationServices.MuMakerApplication.smethod_3().method_8().BotonCreditos.Focus();
     }
 
     private void ExtraWareHouse_CheckedChanged(object sender, EventArgs e)
@@ -2290,7 +2290,7 @@ namespace MuMaker
 
     private void method_3(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
@@ -2323,13 +2323,13 @@ namespace MuMaker
         return;
       this.IPServer.Enabled = true;
       this.Puerto.Enabled = true;
-      this.IPServer.Text = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", "127.0.0.1");
-      this.Puerto.Text = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PORTServer", "1433");
+      this.IPServer.Text = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "IPServer", "127.0.0.1");
+      this.Puerto.Text = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "PORTServer", "1433");
     }
 
     private void method_4(object sender, EventArgs e)
     {
-      Class21.smethod_0();
+      FinderTableManager.smethod_0();
     }
 
     private void ReUsPw_CheckedChanged(object sender, EventArgs e)
@@ -2369,11 +2369,11 @@ namespace MuMaker
 
     private void method_5(object sender, EventArgs e)
     {
-      Class20.smethod_14();
-      Class20.smethod_0();
-      Class20.smethod_1();
-      Class20.smethod_2();
-      Class20.smethod_3();
+      StoredProceduresManager.smethod_14();
+      StoredProceduresManager.smethod_0();
+      StoredProceduresManager.smethod_1();
+      StoredProceduresManager.smethod_2();
+      StoredProceduresManager.smethod_3();
     }
 
     private void MMKNM_LostFocus(object sender, EventArgs e)
@@ -2463,7 +2463,7 @@ namespace MuMaker
 
     private void method_8(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
@@ -2531,71 +2531,71 @@ namespace MuMaker
     private void method_9(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aceptar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aceptar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
       this.MMKNM.Focus();
     }
 
     private void method_10(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aceptar.BackgroundImage = (Image) Class34.smethod_91();
+      this.Aceptar.BackgroundImage = (Image) EmbeddedResources.smethod_91();
     }
 
     private void method_11(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cancelar.BackgroundImage = (Image) Class34.smethod_36();
+      this.Cancelar.BackgroundImage = (Image) EmbeddedResources.smethod_36();
       this.MMKNM.Focus();
     }
 
     private void method_12(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cancelar.BackgroundImage = (Image) Class34.smethod_37();
+      this.Cancelar.BackgroundImage = (Image) EmbeddedResources.smethod_37();
     }
 
     private void method_13(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CreateReset.BackgroundImage = (Image) Class34.smethod_50();
+      this.CreateReset.BackgroundImage = (Image) EmbeddedResources.smethod_50();
       this.MMKNM.Focus();
     }
 
     private void method_14(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CreateReset.BackgroundImage = (Image) Class34.smethod_51();
+      this.CreateReset.BackgroundImage = (Image) EmbeddedResources.smethod_51();
     }
 
     private void method_15(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CleanProcedures.BackgroundImage = (Image) Class34.smethod_4();
+      this.CleanProcedures.BackgroundImage = (Image) EmbeddedResources.smethod_4();
       this.MMKNM.Focus();
     }
 
     private void method_16(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CleanProcedures.BackgroundImage = (Image) Class34.smethod_5();
+      this.CleanProcedures.BackgroundImage = (Image) EmbeddedResources.smethod_5();
     }
 
     private void method_17(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.MMKNM.Focus();
     }
 
     private void method_18(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void ConfigMaker_Closing(object sender, CancelEventArgs e)
     {
-      Class2.smethod_3().method_8().WindowState = FormWindowState.Normal;
+      ApplicationServices.MuMakerApplication.smethod_3().method_8().WindowState = FormWindowState.Normal;
     }
   }
 }

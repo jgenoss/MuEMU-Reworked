@@ -1772,7 +1772,7 @@ namespace MuMaker
       this.CreateID.TextAlign = HorizontalAlignment.Center;
       this.CreatePj.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.CreatePj.BackgroundImage = (Image) Class34.smethod_50();
+      this.CreatePj.BackgroundImage = (Image) EmbeddedResources.smethod_50();
       this.CreatePj.BackgroundImageLayout = ImageLayout.Center;
       this.CreatePj.Cursor = Cursors.Hand;
       this.CreatePj.FlatAppearance.BorderSize = 0;
@@ -1797,7 +1797,7 @@ namespace MuMaker
       this.CreatePj.UseVisualStyleBackColor = false;
       this.AccountEdit.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.AccountEdit.BackgroundImage = (Image) Class34.smethod_90();
+      this.AccountEdit.BackgroundImage = (Image) EmbeddedResources.smethod_90();
       this.AccountEdit.BackgroundImageLayout = ImageLayout.Center;
       this.AccountEdit.Cursor = Cursors.Hand;
       this.AccountEdit.FlatAppearance.BorderSize = 0;
@@ -1822,7 +1822,7 @@ namespace MuMaker
       this.AccountEdit.UseVisualStyleBackColor = false;
       this.BorrarCuenta.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BorrarCuenta.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarCuenta.BackgroundImage = (Image) EmbeddedResources.smethod_53();
       this.BorrarCuenta.BackgroundImageLayout = ImageLayout.Center;
       this.BorrarCuenta.Cursor = Cursors.Hand;
       this.BorrarCuenta.FlatAppearance.BorderSize = 0;
@@ -1846,7 +1846,7 @@ namespace MuMaker
       this.BorrarCuenta.UseVisualStyleBackColor = false;
       this.ONLineInfo.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.ONLineInfo.BackgroundImage = (Image) Class34.smethod_70();
+      this.ONLineInfo.BackgroundImage = (Image) EmbeddedResources.smethod_70();
       this.ONLineInfo.BackgroundImageLayout = ImageLayout.Center;
       this.ONLineInfo.Cursor = Cursors.Hand;
       this.ONLineInfo.FlatAppearance.BorderSize = 0;
@@ -1872,7 +1872,7 @@ namespace MuMaker
       this.ONLineInfo.UseVisualStyleBackColor = false;
       this.OnlineOFF.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.OnlineOFF.Image = (Image) Class34.smethod_89();
+      this.OnlineOFF.Image = (Image) EmbeddedResources.smethod_89();
       PictureBox onlineOff1 = this.OnlineOFF;
       point1 = new Point(294, 295);
       Point point8 = point1;
@@ -1886,7 +1886,7 @@ namespace MuMaker
       this.OnlineOFF.TabStop = false;
       this.OnlineON.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.OnlineON.Image = (Image) Class34.smethod_92();
+      this.OnlineON.Image = (Image) EmbeddedResources.smethod_92();
       PictureBox onlineOn1 = this.OnlineON;
       point1 = new Point(294, 295);
       Point point9 = point1;
@@ -1960,7 +1960,7 @@ namespace MuMaker
       this.Label25.Text = "Label25";
       this.EditDefault.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.EditDefault.BackgroundImage = (Image) Class34.smethod_14();
+      this.EditDefault.BackgroundImage = (Image) EmbeddedResources.smethod_14();
       this.EditDefault.BackgroundImageLayout = ImageLayout.Center;
       this.EditDefault.Cursor = Cursors.Hand;
       this.EditDefault.FlatAppearance.BorderSize = 0;
@@ -1985,7 +1985,7 @@ namespace MuMaker
       this.EditDefault.UseVisualStyleBackColor = false;
       this.ResetDefault.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.ResetDefault.BackgroundImage = (Image) Class34.smethod_117();
+      this.ResetDefault.BackgroundImage = (Image) EmbeddedResources.smethod_117();
       this.ResetDefault.BackgroundImageLayout = ImageLayout.Center;
       this.ResetDefault.Cursor = Cursors.Hand;
       this.ResetDefault.FlatAppearance.BorderSize = 0;
@@ -2010,7 +2010,7 @@ namespace MuMaker
       this.ResetDefault.UseVisualStyleBackColor = false;
       this.Aplicar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
       this.Aplicar.BackgroundImageLayout = ImageLayout.Center;
       this.Aplicar.Cursor = Cursors.Hand;
       this.Aplicar.FlatAppearance.BorderSize = 0;
@@ -2035,7 +2035,7 @@ namespace MuMaker
       this.Aplicar.UseVisualStyleBackColor = false;
       this.Reload.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
       this.Reload.BackgroundImageLayout = ImageLayout.Center;
       this.Reload.Cursor = Cursors.Hand;
       this.Reload.FlatAppearance.BorderSize = 0;
@@ -2462,7 +2462,7 @@ namespace MuMaker
       this.CtrlCode.TabIndex = 433;
       this.BotonSkillMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonSkillMaker.BackgroundImage = (Image) Class34.smethod_29();
+      this.BotonSkillMaker.BackgroundImage = (Image) EmbeddedResources.smethod_29();
       this.BotonSkillMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonSkillMaker.Cursor = Cursors.Hand;
       this.BotonSkillMaker.FlatAppearance.BorderSize = 0;
@@ -2486,7 +2486,7 @@ namespace MuMaker
       this.BotonSkillMaker.UseVisualStyleBackColor = false;
       this.BotonItemMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonItemMaker.BackgroundImage = (Image) Class34.smethod_20();
+      this.BotonItemMaker.BackgroundImage = (Image) EmbeddedResources.smethod_20();
       this.BotonItemMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonItemMaker.Cursor = Cursors.Hand;
       this.BotonItemMaker.FlatAppearance.BorderSize = 0;
@@ -2510,7 +2510,7 @@ namespace MuMaker
       this.BotonItemMaker.UseVisualStyleBackColor = false;
       this.BotonGuildMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonGuildMaker.BackgroundImage = (Image) Class34.smethod_18();
+      this.BotonGuildMaker.BackgroundImage = (Image) EmbeddedResources.smethod_18();
       this.BotonGuildMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonGuildMaker.Cursor = Cursors.Hand;
       this.BotonGuildMaker.FlatAppearance.BorderSize = 0;
@@ -2534,7 +2534,7 @@ namespace MuMaker
       this.BotonGuildMaker.UseVisualStyleBackColor = false;
       this.BotonMoveMaker.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonMoveMaker.BackgroundImage = (Image) Class34.smethod_24();
+      this.BotonMoveMaker.BackgroundImage = (Image) EmbeddedResources.smethod_24();
       this.BotonMoveMaker.BackgroundImageLayout = ImageLayout.Center;
       this.BotonMoveMaker.Cursor = Cursors.Hand;
       this.BotonMoveMaker.FlatAppearance.BorderSize = 0;
@@ -2785,7 +2785,7 @@ namespace MuMaker
       this.Label4.TextAlign = ContentAlignment.MiddleRight;
       this.BorrarDatos.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BorrarDatos.BackgroundImage = (Image) Class34.smethod_36();
+      this.BorrarDatos.BackgroundImage = (Image) EmbeddedResources.smethod_36();
       this.BorrarDatos.BackgroundImageLayout = ImageLayout.Center;
       this.BorrarDatos.Cursor = Cursors.Hand;
       this.BorrarDatos.FlatAppearance.BorderSize = 0;
@@ -2809,7 +2809,7 @@ namespace MuMaker
       this.BorrarDatos.UseVisualStyleBackColor = false;
       this.CrearAccount.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.CrearAccount.BackgroundImage = (Image) Class34.smethod_50();
+      this.CrearAccount.BackgroundImage = (Image) EmbeddedResources.smethod_50();
       this.CrearAccount.BackgroundImageLayout = ImageLayout.Center;
       this.CrearAccount.Cursor = Cursors.Hand;
       this.CrearAccount.FlatAppearance.BorderSize = 0;
@@ -3016,7 +3016,7 @@ namespace MuMaker
       this.Reloj.Interval = 10000;
       this.Buscar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.Buscar.BackgroundImageLayout = ImageLayout.Center;
       this.Buscar.Cursor = Cursors.Hand;
       this.Buscar.FlatAppearance.BorderSize = 0;
@@ -3040,7 +3040,7 @@ namespace MuMaker
       this.Buscar.UseVisualStyleBackColor = false;
       this.Minimizar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.Minimizar.BackgroundImageLayout = ImageLayout.Center;
       this.Minimizar.Cursor = Cursors.Hand;
       this.Minimizar.DialogResult = DialogResult.Cancel;
@@ -3065,7 +3065,7 @@ namespace MuMaker
       this.Minimizar.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -3121,7 +3121,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_3();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_3();
       this.CancelButton = (IButtonControl) this.Minimizar;
       size1 = new Size(376, 590);
       this.ClientSize = size1;
@@ -3240,11 +3240,11 @@ namespace MuMaker
     {
       this.Clases.Items.Clear();
       int num1 = 1;
-      int num2 = Conversions.ToInteger(Class6.string_9);
+      int num2 = Conversions.ToInteger(GameDataArrays.string_9);
       int num3 = num1;
       while (num3 <= num2)
       {
-        this.Clases.Items.Add((object) Class6.string_8[checked (num3 - 1)]);
+        this.Clases.Items.Add((object) GameDataArrays.string_8[checked (num3 - 1)]);
         checked { ++num3; }
       }
       return (object) true;
@@ -3254,11 +3254,11 @@ namespace MuMaker
     {
       this.Quests.Items.Clear();
       int num1 = 1;
-      int num2 = Conversions.ToInteger(Class6.string_13);
+      int num2 = Conversions.ToInteger(GameDataArrays.string_13);
       int num3 = num1;
       while (num3 <= num2)
       {
-        this.Quests.Items.Add((object) Class6.string_12[checked (num3 - 1)]);
+        this.Quests.Items.Add((object) GameDataArrays.string_12[checked (num3 - 1)]);
         checked { ++num3; }
       }
       return (object) true;
@@ -3268,11 +3268,11 @@ namespace MuMaker
     {
       this.CtrlCode.Items.Clear();
       int num1 = 1;
-      int num2 = Conversions.ToInteger(Class6.string_5);
+      int num2 = Conversions.ToInteger(GameDataArrays.string_5);
       int num3 = num1;
       while (num3 <= num2)
       {
-        this.CtrlCode.Items.Add((object) Class6.string_4[checked (num3 - 1)]);
+        this.CtrlCode.Items.Add((object) GameDataArrays.string_4[checked (num3 - 1)]);
         checked { ++num3; }
       }
       return (object) true;
@@ -3282,11 +3282,11 @@ namespace MuMaker
     {
       this.PKLevel.Items.Clear();
       int num1 = 1;
-      int num2 = Conversions.ToInteger(Class6.string_16);
+      int num2 = Conversions.ToInteger(GameDataArrays.string_16);
       int num3 = num1;
       while (num3 <= num2)
       {
-        this.PKLevel.Items.Add((object) Class6.string_15[checked (num3 - 1)]);
+        this.PKLevel.Items.Add((object) GameDataArrays.string_15[checked (num3 - 1)]);
         checked { ++num3; }
       }
       return (object) true;
@@ -3294,11 +3294,11 @@ namespace MuMaker
 
     public object CargarCuenta()
     {
-      this.CuentaID.Text = Class22.struct0_0.string_0;
-      this.PassWord.Text = Class22.struct0_0.string_2;
-      this.PersonalID.Text = Class22.struct0_0.string_3;
-      this.Email.Text = Class22.struct0_0.string_4;
-      this.BlockACC.Checked = Conversions.ToDouble(Class22.struct0_0.string_5) != 0.0;
+      this.CuentaID.Text = AccountData.CurrentAccount.string_0;
+      this.PassWord.Text = AccountData.CurrentAccount.string_2;
+      this.PersonalID.Text = AccountData.CurrentAccount.string_3;
+      this.Email.Text = AccountData.CurrentAccount.string_4;
+      this.BlockACC.Checked = Conversions.ToDouble(AccountData.CurrentAccount.string_5) != 0.0;
       this.ResetDatosPJ();
       this.RestriccionesOFF();
       this.CuentaID.Enabled = true;
@@ -3320,29 +3320,29 @@ namespace MuMaker
     {
       this.EditAccount.Text = Conversions.ToString(this.Cuentas.SelectedItem);
       this.EditChart.Text = Conversions.ToString(this.Personajes.SelectedItem);
-      Class8.smethod_0();
-      this.Level.Text = Class22.struct1_0.string_2;
-      this.Puntos.Text = Class22.struct1_0.string_3;
-      this.Exp.Text = Class22.struct1_0.string_4;
-      this.Fuerza.Text = Class22.struct1_0.string_5;
-      this.Agilidad.Text = Class22.struct1_0.string_6;
-      this.Vitalidad.Text = Class22.struct1_0.string_7;
-      this.Energia.Text = Class22.struct1_0.string_8;
-      this.Comand.Text = Class22.struct1_0.string_9;
-      this.Frutas.Text = Class22.struct1_0.string_10;
-      this.PKLevel.SelectedIndex = Conversions.ToInteger(Class22.struct1_0.string_11);
-      this.PKCount.Text = Class22.struct1_0.string_12;
-      this.PKTime.Text = Class22.struct1_0.string_13;
+      DatabaseOperations.smethod_0();
+      this.Level.Text = AccountData.CurrentCharacter.string_2;
+      this.Puntos.Text = AccountData.CurrentCharacter.string_3;
+      this.Exp.Text = AccountData.CurrentCharacter.string_4;
+      this.Fuerza.Text = AccountData.CurrentCharacter.string_5;
+      this.Agilidad.Text = AccountData.CurrentCharacter.string_6;
+      this.Vitalidad.Text = AccountData.CurrentCharacter.string_7;
+      this.Energia.Text = AccountData.CurrentCharacter.string_8;
+      this.Comand.Text = AccountData.CurrentCharacter.string_9;
+      this.Frutas.Text = AccountData.CurrentCharacter.string_10;
+      this.PKLevel.SelectedIndex = Conversions.ToInteger(AccountData.CurrentCharacter.string_11);
+      this.PKCount.Text = AccountData.CurrentCharacter.string_12;
+      this.PKTime.Text = AccountData.CurrentCharacter.string_13;
       try
       {
         int num1 = 1;
-        int num2 = Conversions.ToInteger(Class6.string_9);
+        int num2 = Conversions.ToInteger(GameDataArrays.string_9);
         int num3 = num1;
         while (num3 <= num2)
         {
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class22.struct1_0.string_14, Class6.string_6[checked (num3 - 1)], false) != 0)
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(AccountData.CurrentCharacter.string_14, GameDataArrays.string_6[checked (num3 - 1)], false) != 0)
           {
-            this.Clases.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class6.string_9) - 1.0)));
+            this.Clases.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(GameDataArrays.string_9) - 1.0)));
             checked { ++num3; }
           }
           else
@@ -3361,13 +3361,13 @@ namespace MuMaker
       try
       {
         int num1 = 1;
-        int num2 = Conversions.ToInteger(Class6.string_13);
+        int num2 = Conversions.ToInteger(GameDataArrays.string_13);
         int num3 = num1;
         while (num3 <= num2)
         {
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class22.struct1_0.string_17, Class6.string_11[checked (num3 - 1)], false) != 0)
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(AccountData.CurrentCharacter.string_17, GameDataArrays.string_11[checked (num3 - 1)], false) != 0)
           {
-            this.Quests.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class6.string_13) - 1.0)));
+            this.Quests.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(GameDataArrays.string_13) - 1.0)));
             checked { ++num3; }
           }
           else
@@ -3386,13 +3386,13 @@ namespace MuMaker
       try
       {
         int num1 = 1;
-        int num2 = Conversions.ToInteger(Class6.string_5);
+        int num2 = Conversions.ToInteger(GameDataArrays.string_5);
         int num3 = num1;
         while (num3 <= num2)
         {
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class22.struct1_0.string_15, Class6.string_3[checked (num3 - 1)], false) != 0)
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(AccountData.CurrentCharacter.string_15, GameDataArrays.string_3[checked (num3 - 1)], false) != 0)
           {
-            this.CtrlCode.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class6.string_5) - 1.0)));
+            this.CtrlCode.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(GameDataArrays.string_5) - 1.0)));
             checked { ++num3; }
           }
           else
@@ -3411,16 +3411,16 @@ namespace MuMaker
       try
       {
         int num1 = 1;
-        int num2 = Conversions.ToInteger(Class6.string_16);
+        int num2 = Conversions.ToInteger(GameDataArrays.string_16);
         int num3 = num1;
         while (num3 <= num2)
         {
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class22.struct1_0.string_11, Class6.string_14[checked (num3 - 1)], false) != 0)
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(AccountData.CurrentCharacter.string_11, GameDataArrays.string_14[checked (num3 - 1)], false) != 0)
           {
-            this.PKLevel.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class6.string_16) - 1.0)));
-            if (Conversions.ToDouble(Class22.struct1_0.string_11) > 6.0)
-              this.PKLevel.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class6.string_16) - 2.0)));
-            if (Conversions.ToDouble(Class22.struct1_0.string_11) < 0.0)
+            this.PKLevel.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(GameDataArrays.string_16) - 1.0)));
+            if (Conversions.ToDouble(AccountData.CurrentCharacter.string_11) > 6.0)
+              this.PKLevel.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(GameDataArrays.string_16) - 2.0)));
+            if (Conversions.ToDouble(AccountData.CurrentCharacter.string_11) < 0.0)
               this.PKLevel.SelectedIndex = 0;
             checked { ++num3; }
           }
@@ -3437,12 +3437,12 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class26.object_14, (object) 1, false))
+      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Configuration.object_14, (object) 1, false))
       {
         this.Resets.Enabled = true;
         try
         {
-          this.Resets.Text = Class22.struct1_0.string_16;
+          this.Resets.Text = AccountData.CurrentCharacter.string_16;
         }
         catch (Exception ex)
         {
@@ -3467,18 +3467,18 @@ namespace MuMaker
 
     public object CargarCuentas()
     {
-      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class26.object_16, (object) 1, false))
+      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Configuration.object_16, (object) 1, false))
       {
         try
         {
-          this.Cuentas.Text = Conversions.ToString(Class30.object_7);
+          this.Cuentas.Text = Conversions.ToString(LocalizedStrings.object_7);
           this.Cuentas.Items.Clear();
           int num1 = 0;
-          int num2 = checked (Class2.smethod_3().method_8().Cuentas.Items.Count - 1);
+          int num2 = checked (ApplicationServices.MuMakerApplication.smethod_3().method_8().Cuentas.Items.Count - 1);
           int index = num1;
           while (index <= num2)
           {
-            this.Cuentas.Items.Add(RuntimeHelpers.GetObjectValue(Class2.smethod_3().method_8().Cuentas.Items[index]));
+            this.Cuentas.Items.Add(RuntimeHelpers.GetObjectValue(ApplicationServices.MuMakerApplication.smethod_3().method_8().Cuentas.Items[index]));
             checked { ++index; }
           }
         }
@@ -3490,18 +3490,18 @@ namespace MuMaker
       }
       else
       {
-        Class7.smethod_0();
+        ConnectionManager.smethod_0();
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-          Class28.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          this.Cuentas.Text = Conversions.ToString(Class30.object_7);
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+          SqlConnectionPool.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          this.Cuentas.Text = Conversions.ToString(LocalizedStrings.object_7);
           this.Cuentas.Items.Clear();
-          while (Class28.sqlDataReader_1.Read())
-            this.Cuentas.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-          Class28.sqlDataReader_1.Close();
+          while (SqlConnectionPool.sqlDataReader_1.Read())
+            this.Cuentas.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+          SqlConnectionPool.sqlDataReader_1.Close();
         }
         catch (Exception ex)
         {
@@ -3509,25 +3509,25 @@ namespace MuMaker
           int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_5();
+        ConnectionManager.smethod_5();
       }
       return (object) true;
     }
 
     public object CargarPersonajes()
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + Class22.struct0_0.string_1 + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        this.Personajes.Text = Conversions.ToString(Class30.object_8);
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT Name FROM Character WHERE AccountID='" + AccountData.CurrentAccount.string_1 + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        this.Personajes.Text = Conversions.ToString(LocalizedStrings.object_8);
         this.Personajes.Items.Clear();
-        while (Class28.sqlDataReader_1.Read())
-          this.Personajes.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
-        Class28.sqlDataReader_1.Close();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
+          this.Personajes.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -3535,14 +3535,14 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object CheckOnLine()
     {
-      Class12.smethod_0();
-      if (Class22.struct0_0.bool_0)
+      AccountStatusManager.smethod_0();
+      if (AccountData.CurrentAccount.bool_0)
       {
         this.OnlineOFF.Hide();
         this.OnlineON.Show();
@@ -3650,7 +3650,7 @@ namespace MuMaker
 
     public object Traducir()
     {
-      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class26.object_15, (object) 1, false))
+      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Configuration.object_15, (object) 1, false))
       {
         this.MD5ON.Visible = true;
         this.MD5OFF.Visible = false;
@@ -3660,11 +3660,11 @@ namespace MuMaker
         this.MD5ON.Visible = false;
         this.MD5OFF.Visible = true;
       }
-      this.Account.Text = Conversions.ToString(Class30.object_5);
-      this.Chart.Text = Conversions.ToString(Class30.object_6);
-      this.Cuentas.Text = Conversions.ToString(Class30.object_7);
-      this.Personajes.Text = Conversions.ToString(Class30.object_8);
-      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Account.Text = Conversions.ToString(LocalizedStrings.object_5);
+      this.Chart.Text = Conversions.ToString(LocalizedStrings.object_6);
+      this.Cuentas.Text = Conversions.ToString(LocalizedStrings.object_7);
+      this.Personajes.Text = Conversions.ToString(LocalizedStrings.object_8);
+      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       return (object) true;
     }
@@ -3672,7 +3672,7 @@ namespace MuMaker
     private void AccountMaker_Load(object sender, EventArgs e)
     {
       VentanaBarraLoad.DefInstance.Show();
-      Class18.smethod_44();
+      IniHelper.smethod_44();
       VentanaBarraLoad.DefInstance.Carga.Value = 10;
       this.CargarClasesPJ();
       VentanaBarraLoad.DefInstance.Carga.Value = 20;
@@ -3688,7 +3688,7 @@ namespace MuMaker
       VentanaBarraLoad.DefInstance.Carga.Value = 70;
       this.CargarCuentas();
       VentanaBarraLoad.DefInstance.Carga.Value = 80;
-      Class20.smethod_2();
+      StoredProceduresManager.smethod_2();
       VentanaBarraLoad.DefInstance.Carga.Value = 90;
       this.ResetDatosCuenta();
       this.Traducir();
@@ -3700,8 +3700,8 @@ namespace MuMaker
 
     private void Cuentas_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class22.struct0_0.string_1 = Conversions.ToString(this.Cuentas.SelectedItem);
-      Class8.smethod_1();
+      AccountData.CurrentAccount.string_1 = Conversions.ToString(this.Cuentas.SelectedItem);
+      DatabaseOperations.smethod_1();
       this.CargarCuenta();
       this.CargarPersonajes();
       this.CheckOnLine();
@@ -3709,90 +3709,90 @@ namespace MuMaker
 
     private void Personajes_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class22.struct1_0.string_1 = Conversions.ToString(this.Personajes.SelectedItem);
+      AccountData.CurrentCharacter.string_1 = Conversions.ToString(this.Personajes.SelectedItem);
       this.CargarPersonaje();
     }
 
     private void method_0(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_1(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_2(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_3(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_4(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_5(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_6(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_7(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_8(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_9(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_10(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
 
     private void method_11(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
@@ -3909,17 +3909,17 @@ namespace MuMaker
       {
         if (this.CreateID.Text.Length == 18)
         {
-          Class7.smethod_0();
+          ConnectionManager.smethod_0();
           object Left = (object) 0;
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "SELECT * FROM MEMB_INFO WHERE memb___id='" + this.CreateAccount.Text + "'";
-            Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-            while (Class28.sqlDataReader_1.Read())
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "SELECT * FROM MEMB_INFO WHERE memb___id='" + this.CreateAccount.Text + "'";
+            SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+            while (SqlConnectionPool.sqlDataReader_1.Read())
               Left = Microsoft.VisualBasic.CompilerServices.Operators.AddObject(Left, (object) 1);
-            Class28.sqlDataReader_1.Close();
+            SqlConnectionPool.sqlDataReader_1.Close();
             if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual(Left, (object) 0, false))
             {
               int num = (int) Interaction.MsgBox((object) "Account Already Existing!!", MsgBoxStyle.OkOnly, (object) null);
@@ -3927,14 +3927,14 @@ namespace MuMaker
             }
             else
             {
-              Class7.smethod_5();
+              ConnectionManager.smethod_5();
               if (this.MD5ON.Visible)
               {
-                Class28.sqlConnection_1.Open();
-                Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
+                SqlConnectionPool.sqlConnection_1.Open();
+                SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
                 try
                 {
-                  Class28.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', 'TMT', '" + this.CreateID.Text + "', '" + this.CreateEmail.Text + "', '0', '1')";
+                  SqlConnectionPool.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', 'TMT', '" + this.CreateID.Text + "', '" + this.CreateEmail.Text + "', '0', '1')";
                 }
                 catch (Exception ex1)
                 {
@@ -3942,7 +3942,7 @@ namespace MuMaker
                   Exception exception1 = ex1;
                   try
                   {
-                    Class28.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', 'TMT', '" + Strings.Mid(this.CreateID.Text, 1, 13) + "', '" + this.CreateEmail.Text + "', '0', '1')";
+                    SqlConnectionPool.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', 'TMT', '" + Strings.Mid(this.CreateID.Text, 1, 13) + "', '" + this.CreateEmail.Text + "', '0', '1')";
                   }
                   catch (Exception ex2)
                   {
@@ -3953,14 +3953,14 @@ namespace MuMaker
                   }
                   ProjectData.ClearProjectError();
                 }
-                Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-                Class28.sqlDataReader_1.Close();
-                Class7.smethod_5();
-                Class28.sqlConnection_1.Open();
+                SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+                SqlConnectionPool.sqlDataReader_1.Close();
+                ConnectionManager.smethod_5();
+                SqlConnectionPool.sqlConnection_1.Open();
                 try
                 {
                   SqlCommand sqlCommand1 = new SqlCommand();
-                  SqlCommand sqlCommand2 = new SqlCommand("SP_MD5_ENCODE_VALUE", Class28.sqlConnection_1);
+                  SqlCommand sqlCommand2 = new SqlCommand("SP_MD5_ENCODE_VALUE", SqlConnectionPool.sqlConnection_1);
                   sqlCommand2.CommandType = CommandType.StoredProcedure;
                   sqlCommand2.Parameters.Add(new SqlParameter("@btInStr", SqlDbType.VarChar, 10)
                   {
@@ -3982,15 +3982,15 @@ namespace MuMaker
                   int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
                   ProjectData.ClearProjectError();
                 }
-                Class7.smethod_5();
+                ConnectionManager.smethod_5();
               }
               else
               {
-                Class28.sqlConnection_1.Open();
-                Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
+                SqlConnectionPool.sqlConnection_1.Open();
+                SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
                 try
                 {
-                  Class28.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb__pwd, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', '" + this.CreatePassWord.Text + "', 'TMT', '" + this.CreateID.Text + "', '" + this.CreateEmail.Text + "', '0', '1')";
+                  SqlConnectionPool.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb__pwd, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', '" + this.CreatePassWord.Text + "', 'TMT', '" + this.CreateID.Text + "', '" + this.CreateEmail.Text + "', '0', '1')";
                 }
                 catch (Exception ex1)
                 {
@@ -3998,7 +3998,7 @@ namespace MuMaker
                   Exception exception1 = ex1;
                   try
                   {
-                    Class28.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb__pwd, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', '" + this.CreatePassWord.Text + "', 'TMT', '" + Strings.Mid(this.CreateID.Text, 1, 13) + "', '" + this.CreateEmail.Text + "', '0', '1')";
+                    SqlConnectionPool.sqlCommand_1.CommandText = "INSERT INTO MEMB_INFO (memb___id, memb__pwd, memb_name, sno__numb, mail_addr, bloc_code, ctl1_code) VALUES ('" + this.CreateAccount.Text + "', '" + this.CreatePassWord.Text + "', 'TMT', '" + Strings.Mid(this.CreateID.Text, 1, 13) + "', '" + this.CreateEmail.Text + "', '0', '1')";
                   }
                   catch (Exception ex2)
                   {
@@ -4009,18 +4009,18 @@ namespace MuMaker
                   }
                   ProjectData.ClearProjectError();
                 }
-                Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-                Class28.sqlDataReader_1.Close();
-                Class7.smethod_5();
+                SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+                SqlConnectionPool.sqlDataReader_1.Close();
+                ConnectionManager.smethod_5();
               }
-              if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class26.object_17, (object) 1, false))
+              if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Configuration.object_17, (object) 1, false))
               {
-                Class2.smethod_3().method_8().CargarCuentas();
+                ApplicationServices.MuMakerApplication.smethod_3().method_8().CargarCuentas();
                 this.CargarCuentas();
               }
               else
               {
-                Class2.smethod_3().method_8().Cuentas.Items.Add((object) this.CreateAccount.Text);
+                ApplicationServices.MuMakerApplication.smethod_3().method_8().Cuentas.Items.Add((object) this.CreateAccount.Text);
                 this.Cuentas.Items.Add((object) this.CreateAccount.Text);
               }
               int num1 = (int) Interaction.MsgBox((object) "Account Create!!", MsgBoxStyle.OkOnly, (object) null);
@@ -4033,7 +4033,7 @@ namespace MuMaker
               this.Email.Text = "";
               this.PersonalID.Text = "";
               this.CreateID.Text = "123456789012345678";
-              Class7.smethod_5();
+              ConnectionManager.smethod_5();
               this.ResetDatosPJ();
             }
           }
@@ -4043,7 +4043,7 @@ namespace MuMaker
             int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
             ProjectData.ClearProjectError();
           }
-          Class7.smethod_5();
+          ConnectionManager.smethod_5();
         }
         else
         {
@@ -4053,19 +4053,19 @@ namespace MuMaker
       }
       else
       {
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "Espanol", false) == 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "Espanol", false) == 0)
         {
           int num1 = (int) Interaction.MsgBox((object) "Rellene Todos Los Campos!!", MsgBoxStyle.OkOnly, (object) null);
         }
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "English", false) == 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "English", false) == 0)
         {
           int num2 = (int) Interaction.MsgBox((object) "Fill up everything!!", MsgBoxStyle.OkOnly, (object) null);
         }
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "PortBra", false) == 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "PortBra", false) == 0)
         {
           int num3 = (int) Interaction.MsgBox((object) "Rellene Todos Os Campos!!", MsgBoxStyle.OkOnly, (object) null);
         }
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "Espanol", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "English", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "PortBra", false) != 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "Espanol", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "English", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "PortBra", false) != 0)
         {
           int num4 = (int) Interaction.MsgBox((object) "Fill up everything!!", MsgBoxStyle.OkOnly, (object) null);
         }
@@ -4079,16 +4079,16 @@ namespace MuMaker
         this.Cuentas.SelectedItem = (object) this.CuentaSearch.Text;
       if (this.PersonajeSearch.Text.Length <= 0)
         return;
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT AccountID FROM Character WHERE Name='" + this.PersonajeSearch.Text + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        while (Class28.sqlDataReader_1.Read())
-          this.CuentaSearch.Text = Class28.sqlDataReader_1[0].ToString();
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT AccountID FROM Character WHERE Name='" + this.PersonajeSearch.Text + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
+          this.CuentaSearch.Text = SqlConnectionPool.sqlDataReader_1[0].ToString();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -4096,7 +4096,7 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       this.Cuentas.SelectedItem = (object) this.CuentaSearch.Text;
       this.Personajes.SelectedItem = (object) this.PersonajeSearch.Text;
     }
@@ -4149,35 +4149,35 @@ namespace MuMaker
     {
       StatsMaker.DefInstance.Close();
       PJMaker.DefInstance.Close();
-      Class7.smethod_0();
-      int num1 = Conversions.ToInteger(Class6.string_6[this.Clases.SelectedIndex]);
-      int num2 = Conversions.ToInteger(Class6.string_3[this.CtrlCode.SelectedIndex]);
-      string str1 = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "0");
-      string str2 = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
+      ConnectionManager.smethod_0();
+      int num1 = Conversions.ToInteger(GameDataArrays.string_6[this.Clases.SelectedIndex]);
+      int num2 = Conversions.ToInteger(GameDataArrays.string_3[this.CtrlCode.SelectedIndex]);
+      string str1 = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Reset", "0");
+      string str2 = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "Reset", "Resets");
       int num3;
       if (Conversions.ToDouble(str1) == 1.0 & this.Resets.Enabled)
       {
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
           if (num1 == 999 & num2 == 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
           if (num1 == 999 & num2 != 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
           if (num1 != 999 & num2 == 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "' Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "' Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
           if (num1 != 999 & num2 != 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "',  CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          Class28.sqlDataReader_1.Close();
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "',  CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "', " + str2 + "=" + this.Resets.Text + " WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          SqlConnectionPool.sqlDataReader_1.Close();
           num3 = 1;
         }
         catch (Exception ex)
         {
           ProjectData.SetProjectError(ex);
           int num4 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
-          Class7.smethod_5();
+          ConnectionManager.smethod_5();
           ProjectData.ClearProjectError();
           return;
         }
@@ -4186,33 +4186,33 @@ namespace MuMaker
       {
         try
         {
-          Class28.sqlConnection_1.Open();
-          Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
+          SqlConnectionPool.sqlConnection_1.Open();
+          SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
           if (num1 == 999 & num2 == 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
           if (num1 == 999 & num2 != 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
           if (num1 != 999 & num2 == 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "'  Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "'  Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
           if (num1 != 999 & num2 != 999)
-            Class28.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "',  CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
-          Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-          Class28.sqlDataReader_1.Close();
+            SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE Character SET cLevel='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Class='" + Conversions.ToString(num1) + "', Experience='" + this.Exp.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', PkCount='" + this.PKCount.Text + "', PkLevel='" + Conversions.ToString(this.PKLevel.SelectedIndex) + "', PkTime='" + this.PKTime.Text + "',  CtlCode='" + Conversions.ToString(num2) + "', Leadership='" + this.Comand.Text + "', FruitPoint='" + this.Frutas.Text + "' WHERE AccountID='" + this.EditAccount.Text + "' AND Name='" + this.EditChart.Text + "'";
+          SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+          SqlConnectionPool.sqlDataReader_1.Close();
           num3 = 1;
         }
         catch (Exception ex)
         {
           ProjectData.SetProjectError(ex);
           int num4 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
-          Class7.smethod_5();
+          ConnectionManager.smethod_5();
           ProjectData.ClearProjectError();
           return;
         }
       }
-      Class7.smethod_5();
-      Class20.smethod_11((object) ("0x" + Class6.string_11[this.Quests.SelectedIndex]));
+      ConnectionManager.smethod_5();
+      StoredProceduresManager.smethod_11((object) ("0x" + GameDataArrays.string_11[this.Quests.SelectedIndex]));
       int num5 = 0;
-      if (Conversions.ToDouble(Class6.string_10[this.Quests.SelectedIndex]) == 999.0)
+      if (Conversions.ToDouble(GameDataArrays.string_10[this.Quests.SelectedIndex]) == 999.0)
         num5 = 1;
       int num6;
       if (num5 == 1)
@@ -4221,12 +4221,12 @@ namespace MuMaker
       }
       else
       {
-        Class7.smethod_1();
-        Class28.sqlConnection_2.Open();
+        ConnectionManager.smethod_1();
+        SqlConnectionPool.sqlConnection_2.Open();
         try
         {
           SqlCommand sqlCommand1 = new SqlCommand();
-          SqlCommand sqlCommand2 = new SqlCommand("MMK_QuestMaker", Class28.sqlConnection_2);
+          SqlCommand sqlCommand2 = new SqlCommand("MMK_QuestMaker", SqlConnectionPool.sqlConnection_2);
           sqlCommand2.CommandType = CommandType.StoredProcedure;
           sqlCommand2.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.VarChar, 10)
           {
@@ -4251,7 +4251,7 @@ namespace MuMaker
           int num4 = (int) Interaction.MsgBox((object) exception.Message, MsgBoxStyle.OkOnly, (object) null);
           ProjectData.ClearProjectError();
         }
-        Class7.smethod_6();
+        ConnectionManager.smethod_6();
       }
       if (num6 == 1)
       {
@@ -4264,25 +4264,25 @@ namespace MuMaker
 
     private void method_32(object sender, EventArgs e)
     {
-      int num1 = Conversions.ToInteger(Class6.string_7[this.Clases.SelectedIndex]);
+      int num1 = Conversions.ToInteger(GameDataArrays.string_7[this.Clases.SelectedIndex]);
       if (num1 == 9999)
         num1 = 0;
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT * FROM DefaultClassType WHERE Class='" + Conversions.ToString(num1) + "'";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        Class28.sqlDataReader_1.Read();
-        this.Level.Text = Class28.sqlDataReader_1[17].ToString();
-        this.Puntos.Text = Class28.sqlDataReader_1[18].ToString();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT * FROM DefaultClassType WHERE Class='" + Conversions.ToString(num1) + "'";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlDataReader_1.Read();
+        this.Level.Text = SqlConnectionPool.sqlDataReader_1[17].ToString();
+        this.Puntos.Text = SqlConnectionPool.sqlDataReader_1[18].ToString();
         this.Exp.Text = "0";
-        this.Fuerza.Text = Class28.sqlDataReader_1[1].ToString();
-        this.Agilidad.Text = Class28.sqlDataReader_1[2].ToString();
-        this.Vitalidad.Text = Class28.sqlDataReader_1[3].ToString();
-        this.Energia.Text = Class28.sqlDataReader_1[4].ToString();
-        this.Comand.Text = Class28.sqlDataReader_1[16].ToString();
+        this.Fuerza.Text = SqlConnectionPool.sqlDataReader_1[1].ToString();
+        this.Agilidad.Text = SqlConnectionPool.sqlDataReader_1[2].ToString();
+        this.Vitalidad.Text = SqlConnectionPool.sqlDataReader_1[3].ToString();
+        this.Energia.Text = SqlConnectionPool.sqlDataReader_1[4].ToString();
+        this.Comand.Text = SqlConnectionPool.sqlDataReader_1[16].ToString();
         this.PKLevel.SelectedIndex = 3;
         this.PKCount.Text = "0";
         this.PKTime.Text = "0";
@@ -4291,13 +4291,13 @@ namespace MuMaker
         try
         {
           int num2 = 1;
-          int num3 = Conversions.ToInteger(Class6.string_9);
+          int num3 = Conversions.ToInteger(GameDataArrays.string_9);
           int num4 = num2;
           while (num4 <= num3)
           {
-            if ((double) num1 != Conversions.ToDouble(Class6.string_6[checked (num4 - 1)]))
+            if ((double) num1 != Conversions.ToDouble(GameDataArrays.string_6[checked (num4 - 1)]))
             {
-              this.Clases.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class6.string_9) - 1.0)));
+              this.Clases.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(GameDataArrays.string_9) - 1.0)));
               checked { ++num4; }
             }
             else
@@ -4315,7 +4315,7 @@ namespace MuMaker
         }
         this.Frutas.Text = "0";
         this.Resets.Text = "0";
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -4323,7 +4323,7 @@ namespace MuMaker
         int num2 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
     }
 
     private void method_33(object sender, EventArgs e)
@@ -4375,15 +4375,15 @@ namespace MuMaker
     {
       StatsMaker.DefInstance.Close();
       PJMaker.DefInstance.Close();
-      if (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual((object) Interaction.MsgBox((object) "!!!!! Delete This Account !!!!!", MsgBoxStyle.YesNo, RuntimeHelpers.GetObjectValue(Class30.object_76)), (object) MsgBoxResult.Yes, false))
+      if (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual((object) Interaction.MsgBox((object) "!!!!! Delete This Account !!!!!", MsgBoxStyle.YesNo, RuntimeHelpers.GetObjectValue(LocalizedStrings.object_76)), (object) MsgBoxResult.Yes, false))
         return;
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + this.CuentaID.Text + "'";
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + this.CuentaID.Text + "'";
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -4391,13 +4391,13 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + this.CuentaID.Text + "'";
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + this.CuentaID.Text + "'";
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -4405,13 +4405,13 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + this.CuentaID.Text + "'";
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + this.CuentaID.Text + "'";
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -4419,13 +4419,13 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + this.CuentaID.Text + "'";
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + this.CuentaID.Text + "'";
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -4433,13 +4433,13 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "DELETE FROM ExtWareHouse WHERE AccountID='" + this.CuentaID.Text + "'";
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM ExtWareHouse WHERE AccountID='" + this.CuentaID.Text + "'";
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -4447,20 +4447,20 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       PJMaker.DefInstance.Close();
-      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Class26.object_17, (object) 1, false))
+      if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(Configuration.object_17, (object) 1, false))
       {
-        Class2.smethod_3().method_8().CargarCuentas();
+        ApplicationServices.MuMakerApplication.smethod_3().method_8().CargarCuentas();
         this.CargarCuentas();
       }
       else
       {
-        Class2.smethod_3().method_8().Cuentas.Items.Remove((object) this.CuentaID.Text);
+        ApplicationServices.MuMakerApplication.smethod_3().method_8().Cuentas.Items.Remove((object) this.CuentaID.Text);
         this.Cuentas.Items.Remove((object) this.CuentaID.Text);
         this.CargarCuentas();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       this.CuentaID.Text = "";
       this.PassWord.Text = "";
       this.Email.Text = "";
@@ -4477,19 +4477,19 @@ namespace MuMaker
       {
         if (this.PersonalID.Text.Length == 18)
         {
-          Class7.smethod_0();
+          ConnectionManager.smethod_0();
           object Left = (object) 0;
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "SELECT * FROM MEMB_INFO WHERE memb___id='" + this.CuentaID.Text + "'";
-            Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-            while (Class28.sqlDataReader_1.Read())
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "SELECT * FROM MEMB_INFO WHERE memb___id='" + this.CuentaID.Text + "'";
+            SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+            while (SqlConnectionPool.sqlDataReader_1.Read())
               Left = Microsoft.VisualBasic.CompilerServices.Operators.AddObject(Left, (object) 1);
             if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(this.CuentaID.Text, this.Cuentas.Text, false) == 0)
               Left = (object) 0;
-            Class28.sqlDataReader_1.Close();
+            SqlConnectionPool.sqlDataReader_1.Close();
             if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual(Left, (object) 0, false))
             {
               int num = (int) Interaction.MsgBox((object) "Account Already Existing!!", MsgBoxStyle.OkOnly, (object) null);
@@ -4497,14 +4497,14 @@ namespace MuMaker
             }
             else
             {
-              Class7.smethod_5();
+              ConnectionManager.smethod_5();
               if (this.MD5ON.Visible)
               {
-                Class28.sqlConnection_1.Open();
-                Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
+                SqlConnectionPool.sqlConnection_1.Open();
+                SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
                 try
                 {
-                  Class28.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', sno__numb = '" + this.PersonalID.Text + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
+                  SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', sno__numb = '" + this.PersonalID.Text + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
                 }
                 catch (Exception ex1)
                 {
@@ -4512,7 +4512,7 @@ namespace MuMaker
                   Exception exception1 = ex1;
                   try
                   {
-                    Class28.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', sno__numb = '" + Strings.Mid(this.PersonalID.Text, 1, 13) + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
+                    SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', sno__numb = '" + Strings.Mid(this.PersonalID.Text, 1, 13) + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
                   }
                   catch (Exception ex2)
                   {
@@ -4523,14 +4523,14 @@ namespace MuMaker
                   }
                   ProjectData.ClearProjectError();
                 }
-                Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-                Class28.sqlDataReader_1.Close();
-                Class7.smethod_5();
-                Class28.sqlConnection_1.Open();
+                SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+                SqlConnectionPool.sqlDataReader_1.Close();
+                ConnectionManager.smethod_5();
+                SqlConnectionPool.sqlConnection_1.Open();
                 try
                 {
                   SqlCommand sqlCommand1 = new SqlCommand();
-                  SqlCommand sqlCommand2 = new SqlCommand("SP_MD5_ENCODE_VALUE", Class28.sqlConnection_1);
+                  SqlCommand sqlCommand2 = new SqlCommand("SP_MD5_ENCODE_VALUE", SqlConnectionPool.sqlConnection_1);
                   sqlCommand2.CommandType = CommandType.StoredProcedure;
                   sqlCommand2.Parameters.Add(new SqlParameter("@btInStr", SqlDbType.VarChar, 10)
                   {
@@ -4552,15 +4552,15 @@ namespace MuMaker
                   int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
                   ProjectData.ClearProjectError();
                 }
-                Class7.smethod_5();
+                ConnectionManager.smethod_5();
               }
               else
               {
-                Class28.sqlConnection_1.Open();
-                Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
+                SqlConnectionPool.sqlConnection_1.Open();
+                SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
                 try
                 {
-                  Class28.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', memb__pwd = '" + this.PassWord.Text + "', sno__numb = '" + this.PersonalID.Text + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
+                  SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', memb__pwd = '" + this.PassWord.Text + "', sno__numb = '" + this.PersonalID.Text + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
                 }
                 catch (Exception ex1)
                 {
@@ -4568,7 +4568,7 @@ namespace MuMaker
                   Exception exception1 = ex1;
                   try
                   {
-                    Class28.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', memb__pwd = '" + this.PassWord.Text + "', sno__numb = '" + Strings.Mid(this.PersonalID.Text, 1, 13) + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
+                    SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE MEMB_INFO SET memb___id = '" + this.CuentaID.Text + "', memb__pwd = '" + this.PassWord.Text + "', sno__numb = '" + Strings.Mid(this.PersonalID.Text, 1, 13) + "', mail_addr = '" + this.Email.Text + "' WHERE memb___id = '" + this.Cuentas.Text + "';";
                   }
                   catch (Exception ex2)
                   {
@@ -4579,39 +4579,39 @@ namespace MuMaker
                   }
                   ProjectData.ClearProjectError();
                 }
-                Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-                Class28.sqlDataReader_1.Close();
-                Class7.smethod_5();
+                SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+                SqlConnectionPool.sqlDataReader_1.Close();
+                ConnectionManager.smethod_5();
               }
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "UPDATE character SET AccountID = '" + this.CuentaID.Text + "' WHERE AccountID = '" + this.Cuentas.Text + "';";
-              Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-              Class28.sqlDataReader_1.Close();
-              Class7.smethod_5();
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "UPDATE AccountCharacter SET Id = '" + this.CuentaID.Text + "'WHERE Id = '" + this.Cuentas.Text + "';";
-              Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-              Class28.sqlDataReader_1.Close();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE character SET AccountID = '" + this.CuentaID.Text + "' WHERE AccountID = '" + this.Cuentas.Text + "';";
+              SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlDataReader_1.Close();
+              ConnectionManager.smethod_5();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "UPDATE AccountCharacter SET Id = '" + this.CuentaID.Text + "'WHERE Id = '" + this.Cuentas.Text + "';";
+              SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlDataReader_1.Close();
               int num1 = (int) Interaction.MsgBox((object) "Account Edited!!", MsgBoxStyle.OkOnly, (object) null);
-              Class7.smethod_5();
+              ConnectionManager.smethod_5();
               this.ResetDatosPJ();
               try
               {
-                Class28.sqlConnection_1.Open();
-                Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-                Class28.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
-                Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-                string string_0 = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol");
-                this.Personajes.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", Class18.smethod_0(string_0, "SelecPerson")), (object) " "));
+                SqlConnectionPool.sqlConnection_1.Open();
+                SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+                SqlConnectionPool.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
+                SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+                string string_0 = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Config", "Languaje", "Espanol");
+                this.Personajes.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", IniHelper.smethod_0(string_0, "SelecPerson")), (object) " "));
                 this.Personajes.Items.Clear();
-                this.Cuentas.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", Class18.smethod_0(string_0, "SelecAcount")), (object) " "));
+                this.Cuentas.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) " ", IniHelper.smethod_0(string_0, "SelecAcount")), (object) " "));
                 this.Cuentas.Items.Clear();
-                while (Class28.sqlDataReader_1.Read())
-                  this.Cuentas.Items.Add((object) Class28.sqlDataReader_1[0].ToString());
+                while (SqlConnectionPool.sqlDataReader_1.Read())
+                  this.Cuentas.Items.Add((object) SqlConnectionPool.sqlDataReader_1[0].ToString());
                 this.Cuentas.SelectedItem = (object) this.CuentaID.Text;
-                Class28.sqlDataReader_1.Close();
+                SqlConnectionPool.sqlDataReader_1.Close();
               }
               catch (Exception ex)
               {
@@ -4619,7 +4619,7 @@ namespace MuMaker
                 int num2 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
                 ProjectData.ClearProjectError();
               }
-              Class7.smethod_5();
+              ConnectionManager.smethod_5();
             }
           }
           catch (Exception ex)
@@ -4628,7 +4628,7 @@ namespace MuMaker
             int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
             ProjectData.ClearProjectError();
           }
-          Class7.smethod_5();
+          ConnectionManager.smethod_5();
           this.RestriccionesOFF();
           this.CuentaID.Enabled = true;
           this.PassWord.Enabled = true;
@@ -4646,19 +4646,19 @@ namespace MuMaker
       }
       else
       {
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "Espanol", false) == 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "Espanol", false) == 0)
         {
           int num1 = (int) Interaction.MsgBox((object) "Rellene Todos Los Campos!!", MsgBoxStyle.OkOnly, (object) null);
         }
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "English", false) == 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "English", false) == 0)
         {
           int num2 = (int) Interaction.MsgBox((object) "Fill up everything!!", MsgBoxStyle.OkOnly, (object) null);
         }
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "PortBra", false) == 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "PortBra", false) == 0)
         {
           int num3 = (int) Interaction.MsgBox((object) "Rellene Todos Os Campos!!", MsgBoxStyle.OkOnly, (object) null);
         }
-        if (!(Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "Espanol", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "English", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class30.string_0, "PortBra", false) != 0))
+        if (!(Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "Espanol", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "English", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(LocalizedStrings.string_0, "PortBra", false) != 0))
           return;
         int num4 = (int) Interaction.MsgBox((object) "Fill up everything!!", MsgBoxStyle.OkOnly, (object) null);
       }
@@ -4666,7 +4666,7 @@ namespace MuMaker
 
     private void AccountMaker_Closing(object sender, CancelEventArgs e)
     {
-      Class18.smethod_47();
+      IniHelper.smethod_47();
       PJMaker.DefInstance.Close();
       StatsMaker.DefInstance.Close();
     }
@@ -4679,11 +4679,11 @@ namespace MuMaker
 
     private void Reloj_Tick(object sender, EventArgs e)
     {
-      new Thread(new ThreadStart(Class12.smethod_0))
+      new Thread(new ThreadStart(AccountStatusManager.smethod_0))
       {
         IsBackground = true
       }.Start();
-      if (Class22.struct0_0.bool_0)
+      if (AccountData.CurrentAccount.bool_0)
       {
         this.OnlineOFF.Hide();
         this.OnlineON.Show();
@@ -4698,193 +4698,193 @@ namespace MuMaker
     private void method_40(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_12();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_41(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Buscar.BackgroundImage = (Image) Class34.smethod_13();
+      this.Buscar.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_42(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
     }
 
     private void method_43(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_101();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_101();
     }
 
     private void method_44(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarDatos.BackgroundImage = (Image) Class34.smethod_36();
+      this.BorrarDatos.BackgroundImage = (Image) EmbeddedResources.smethod_36();
     }
 
     private void method_45(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarDatos.BackgroundImage = (Image) Class34.smethod_37();
+      this.BorrarDatos.BackgroundImage = (Image) EmbeddedResources.smethod_37();
     }
 
     private void method_46(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CrearAccount.BackgroundImage = (Image) Class34.smethod_50();
+      this.CrearAccount.BackgroundImage = (Image) EmbeddedResources.smethod_50();
     }
 
     private void method_47(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CrearAccount.BackgroundImage = (Image) Class34.smethod_51();
+      this.CrearAccount.BackgroundImage = (Image) EmbeddedResources.smethod_51();
     }
 
     private void method_48(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CreatePj.BackgroundImage = (Image) Class34.smethod_50();
+      this.CreatePj.BackgroundImage = (Image) EmbeddedResources.smethod_50();
     }
 
     private void method_49(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.CreatePj.BackgroundImage = (Image) Class34.smethod_51();
+      this.CreatePj.BackgroundImage = (Image) EmbeddedResources.smethod_51();
     }
 
     private void method_50(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
     }
 
     private void method_51(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_91();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_91();
     }
 
     private void method_52(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.ResetDefault.BackgroundImage = (Image) Class34.smethod_117();
+      this.ResetDefault.BackgroundImage = (Image) EmbeddedResources.smethod_117();
     }
 
     private void method_53(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.ResetDefault.BackgroundImage = (Image) Class34.smethod_118();
+      this.ResetDefault.BackgroundImage = (Image) EmbeddedResources.smethod_118();
     }
 
     private void method_54(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.EditDefault.BackgroundImage = (Image) Class34.smethod_14();
+      this.EditDefault.BackgroundImage = (Image) EmbeddedResources.smethod_14();
     }
 
     private void method_55(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.EditDefault.BackgroundImage = (Image) Class34.smethod_15();
+      this.EditDefault.BackgroundImage = (Image) EmbeddedResources.smethod_15();
     }
 
     private void method_56(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.AccountEdit.BackgroundImage = (Image) Class34.smethod_90();
+      this.AccountEdit.BackgroundImage = (Image) EmbeddedResources.smethod_90();
     }
 
     private void method_57(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.AccountEdit.BackgroundImage = (Image) Class34.smethod_91();
+      this.AccountEdit.BackgroundImage = (Image) EmbeddedResources.smethod_91();
     }
 
     private void method_58(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarCuenta.BackgroundImage = (Image) Class34.smethod_53();
+      this.BorrarCuenta.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_59(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BorrarCuenta.BackgroundImage = (Image) Class34.smethod_54();
+      this.BorrarCuenta.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_60(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonItemMaker.BackgroundImage = (Image) Class34.smethod_20();
+      this.BotonItemMaker.BackgroundImage = (Image) EmbeddedResources.smethod_20();
     }
 
     private void method_61(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonItemMaker.BackgroundImage = (Image) Class34.smethod_21();
+      this.BotonItemMaker.BackgroundImage = (Image) EmbeddedResources.smethod_21();
     }
 
     private void method_62(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonSkillMaker.BackgroundImage = (Image) Class34.smethod_29();
+      this.BotonSkillMaker.BackgroundImage = (Image) EmbeddedResources.smethod_29();
     }
 
     private void method_63(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonSkillMaker.BackgroundImage = (Image) Class34.smethod_30();
+      this.BotonSkillMaker.BackgroundImage = (Image) EmbeddedResources.smethod_30();
     }
 
     private void method_64(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonGuildMaker.BackgroundImage = (Image) Class34.smethod_18();
+      this.BotonGuildMaker.BackgroundImage = (Image) EmbeddedResources.smethod_18();
     }
 
     private void method_65(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonGuildMaker.BackgroundImage = (Image) Class34.smethod_19();
+      this.BotonGuildMaker.BackgroundImage = (Image) EmbeddedResources.smethod_19();
     }
 
     private void method_66(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonMoveMaker.BackgroundImage = (Image) Class34.smethod_24();
+      this.BotonMoveMaker.BackgroundImage = (Image) EmbeddedResources.smethod_24();
     }
 
     private void method_67(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonMoveMaker.BackgroundImage = (Image) Class34.smethod_25();
+      this.BotonMoveMaker.BackgroundImage = (Image) EmbeddedResources.smethod_25();
     }
 
     private void method_68(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
     }
 
     private void method_69(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_87();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_87();
     }
 
     private void method_70(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_71(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
   }
 }
