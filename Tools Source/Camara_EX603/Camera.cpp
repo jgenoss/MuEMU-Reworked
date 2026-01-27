@@ -203,15 +203,15 @@ void CCamera::Move(MOUSEHOOKSTRUCTEX* lpMouse) // OK
 
 void CCamera::SetCurrentValue() // OK
 {
-	SetDouble((DWORD)this->m_Address.ClipX[0],(4190.0f+(abs(((*this->m_Address.PosZ)-150.0f))*3.0f)));
+	SetDouble((DWORD)this->m_Address.ClipX[0],(4190.0f+(fabs(((*this->m_Address.PosZ)-150.0f))*3.0f)));
 
-	SetDouble((DWORD)this->m_Address.ClipX[1],(4190.0f+(abs(((*this->m_Address.PosZ)-150.0f))*3.0f)));
+	SetDouble((DWORD)this->m_Address.ClipX[1],(4190.0f+(fabs(((*this->m_Address.PosZ)-150.0f))*3.0f)));
 
-	SetFloat((DWORD)this->m_Address.ClipY[0],(5400.0f+(((float)abs(((*this->m_Address.PosZ)-150.0f)))*3.0f)));
+	SetFloat((DWORD)this->m_Address.ClipY[0],(5400.0f+(((float)fabs(((*this->m_Address.PosZ)-150.0f)))*3.0f)));
 
-	SetFloat((DWORD)this->m_Address.ClipY[1],(5400.0f+(((float)abs(((*this->m_Address.PosZ)-150.0f)))*3.0f)));
+	SetFloat((DWORD)this->m_Address.ClipY[1],(5400.0f+(((float)fabs(((*this->m_Address.PosZ)-150.0f)))*3.0f)));
 
-	SetFloat((DWORD)this->m_Address.ClipGL,(2100.0f+(((float)abs(((*this->m_Address.PosZ)-150.0f)))*3.0f)));
+	SetFloat((DWORD)this->m_Address.ClipGL,(2100.0f+(((float)fabs(((*this->m_Address.PosZ)-150.0f)))*3.0f)));
 }
 
 void CCamera::SetDefaultValue() // OK

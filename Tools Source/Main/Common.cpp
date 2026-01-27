@@ -160,6 +160,15 @@ void InitCommon() // OK
 	MemorySet(0x005AD691, 0x90, 0x05); //fix move skill
 	//Botón de corrección de desplazamiento del guardián de Crywolf (tercera misión)
 	MemorySet(0x00792B7F, 0x90, 0x05);	// Fix Button Crywolf Gatekeeper (Third Quest)
+
+	//mini buff icons
+	SetFloat(0x00D43220, 10);
+	SetFloat(0x00D43224, 14);
+	SetByte(0x00777E70, 0x16);
+
+	SetDword(0x0077823A + 1, (DWORD)"Custom\\Interface\\small_newui_statusicon.jpg");
+	SetDword(0x0077825A + 1, (DWORD)"Custom\\Interface\\small_newui_statusicon2.jpg");
+	SetDword(0x0077827A + 1, (DWORD)"Custom\\Interface\\small_newui_statusicon3.jpg");
 }
 
 void CreateConsole()
