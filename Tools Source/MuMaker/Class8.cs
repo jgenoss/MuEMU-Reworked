@@ -200,8 +200,6 @@ label_4:
     return obj;
 label_6:
     Class7.smethod_7();
-    MessageBox.Show("Length = " + Class22.struct2_0.string_0.Length.ToString() + " Default = " +
-                    Class32.int_0.ToString());
     if (Class22.struct2_0.string_0.Length == Class32.int_0)
       return (object) true;
     int num1 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_86), MsgBoxStyle.OkOnly, RuntimeHelpers.GetObjectValue(Class30.object_76));
