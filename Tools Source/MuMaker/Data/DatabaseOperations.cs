@@ -454,6 +454,14 @@ namespace MuMaker.Data
         }
         #endregion
 
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Load character data</summary>
+        public static bool smethod_0() => LoadCharacterData();
+
+        /// <summary>smethod_1 - Load account data</summary>
+        public static bool smethod_1() => LoadAccountData();
+        #endregion
+
         #region Warehouse Create/Reset
         /// <summary>
         /// Creates warehouse backup (stored procedure)

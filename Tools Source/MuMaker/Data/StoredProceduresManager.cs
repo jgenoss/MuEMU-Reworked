@@ -385,5 +385,70 @@ WHERE AccountID=@AccountID AND Name=@Name";
             }
         }
         #endregion
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Create warehouse procedure</summary>
+        public static void smethod_0() => CreateWarehouseAndInventoryProcedures();
+
+        /// <summary>smethod_1 - Create skill procedure</summary>
+        public static void smethod_1() => CreateSkillProcedure();
+
+        /// <summary>smethod_2 - Create quest procedure</summary>
+        public static void smethod_2() => CreateQuestProcedure();
+
+        /// <summary>smethod_3 - Create guild procedure</summary>
+        public static void smethod_3() => CreateGuildProcedure();
+
+        /// <summary>smethod_9 - Execute finder search (warehouse)</summary>
+        public static void smethod_9(object searchQuery)
+        {
+            // Execute finder search query on warehouse
+            ConnectionManager.OpenWarehouseConnection();
+            try
+            {
+                SqlConnectionPool.WarehouseConnection.Open();
+                SqlConnectionPool.WarehouseCommand.Connection = SqlConnectionPool.WarehouseConnection;
+                SqlConnectionPool.WarehouseCommand.CommandText = Conversions.ToString(searchQuery);
+                SqlConnectionPool.WarehouseCommand.ExecuteNonQuery();
+            }
+            catch (Exception) { }
+            ConnectionManager.CloseWarehouseConnection();
+        }
+
+        /// <summary>smethod_10 - Execute finder search (inventory)</summary>
+        public static void smethod_10(object searchQuery)
+        {
+            // Execute finder search query on inventory
+            ConnectionManager.OpenInventoryConnection();
+            try
+            {
+                SqlConnectionPool.InventoryConnection.Open();
+                SqlConnectionPool.InventoryCommand.Connection = SqlConnectionPool.InventoryConnection;
+                SqlConnectionPool.InventoryCommand.CommandText = Conversions.ToString(searchQuery);
+                SqlConnectionPool.InventoryCommand.ExecuteNonQuery();
+            }
+            catch (Exception) { }
+            ConnectionManager.CloseInventoryConnection();
+        }
+
+        /// <summary>smethod_11 - Update quest data</summary>
+        public static void smethod_11(object questHex)
+        {
+            ConnectionManager.OpenCharacterConnection();
+            try
+            {
+                SqlConnectionPool.CharacterConnection.Open();
+                SqlConnectionPool.CharacterCommand.Connection = SqlConnectionPool.CharacterConnection;
+                SqlConnectionPool.CharacterCommand.CommandText =
+                    $"UPDATE Character SET Quest={questHex} WHERE AccountID='{AccountManager.CurrentAccount.DisplayAccountId}' AND Name='{CharacterManager.CurrentCharacter.Name}'";
+                SqlConnectionPool.CharacterCommand.ExecuteNonQuery();
+            }
+            catch (Exception) { }
+            ConnectionManager.CloseCharacterConnection();
+        }
+
+        /// <summary>smethod_14 - Initialize all stored procedures</summary>
+        public static void smethod_14() => InitializeStoredProcedures();
+        #endregion
     }
 }

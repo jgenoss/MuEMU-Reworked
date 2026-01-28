@@ -40,11 +40,19 @@ namespace MuMaker.Core
         }
 
         /// <summary>
-        /// smethod_3 - Get application info (for logging)
+        /// smethod_3 - Get application instance for startup (used in Main())
         /// </summary>
-        public static AssemblyInfo smethod_3()
+        public static MuMakerApplication smethod_3()
         {
-            return smethod_1().Info;
+            return smethod_1();
+        }
+
+        /// <summary>
+        /// method_8 - Get the main startup form instance
+        /// </summary>
+        public Form method_8()
+        {
+            return MuMaker.MuMaker.DefInstance;
         }
         #endregion
     }

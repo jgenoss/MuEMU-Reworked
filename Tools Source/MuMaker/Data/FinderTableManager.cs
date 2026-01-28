@@ -210,5 +210,22 @@ DROP TABLE [dbo].[MuMakerFinderMaker]";
             }
             ConnectionManager.CloseMemberDatabase();
         }
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Add reset column</summary>
+        public static object smethod_0() => AddResetColumn();
+
+        /// <summary>smethod_1 - Create or truncate finder table</summary>
+        public static object smethod_1() => CreateOrTruncateFinderTable();
+
+        /// <summary>smethod_2 - Truncate finder table</summary>
+        public static object smethod_2() => TruncateFinderTable();
+
+        /// <summary>smethod_3 - Drop finder table</summary>
+        public static object smethod_3() => DropFinderTable();
+
+        /// <summary>smethod_4 - Repair finder table columns</summary>
+        public static object smethod_4() => RepairFinderTableColumns();
+        #endregion
     }
 }
