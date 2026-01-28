@@ -440,6 +440,27 @@ namespace MuMaker.Core
             return true;
         }
         #endregion
+        #region Descriptive Method Names
+        // Public descriptive methods for clean code usage
+        public static string ReadIniValue(string filePath, string section, string key, string defaultValue = "") => ReadValue(filePath, section, key, defaultValue);
+        public static void WriteIniValue(string filePath, string section, string key, string value) => WriteValue(filePath, section, key, value);
+        public static string EncodeStringForWeb(string input) => smethod_5(input);
+        public static void ReloadConfiguration() => smethod_21();
+        public static object GetExtraWarehouseCount() => smethod_22();
+        public static object ValidateRequiredFiles() => smethod_29();
+        public static void LoadLocalizedStrings() => smethod_32();
+        public static void LoadMapImages() => smethod_33();
+        public static void PrepareShowConfigMaker() => smethod_35();
+        public static void PrepareShowAccountMaker() => smethod_36();
+        public static void PrepareShowItemMaker() => smethod_37();
+        public static void PrepareShowSkillMaker() => smethod_38();
+        public static void PrepareShowGuildMaker() => smethod_39();
+        public static void PrepareShowMoveMaker() => smethod_40();
+        public static void PrepareShowFinderMaker() => smethod_41();
+        public static void PrepareShowSQLMaker() => smethod_42();
+        public static void CompactLocalDatabase() => smethod_43();
+        #endregion
+
         #region Original Method Aliases (smethod_X backward compatibility)
         // These aliases maintain compatibility with code calling original obfuscated method names
 

@@ -131,5 +131,16 @@ namespace MuMaker.Core
             }
         }
         #endregion
+
+        #region Descriptive Method Names
+        /// <summary>Load configuration from INI files</summary>
+        public static void LoadConfiguration(string appPath) => smethod_0(appPath);
+
+        /// <summary>Load configuration from default path</summary>
+        public static void LoadConfiguration() => smethod_0(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath);
+
+        /// <summary>Generate hardware ID</summary>
+        public static bool GenerateHardwareId() => smethod_1();
+        #endregion
     }
 }

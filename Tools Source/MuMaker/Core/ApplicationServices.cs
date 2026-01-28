@@ -55,6 +55,17 @@ namespace MuMaker.Core
             return MuMaker.MuMaker.DefInstance;
         }
         #endregion
+
+        #region Descriptive Method Names
+        /// <summary>Get application instance (singleton)</summary>
+        public static MuMakerApplication GetInstance() => smethod_1();
+
+        /// <summary>Get application instance for startup</summary>
+        public static MuMakerApplication GetApplicationForStartup() => smethod_3();
+
+        /// <summary>Get the main startup form instance</summary>
+        public Form GetStartupForm() => method_8();
+        #endregion
     }
     #endregion
 
