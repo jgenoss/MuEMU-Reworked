@@ -418,6 +418,32 @@ namespace MuMaker.Data
             return options.Trim();
         }
         #endregion
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Get item image path</summary>
+        public static string smethod_0(string itemNumber) => GetItemImagePath(itemNumber);
+
+        /// <summary>smethod_1 - Resolve viewed item images</summary>
+        public static bool smethod_1() => ResolveViewedItemImages();
+
+        /// <summary>smethod_2 - Build full item name</summary>
+        public static string smethod_2() => BuildFullItemName();
+
+        /// <summary>smethod_3 - Build item hex string</summary>
+        public static string smethod_3() => BuildItemHexString();
+
+        /// <summary>smethod_4 - Parse item level</summary>
+        public static string smethod_4(string hexString) => ParseItemLevel(hexString);
+
+        /// <summary>smethod_5 - Parse additional level</summary>
+        public static string smethod_5(string hexString) => ParseAdditionalLevel(hexString);
+
+        /// <summary>smethod_14 - Parse ancient option</summary>
+        public static string smethod_14(string hexString) => ParseAncientOption(hexString);
+
+        /// <summary>smethod_15 - Parse excellent options</summary>
+        public static string smethod_15(string hexString) => ParseExcellentOptions(hexString);
+        #endregion
     }
 
     /// <summary>

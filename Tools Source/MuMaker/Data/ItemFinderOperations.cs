@@ -255,5 +255,35 @@ namespace MuMaker.Data
                 return (object)"0";
             return (object)"1";
         }
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Insert finder result</summary>
+        public static object smethod_0(
+            object accountId, object characterName, object isVault, object isInventory,
+            object isExtraWarehouse, object extraWarehouseNumber, object position, object itemHex,
+            object serial, object hasFullExcellent, object hasExcellentAncient, object hasFull380,
+            object hasFullJewelOfHarmony, object hasFullSocket, object itemCode)
+            => InsertFinderResult(accountId, characterName, isVault, isInventory, isExtraWarehouse,
+                extraWarehouseNumber, position, itemHex, serial, hasFullExcellent, hasExcellentAncient,
+                hasFull380, hasFullJewelOfHarmony, hasFullSocket, itemCode);
+
+        /// <summary>smethod_1 - Count total accounts</summary>
+        public static object smethod_1() => CountTotalAccounts();
+
+        /// <summary>smethod_2 - Check full excellent</summary>
+        public static object smethod_2(object itemHex) => CheckFullExcellent(itemHex);
+
+        /// <summary>smethod_3 - Check has 380 option</summary>
+        public static object smethod_3(object itemHex) => CheckHas380Option(itemHex);
+
+        /// <summary>smethod_4 - Check full jewel of harmony</summary>
+        public static object smethod_4(object itemHex) => CheckFullJewelOfHarmony(itemHex);
+
+        /// <summary>smethod_5 - Check excellent ancient</summary>
+        public static object smethod_5(object itemHex) => CheckExcellentAncient(itemHex);
+
+        /// <summary>smethod_6 - Check has socket</summary>
+        public static object smethod_6(object itemHex) => CheckHasSocket(itemHex);
+        #endregion
     }
 }

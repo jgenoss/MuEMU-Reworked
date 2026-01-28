@@ -123,5 +123,16 @@ namespace MuMaker.Data
             }
             return (object)true;
         }
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Check connection status</summary>
+        public static void smethod_0() => CheckConnectionStatus();
+
+        /// <summary>smethod_1 - Disconnect account</summary>
+        public static object smethod_1() => DisconnectAccount();
+
+        /// <summary>smethod_2 - Update ban status</summary>
+        public static object smethod_2(object currentStatus, object accountId) => UpdateBanStatus(currentStatus, accountId);
+        #endregion
     }
 }

@@ -19,6 +19,16 @@ namespace MuMaker.Helpers
         /// <summary>Default map cell height in pixels</summary>
         public static int MapCellHeight = 32;
 
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>
+        /// smethod_0 - Initialize/load map images (placeholder)
+        /// </summary>
+        public static void smethod_0()
+        {
+            // Map images are loaded on demand via GetMapImagePath
+        }
+        #endregion
+
         /// <summary>
         /// Get the image path for a map name
         /// </summary>

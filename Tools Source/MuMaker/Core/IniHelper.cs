@@ -440,5 +440,227 @@ namespace MuMaker.Core
             return true;
         }
         #endregion
+        #region Original Method Aliases (smethod_X backward compatibility)
+        // These aliases maintain compatibility with code calling original obfuscated method names
+
+        /// <summary>
+        /// smethod_0 - Read language string
+        /// </summary>
+        public static object smethod_0(string language, string key) => ReadLanguageString(language, key);
+
+        /// <summary>
+        /// smethod_1 - Read INI value
+        /// </summary>
+        public static string smethod_1(string filePath, string section, string key, string defaultValue = "")
+            => ReadValue(filePath, section, key, defaultValue);
+
+        /// <summary>
+        /// smethod_2 - Write INI value
+        /// </summary>
+        public static void smethod_2(string filePath, string section, string key, string value)
+            => WriteValue(filePath, section, key, value);
+
+        /// <summary>
+        /// smethod_3 - Decrypt password
+        /// </summary>
+        public static string smethod_3(string encryptedPassword) => DecryptPassword(encryptedPassword);
+
+        /// <summary>
+        /// smethod_5 - Encode string for web transmission
+        /// </summary>
+        public static string smethod_5(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return "";
+            string result = "";
+            foreach (char c in input)
+            {
+                result += Strings.Chr(Strings.Asc(c) + 10);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// smethod_7 - Encrypt password
+        /// </summary>
+        public static string smethod_7(string password) => EncryptPassword(password);
+
+        /// <summary>
+        /// smethod_8 - Decrypt password (alternate)
+        /// </summary>
+        public static string smethod_8(string encryptedPassword) => DecryptPassword(encryptedPassword);
+
+        /// <summary>
+        /// smethod_19 - Validate numeric input
+        /// </summary>
+        public static short smethod_19(short keyCode) => ValidateNumericInput(keyCode);
+
+        /// <summary>
+        /// smethod_20 - Generate hardware fingerprint
+        /// </summary>
+        public static string smethod_20() => GenerateHardwareFingerprint();
+
+        /// <summary>
+        /// smethod_21 - Reload configuration from INI files
+        /// </summary>
+        public static void smethod_21()
+        {
+            // Reload configuration
+            Configuration.smethod_0(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath);
+        }
+
+        /// <summary>
+        /// smethod_22 - Get extra warehouse count from config
+        /// </summary>
+        public static object smethod_22()
+        {
+            return Conversions.ToInteger(Configuration.object_13);
+        }
+
+        /// <summary>
+        /// smethod_29 - Validate language files exist
+        /// </summary>
+        public static object smethod_29()
+        {
+            return ValidateLanguageFiles() && ValidateDatabaseFile() ? 0 : 1;
+        }
+
+        /// <summary>
+        /// smethod_30 - Load image from byte array (convert MMK file to Image)
+        /// </summary>
+        public static Image smethod_30(byte[] imageBytes) => ByteArrayToImage(imageBytes);
+
+        /// <summary>
+        /// smethod_31 - Read MMK image file and return bytes
+        /// </summary>
+        public static byte[] smethod_31(object filePath) => ReadMmkImageFile(Conversions.ToString(filePath));
+
+        /// <summary>
+        /// smethod_32 - Load localized strings for current language
+        /// </summary>
+        public static void smethod_32()
+        {
+            LocalizedStrings.smethod_0(Conversions.ToString(Configuration.object_12));
+        }
+
+        /// <summary>
+        /// smethod_33 - Load map images
+        /// </summary>
+        public static void smethod_33()
+        {
+            MapImageHelper.smethod_0();
+        }
+
+        /// <summary>
+        /// smethod_34 - Load character images
+        /// </summary>
+        public static void smethod_34()
+        {
+            // Load character class images
+        }
+
+        /// <summary>
+        /// smethod_35 - Show config maker
+        /// </summary>
+        public static void smethod_35()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_36 - Show account maker
+        /// </summary>
+        public static void smethod_36()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_37 - Show PJ maker
+        /// </summary>
+        public static void smethod_37()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_38 - Show item maker
+        /// </summary>
+        public static void smethod_38()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_39 - Show move maker
+        /// </summary>
+        public static void smethod_39()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_40 - Show skill maker
+        /// </summary>
+        public static void smethod_40()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_41 - Show guild maker
+        /// </summary>
+        public static void smethod_41()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_42 - Show finder maker
+        /// </summary>
+        public static void smethod_42()
+        {
+            // Placeholder - form navigation
+        }
+
+        /// <summary>
+        /// smethod_43 - Compact local database
+        /// </summary>
+        public static void smethod_43()
+        {
+            CompactDatabase();
+        }
+
+        /// <summary>
+        /// smethod_44 - Load account data
+        /// </summary>
+        public static void smethod_44()
+        {
+            GameDataLoader.smethod_0();
+        }
+
+        /// <summary>
+        /// smethod_45 - Load item data
+        /// </summary>
+        public static void smethod_45()
+        {
+            GameDataLoader.smethod_1();
+        }
+
+        /// <summary>
+        /// smethod_46 - Load skill data
+        /// </summary>
+        public static void smethod_46()
+        {
+            GameDataLoader.smethod_2();
+        }
+
+        /// <summary>
+        /// smethod_47 - Clear all form data
+        /// </summary>
+        public static void smethod_47()
+        {
+            GameDataLoader.smethod_3();
+        }
+        #endregion
     }
 }

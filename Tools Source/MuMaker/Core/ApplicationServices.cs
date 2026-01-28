@@ -23,8 +23,30 @@ namespace MuMaker.Core
     [EditorBrowsable(EditorBrowsableState.Never)]
     public class MuMakerApplication : ConsoleApplicationBase
     {
+        private static MuMakerApplication _instance;
+
         [DebuggerNonUserCode]
         public MuMakerApplication() { }
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>
+        /// smethod_1 - Get application instance (singleton)
+        /// </summary>
+        public static MuMakerApplication smethod_1()
+        {
+            if (_instance == null)
+                _instance = new MuMakerApplication();
+            return _instance;
+        }
+
+        /// <summary>
+        /// smethod_3 - Get application info (for logging)
+        /// </summary>
+        public static AssemblyInfo smethod_3()
+        {
+            return smethod_1().Info;
+        }
+        #endregion
     }
     #endregion
 
