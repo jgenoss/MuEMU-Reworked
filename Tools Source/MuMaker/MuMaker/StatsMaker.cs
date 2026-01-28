@@ -509,7 +509,7 @@ namespace MuMaker
       this.Personaje.TabStop = false;
       this.Aplicar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
       this.Aplicar.BackgroundImageLayout = ImageLayout.Center;
       this.Aplicar.Cursor = Cursors.Hand;
       this.Aplicar.FlatAppearance.BorderSize = 0;
@@ -533,7 +533,7 @@ namespace MuMaker
       this.Aplicar.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_43();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_43();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -834,7 +834,7 @@ namespace MuMaker
       this.Clases.TabIndex = 425;
       this.Salir.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Salir.BackgroundImage = (Image) Class34.smethod_39();
+      this.Salir.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Salir.BackgroundImageLayout = ImageLayout.Center;
       this.Salir.Cursor = Cursors.Hand;
       this.Salir.DialogResult = DialogResult.Cancel;
@@ -873,7 +873,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_107();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_107();
       this.CancelButton = (IButtonControl) this.Cerrar;
       size1 = new Size(310, 260);
       this.ClientSize = size1;
@@ -917,14 +917,14 @@ namespace MuMaker
     public object ModificarStats()
     {
       object Right = (object) checked (this.Clases.SelectedIndex * 16);
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject((object) ("UPDATE DefaultClassType SET Level='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', Leadership='" + this.Comand.Text + "' WHERE Class='"), Right), (object) "'"));
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Operators.ConcatenateObject(Operators.ConcatenateObject((object) ("UPDATE DefaultClassType SET Level='" + this.Level.Text + "', LevelUpPoint='" + this.Puntos.Text + "', Strength='" + this.Fuerza.Text + "', Dexterity='" + this.Agilidad.Text + "', Vitality='" + this.Vitalidad.Text + "', Energy='" + this.Energia.Text + "', Leadership='" + this.Comand.Text + "' WHERE Class='"), Right), (object) "'"));
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -932,40 +932,40 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     private void StatsMaker_Load(object sender, EventArgs e)
     {
-      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       this.Clases.SelectedIndex = 0;
-      Class8.smethod_2((object) this.Clases.SelectedIndex);
+      DatabaseOperations.smethod_2((object) this.Clases.SelectedIndex);
     }
 
     private void Clases_SelectedIndexChanged(object sender, EventArgs e)
     {
       if (this.Clases.SelectedIndex == 0)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_1)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_1)));
       if (this.Clases.SelectedIndex == 1)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_6)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_6)));
       if (this.Clases.SelectedIndex == 2)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_11)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_11)));
       if (this.Clases.SelectedIndex == 3)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_16)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_16)));
       if (this.Clases.SelectedIndex == 4)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_20)));
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_20)));
       if (this.Clases.SelectedIndex == 5)
-        this.Personaje.BackgroundImage = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) Class27.string_24)));
-      Class8.smethod_2((object) checked (this.Clases.SelectedIndex * 16));
-      this.Fuerza.Text = Class22.struct1_1.string_5;
-      this.Agilidad.Text = Class22.struct1_1.string_6;
-      this.Vitalidad.Text = Class22.struct1_1.string_7;
-      this.Energia.Text = Class22.struct1_1.string_8;
-      this.Comand.Text = Class22.struct1_1.string_9;
-      this.Level.Text = Class22.struct1_1.string_2;
-      this.Puntos.Text = Class22.struct1_1.string_3;
+        this.Personaje.BackgroundImage = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) CharacterImagePaths.string_24)));
+      DatabaseOperations.smethod_2((object) checked (this.Clases.SelectedIndex * 16));
+      this.Fuerza.Text = AccountData.struct1_1.string_5;
+      this.Agilidad.Text = AccountData.struct1_1.string_6;
+      this.Vitalidad.Text = AccountData.struct1_1.string_7;
+      this.Energia.Text = AccountData.struct1_1.string_8;
+      this.Comand.Text = AccountData.struct1_1.string_9;
+      this.Level.Text = AccountData.struct1_1.string_2;
+      this.Puntos.Text = AccountData.struct1_1.string_3;
     }
 
     private void method_0(object sender, EventArgs e)
@@ -986,37 +986,37 @@ namespace MuMaker
     private void method_3(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Salir.BackgroundImage = (Image) Class34.smethod_39();
+      this.Salir.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_4(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Salir.BackgroundImage = (Image) Class34.smethod_40();
+      this.Salir.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void method_5(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_43();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_43();
     }
 
     private void method_6(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_46();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_46();
     }
 
     private void method_7(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_90();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_90();
     }
 
     private void method_8(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Aplicar.BackgroundImage = (Image) Class34.smethod_91();
+      this.Aplicar.BackgroundImage = (Image) EmbeddedResources.smethod_91();
     }
   }
 }

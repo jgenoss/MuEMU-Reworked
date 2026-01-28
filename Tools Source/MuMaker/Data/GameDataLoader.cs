@@ -501,5 +501,37 @@ namespace MuMaker.Data
             return true;
         }
         #endregion
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Load character classes</summary>
+        public static bool smethod_0() => LoadCharacterClasses();
+
+        /// <summary>smethod_1 - Load quests</summary>
+        public static bool smethod_1() => LoadQuests();
+
+        /// <summary>smethod_2 - Load control codes (GM levels)</summary>
+        public static bool smethod_2() => LoadControlCodes();
+
+        /// <summary>smethod_3 - Load hero system (PK status)</summary>
+        public static bool smethod_3() => LoadHeroSystem();
+
+        /// <summary>smethod_4 - Load maps</summary>
+        public static bool smethod_4() => LoadMaps();
+
+        /// <summary>smethod_5 - Load excellent options</summary>
+        public static bool smethod_5() => LoadExcellentOptions();
+
+        /// <summary>smethod_6 - Load refinery options</summary>
+        public static bool smethod_6() => LoadRefineryOptions();
+
+        /// <summary>smethod_7 - Load jewel of harmony options</summary>
+        public static bool smethod_7(string itemType) => LoadJewelOfHarmonyOptions(itemType);
+
+        /// <summary>smethod_8 - Load jewel of harmony values</summary>
+        public static bool smethod_8(string itemType, int optionIndex) => LoadJewelOfHarmonyValues(itemType, optionIndex);
+
+        /// <summary>smethod_9 - Load socket options</summary>
+        public static bool smethod_9() => LoadSocketOptions();
+        #endregion
     }
 }

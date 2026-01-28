@@ -216,5 +216,16 @@ namespace MuMaker.Data
             return true;
         }
         #endregion
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>smethod_0 - Reset item selection</summary>
+        public static bool smethod_0() => ResetItemSelection();
+
+        /// <summary>smethod_1 - Load item by name</summary>
+        public static bool smethod_1(string itemName) => LoadItemByName(itemName);
+
+        /// <summary>smethod_2 - Parse item from hex</summary>
+        public static bool smethod_2(string hexString) => ParseItemFromHex(hexString);
+        #endregion
     }
 }

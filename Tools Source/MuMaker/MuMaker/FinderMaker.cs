@@ -3461,7 +3461,7 @@ namespace MuMaker
       this.Label19.TabIndex = 303;
       this.Minimizar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.Minimizar.BackgroundImageLayout = ImageLayout.Center;
       this.Minimizar.Cursor = Cursors.Hand;
       this.Minimizar.DialogResult = DialogResult.Cancel;
@@ -3486,7 +3486,7 @@ namespace MuMaker
       this.Minimizar.UseVisualStyleBackColor = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -4353,7 +4353,7 @@ namespace MuMaker
       this.Extra.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, (byte) 0);
       this.Extra.ForeColor = Color.DimGray;
       // ISSUE: reference to a compiler-generated method
-      this.Extra.Image = (Image) Class34.smethod_73();
+      this.Extra.Image = (Image) EmbeddedResources.smethod_73();
       this.Extra.ImageAlign = ContentAlignment.MiddleRight;
       CheckBox extra1 = this.Extra;
       point1 = new Point(616, 67);
@@ -4376,7 +4376,7 @@ namespace MuMaker
       this.Invent.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, (byte) 0);
       this.Invent.ForeColor = Color.DimGray;
       // ISSUE: reference to a compiler-generated method
-      this.Invent.Image = (Image) Class34.smethod_71();
+      this.Invent.Image = (Image) EmbeddedResources.smethod_71();
       this.Invent.ImageAlign = ContentAlignment.MiddleRight;
       CheckBox invent1 = this.Invent;
       point1 = new Point(382, 67);
@@ -4399,7 +4399,7 @@ namespace MuMaker
       this.Vault.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, (byte) 0);
       this.Vault.ForeColor = Color.DimGray;
       // ISSUE: reference to a compiler-generated method
-      this.Vault.Image = (Image) Class34.smethod_112();
+      this.Vault.Image = (Image) EmbeddedResources.smethod_112();
       this.Vault.ImageAlign = ContentAlignment.MiddleRight;
       CheckBox vault1 = this.Vault;
       point1 = new Point(510, 67);
@@ -4417,7 +4417,7 @@ namespace MuMaker
       this.Vault.UseVisualStyleBackColor = false;
       this.BotonFullEXE.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullEXE.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFullEXE.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.BotonFullEXE.BackgroundImageLayout = ImageLayout.Center;
       this.BotonFullEXE.Cursor = Cursors.Hand;
       this.BotonFullEXE.FlatAppearance.BorderSize = 0;
@@ -4473,7 +4473,7 @@ namespace MuMaker
       this.GroupBox2.Text = "Full 380";
       this.BotonFull380.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonFull380.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFull380.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.BotonFull380.BackgroundImageLayout = ImageLayout.Center;
       this.BotonFull380.Cursor = Cursors.Hand;
       this.BotonFull380.FlatAppearance.BorderSize = 0;
@@ -4513,7 +4513,7 @@ namespace MuMaker
       this.GroupBox3.Text = "Full JoH";
       this.BotonFullJoH.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullJoH.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFullJoH.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.BotonFullJoH.BackgroundImageLayout = ImageLayout.Center;
       this.BotonFullJoH.Cursor = Cursors.Hand;
       this.BotonFullJoH.FlatAppearance.BorderSize = 0;
@@ -4553,7 +4553,7 @@ namespace MuMaker
       this.GroupBox4.Text = "Full SK";
       this.BotonFullSK.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullSK.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFullSK.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.BotonFullSK.BackgroundImageLayout = ImageLayout.Center;
       this.BotonFullSK.Cursor = Cursors.Hand;
       this.BotonFullSK.FlatAppearance.BorderSize = 0;
@@ -4593,7 +4593,7 @@ namespace MuMaker
       this.GroupBox5.Text = "Exe Anc";
       this.BotonEXEANC.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.BotonEXEANC.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonEXEANC.BackgroundImage = (Image) EmbeddedResources.smethod_12();
       this.BotonEXEANC.BackgroundImageLayout = ImageLayout.Center;
       this.BotonEXEANC.Cursor = Cursors.Hand;
       this.BotonEXEANC.FlatAppearance.BorderSize = 0;
@@ -4641,7 +4641,7 @@ namespace MuMaker
       this.Label43.TabIndex = 1909;
       this.Clean.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Clean.BackgroundImage = (Image) Class34.smethod_4();
+      this.Clean.BackgroundImage = (Image) EmbeddedResources.smethod_4();
       this.Clean.BackgroundImageLayout = ImageLayout.Center;
       this.Clean.Cursor = Cursors.Hand;
       this.Clean.FlatAppearance.BorderSize = 0;
@@ -4665,7 +4665,7 @@ namespace MuMaker
       this.Clean.UseVisualStyleBackColor = false;
       this.Seleccionado.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Seleccionado.BackgroundImage = (Image) Class34.smethod_117();
+      this.Seleccionado.BackgroundImage = (Image) EmbeddedResources.smethod_117();
       this.Seleccionado.BackgroundImageLayout = ImageLayout.Center;
       this.Seleccionado.Cursor = Cursors.Hand;
       this.Seleccionado.FlatAppearance.BorderSize = 0;
@@ -4689,7 +4689,7 @@ namespace MuMaker
       this.Seleccionado.UseVisualStyleBackColor = false;
       this.Todos.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Todos.BackgroundImage = (Image) Class34.smethod_53();
+      this.Todos.BackgroundImage = (Image) EmbeddedResources.smethod_53();
       this.Todos.BackgroundImageLayout = ImageLayout.Center;
       this.Todos.Cursor = Cursors.Hand;
       this.Todos.FlatAppearance.BorderSize = 0;
@@ -4888,7 +4888,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_61();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_61();
       this.BackgroundImageLayout = ImageLayout.None;
       size1 = new Size(718, 648);
       this.ClientSize = size1;
@@ -5018,7 +5018,7 @@ namespace MuMaker
 
     public object CargarJoH()
     {
-      if (Class24.struct4_2.int_3 == 0)
+      if (ItemData.ItemDatabaseInfo.int_3 == 0)
       {
         this.JHOP.Checked = false;
         this.JHOP.Enabled = false;
@@ -5027,11 +5027,11 @@ namespace MuMaker
         this.JHOP.Enabled = true;
       this.JoHOP.Items.Clear();
       int num1 = 1;
-      int num2 = Class6.int_1;
+      int num2 = GameDataArrays.int_1;
       int num3 = num1;
       while (num3 <= num2)
       {
-        this.JoHOP.Items.Add((object) Class6.string_17[checked (num3 - 1)]);
+        this.JoHOP.Items.Add((object) GameDataArrays.string_17[checked (num3 - 1)]);
         checked { ++num3; }
       }
       try
@@ -5050,11 +5050,11 @@ namespace MuMaker
     {
       this.JoHOPs.Items.Clear();
       int num1 = 1;
-      int num2 = Class6.int_2;
+      int num2 = GameDataArrays.int_2;
       int num3 = num1;
       while (num3 <= num2)
       {
-        this.JoHOPs.Items.Add(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(this.JoHOP.SelectedItem, (object) " "), (object) Class6.string_18[checked (num3 - 1)]));
+        this.JoHOPs.Items.Add(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(this.JoHOP.SelectedItem, (object) " "), (object) GameDataArrays.string_18[checked (num3 - 1)]));
         checked { ++num3; }
       }
       try
@@ -5079,24 +5079,24 @@ namespace MuMaker
       int num1 = 1;
       do
       {
-        this.Socket1.Items.Add((object) ("Socket 1 : " + Class6.string_21[checked (num1 - 1)] + " (" + Class6.string_22[checked (num1 - 1)] + ")"));
-        this.Socket2.Items.Add((object) ("Socket 2 : " + Class6.string_21[checked (num1 - 1)] + " (" + Class6.string_22[checked (num1 - 1)] + ")"));
-        this.Socket3.Items.Add((object) ("Socket 3 : " + Class6.string_21[checked (num1 - 1)] + " (" + Class6.string_22[checked (num1 - 1)] + ")"));
-        this.Socket4.Items.Add((object) ("Socket 4 : " + Class6.string_21[checked (num1 - 1)] + " (" + Class6.string_22[checked (num1 - 1)] + ")"));
-        this.Socket5.Items.Add((object) ("Socket 5 : " + Class6.string_21[checked (num1 - 1)] + " (" + Class6.string_22[checked (num1 - 1)] + ")"));
+        this.Socket1.Items.Add((object) ("Socket 1 : " + GameDataArrays.string_21[checked (num1 - 1)] + " (" + GameDataArrays.string_22[checked (num1 - 1)] + ")"));
+        this.Socket2.Items.Add((object) ("Socket 2 : " + GameDataArrays.string_21[checked (num1 - 1)] + " (" + GameDataArrays.string_22[checked (num1 - 1)] + ")"));
+        this.Socket3.Items.Add((object) ("Socket 3 : " + GameDataArrays.string_21[checked (num1 - 1)] + " (" + GameDataArrays.string_22[checked (num1 - 1)] + ")"));
+        this.Socket4.Items.Add((object) ("Socket 4 : " + GameDataArrays.string_21[checked (num1 - 1)] + " (" + GameDataArrays.string_22[checked (num1 - 1)] + ")"));
+        this.Socket5.Items.Add((object) ("Socket 5 : " + GameDataArrays.string_21[checked (num1 - 1)] + " (" + GameDataArrays.string_22[checked (num1 - 1)] + ")"));
         checked { ++num1; }
       }
       while (num1 <= 2);
       int num2 = 3;
-      int num3 = Conversions.ToInteger(Class6.string_30);
+      int num3 = Conversions.ToInteger(GameDataArrays.string_30);
       int num4 = num2;
       while (num4 <= num3)
       {
-        this.Socket1.Items.Add((object) ("Socket 1 : " + Class6.string_21[checked (num4 - 1)] + " (" + Class6.string_22[checked (num4 - 1)] + ") + " + Class6.string_24[checked (num4 - 1)]));
-        this.Socket2.Items.Add((object) ("Socket 2 : " + Class6.string_21[checked (num4 - 1)] + " (" + Class6.string_22[checked (num4 - 1)] + ") + " + Class6.string_24[checked (num4 - 1)]));
-        this.Socket3.Items.Add((object) ("Socket 3 : " + Class6.string_21[checked (num4 - 1)] + " (" + Class6.string_22[checked (num4 - 1)] + ") + " + Class6.string_24[checked (num4 - 1)]));
-        this.Socket4.Items.Add((object) ("Socket 4 : " + Class6.string_21[checked (num4 - 1)] + " (" + Class6.string_22[checked (num4 - 1)] + ") + " + Class6.string_24[checked (num4 - 1)]));
-        this.Socket5.Items.Add((object) ("Socket 5 : " + Class6.string_21[checked (num4 - 1)] + " (" + Class6.string_22[checked (num4 - 1)] + ") + " + Class6.string_24[checked (num4 - 1)]));
+        this.Socket1.Items.Add((object) ("Socket 1 : " + GameDataArrays.string_21[checked (num4 - 1)] + " (" + GameDataArrays.string_22[checked (num4 - 1)] + ") + " + GameDataArrays.string_24[checked (num4 - 1)]));
+        this.Socket2.Items.Add((object) ("Socket 2 : " + GameDataArrays.string_21[checked (num4 - 1)] + " (" + GameDataArrays.string_22[checked (num4 - 1)] + ") + " + GameDataArrays.string_24[checked (num4 - 1)]));
+        this.Socket3.Items.Add((object) ("Socket 3 : " + GameDataArrays.string_21[checked (num4 - 1)] + " (" + GameDataArrays.string_22[checked (num4 - 1)] + ") + " + GameDataArrays.string_24[checked (num4 - 1)]));
+        this.Socket4.Items.Add((object) ("Socket 4 : " + GameDataArrays.string_21[checked (num4 - 1)] + " (" + GameDataArrays.string_22[checked (num4 - 1)] + ") + " + GameDataArrays.string_24[checked (num4 - 1)]));
+        this.Socket5.Items.Add((object) ("Socket 5 : " + GameDataArrays.string_21[checked (num4 - 1)] + " (" + GameDataArrays.string_22[checked (num4 - 1)] + ") + " + GameDataArrays.string_24[checked (num4 - 1)]));
         checked { ++num4; }
       }
       try
@@ -5118,55 +5118,55 @@ namespace MuMaker
     public object MostrarInfoItemFound()
     {
       string str = "";
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "SELECT * FROM MuMakerFinderMaker WHERE AC='", this.CuentasDupe.SelectedItem), (object) "' AND PJ='"), this.PJDupe.SelectedItem), (object) "' AND Item='"), this.CodeItems.SelectedItem), (object) "' AND Pos='"), this.Pos.SelectedItem), (object) "';"));
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        while (Class28.sqlDataReader_1.Read())
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "SELECT * FROM MuMakerFinderMaker WHERE AC='", this.CuentasDupe.SelectedItem), (object) "' AND PJ='"), this.PJDupe.SelectedItem), (object) "' AND Item='"), this.CodeItems.SelectedItem), (object) "' AND Pos='"), this.Pos.SelectedItem), (object) "';"));
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        while (SqlConnectionPool.sqlDataReader_1.Read())
         {
-          this.Cuenta1.Text = Conversions.ToString(Class28.sqlDataReader_1["AC"]);
-          this.Personaje1.Text = Conversions.ToString(Class28.sqlDataReader_1["PJ"]);
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["Invent"])))
+          this.Cuenta1.Text = Conversions.ToString(SqlConnectionPool.sqlDataReader_1["AC"]);
+          this.Personaje1.Text = Conversions.ToString(SqlConnectionPool.sqlDataReader_1["PJ"]);
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["Invent"])))
           {
             this.RadioInvent.Checked = true;
             this.RadioInvent.Enabled = true;
           }
           else
             this.RadioInvent.Enabled = false;
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["Vault"])))
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["Vault"])))
           {
             this.RadioVault.Checked = true;
             this.RadioVault.Enabled = true;
           }
           else
             this.RadioVault.Enabled = false;
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["ExtraW"])))
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["ExtraW"])))
           {
             this.RadioExtra.Checked = true;
             this.RadioExtra.Enabled = true;
           }
           else
             this.RadioExtra.Enabled = false;
-          Class22.struct2_0.int_0 = Conversions.ToInteger(Conversions.ToString(Class28.sqlDataReader_1["NumExtraW"]));
-          Class9.smethod_2((object) Conversions.ToString(Class28.sqlDataReader_1["Item"]));
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_1.string_15, "5", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_1.string_15, "9", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_1.string_15, "A", false) != 0)
+          AccountData.CurrentWarehouse.int_0 = Conversions.ToInteger(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["NumExtraW"]));
+          ItemDatabaseLoader.smethod_2((object) Conversions.ToString(SqlConnectionPool.sqlDataReader_1["Item"]));
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.TempItem.string_15, "5", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.TempItem.string_15, "9", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.TempItem.string_15, "A", false) != 0)
           {
             str = "";
           }
           else
           {
-            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_1.string_15, "5", false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_1.string_15, "9", false) == 0)
-              str = Class24.struct4_1.string_32;
-            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_1.string_15, "A", false) == 0)
-              str = Class24.struct4_1.string_33;
+            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.TempItem.string_15, "5", false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.TempItem.string_15, "9", false) == 0)
+              str = ItemData.TempItem.string_32;
+            if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.TempItem.string_15, "A", false) == 0)
+              str = ItemData.TempItem.string_33;
           }
-          this.ItemName.Text = " " + str + Class24.struct4_1.string_19 + Class24.struct4_1.string_3 + Class24.struct4_1.string_9 + Class24.struct4_1.string_14 + Class24.struct4_1.string_13 + Class24.struct4_1.string_12;
-          this.ItemCode.Text = Conversions.ToString(Class28.sqlDataReader_1["Item"]);
-          this.ItemSerial.Text = Conversions.ToString(Class28.sqlDataReader_1["Serial"]);
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["FullEXE"])))
+          this.ItemName.Text = " " + str + ItemData.TempItem.string_19 + ItemData.TempItem.string_3 + ItemData.TempItem.string_9 + ItemData.TempItem.string_14 + ItemData.TempItem.string_13 + ItemData.TempItem.string_12;
+          this.ItemCode.Text = Conversions.ToString(SqlConnectionPool.sqlDataReader_1["Item"]);
+          this.ItemSerial.Text = Conversions.ToString(SqlConnectionPool.sqlDataReader_1["Serial"]);
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["FullEXE"])))
           {
             this.S1.Checked = true;
             this.N1.Checked = false;
@@ -5176,7 +5176,7 @@ namespace MuMaker
             this.S1.Checked = false;
             this.N1.Checked = true;
           }
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["Full380"])))
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["Full380"])))
           {
             this.S2.Checked = true;
             this.N2.Checked = false;
@@ -5186,7 +5186,7 @@ namespace MuMaker
             this.S2.Checked = false;
             this.N2.Checked = true;
           }
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["FullJoH"])))
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["FullJoH"])))
           {
             this.S3.Checked = true;
             this.N3.Checked = false;
@@ -5196,7 +5196,7 @@ namespace MuMaker
             this.S3.Checked = false;
             this.N3.Checked = true;
           }
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["FullSck"])))
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["FullSck"])))
           {
             this.S4.Checked = true;
             this.N4.Checked = false;
@@ -5206,7 +5206,7 @@ namespace MuMaker
             this.S4.Checked = false;
             this.N4.Checked = true;
           }
-          if (Conversions.ToBoolean(Conversions.ToString(Class28.sqlDataReader_1["ExeAnc"])))
+          if (Conversions.ToBoolean(Conversions.ToString(SqlConnectionPool.sqlDataReader_1["ExeAnc"])))
           {
             this.S5.Checked = true;
             this.N5.Checked = false;
@@ -5216,12 +5216,12 @@ namespace MuMaker
             this.S5.Checked = false;
             this.N5.Checked = true;
           }
-          Class15.smethod_1();
-          this.ImagenItemFound.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_5));
-          Class29.string_0 = Conversions.ToString(Class28.sqlDataReader_1["CodeItems"]);
+          ItemHexParser.smethod_1();
+          this.ImagenItemFound.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_5));
+          SearchState.string_0 = Conversions.ToString(SqlConnectionPool.sqlDataReader_1["CodeItems"]);
         }
-        Class28.sqlDataReader_1.Close();
-        Class20.smethod_0();
+        SqlConnectionPool.sqlDataReader_1.Close();
+        StoredProceduresManager.smethod_0();
       }
       catch (Exception ex)
       {
@@ -5229,26 +5229,26 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     public object AnalizarDatos()
     {
-      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_2.string_9, "NO", false) == 0)
+      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.ItemDatabaseInfo.string_9, "NO", false) == 0)
       {
         this.Level.Enabled = true;
-        Class24.struct4_0.string_9 = Conversions.ToString(this.Level.SelectedItem);
+        ItemData.CurrentItem.string_9 = Conversions.ToString(this.Level.SelectedItem);
       }
       else
       {
         this.Level.Enabled = false;
-        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_2.string_9, "SN", false) == 0)
+        if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.ItemDatabaseInfo.string_9, "SN", false) == 0)
           this.Level.SelectedIndex = 0;
         else
-          this.Level.SelectedItem = (object) Class24.struct4_2.string_9;
+          this.Level.SelectedItem = (object) ItemData.ItemDatabaseInfo.string_9;
       }
-      if (Class24.struct4_2.bool_0)
+      if (ItemData.ItemDatabaseInfo.bool_0)
       {
         this.Opcion.Enabled = true;
       }
@@ -5257,7 +5257,7 @@ namespace MuMaker
         this.Opcion.Enabled = false;
         this.Opcion.SelectedIndex = 0;
       }
-      if (Class24.struct4_2.bool_1)
+      if (ItemData.ItemDatabaseInfo.bool_1)
       {
         this.Luck.Enabled = true;
       }
@@ -5266,7 +5266,7 @@ namespace MuMaker
         this.Luck.Checked = false;
         this.Luck.Enabled = false;
       }
-      if (Class24.struct4_2.bool_2)
+      if (ItemData.ItemDatabaseInfo.bool_2)
       {
         this.Skill.Enabled = true;
       }
@@ -5275,7 +5275,7 @@ namespace MuMaker
         this.Skill.Checked = false;
         this.Skill.Enabled = false;
       }
-      if (Class24.struct4_2.bool_3)
+      if (ItemData.ItemDatabaseInfo.bool_3)
       {
         this.NoAncient.Enabled = true;
         this.Ancient1.Enabled = true;
@@ -5288,7 +5288,7 @@ namespace MuMaker
         this.Ancient1.Enabled = false;
         this.Ancient2.Enabled = false;
       }
-      if ((double) Class24.struct4_2.int_0 != Conversions.ToDouble("0"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 != Conversions.ToDouble("0"))
       {
         this.EXE1.Enabled = true;
         this.EXE2.Enabled = true;
@@ -5312,9 +5312,9 @@ namespace MuMaker
         this.EXE5.Checked = false;
         this.EXE6.Checked = false;
       }
-      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_2.string_32, "NO", false) != 0)
+      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.ItemDatabaseInfo.string_32, "NO", false) != 0)
       {
-        this.Ancient1.Text = "Set " + Class24.struct4_2.string_32;
+        this.Ancient1.Text = "Set " + ItemData.ItemDatabaseInfo.string_32;
         this.Ancient1.Enabled = true;
       }
       else
@@ -5324,9 +5324,9 @@ namespace MuMaker
         if (!this.Ancient2.Checked)
           this.NoAncient.Checked = true;
       }
-      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_2.string_33, "NO", false) != 0)
+      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.ItemDatabaseInfo.string_33, "NO", false) != 0)
       {
-        this.Ancient2.Text = "Set " + Class24.struct4_2.string_33;
+        this.Ancient2.Text = "Set " + ItemData.ItemDatabaseInfo.string_33;
         this.Ancient2.Enabled = true;
       }
       else
@@ -5342,7 +5342,7 @@ namespace MuMaker
 
     public object Excepciones()
     {
-      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class24.struct4_2.string_7, "001", false) == 0)
+      if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(ItemData.ItemDatabaseInfo.string_7, "001", false) == 0)
       {
         this.Numero.Enabled = true;
         this.Dur.Text = Conversions.ToString(this.Numero.SelectedItem);
@@ -5352,113 +5352,113 @@ namespace MuMaker
         this.Numero.Enabled = false;
         this.Numero.SelectedItem = (object) "001";
       }
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("0"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("0"))
       {
-        this.EXE1.Text = Conversions.ToString(Class30.object_27);
-        this.EXE2.Text = Conversions.ToString(Class30.object_27);
-        this.EXE3.Text = Conversions.ToString(Class30.object_27);
-        this.EXE4.Text = Conversions.ToString(Class30.object_27);
-        this.EXE5.Text = Conversions.ToString(Class30.object_27);
-        this.EXE6.Text = Conversions.ToString(Class30.object_27);
+        this.EXE1.Text = Conversions.ToString(LocalizedStrings.object_27);
+        this.EXE2.Text = Conversions.ToString(LocalizedStrings.object_27);
+        this.EXE3.Text = Conversions.ToString(LocalizedStrings.object_27);
+        this.EXE4.Text = Conversions.ToString(LocalizedStrings.object_27);
+        this.EXE5.Text = Conversions.ToString(LocalizedStrings.object_27);
+        this.EXE6.Text = Conversions.ToString(LocalizedStrings.object_27);
       }
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("1"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("1"))
       {
-        this.EXE1.Text = Conversions.ToString(Class30.object_28);
-        this.EXE2.Text = Conversions.ToString(Class30.object_29);
-        this.EXE3.Text = Conversions.ToString(Class30.object_30);
-        this.EXE4.Text = Conversions.ToString(Class30.object_31);
-        this.EXE5.Text = Conversions.ToString(Class30.object_32);
-        this.EXE6.Text = Conversions.ToString(Class30.object_33);
+        this.EXE1.Text = Conversions.ToString(LocalizedStrings.object_28);
+        this.EXE2.Text = Conversions.ToString(LocalizedStrings.object_29);
+        this.EXE3.Text = Conversions.ToString(LocalizedStrings.object_30);
+        this.EXE4.Text = Conversions.ToString(LocalizedStrings.object_31);
+        this.EXE5.Text = Conversions.ToString(LocalizedStrings.object_32);
+        this.EXE6.Text = Conversions.ToString(LocalizedStrings.object_33);
       }
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("2"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("2"))
       {
-        this.EXE1.Text = Conversions.ToString(Class30.object_34);
-        this.EXE2.Text = Conversions.ToString(Class30.object_35);
-        this.EXE3.Text = Conversions.ToString(Class30.object_36);
-        this.EXE4.Text = Conversions.ToString(Class30.object_37);
-        this.EXE5.Text = Conversions.ToString(Class30.object_38);
-        this.EXE6.Text = Conversions.ToString(Class30.object_39);
+        this.EXE1.Text = Conversions.ToString(LocalizedStrings.object_34);
+        this.EXE2.Text = Conversions.ToString(LocalizedStrings.object_35);
+        this.EXE3.Text = Conversions.ToString(LocalizedStrings.object_36);
+        this.EXE4.Text = Conversions.ToString(LocalizedStrings.object_37);
+        this.EXE5.Text = Conversions.ToString(LocalizedStrings.object_38);
+        this.EXE6.Text = Conversions.ToString(LocalizedStrings.object_39);
       }
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("3"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("3"))
       {
-        this.EXE1.Text = Conversions.ToString(Class30.object_40);
-        this.EXE2.Text = Conversions.ToString(Class30.object_41);
-        this.EXE3.Text = Conversions.ToString(Class30.object_42);
-        this.EXE4.Text = Conversions.ToString(Class30.object_43);
-        this.EXE5.Text = Conversions.ToString(Class30.object_44);
-        this.EXE6.Text = Conversions.ToString(Class30.object_45);
+        this.EXE1.Text = Conversions.ToString(LocalizedStrings.object_40);
+        this.EXE2.Text = Conversions.ToString(LocalizedStrings.object_41);
+        this.EXE3.Text = Conversions.ToString(LocalizedStrings.object_42);
+        this.EXE4.Text = Conversions.ToString(LocalizedStrings.object_43);
+        this.EXE5.Text = Conversions.ToString(LocalizedStrings.object_44);
+        this.EXE6.Text = Conversions.ToString(LocalizedStrings.object_45);
       }
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("4"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("4"))
       {
-        this.EXE1.Text = Conversions.ToString(Class30.object_46);
-        this.EXE2.Text = Conversions.ToString(Class30.object_47);
-        this.EXE3.Text = Conversions.ToString(Class30.object_48);
-        this.EXE4.Text = Conversions.ToString(Class30.object_49);
-        this.EXE5.Text = Conversions.ToString(Class30.object_50);
-        this.EXE6.Text = Conversions.ToString(Class30.object_51);
+        this.EXE1.Text = Conversions.ToString(LocalizedStrings.object_46);
+        this.EXE2.Text = Conversions.ToString(LocalizedStrings.object_47);
+        this.EXE3.Text = Conversions.ToString(LocalizedStrings.object_48);
+        this.EXE4.Text = Conversions.ToString(LocalizedStrings.object_49);
+        this.EXE5.Text = Conversions.ToString(LocalizedStrings.object_50);
+        this.EXE6.Text = Conversions.ToString(LocalizedStrings.object_51);
         this.EXE4.Enabled = false;
         this.EXE5.Enabled = false;
         this.EXE6.Enabled = false;
       }
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("5"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("5"))
       {
-        this.EXE1.Text = Conversions.ToString(Class30.object_39);
-        this.EXE2.Text = Conversions.ToString(Class30.object_38);
-        this.EXE3.Text = Conversions.ToString(Class30.object_37);
-        this.EXE4.Text = Conversions.ToString(Class30.object_36);
-        this.EXE5.Text = Conversions.ToString(Class30.object_35);
-        this.EXE6.Text = Conversions.ToString(Class30.object_34);
+        this.EXE1.Text = Conversions.ToString(LocalizedStrings.object_39);
+        this.EXE2.Text = Conversions.ToString(LocalizedStrings.object_38);
+        this.EXE3.Text = Conversions.ToString(LocalizedStrings.object_37);
+        this.EXE4.Text = Conversions.ToString(LocalizedStrings.object_36);
+        this.EXE5.Text = Conversions.ToString(LocalizedStrings.object_35);
+        this.EXE6.Text = Conversions.ToString(LocalizedStrings.object_34);
       }
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("6"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("6"))
       {
-        this.EXE1.Text = Conversions.ToString(Class30.object_33);
-        this.EXE2.Text = Conversions.ToString(Class30.object_32);
-        this.EXE3.Text = Conversions.ToString(Class30.object_31);
-        this.EXE4.Text = Conversions.ToString(Class30.object_30);
-        this.EXE5.Text = Conversions.ToString(Class30.object_29);
-        this.EXE6.Text = Conversions.ToString(Class30.object_28);
+        this.EXE1.Text = Conversions.ToString(LocalizedStrings.object_33);
+        this.EXE2.Text = Conversions.ToString(LocalizedStrings.object_32);
+        this.EXE3.Text = Conversions.ToString(LocalizedStrings.object_31);
+        this.EXE4.Text = Conversions.ToString(LocalizedStrings.object_30);
+        this.EXE5.Text = Conversions.ToString(LocalizedStrings.object_29);
+        this.EXE6.Text = Conversions.ToString(LocalizedStrings.object_28);
       }
-      if ((double) Class24.struct4_2.int_2 == Conversions.ToDouble("0"))
+      if ((double) ItemData.ItemDatabaseInfo.int_2 == Conversions.ToDouble("0"))
       {
         this.RF1.Text = "Refinery Option 1";
         this.RF2.Text = "Refinery Option 2";
         this.RF.Enabled = false;
         this.RF.Checked = false;
       }
-      if ((double) Class24.struct4_2.int_2 == Conversions.ToDouble("1"))
+      if ((double) ItemData.ItemDatabaseInfo.int_2 == Conversions.ToDouble("1"))
       {
-        this.RF1.Text = Conversions.ToString(Class30.object_60);
-        this.RF2.Text = Conversions.ToString(Class30.object_61);
+        this.RF1.Text = Conversions.ToString(LocalizedStrings.object_60);
+        this.RF2.Text = Conversions.ToString(LocalizedStrings.object_61);
         this.RF.Enabled = true;
       }
-      if ((double) Class24.struct4_2.int_2 == Conversions.ToDouble("2"))
+      if ((double) ItemData.ItemDatabaseInfo.int_2 == Conversions.ToDouble("2"))
       {
-        this.RF1.Text = Conversions.ToString(Class30.object_62);
-        this.RF2.Text = Conversions.ToString(Class30.object_63);
+        this.RF1.Text = Conversions.ToString(LocalizedStrings.object_62);
+        this.RF2.Text = Conversions.ToString(LocalizedStrings.object_63);
         this.RF.Enabled = true;
       }
-      if ((double) Class24.struct4_2.int_2 == Conversions.ToDouble("3"))
+      if ((double) ItemData.ItemDatabaseInfo.int_2 == Conversions.ToDouble("3"))
       {
-        this.RF1.Text = Conversions.ToString(Class30.object_64);
-        this.RF2.Text = Conversions.ToString(Class30.object_65);
+        this.RF1.Text = Conversions.ToString(LocalizedStrings.object_64);
+        this.RF2.Text = Conversions.ToString(LocalizedStrings.object_65);
         this.RF.Enabled = true;
       }
-      if ((double) Class24.struct4_2.int_2 == Conversions.ToDouble("4"))
+      if ((double) ItemData.ItemDatabaseInfo.int_2 == Conversions.ToDouble("4"))
       {
-        this.RF1.Text = Conversions.ToString(Class30.object_64);
-        this.RF2.Text = Conversions.ToString(Class30.object_65);
+        this.RF1.Text = Conversions.ToString(LocalizedStrings.object_64);
+        this.RF2.Text = Conversions.ToString(LocalizedStrings.object_65);
         this.RF.Enabled = true;
       }
-      if ((double) Class24.struct4_2.int_2 == Conversions.ToDouble("5"))
+      if ((double) ItemData.ItemDatabaseInfo.int_2 == Conversions.ToDouble("5"))
       {
-        this.RF1.Text = Conversions.ToString(Class30.object_66);
-        this.RF2.Text = Conversions.ToString(Class30.object_67);
+        this.RF1.Text = Conversions.ToString(LocalizedStrings.object_66);
+        this.RF2.Text = Conversions.ToString(LocalizedStrings.object_67);
         this.RF.Enabled = true;
       }
-      if ((double) Class24.struct4_2.int_2 == Conversions.ToDouble("6"))
+      if ((double) ItemData.ItemDatabaseInfo.int_2 == Conversions.ToDouble("6"))
       {
-        this.RF1.Text = Conversions.ToString(Class30.object_70);
-        this.RF2.Text = Conversions.ToString(Class30.object_71);
+        this.RF1.Text = Conversions.ToString(LocalizedStrings.object_70);
+        this.RF2.Text = Conversions.ToString(LocalizedStrings.object_71);
         this.RF.Enabled = true;
       }
       if (!this.RF.Enabled)
@@ -5481,7 +5481,7 @@ namespace MuMaker
         this.JoHOP.Enabled = false;
         this.JoHOPs.Enabled = false;
       }
-      if (!Class24.struct4_2.bool_4)
+      if (!ItemData.ItemDatabaseInfo.bool_4)
       {
         this.SocketSystem.Checked = false;
         this.SocketSystem.Enabled = false;
@@ -5493,7 +5493,7 @@ namespace MuMaker
 
     public object ExepcionFenrir()
     {
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("4"))
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("4"))
       {
         if (this.EXE1.Checked)
         {
@@ -5516,7 +5516,7 @@ namespace MuMaker
 
     public object ExepcionFenrir1()
     {
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("4") && this.EXE1.Checked)
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("4") && this.EXE1.Checked)
       {
         this.EXE2.Checked = false;
         this.EXE3.Checked = false;
@@ -5526,7 +5526,7 @@ namespace MuMaker
 
     public object ExepcionFenrir2()
     {
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("4") && this.EXE2.Checked)
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("4") && this.EXE2.Checked)
       {
         this.EXE1.Checked = false;
         this.EXE3.Checked = false;
@@ -5536,7 +5536,7 @@ namespace MuMaker
 
     public object ExepcionFenrir3()
     {
-      if ((double) Class24.struct4_2.int_0 == Conversions.ToDouble("4") && this.EXE3.Checked)
+      if ((double) ItemData.ItemDatabaseInfo.int_0 == Conversions.ToDouble("4") && this.EXE3.Checked)
       {
         this.EXE1.Checked = false;
         this.EXE2.Checked = false;
@@ -5548,15 +5548,15 @@ namespace MuMaker
     {
       int num1 = Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32));
       int Start = checked (num1 + 1);
-      Strings.Mid(Class29.string_0, Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32), (object) 31)), 32);
-      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(Class29.string_0, 1, checked (num1 - 32)) + "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(Class29.string_0, Start) : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(Class29.string_0, 33));
-      Class7.smethod_0();
-      Class28.sqlConnection_1.Open();
-      Class20.smethod_9((object) str);
+      Strings.Mid(SearchState.string_0, Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32), (object) 31)), 32);
+      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(SearchState.string_0, 1, checked (num1 - 32)) + "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(SearchState.string_0, Start) : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(SearchState.string_0, 33));
+      ConnectionManager.smethod_0();
+      SqlConnectionPool.sqlConnection_1.Open();
+      StoredProceduresManager.smethod_9((object) str);
       try
       {
         SqlCommand sqlCommand1 = new SqlCommand();
-        SqlCommand sqlCommand2 = new SqlCommand("MMK_ItemMakerWareHous", Class28.sqlConnection_1);
+        SqlCommand sqlCommand2 = new SqlCommand("MMK_ItemMakerWareHous", SqlConnectionPool.sqlConnection_1);
         sqlCommand2.CommandType = CommandType.StoredProcedure;
         sqlCommand2.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.VarChar, 10)
         {
@@ -5570,11 +5570,11 @@ namespace MuMaker
       catch (Exception ex)
       {
         ProjectData.SetProjectError(ex);
-        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_80), MsgBoxStyle.OkOnly, (object) null);
+        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_80), MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      this.ActualizarDB((object) Class29.string_0, (object) Strings.Mid(str, 3), RuntimeHelpers.GetObjectValue(CS));
+      ConnectionManager.smethod_5();
+      this.ActualizarDB((object) SearchState.string_0, (object) Strings.Mid(str, 3), RuntimeHelpers.GetObjectValue(CS));
       return (object) true;
     }
 
@@ -5582,15 +5582,15 @@ namespace MuMaker
     {
       int num1 = Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32));
       int Start = checked (num1 + 1);
-      Strings.Mid(Class29.string_0, Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32), (object) 31)), 32);
-      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(Class29.string_0, 1, checked (num1 - 32)) + "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(Class29.string_0, Start) : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(Class29.string_0, 33));
-      Class7.smethod_0();
-      Class28.sqlConnection_1.Open();
-      Class20.smethod_10((object) str);
+      Strings.Mid(SearchState.string_0, Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32), (object) 31)), 32);
+      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(SearchState.string_0, 1, checked (num1 - 32)) + "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(SearchState.string_0, Start) : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(SearchState.string_0, 33));
+      ConnectionManager.smethod_0();
+      SqlConnectionPool.sqlConnection_1.Open();
+      StoredProceduresManager.smethod_10((object) str);
       try
       {
         SqlCommand sqlCommand1 = new SqlCommand();
-        SqlCommand sqlCommand2 = new SqlCommand("MMK_ItemMakerInventory", Class28.sqlConnection_1);
+        SqlCommand sqlCommand2 = new SqlCommand("MMK_ItemMakerInventory", SqlConnectionPool.sqlConnection_1);
         sqlCommand2.CommandType = CommandType.StoredProcedure;
         sqlCommand2.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.VarChar, 10)
         {
@@ -5609,11 +5609,11 @@ namespace MuMaker
       catch (Exception ex)
       {
         ProjectData.SetProjectError(ex);
-        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_80), MsgBoxStyle.OkOnly, (object) null);
+        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_80), MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      this.ActualizarDB((object) Class29.string_0, (object) Strings.Mid(str, 3), RuntimeHelpers.GetObjectValue(CS));
+      ConnectionManager.smethod_5();
+      this.ActualizarDB((object) SearchState.string_0, (object) Strings.Mid(str, 3), RuntimeHelpers.GetObjectValue(CS));
       return (object) true;
     }
 
@@ -5621,15 +5621,15 @@ namespace MuMaker
     {
       int num1 = Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32));
       int Start = checked (num1 + 1);
-      Strings.Mid(Class29.string_0, Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32), (object) 31)), 32);
-      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(Class29.string_0, 1, checked (num1 - 32)) + "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(Class29.string_0, Start) : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(Class29.string_0, 33));
-      Class7.smethod_0();
-      Class28.sqlConnection_1.Open();
-      Class20.smethod_9((object) str);
+      Strings.Mid(SearchState.string_0, Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(CS, (object) 32), (object) 31)), 32);
+      string str = "0x" + (!Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(CS, (object) 1, false) ? Strings.Mid(SearchState.string_0, 1, checked (num1 - 32)) + "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(SearchState.string_0, Start) : "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF" + Strings.Mid(SearchState.string_0, 33));
+      ConnectionManager.smethod_0();
+      SqlConnectionPool.sqlConnection_1.Open();
+      StoredProceduresManager.smethod_9((object) str);
       try
       {
         SqlCommand sqlCommand1 = new SqlCommand();
-        SqlCommand sqlCommand2 = new SqlCommand("MMK_ItemMakerWareHous", Class28.sqlConnection_1);
+        SqlCommand sqlCommand2 = new SqlCommand("MMK_ItemMakerWareHous", SqlConnectionPool.sqlConnection_1);
         sqlCommand2.CommandType = CommandType.StoredProcedure;
         sqlCommand2.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.VarChar, 10)
         {
@@ -5643,11 +5643,11 @@ namespace MuMaker
       catch (Exception ex)
       {
         ProjectData.SetProjectError(ex);
-        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(Class30.object_80), MsgBoxStyle.OkOnly, (object) null);
+        int num2 = (int) Interaction.MsgBox(RuntimeHelpers.GetObjectValue(LocalizedStrings.object_80), MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      this.ActualizarDB((object) Class29.string_0, (object) Strings.Mid(str, 3), RuntimeHelpers.GetObjectValue(CS));
+      ConnectionManager.smethod_5();
+      this.ActualizarDB((object) SearchState.string_0, (object) Strings.Mid(str, 3), RuntimeHelpers.GetObjectValue(CS));
       return (object) true;
     }
 
@@ -5665,36 +5665,36 @@ namespace MuMaker
         int num = 1;
         while (Conversions.ToDouble(str) >= 1.0)
         {
-          if (Class29.bool_0)
+          if (SearchState.bool_0)
             return;
           if (this.RadioInvent.Checked)
           {
-            Class12.smethod_1();
+            AccountStatusManager.smethod_1();
             this.BorrarInvent(RuntimeHelpers.GetObjectValue(this.Pos.SelectedItem));
           }
-          if (Class29.bool_0)
+          if (SearchState.bool_0)
             return;
           if (this.RadioVault.Checked)
           {
-            Class12.smethod_1();
+            AccountStatusManager.smethod_1();
             this.BorrarVault(RuntimeHelpers.GetObjectValue(this.Pos.SelectedItem));
           }
-          if (Class29.bool_0)
+          if (SearchState.bool_0)
             return;
           if (this.RadioExtra.Checked)
           {
             this.BorrarExtra(RuntimeHelpers.GetObjectValue(this.Pos.SelectedItem));
-            Class12.smethod_1();
+            AccountStatusManager.smethod_1();
           }
-          Class29.string_1 = Conversions.ToString(this.CuentasDupe.SelectedIndex);
-          this.PJDupe.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
-          this.Pos.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
-          this.CodeItems.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
-          this.CuentasDupe.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
+          SearchState.string_1 = Conversions.ToString(this.CuentasDupe.SelectedIndex);
+          this.PJDupe.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
+          this.Pos.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
+          this.CodeItems.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
+          this.CuentasDupe.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
           this.CuentasDupe.Focus();
-          if (Conversions.ToDouble(Class29.string_1) > 1.0)
-            this.CuentasDupe.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class29.string_1) - 1.0)));
-          if ((Conversions.ToDouble(Class29.string_1) == 0.0 | Conversions.ToDouble(Class29.string_1) == 1.0) & Conversions.ToDouble(str) > 1.0)
+          if (Conversions.ToDouble(SearchState.string_1) > 1.0)
+            this.CuentasDupe.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(SearchState.string_1) - 1.0)));
+          if ((Conversions.ToDouble(SearchState.string_1) == 0.0 | Conversions.ToDouble(SearchState.string_1) == 1.0) & Conversions.ToDouble(str) > 1.0)
             this.CuentasDupe.SelectedIndex = 0;
           str = Conversions.ToString(this.CuentasDupe.Items.Count);
           this.CargaParcial.Value = num;
@@ -5716,14 +5716,14 @@ namespace MuMaker
 
     public object Traducir()
     {
-      this.Foto.Text = Conversions.ToString(Class30.object_9);
-      this.Level2.Text = Conversions.ToString(Class30.object_10);
-      this.Opcion2.Text = Conversions.ToString(Class30.object_11);
-      this.Account1.Text = Conversions.ToString(Class30.object_5);
-      this.Chart1.Text = Conversions.ToString(Class30.object_6);
-      this.InfracAccount.Text = Conversions.ToString(Class30.object_22);
-      this.RelatedAccount.Text = Conversions.ToString(Class30.object_23);
-      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Foto.Text = Conversions.ToString(LocalizedStrings.object_9);
+      this.Level2.Text = Conversions.ToString(LocalizedStrings.object_10);
+      this.Opcion2.Text = Conversions.ToString(LocalizedStrings.object_11);
+      this.Account1.Text = Conversions.ToString(LocalizedStrings.object_5);
+      this.Chart1.Text = Conversions.ToString(LocalizedStrings.object_6);
+      this.InfracAccount.Text = Conversions.ToString(LocalizedStrings.object_22);
+      this.RelatedAccount.Text = Conversions.ToString(LocalizedStrings.object_23);
+      this.Text = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       return (object) true;
     }
@@ -5731,22 +5731,22 @@ namespace MuMaker
     private void FinderMaker_Load(object sender, EventArgs e)
     {
       VentanaBarraLoad.DefInstance.Show();
-      Class18.smethod_45();
+      IniHelper.smethod_45();
       VentanaBarraLoad.DefInstance.Carga.Value = 1;
-      Class21.smethod_1();
+      FinderTableManager.smethod_1();
       VentanaBarraLoad.DefInstance.Carga.Value = 5;
-      Class13.smethod_1();
+      ItemFinderOperations.smethod_1();
       VentanaBarraLoad.DefInstance.Carga.Value = 10;
-      Class10.smethod_6();
-      Class10.smethod_9();
+      GameDataLoader.smethod_6();
+      GameDataLoader.smethod_9();
       VentanaBarraLoad.DefInstance.Carga.Value = 20;
-      this.Cuentas.Text = Conversions.ToString(Class29.int_1) + " Accounts";
+      this.Cuentas.Text = Conversions.ToString(SearchState.int_1) + " Accounts";
       VentanaBarraLoad.DefInstance.Carga.Value = 40;
-      Class9.smethod_0();
+      ItemDatabaseLoader.smethod_0();
       VentanaBarraLoad.DefInstance.Carga.Value = 45;
-      Class10.smethod_5();
+      GameDataLoader.smethod_5();
       VentanaBarraLoad.DefInstance.Carga.Value = 55;
-      Class21.smethod_4();
+      FinderTableManager.smethod_4();
       this.NoAncient.Select();
       VentanaBarraLoad.DefInstance.Carga.Value = 60;
       this.Level.SelectedIndex = 0;
@@ -5759,7 +5759,7 @@ namespace MuMaker
       VentanaBarraLoad.DefInstance.Carga.Value = 80;
       this.Traducir();
       VentanaBarraLoad.DefInstance.Carga.Value = 90;
-      Class21.smethod_2();
+      FinderTableManager.smethod_2();
       VentanaBarraLoad.DefInstance.Carga.Value = 100;
       this.CuentasDupe.Focus();
       VentanaBarraLoad.DefInstance.Hide();
@@ -5767,23 +5767,23 @@ namespace MuMaker
 
     private void Tipo1_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class7.smethod_10();
+      ConnectionManager.smethod_10();
       int num1 = 0;
       try
       {
-        Class28.oleDbConnection_0.Open();
-        Class28.oleDbCommand_0.Connection = Class28.oleDbConnection_0;
-        Class28.oleDbCommand_0.CommandText = "SELECT NAME FROM Items WHERE CATEGORIA='" + this.Tipo1.Text + "' ORDER BY Nº ASC;";
-        Class28.oleDbCommand_0.ExecuteNonQuery();
-        Class28.oleDbDataReader_0 = Class28.oleDbCommand_0.ExecuteReader();
+        SqlConnectionPool.oleDbConnection_0.Open();
+        SqlConnectionPool.oleDbCommand_0.Connection = SqlConnectionPool.oleDbConnection_0;
+        SqlConnectionPool.oleDbCommand_0.CommandText = "SELECT NAME FROM Items WHERE CATEGORIA='" + this.Tipo1.Text + "' ORDER BY Nº ASC;";
+        SqlConnectionPool.oleDbCommand_0.ExecuteNonQuery();
+        SqlConnectionPool.oleDbDataReader_0 = SqlConnectionPool.oleDbCommand_0.ExecuteReader();
         this.Items.Items.Clear();
         num1 = 0;
-        while (Class28.oleDbDataReader_0.Read())
+        while (SqlConnectionPool.oleDbDataReader_0.Read())
         {
-          this.Items.Items.Add((object) Conversions.ToString(Class28.oleDbDataReader_0["NAME"]));
+          this.Items.Items.Add((object) Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["NAME"]));
           checked { ++num1; }
         }
-        Class28.oleDbDataReader_0.Close();
+        SqlConnectionPool.oleDbDataReader_0.Close();
       }
       catch (Exception ex)
       {
@@ -5791,31 +5791,31 @@ namespace MuMaker
         int num2 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_11();
+      ConnectionManager.smethod_11();
       if (num1 > 0)
-        this.Items.SelectedIndex = !(this.Tipo1.SelectedIndex == 9 | this.Tipo1.SelectedIndex == 10 | this.Tipo1.SelectedIndex == 11 | this.Tipo1.SelectedIndex == 12 | this.Tipo1.SelectedIndex == 13) ? 0 : Class24.struct4_2.int_5;
+        this.Items.SelectedIndex = !(this.Tipo1.SelectedIndex == 9 | this.Tipo1.SelectedIndex == 10 | this.Tipo1.SelectedIndex == 11 | this.Tipo1.SelectedIndex == 12 | this.Tipo1.SelectedIndex == 13) ? 0 : ItemData.ItemDatabaseInfo.int_5;
       this.Items.Focus();
     }
 
     private void Tipo2_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class7.smethod_10();
+      ConnectionManager.smethod_10();
       int num1 = 0;
       try
       {
-        Class28.oleDbConnection_0.Open();
-        Class28.oleDbCommand_0.Connection = Class28.oleDbConnection_0;
-        Class28.oleDbCommand_0.CommandText = "SELECT NAME FROM Items WHERE CATEGORIA='" + this.Tipo2.Text + "' ORDER BY Nº ASC;";
-        Class28.oleDbCommand_0.ExecuteNonQuery();
-        Class28.oleDbDataReader_0 = Class28.oleDbCommand_0.ExecuteReader();
+        SqlConnectionPool.oleDbConnection_0.Open();
+        SqlConnectionPool.oleDbCommand_0.Connection = SqlConnectionPool.oleDbConnection_0;
+        SqlConnectionPool.oleDbCommand_0.CommandText = "SELECT NAME FROM Items WHERE CATEGORIA='" + this.Tipo2.Text + "' ORDER BY Nº ASC;";
+        SqlConnectionPool.oleDbCommand_0.ExecuteNonQuery();
+        SqlConnectionPool.oleDbDataReader_0 = SqlConnectionPool.oleDbCommand_0.ExecuteReader();
         this.Items.Items.Clear();
         num1 = 0;
-        while (Class28.oleDbDataReader_0.Read())
+        while (SqlConnectionPool.oleDbDataReader_0.Read())
         {
-          this.Items.Items.Add((object) Conversions.ToString(Class28.oleDbDataReader_0["NAME"]));
+          this.Items.Items.Add((object) Conversions.ToString(SqlConnectionPool.oleDbDataReader_0["NAME"]));
           checked { ++num1; }
         }
-        Class28.oleDbDataReader_0.Close();
+        SqlConnectionPool.oleDbDataReader_0.Close();
       }
       catch (Exception ex)
       {
@@ -5823,7 +5823,7 @@ namespace MuMaker
         int num2 = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_11();
+      ConnectionManager.smethod_11();
       if (num1 > 0)
         this.Items.SelectedIndex = 0;
       this.Items.Focus();
@@ -5831,222 +5831,222 @@ namespace MuMaker
 
     private void Items_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class9.smethod_1((object) this.Items.Text);
+      ItemDatabaseLoader.smethod_1((object) this.Items.Text);
       this.AnalizarDatos();
       this.Excepciones();
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class10.smethod_7((object) Class24.struct4_2.int_3);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      GameDataLoader.smethod_7((object) ItemData.ItemDatabaseInfo.int_3);
       this.CargarJoH();
-      Class10.smethod_8((object) Class24.struct4_2.int_3, (object) checked (this.JoHOP.SelectedIndex - 1));
+      GameDataLoader.smethod_8((object) ItemData.ItemDatabaseInfo.int_3, (object) checked (this.JoHOP.SelectedIndex - 1));
       this.CargarJoHOP();
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
       this.SerialSearch.Text = this.Serial.Text;
       this.ItemCodeSearch.Text = this.Codigo.Text;
-      this.Siz.Text = Class24.struct4_2.string_4 + "x" + Class24.struct4_2.string_5;
+      this.Siz.Text = ItemData.ItemDatabaseInfo.string_4 + "x" + ItemData.ItemDatabaseInfo.string_5;
     }
 
     private void Level_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_0.string_9 = Conversions.ToString(this.Level.SelectedIndex);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.string_9 = Conversions.ToString(this.Level.SelectedIndex);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Opcion_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_0.string_12 = Conversions.ToString(this.Opcion.SelectedItem);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.string_12 = Conversions.ToString(this.Opcion.SelectedItem);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void EXE1_CheckedChanged(object sender, EventArgs e)
     {
       this.ExepcionFenrir1();
-      Class24.struct4_0.int_1 = !this.EXE1.Checked ? checked (Class24.struct4_0.int_1 - 1) : checked (Class24.struct4_0.int_1 + 1);
-      Class24.struct4_0.int_0 = Class24.struct4_0.int_1 <= 0 ? 0 : 1;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.int_1 = !this.EXE1.Checked ? checked (ItemData.CurrentItem.int_1 - 1) : checked (ItemData.CurrentItem.int_1 + 1);
+      ItemData.CurrentItem.int_0 = ItemData.CurrentItem.int_1 <= 0 ? 0 : 1;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void EXE2_CheckedChanged(object sender, EventArgs e)
     {
       this.ExepcionFenrir2();
-      Class24.struct4_0.int_1 = !this.EXE2.Checked ? checked (Class24.struct4_0.int_1 - 2) : checked (Class24.struct4_0.int_1 + 2);
-      Class24.struct4_0.int_0 = Class24.struct4_0.int_1 <= 0 ? 0 : 1;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.int_1 = !this.EXE2.Checked ? checked (ItemData.CurrentItem.int_1 - 2) : checked (ItemData.CurrentItem.int_1 + 2);
+      ItemData.CurrentItem.int_0 = ItemData.CurrentItem.int_1 <= 0 ? 0 : 1;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void EXE3_CheckedChanged(object sender, EventArgs e)
     {
       this.ExepcionFenrir3();
-      Class24.struct4_0.int_1 = !this.EXE3.Checked ? checked (Class24.struct4_0.int_1 - 4) : checked (Class24.struct4_0.int_1 + 4);
-      Class24.struct4_0.int_0 = Class24.struct4_0.int_1 <= 0 ? 0 : 1;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.int_1 = !this.EXE3.Checked ? checked (ItemData.CurrentItem.int_1 - 4) : checked (ItemData.CurrentItem.int_1 + 4);
+      ItemData.CurrentItem.int_0 = ItemData.CurrentItem.int_1 <= 0 ? 0 : 1;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void EXE4_CheckedChanged(object sender, EventArgs e)
     {
       this.ExepcionFenrir();
-      Class24.struct4_0.int_1 = !this.EXE4.Checked ? checked (Class24.struct4_0.int_1 - 8) : checked (Class24.struct4_0.int_1 + 8);
-      Class24.struct4_0.int_0 = Class24.struct4_0.int_1 <= 0 ? 0 : 1;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.int_1 = !this.EXE4.Checked ? checked (ItemData.CurrentItem.int_1 - 8) : checked (ItemData.CurrentItem.int_1 + 8);
+      ItemData.CurrentItem.int_0 = ItemData.CurrentItem.int_1 <= 0 ? 0 : 1;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void EXE5_CheckedChanged(object sender, EventArgs e)
     {
       this.ExepcionFenrir();
-      Class24.struct4_0.int_1 = !this.EXE5.Checked ? checked (Class24.struct4_0.int_1 - 16) : checked (Class24.struct4_0.int_1 + 16);
-      Class24.struct4_0.int_0 = Class24.struct4_0.int_1 <= 0 ? 0 : 1;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.int_1 = !this.EXE5.Checked ? checked (ItemData.CurrentItem.int_1 - 16) : checked (ItemData.CurrentItem.int_1 + 16);
+      ItemData.CurrentItem.int_0 = ItemData.CurrentItem.int_1 <= 0 ? 0 : 1;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void EXE6_CheckedChanged(object sender, EventArgs e)
     {
       this.ExepcionFenrir();
-      Class24.struct4_0.int_1 = !this.EXE6.Checked ? checked (Class24.struct4_0.int_1 - 32) : checked (Class24.struct4_0.int_1 + 32);
-      Class24.struct4_0.int_0 = Class24.struct4_0.int_1 <= 0 ? 0 : 1;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.int_1 = !this.EXE6.Checked ? checked (ItemData.CurrentItem.int_1 - 32) : checked (ItemData.CurrentItem.int_1 + 32);
+      ItemData.CurrentItem.int_0 = ItemData.CurrentItem.int_1 <= 0 ? 0 : 1;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void NoAncient_CheckedChanged(object sender, EventArgs e)
     {
       if (this.NoAncient.Checked)
       {
-        Class24.struct4_0.bool_3 = false;
-        Class24.struct4_0.string_17 = "0";
-        Class24.struct4_0.string_18 = "0";
+        ItemData.CurrentItem.bool_3 = false;
+        ItemData.CurrentItem.string_17 = "0";
+        ItemData.CurrentItem.string_18 = "0";
       }
       else
-        Class24.struct4_0.bool_3 = true;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+        ItemData.CurrentItem.bool_3 = true;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Ancient1_CheckedChanged(object sender, EventArgs e)
     {
       if (this.Ancient1.Checked)
       {
-        Class24.struct4_0.bool_3 = true;
-        Class24.struct4_0.string_17 = "1";
-        Class24.struct4_0.string_18 = "0";
+        ItemData.CurrentItem.bool_3 = true;
+        ItemData.CurrentItem.string_17 = "1";
+        ItemData.CurrentItem.string_18 = "0";
       }
       else
       {
-        Class24.struct4_0.bool_3 = false;
-        Class24.struct4_0.string_17 = "0";
-        Class24.struct4_0.string_18 = "1";
+        ItemData.CurrentItem.bool_3 = false;
+        ItemData.CurrentItem.string_17 = "0";
+        ItemData.CurrentItem.string_18 = "1";
       }
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Ancient2_CheckedChanged(object sender, EventArgs e)
     {
       if (this.Ancient2.Checked)
       {
-        Class24.struct4_0.bool_3 = true;
-        Class24.struct4_0.string_17 = "0";
-        Class24.struct4_0.string_18 = "1";
+        ItemData.CurrentItem.bool_3 = true;
+        ItemData.CurrentItem.string_17 = "0";
+        ItemData.CurrentItem.string_18 = "1";
       }
       else
       {
-        Class24.struct4_0.bool_3 = false;
-        Class24.struct4_0.string_17 = "1";
-        Class24.struct4_0.string_18 = "0";
+        ItemData.CurrentItem.bool_3 = false;
+        ItemData.CurrentItem.string_17 = "1";
+        ItemData.CurrentItem.string_18 = "0";
       }
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      Class15.smethod_0((object) Class24.struct4_2.string_0);
-      this.Imagen.Image = Class18.smethod_30(Class18.smethod_31((object) Class31.string_1));
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      ItemHexParser.smethod_0((object) ItemData.ItemDatabaseInfo.string_0);
+      this.Imagen.Image = IniHelper.smethod_30(IniHelper.smethod_31((object) ItemImagePaths.string_1));
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Luck_CheckedChanged(object sender, EventArgs e)
     {
-      Class24.struct4_0.bool_1 = this.Luck.Checked;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.bool_1 = this.Luck.Checked;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Skill_CheckedChanged(object sender, EventArgs e)
     {
-      Class24.struct4_0.bool_2 = this.Skill.Checked;
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.bool_2 = this.Skill.Checked;
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Numero_SelectedIndexChanged(object sender, EventArgs e)
     {
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class24.struct4_2.string_8 = Conversions.ToString(this.Numero.SelectedItem);
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemData.ItemDatabaseInfo.string_8 = Conversions.ToString(this.Numero.SelectedItem);
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void RF_CheckedChanged(object sender, EventArgs e)
     {
-      Class24.struct4_0.int_2 = !this.RF.Checked ? Conversions.ToInteger("0") : Conversions.ToInteger("8");
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      Class15.smethod_14();
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.int_2 = !this.RF.Checked ? Conversions.ToInteger("0") : Conversions.ToInteger("8");
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      ItemHexParser.smethod_14();
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void JHOP_CheckedChanged(object sender, EventArgs e)
     {
-      Class10.smethod_7((object) Class24.struct4_2.int_3);
+      GameDataLoader.smethod_7((object) ItemData.ItemDatabaseInfo.int_3);
       this.CargarJoH();
-      Class10.smethod_8((object) Class24.struct4_2.int_3, (object) checked (this.JoHOP.SelectedIndex - 1));
+      GameDataLoader.smethod_8((object) ItemData.ItemDatabaseInfo.int_3, (object) checked (this.JoHOP.SelectedIndex - 1));
       this.CargarJoHOP();
       if (this.JHOP.Checked)
       {
@@ -6062,13 +6062,13 @@ namespace MuMaker
         this.JoHOP.Enabled = false;
         this.JoHOPs.Enabled = false;
       }
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void JoHOP_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class10.smethod_8((object) Class24.struct4_2.int_3, (object) checked (this.JoHOP.SelectedIndex - 1));
+      GameDataLoader.smethod_8((object) ItemData.ItemDatabaseInfo.int_3, (object) checked (this.JoHOP.SelectedIndex - 1));
       this.CargarJoHOP();
       this.JoHOP.SelectedItem = (object) 0;
       this.JoHOPs.SelectedItem = (object) 0;
@@ -6076,10 +6076,10 @@ namespace MuMaker
 
     private void JoHOPs_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_2.string_23 = Conversion.Hex(this.JoHOP.SelectedIndex);
-      Class24.struct4_2.string_24 = Conversion.Hex(this.JoHOPs.SelectedIndex);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.ItemDatabaseInfo.string_23 = Conversion.Hex(this.JoHOP.SelectedIndex);
+      ItemData.ItemDatabaseInfo.string_24 = Conversion.Hex(this.JoHOPs.SelectedIndex);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void SocketSystem_CheckedChanged(object sender, EventArgs e)
@@ -6110,51 +6110,51 @@ namespace MuMaker
         this.Socket4.SelectedIndex = 0;
         this.Socket5.SelectedIndex = 0;
       }
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Socket1_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_2.string_25 = Conversion.Hex((object) Class6.string_19[this.Socket1.SelectedIndex]);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.ItemDatabaseInfo.string_25 = Conversion.Hex((object) GameDataArrays.string_19[this.Socket1.SelectedIndex]);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Socket2_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_2.string_26 = Conversion.Hex((object) Class6.string_19[this.Socket2.SelectedIndex]);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.ItemDatabaseInfo.string_26 = Conversion.Hex((object) GameDataArrays.string_19[this.Socket2.SelectedIndex]);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Socket3_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_2.string_27 = Conversion.Hex((object) Class6.string_19[this.Socket3.SelectedIndex]);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.ItemDatabaseInfo.string_27 = Conversion.Hex((object) GameDataArrays.string_19[this.Socket3.SelectedIndex]);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Socket4_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_2.string_28 = Conversion.Hex((object) Class6.string_19[this.Socket4.SelectedIndex]);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.ItemDatabaseInfo.string_28 = Conversion.Hex((object) GameDataArrays.string_19[this.Socket4.SelectedIndex]);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void Socket5_SelectedIndexChanged(object sender, EventArgs e)
     {
-      Class24.struct4_2.string_29 = Conversion.Hex((object) Class6.string_19[this.Socket5.SelectedIndex]);
-      this.Nombre.Text = Conversions.ToString(Class15.smethod_2());
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.ItemDatabaseInfo.string_29 = Conversion.Hex((object) GameDataArrays.string_19[this.Socket5.SelectedIndex]);
+      this.Nombre.Text = Conversions.ToString(ItemHexParser.smethod_2());
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
     }
 
     private void method_1(object sender, EventArgs e)
     {
-      Class24.struct4_0.string_31 = this.Serial.Text;
-      Class15.smethod_14();
-      this.Dur.Text = Class24.struct4_0.string_7;
-      this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+      ItemData.CurrentItem.string_31 = this.Serial.Text;
+      ItemHexParser.smethod_14();
+      this.Dur.Text = ItemData.CurrentItem.string_7;
+      this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
       this.SerialSearch.Text = this.Serial.Text;
     }
 
@@ -6193,16 +6193,16 @@ namespace MuMaker
       {
         this.Serial.ReadOnly = true;
         this.Serial.Text = "XXXXXXXX";
-        Class24.struct4_0.string_31 = this.Serial.Text;
-        this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+        ItemData.CurrentItem.string_31 = this.Serial.Text;
+        this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
         this.BuscarSerial.Enabled = false;
       }
       else
       {
         this.Serial.ReadOnly = false;
         this.Serial.Text = "00000000";
-        Class24.struct4_0.string_31 = this.Serial.Text;
-        this.Codigo.Text = Conversions.ToString(Class15.smethod_3());
+        ItemData.CurrentItem.string_31 = this.Serial.Text;
+        this.Codigo.Text = Conversions.ToString(ItemHexParser.smethod_3());
         this.BuscarSerial.Enabled = true;
       }
     }
@@ -6226,7 +6226,7 @@ namespace MuMaker
       this.ItemName.Text = "";
       this.ItemCode.Text = "";
       this.ItemSerial.Text = "";
-      Class29.string_0 = "";
+      SearchState.string_0 = "";
       this.RadioInvent.Checked = false;
       this.RadioVault.Checked = false;
       this.RadioExtra.Checked = false;
@@ -6242,23 +6242,23 @@ namespace MuMaker
       this.N3.Checked = false;
       this.N4.Checked = false;
       this.N5.Checked = false;
-      this.ImagenItemFound.Image = (Image) new Bitmap(Class18.smethod_30(Class18.smethod_31((object) "img\\items\\fondo\\clean.mmk")));
+      this.ImagenItemFound.Image = (Image) new Bitmap(IniHelper.smethod_30(IniHelper.smethod_31((object) "img\\items\\fondo\\clean.mmk")));
       this.TextLoad1.Text = "0%";
       this.TextLoad2.Text = "0%";
-      Class21.smethod_2();
+      FinderTableManager.smethod_2();
       this.CuentasDupe.Focus();
       return (object) true;
     }
 
     public object ActualizarDB(object X, object Y, object Z)
     {
-      Class7.smethod_0();
+      ConnectionManager.smethod_0();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) ("DELETE FROM MuMakerFinderMaker WHERE AC='" + this.Cuenta1.Text + "' AND PJ='" + this.Personaje1.Text + "' AND CodeItems = '"), X), (object) "' AND Pos = '"), Z), (object) "'"));
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) ("DELETE FROM MuMakerFinderMaker WHERE AC='" + this.Cuenta1.Text + "' AND PJ='" + this.Personaje1.Text + "' AND CodeItems = '"), X), (object) "' AND Pos = '"), Z), (object) "'"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -6266,13 +6266,13 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE MuMakerFinderMaker SET CodeItems = '", Y), (object) "' WHERE CodeItems = '"), X), (object) "'"));
-        Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = Conversions.ToString(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject((object) "UPDATE MuMakerFinderMaker SET CodeItems = '", Y), (object) "' WHERE CodeItems = '"), X), (object) "'"));
+        SqlConnectionPool.sqlCommand_1.ExecuteReader();
       }
       catch (Exception ex)
       {
@@ -6280,13 +6280,13 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
+      ConnectionManager.smethod_5();
       return (object) true;
     }
 
     private void method_4(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_20(checked ((short) Strings.Asc(e.KeyChar))) != 0)
+      if ((int) IniHelper.smethod_20(checked ((short) Strings.Asc(e.KeyChar))) != 0)
         return;
       e.Handled = true;
     }
@@ -6324,7 +6324,7 @@ namespace MuMaker
 
     public object OcultarBotones()
     {
-      Class29.bool_0 = false;
+      SearchState.bool_0 = false;
       this.BotonFullEXE.Enabled = false;
       this.BotonEXEANC.Enabled = false;
       this.BotonFull380.Enabled = false;
@@ -6361,7 +6361,7 @@ namespace MuMaker
         this.BuscarSerial.Enabled = false;
       else
         this.BuscarSerial.Enabled = true;
-      Class29.bool_0 = true;
+      SearchState.bool_0 = true;
       this.CuentasDupe.Enabled = true;
       this.PJDupe.Enabled = true;
       return (object) true;
@@ -6369,7 +6369,7 @@ namespace MuMaker
 
     public object Full(object vAccount, object vPersonaje, object vVault, object vInvent, object vExtraW, object vNumExtraW, object vPos, object vItem, object vItems)
     {
-      switch (Class29.int_0)
+      switch (SearchState.int_0)
       {
         case 1:
           if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Strings.Mid(Conversions.ToString(vItem), 15, 2), "3F", false) == 0 | Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Strings.Mid(Conversions.ToString(vItem), 15, 2), "7F", false) == 0)
@@ -6378,7 +6378,7 @@ namespace MuMaker
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), (object) "1", RuntimeHelpers.GetObjectValue(Class13.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), (object) "1", RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
@@ -6389,7 +6389,7 @@ namespace MuMaker
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(Class13.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(Class13.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
@@ -6400,7 +6400,7 @@ namespace MuMaker
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(Class13.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(Class13.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
@@ -6411,18 +6411,18 @@ namespace MuMaker
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(Class13.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
         case 5:
-          if (Conversions.ToBoolean(Microsoft.VisualBasic.CompilerServices.Operators.AndObject(Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(Class15.smethod_5(RuntimeHelpers.GetObjectValue(vItem)), (object) "Excelent ", false), Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(Class15.smethod_4(RuntimeHelpers.GetObjectValue(vItem)), (object) "Ancient ", false))))
+          if (Conversions.ToBoolean(Microsoft.VisualBasic.CompilerServices.Operators.AndObject(Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(ItemHexParser.smethod_5(RuntimeHelpers.GetObjectValue(vItem)), (object) "Excelent ", false), Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(ItemHexParser.smethod_4(RuntimeHelpers.GetObjectValue(vItem)), (object) "Ancient ", false))))
           {
             this.CuentasDupe.Items.Add(RuntimeHelpers.GetObjectValue(vAccount));
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(Class13.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(Class13.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), (object) "1", RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
@@ -6433,7 +6433,7 @@ namespace MuMaker
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(Class13.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
@@ -6444,7 +6444,7 @@ namespace MuMaker
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(Class13.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
@@ -6455,7 +6455,7 @@ namespace MuMaker
             this.PJDupe.Items.Add(RuntimeHelpers.GetObjectValue(vPersonaje));
             this.CodeItems.Items.Add(RuntimeHelpers.GetObjectValue(vItem));
             this.Pos.Items.Add(RuntimeHelpers.GetObjectValue(vPos));
-            Class13.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(Class13.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(Class13.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
+            ItemFinderOperations.smethod_0(RuntimeHelpers.GetObjectValue(vAccount), RuntimeHelpers.GetObjectValue(vPersonaje), RuntimeHelpers.GetObjectValue(vVault), RuntimeHelpers.GetObjectValue(vInvent), RuntimeHelpers.GetObjectValue(vExtraW), RuntimeHelpers.GetObjectValue(vNumExtraW), RuntimeHelpers.GetObjectValue(vPos), RuntimeHelpers.GetObjectValue(vItem), (object) Strings.Mid(Conversions.ToString(vItem), 7, 8), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_2(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_5(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_3(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_4(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(ItemFinderOperations.smethod_6(RuntimeHelpers.GetObjectValue(vItem))), RuntimeHelpers.GetObjectValue(vItems));
             break;
           }
           break;
@@ -6467,18 +6467,18 @@ namespace MuMaker
     {
       this.OcultarBotones();
       this.Resetear();
-      this.CargaTotal.Maximum = Class29.int_1;
+      this.CargaTotal.Maximum = SearchState.int_1;
       this.CargaParcial.Maximum = 120;
       try
       {
-        Class7.smethod_0();
-        Class28.sqlConnection_1.Open();
-        Class7.smethod_1();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+        ConnectionManager.smethod_0();
+        SqlConnectionPool.sqlConnection_1.Open();
+        ConnectionManager.smethod_1();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT memb___id FROM MEMB_INFO ORDER BY memb___id ASC";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
         int num1 = 0;
-        while (Class28.sqlDataReader_1.Read())
+        while (SqlConnectionPool.sqlDataReader_1.Read())
         {
           try
           {
@@ -6487,24 +6487,24 @@ namespace MuMaker
             {
               try
               {
-                Class28.sqlConnection_2.Open();
-                Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-                Class28.sqlCommand_2.CommandText = "SELECT master.dbo.fn_varbintohexstr(CAST(Items AS Image)) FROM warehouse WHERE AccountID = '" + Class28.sqlDataReader_1[0].ToString() + "'";
-                Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
-                while (Class28.sqlDataReader_2.Read())
+                SqlConnectionPool.sqlConnection_2.Open();
+                SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+                SqlConnectionPool.sqlCommand_2.CommandText = "SELECT master.dbo.fn_varbintohexstr(CAST(Items AS Image)) FROM warehouse WHERE AccountID = '" + SqlConnectionPool.sqlDataReader_1[0].ToString() + "'";
+                SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
+                while (SqlConnectionPool.sqlDataReader_2.Read())
                 {
-                  if (Class29.bool_0)
+                  if (SearchState.bool_0)
                     return;
-                  string str = Strings.Mid(Class28.sqlDataReader_2[0].ToString().ToUpper(), 3, Class28.sqlDataReader_2[0].ToString().Length);
+                  string str = Strings.Mid(SqlConnectionPool.sqlDataReader_2[0].ToString().ToUpper(), 3, SqlConnectionPool.sqlDataReader_2[0].ToString().Length);
                   int num2 = 0;
                   int num3 = 1;
 label_10:
-                  if (Class29.bool_0)
+                  if (SearchState.bool_0)
                     return;
                   string Left = Strings.Mid(str, checked (num3 + num2), 32);
                   checked { num2 += 31; }
                   if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, "", false) != 0)
-                    this.Full((object) Class28.sqlDataReader_1[0].ToString(), (object) "-", (object) "1", (object) "0", (object) "0", (object) "0", (object) num3, (object) Left, (object) str);
+                    this.Full((object) SqlConnectionPool.sqlDataReader_1[0].ToString(), (object) "-", (object) "1", (object) "0", (object) "0", (object) "0", (object) num3, (object) Left, (object) str);
                   this.CargaParcial.Value = num3;
                   this.TextLoad1.Text = Conversions.ToString(Math.Round((double) this.CargaParcial.Value / (double) this.CargaParcial.Maximum * 100.0)) + "%";
                   checked { ++num3; }
@@ -6517,32 +6517,32 @@ label_10:
                 ProjectData.SetProjectError(ex);
                 ProjectData.ClearProjectError();
               }
-              Class28.sqlDataReader_2.Close();
-              Class7.smethod_6();
+              SqlConnectionPool.sqlDataReader_2.Close();
+              ConnectionManager.smethod_6();
             }
             this.CargaParcial.Maximum = 120;
             if (this.Extra.Checked)
             {
               try
               {
-                Class28.sqlConnection_2.Open();
-                Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-                Class28.sqlCommand_2.CommandText = "SELECT master.dbo.fn_varbintohexstr(CAST(Items AS Image)), Number FROM ExtWareHouse WHERE AccountID = '" + Class28.sqlDataReader_1[0].ToString() + "'";
-                Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
-                while (Class28.sqlDataReader_2.Read())
+                SqlConnectionPool.sqlConnection_2.Open();
+                SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+                SqlConnectionPool.sqlCommand_2.CommandText = "SELECT master.dbo.fn_varbintohexstr(CAST(Items AS Image)), Number FROM ExtWareHouse WHERE AccountID = '" + SqlConnectionPool.sqlDataReader_1[0].ToString() + "'";
+                SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
+                while (SqlConnectionPool.sqlDataReader_2.Read())
                 {
-                  if (Class29.bool_0)
+                  if (SearchState.bool_0)
                     return;
-                  string str = Strings.Mid(Class28.sqlDataReader_2[0].ToString().ToUpper(), 3, Class28.sqlDataReader_2[0].ToString().Length);
+                  string str = Strings.Mid(SqlConnectionPool.sqlDataReader_2[0].ToString().ToUpper(), 3, SqlConnectionPool.sqlDataReader_2[0].ToString().Length);
                   int num2 = 0;
                   int num3 = 1;
 label_21:
-                  if (Class29.bool_0)
+                  if (SearchState.bool_0)
                     return;
                   string Left = Strings.Mid(str, checked (num3 + num2), 32);
                   checked { num2 += 31; }
                   if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, "", false) != 0)
-                    this.Full((object) Class28.sqlDataReader_1[0].ToString(), (object) "-", (object) "0", (object) "0", (object) "1", (object) Class28.sqlDataReader_2[1].ToString(), (object) num3, (object) Left, (object) str);
+                    this.Full((object) SqlConnectionPool.sqlDataReader_1[0].ToString(), (object) "-", (object) "0", (object) "0", (object) "1", (object) SqlConnectionPool.sqlDataReader_2[1].ToString(), (object) num3, (object) Left, (object) str);
                   this.CargaParcial.Value = num3;
                   this.TextLoad1.Text = Conversions.ToString(Math.Round((double) this.CargaParcial.Value / (double) this.CargaParcial.Maximum * 100.0)) + "%";
                   checked { ++num3; }
@@ -6555,32 +6555,32 @@ label_21:
                 ProjectData.SetProjectError(ex);
                 ProjectData.ClearProjectError();
               }
-              Class28.sqlDataReader_2.Close();
-              Class7.smethod_6();
+              SqlConnectionPool.sqlDataReader_2.Close();
+              ConnectionManager.smethod_6();
             }
             this.CargaParcial.Maximum = 108;
             if (this.Invent.Checked)
             {
               try
               {
-                Class28.sqlConnection_2.Open();
-                Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-                Class28.sqlCommand_2.CommandText = "SELECT master.dbo.fn_varbintohexstr(CAST(Inventory AS Image)), Name FROM Character WHERE AccountID = '" + Class28.sqlDataReader_1[0].ToString() + "'";
-                Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
-                while (Class28.sqlDataReader_2.Read())
+                SqlConnectionPool.sqlConnection_2.Open();
+                SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+                SqlConnectionPool.sqlCommand_2.CommandText = "SELECT master.dbo.fn_varbintohexstr(CAST(Inventory AS Image)), Name FROM Character WHERE AccountID = '" + SqlConnectionPool.sqlDataReader_1[0].ToString() + "'";
+                SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
+                while (SqlConnectionPool.sqlDataReader_2.Read())
                 {
-                  if (Class29.bool_0)
+                  if (SearchState.bool_0)
                     return;
-                  string str = Strings.Mid(Class28.sqlDataReader_2[0].ToString().ToUpper(), 3, Class28.sqlDataReader_2[0].ToString().Length);
+                  string str = Strings.Mid(SqlConnectionPool.sqlDataReader_2[0].ToString().ToUpper(), 3, SqlConnectionPool.sqlDataReader_2[0].ToString().Length);
                   int num2 = 0;
                   int num3 = 1;
 label_34:
-                  if (Class29.bool_0)
+                  if (SearchState.bool_0)
                     return;
                   string Left = Strings.Mid(str, checked (num3 + num2), 32);
                   checked { num2 += 31; }
                   if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", false) != 0 & Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Left, "", false) != 0)
-                    this.Full((object) Class28.sqlDataReader_1[0].ToString(), (object) Class28.sqlDataReader_2[1].ToString(), (object) "0", (object) "1", (object) "0", (object) "0", (object) num3, (object) Left, (object) str);
+                    this.Full((object) SqlConnectionPool.sqlDataReader_1[0].ToString(), (object) SqlConnectionPool.sqlDataReader_2[1].ToString(), (object) "0", (object) "1", (object) "0", (object) "0", (object) num3, (object) Left, (object) str);
                   this.CargaParcial.Value = num3;
                   this.TextLoad1.Text = Conversions.ToString(Math.Round((double) this.CargaParcial.Value / (double) this.CargaParcial.Maximum * 100.0)) + "%";
                   checked { ++num3; }
@@ -6593,8 +6593,8 @@ label_34:
                 ProjectData.SetProjectError(ex);
                 ProjectData.ClearProjectError();
               }
-              Class28.sqlDataReader_2.Close();
-              Class7.smethod_6();
+              SqlConnectionPool.sqlDataReader_2.Close();
+              ConnectionManager.smethod_6();
             }
           }
           catch (Exception ex)
@@ -6614,30 +6614,30 @@ label_34:
             ProjectData.ClearProjectError();
           }
           this.TextLoad2.Text = Conversions.ToString(Math.Round((double) this.CargaTotal.Value / (double) this.CargaTotal.Maximum * 100.0)) + "%";
-          Class7.smethod_6();
+          ConnectionManager.smethod_6();
         }
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
         this.Status.Text = "!! FINISH ALL OK !!";
-        Class7.smethod_5();
-        Class7.smethod_6();
+        ConnectionManager.smethod_5();
+        ConnectionManager.smethod_6();
       }
       catch (Exception ex)
       {
         ProjectData.SetProjectError(ex);
         this.Status.Text = "FINISH W/ERRORS";
-        Class7.smethod_5();
-        Class7.smethod_6();
+        ConnectionManager.smethod_5();
+        ConnectionManager.smethod_6();
         ProjectData.ClearProjectError();
       }
-      Class7.smethod_5();
-      Class7.smethod_6();
+      ConnectionManager.smethod_5();
+      ConnectionManager.smethod_6();
       this.MostrarBotones();
-      Class29.int_0 = 0;
+      SearchState.int_0 = 0;
     }
 
     private void StopSearch_Click(object sender, EventArgs e)
     {
-      Class29.bool_0 = true;
+      SearchState.bool_0 = true;
       this.MostrarBotones();
       this.CuentasDupe.Focus();
     }
@@ -6656,28 +6656,28 @@ label_34:
         this.OcultarBotones();
         if (this.RadioInvent.Checked)
         {
-          Class12.smethod_1();
+          AccountStatusManager.smethod_1();
           this.BorrarInvent(RuntimeHelpers.GetObjectValue(this.Pos.SelectedItem));
         }
         if (this.RadioVault.Checked)
         {
-          Class12.smethod_1();
+          AccountStatusManager.smethod_1();
           this.BorrarVault(RuntimeHelpers.GetObjectValue(this.Pos.SelectedItem));
         }
         if (this.RadioExtra.Checked)
         {
           this.BorrarExtra(RuntimeHelpers.GetObjectValue(this.Pos.SelectedItem));
-          Class12.smethod_1();
+          AccountStatusManager.smethod_1();
         }
-        Class29.string_1 = Conversions.ToString(this.CuentasDupe.SelectedIndex);
-        this.PJDupe.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
-        this.Pos.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
-        this.CodeItems.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
-        this.CuentasDupe.Items.RemoveAt(Conversions.ToInteger(Class29.string_1));
+        SearchState.string_1 = Conversions.ToString(this.CuentasDupe.SelectedIndex);
+        this.PJDupe.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
+        this.Pos.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
+        this.CodeItems.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
+        this.CuentasDupe.Items.RemoveAt(Conversions.ToInteger(SearchState.string_1));
         this.CuentasDupe.Focus();
-        if (Conversions.ToDouble(Class29.string_1) > 1.0)
-          this.CuentasDupe.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(Class29.string_1) - 1.0)));
-        if (!((Conversions.ToDouble(Class29.string_1) == 0.0 | Conversions.ToDouble(Class29.string_1) == 1.0) & Conversions.ToDouble(str) > 1.0))
+        if (Conversions.ToDouble(SearchState.string_1) > 1.0)
+          this.CuentasDupe.SelectedIndex = checked ((int) Math.Round(unchecked (Conversions.ToDouble(SearchState.string_1) - 1.0)));
+        if (!((Conversions.ToDouble(SearchState.string_1) == 0.0 | Conversions.ToDouble(SearchState.string_1) == 1.0) & Conversions.ToDouble(str) > 1.0))
           return;
         this.CuentasDupe.SelectedIndex = 0;
       }
@@ -6695,19 +6695,19 @@ label_34:
 
     private void FinderMaker_Closing(object sender, CancelEventArgs e)
     {
-      Class18.smethod_47();
-      Class21.smethod_2();
+      IniHelper.smethod_47();
+      FinderTableManager.smethod_2();
     }
 
     private void FinderMaker_Closed(object sender, EventArgs e)
     {
-      Class18.smethod_47();
-      Class21.smethod_2();
+      IniHelper.smethod_47();
+      FinderTableManager.smethod_2();
     }
 
     private void method_9(object sender, EventArgs e)
     {
-      Class29.int_0 = 1;
+      SearchState.int_0 = 1;
       this.Status.Text = "!! SEARCHING !!";
       new Thread(new ThreadStart(this.method_5))
       {
@@ -6718,7 +6718,7 @@ label_34:
 
     private void method_10(object sender, EventArgs e)
     {
-      Class29.int_0 = 2;
+      SearchState.int_0 = 2;
       this.Status.Text = "!! SEARCHING !!";
       new Thread(new ThreadStart(this.method_5))
       {
@@ -6729,7 +6729,7 @@ label_34:
 
     private void method_11(object sender, EventArgs e)
     {
-      Class29.int_0 = 3;
+      SearchState.int_0 = 3;
       this.Status.Text = "!! SEARCHING !!";
       new Thread(new ThreadStart(this.method_5))
       {
@@ -6740,7 +6740,7 @@ label_34:
 
     private void method_12(object sender, EventArgs e)
     {
-      Class29.int_0 = 4;
+      SearchState.int_0 = 4;
       this.Status.Text = "!! SEARCHING !!";
       new Thread(new ThreadStart(this.method_5))
       {
@@ -6751,7 +6751,7 @@ label_34:
 
     private void method_13(object sender, EventArgs e)
     {
-      Class29.int_0 = 5;
+      SearchState.int_0 = 5;
       this.Status.Text = "!! SEARCHING !!";
       new Thread(new ThreadStart(this.method_5))
       {
@@ -6762,7 +6762,7 @@ label_34:
 
     private void method_14(object sender, EventArgs e)
     {
-      Class29.int_0 = 6;
+      SearchState.int_0 = 6;
       this.Status.Text = "!! SEARCHING !!";
       new Thread(new ThreadStart(this.method_5))
       {
@@ -6773,7 +6773,7 @@ label_34:
 
     private void method_15(object sender, EventArgs e)
     {
-      Class29.int_0 = Microsoft.VisualBasic.CompilerServices.Operators.CompareString(this.SerialSearch.Text, "XXXXXXXX", false) == 0 ? 8 : 7;
+      SearchState.int_0 = Microsoft.VisualBasic.CompilerServices.Operators.CompareString(this.SerialSearch.Text, "XXXXXXXX", false) == 0 ? 8 : 7;
       this.Status.Text = "!! SEARCHING !!";
       new Thread(new ThreadStart(this.method_5))
       {
@@ -6795,157 +6795,157 @@ label_34:
     private void method_18(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
     }
 
     private void method_19(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_87();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_87();
     }
 
     private void method_20(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_21(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void method_22(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullEXE.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFullEXE.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_23(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullEXE.BackgroundImage = (Image) Class34.smethod_13();
+      this.BotonFullEXE.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_24(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFull380.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFull380.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_25(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFull380.BackgroundImage = (Image) Class34.smethod_13();
+      this.BotonFull380.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_26(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullJoH.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFullJoH.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_27(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullJoH.BackgroundImage = (Image) Class34.smethod_13();
+      this.BotonFullJoH.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_28(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullSK.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonFullSK.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_29(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonFullSK.BackgroundImage = (Image) Class34.smethod_13();
+      this.BotonFullSK.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_30(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonEXEANC.BackgroundImage = (Image) Class34.smethod_12();
+      this.BotonEXEANC.BackgroundImage = (Image) EmbeddedResources.smethod_12();
     }
 
     private void method_31(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.BotonEXEANC.BackgroundImage = (Image) Class34.smethod_13();
+      this.BotonEXEANC.BackgroundImage = (Image) EmbeddedResources.smethod_13();
     }
 
     private void method_32(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Clean.BackgroundImage = (Image) Class34.smethod_4();
+      this.Clean.BackgroundImage = (Image) EmbeddedResources.smethod_4();
     }
 
     private void method_33(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Clean.BackgroundImage = (Image) Class34.smethod_5();
+      this.Clean.BackgroundImage = (Image) EmbeddedResources.smethod_5();
     }
 
     private void method_34(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Seleccionado.BackgroundImage = (Image) Class34.smethod_117();
+      this.Seleccionado.BackgroundImage = (Image) EmbeddedResources.smethod_117();
     }
 
     private void method_35(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Seleccionado.BackgroundImage = (Image) Class34.smethod_118();
+      this.Seleccionado.BackgroundImage = (Image) EmbeddedResources.smethod_118();
     }
 
     private void method_36(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Todos.BackgroundImage = (Image) Class34.smethod_53();
+      this.Todos.BackgroundImage = (Image) EmbeddedResources.smethod_53();
     }
 
     private void method_37(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Todos.BackgroundImage = (Image) Class34.smethod_54();
+      this.Todos.BackgroundImage = (Image) EmbeddedResources.smethod_54();
     }
 
     private void method_38(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Invent.Image = (Image) Class34.smethod_71();
+      this.Invent.Image = (Image) EmbeddedResources.smethod_71();
     }
 
     private void method_39(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Invent.Image = (Image) Class34.smethod_72();
+      this.Invent.Image = (Image) EmbeddedResources.smethod_72();
     }
 
     private void method_40(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Vault.Image = (Image) Class34.smethod_112();
+      this.Vault.Image = (Image) EmbeddedResources.smethod_112();
     }
 
     private void method_41(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Vault.Image = (Image) Class34.smethod_113();
+      this.Vault.Image = (Image) EmbeddedResources.smethod_113();
     }
 
     private void method_42(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Extra.Image = (Image) Class34.smethod_73();
+      this.Extra.Image = (Image) EmbeddedResources.smethod_73();
     }
 
     private void method_43(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Extra.Image = (Image) Class34.smethod_74();
+      this.Extra.Image = (Image) EmbeddedResources.smethod_74();
     }
 
     private void method_44(object sender, MouseEventArgs e)

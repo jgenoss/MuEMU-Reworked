@@ -303,7 +303,7 @@ namespace MuMaker
       this.Email.VisitedLinkColor = Color.DarkOrange;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_43();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_43();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -439,7 +439,7 @@ namespace MuMaker
       this.PayPal.BackgroundImageLayout = ImageLayout.Center;
       this.PayPal.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.PayPal.Image = (Image) Class34.smethod_94();
+      this.PayPal.Image = (Image) EmbeddedResources.smethod_94();
       PictureBox payPal1 = this.PayPal;
       point1 = new Point(429, 25);
       Point point12 = point1;
@@ -454,7 +454,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_52();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_52();
       this.CancelButton = (IButtonControl) this.Cerrar;
       size1 = new Size(500, 111);
       this.ClientSize = size1;
@@ -493,7 +493,7 @@ namespace MuMaker
 
     private void Email_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
     {
-      Process.Start("mailto:timtrucho@yahoo.es?subject=MuMaker " + Class2.smethod_3().method_8().RealVersion.Text + "!!");
+      Process.Start("mailto:timtrucho@yahoo.es?subject=MuMaker " + ApplicationServices.MuMakerApplication.smethod_3().method_8().RealVersion.Text + "!!");
     }
 
     private void LinkWEB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -525,14 +525,14 @@ namespace MuMaker
     private void method_1(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_43();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_43();
       this.Messenger.Focus();
     }
 
     private void method_2(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_46();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_46();
     }
   }
 }

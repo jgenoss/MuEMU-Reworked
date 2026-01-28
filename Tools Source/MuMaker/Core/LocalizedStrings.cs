@@ -251,6 +251,11 @@ namespace MuMaker.Core
 
         #region Initialization
         /// <summary>
+        /// smethod_0 - Loads all localized strings from the language file (original method name)
+        /// </summary>
+        public static void smethod_0(string language) => Initialize(language);
+
+        /// <summary>
         /// Loads all localized strings from the language file
         /// </summary>
         /// <param name="language">Language name (e.g., "English", "Espanol")</param>

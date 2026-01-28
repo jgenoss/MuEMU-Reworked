@@ -83,7 +83,7 @@ namespace MuMaker
       this.Carga.TabIndex = 2;
       this.AutoScaleMode = AutoScaleMode.Inherit;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_8();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_8();
       size1 = new Size(409, 86);
       this.ClientSize = size1;
       this.Controls.Add((Control) this.Carga);

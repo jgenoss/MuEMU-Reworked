@@ -372,7 +372,7 @@ namespace MuMaker
       this.LastVersion.TextAlign = ContentAlignment.MiddleCenter;
       this.PictureBox3.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox3.Image = (Image) Class34.smethod_80();
+      this.PictureBox3.Image = (Image) EmbeddedResources.smethod_80();
       PictureBox pictureBox3_1 = this.PictureBox3;
       point1 = new Point(60, 190);
       Point point5 = point1;
@@ -415,7 +415,7 @@ namespace MuMaker
       this.Version.TextAlign = ContentAlignment.MiddleCenter;
       this.PictureBox2.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox2.Image = (Image) Class34.smethod_114();
+      this.PictureBox2.Image = (Image) EmbeddedResources.smethod_114();
       PictureBox pictureBox2_1 = this.PictureBox2;
       point1 = new Point(3, 53);
       Point point8 = point1;
@@ -429,7 +429,7 @@ namespace MuMaker
       this.PictureBox2.TabStop = false;
       this.PictureBox1.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox1.Image = (Image) Class34.smethod_58();
+      this.PictureBox1.Image = (Image) EmbeddedResources.smethod_58();
       PictureBox pictureBox1_1 = this.PictureBox1;
       point1 = new Point(15, 126);
       Point point9 = point1;
@@ -443,7 +443,7 @@ namespace MuMaker
       this.PictureBox1.TabStop = false;
       this.Reload.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
       this.Reload.BackgroundImageLayout = ImageLayout.Center;
       this.Reload.Cursor = Cursors.Hand;
       this.Reload.FlatAppearance.BorderSize = 0;
@@ -468,7 +468,7 @@ namespace MuMaker
       this.Reload.UseVisualStyleBackColor = false;
       this.PictureBox4.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.PictureBox4.Image = (Image) Class34.smethod_80();
+      this.PictureBox4.Image = (Image) EmbeddedResources.smethod_80();
       PictureBox pictureBox4_1 = this.PictureBox4;
       point1 = new Point(9, 182);
       Point point11 = point1;
@@ -482,7 +482,7 @@ namespace MuMaker
       this.PictureBox4.TabStop = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -524,7 +524,7 @@ namespace MuMaker
       this.LinkMirror.BackColor = Color.Transparent;
       this.LinkMirror.Cursor = Cursors.Hand;
       // ISSUE: reference to a compiler-generated method
-      this.LinkMirror.Image = (Image) Class34.smethod_56();
+      this.LinkMirror.Image = (Image) EmbeddedResources.smethod_56();
       PictureBox linkMirror1 = this.LinkMirror;
       point1 = new Point(48, 96);
       Point point14 = point1;
@@ -541,7 +541,7 @@ namespace MuMaker
       this.AutoScaleMode = AutoScaleMode.Inherit;
       this.BackColor = Color.Black;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_111();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_111();
       this.CancelButton = (IButtonControl) this.Cerrar;
       size1 = new Size(268, 211);
       this.ClientSize = size1;
@@ -578,9 +578,9 @@ namespace MuMaker
 
     private void UpDateMaker_Load(object sender, EventArgs e)
     {
-      this.Version.Text = Class26.string_0;
-      Class26.object_0 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/UPDT.INI", "Info", "Version", Class26.string_0);
-      this.LastVersion.Text = Conversions.ToString(Class26.object_0);
+      this.Version.Text = Configuration.string_0;
+      Configuration.object_0 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/UPDT.INI", "Info", "Version", Configuration.string_0);
+      this.LastVersion.Text = Conversions.ToString(Configuration.object_0);
       this.LinkMirror.Focus();
     }
 
@@ -593,9 +593,9 @@ namespace MuMaker
     private void method_1(object sender, EventArgs e)
     {
       this.InfoMakerWEB.Navigate(new Uri("http://softwaretmt.sytes.net/mumaker/clientes/newsmmk.php"));
-      Class18.smethod_21();
-      Class26.object_0 = (object) Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/UPDT.INI", "Info", "Version", Class26.string_0);
-      this.LastVersion.Text = Conversions.ToString(Class26.object_0);
+      IniHelper.smethod_21();
+      Configuration.object_0 = (object) IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/UPDT.INI", "Info", "Version", Configuration.string_0);
+      this.LastVersion.Text = Conversions.ToString(Configuration.object_0);
       this.LinkMirror.Focus();
     }
 
@@ -607,32 +607,32 @@ namespace MuMaker
     private void method_2(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
       this.LinkMirror.Focus();
     }
 
     private void method_3(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_101();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_101();
     }
 
     private void method_4(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.LinkMirror.Focus();
     }
 
     private void method_5(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
 
     private void UPDT_Tick(object sender, EventArgs e)
     {
-      this.LastVersion.Text = Conversions.ToString(Class26.object_0);
+      this.LastVersion.Text = Conversions.ToString(Configuration.object_0);
     }
   }
 }

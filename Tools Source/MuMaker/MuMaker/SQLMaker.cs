@@ -586,7 +586,7 @@ namespace MuMaker
       this.Tab1.UseVisualStyleBackColor = true;
       this.Reload.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Reload.BackgroundImage = (Image) Class34.smethod_100();
+      this.Reload.BackgroundImage = (Image) EmbeddedResources.smethod_100();
       this.Reload.BackgroundImageLayout = ImageLayout.Center;
       this.Reload.Cursor = Cursors.Hand;
       this.Reload.FlatAppearance.BorderSize = 0;
@@ -935,105 +935,105 @@ namespace MuMaker
 
     public object EmpyAccount()
     {
-      Class7.smethod_0();
-      Class7.smethod_1();
-      string str = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+      ConnectionManager.smethod_0();
+      ConnectionManager.smethod_1();
+      string str = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
       try
       {
-        Class28.sqlConnection_2.Open();
-        Class28.sqlCommand_2 = new SqlCommand();
-        Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-        Class28.sqlCommand_2.CommandText = "SELECT Id FROM AccountCharacter WHERE GameID1 IS NULL AND GameID2 IS NULL AND GameID3 IS NULL AND GameID4 IS NULL AND GameID5 IS NULL";
-        Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
+        SqlConnectionPool.sqlConnection_2.Open();
+        SqlConnectionPool.sqlCommand_2 = new SqlCommand();
+        SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+        SqlConnectionPool.sqlCommand_2.CommandText = "SELECT Id FROM AccountCharacter WHERE GameID1 IS NULL AND GameID2 IS NULL AND GameID3 IS NULL AND GameID4 IS NULL AND GameID5 IS NULL";
+        SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
         int num = 0;
         SQLMaker.DefInstance.ProgresBar.Maximum = checked ((int) Math.Round(unchecked (Conversions.ToDouble(this.EmpyAFF.Text) + 1.0)));
-        while (Class28.sqlDataReader_2.Read())
+        while (SqlConnectionPool.sqlDataReader_2.Read())
         {
-          Class28.sqlCommand_1 = new SqlCommand();
+          SqlConnectionPool.sqlCommand_1 = new SqlCommand();
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "DELETE FROM MEMB_STAT WHERE memb___id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-            Class28.sqlCommand_1.ExecuteReader();
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM MEMB_STAT WHERE memb___id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+            SqlConnectionPool.sqlCommand_1.ExecuteReader();
           }
           catch (Exception ex)
           {
             ProjectData.SetProjectError(ex);
             ProjectData.ClearProjectError();
           }
-          if (Class28.sqlConnection_1.State == ConnectionState.Open)
-            Class28.sqlConnection_1.Close();
+          if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+            SqlConnectionPool.sqlConnection_1.Close();
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-            Class28.sqlCommand_1.ExecuteReader();
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+            SqlConnectionPool.sqlCommand_1.ExecuteReader();
           }
           catch (Exception ex)
           {
             ProjectData.SetProjectError(ex);
             ProjectData.ClearProjectError();
           }
-          if (Class28.sqlConnection_1.State == ConnectionState.Open)
-            Class28.sqlConnection_1.Close();
+          if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+            SqlConnectionPool.sqlConnection_1.Close();
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-            Class28.sqlCommand_1.ExecuteReader();
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+            SqlConnectionPool.sqlCommand_1.ExecuteReader();
           }
           catch (Exception ex)
           {
             ProjectData.SetProjectError(ex);
             ProjectData.ClearProjectError();
           }
-          if (Class28.sqlConnection_1.State == ConnectionState.Open)
-            Class28.sqlConnection_1.Close();
+          if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+            SqlConnectionPool.sqlConnection_1.Close();
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-            Class28.sqlCommand_1.ExecuteReader();
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+            SqlConnectionPool.sqlCommand_1.ExecuteReader();
           }
           catch (Exception ex)
           {
             ProjectData.SetProjectError(ex);
             ProjectData.ClearProjectError();
           }
-          if (Class28.sqlConnection_1.State == ConnectionState.Open)
-            Class28.sqlConnection_1.Close();
+          if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+            SqlConnectionPool.sqlConnection_1.Close();
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-            Class28.sqlCommand_1.ExecuteReader();
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+            SqlConnectionPool.sqlCommand_1.ExecuteReader();
           }
           catch (Exception ex)
           {
             ProjectData.SetProjectError(ex);
             ProjectData.ClearProjectError();
           }
-          if (Class28.sqlConnection_1.State == ConnectionState.Open)
-            Class28.sqlConnection_1.Close();
+          if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+            SqlConnectionPool.sqlConnection_1.Close();
           try
           {
-            Class28.sqlConnection_1.Open();
-            Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-            Class28.sqlCommand_1.CommandText = "DELETE FROM " + str + " WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-            Class28.sqlCommand_1.ExecuteReader();
+            SqlConnectionPool.sqlConnection_1.Open();
+            SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+            SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM " + str + " WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+            SqlConnectionPool.sqlCommand_1.ExecuteReader();
           }
           catch (Exception ex)
           {
             ProjectData.SetProjectError(ex);
             ProjectData.ClearProjectError();
           }
-          if (Class28.sqlConnection_1.State == ConnectionState.Open)
-            Class28.sqlConnection_1.Close();
+          if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+            SqlConnectionPool.sqlConnection_1.Close();
           try
           {
             SQLMaker.DefInstance.ProgresBar.Value = num;
@@ -1047,7 +1047,7 @@ namespace MuMaker
           }
           checked { ++num; }
         }
-        Class28.sqlDataReader_2.Close();
+        SqlConnectionPool.sqlDataReader_2.Close();
       }
       catch (Exception ex)
       {
@@ -1057,121 +1057,121 @@ namespace MuMaker
       }
       SQLMaker.DefInstance.ProgresBar.Value = checked ((int) Math.Round(unchecked (Conversions.ToDouble(this.EmpyAFF.Text) + 1.0)));
       this.TextLoad.Text = "100%";
-      if (Class28.sqlConnection_1.State == ConnectionState.Open)
-        Class28.sqlConnection_1.Close();
-      if (Class28.sqlConnection_2.State == ConnectionState.Open)
-        Class28.sqlConnection_2.Close();
+      if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+        SqlConnectionPool.sqlConnection_1.Close();
+      if (SqlConnectionPool.sqlConnection_2.State == ConnectionState.Open)
+        SqlConnectionPool.sqlConnection_2.Close();
       return (object) true;
     }
 
     public object InactiveAccount()
     {
-      Class7.smethod_0();
-      Class7.smethod_1();
-      string str = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+      ConnectionManager.smethod_0();
+      ConnectionManager.smethod_1();
+      string str = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
       try
       {
-        Class28.sqlConnection_2.Open();
-        Class28.sqlCommand_2 = new SqlCommand();
-        Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-        Class28.sqlCommand_2.CommandText = "SELECT memb___id, DisConnectTM FROM MEMB_STAT";
-        Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
+        SqlConnectionPool.sqlConnection_2.Open();
+        SqlConnectionPool.sqlCommand_2 = new SqlCommand();
+        SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+        SqlConnectionPool.sqlCommand_2.CommandText = "SELECT memb___id, DisConnectTM FROM MEMB_STAT";
+        SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
         int num = 0;
         SQLMaker.DefInstance.ProgresBar.Maximum = checked ((int) Math.Round(unchecked (Conversions.ToDouble(this.InactiveAFF.Text) + 1.0)));
-        while (Class28.sqlDataReader_2.Read())
+        while (SqlConnectionPool.sqlDataReader_2.Read())
         {
-          object Left = (object) Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 1, 2)), Conversions.ToDecimal(Strings.Mid(Class28.sqlDataReader_2[1].ToString(), 1, 2)));
-          object Right1 = (object) Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 4, 2)), Conversions.ToDecimal(Strings.Mid(Class28.sqlDataReader_2[1].ToString(), 4, 2))), new Decimal(30L));
-          object Right2 = (object) Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 7, 4)), Conversions.ToDecimal(Strings.Mid(Class28.sqlDataReader_2[1].ToString(), 7, 4))), new Decimal(365L));
+          object Left = (object) Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 1, 2)), Conversions.ToDecimal(Strings.Mid(SqlConnectionPool.sqlDataReader_2[1].ToString(), 1, 2)));
+          object Right1 = (object) Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 4, 2)), Conversions.ToDecimal(Strings.Mid(SqlConnectionPool.sqlDataReader_2[1].ToString(), 4, 2))), new Decimal(30L));
+          object Right2 = (object) Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 7, 4)), Conversions.ToDecimal(Strings.Mid(SqlConnectionPool.sqlDataReader_2[1].ToString(), 7, 4))), new Decimal(365L));
           if (Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLess(Left, (object) 0, false))
             Left = Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(Left, (object) -1);
           if (Decimal.Compare(new Decimal(Conversions.ToInteger(Microsoft.VisualBasic.CompilerServices.Operators.AddObject(Microsoft.VisualBasic.CompilerServices.Operators.AddObject(Left, Right1), Right2))), Conversions.ToDecimal(this.Inactive.Text)) > 0)
           {
-            Class28.sqlCommand_1 = new SqlCommand();
+            SqlConnectionPool.sqlCommand_1 = new SqlCommand();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM MEMB_STAT WHERE memb___id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM MEMB_STAT WHERE memb___id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM " + str + " WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM " + str + " WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
           }
           try
           {
@@ -1186,7 +1186,7 @@ namespace MuMaker
           }
           checked { ++num; }
         }
-        Class28.sqlDataReader_2.Close();
+        SqlConnectionPool.sqlDataReader_2.Close();
       }
       catch (Exception ex)
       {
@@ -1196,117 +1196,117 @@ namespace MuMaker
       }
       SQLMaker.DefInstance.ProgresBar.Value = checked ((int) Math.Round(unchecked (Conversions.ToDouble(this.InactiveAFF.Text) + 1.0)));
       this.TextLoad.Text = "100%";
-      if (Class28.sqlConnection_1.State == ConnectionState.Open)
-        Class28.sqlConnection_1.Close();
-      if (Class28.sqlConnection_2.State == ConnectionState.Open)
-        Class28.sqlConnection_2.Close();
+      if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+        SqlConnectionPool.sqlConnection_1.Close();
+      if (SqlConnectionPool.sqlConnection_2.State == ConnectionState.Open)
+        SqlConnectionPool.sqlConnection_2.Close();
       return (object) true;
     }
 
     public object BannedAccount()
     {
-      Class7.smethod_0();
-      Class7.smethod_1();
-      string str = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+      ConnectionManager.smethod_0();
+      ConnectionManager.smethod_1();
+      string str = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
       try
       {
-        Class28.sqlConnection_2.Open();
-        Class28.sqlCommand_2 = new SqlCommand();
-        Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-        Class28.sqlCommand_2.CommandText = "SELECT AccountID, COUNT(AccountID) FROM Character WHERE CtlCode = 1 GROUP BY AccountID";
-        Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
+        SqlConnectionPool.sqlConnection_2.Open();
+        SqlConnectionPool.sqlCommand_2 = new SqlCommand();
+        SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+        SqlConnectionPool.sqlCommand_2.CommandText = "SELECT AccountID, COUNT(AccountID) FROM Character WHERE CtlCode = 1 GROUP BY AccountID";
+        SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
         int num1 = 0;
         SQLMaker.DefInstance.ProgresBar.Maximum = checked ((int) Math.Round(unchecked (Conversions.ToDouble(this.BannedAFF.Text) + 1.0)));
-        while (Class28.sqlDataReader_2.Read())
+        while (SqlConnectionPool.sqlDataReader_2.Read())
         {
-          int num2 = (int) Interaction.MsgBox((object) (Class28.sqlDataReader_2[0].ToString() + " - " + Class28.sqlDataReader_2[1].ToString()), MsgBoxStyle.OkOnly, (object) null);
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class28.sqlDataReader_2[1].ToString(), this.NumPJ.Text, false) >= 0)
+          int num2 = (int) Interaction.MsgBox((object) (SqlConnectionPool.sqlDataReader_2[0].ToString() + " - " + SqlConnectionPool.sqlDataReader_2[1].ToString()), MsgBoxStyle.OkOnly, (object) null);
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SqlConnectionPool.sqlDataReader_2[1].ToString(), this.NumPJ.Text, false) >= 0)
           {
-            Class28.sqlCommand_1 = new SqlCommand();
+            SqlConnectionPool.sqlCommand_1 = new SqlCommand();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM MEMB_STAT WHERE memb___id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM MEMB_STAT WHERE memb___id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM MEMB_INFO WHERE memb___id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM AccountCharacter WHERE Id='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM Character WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM warehouse WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
             try
             {
-              Class28.sqlConnection_1.Open();
-              Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-              Class28.sqlCommand_1.CommandText = "DELETE FROM " + str + " WHERE AccountID='" + Class28.sqlDataReader_2[0].ToString() + "'";
-              Class28.sqlCommand_1.ExecuteReader();
+              SqlConnectionPool.sqlConnection_1.Open();
+              SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+              SqlConnectionPool.sqlCommand_1.CommandText = "DELETE FROM " + str + " WHERE AccountID='" + SqlConnectionPool.sqlDataReader_2[0].ToString() + "'";
+              SqlConnectionPool.sqlCommand_1.ExecuteReader();
             }
             catch (Exception ex)
             {
               ProjectData.SetProjectError(ex);
               ProjectData.ClearProjectError();
             }
-            if (Class28.sqlConnection_1.State == ConnectionState.Open)
-              Class28.sqlConnection_1.Close();
+            if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+              SqlConnectionPool.sqlConnection_1.Close();
           }
           try
           {
@@ -1321,7 +1321,7 @@ namespace MuMaker
           }
           checked { ++num1; }
         }
-        Class28.sqlDataReader_2.Close();
+        SqlConnectionPool.sqlDataReader_2.Close();
       }
       catch (Exception ex)
       {
@@ -1331,27 +1331,27 @@ namespace MuMaker
       }
       SQLMaker.DefInstance.ProgresBar.Value = checked ((int) Math.Round(unchecked (Conversions.ToDouble(this.BannedAFF.Text) + 1.0)));
       this.TextLoad.Text = "100%";
-      if (Class28.sqlConnection_1.State == ConnectionState.Open)
-        Class28.sqlConnection_1.Close();
-      if (Class28.sqlConnection_2.State == ConnectionState.Open)
-        Class28.sqlConnection_2.Close();
+      if (SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+        SqlConnectionPool.sqlConnection_1.Close();
+      if (SqlConnectionPool.sqlConnection_2.State == ConnectionState.Open)
+        SqlConnectionPool.sqlConnection_2.Close();
       return (object) true;
     }
 
     private void method_0()
     {
-      Class7.smethod_0();
-      Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+      ConnectionManager.smethod_0();
+      IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1 = new SqlCommand();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT COUNT(Id) FROM AccountCharacter WHERE GameID1 IS NULL AND GameID2 IS NULL AND GameID3 IS NULL AND GameID4 IS NULL AND GameID5 IS NULL";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
-        Class28.sqlDataReader_1.Read();
-        this.EmpyAFF.Text = Class28.sqlDataReader_1[0].ToString();
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1 = new SqlCommand();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT COUNT(Id) FROM AccountCharacter WHERE GameID1 IS NULL AND GameID2 IS NULL AND GameID3 IS NULL AND GameID4 IS NULL AND GameID5 IS NULL";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlDataReader_1.Read();
+        this.EmpyAFF.Text = SqlConnectionPool.sqlDataReader_1[0].ToString();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -1359,28 +1359,28 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      if (Class28.sqlConnection_1.State != ConnectionState.Open)
+      if (SqlConnectionPool.sqlConnection_1.State != ConnectionState.Open)
         return;
-      Class28.sqlConnection_1.Close();
+      SqlConnectionPool.sqlConnection_1.Close();
     }
 
     private void method_1()
     {
-      Class7.smethod_1();
-      Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+      ConnectionManager.smethod_1();
+      IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
       try
       {
-        Class28.sqlConnection_2.Open();
-        Class28.sqlCommand_2 = new SqlCommand();
-        Class28.sqlCommand_2.Connection = Class28.sqlConnection_2;
-        Class28.sqlCommand_2.CommandText = "SELECT memb___id, DisConnectTM FROM MEMB_STAT";
-        Class28.sqlDataReader_2 = Class28.sqlCommand_2.ExecuteReader();
+        SqlConnectionPool.sqlConnection_2.Open();
+        SqlConnectionPool.sqlCommand_2 = new SqlCommand();
+        SqlConnectionPool.sqlCommand_2.Connection = SqlConnectionPool.sqlConnection_2;
+        SqlConnectionPool.sqlCommand_2.CommandText = "SELECT memb___id, DisConnectTM FROM MEMB_STAT";
+        SqlConnectionPool.sqlDataReader_2 = SqlConnectionPool.sqlCommand_2.ExecuteReader();
         int num1 = 0;
-        while (Class28.sqlDataReader_2.Read())
+        while (SqlConnectionPool.sqlDataReader_2.Read())
         {
-          int num2 = Convert.ToInt32(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 1, 2)), Conversions.ToDecimal(Strings.Mid(Class28.sqlDataReader_2[1].ToString(), 1, 2))));
-          int num3 = Convert.ToInt32(Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 4, 2)), Conversions.ToDecimal(Strings.Mid(Class28.sqlDataReader_2[1].ToString(), 4, 2))), new Decimal(30L)));
-          int num4 = Convert.ToInt32(Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 7, 4)), Conversions.ToDecimal(Strings.Mid(Class28.sqlDataReader_2[1].ToString(), 7, 4))), new Decimal(365L)));
+          int num2 = Convert.ToInt32(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 1, 2)), Conversions.ToDecimal(Strings.Mid(SqlConnectionPool.sqlDataReader_2[1].ToString(), 1, 2))));
+          int num3 = Convert.ToInt32(Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 4, 2)), Conversions.ToDecimal(Strings.Mid(SqlConnectionPool.sqlDataReader_2[1].ToString(), 4, 2))), new Decimal(30L)));
+          int num4 = Convert.ToInt32(Decimal.Multiply(Decimal.Subtract(Conversions.ToDecimal(Strings.Mid(Conversions.ToString(DateAndTime.Now), 7, 4)), Conversions.ToDecimal(Strings.Mid(SqlConnectionPool.sqlDataReader_2[1].ToString(), 7, 4))), new Decimal(365L)));
           if (num2 < 0)
             checked { num2 *= -1; }
           if (Decimal.Compare(new Decimal(checked (num2 + num3 + num4)), Conversions.ToDecimal(this.Inactive.Text)) > 0)
@@ -1391,7 +1391,7 @@ namespace MuMaker
           }
         }
         this.InactiveAFF.Text = Conversions.ToString(num1);
-        Class28.sqlDataReader_2.Close();
+        SqlConnectionPool.sqlDataReader_2.Close();
       }
       catch (Exception ex)
       {
@@ -1399,26 +1399,26 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      if (Class28.sqlConnection_2.State != ConnectionState.Open)
+      if (SqlConnectionPool.sqlConnection_2.State != ConnectionState.Open)
         return;
-      Class28.sqlConnection_2.Close();
+      SqlConnectionPool.sqlConnection_2.Close();
     }
 
     private void method_2()
     {
-      Class7.smethod_0();
-      Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
+      ConnectionManager.smethod_0();
+      IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "SQL", "ExtWareHouse", "ExtWareHouse");
       try
       {
-        Class28.sqlConnection_1.Open();
-        Class28.sqlCommand_1 = new SqlCommand();
-        Class28.sqlCommand_1.Connection = Class28.sqlConnection_1;
-        Class28.sqlCommand_1.CommandText = "SELECT AccountID, COUNT(AccountID) FROM Character WHERE CtlCode = 1 GROUP BY AccountID";
-        Class28.sqlDataReader_1 = Class28.sqlCommand_1.ExecuteReader();
+        SqlConnectionPool.sqlConnection_1.Open();
+        SqlConnectionPool.sqlCommand_1 = new SqlCommand();
+        SqlConnectionPool.sqlCommand_1.Connection = SqlConnectionPool.sqlConnection_1;
+        SqlConnectionPool.sqlCommand_1.CommandText = "SELECT AccountID, COUNT(AccountID) FROM Character WHERE CtlCode = 1 GROUP BY AccountID";
+        SqlConnectionPool.sqlDataReader_1 = SqlConnectionPool.sqlCommand_1.ExecuteReader();
         int num = 0;
-        while (Class28.sqlDataReader_1.Read())
+        while (SqlConnectionPool.sqlDataReader_1.Read())
         {
-          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(Class28.sqlDataReader_1[1].ToString(), this.NumPJ.Text, false) >= 0)
+          if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(SqlConnectionPool.sqlDataReader_1[1].ToString(), this.NumPJ.Text, false) >= 0)
           {
             checked { ++num; }
             this.BannedAFF.Text = Conversions.ToString(num);
@@ -1426,7 +1426,7 @@ namespace MuMaker
           }
         }
         this.BannedAFF.Text = Conversions.ToString(num);
-        Class28.sqlDataReader_1.Close();
+        SqlConnectionPool.sqlDataReader_1.Close();
       }
       catch (Exception ex)
       {
@@ -1434,15 +1434,15 @@ namespace MuMaker
         int num = (int) Interaction.MsgBox((object) ex.Message, MsgBoxStyle.OkOnly, (object) null);
         ProjectData.ClearProjectError();
       }
-      if (Class28.sqlConnection_1.State != ConnectionState.Open)
+      if (SqlConnectionPool.sqlConnection_1.State != ConnectionState.Open)
         return;
-      Class28.sqlConnection_1.Close();
+      SqlConnectionPool.sqlConnection_1.Close();
     }
 
     public object RellenarDatos()
     {
-      string str1 = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "DIAS", "90");
-      string str2 = Class18.smethod_1(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "PJ", "1");
+      string str1 = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "DIAS", "90");
+      string str2 = IniHelper.smethod_1(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "PJ", "1");
       this.Inactive.Text = str1;
       this.NumPJ.Text = str2;
       return (object) true;
@@ -1450,7 +1450,7 @@ namespace MuMaker
 
     private void SQLMaker_Load(object sender, EventArgs e)
     {
-      Class18.smethod_47();
+      IniHelper.smethod_47();
       this.RellenarDatos();
       SQLMaker.DefInstance.ProgresBar.Value = 10;
       new Thread(new ThreadStart(this.method_0))
@@ -1493,7 +1493,7 @@ namespace MuMaker
 
     private void method_3(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) == 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) == 0)
         e.Handled = true;
       if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(this.Inactive.Text, "", false) == 0)
         this.Inactive.Text = Conversions.ToString(1);
@@ -1504,7 +1504,7 @@ namespace MuMaker
 
     private void method_4(object sender, KeyPressEventArgs e)
     {
-      if ((int) Class18.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) == 0)
+      if ((int) IniHelper.smethod_19(checked ((short) Strings.Asc(e.KeyChar))) == 0)
         e.Handled = true;
       if (Microsoft.VisualBasic.CompilerServices.Operators.CompareString(this.NumPJ.Text, "", false) == 0)
         this.NumPJ.Text = Conversions.ToString(1);
@@ -1515,12 +1515,12 @@ namespace MuMaker
 
     private void method_5(object sender, EventArgs e)
     {
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "DIAS", this.Inactive.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "DIAS", this.Inactive.Text);
     }
 
     private void method_6(object sender, EventArgs e)
     {
-      Class18.smethod_2(Class2.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "PJ", this.NumPJ.Text);
+      IniHelper.smethod_2(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "/Config.ini", "Personal", "PJ", this.NumPJ.Text);
     }
 
     private void method_7(object sender, EventArgs e)

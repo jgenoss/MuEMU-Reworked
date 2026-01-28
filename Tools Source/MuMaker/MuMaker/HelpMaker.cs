@@ -176,7 +176,7 @@ namespace MuMaker
       this.WebHelpBrowser.WebBrowserShortcutsEnabled = false;
       this.Cerrar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
       this.Cerrar.BackgroundImageLayout = ImageLayout.Center;
       this.Cerrar.Cursor = Cursors.Hand;
       this.Cerrar.DialogResult = DialogResult.Cancel;
@@ -200,7 +200,7 @@ namespace MuMaker
       this.Cerrar.UseVisualStyleBackColor = false;
       this.Minimizar.BackColor = Color.Transparent;
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
       this.Minimizar.BackgroundImageLayout = ImageLayout.Center;
       this.Minimizar.Cursor = Cursors.Hand;
       this.Minimizar.DialogResult = DialogResult.Cancel;
@@ -241,7 +241,7 @@ namespace MuMaker
       this.AutoScaleDimensions = new SizeF(7f, 13f);
       this.AutoScaleMode = AutoScaleMode.Font;
       // ISSUE: reference to a compiler-generated method
-      this.BackgroundImage = (Image) Class34.smethod_69();
+      this.BackgroundImage = (Image) EmbeddedResources.smethod_69();
       size1 = new Size(900, 700);
       this.ClientSize = size1;
       this.Controls.Add((Control) this.Titulo);
@@ -282,7 +282,7 @@ namespace MuMaker
 
     public object Traducir()
     {
-      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Class26.object_18));
+      this.Text = Conversions.ToString(Operators.ConcatenateObject((object) (this.Text + " - "), Configuration.object_18));
       this.Titulo.Text = this.Text;
       return (object) true;
     }
@@ -290,7 +290,7 @@ namespace MuMaker
     private void HelpMaker_Load(object sender, EventArgs e)
     {
       this.Traducir();
-      this.WebHelpBrowser.Navigate(new Uri(Class2.smethod_1().Info.DirectoryPath + "\\Help\\index.html"));
+      this.WebHelpBrowser.Navigate(new Uri(ApplicationServices.MuMakerApplication.smethod_1().Info.DirectoryPath + "\\Help\\index.html"));
     }
 
     private void method_0(object sender, EventArgs e)
@@ -306,25 +306,25 @@ namespace MuMaker
     private void method_2(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_86();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_86();
     }
 
     private void method_3(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Minimizar.BackgroundImage = (Image) Class34.smethod_87();
+      this.Minimizar.BackgroundImage = (Image) EmbeddedResources.smethod_87();
     }
 
     private void method_4(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_39();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_39();
     }
 
     private void method_5(object sender, MouseEventArgs e)
     {
       // ISSUE: reference to a compiler-generated method
-      this.Cerrar.BackgroundImage = (Image) Class34.smethod_40();
+      this.Cerrar.BackgroundImage = (Image) EmbeddedResources.smethod_40();
     }
   }
 }

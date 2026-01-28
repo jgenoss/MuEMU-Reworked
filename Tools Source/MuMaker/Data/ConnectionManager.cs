@@ -1,4 +1,5 @@
 // MuMaker - Connection Manager
+// Refactored from Class7
 // Handles SQL Server connection creation and management
 
 using Microsoft.VisualBasic;
@@ -13,190 +14,196 @@ namespace MuMaker.Data
     /// <summary>
     /// Manages database connections for all operations
     /// </summary>
-    public static class ConnectionManager
+    [StandardModule]
+    internal sealed class ConnectionManager
     {
         #region Connection String Building
-        /// <summary>
-        /// Builds a SQL Server connection string based on configuration
-        /// </summary>
         private static string BuildConnectionString(string database)
         {
-            if (Operators.ConditionalCompareObjectEqual(Configuration.ConnectionType, "Local", false))
+            if (Operators.ConditionalCompareObjectEqual(Configuration.object_2, "Local", false))
             {
-                return $"Data Source=localhost; uid={Configuration.SqlUsername};pwd={Configuration.SqlPassword};database={database};";
+                return "Data Source=localhost; uid=" + Conversions.ToString(Configuration.object_3) +
+                       ";pwd=" + Conversions.ToString(Configuration.object_4) +
+                       ";database=" + database + ";";
             }
             else
             {
-                return $"Network Library=dbmssocn; Data Source={Configuration.ServerIpAddress},{Configuration.ServerPort}; uid={Configuration.SqlUsername};pwd={Configuration.SqlPassword};database={database};";
+                return "Network Library=dbmssocn; Data Source=" + Conversions.ToString(Configuration.object_0) + "," +
+                       Conversions.ToString(Configuration.object_1) + "; uid=" + Conversions.ToString(Configuration.object_3) +
+                       ";pwd=" + Conversions.ToString(Configuration.object_4) + ";database=" + database + ";";
             }
         }
         #endregion
 
-        #region Character Connection
+        #region Member/Account Connection (smethod_0, smethod_5)
         /// <summary>
-        /// Opens a connection for character database operations
+        /// Opens connection for member database operations
         /// </summary>
-        public static bool OpenCharacterConnection()
+        public static bool smethod_0()
         {
-            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.MuOnlineDatabase));
+            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.object_7));
+            SqlConnectionPool.sqlConnection_1 = new SqlConnection(connectionString);
+            SqlConnectionPool.sqlCommand_1 = new SqlCommand();
+            SqlConnectionPool.sqlCommand_1.CommandTimeout = Configuration.int_0;
+            return true;
+        }
 
-            SqlConnectionPool.CharacterConnection = new SqlConnection(connectionString);
-            SqlConnectionPool.CharacterCommand = new SqlCommand();
-            SqlConnectionPool.CharacterCommand.CommandTimeout = Configuration.CommandTimeout;
+        /// <summary>
+        /// Closes the member database connection
+        /// </summary>
+        public static bool smethod_5()
+        {
+            if (SqlConnectionPool.sqlConnection_1 != null && SqlConnectionPool.sqlConnection_1.State == ConnectionState.Open)
+            {
+                SqlConnectionPool.sqlConnection_1.Close();
+            }
+            return true;
+        }
+        #endregion
 
+        #region Character Connection (smethod_1, smethod_6)
+        /// <summary>
+        /// Opens connection for character database operations
+        /// </summary>
+        public static bool smethod_1()
+        {
+            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.object_7));
+            SqlConnectionPool.sqlConnection_2 = new SqlConnection(connectionString);
+            SqlConnectionPool.sqlCommand_2 = new SqlCommand();
+            SqlConnectionPool.sqlCommand_2.CommandTimeout = Configuration.int_0;
             return true;
         }
 
         /// <summary>
         /// Closes the character database connection
         /// </summary>
-        public static bool CloseCharacterConnection()
+        public static bool smethod_6()
         {
-            if (SqlConnectionPool.CharacterConnection?.State == ConnectionState.Open)
+            if (SqlConnectionPool.sqlConnection_2 != null && SqlConnectionPool.sqlConnection_2.State == ConnectionState.Open)
             {
-                SqlConnectionPool.CharacterConnection.Close();
+                SqlConnectionPool.sqlConnection_2.Close();
             }
             return true;
         }
         #endregion
 
-        #region Account Connection
+        #region Warehouse Connection (smethod_2, smethod_7)
         /// <summary>
-        /// Opens a connection for account database operations
+        /// Opens connection for warehouse database operations
         /// </summary>
-        public static bool OpenAccountConnection()
+        public static bool smethod_2()
         {
-            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.MuOnlineDatabase));
-
-            SqlConnectionPool.AccountConnection = new SqlConnection(connectionString);
-            SqlConnectionPool.AccountCommand = new SqlCommand();
-            SqlConnectionPool.AccountCommand.CommandTimeout = Configuration.CommandTimeout;
-
-            return true;
-        }
-
-        /// <summary>
-        /// Closes the account database connection
-        /// </summary>
-        public static bool CloseAccountConnection()
-        {
-            if (SqlConnectionPool.AccountConnection?.State == ConnectionState.Open)
-            {
-                SqlConnectionPool.AccountConnection.Close();
-            }
-            return true;
-        }
-        #endregion
-
-        #region Warehouse Connection
-        /// <summary>
-        /// Opens a connection for warehouse database operations
-        /// </summary>
-        public static bool OpenWarehouseConnection()
-        {
-            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.MuOnlineDatabase));
-
-            SqlConnectionPool.WarehouseConnection = new SqlConnection(connectionString);
-            SqlConnectionPool.WarehouseCommand = new SqlCommand();
-            SqlConnectionPool.WarehouseCommand.CommandTimeout = Configuration.CommandTimeout;
-
+            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.object_7));
+            SqlConnectionPool.sqlConnection_3 = new SqlConnection(connectionString);
+            SqlConnectionPool.sqlCommand_3 = new SqlCommand();
+            SqlConnectionPool.sqlCommand_3.CommandTimeout = Configuration.int_0;
             return true;
         }
 
         /// <summary>
         /// Closes the warehouse database connection
         /// </summary>
-        public static bool CloseWarehouseConnection()
+        public static bool smethod_7()
         {
-            if (SqlConnectionPool.WarehouseConnection?.State == ConnectionState.Open)
+            if (SqlConnectionPool.sqlConnection_3 != null && SqlConnectionPool.sqlConnection_3.State == ConnectionState.Open)
             {
-                SqlConnectionPool.WarehouseConnection.Close();
+                SqlConnectionPool.sqlConnection_3.Close();
             }
             return true;
         }
         #endregion
 
-        #region Inventory Connection
+        #region Inventory Connection (smethod_3, smethod_8)
         /// <summary>
-        /// Opens a connection for inventory database operations
+        /// Opens connection for inventory database operations
         /// </summary>
-        public static bool OpenInventoryConnection()
+        public static bool smethod_3()
         {
-            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.MuOnlineDatabase));
-
-            SqlConnectionPool.InventoryConnection = new SqlConnection(connectionString);
-            SqlConnectionPool.InventoryCommand = new SqlCommand();
-            SqlConnectionPool.InventoryCommand.CommandTimeout = Configuration.CommandTimeout;
-
+            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.object_7));
+            SqlConnectionPool.sqlConnection_4 = new SqlConnection(connectionString);
+            SqlConnectionPool.sqlCommand_4 = new SqlCommand();
+            SqlConnectionPool.sqlCommand_4.CommandTimeout = Configuration.int_0;
             return true;
         }
 
         /// <summary>
         /// Closes the inventory database connection
         /// </summary>
-        public static bool CloseInventoryConnection()
+        public static bool smethod_8()
         {
-            if (SqlConnectionPool.InventoryConnection?.State == ConnectionState.Open)
+            if (SqlConnectionPool.sqlConnection_4 != null && SqlConnectionPool.sqlConnection_4.State == ConnectionState.Open)
             {
-                SqlConnectionPool.InventoryConnection.Close();
+                SqlConnectionPool.sqlConnection_4.Close();
             }
             return true;
         }
         #endregion
 
-        #region Guild Connection
+        #region Finder Connection (smethod_4, smethod_9)
         /// <summary>
-        /// Opens a connection for guild database operations
+        /// Opens connection for finder database operations
         /// </summary>
-        public static bool OpenGuildConnection()
+        public static bool smethod_4()
         {
-            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.MuOnlineDatabase));
-
-            SqlConnectionPool.GuildConnection = new SqlConnection(connectionString);
-            SqlConnectionPool.GuildCommand = new SqlCommand();
-            SqlConnectionPool.GuildCommand.CommandTimeout = Configuration.CommandTimeout;
-
+            string connectionString = BuildConnectionString(Conversions.ToString(Configuration.object_7));
+            SqlConnectionPool.sqlConnection_5 = new SqlConnection(connectionString);
+            SqlConnectionPool.sqlCommand_5 = new SqlCommand();
+            SqlConnectionPool.sqlCommand_5.CommandTimeout = Configuration.int_0;
             return true;
         }
 
         /// <summary>
-        /// Closes the guild database connection
+        /// Closes the finder database connection
         /// </summary>
-        public static bool CloseGuildConnection()
+        public static bool smethod_9()
         {
-            if (SqlConnectionPool.GuildConnection?.State == ConnectionState.Open)
+            if (SqlConnectionPool.sqlConnection_5 != null && SqlConnectionPool.sqlConnection_5.State == ConnectionState.Open)
             {
-                SqlConnectionPool.GuildConnection.Close();
+                SqlConnectionPool.sqlConnection_5.Close();
             }
             return true;
         }
         #endregion
 
-        #region Local Database Connection (OleDb for MuMaker.mdb)
+        #region Local Database Connection (smethod_10, smethod_11)
         /// <summary>
-        /// Opens a connection to the local Access database
+        /// Opens connection to local Access database (MuMaker.mdb)
         /// </summary>
-        public static bool OpenLocalDbConnection()
+        public static bool smethod_10()
         {
-            SqlConnectionPool.LocalDbConnection = new OleDbConnection();
-            SqlConnectionPool.LocalDbConnection.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=MuMaker.mdb;";
-            SqlConnectionPool.LocalDbCommand = new OleDbCommand();
-            SqlConnectionPool.LocalDbCommand.CommandTimeout = SqlConnectionPool.OleDbTimeout;
-
+            SqlConnectionPool.oleDbConnection_0 = new OleDbConnection();
+            SqlConnectionPool.oleDbConnection_0.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=MuMaker.mdb;";
+            SqlConnectionPool.oleDbCommand_0 = new OleDbCommand();
+            SqlConnectionPool.oleDbCommand_0.CommandTimeout = SqlConnectionPool.int_0;
             return true;
         }
 
         /// <summary>
         /// Closes the local Access database connection
         /// </summary>
-        public static bool CloseLocalDbConnection()
+        public static bool smethod_11()
         {
-            if (SqlConnectionPool.LocalDbConnection?.State == ConnectionState.Open)
+            if (SqlConnectionPool.oleDbConnection_0 != null && SqlConnectionPool.oleDbConnection_0.State == ConnectionState.Open)
             {
-                SqlConnectionPool.LocalDbConnection.Close();
+                SqlConnectionPool.oleDbConnection_0.Close();
             }
             return true;
         }
+        #endregion
+
+        #region Descriptive Aliases (for new code)
+        public static bool OpenMemberDatabase() => smethod_0();
+        public static bool CloseMemberDatabase() => smethod_5();
+        public static bool OpenCharacterDatabase() => smethod_1();
+        public static bool CloseCharacterDatabase() => smethod_6();
+        public static bool OpenWarehouseDatabase() => smethod_2();
+        public static bool CloseWarehouseDatabase() => smethod_7();
+        public static bool OpenInventoryDatabase() => smethod_3();
+        public static bool CloseInventoryDatabase() => smethod_8();
+        public static bool OpenFinderDatabase() => smethod_4();
+        public static bool CloseFinderDatabase() => smethod_9();
+        public static bool OpenLocalDatabase() => smethod_10();
+        public static bool CloseLocalDatabase() => smethod_11();
         #endregion
     }
 }

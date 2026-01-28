@@ -23,8 +23,49 @@ namespace MuMaker.Core
     [EditorBrowsable(EditorBrowsableState.Never)]
     public class MuMakerApplication : ConsoleApplicationBase
     {
+        private static MuMakerApplication _instance;
+
         [DebuggerNonUserCode]
         public MuMakerApplication() { }
+
+        #region Original Method Aliases (smethod_X backward compatibility)
+        /// <summary>
+        /// smethod_1 - Get application instance (singleton)
+        /// </summary>
+        public static MuMakerApplication smethod_1()
+        {
+            if (_instance == null)
+                _instance = new MuMakerApplication();
+            return _instance;
+        }
+
+        /// <summary>
+        /// smethod_3 - Get application instance for startup (used in Main())
+        /// </summary>
+        public static MuMakerApplication smethod_3()
+        {
+            return smethod_1();
+        }
+
+        /// <summary>
+        /// method_8 - Get the main startup form instance
+        /// </summary>
+        public Form method_8()
+        {
+            return MuMaker.MuMaker.DefInstance;
+        }
+        #endregion
+
+        #region Descriptive Method Names
+        /// <summary>Get application instance (singleton)</summary>
+        public static MuMakerApplication GetInstance() => smethod_1();
+
+        /// <summary>Get application instance for startup</summary>
+        public static MuMakerApplication GetApplicationForStartup() => smethod_3();
+
+        /// <summary>Get the main startup form instance</summary>
+        public Form GetStartupForm() => method_8();
+        #endregion
     }
     #endregion
 
