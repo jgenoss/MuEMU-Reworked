@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "MemoryPatcher.h"
 
+MemoryPatcher gMemory;
 
 void MemoryPatcher::CommandLineToArg(char* Command, char*** argv) {
     if (!Command) return;

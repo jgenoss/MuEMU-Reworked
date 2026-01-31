@@ -33,3 +33,5 @@ public:
 
     static DWORD SetHook(const LPVOID dwMyFuncOffset, const LPVOID dwJmpOffset, const BYTE cmd);
 };
+
+extern MemoryPatcher gMemory;

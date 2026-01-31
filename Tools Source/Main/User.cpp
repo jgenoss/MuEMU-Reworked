@@ -6,6 +6,7 @@
 #include "Protocol.h"
 #include "Util.h"
 #include "PrintPlayer.h"
+#include "MemoryPatcher.h"
 
 User	gObjUser;
 
@@ -32,13 +33,13 @@ void User::Refresh()
 
 	if (gObjUser.GetActiveSkill() == 261 || gObjUser.GetActiveSkill() == 552 || gObjUser.GetActiveSkill() == 555)
 	{
-		_SetDouble(&gMuClientApi.FrameSpeed1(), 0.0004000);
-		_SetDouble(&gMuClientApi.FrameSpeed2(), 0.0002000);
+		gMemory.SetDouble(&gMuClientApi.FrameSpeed1(), 0.0004000);
+		gMemory.SetDouble(&gMuClientApi.FrameSpeed2(), 0.0002000);
 	}
 	else
 	{
-		_SetDouble(&gMuClientApi.FrameSpeed1(), 0.0040000);
-		_SetDouble(&gMuClientApi.FrameSpeed2(), 0.0020000);
+		gMemory.SetDouble(&gMuClientApi.FrameSpeed1(), 0.0040000);
+		gMemory.SetDouble(&gMuClientApi.FrameSpeed2(), 0.0020000);
 	}
 }
 
