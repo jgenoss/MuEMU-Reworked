@@ -1,0 +1,2 @@
+void CustomRotateChar();
+void RotateCharacter();

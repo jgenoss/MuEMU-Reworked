@@ -1,0 +1,456 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_GAMESERVER          ICON                    "icon2.ico"
+
+IDI_SMALL               ICON                    "icon2.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_GAMESERVER MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "All User LogOut",             IDM_FILE_ALLUSERLOGOUT
+        MENUITEM "All User Disconnect",         IDM_FILE_ALLUSERDISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "1 Minute(s) Server Close",    IDM_FILE_1MINUTESERVERCLOSE
+        MENUITEM "3 Minute(s) Server Close",    IDM_FILE_3MINUTESERVERCLOSE
+        MENUITEM "5 Minute(s) Server Close",    IDM_FILE_5MINUTESERVERCLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "Reload"
+    BEGIN
+        MENUITEM "Reload CashShop",             IDM_RELOAD_RELOADCASHSHOP
+        MENUITEM "Reload ChaosMix",             IDM_RELOAD_RELOADCHAOSMIX
+        MENUITEM "Reload Character",            IDM_RELOAD_RELOADCHARACTER
+        MENUITEM "Reload Command",              IDM_RELOAD_RELOADCOMMAND
+        MENUITEM "Reload Common",               IDM_RELOAD_RELOADCOMMON
+        MENUITEM "Reload Custom",               IDM_RELOAD_RELOADCUSTOM
+        MENUITEM "Reload Event",                IDM_RELOAD_RELOADEVENT
+        MENUITEM "Reload EventItemBag",         IDM_RELOAD_RELOADEVENTITEMBAG
+        MENUITEM "Reload Hack",                 IDM_RELOAD_RELOADHACK
+        MENUITEM "Reload Item",                 IDM_RELOAD_RELOADITEM
+        MENUITEM "Reload Monster",              IDM_RELOAD_RELOADMONSTER
+        MENUITEM "Reload Move",                 IDM_RELOAD_RELOADMOVE
+        MENUITEM "Reload Quest",                IDM_RELOAD_RELOADQUEST
+        MENUITEM "Reload Shop",                 IDM_RELOAD_RELOADSHOP
+        MENUITEM "Reload Skill",                IDM_RELOAD_RELOADSKILL
+        MENUITEM "Reload Util",                 IDM_RELOAD_RELOADUTIL
+        MENUITEM "Reload Bots",                 IDM_RELOAD_RELOADBOTS
+        MENUITEM "Reload All",                  IDM_RELOAD_RELOADALL
+    END
+    POPUP "Events"
+    BEGIN
+        POPUP "Start So Xo Truc Tuyen"
+        BEGIN
+            MENUITEM "Lorencia",                    IDM_STARTONLINELOTTERY_LORENCIA
+            MENUITEM "Devias",                      IDM_STARTONLINELOTTERY_DEVIAS
+            MENUITEM "Noria",                       IDM_STARTONLINELOTTERY_NORIA
+            MENUITEM "Elbeland",                    IDM_STARTONLINELOTTERY_ELBELAND
+        END
+        MENUITEM "Start Huyet Lau",             IDM_STARTBC
+        MENUITEM "Start Quang Truong Quy",      IDM_STARTDS
+        MENUITEM "Start Hon Nguyen Lau",        IDM_STARTCC
+        MENUITEM "Start Drop Item",             IDM_STARTDROP
+        MENUITEM "Start Chiem Thanh",           IDM_STARTKING
+        MENUITEM "Start Illusion Temple",       IDM_STARTIT
+        MENUITEM "Start Cau Do Vui",            IDM_STARTQUIZ
+        MENUITEM "Start Team vs Team",          IDM_STARTTVT
+        MENUITEM "Start SkyEvent",              IDM_EVENTS_SKY_EVENT
+        MENUITEM "Start CTC Mini (Chien Phe)",  IDM_EVENTS_CTCMINI
+        MENUITEM "Start Boss Guild",            IDM_EVENTS_BOSSGUILD
+        MENUITEM "Start Hon Chien Class",       IDM_EVENTS_HONCHIENCLASS
+        MENUITEM "Start Castle Siege (GSCS)",   IDM_STARTCS
+        MENUITEM "Start Cry Wolf (GSCS)",       IDM_STARTCW
+        MENUITEM "Start Loren Deep (GSCS)",     IDM_STARTLD
+        MENUITEM "Start Than Ma Chien",         ID_EVENTS_STARTTHANMACHIEN
+    END
+    POPUP "Invasion"
+    BEGIN
+        MENUITEM "Start Event 0 (Tu Than Xuong So)", IDM_INVASION0
+        MENUITEM "Start Event 1 (Rong Do)",     IDM_INVASION1
+        MENUITEM "Start Event 2 (Boss Vang)",   IDM_INVASION2
+        MENUITEM "Start Event 3 (Binh Doan Phu Thuy)", IDM_INVASION3
+        MENUITEM "Start Event 4 (New Year)",    IDM_INVASION4
+        MENUITEM "Start Event 5 (Tho Ngoc)",    IDM_INVASION5
+        MENUITEM "Start Event 6 (Mua He)",      IDM_INVASION6
+        MENUITEM "Start Event 7 (Quy Vuong)",   IDM_INVASION7
+        MENUITEM "Start Event 8 (Medusa()",     IDM_INVASION8
+        MENUITEM "Start Event 9 (Sieu Boss)",   IDM_INVASION9
+        MENUITEM "Start Event 10 (Boss Class)", IDM_INVASION10
+        MENUITEM "Start Event 11 (Erohim)",     IDM_INVASION11
+        MENUITEM "Start Event 12 (KunDun)",     IDM_INVASION12
+        MENUITEM "Start Event 13 (Selupan)",    IDM_INVASION13
+    END
+    POPUP "Custom Arena"
+    BEGIN
+        MENUITEM "Start Index 0",               IDM_CA0
+        MENUITEM "Start Index 1",               IDM_CA1
+        MENUITEM "Start Index 2",               IDM_CA2
+        MENUITEM "Start Index 3",               IDM_CA3
+        MENUITEM "Start Index 4",               IDM_CA4
+        MENUITEM "Start Index 5",               IDM_CA5
+        MENUITEM "Start Index 6",               IDM_CA6
+        MENUITEM "Start Index 7",               IDM_CA7
+        MENUITEM "Start Index 8",               IDM_CA8
+        MENUITEM "Start Index 9",               IDM_CA9
+        MENUITEM "Start Index 10",              IDM_CA10
+        MENUITEM "Start Index 11",              IDM_CA11
+        MENUITEM "Start Index 12",              IDM_CA12
+        MENUITEM "Start Index 13",              IDM_CA13
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Online Users",                IDM_ONLINEUSERS
+        MENUITEM "Banned IP's",                 IDD_BANNED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+    POPUP "Fake Online"
+    BEGIN
+        MENUITEM "Reload Data",                 ID_FAKEONLINE_RELOADDATA
+        MENUITEM "Add FakeOnline",              ID_FAKEONLINE_ADDFAKEONLINE
+        MENUITEM "Del FakeOnline",              ID_FAKEONLINE_DELFAKEONLINE
+    END
+    POPUP "BotStore"
+    BEGIN
+        MENUITEM "Reload BotStore",             ID_BOTSTORE_RELOADDATA
+    END
+    POPUP "BotOnline"
+    BEGIN
+        MENUITEM "Reload BotOnline",            ID_BOTONLINE_RELOADDATA
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_GAMESERVER ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 147, 70
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    ICON            IDI_GAMESERVER,IDC_MYICON,14,9,20,20
+    LTEXT           "GameServer Premium",IDC_STATIC,42,10,74,8,SS_NOPREFIX
+    LTEXT           "SDT:0962.895.867",IDC_STATIC,46,22,67,8
+    DEFPUSHBUTTON   "OK",IDOK,60,51,30,11,WS_GROUP
+    LTEXT           "Developer HieuDaiCa",IDC_STATIC,46,35,80,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "GameServer"
+    IDC_GAMESERVER          "GAMESERVER"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Brazil) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTB)
+LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE_BRAZILIAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "HieuDaiCa"
+            VALUE "FileDescription", "GameServer"
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "InternalName", "GameServer"
+            VALUE "LegalCopyright", "Copyright © HieuDaiCa 2022"
+            VALUE "OriginalFilename", "GameServer.exe"
+            VALUE "ProductName", "GameServer"
+            VALUE "ProductVersion", "3.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // Portuguese (Brazil) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Mexico) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESM)
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MEXICAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+IDI_ICON2               ICON                    "icon2.ico"
+
+IDI_ICON3               ICON                    "icon3.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ONLINEUSER DIALOGEX 0, 0, 250, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+CAPTION "Online Users"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,131,151,88,14
+    LISTBOX         IDC_LIST1,19,26,96,141,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Online Users:",IDC_STATIC,48,17,44,8
+    PUSHBUTTON      "Disconnect account",IDC_BUTTONDC,123,25,102,27
+END
+
+IDD_BANNED DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+CAPTION "Banned IP's"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,166,128,88,14
+    LISTBOX         IDC_LIST2,19,26,96,141,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Banned IP's:",IDC_STATIC,48,17,41,8
+    PUSHBUTTON      "Unban IP",IDC_BUTTONUB,160,58,102,27
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ONLINEUSER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_BANNED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 166
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Spanish (Mexico) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Spain, International Sort) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON4               ICON                    "icon4.ico"
+
+IDI_ICON5               ICON                    "icon5.ico"
+
+IDI_ICON6               ICON                    "icon6.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 164, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "License Invalid"
+FONT 10, "Lucida Console", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "Aceptar",IDOK,59,48,50,14
+    CTEXT           "Licencia no compatible con el dispositivo, se trabajara demanera limitada",IDC_STATIC,6,12,150,33,SS_NOPREFIX,WS_EX_TRANSPARENT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 157
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Spanish (Spain, International Sort) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
