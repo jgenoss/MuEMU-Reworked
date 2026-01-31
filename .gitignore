@@ -1,13 +1,11 @@
-/Server Source/.vs
-/Server Source/GameServer/.vs
-/Server Source/GameServer/Release
-/Tools Source/GetMainInfo/GetMainInfo/Debug
-/Tools Source/GetMainInfo/.vs
-/Server Source/Release
-/Server Source/ConnectServer/Release
-/Tools Source/.vs
-/.vs
-/Release
+
+.vs/
+
+# Ignorar carpetas de compilación
+[Rr]elease/
+[Dd]ebug/
+x64/
+x86/
 
 *.obj
 *.iobj
@@ -19,7 +17,7 @@
 *.tlog
 *.txt
 *.log
-/Tools Source/Release
 *.res
 *.recipe
 *.recipe
+
