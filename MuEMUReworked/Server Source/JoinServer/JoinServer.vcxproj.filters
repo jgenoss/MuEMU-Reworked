@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Account &amp; DB">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{9fd12c62-fbd3-4625-9c68-b27c1b9a56df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include="JoinServer.cpp"><Filter>Core</Filter></ClCompile>
+    <ClCompile Include="stdafx.cpp"><Filter>Core</Filter></ClCompile>
+    <ClCompile Include="ServerDisplayer.cpp"><Filter>Core</Filter></ClCompile>
+    <ClCompile Include="Log.cpp"><Filter>Core</Filter></ClCompile>
+    <ClCompile Include="MiniDump.cpp"><Filter>Core</Filter></ClCompile>
+
+    <ClCompile Include="JoinServerProtocol.cpp"><Filter>Network</Filter></ClCompile>
+    <ClCompile Include="SocketManager.cpp"><Filter>Network</Filter></ClCompile>
+    <ClCompile Include="SocketManagerUdp.cpp"><Filter>Network</Filter></ClCompile>
+    <ClCompile Include="ServerManager.cpp"><Filter>Network</Filter></ClCompile>
+    <ClCompile Include="AllowableIpList.cpp"><Filter>Network</Filter></ClCompile>
+
+    <ClCompile Include="AccountManager.cpp"><Filter>Account &amp; DB</Filter></ClCompile>
+    <ClCompile Include="QueryManager.cpp"><Filter>Account &amp; DB</Filter></ClCompile>
+
+    <ClCompile Include="Util.cpp"><Filter>Util</Filter></ClCompile>
+    <ClCompile Include="Queue.cpp"><Filter>Util</Filter></ClCompile>
+    <ClCompile Include="MemScript.cpp"><Filter>Util</Filter></ClCompile>
+    <ClCompile Include="CriticalSection.cpp"><Filter>Util</Filter></ClCompile>
+    <ClCompile Include="..\..\Util\MD5.cpp"><Filter>Util</Filter></ClCompile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="JoinServer.h"><Filter>Core</Filter></ClInclude>
+    <ClInclude Include="stdafx.h"><Filter>Core</Filter></ClInclude>
+    <ClInclude Include="ServerDisplayer.h"><Filter>Core</Filter></ClInclude>
+    <ClInclude Include="Log.h"><Filter>Core</Filter></ClInclude>
+    <ClInclude Include="MiniDump.h"><Filter>Core</Filter></ClInclude>
+
+    <ClInclude Include="JoinServerProtocol.h"><Filter>Network</Filter></ClInclude>
+    <ClInclude Include="SocketManager.h"><Filter>Network</Filter></ClInclude>
+    <ClInclude Include="SocketManagerUdp.h"><Filter>Network</Filter></ClInclude>
+    <ClInclude Include="ServerManager.h"><Filter>Network</Filter></ClInclude>
+    <ClInclude Include="AllowableIpList.h"><Filter>Network</Filter></ClInclude>
+
+    <ClInclude Include="AccountManager.h"><Filter>Account &amp; DB</Filter></ClInclude>
+    <ClInclude Include="QueryManager.h"><Filter>Account &amp; DB</Filter></ClInclude>
+
+    <ClInclude Include="Util.h"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="Queue.h"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="MemScript.h"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="CriticalSection.h"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="ThemidaSDK.h"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="..\..\Util\MD5.h"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="..\..\Util\MD5_KEYVAL.H"><Filter>Util</Filter></ClInclude>
+
+    <ClInclude Include="Resource.h"><Filter>Resource Files</Filter></ClInclude>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResourceCompile Include="JoinServer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

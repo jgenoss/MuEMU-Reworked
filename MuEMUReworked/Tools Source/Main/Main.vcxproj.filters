@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory &amp; Protection">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom Systems">
+      <UniqueIdentifier>{4c2d3998-333e-4d05-9769-232111162391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{1109c916-29d9-450f-90b5-52319c500057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Util\CCRC32.Cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="HackCheck.cpp">
+      <Filter>Memory &amp; Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryPatcher.cpp">
+      <Filter>Memory &amp; Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Protect.cpp">
+      <Filter>Memory &amp; Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketManager.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Reconnect.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomPing.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="UIBase.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomInterface.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthBar.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintPlayer.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Resolution.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomMessage.cpp">
+      <Filter>Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Custom Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomItem.cpp">
+      <Filter>Custom Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomJewel.cpp">
+      <Filter>Custom Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomWing.cpp">
+      <Filter>Custom Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomWingEffect.cpp">
+      <Filter>Custom Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Main.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Util\CCRC32.H">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="HackCheck.h">
+      <Filter>Memory &amp; Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryPatcher.h">
+      <Filter>Memory &amp; Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Protect.h">
+      <Filter>Memory &amp; Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Offset.h">
+      <Filter>Memory &amp; Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketManager.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Reconnect.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomPing.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="MuClientAPI.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="UIBase.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomInterface.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="HealthBar.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintPlayer.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Resolution.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomMessage.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Custom Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomItem.h">
+      <Filter>Custom Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomJewel.h">
+      <Filter>Custom Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomWing.h">
+      <Filter>Custom Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomWingEffect.h">
+      <Filter>Custom Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="MuConstants.h">
+      <Filter>Custom Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="User.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Main.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddressTable1.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="AddressTable2.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="AddressTable3.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

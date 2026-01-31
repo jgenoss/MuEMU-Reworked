@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom">
+      <UniqueIdentifier>{389b1bd3-005c-493f-8e4d-756e2b225f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{eb75f507-b013-46e9-b375-afb6dd4aa120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClCompile Include="GetMainInfo.cpp"><Filter>Core</Filter></ClCompile>
+    <ClCompile Include="stdafx.cpp"><Filter>Core</Filter></ClCompile>
+
+    <ClCompile Include="CustomItem.cpp"><Filter>Custom</Filter></ClCompile>
+    <ClCompile Include="CustomJewel.cpp"><Filter>Custom</Filter></ClCompile>
+    <ClCompile Include="CustomMessage.cpp"><Filter>Custom</Filter></ClCompile>
+    <ClCompile Include="CustomWing.cpp"><Filter>Custom</Filter></ClCompile>
+    <ClCompile Include="CustomWIngEffect.cpp"><Filter>Custom</Filter></ClCompile>
+
+    <ClCompile Include="MemScript.cpp"><Filter>Util</Filter></ClCompile>
+    <ClCompile Include="..\..\Util\CCRC32.Cpp"><Filter>Util</Filter></ClCompile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="stdafx.h"><Filter>Core</Filter></ClInclude>
+
+    <ClInclude Include="CustomItem.h"><Filter>Custom</Filter></ClInclude>
+    <ClInclude Include="CustomJewel.h"><Filter>Custom</Filter></ClInclude>
+    <ClInclude Include="CustomMessage.h"><Filter>Custom</Filter></ClInclude>
+    <ClInclude Include="CustomWing.h"><Filter>Custom</Filter></ClInclude>
+    <ClInclude Include="CustomWIngEffect.h"><Filter>Custom</Filter></ClInclude>
+
+    <ClInclude Include="MemScript.h"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="..\..\Util\CCRC32.H"><Filter>Util</Filter></ClInclude>
+    <ClInclude Include="ThemidaSDK.h"><Filter>Util</Filter></ClInclude>
+
+    <ClInclude Include="resource.h"><Filter>Resource Files</Filter></ClInclude>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ResourceCompile Include="GetMainInfo.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
